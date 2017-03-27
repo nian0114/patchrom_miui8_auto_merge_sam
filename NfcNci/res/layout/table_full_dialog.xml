@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="?android:textColorAlertDialogListItem" android:gravity="top" android:id="@id/hce_app_explain" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="11.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="12.0dip" />
-    <ListView android:id="@id/hce_app_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_marginBottom="12.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="12.0dip" />
-    <Button android:textSize="15.0sp" android:textColor="#ffffffff" android:layout_gravity="bottom" android:id="@id/button_close" android:background="?android:selectableItemBackground" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/btn_ok" />
-</LinearLayout>
