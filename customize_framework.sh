@@ -45,6 +45,7 @@ if [ $2 = "$BUILD_OUT/framework" ]
 then
     rm -rf $2/smali/android/widget/Editor*
     cp -rf $1/smali/android/widget/Editor*.smali $2/smali/android/widget/
+    sed -i 's/qemu.sf.lcd_density/persist.nian.dens/g' $2/smali/android/util/DisplayMetrics.smali
     appendSmaliPart "framework"
     applyPatch "overlay/framework"
 fi
