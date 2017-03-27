@@ -4898,50 +4898,14 @@
 
     .line 432
     :cond_8
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/DisplaySettings;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v25
-
-    invoke-static/range {v25 .. v25}, Lcom/android/settings_ex/DisplaySettings;->isTapToWakeAvailable(Landroid/content/res/Resources;)Z
-
-    move-result v25
-
-    if-eqz v25, :cond_16
-
-    .line 433
-    const-string v25, "tap_to_wake"
+    const-string v25, "category_one"
 
     move-object/from16 v0, p0
 
     move-object/from16 v1, v25
 
-    invoke-virtual {v0, v1}, Lcom/android/settings_ex/DisplaySettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/DisplaySettings;->removePreference(Ljava/lang/String;)V
 
-    move-result-object v25
-
-    check-cast v25, Landroid/preference/SwitchPreference;
-
-    move-object/from16 v0, v25
-
-    move-object/from16 v1, p0
-
-    iput-object v0, v1, Lcom/android/settings_ex/DisplaySettings;->mTapToWakePreference:Landroid/preference/SwitchPreference;
-
-    .line 434
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Lcom/android/settings_ex/DisplaySettings;->mTapToWakePreference:Landroid/preference/SwitchPreference;
-
-    move-object/from16 v25, v0
-
-    move-object/from16 v0, v25
-
-    move-object/from16 v1, p0
-
-    invoke-virtual {v0, v1}, Landroid/preference/SwitchPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
-
-    .line 439
-    :goto_4
     invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/DisplaySettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v25
@@ -5919,18 +5883,6 @@
     invoke-virtual {v0, v1}, Lcom/android/settings_ex/DisplaySettings;->removePreference(Ljava/lang/String;)V
 
     goto/16 :goto_3
-
-    .line 436
-    :cond_16
-    const-string v25, "tap_to_wake"
-
-    move-object/from16 v0, p0
-
-    move-object/from16 v1, v25
-
-    invoke-virtual {v0, v1}, Lcom/android/settings_ex/DisplaySettings;->removePreference(Ljava/lang/String;)V
-
-    goto/16 :goto_4
 
     .line 443
     :cond_17
