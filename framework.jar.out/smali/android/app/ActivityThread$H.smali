@@ -666,6 +666,8 @@
     invoke-static {v2, v0, v3}, Landroid/app/ActivityThread;->access$1100(Landroid/app/ActivityThread;Landroid/app/ActivityThread$ActivityClientRecord;Landroid/content/Intent;)V
 
     const-wide/16 v2, 0x40
+    
+    invoke-static {}, Landroid/app/ActivityThreadInjector;->clearCachedDrawables()V
 
     invoke-static {v2, v3}, Landroid/os/Trace;->traceEnd(J)V
 
@@ -701,7 +703,7 @@
 
     invoke-static {v2, v3}, Landroid/os/Trace;->traceEnd(J)V
 
-    goto :goto_0
+    goto/16 :goto_0
 
     .end local v21    # "r":Landroid/app/ActivityThread$ActivityClientRecord;
     :sswitch_3
