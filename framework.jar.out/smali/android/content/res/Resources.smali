@@ -5668,30 +5668,9 @@
 .end method
 
 .method public getDrawable(ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
-    .locals 1
-    .param p1, "id"    # I
-    .param p2, "theme"    # Landroid/content/res/Resources$Theme;
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/content/res/Resources$NotFoundException;
-        }
-    .end annotation
-
-    .prologue
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, p1, p2, v0}, Landroid/content/res/Resources;->getDrawable(ILandroid/content/res/Resources$Theme;Z)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public getDrawable(ILandroid/content/res/Resources$Theme;Z)Landroid/graphics/drawable/Drawable;
     .locals 4
     .param p1, "id"    # I
     .param p2, "theme"    # Landroid/content/res/Resources$Theme;
-    .param p3, "force"    # Z
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/content/res/Resources$NotFoundException;
@@ -5724,12 +5703,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {p0, v1, p1, p2, p3}, Landroid/content/res/Resources;->loadDrawable(Landroid/util/TypedValue;ILandroid/content/res/Resources$Theme;Z)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p0, v1, p1, p2}, Landroid/content/res/Resources;->loadDrawable(Landroid/util/TypedValue;ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     .local v0, "res":Landroid/graphics/drawable/Drawable;
-    if-eqz v0, :cond_0
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setImagePath(Landroid/util/TypedValue;)V
 
@@ -7744,24 +7722,199 @@
 .end method
 
 .method loadDrawable(Landroid/util/TypedValue;ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
-    .locals 1
-    .param p1, "value"    # Landroid/util/TypedValue;
-    .param p2, "id"    # I
-    .param p3, "theme"    # Landroid/content/res/Resources$Theme;
+    .locals 18
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/content/res/Resources$NotFoundException;
         }
     .end annotation
 
-    .prologue
-    const/4 v0, 0x0
+    move-object/from16 v0, p1
 
-    invoke-virtual {p0, p1, p2, p3, v0}, Landroid/content/res/Resources;->loadDrawable(Landroid/util/TypedValue;ILandroid/content/res/Resources$Theme;Z)Landroid/graphics/drawable/Drawable;
+    iget v4, v0, Landroid/util/TypedValue;->type:I
 
-    move-result-object v0
+    const/16 v5, 0x1c
 
-    return-object v0
+    if-lt v4, v5, :cond_0
+
+    move-object/from16 v0, p1
+
+    iget v4, v0, Landroid/util/TypedValue;->type:I
+
+    const/16 v5, 0x1f
+
+    if-gt v4, v5, :cond_0
+
+    const/4 v6, 0x1
+
+    move-object/from16 v0, p0
+
+    iget-object v7, v0, Landroid/content/res/Resources;->mColorDrawableCache:Landroid/content/res/DrawableCache;
+
+    move-object/from16 v0, p1
+
+    iget v4, v0, Landroid/util/TypedValue;->data:I
+
+    int-to-long v10, v4
+
+    :goto_0
+    move-object/from16 v0, p0
+
+    iget-boolean v4, v0, Landroid/content/res/Resources;->mPreloading:Z
+
+    if-nez v4, :cond_1
+
+    move-object/from16 v0, p3
+
+    invoke-virtual {v7, v10, v11, v0}, Landroid/content/res/DrawableCache;->getInstance(JLandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v13
+
+    if-eqz v13, :cond_1
+
+    :goto_1
+    return-object v13
+
+    :cond_0
+    const/4 v6, 0x0
+
+    move-object/from16 v0, p0
+
+    iget-object v7, v0, Landroid/content/res/Resources;->mDrawableCache:Landroid/content/res/DrawableCache;
+
+    move-object/from16 v0, p1
+
+    iget v4, v0, Landroid/util/TypedValue;->assetCookie:I
+
+    int-to-long v4, v4
+
+    const/16 v8, 0x20
+
+    shl-long/2addr v4, v8
+
+    move-object/from16 v0, p1
+
+    iget v8, v0, Landroid/util/TypedValue;->data:I
+
+    int-to-long v0, v8
+
+    move-wide/from16 v16, v0
+
+    or-long v10, v4, v16
+
+    goto :goto_0
+
+    :cond_1
+    if-eqz v6, :cond_4
+
+    sget-object v4, Landroid/content/res/Resources;->sPreloadedColorDrawables:Landroid/util/LongSparseArray;
+
+    invoke-virtual {v4, v10, v11}, Landroid/util/LongSparseArray;->get(J)Ljava/lang/Object;
+
+    move-result-object v14
+
+    check-cast v14, Landroid/graphics/drawable/Drawable$ConstantState;
+
+    :goto_2
+    if-eqz v14, :cond_5
+
+    move-object/from16 v0, p0
+
+    invoke-virtual {v14, v0}, Landroid/graphics/drawable/Drawable$ConstantState;->newDrawable(Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v12
+
+    :goto_3
+    if-eqz v12, :cond_7
+
+    invoke-virtual {v12}, Landroid/graphics/drawable/Drawable;->canApplyTheme()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_7
+
+    const/4 v9, 0x1
+
+    :goto_4
+    if-eqz v9, :cond_2
+
+    if-eqz p3, :cond_2
+
+    invoke-virtual {v12}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v12
+
+    move-object/from16 v0, p3
+
+    invoke-virtual {v12, v0}, Landroid/graphics/drawable/Drawable;->applyTheme(Landroid/content/res/Resources$Theme;)V
+
+    invoke-virtual {v12}, Landroid/graphics/drawable/Drawable;->clearMutated()V
+
+    :cond_2
+    if-eqz v12, :cond_3
+
+    move-object/from16 v0, p1
+
+    iget v4, v0, Landroid/util/TypedValue;->changingConfigurations:I
+
+    invoke-virtual {v12, v4}, Landroid/graphics/drawable/Drawable;->setChangingConfigurations(I)V
+
+    move-object/from16 v4, p0
+
+    move-object/from16 v5, p1
+
+    move-object/from16 v8, p3
+
+    invoke-direct/range {v4 .. v12}, Landroid/content/res/Resources;->cacheDrawable(Landroid/util/TypedValue;ZLandroid/content/res/DrawableCache;Landroid/content/res/Resources$Theme;ZJLandroid/graphics/drawable/Drawable;)V
+
+    :cond_3
+    move-object v13, v12
+
+    goto :goto_1
+
+    :cond_4
+    move-object/from16 v0, p0
+
+    move/from16 v1, p2
+
+    invoke-virtual {v0, v10, v11, v1}, Landroid/content/res/Resources;->getPreloadedDrawable(JI)Landroid/graphics/drawable/Drawable$ConstantState;
+
+    move-result-object v14
+
+    goto :goto_2
+
+    :cond_5
+    if-eqz v6, :cond_6
+
+    new-instance v12, Landroid/graphics/drawable/ColorDrawable;
+
+    move-object/from16 v0, p1
+
+    iget v4, v0, Landroid/util/TypedValue;->data:I
+
+    invoke-direct {v12, v4}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
+
+    goto :goto_3
+
+    :cond_6
+    const/4 v4, 0x0
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p1
+
+    move/from16 v2, p2
+
+    invoke-direct {v0, v1, v2, v4}, Landroid/content/res/Resources;->loadDrawableForCookie(Landroid/util/TypedValue;ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v12
+
+    goto :goto_3
+
+    :cond_7
+    const/4 v9, 0x0
+
+    goto :goto_4
 .end method
 
 .method loadDrawable(Landroid/util/TypedValue;ILandroid/content/res/Resources$Theme;Z)Landroid/graphics/drawable/Drawable;

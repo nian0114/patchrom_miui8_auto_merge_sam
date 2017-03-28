@@ -5970,6 +5970,12 @@
 
     if-nez v21, :cond_16
 
+    invoke-static {}, Landroid/app/ActivityManager;->isHighEndGfx()Z
+
+    move-result v21
+
+    if-eqz v21, :cond_16
+
     if-nez v19, :cond_16
 
     const/16 v21, 0x22
@@ -6292,12 +6298,6 @@
     invoke-virtual {v3, v0, v1}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v21
-
-    move/from16 v0, v21
-
-    move-object/from16 v1, p0
-
-    iput v0, v1, Lcom/android/internal/policy/PhoneWindow;->mLastBackgroundResource:I
 
     move/from16 v0, v21
 
@@ -6872,27 +6872,13 @@
 
     move-result-object v21
 
-    invoke-virtual/range {v21 .. v21}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v21
-
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/internal/policy/PhoneWindow;->mBackgroundResource:I
 
     move/from16 v22, v0
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/internal/policy/PhoneWindow;->getContext()Landroid/content/Context;
-
-    move-result-object v23
-
-    invoke-virtual/range {v23 .. v23}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
-
-    move-result-object v23
-
-    const/16 v24, 0x1
-
-    invoke-virtual/range {v21 .. v24}, Landroid/content/res/Resources;->getDrawable(ILandroid/content/res/Resources$Theme;Z)Landroid/graphics/drawable/Drawable;
+    invoke-virtual/range {v21 .. v22}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v4
 
