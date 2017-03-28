@@ -66,6 +66,7 @@ local-pre-zip-misc:
 	
 	
 	sed -i 's/ro.sf.lcd_density/persist.nian.dens/g' $(ZIP_DIR)/system/lib/libsurfaceflinger.so
+	sed -i 's/ro.sf.lcd_density/persist.nian.dens/g' $(ZIP_DIR)/system/lib64/libsurfaceflinger.so
 	echo "ro.nian.model=g9350" >> $(ZIP_DIR)/system/build.prop
 	echo "persist.nian.dens=560" >> $(ZIP_DIR)/system/build.prop
 	@echo goodbye! miui prebuilt binaries!
