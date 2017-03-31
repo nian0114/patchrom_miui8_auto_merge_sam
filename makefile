@@ -12,7 +12,7 @@ local-out-zip-file := MIUI_G9350.zip
 local-previous-target-dir :=
 
 # All apps from original ZIP, but has smali files chanded
-local-modified-apps := SamsungCamera5 SecSettings2 SecSettingsProvider2 SecMediaProvider
+local-modified-apps := SamsungCamera5 SecSettingsProvider2 SecMediaProvider
 
 local-modified-jars := sec_sdp_hidden_sdk
 
@@ -63,8 +63,8 @@ local-pre-zip-misc:
 	rm -rf $(ZIP_DIR)/system/preloadedmdm
 	rm -rf $(ZIP_DIR)/system/container
 	rm -rf $(ZIP_DIR)/system/etc/secure_storage/com.sec.knox.store*
-	
-	
+
+
 	sed -i 's/ro.sf.lcd_density/persist.nian.dens/g' $(ZIP_DIR)/system/lib/libsurfaceflinger.so
 	sed -i 's/ro.sf.lcd_density/persist.nian.dens/g' $(ZIP_DIR)/system/lib64/libsurfaceflinger.so
 	echo "ro.nian.model=g9350" >> $(ZIP_DIR)/system/build.prop
