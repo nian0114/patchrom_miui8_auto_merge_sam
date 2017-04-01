@@ -48,6 +48,7 @@ then
     sed -i 's/qemu.sf.lcd_density/persist.nian.dens/g' $2/smali/android/util/DisplayMetrics.smali
     appendSmaliPart "framework"
     applyPatch "overlay/framework"
+    appendSmaliPart "framework"
 fi
 
 if [ $2 = "$BUILD_OUT/services" ]
