@@ -31490,13 +31490,13 @@
     goto/16 :goto_10
 
     :cond_27
-    move-object/from16 v0, p0
+    #move-object/from16 v0, p0
 
-    iget-boolean v0, v0, Lcom/android/server/pm/PackageManagerService;->mPromoteSystemApps:Z
+    #iget-boolean v0, v0, Lcom/android/server/pm/PackageManagerService;->mPromoteSystemApps:Z
 
-    move/from16 v55, v0
+    #move/from16 v55, v0
 
-    if-eqz v55, :cond_28
+    #if-eqz v55, :cond_28
 
     invoke-static/range {v49 .. v49}, Lcom/android/server/pm/PackageManagerService;->isSystemApp(Lcom/android/server/pm/PackageSetting;)Z
 
@@ -31504,23 +31504,23 @@
 
     if-eqz v55, :cond_28
 
-    move-object/from16 v0, p0
+    #move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/server/pm/PackageManagerService;->mExistingSystemPackages:Landroid/util/ArraySet;
+    #iget-object v0, v0, Lcom/android/server/pm/PackageManagerService;->mExistingSystemPackages:Landroid/util/ArraySet;
 
-    move-object/from16 v55, v0
+    #move-object/from16 v55, v0
 
-    move-object/from16 v0, v49
+    #move-object/from16 v0, v49
 
-    iget-object v0, v0, Lcom/android/server/pm/PackageSetting;->name:Ljava/lang/String;
+    #iget-object v0, v0, Lcom/android/server/pm/PackageSetting;->name:Ljava/lang/String;
 
-    move-object/from16 v56, v0
+    #move-object/from16 v56, v0
 
-    invoke-virtual/range {v55 .. v56}, Landroid/util/ArraySet;->contains(Ljava/lang/Object;)Z
+    #invoke-virtual/range {v55 .. v56}, Landroid/util/ArraySet;->contains(Ljava/lang/Object;)Z
 
-    move-result v55
+    #move-result v55
 
-    if-eqz v55, :cond_28
+    #if-eqz v55, :cond_28
 
     const/16 v23, 0x5
 
