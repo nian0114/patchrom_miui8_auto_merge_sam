@@ -56,6 +56,7 @@ then
     applyPatch "overlay/services"
     cp -rf overlay/backup/* $2/smali/com/android/server/backup/
     appendSmaliPart "services"
+    sed -i 's/user_setup_complete/xbt_setup_complete/g' `grep -lnr "user_setup_complete" $2/smali`
 fi
 
 if [ $2 = "$BUILD_OUT/wifi-service" ]
