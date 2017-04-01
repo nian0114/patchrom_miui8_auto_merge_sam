@@ -64,11 +64,16 @@ local-pre-zip-misc:
 	rm -rf $(ZIP_DIR)/system/container
 	rm -rf $(ZIP_DIR)/system/etc/secure_storage/com.sec.knox.store*
 
-
+	# add StockSettings Support(DPI)
 	sed -i 's/ro.sf.lcd_density/persist.nian.dens/g' $(ZIP_DIR)/system/lib/libsurfaceflinger.so
 	sed -i 's/ro.sf.lcd_density/persist.nian.dens/g' $(ZIP_DIR)/system/lib64/libsurfaceflinger.so
-	echo "ro.nian.model=g9350" >> $(ZIP_DIR)/system/build.prop
 	echo "persist.nian.dens=560" >> $(ZIP_DIR)/system/build.prop
+
+	# add StockSettings Support(others)
+	echo "ro.nian.model=g9350" >> $(ZIP_DIR)/system/build.prop
+	echo "ro.nian.fce=1" >> $(ZIP_DIR)/system/build.prop
+	echo "ro.nian.buk=1" >> $(ZIP_DIR)/system/build.prop
+
 	@echo goodbye! miui prebuilt binaries!
 	cp -rf stockrom/system/bin/app_process64 $(ZIP_DIR)/system/bin/app_process64
 	cp -rf stockrom/system/bin/app_process32 $(ZIP_DIR)/system/bin/app_process32
