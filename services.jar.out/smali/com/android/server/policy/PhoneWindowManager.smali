@@ -10229,6 +10229,12 @@
 
     move-result p3
 
+    invoke-virtual/range {p0 .. p1}, Lcom/android/server/policy/PhoneWindowManager;->getExtraSystemUiVisibility(Landroid/view/WindowManagerPolicy$WindowState;)I
+
+    move-result v29
+
+    or-int p3, p3, v29
+
     return p3
 
     .end local v6    # "denyTransientNav":Z
