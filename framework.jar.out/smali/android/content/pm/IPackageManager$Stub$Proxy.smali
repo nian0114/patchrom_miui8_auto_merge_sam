@@ -1626,7 +1626,7 @@
 
     iget-object v2, p0, Landroid/content/pm/IPackageManager$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
-    const/16 v3, 0x58
+    const/16 v3, 0xbf
 
     const/4 v4, 0x0
 
