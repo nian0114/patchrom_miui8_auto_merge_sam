@@ -1,0 +1,95 @@
+From ff3863d272e699024ad0f9b5eb2b265fda0502d3 Mon Sep 17 00:00:00 2001
+From: caets <348581329@qq.com>
+Date: Fri, 27 Jan 2017 11:20:34 +0800
+Subject: [PATCH] fix_fingerUseAndaddControl
+
+---
+ .../keyguard/MiuiKeyguardViewMediator.smali        | 54 ++++++++++++++++++++--
+ 1 file changed, 49 insertions(+), 5 deletions(-)
+
+--- a/MiuiKeyguard/smali/com/android/keyguard/MiuiKeyguardViewMediator.smali
++++ b/MiuiKeyguard/smali/com/android/keyguard/MiuiKeyguardViewMediator.smali
+@@ -2550,7 +2550,8 @@
+ 
+     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+ 
+-    invoke-direct {p0}, Lcom/android/keyguard/MiuiKeyguardViewMediator;->startFingerprintIdentify()V
++    ##.line 1094
++    ##invoke-direct {p0}, Lcom/android/keyguard/MiuiKeyguardViewMediator;->startFingerprintIdentify()V
+ 
+     goto :goto_1
+ 
+@@ -4746,8 +4747,51 @@
+ 
+     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+ 
++    invoke-direct {p0}, Lcom/android/keyguard/MiuiKeyguardViewMediator;->stopFingerprintIdentify()V
++
++    iget-object v2, p0, Lcom/android/keyguard/MiuiKeyguardViewMediator;->mContext:Landroid/content/Context;
++
++    const-string v3, "keyguard"
++
++    invoke-virtual {v2, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
++
++    move-result-object v3
++
++    check-cast v3, Landroid/app/KeyguardManager;
++
++    .local v3, "keyguardManager":Landroid/app/KeyguardManager;
++    const/4 v2, 0x0
++
++    .local v2, "isLockState":Z
++    invoke-virtual {v3}, Landroid/app/KeyguardManager;->inKeyguardRestrictedInputMode()Z
++
++    move-result v2
++
++    if-eqz v2, :cond_miui_0
++
++    goto :goto_miui_0
++
++    :cond_miui_0
++    iget-object v2, p0, Lcom/android/keyguard/MiuiKeyguardViewMediator;->mContext:Landroid/content/Context;
++
++    invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
++
++    move-result-object v2
++
++    const-string v3, "alawaysFinger_on_touch"
++
++    invoke-static {v2, v3}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;)I
++
++    move-result v2
++
++    const/4 v3, 0x1
++
++    if-ne v2, v3, :cond_miui_1
++
+     invoke-direct {p0}, Lcom/android/keyguard/MiuiKeyguardViewMediator;->startFingerprintIdentify()V
+ 
++    :cond_miui_1
++    :goto_miui_0
+     iget-object v2, p0, Lcom/android/keyguard/MiuiKeyguardViewMediator;->mUnlockProfile:Lmiui/bluetooth/ble/MiBleUnlockProfile;
+ 
+     if-eqz v2, :cond_1
+@@ -4918,7 +4962,7 @@
+ 
+     sget-object v5, Lcom/android/keyguard/MiuiKeyguardUpdateMonitor$FingerprintIdentificationState;->LOCKOUT:Lcom/android/keyguard/MiuiKeyguardUpdateMonitor$FingerprintIdentificationState;
+ 
+-    if-ne v4, v5, :cond_1
++    if-eq v4, v5, :cond_1
+ 
+     const-string v4, "miui_keyguard_fingerprint"
+ 
+@@ -5233,7 +5277,8 @@
+ 
+     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+ 
+-    invoke-direct {p0}, Lcom/android/keyguard/MiuiKeyguardViewMediator;->startFingerprintIdentify()V
++    #.line 741
++    #invoke-direct {p0}, Lcom/android/keyguard/MiuiKeyguardViewMediator;->startFingerprintIdentify()V
+ 
+     :cond_1
+     invoke-direct {p0}, Lcom/android/keyguard/MiuiKeyguardViewMediator;->sendReEntryFingerprintNotificationIfNeed()V
+-- 
+2.7.4
+

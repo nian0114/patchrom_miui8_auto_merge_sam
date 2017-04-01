@@ -41,6 +41,7 @@ function changeID() {
 
 if [ $1 = "MiuiKeyguard" ];then
     appendSmaliPart $1
+    applyPatch $1 $2
 fi
 
 if [ $1 = "MiuiSystemUI" ];then
