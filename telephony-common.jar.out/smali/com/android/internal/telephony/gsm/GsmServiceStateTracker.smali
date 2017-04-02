@@ -10857,126 +10857,14 @@
 .end method
 
 .method protected getRatString(Ljava/lang/String;)Ljava/lang/String;
-    .locals 4
+    .locals 1
     .param p1, "netType"    # Ljava/lang/String;
 
     .prologue
-    const/4 v3, 0x0
+    const-string v0, ""
 
-    const-string v1, ":"
+    return-object v0
 
-    invoke-virtual {p1, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
-
-    move-result-object v0
-
-    .local v0, "mDataType":[Ljava/lang/String;
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "netType : "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    aget-object v2, v0, v3
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p0, v1}, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->loge(Ljava/lang/String;)V
-
-    const-string v1, "UMTS"
-
-    aget-object v2, v0, v3
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    const-string v1, "HSPA"
-
-    aget-object v2, v0, v3
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    const-string v1, "HSDPA"
-
-    aget-object v2, v0, v3
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    const-string v1, "HSUPA"
-
-    aget-object v2, v0, v3
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    const-string v1, "HSPAP"
-
-    aget-object v2, v0, v3
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    const-string v1, "TD-SCDMA"
-
-    aget-object v2, v0, v3
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    :cond_0
-    const-string v1, " 3G"
-
-    :goto_0
-    return-object v1
-
-    :cond_1
-    const-string v1, "LTE"
-
-    aget-object v2, v0, v3
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    const-string v1, " 4G"
-
-    goto :goto_0
-
-    :cond_2
-    const-string v1, ""
-
-    goto :goto_0
 .end method
 
 .method protected getRecords(I)Lcom/android/internal/telephony/uicc/IccRecords;
