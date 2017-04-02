@@ -8386,6 +8386,12 @@
 
     .end local p3    # "intent":Landroid/content/Intent;
     .local v18, "intent":Landroid/content/Intent;
+    move-object/from16 v0, v18
+
+    move-object/from16 v1, p2
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setSender(Ljava/lang/String;)V
+
     const/16 v55, 0x1
 
     .local v55, "bExcludeForceStoppedPackages":Z
