@@ -58,6 +58,7 @@ then
     cp -rf overlay/backup/* $2/smali/com/android/server/backup/
     appendSmaliPart "services"
     sed -i 's/user_setup_complete/xbt_setup_complete/g' `grep -lnr "user_setup_complete" $2/smali`
+    sed -i 's/screen_buttons_timeout/button_key_light/g' `grep -lnr "screen_buttons_timeout" $2/smali`
 fi
 
 if [ $2 = "$BUILD_OUT/wifi-service" ]
