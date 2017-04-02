@@ -1,0 +1,8 @@
+
+.method public onCdmaConnectionTimeReset(Landroid/telecom/Connection;)V
+    .locals 0
+    .param p1, "c"    # Landroid/telecom/Connection;
+
+    .prologue
+    return-void
+.end method

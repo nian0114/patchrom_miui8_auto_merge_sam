@@ -812,6 +812,22 @@
     .restart local v1    # "_arg1":Landroid/os/Bundle;
     goto :goto_8
 
+    .end local v0    # "_arg0":Ljava/lang/String;
+    .end local v1    # "_arg1":Landroid/os/Bundle;
+    :sswitch_19
+    const-string v5, "com.android.internal.telecom.IConnectionServiceAdapter"
+
+    invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    .restart local v0    # "_arg0":Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lcom/android/internal/telecom/IConnectionServiceAdapter$Stub;->resetCdmaConnectionTime(Ljava/lang/String;)V
+
+    goto/16 :goto_0
+
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1
@@ -838,6 +854,7 @@
         0x16 -> :sswitch_16
         0x17 -> :sswitch_17
         0x18 -> :sswitch_18
+        0x19 -> :sswitch_19
         0x5f4e5446 -> :sswitch_0
     .end sparse-switch
 .end method

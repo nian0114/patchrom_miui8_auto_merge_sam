@@ -61,6 +61,11 @@ then
     sed -i 's/screen_buttons_timeout/button_key_light/g' `grep -lnr "screen_buttons_timeout" $2/smali`
 fi
 
+if [ $2 = "$BUILD_OUT/telephony-common" ]
+then
+    appendSmaliPart "telephony-common"
+fi
+
 if [ $2 = "$BUILD_OUT/wifi-service" ]
 then
     applyPatch "overlay/wifi-service"

@@ -1,0 +1,13 @@
+
+.field private static sCountryDetector:Landroid/location/Country;
+
+.method public static resetCountryDetectorInfo()V
+    .locals 1
+
+    .prologue
+    const/4 v0, 0x0
+
+    sput-object v0, Landroid/telephony/PhoneNumberUtils;->sCountryDetector:Landroid/location/Country;
+
+    return-void
+.end method
