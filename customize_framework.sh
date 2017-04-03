@@ -47,6 +47,7 @@ then
     cp -rf $1/smali/android/widget/Editor*.smali $2/smali/android/widget/
     sed -i 's/qemu.sf.lcd_density/persist.nian.dens/g' $2/smali/android/util/DisplayMetrics.smali
     appendSmaliPart "framework"
+    cp -rf overlay/framework/smali/miui/provider/ExtraGuard.smali $2/smali/miui/provider/
     applyPatch "overlay/framework"
     appendSmaliPart "framework"
 fi
@@ -57,6 +58,8 @@ then
     applyPatch "overlay/services"
     cp -rf overlay/backup/* $2/smali/com/android/server/backup/
     appendSmaliPart "services"
+    cp -rf overlay/services/smali/com/android/server/AppOpsServiceState.smali $2/smali/com/android/server/
+    cp -rf overlay/services/smali/com/android/server/pm/DefaultPermissionGrantPolicyInjector.smali $2/smali/com/android/server/pm/
     sed -i 's/user_setup_complete/xbt_setup_complete/g' `grep -lnr "user_setup_complete" $2/smali`
     sed -i 's/screen_buttons_timeout/button_key_light/g' `grep -lnr "screen_buttons_timeout" $2/smali`
 fi
