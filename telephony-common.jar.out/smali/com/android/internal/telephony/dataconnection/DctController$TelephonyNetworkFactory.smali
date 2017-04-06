@@ -437,85 +437,6 @@
     return-void
 .end method
 
-.method public handleMessage(Landroid/os/Message;)V
-    .locals 1
-    .param p1, "msg"    # Landroid/os/Message;
-
-    .prologue
-    iget v0, p1, Landroid/os/Message;->what:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0, p1}, Landroid/net/NetworkFactory;->handleMessage(Landroid/os/Message;)V
-
-    :goto_0
-    return-void
-
-    :pswitch_0
-    invoke-super {p0, p1}, Landroid/net/NetworkFactory;->handleMessage(Landroid/os/Message;)V
-
-    goto :goto_0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x83001
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method protected handleRemoveRequest(Landroid/net/NetworkRequest;)V
-    .locals 2
-    .param p1, "request"    # Landroid/net/NetworkRequest;
-
-    .prologue
-    iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
-
-    # getter for: Lcom/android/internal/telephony/dataconnection/DctController;->mRequestInfos:Ljava/util/HashMap;
-    invoke-static {v0}, Lcom/android/internal/telephony/dataconnection/DctController;->access$1200(Lcom/android/internal/telephony/dataconnection/DctController;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    iget v1, p1, Landroid/net/NetworkRequest;->requestId:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "handleRemoveRequest() mRequestInfos has key="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget v1, p1, Landroid/net/NetworkRequest;->requestId:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->log(Ljava/lang/String;)V
-
-    invoke-virtual {p0, p1}, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->releaseNetworkFor(Landroid/net/NetworkRequest;)V
-
-    :cond_0
-    return-void
-.end method
-
 .method protected log(Ljava/lang/String;)V
     .locals 3
     .param p1, "s"    # Ljava/lang/String;
@@ -563,612 +484,207 @@
 .end method
 
 .method protected needNetworkFor(Landroid/net/NetworkRequest;I)V
-    .locals 9
+    .locals 7
     .param p1, "networkRequest"    # Landroid/net/NetworkRequest;
     .param p2, "score"    # I
 
     .prologue
-    new-instance v7, Ljava/lang/StringBuilder;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v8, "Cellular needs Network for "
+    const-string v5, "Cellular needs Network for "
 
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v7
+    move-result-object v4
 
-    invoke-virtual {v7, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object v7
+    move-result-object v4
 
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v7
+    move-result-object v4
 
-    invoke-virtual {p0, v7}, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->log(Ljava/lang/String;)V
+    invoke-virtual {p0, v4}, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->log(Ljava/lang/String;)V
 
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->addLogger(Landroid/net/NetworkRequest;)Landroid/util/LocalLog;
-
-    move-result-object v3
-
-    .local v3, "l":Landroid/util/LocalLog;
-    iget-object v7, p0, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->mPhone:Lcom/android/internal/telephony/Phone;
-
-    invoke-interface {v7}, Lcom/android/internal/telephony/Phone;->getSubId()I
-
-    move-result v7
-
-    invoke-static {v7}, Landroid/telephony/SubscriptionManager;->isUsableSubIdValue(I)Z
-
-    move-result v7
-
-    if-nez v7, :cond_0
-
-    const-string v6, "SubId not useable, pending request."
-
-    .local v6, "str":Ljava/lang/String;
-    const-string v7, "SubId not useable, pending request."
-
-    invoke-virtual {p0, v7}, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->log(Ljava/lang/String;)V
-
-    const-string v7, "SubId not useable, pending request."
-
-    invoke-virtual {v3, v7}, Landroid/util/LocalLog;->log(Ljava/lang/String;)V
-
-    iget-object v7, p0, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->mPendingReq:Landroid/util/SparseArray;
-
-    iget v8, p1, Landroid/net/NetworkRequest;->requestId:I
-
-    invoke-virtual {v7, v8, p1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    .end local v6    # "str":Ljava/lang/String;
-    :goto_0
-    return-void
-
-    :cond_0
-    iget-object v7, p0, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
-
-    # invokes: Lcom/android/internal/telephony/dataconnection/DctController;->getRequestPhoneId(Landroid/net/NetworkRequest;)I
-    invoke-static {v7, p1}, Lcom/android/internal/telephony/dataconnection/DctController;->access$1300(Lcom/android/internal/telephony/dataconnection/DctController;Landroid/net/NetworkRequest;)I
-
-    move-result v7
-
-    iget-object v8, p0, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->mPhone:Lcom/android/internal/telephony/Phone;
-
-    invoke-interface {v8}, Lcom/android/internal/telephony/Phone;->getPhoneId()I
-
-    move-result v8
-
-    if-ne v7, v8, :cond_6
-
-    iget-object v7, p0, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->mPhone:Lcom/android/internal/telephony/Phone;
-
-    check-cast v7, Lcom/android/internal/telephony/PhoneBase;
-
-    iget-object v1, v7, Lcom/android/internal/telephony/PhoneBase;->mDcTracker:Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
-
-    .local v1, "dcTracker":Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
-    iget-object v7, p0, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
-
-    # invokes: Lcom/android/internal/telephony/dataconnection/DctController;->apnForNetworkRequest(Landroid/net/NetworkRequest;)Ljava/lang/String;
-    invoke-static {v7, p1}, Lcom/android/internal/telephony/dataconnection/DctController;->access$1400(Lcom/android/internal/telephony/dataconnection/DctController;Landroid/net/NetworkRequest;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .local v0, "apn":Ljava/lang/String;
-    iget-object v7, p0, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
-
-    # getter for: Lcom/android/internal/telephony/dataconnection/DctController;->mConfigNetworkTypeCapability:Ljava/lang/String;
-    invoke-static {v7}, Lcom/android/internal/telephony/dataconnection/DctController;->access$1500(Lcom/android/internal/telephony/dataconnection/DctController;)Ljava/lang/String;
-
-    move-result-object v7
-
-    if-eqz v7, :cond_2
-
-    iget-object v7, p0, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
-
-    # getter for: Lcom/android/internal/telephony/dataconnection/DctController;->mConfigNetworkTypeCapability:Ljava/lang/String;
-    invoke-static {v7}, Lcom/android/internal/telephony/dataconnection/DctController;->access$1500(Lcom/android/internal/telephony/dataconnection/DctController;)Ljava/lang/String;
-
-    move-result-object v7
-
-    const-string v8, "SPR-"
-
-    invoke-virtual {v7, v8}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v7
-
-    if-eqz v7, :cond_2
-
-    const-string v7, "dun"
-
-    invoke-virtual {v0, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v7
-
-    if-eqz v7, :cond_2
-
-    invoke-virtual {v1, v0}, Lcom/android/internal/telephony/dataconnection/DcTrackerBase;->isApnTypeAvailable(Ljava/lang/String;)Z
-
-    move-result v7
-
-    if-nez v7, :cond_1
-
-    iget-object v7, v1, Lcom/android/internal/telephony/dataconnection/DcTrackerBase;->mAllApnSettings:Ljava/util/ArrayList;
-
-    if-eqz v7, :cond_1
-
-    iget-object v7, v1, Lcom/android/internal/telephony/dataconnection/DcTrackerBase;->mAllApnSettings:Ljava/util/ArrayList;
-
-    invoke-virtual {v7}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result v7
-
-    if-nez v7, :cond_1
-
-    new-instance v2, Landroid/content/Intent;
-
-    const-string v7, "com.samsung.android.intent.action.TETHERING_DENIED"
-
-    invoke-direct {v2, v7}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    .local v2, "intent":Landroid/content/Intent;
-    iget-object v7, p0, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
-
-    # getter for: Lcom/android/internal/telephony/dataconnection/DctController;->mContext:Landroid/content/Context;
-    invoke-static {v7}, Lcom/android/internal/telephony/dataconnection/DctController;->access$800(Lcom/android/internal/telephony/dataconnection/DctController;)Landroid/content/Context;
-
-    move-result-object v7
-
-    invoke-virtual {v7, v2}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
-
-    .end local v2    # "intent":Landroid/content/Intent;
-    :cond_1
-    invoke-virtual {v1}, Lcom/android/internal/telephony/dataconnection/DcTrackerBase;->isDataAllowed()Z
-
-    move-result v7
-
-    if-nez v7, :cond_2
-
-    new-instance v2, Landroid/content/Intent;
-
-    const-string v7, "com.samsung.android.intent.action.TETHERING_FAILED"
-
-    invoke-direct {v2, v7}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    .restart local v2    # "intent":Landroid/content/Intent;
-    iget-object v7, p0, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
-
-    # getter for: Lcom/android/internal/telephony/dataconnection/DctController;->mContext:Landroid/content/Context;
-    invoke-static {v7}, Lcom/android/internal/telephony/dataconnection/DctController;->access$800(Lcom/android/internal/telephony/dataconnection/DctController;)Landroid/content/Context;
-
-    move-result-object v7
-
-    invoke-virtual {v7, v2}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
-
-    .end local v2    # "intent":Landroid/content/Intent;
-    :cond_2
-    invoke-virtual {v1, v0}, Lcom/android/internal/telephony/dataconnection/DcTrackerBase;->isApnSupported(Ljava/lang/String;)Z
-
-    move-result v7
-
-    if-eqz v7, :cond_5
-
-    iget-object v7, p0, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
-
-    # getter for: Lcom/android/internal/telephony/dataconnection/DctController;->mPhoneNum:I
-    invoke-static {v7}, Lcom/android/internal/telephony/dataconnection/DctController;->access$1600(Lcom/android/internal/telephony/dataconnection/DctController;)I
-
-    move-result v7
-
-    const/4 v8, 0x1
-
-    if-le v7, v8, :cond_4
-
-    const-string v7, "mms"
-
-    invoke-virtual {v0, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v7
-
-    if-nez v7, :cond_3
-
-    const-string v7, "mms2"
-
-    invoke-virtual {v0, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v7
-
-    if-eqz v7, :cond_4
-
-    :cond_3
-    iget-object v7, p1, Landroid/net/NetworkRequest;->networkCapabilities:Landroid/net/NetworkCapabilities;
-
-    invoke-virtual {v7}, Landroid/net/NetworkCapabilities;->getNetworkSpecifier()Ljava/lang/String;
-
-    move-result-object v5
-
-    .local v5, "specifier":Ljava/lang/String;
-    if-eqz v5, :cond_4
-
-    const-string v7, ""
-
-    invoke-virtual {v5, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v7
-
-    if-nez v7, :cond_4
-
-    iget-object v7, p1, Landroid/net/NetworkRequest;->networkCapabilities:Landroid/net/NetworkCapabilities;
-
-    invoke-virtual {v7}, Landroid/net/NetworkCapabilities;->getNetworkSpecifier()Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-static {v7}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result v4
-
-    .local v4, "mmsSubId":I
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v8, "needNetowkrFor, mmsSubId = "
-
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v7
-
-    invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v7
-
-    const-string v8, ", networkRequest ="
-
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v7
-
-    invoke-virtual {v7, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-virtual {p0, v7}, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->log(Ljava/lang/String;)V
-
-    iget-object v7, p0, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
-
-    # invokes: Lcom/android/internal/telephony/dataconnection/DctController;->setDataSubIdForMMS(I)V
-    invoke-static {v7, v4}, Lcom/android/internal/telephony/dataconnection/DctController;->access$1700(Lcom/android/internal/telephony/dataconnection/DctController;I)V
-
-    .end local v4    # "mmsSubId":I
-    .end local v5    # "specifier":Ljava/lang/String;
-    :cond_4
-    iget-object v7, p0, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
-
-    invoke-virtual {v1, v0}, Lcom/android/internal/telephony/dataconnection/DcTrackerBase;->getApnPriority(Ljava/lang/String;)I
-
-    move-result v8
-
-    # invokes: Lcom/android/internal/telephony/dataconnection/DctController;->requestNetwork(Landroid/net/NetworkRequest;ILandroid/util/LocalLog;)I
-    invoke-static {v7, p1, v8, v3}, Lcom/android/internal/telephony/dataconnection/DctController;->access$1800(Lcom/android/internal/telephony/dataconnection/DctController;Landroid/net/NetworkRequest;ILandroid/util/LocalLog;)I
-
-    goto/16 :goto_0
-
-    :cond_5
-    const-string v6, "Unsupported APN"
-
-    .restart local v6    # "str":Ljava/lang/String;
-    const-string v7, "Unsupported APN"
-
-    invoke-virtual {p0, v7}, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->log(Ljava/lang/String;)V
-
-    const-string v7, "Unsupported APN"
-
-    invoke-virtual {v3, v7}, Landroid/util/LocalLog;->log(Ljava/lang/String;)V
-
-    goto/16 :goto_0
-
-    .end local v0    # "apn":Ljava/lang/String;
-    .end local v1    # "dcTracker":Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
-    .end local v6    # "str":Ljava/lang/String;
-    :cond_6
-    const-string v6, "Request not send, put to pending"
-
-    .restart local v6    # "str":Ljava/lang/String;
-    const-string v7, "Request not send, put to pending"
-
-    invoke-virtual {p0, v7}, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->log(Ljava/lang/String;)V
-
-    const-string v7, "Request not send, put to pending"
-
-    invoke-virtual {v3, v7}, Landroid/util/LocalLog;->log(Ljava/lang/String;)V
-
-    iget-object v7, p0, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->mPendingReq:Landroid/util/SparseArray;
-
-    iget v8, p1, Landroid/net/NetworkRequest;->requestId:I
-
-    invoke-virtual {v7, v8, p1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    goto/16 :goto_0
-.end method
-
-.method protected releaseNetworkFor(Landroid/net/NetworkRequest;)V
-    .locals 9
-    .param p1, "networkRequest"    # Landroid/net/NetworkRequest;
-
-    .prologue
-    const/4 v8, -0x1
-
-    const-string v5, "Cellular releasing Network for "
-
-    .local v5, "str":Ljava/lang/String;
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    invoke-virtual {v6, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {p0, v6}, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->log(Ljava/lang/String;)V
-
-    iget v6, p1, Landroid/net/NetworkRequest;->requestId:I
-
-    invoke-virtual {p0, v6, v5}, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->requestLog(ILjava/lang/String;)Landroid/util/LocalLog;
 
     move-result-object v2
 
     .local v2, "l":Landroid/util/LocalLog;
-    iget-object v6, p0, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->mPhone:Lcom/android/internal/telephony/Phone;
+    iget-object v4, p0, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->mPhone:Lcom/android/internal/telephony/Phone;
 
-    invoke-interface {v6}, Lcom/android/internal/telephony/Phone;->getSubId()I
+    invoke-interface {v4}, Lcom/android/internal/telephony/Phone;->getSubId()I
 
-    move-result v6
+    move-result v4
 
-    invoke-static {v6}, Landroid/telephony/SubscriptionManager;->isUsableSubIdValue(I)Z
+    invoke-static {v4}, Landroid/telephony/SubscriptionManager;->isUsableSubIdValue(I)Z
 
-    move-result v6
+    move-result v4
 
-    if-nez v6, :cond_2
+    if-eqz v4, :cond_0
 
-    const-string v5, "Sub Info has not been ready, remove request."
+    iget-object v4, p0, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
-    invoke-virtual {p0, v5}, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->log(Ljava/lang/String;)V
+    # invokes: Lcom/android/internal/telephony/dataconnection/DctController;->getRequestPhoneId(Landroid/net/NetworkRequest;)I
+    invoke-static {v4, p1}, Lcom/android/internal/telephony/dataconnection/DctController;->access$200(Lcom/android/internal/telephony/dataconnection/DctController;Landroid/net/NetworkRequest;)I
 
-    if-eqz v2, :cond_0
+    move-result v4
 
-    invoke-virtual {v2, v5}, Landroid/util/LocalLog;->log(Ljava/lang/String;)V
+    iget-object v5, p0, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->mPhone:Lcom/android/internal/telephony/Phone;
+
+    invoke-interface {v5}, Lcom/android/internal/telephony/Phone;->getPhoneId()I
+
+    move-result v5
+
+    if-eq v4, v5, :cond_1
 
     :cond_0
-    iget-object v6, p0, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->mPendingReq:Landroid/util/SparseArray;
+    const-string v3, "Request not useable, pending request."
 
-    iget v7, p1, Landroid/net/NetworkRequest;->requestId:I
+    .local v3, "str":Ljava/lang/String;
+    const-string v4, "Request not useable, pending request."
 
-    invoke-virtual {v6, v7}, Landroid/util/SparseArray;->remove(I)V
+    invoke-virtual {p0, v4}, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->log(Ljava/lang/String;)V
 
-    :cond_1
+    const-string v4, "Request not useable, pending request."
+
+    invoke-virtual {v2, v4}, Landroid/util/LocalLog;->log(Ljava/lang/String;)V
+
+    iget-object v4, p0, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->mPendingReq:Landroid/util/SparseArray;
+
+    iget v5, p1, Landroid/net/NetworkRequest;->requestId:I
+
+    invoke-virtual {v4, v5, p1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    .end local v3    # "str":Ljava/lang/String;
     :goto_0
     return-void
 
-    :cond_2
-    iget-object v6, p0, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
+    :cond_1
+    iget-object v4, p0, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->mPhone:Lcom/android/internal/telephony/Phone;
 
-    # invokes: Lcom/android/internal/telephony/dataconnection/DctController;->getRequestPhoneId(Landroid/net/NetworkRequest;)I
-    invoke-static {v6, p1}, Lcom/android/internal/telephony/dataconnection/DctController;->access$1300(Lcom/android/internal/telephony/dataconnection/DctController;Landroid/net/NetworkRequest;)I
+    check-cast v4, Lcom/android/internal/telephony/PhoneBase;
 
-    move-result v6
+    iget-object v1, v4, Lcom/android/internal/telephony/PhoneBase;->mDcTracker:Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
 
-    iget-object v7, p0, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->mPhone:Lcom/android/internal/telephony/Phone;
-
-    invoke-interface {v7}, Lcom/android/internal/telephony/Phone;->getPhoneId()I
-
-    move-result v7
-
-    if-ne v6, v7, :cond_5
-
-    iget-object v6, p0, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
+    .local v1, "dcTracker":Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
+    iget-object v4, p0, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
     # invokes: Lcom/android/internal/telephony/dataconnection/DctController;->apnForNetworkRequest(Landroid/net/NetworkRequest;)Ljava/lang/String;
-    invoke-static {v6, p1}, Lcom/android/internal/telephony/dataconnection/DctController;->access$1400(Lcom/android/internal/telephony/dataconnection/DctController;Landroid/net/NetworkRequest;)Ljava/lang/String;
+    invoke-static {v4, p1}, Lcom/android/internal/telephony/dataconnection/DctController;->access$300(Lcom/android/internal/telephony/dataconnection/DctController;Landroid/net/NetworkRequest;)Ljava/lang/String;
 
     move-result-object v0
 
     .local v0, "apn":Ljava/lang/String;
-    const-string v6, "ril.datacross.slotid"
-
-    invoke-static {v6, v8}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
-
-    move-result v1
-
-    .local v1, "crossPhoneId":I
-    iget-object v6, p0, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
-
-    # getter for: Lcom/android/internal/telephony/dataconnection/DctController;->mPhoneNum:I
-    invoke-static {v6}, Lcom/android/internal/telephony/dataconnection/DctController;->access$1600(Lcom/android/internal/telephony/dataconnection/DctController;)I
-
-    move-result v6
-
-    const/4 v7, 0x1
-
-    if-le v6, v7, :cond_4
-
-    if-eq v1, v8, :cond_4
-
-    const-string v6, "mms"
-
-    invoke-virtual {v0, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v6
-
-    if-nez v6, :cond_3
-
-    const-string v6, "mms2"
-
-    invoke-virtual {v0, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_4
-
-    :cond_3
-    iget-object v6, p1, Landroid/net/NetworkRequest;->networkCapabilities:Landroid/net/NetworkCapabilities;
-
-    invoke-virtual {v6}, Landroid/net/NetworkCapabilities;->getNetworkSpecifier()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-static {v6}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+    invoke-virtual {v1, v0}, Lcom/android/internal/telephony/dataconnection/DcTrackerBase;->isApnSupported(Ljava/lang/String;)Z
 
     move-result v4
 
-    .local v4, "mmsSubId":I
-    iget-object v6, p0, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
+    if-eqz v4, :cond_2
 
-    # getter for: Lcom/android/internal/telephony/dataconnection/DctController;->mSubController:Lcom/android/internal/telephony/SubscriptionController;
-    invoke-static {v6}, Lcom/android/internal/telephony/dataconnection/DctController;->access$500(Lcom/android/internal/telephony/dataconnection/DctController;)Lcom/android/internal/telephony/SubscriptionController;
+    iget-object v4, p0, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
-    move-result-object v6
+    invoke-virtual {v1, v0}, Lcom/android/internal/telephony/dataconnection/DcTrackerBase;->getApnPriority(Ljava/lang/String;)I
 
-    invoke-virtual {v6, v4}, Lcom/android/internal/telephony/SubscriptionController;->getPhoneId(I)I
+    move-result v5
 
-    move-result v3
+    iget-object v6, p0, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->mPhone:Lcom/android/internal/telephony/Phone;
 
-    .local v3, "mmsSlotId":I
-    if-ne v3, v1, :cond_4
+    invoke-interface {v6}, Lcom/android/internal/telephony/Phone;->getPhoneId()I
 
-    new-instance v6, Ljava/lang/StringBuilder;
+    move-result v6
 
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+    # invokes: Lcom/android/internal/telephony/dataconnection/DctController;->requestNetwork(Landroid/net/NetworkRequest;ILandroid/util/LocalLog;I)I
+    invoke-static {v4, p1, v5, v2, v6}, Lcom/android/internal/telephony/dataconnection/DctController;->access$400(Lcom/android/internal/telephony/dataconnection/DctController;Landroid/net/NetworkRequest;ILandroid/util/LocalLog;I)I
 
-    const-string v7, "releaseNetowkrFor, mmsSlotId = "
+    goto :goto_0
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_2
+    const-string v3, "Unsupported APN"
 
-    move-result-object v6
+    .restart local v3    # "str":Ljava/lang/String;
+    const-string v4, "Unsupported APN"
 
-    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, v4}, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->log(Ljava/lang/String;)V
 
-    move-result-object v6
+    const-string v4, "Unsupported APN"
 
-    const-string v7, ", networkRequest ="
+    invoke-virtual {v2, v4}, Landroid/util/LocalLog;->log(Ljava/lang/String;)V
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    goto :goto_0
+.end method
 
-    move-result-object v6
+.method protected releaseNetworkFor(Landroid/net/NetworkRequest;)V
+    .locals 4
+    .param p1, "networkRequest"    # Landroid/net/NetworkRequest;
 
-    invoke-virtual {v6, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    .prologue
+    const-string v1, "Cellular releasing Network for "
 
-    move-result-object v6
+    .local v1, "str":Ljava/lang/String;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result-object v6
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0, v6}, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->log(Ljava/lang/String;)V
+    move-result-object v2
 
-    iget-object v6, p0, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget-object v7, p0, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
+    move-result-object v2
 
-    # getter for: Lcom/android/internal/telephony/dataconnection/DctController;->mSubController:Lcom/android/internal/telephony/SubscriptionController;
-    invoke-static {v7}, Lcom/android/internal/telephony/dataconnection/DctController;->access$500(Lcom/android/internal/telephony/dataconnection/DctController;)Lcom/android/internal/telephony/SubscriptionController;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v7
+    move-result-object v2
 
-    invoke-virtual {v7}, Lcom/android/internal/telephony/SubscriptionController;->getDefaultDataSubId()I
+    invoke-virtual {p0, v2}, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->log(Ljava/lang/String;)V
 
-    move-result v7
+    iget v2, p1, Landroid/net/NetworkRequest;->requestId:I
 
-    # invokes: Lcom/android/internal/telephony/dataconnection/DctController;->setDataSubIdForMMS(I)V
-    invoke-static {v6, v7}, Lcom/android/internal/telephony/dataconnection/DctController;->access$1700(Lcom/android/internal/telephony/dataconnection/DctController;I)V
+    invoke-virtual {p0, v2, v1}, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->requestLog(ILjava/lang/String;)Landroid/util/LocalLog;
 
-    .end local v3    # "mmsSlotId":I
-    .end local v4    # "mmsSubId":I
-    :cond_4
-    iget-object v6, p0, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
+    move-result-object v0
+
+    .local v0, "l":Landroid/util/LocalLog;
+    iget-object v2, p0, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->mPendingReq:Landroid/util/SparseArray;
+
+    iget v3, p1, Landroid/net/NetworkRequest;->requestId:I
+
+    invoke-virtual {v2, v3}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_1
+
+    const-string v1, "Sub Info has not been ready, remove request."
+
+    invoke-virtual {p0, v1}, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->log(Ljava/lang/String;)V
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, v1}, Landroid/util/LocalLog;->log(Ljava/lang/String;)V
+
+    :cond_0
+    iget-object v2, p0, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->mPendingReq:Landroid/util/SparseArray;
+
+    iget v3, p1, Landroid/net/NetworkRequest;->requestId:I
+
+    invoke-virtual {v2, v3}, Landroid/util/SparseArray;->remove(I)V
+
+    :goto_0
+    return-void
+
+    :cond_1
+    iget-object v2, p0, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
     # invokes: Lcom/android/internal/telephony/dataconnection/DctController;->releaseNetwork(Landroid/net/NetworkRequest;)I
-    invoke-static {v6, p1}, Lcom/android/internal/telephony/dataconnection/DctController;->access$1900(Lcom/android/internal/telephony/dataconnection/DctController;Landroid/net/NetworkRequest;)I
+    invoke-static {v2, p1}, Lcom/android/internal/telephony/dataconnection/DctController;->access$500(Lcom/android/internal/telephony/dataconnection/DctController;Landroid/net/NetworkRequest;)I
 
-    iget-object v6, p0, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->mPendingReq:Landroid/util/SparseArray;
-
-    iget v7, p1, Landroid/net/NetworkRequest;->requestId:I
-
-    invoke-virtual {v6, v7}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
-
-    move-result-object v6
-
-    if-eqz v6, :cond_1
-
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v7, "requestId("
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    iget v7, p1, Landroid/net/NetworkRequest;->requestId:I
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    const-string v7, ") is needed to remove from pending requests"
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {p0, v6}, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->log(Ljava/lang/String;)V
-
-    iget-object v6, p0, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->mPendingReq:Landroid/util/SparseArray;
-
-    iget v7, p1, Landroid/net/NetworkRequest;->requestId:I
-
-    invoke-virtual {v6, v7}, Landroid/util/SparseArray;->remove(I)V
-
-    goto/16 :goto_0
-
-    .end local v0    # "apn":Ljava/lang/String;
-    .end local v1    # "crossPhoneId":I
-    :cond_5
-    const-string v5, "Request not released"
-
-    invoke-virtual {p0, v5}, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->log(Ljava/lang/String;)V
-
-    if-eqz v2, :cond_6
-
-    invoke-virtual {v2, v5}, Landroid/util/LocalLog;->log(Ljava/lang/String;)V
-
-    :cond_6
-    iget-object v6, p0, Lcom/android/internal/telephony/dataconnection/DctController$TelephonyNetworkFactory;->mPendingReq:Landroid/util/SparseArray;
-
-    iget v7, p1, Landroid/net/NetworkRequest;->requestId:I
-
-    invoke-virtual {v6, v7}, Landroid/util/SparseArray;->remove(I)V
-
-    goto/16 :goto_0
+    goto :goto_0
 .end method
 
 .method public requestLog(ILjava/lang/String;)Landroid/util/LocalLog;

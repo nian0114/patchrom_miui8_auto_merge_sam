@@ -1,4 +1,4 @@
-.class public Lcom/android/internal/telephony/dataconnection/DataConnection$ConnectionParams;
+.class Lcom/android/internal/telephony/dataconnection/DataConnection$ConnectionParams;
 .super Ljava/lang/Object;
 .source "DataConnection.java"
 
@@ -9,15 +9,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x8
     name = "ConnectionParams"
 .end annotation
 
 
 # instance fields
 .field mApnContext:Lcom/android/internal/telephony/dataconnection/ApnContext;
-
-.field final mConnectionGeneration:I
 
 .field mInitialMaxRetry:I
 
@@ -33,7 +31,7 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/android/internal/telephony/dataconnection/ApnContext;IIIZLandroid/os/Message;I)V
+.method constructor <init>(Lcom/android/internal/telephony/dataconnection/ApnContext;IIIZLandroid/os/Message;)V
     .locals 0
     .param p1, "apnContext"    # Lcom/android/internal/telephony/dataconnection/ApnContext;
     .param p2, "initialMaxRetry"    # I
@@ -41,7 +39,6 @@
     .param p4, "rilRadioTechnology"    # I
     .param p5, "retryWhenSSChange"    # Z
     .param p6, "onCompletedMsg"    # Landroid/os/Message;
-    .param p7, "connectionGeneration"    # I
 
     .prologue
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -58,40 +55,11 @@
 
     iput-object p6, p0, Lcom/android/internal/telephony/dataconnection/DataConnection$ConnectionParams;->mOnCompletedMsg:Landroid/os/Message;
 
-    iput p7, p0, Lcom/android/internal/telephony/dataconnection/DataConnection$ConnectionParams;->mConnectionGeneration:I
-
     return-void
 .end method
 
 
 # virtual methods
-.method public getApnContext()Lcom/android/internal/telephony/dataconnection/ApnContext;
-    .locals 2
-
-    .prologue
-    invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
-
-    move-result-object v0
-
-    const-string v1, "CscFeature_Common_EnableItsOn"
-
-    invoke-virtual {v0, v1}, Lcom/sec/android/app/CscFeature;->getEnableStatus(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DataConnection$ConnectionParams;->mApnContext:Lcom/android/internal/telephony/dataconnection/ApnContext;
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
 .method public toString()Ljava/lang/String;
     .locals 2
 
