@@ -55,15 +55,14 @@ include $(PORT_BUILD)/porting.mk
 #updater := $(ZIP_DIR)/META-INF/com/google/android/updater-script
 #pre_install_data_packages := $(TMP_DIR)/pre_install_apk_pkgname.txt
 local-pre-zip-misc:
-	@echo Update boot.img
-	cp -rf ../other/system $(ZIP_DIR)/
-	cp -rf other/system $(ZIP_DIR)/
-
 	rm -rf $(ZIP_DIR)/system/preload
 	rm -rf $(ZIP_DIR)/system/preloadedmdm
 	rm -rf $(ZIP_DIR)/system/container
 	rm -rf $(ZIP_DIR)/system/etc/secure_storage/com.sec.knox.store*
 
+	cp -rf ../other/system $(ZIP_DIR)/
+	cp -rf other/system $(ZIP_DIR)/
+	
 	# add StockSettings Support(DPI)
 	sed -i 's/ro.sf.lcd_density/persist.nian.dens/g' $(ZIP_DIR)/system/lib/libsurfaceflinger.so
 	sed -i 's/ro.sf.lcd_density/persist.nian.dens/g' $(ZIP_DIR)/system/lib64/libsurfaceflinger.so
