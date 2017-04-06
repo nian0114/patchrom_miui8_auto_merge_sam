@@ -18,13 +18,19 @@
 
 .field private static final DBG:Z = true
 
+.field static final EVENT_CALL_STATE_CHANGED:I = 0x4400d
+
 .field static final EVENT_DATA_ATTACHED:I = 0x44007
 
 .field static final EVENT_DATA_DETACHED:I = 0x44008
 
+.field static final EVENT_DATA_DISCONNECTED:I = 0x4400b
+
 .field static final EVENT_EMERGENCY_CALL_ENDED:I = 0x4400a
 
 .field static final EVENT_EMERGENCY_CALL_STARTED:I = 0x44009
+
+.field static final EVENT_WAIT_FOR_DATA_DISCONNECTED:I = 0x4400c
 
 .field private static final LOG_TAG:Ljava/lang/String; = "DcSwitchAsyncChannel"
 
@@ -425,6 +431,38 @@
     goto :goto_0
 .end method
 
+.method public notifyCallStateChanged(I)V
+    .locals 2
+    .param p1, "isInCall"    # I
+
+    .prologue
+    const v0, 0x4400d
+
+    invoke-virtual {p0, v0, p1}, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->sendMessage(II)V
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "notifyCallStateChanged : "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p0, v0}, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->log(Ljava/lang/String;)V
+
+    return-void
+.end method
+
 .method public notifyDataAttached()V
     .locals 1
 
@@ -443,6 +481,21 @@
     const v0, 0x44008
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->sendMessage(I)V
+
+    return-void
+.end method
+
+.method public notifyDataDisconnected()V
+    .locals 1
+
+    .prologue
+    const v0, 0x4400b
+
+    invoke-virtual {p0, v0}, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->sendMessage(I)V
+
+    const-string v0, "notifyDataDisconnected"
+
+    invoke-direct {p0, v0}, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->log(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -467,6 +520,21 @@
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->sendMessage(I)V
 
     goto :goto_0
+.end method
+
+.method public notifyWaitForDataDisconnected()V
+    .locals 1
+
+    .prologue
+    const v0, 0x4400c
+
+    invoke-virtual {p0, v0}, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->sendMessage(I)V
+
+    const-string v0, "EVENT_WAIT_FOR_DATA_DISCONNECTED"
+
+    invoke-direct {p0, v0}, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel;->log(Ljava/lang/String;)V
+
+    return-void
 .end method
 
 .method public reqIsIdleOrDetaching()V

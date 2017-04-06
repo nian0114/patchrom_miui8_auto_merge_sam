@@ -316,17 +316,18 @@
 
 
 # virtual methods
-.method public bringUp(Lcom/android/internal/telephony/dataconnection/ApnContext;IIIZLandroid/os/Message;)V
-    .locals 8
+.method public bringUp(Lcom/android/internal/telephony/dataconnection/ApnContext;IIIZLandroid/os/Message;I)V
+    .locals 9
     .param p1, "apnContext"    # Lcom/android/internal/telephony/dataconnection/ApnContext;
     .param p2, "initialMaxRetry"    # I
     .param p3, "profileId"    # I
     .param p4, "rilRadioTechnology"    # I
     .param p5, "retryWhenSSChange"    # Z
     .param p6, "onCompletedMsg"    # Landroid/os/Message;
+    .param p7, "connectionGeneration"    # I
 
     .prologue
-    const/high16 v7, 0x40000
+    const/high16 v8, 0x40000
 
     new-instance v0, Lcom/android/internal/telephony/dataconnection/DataConnection$ConnectionParams;
 
@@ -342,9 +343,11 @@
 
     move-object v6, p6
 
-    invoke-direct/range {v0 .. v6}, Lcom/android/internal/telephony/dataconnection/DataConnection$ConnectionParams;-><init>(Lcom/android/internal/telephony/dataconnection/ApnContext;IIIZLandroid/os/Message;)V
+    move/from16 v7, p7
 
-    invoke-virtual {p0, v7, v0}, Lcom/android/internal/telephony/dataconnection/DcAsyncChannel;->sendMessage(ILjava/lang/Object;)V
+    invoke-direct/range {v0 .. v7}, Lcom/android/internal/telephony/dataconnection/DataConnection$ConnectionParams;-><init>(Lcom/android/internal/telephony/dataconnection/ApnContext;IIIZLandroid/os/Message;I)V
+
+    invoke-virtual {p0, v8, v0}, Lcom/android/internal/telephony/dataconnection/DcAsyncChannel;->sendMessage(ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -726,6 +729,21 @@
 
     .restart local v1    # "value":Z
     goto :goto_0
+.end method
+
+.method public isRetryForever()Z
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcAsyncChannel;->mDc:Lcom/android/internal/telephony/dataconnection/DataConnection;
+
+    iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DataConnection;->mRetryManager:Lcom/android/internal/telephony/RetryManager;
+
+    invoke-virtual {v0}, Lcom/android/internal/telephony/RetryManager;->isRetryForever()Z
+
+    move-result v0
+
+    return v0
 .end method
 
 .method public reqApnSetting()V
