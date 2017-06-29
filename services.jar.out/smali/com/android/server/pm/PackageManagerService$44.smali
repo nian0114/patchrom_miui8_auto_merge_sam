@@ -89,7 +89,7 @@
     const/4 v5, 0x0
 
     # invokes: Lcom/android/server/pm/PackageManagerService;->clearExternalStorageDataSync(Ljava/lang/String;IZ)V
-    invoke-static {v2, v3, v4, v5}, Lcom/android/server/pm/PackageManagerService;->access$6600(Lcom/android/server/pm/PackageManagerService;Ljava/lang/String;IZ)V
+    invoke-static {v2, v3, v4, v5}, Lcom/android/server/pm/PackageManagerService;->access$7000(Lcom/android/server/pm/PackageManagerService;Ljava/lang/String;IZ)V
 
     iget-object v2, p0, Lcom/android/server/pm/PackageManagerService$44;->val$observer:Landroid/content/pm/IPackageDataObserver;
 
