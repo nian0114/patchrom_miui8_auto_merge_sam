@@ -12,3 +12,8 @@ then
   sed -i 's/0x20/0xfe/g' $1/framework/smali/com/android/internal/telephony/ITelephonyRegistry\$Stub\$Proxy.smali.part
   sed -i 's/0x21/0xff/g' $1/framework/smali/com/android/internal/telephony/ITelephonyRegistry\$Stub\$Proxy.smali.part
 fi
+
+if [ $2 = "out/services" ]
+then
+    sed -i 's/Lcom\/android\/server\/pm\/PackageManagerService\$16/Lcom\/android\/server\/pm\/PackageManagerService\$22/g' $1/services/smali/com/android/server/pm/PackageManagerService.smali.part
+fi
