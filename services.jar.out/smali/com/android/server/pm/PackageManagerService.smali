@@ -113573,13 +113573,3 @@
 
     goto :goto_0
 .end method
-
-.method static synthetic access$9000(Lcom/android/server/pm/PackageManagerService;Ljava/lang/String;I)Z
-    .locals 1
-
-    invoke-direct {p0, p1, p2}, Lcom/android/server/pm/PackageManagerService;->deleteApplicationCacheFilesLI(Ljava/lang/String;I)Z
-
-    move-result v0
-
-    return v0
-.end method
