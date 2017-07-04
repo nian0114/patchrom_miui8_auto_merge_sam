@@ -55,7 +55,6 @@
 
     const/4 v4, 0x0
 
-    .line 28
     new-instance v0, Lcom/samsung/android/contextaware/aggregator/AggregatorErrors;
 
     const-string v1, "SUCCESS"
@@ -66,7 +65,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/aggregator/AggregatorErrors;->SUCCESS:Lcom/samsung/android/contextaware/aggregator/AggregatorErrors;
 
-    .line 31
     new-instance v0, Lcom/samsung/android/contextaware/aggregator/AggregatorErrors;
 
     const-string v1, "ERROR_UNKNOWN"
@@ -77,7 +75,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/aggregator/AggregatorErrors;->ERROR_UNKNOWN:Lcom/samsung/android/contextaware/aggregator/AggregatorErrors;
 
-    .line 34
     new-instance v0, Lcom/samsung/android/contextaware/aggregator/AggregatorErrors;
 
     const-string v1, "ERROR_ARRIVING_ON_STATUS_FAULT"
@@ -88,7 +85,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/aggregator/AggregatorErrors;->ERROR_ARRIVING_ON_STATUS_FAULT:Lcom/samsung/android/contextaware/aggregator/AggregatorErrors;
 
-    .line 37
     new-instance v0, Lcom/samsung/android/contextaware/aggregator/AggregatorErrors;
 
     const-string v1, "ERROR_UPDATED_CONTEXT_TYPE_FAULT"
@@ -99,7 +95,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/aggregator/AggregatorErrors;->ERROR_UPDATED_CONTEXT_TYPE_FAULT:Lcom/samsung/android/contextaware/aggregator/AggregatorErrors;
 
-    .line 40
     new-instance v0, Lcom/samsung/android/contextaware/aggregator/AggregatorErrors;
 
     const-string v1, "ERROR_UPDATED_CONTEXT_NULL_EXCEPTION"
@@ -110,7 +105,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/aggregator/AggregatorErrors;->ERROR_UPDATED_CONTEXT_NULL_EXCEPTION:Lcom/samsung/android/contextaware/aggregator/AggregatorErrors;
 
-    .line 43
     new-instance v0, Lcom/samsung/android/contextaware/aggregator/AggregatorErrors;
 
     const-string v1, "ERROR_SUB_COLLECTOR_FALSE"
@@ -123,7 +117,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/aggregator/AggregatorErrors;->ERROR_SUB_COLLECTOR_FALSE:Lcom/samsung/android/contextaware/aggregator/AggregatorErrors;
 
-    .line 46
     new-instance v0, Lcom/samsung/android/contextaware/aggregator/AggregatorErrors;
 
     const-string v1, "ERROR_SUB_COLLECTOR_NULL_EXCEPTION"
@@ -136,7 +129,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/aggregator/AggregatorErrors;->ERROR_SUB_COLLECTOR_NULL_EXCEPTION:Lcom/samsung/android/contextaware/aggregator/AggregatorErrors;
 
-    .line 25
     const/4 v0, 0x7
 
     new-array v0, v0, [Lcom/samsung/android/contextaware/aggregator/AggregatorErrors;
@@ -190,13 +182,10 @@
     .end annotation
 
     .prologue
-    .line 57
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 58
     iput-object p3, p0, Lcom/samsung/android/contextaware/aggregator/AggregatorErrors;->message:Ljava/lang/String;
 
-    .line 59
     return-void
 .end method
 
@@ -205,10 +194,8 @@
     .param p0, "code"    # I
 
     .prologue
-    .line 87
     const-string v4, ""
 
-    .line 89
     .local v4, "msg":Ljava/lang/String;
     invoke-static {}, Lcom/samsung/android/contextaware/aggregator/AggregatorErrors;->values()[Lcom/samsung/android/contextaware/aggregator/AggregatorErrors;
 
@@ -226,7 +213,6 @@
 
     aget-object v1, v0, v2
 
-    .line 90
     .local v1, "i":Lcom/samsung/android/contextaware/aggregator/AggregatorErrors;
     invoke-virtual {v1}, Lcom/samsung/android/contextaware/aggregator/AggregatorErrors;->ordinal()I
 
@@ -234,10 +220,8 @@
 
     if-ne v5, p0, :cond_2
 
-    .line 91
     iget-object v4, v1, Lcom/samsung/android/contextaware/aggregator/AggregatorErrors;->message:Ljava/lang/String;
 
-    .line 96
     .end local v1    # "i":Lcom/samsung/android/contextaware/aggregator/AggregatorErrors;
     :cond_0
     invoke-virtual {v4}, Ljava/lang/String;->isEmpty()Z
@@ -246,16 +230,13 @@
 
     if-eqz v5, :cond_1
 
-    .line 97
     const-string v5, "Message code is fault"
 
     invoke-static {v5}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 100
     :cond_1
     return-object v4
 
-    .line 89
     .restart local v1    # "i":Lcom/samsung/android/contextaware/aggregator/AggregatorErrors;
     :cond_2
     add-int/lit8 v2, v2, 0x1
@@ -268,7 +249,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 25
     const-class v0, Lcom/samsung/android/contextaware/aggregator/AggregatorErrors;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -284,7 +264,6 @@
     .locals 1
 
     .prologue
-    .line 25
     sget-object v0, Lcom/samsung/android/contextaware/aggregator/AggregatorErrors;->$VALUES:[Lcom/samsung/android/contextaware/aggregator/AggregatorErrors;
 
     invoke-virtual {v0}, [Lcom/samsung/android/contextaware/aggregator/AggregatorErrors;->clone()Ljava/lang/Object;
@@ -302,7 +281,6 @@
     .locals 1
 
     .prologue
-    .line 67
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/aggregator/AggregatorErrors;->ordinal()I
 
     move-result v0
@@ -314,7 +292,6 @@
     .locals 1
 
     .prologue
-    .line 76
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/AggregatorErrors;->message:Ljava/lang/String;
 
     return-object v0
@@ -324,6 +301,5 @@
     .locals 0
 
     .prologue
-    .line 113
     return-void
 .end method

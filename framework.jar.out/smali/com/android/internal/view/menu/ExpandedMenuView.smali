@@ -27,17 +27,14 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 54
     invoke-direct {p0, p1, p2}, Landroid/widget/ListView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 56
     sget-object v2, Lcom/android/internal/R$styleable;->MenuView:[I
 
     invoke-virtual {p1, p2, v2, v3, v3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    .line 57
     .local v0, "a":Landroid/content/res/TypedArray;
     invoke-virtual {v0, v3, v3}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -45,15 +42,12 @@
 
     iput v2, p0, Lcom/android/internal/view/menu/ExpandedMenuView;->mAnimations:I
 
-    .line 58
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 60
     new-instance v1, Landroid/util/TypedValue;
 
     invoke-direct {v1}, Landroid/util/TypedValue;-><init>()V
 
-    .line 61
     .local v1, "outValue":Landroid/util/TypedValue;
     invoke-virtual {p1}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
@@ -65,15 +59,12 @@
 
     invoke-virtual {v2, v3, v1, v4}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
 
-    .line 62
     iget v2, v1, Landroid/util/TypedValue;->data:I
 
     iput v2, p0, Lcom/android/internal/view/menu/ExpandedMenuView;->isDeviceDefault:I
 
-    .line 65
     invoke-virtual {p0, p0}, Lcom/android/internal/view/menu/ExpandedMenuView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 66
     return-void
 .end method
 
@@ -83,7 +74,6 @@
     .locals 1
 
     .prologue
-    .line 101
     iget v0, p0, Lcom/android/internal/view/menu/ExpandedMenuView;->mAnimations:I
 
     return v0
@@ -94,10 +84,8 @@
     .param p1, "menu"    # Lcom/android/internal/view/menu/MenuBuilder;
 
     .prologue
-    .line 69
     iput-object p1, p0, Lcom/android/internal/view/menu/ExpandedMenuView;->mMenu:Lcom/android/internal/view/menu/MenuBuilder;
 
-    .line 70
     return-void
 .end method
 
@@ -106,7 +94,6 @@
     .param p1, "item"    # Lcom/android/internal/view/menu/MenuItemImpl;
 
     .prologue
-    .line 93
     iget-object v0, p0, Lcom/android/internal/view/menu/ExpandedMenuView;->mMenu:Lcom/android/internal/view/menu/MenuBuilder;
 
     const/4 v1, 0x0
@@ -122,15 +109,12 @@
     .locals 3
 
     .prologue
-    .line 74
     invoke-super {p0}, Landroid/widget/ListView;->onAttachedToWindow()V
 
-    .line 76
     invoke-virtual {p0}, Lcom/android/internal/view/menu/ExpandedMenuView;->getAdapter()Landroid/widget/ListAdapter;
 
     move-result-object v1
 
-    .line 77
     .local v1, "mAdapter":Landroid/widget/Adapter;
     if-eqz v1, :cond_0
 
@@ -140,21 +124,17 @@
 
     move-object v0, v1
 
-    .line 78
     check-cast v0, Landroid/widget/BaseAdapter;
 
-    .line 79
     .local v0, "baseAdapter":Landroid/widget/BaseAdapter;
     invoke-virtual {v0}, Landroid/widget/BaseAdapter;->notifyDataSetChanged()V
 
-    .line 81
     .end local v0    # "baseAdapter":Landroid/widget/BaseAdapter;
     :cond_0
     const/4 v2, 0x0
 
     invoke-virtual {p0, v2}, Lcom/android/internal/view/menu/ExpandedMenuView;->setSelection(I)V
 
-    .line 82
     return-void
 .end method
 
@@ -162,15 +142,12 @@
     .locals 1
 
     .prologue
-    .line 86
     invoke-super {p0}, Landroid/widget/ListView;->onDetachedFromWindow()V
 
-    .line 89
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/android/internal/view/menu/ExpandedMenuView;->setChildrenDrawingCacheEnabled(Z)V
 
-    .line 90
     return-void
 .end method
 
@@ -182,7 +159,6 @@
     .param p4, "id"    # J
 
     .prologue
-    .line 97
     invoke-virtual {p0}, Lcom/android/internal/view/menu/ExpandedMenuView;->getAdapter()Landroid/widget/ListAdapter;
 
     move-result-object v0
@@ -195,7 +171,6 @@
 
     invoke-virtual {p0, v0}, Lcom/android/internal/view/menu/ExpandedMenuView;->invokeItem(Lcom/android/internal/view/menu/MenuItemImpl;)Z
 
-    .line 98
     return-void
 .end method
 
@@ -205,21 +180,17 @@
     .param p2, "heightMeasureSpec"    # I
 
     .prologue
-    .line 108
     invoke-super {p0, p1, p2}, Landroid/widget/ListView;->onMeasure(II)V
 
-    .line 110
     invoke-virtual {p0}, Lcom/android/internal/view/menu/ExpandedMenuView;->getCount()I
 
     move-result v0
 
-    .line 112
     .local v0, "mItemCount":I
     iget v4, p0, Lcom/android/internal/view/menu/ExpandedMenuView;->isDeviceDefault:I
 
     if-eqz v4, :cond_0
 
-    .line 114
     iget-object v4, p0, Lcom/android/internal/view/menu/ExpandedMenuView;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -232,13 +203,11 @@
 
     move-result v1
 
-    .line 115
     .local v1, "mItemMaxCount":I
     invoke-virtual {p0}, Lcom/android/internal/view/menu/ExpandedMenuView;->getMeasuredHeight()I
 
     move-result v2
 
-    .line 116
     .local v2, "mMeasuredHeight":I
     if-le v0, v1, :cond_1
 
@@ -254,28 +223,24 @@
 
     move-result v3
 
-    .line 118
     .local v3, "mVisibleMaxHeight":I
     :goto_0
     if-le v2, v3, :cond_0
 
     if-eqz v3, :cond_0
 
-    .line 120
     invoke-virtual {p0}, Lcom/android/internal/view/menu/ExpandedMenuView;->getMeasuredWidth()I
 
     move-result v4
 
     invoke-virtual {p0, v4, v3}, Lcom/android/internal/view/menu/ExpandedMenuView;->setMeasuredDimension(II)V
 
-    .line 123
     .end local v1    # "mItemMaxCount":I
     .end local v2    # "mMeasuredHeight":I
     .end local v3    # "mVisibleMaxHeight":I
     :cond_0
     return-void
 
-    .line 116
     .restart local v1    # "mItemMaxCount":I
     .restart local v2    # "mMeasuredHeight":I
     :cond_1

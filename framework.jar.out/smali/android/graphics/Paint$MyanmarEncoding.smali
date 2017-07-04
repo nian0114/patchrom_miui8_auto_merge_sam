@@ -48,7 +48,6 @@
 
     const/4 v2, 0x0
 
-    .line 445
     new-instance v0, Landroid/graphics/Paint$MyanmarEncoding;
 
     const-string v1, "ME_UNICODE"
@@ -57,7 +56,6 @@
 
     sput-object v0, Landroid/graphics/Paint$MyanmarEncoding;->ME_UNICODE:Landroid/graphics/Paint$MyanmarEncoding;
 
-    .line 449
     new-instance v0, Landroid/graphics/Paint$MyanmarEncoding;
 
     const-string v1, "ME_ZAWGYI"
@@ -66,7 +64,6 @@
 
     sput-object v0, Landroid/graphics/Paint$MyanmarEncoding;->ME_ZAWGYI:Landroid/graphics/Paint$MyanmarEncoding;
 
-    .line 453
     new-instance v0, Landroid/graphics/Paint$MyanmarEncoding;
 
     const-string v1, "ME_AUTO"
@@ -75,7 +72,6 @@
 
     sput-object v0, Landroid/graphics/Paint$MyanmarEncoding;->ME_AUTO:Landroid/graphics/Paint$MyanmarEncoding;
 
-    .line 441
     const/4 v0, 0x3
 
     new-array v0, v0, [Landroid/graphics/Paint$MyanmarEncoding;
@@ -107,13 +103,10 @@
     .end annotation
 
     .prologue
-    .line 455
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 456
     iput p3, p0, Landroid/graphics/Paint$MyanmarEncoding;->nativeInt:I
 
-    .line 457
     return-void
 .end method
 
@@ -122,7 +115,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 441
     const-class v0, Landroid/graphics/Paint$MyanmarEncoding;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -138,7 +130,6 @@
     .locals 1
 
     .prologue
-    .line 441
     sget-object v0, Landroid/graphics/Paint$MyanmarEncoding;->$VALUES:[Landroid/graphics/Paint$MyanmarEncoding;
 
     invoke-virtual {v0}, [Landroid/graphics/Paint$MyanmarEncoding;->clone()Ljava/lang/Object;

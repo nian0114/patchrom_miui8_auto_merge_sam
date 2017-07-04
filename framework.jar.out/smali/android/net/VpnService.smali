@@ -36,7 +36,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 135
     invoke-static {}, Landroid/os/Debug;->isProductShip()I
 
     move-result v1
@@ -48,7 +47,6 @@
     :cond_0
     sput-boolean v0, Landroid/net/VpnService;->DBG:Z
 
-    .line 143
     const/4 v0, -0x1
 
     sput v0, Landroid/net/VpnService;->KNOXVPN_FEATURE:I
@@ -60,10 +58,8 @@
     .locals 0
 
     .prologue
-    .line 124
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
-    .line 486
     return-void
 .end method
 
@@ -73,7 +69,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 124
     invoke-static {p0, p1}, Landroid/net/VpnService;->check(Ljava/net/InetAddress;I)V
 
     return-void
@@ -83,7 +78,6 @@
     .locals 1
 
     .prologue
-    .line 124
     invoke-static {}, Landroid/net/VpnService;->getService()Landroid/net/IConnectivityManager;
 
     move-result-object v0
@@ -97,14 +91,12 @@
     .param p1, "prefixLength"    # I
 
     .prologue
-    .line 464
     invoke-virtual {p0}, Ljava/net/InetAddress;->isLoopbackAddress()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 465
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Bad address"
@@ -113,20 +105,17 @@
 
     throw v0
 
-    .line 467
     :cond_0
     instance-of v0, p0, Ljava/net/Inet4Address;
 
     if-eqz v0, :cond_2
 
-    .line 468
     if-ltz p1, :cond_1
 
     const/16 v0, 0x20
 
     if-le p1, v0, :cond_5
 
-    .line 469
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -136,20 +125,17 @@
 
     throw v0
 
-    .line 471
     :cond_2
     instance-of v0, p0, Ljava/net/Inet6Address;
 
     if-eqz v0, :cond_4
 
-    .line 472
     if-ltz p1, :cond_3
 
     const/16 v0, 0x80
 
     if-le p1, v0, :cond_5
 
-    .line 473
     :cond_3
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -159,7 +145,6 @@
 
     throw v0
 
-    .line 476
     :cond_4
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -169,7 +154,6 @@
 
     throw v0
 
-    .line 478
     :cond_5
     return-void
 .end method
@@ -178,12 +162,10 @@
     .locals 1
 
     .prologue
-    .line 149
     const/4 v0, 0x2
 
     sput v0, Landroid/net/VpnService;->KNOXVPN_FEATURE:I
 
-    .line 151
     sget v0, Landroid/net/VpnService;->KNOXVPN_FEATURE:I
 
     return v0
@@ -193,7 +175,6 @@
     .locals 1
 
     .prologue
-    .line 160
     const-string v0, "connectivity"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -214,7 +195,6 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 188
     invoke-static {}, Landroid/net/VpnService;->getKnoxVpnFeature()I
 
     move-result v7
@@ -223,29 +203,24 @@
 
     if-lt v7, v8, :cond_3
 
-    .line 191
     instance-of v7, p0, Lcom/sec/vpn/knox/GenericVpnContext;
 
     if-eqz v7, :cond_2
 
     move-object v2, p0
 
-    .line 193
     check-cast v2, Lcom/sec/vpn/knox/GenericVpnContext;
 
-    .line 194
     .local v2, "knoxVPNContext":Lcom/sec/vpn/knox/GenericVpnContext;
     invoke-virtual {v2}, Lcom/sec/vpn/knox/GenericVpnContext;->getVPNProfile()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 195
     .local v4, "profile":Ljava/lang/String;
     invoke-virtual {v2}, Lcom/sec/vpn/knox/GenericVpnContext;->getVPNState()Z
 
     move-result v0
 
-    .line 196
     .local v0, "isConnecting":Z
     invoke-virtual {v2}, Lcom/sec/vpn/knox/GenericVpnContext;->getApplicationContext()Landroid/content/Context;
 
@@ -255,17 +230,14 @@
 
     move-result-object v3
 
-    .line 197
     .local v3, "packageName":Ljava/lang/String;
     invoke-virtual {v2}, Lcom/sec/vpn/knox/GenericVpnContext;->isMetaEnabled()Z
 
     move-result v1
 
-    .line 198
     .local v1, "isMetaEnabled":Z
     const/4 v5, 0x0
 
-    .line 200
     .local v5, "profileType":I
     :try_start_0
     invoke-static {}, Landroid/net/VpnService;->getService()Landroid/net/IConnectivityManager;
@@ -278,7 +250,6 @@
 
     if-eqz v7, :cond_1
 
-    .line 234
     .end local v0    # "isConnecting":Z
     .end local v1    # "isMetaEnabled":Z
     .end local v2    # "knoxVPNContext":Lcom/sec/vpn/knox/GenericVpnContext;
@@ -289,7 +260,6 @@
     :goto_0
     return-object v6
 
-    .line 204
     .restart local v0    # "isConnecting":Z
     .restart local v1    # "isMetaEnabled":Z
     .restart local v2    # "knoxVPNContext":Lcom/sec/vpn/knox/GenericVpnContext;
@@ -307,7 +277,6 @@
 
     move-result v5
 
-    .line 209
     :goto_1
     if-nez v5, :cond_0
 
@@ -317,7 +286,6 @@
 
     goto :goto_0
 
-    .line 216
     .end local v0    # "isConnecting":Z
     .end local v1    # "isMetaEnabled":Z
     .end local v2    # "knoxVPNContext":Lcom/sec/vpn/knox/GenericVpnContext;
@@ -348,7 +316,6 @@
 
     if-nez v7, :cond_0
 
-    .line 223
     :goto_2
     invoke-static {}, Lcom/android/internal/net/VpnConfig;->getIntentForConfirmation()Landroid/content/Intent;
 
@@ -356,7 +323,6 @@
 
     goto :goto_0
 
-    .line 228
     :cond_3
     :try_start_2
     invoke-static {}, Landroid/net/VpnService;->getService()Landroid/net/IConnectivityManager;
@@ -381,7 +347,6 @@
 
     if-nez v7, :cond_0
 
-    .line 234
     :goto_3
     invoke-static {}, Lcom/android/internal/net/VpnConfig;->getIntentForConfirmation()Landroid/content/Intent;
 
@@ -389,19 +354,16 @@
 
     goto :goto_0
 
-    .line 231
     :catch_0
     move-exception v6
 
     goto :goto_3
 
-    .line 220
     :catch_1
     move-exception v6
 
     goto :goto_2
 
-    .line 206
     .restart local v0    # "isConnecting":Z
     .restart local v1    # "isMetaEnabled":Z
     .restart local v2    # "knoxVPNContext":Lcom/sec/vpn/knox/GenericVpnContext;
@@ -419,25 +381,21 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 251
     invoke-static {}, Landroid/net/VpnService;->getService()Landroid/net/IConnectivityManager;
 
     move-result-object v0
 
-    .line 252
     .local v0, "cm":Landroid/net/IConnectivityManager;
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 255
     .local v1, "packageName":Ljava/lang/String;
     :try_start_0
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v2
 
-    .line 256
     .local v2, "userId":I
     const/4 v3, 0x0
 
@@ -447,12 +405,10 @@
 
     if-nez v3, :cond_0
 
-    .line 257
     const/4 v3, 0x0
 
     invoke-interface {v0, v3, v1, v2}, Landroid/net/IConnectivityManager;->prepareVpn(Ljava/lang/String;Ljava/lang/String;I)Z
 
-    .line 259
     :cond_0
     const/4 v3, 0x1
 
@@ -460,12 +416,10 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 263
     .end local v2    # "userId":I
     :goto_0
     return-void
 
-    .line 260
     :catch_0
     move-exception v3
 
@@ -480,10 +434,8 @@
     .param p2, "prefixLength"    # I
 
     .prologue
-    .line 337
     invoke-static {p1, p2}, Landroid/net/VpnService;->check(Ljava/net/InetAddress;I)V
 
-    .line 339
     :try_start_0
     invoke-static {}, Landroid/net/VpnService;->getService()Landroid/net/IConnectivityManager;
 
@@ -501,11 +453,9 @@
 
     return v1
 
-    .line 340
     :catch_0
     move-exception v0
 
-    .line 341
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/IllegalStateException;
 
@@ -521,7 +471,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 425
     if-eqz p1, :cond_0
 
     const-string v0, "android.net.VpnService"
@@ -536,12 +485,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 426
     new-instance v0, Landroid/net/VpnService$Callback;
 
     invoke-direct {v0, p0, v1}, Landroid/net/VpnService$Callback;-><init>(Landroid/net/VpnService;Landroid/net/VpnService$1;)V
 
-    .line 428
     :goto_0
     return-object v0
 
@@ -555,10 +502,8 @@
     .locals 0
 
     .prologue
-    .line 443
     invoke-virtual {p0}, Landroid/net/VpnService;->stopSelf()V
 
-    .line 444
     return-void
 .end method
 
@@ -567,7 +512,6 @@
     .param p1, "socket"    # I
 
     .prologue
-    .line 281
     :try_start_0
     invoke-static {}, Landroid/net/VpnService;->getService()Landroid/net/IConnectivityManager;
 
@@ -575,7 +519,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 282
     invoke-static {}, Landroid/net/VpnService;->getService()Landroid/net/IConnectivityManager;
 
     move-result-object v1
@@ -590,16 +533,13 @@
 
     if-nez v1, :cond_0
 
-    .line 283
     invoke-static {p1}, Landroid/net/NetworkUtils;->protectFromVpn(I)Z
 
     move-result v1
 
-    .line 292
     :goto_0
     return v1
 
-    .line 285
     :cond_0
     sget-boolean v1, Landroid/net/VpnService;->DBG:Z
 
@@ -611,7 +551,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "protect is not going to be called for "
+    const-string v3, "protect is not going to be called for "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -631,13 +571,11 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 286
     :cond_1
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 289
     :cond_2
     invoke-static {p1}, Landroid/net/NetworkUtils;->protectFromVpn(I)Z
     :try_end_0
@@ -647,11 +585,9 @@
 
     goto :goto_0
 
-    .line 291
     :catch_0
     move-exception v0
 
-    .line 292
     .local v0, "e":Ljava/lang/Exception;
     const/4 v1, 0x0
 
@@ -663,7 +599,6 @@
     .param p1, "socket"    # Ljava/net/DatagramSocket;
 
     .prologue
-    .line 314
     invoke-virtual {p1}, Ljava/net/DatagramSocket;->getFileDescriptor$()Ljava/io/FileDescriptor;
 
     move-result-object v0
@@ -684,7 +619,6 @@
     .param p1, "socket"    # Ljava/net/Socket;
 
     .prologue
-    .line 303
     invoke-virtual {p1}, Ljava/net/Socket;->getFileDescriptor$()Ljava/io/FileDescriptor;
 
     move-result-object v0
@@ -706,10 +640,8 @@
     .param p2, "prefixLength"    # I
 
     .prologue
-    .line 367
     invoke-static {p1, p2}, Landroid/net/VpnService;->check(Ljava/net/InetAddress;I)V
 
-    .line 369
     :try_start_0
     invoke-static {}, Landroid/net/VpnService;->getService()Landroid/net/IConnectivityManager;
 
@@ -727,11 +659,9 @@
 
     return v1
 
-    .line 370
     :catch_0
     move-exception v0
 
-    .line 371
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/IllegalStateException;
 
@@ -745,7 +675,6 @@
     .param p1, "networks"    # [Landroid/net/Network;
 
     .prologue
-    .line 409
     :try_start_0
     invoke-static {}, Landroid/net/VpnService;->getService()Landroid/net/IConnectivityManager;
 
@@ -759,11 +688,9 @@
 
     return v1
 
-    .line 410
     :catch_0
     move-exception v0
 
-    .line 411
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/IllegalStateException;
 

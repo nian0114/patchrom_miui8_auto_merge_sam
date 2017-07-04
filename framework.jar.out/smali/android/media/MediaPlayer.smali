@@ -357,20 +357,16 @@
     .locals 1
 
     .prologue
-    .line 631
-    const-string/jumbo v0, "media_jni"
+    const-string v0, "media_jni"
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    .line 632
     invoke-static {}, Landroid/media/MediaPlayer;->native_init()V
 
-    .line 661
     const/4 v0, 0x0
 
     sput-boolean v0, Landroid/media/MediaPlayer;->MMFWContextAware:Z
 
-    .line 662
     const/4 v0, 0x1
 
     sput-boolean v0, Landroid/media/MediaPlayer;->mPmExceptionForContextAware:Z
@@ -388,71 +384,54 @@
 
     const/4 v3, 0x0
 
-    .line 683
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 646
     iput-object v5, p0, Landroid/media/MediaPlayer;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 650
     const/high16 v2, -0x80000000
 
     iput v2, p0, Landroid/media/MediaPlayer;->mStreamType:I
 
-    .line 651
     iput v4, p0, Landroid/media/MediaPlayer;->mUsage:I
 
-    .line 654
     iput-boolean v3, p0, Landroid/media/MediaPlayer;->mAIAContext:Z
 
-    .line 655
     iput-boolean v3, p0, Landroid/media/MediaPlayer;->mIsVideo:Z
 
-    .line 656
     iput-boolean v3, p0, Landroid/media/MediaPlayer;->mIsStart:Z
 
-    .line 664
     const-string v2, ""
 
     iput-object v2, p0, Landroid/media/MediaPlayer;->mContextAwareUri:Ljava/lang/String;
 
-    .line 665
     iput v3, p0, Landroid/media/MediaPlayer;->mContextAwareId:I
 
-    .line 666
     iput-boolean v3, p0, Landroid/media/MediaPlayer;->mContextAwareSend:Z
 
-    .line 669
     iput v3, p0, Landroid/media/MediaPlayer;->mPendingCommand:I
 
-    .line 670
     iput v3, p0, Landroid/media/MediaPlayer;->mPid:I
 
-    .line 2598
     new-instance v2, Ljava/util/Vector;
 
     invoke-direct {v2}, Ljava/util/Vector;-><init>()V
 
     iput-object v2, p0, Landroid/media/MediaPlayer;->mIndexTrackPairs:Ljava/util/Vector;
 
-    .line 2599
     new-instance v2, Ljava/util/BitSet;
 
     invoke-direct {v2}, Ljava/util/BitSet;-><init>()V
 
     iput-object v2, p0, Landroid/media/MediaPlayer;->mInbandTrackIndices:Ljava/util/BitSet;
 
-    .line 2731
     iput v4, p0, Landroid/media/MediaPlayer;->mSelectedSubtitleTrackIndex:I
 
-    .line 2734
     new-instance v2, Landroid/media/MediaPlayer$2;
 
     invoke-direct {v2, p0}, Landroid/media/MediaPlayer$2;-><init>(Landroid/media/MediaPlayer;)V
 
     iput-object v2, p0, Landroid/media/MediaPlayer;->mSubtitleDataListener:Landroid/media/MediaPlayer$OnSubtitleDataListener;
 
-    .line 686
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v1
@@ -460,14 +439,12 @@
     .local v1, "looper":Landroid/os/Looper;
     if-eqz v1, :cond_1
 
-    .line 687
     new-instance v2, Landroid/media/MediaPlayer$EventHandler;
 
     invoke-direct {v2, p0, p0, v1}, Landroid/media/MediaPlayer$EventHandler;-><init>(Landroid/media/MediaPlayer;Landroid/media/MediaPlayer;Landroid/os/Looper;)V
 
     iput-object v2, p0, Landroid/media/MediaPlayer;->mEventHandler:Landroid/media/MediaPlayer$EventHandler;
 
-    .line 694
     :goto_0
     new-instance v2, Landroid/media/MediaPlayer$TimeProvider;
 
@@ -475,21 +452,18 @@
 
     iput-object v2, p0, Landroid/media/MediaPlayer;->mTimeProvider:Landroid/media/MediaPlayer$TimeProvider;
 
-    .line 695
     new-instance v2, Ljava/util/Vector;
 
     invoke-direct {v2}, Ljava/util/Vector;-><init>()V
 
     iput-object v2, p0, Landroid/media/MediaPlayer;->mOpenSubtitleSources:Ljava/util/Vector;
 
-    .line 696
     const-string v2, "appops"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 697
     .local v0, "b":Landroid/os/IBinder;
     invoke-static {v0}, Lcom/android/internal/app/IAppOpsService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/internal/app/IAppOpsService;
 
@@ -497,19 +471,16 @@
 
     iput-object v2, p0, Landroid/media/MediaPlayer;->mAppOps:Lcom/android/internal/app/IAppOpsService;
 
-    .line 700
     sget-boolean v2, Landroid/media/MediaPlayer;->mPmExceptionForContextAware:Z
 
     if-eqz v2, :cond_0
 
-    .line 701
     invoke-direct {p0}, Landroid/media/MediaPlayer;->isNeedContextAwareInfoBroadCast()Z
 
     move-result v2
 
     sput-boolean v2, Landroid/media/MediaPlayer;->MMFWContextAware:Z
 
-    .line 703
     :cond_0
     invoke-static {}, Landroid/os/Process;->myPid()I
 
@@ -517,17 +488,14 @@
 
     iput v2, p0, Landroid/media/MediaPlayer;->mPid:I
 
-    .line 710
     new-instance v2, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v2, p0}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     invoke-direct {p0, v2}, Landroid/media/MediaPlayer;->native_setup(Ljava/lang/Object;)V
 
-    .line 711
     return-void
 
-    .line 688
     .end local v0    # "b":Landroid/os/IBinder;
     :cond_1
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -536,7 +504,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 689
     new-instance v2, Landroid/media/MediaPlayer$EventHandler;
 
     invoke-direct {v2, p0, p0, v1}, Landroid/media/MediaPlayer$EventHandler;-><init>(Landroid/media/MediaPlayer;Landroid/media/MediaPlayer;Landroid/os/Looper;)V
@@ -545,7 +512,6 @@
 
     goto :goto_0
 
-    .line 691
     :cond_2
     iput-object v5, p0, Landroid/media/MediaPlayer;->mEventHandler:Landroid/media/MediaPlayer$EventHandler;
 
@@ -635,7 +601,6 @@
     .param p0, "x0"    # Landroid/media/MediaPlayer;
 
     .prologue
-    .line 595
     iget-object v0, p0, Landroid/media/MediaPlayer;->mSubtitleController:Landroid/media/SubtitleController;
 
     return-object v0
@@ -647,7 +612,6 @@
     .param p1, "x1"    # Landroid/media/SubtitleController;
 
     .prologue
-    .line 595
     iput-object p1, p0, Landroid/media/MediaPlayer;->mSubtitleController:Landroid/media/SubtitleController;
 
     return-object p1
@@ -658,7 +622,6 @@
     .param p0, "x0"    # Landroid/media/MediaPlayer;
 
     .prologue
-    .line 595
     iget-object v0, p0, Landroid/media/MediaPlayer;->mTimeProvider:Landroid/media/MediaPlayer$TimeProvider;
 
     return-object v0
@@ -668,7 +631,6 @@
     .locals 1
 
     .prologue
-    .line 595
     sget-boolean v0, Landroid/media/MediaPlayer;->MMFWContextAware:Z
 
     return v0
@@ -679,7 +641,6 @@
     .param p0, "x0"    # Landroid/media/MediaPlayer;
 
     .prologue
-    .line 595
     iget-boolean v0, p0, Landroid/media/MediaPlayer;->mContextAwareSend:Z
 
     return v0
@@ -691,7 +652,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 595
     iput-boolean p1, p0, Landroid/media/MediaPlayer;->mContextAwareSend:Z
 
     return p1
@@ -702,7 +662,6 @@
     .param p0, "x0"    # Landroid/media/MediaPlayer;
 
     .prologue
-    .line 595
     iget-object v0, p0, Landroid/media/MediaPlayer;->mContextAwareUri:Ljava/lang/String;
 
     return-object v0
@@ -714,7 +673,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 595
     iput-object p1, p0, Landroid/media/MediaPlayer;->mContextAwareUri:Ljava/lang/String;
 
     return-object p1
@@ -725,7 +683,6 @@
     .param p0, "x0"    # Landroid/media/MediaPlayer;
 
     .prologue
-    .line 595
     iget v0, p0, Landroid/media/MediaPlayer;->mContextAwareId:I
 
     return v0
@@ -737,7 +694,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 595
     iput p1, p0, Landroid/media/MediaPlayer;->mContextAwareId:I
 
     return p1
@@ -748,7 +704,6 @@
     .param p0, "x0"    # Landroid/media/MediaPlayer;
 
     .prologue
-    .line 595
     iget v0, p0, Landroid/media/MediaPlayer;->mPid:I
 
     return v0
@@ -761,7 +716,6 @@
     .param p2, "x2"    # [Ljava/lang/Object;
 
     .prologue
-    .line 595
     invoke-direct {p0, p1, p2}, Landroid/media/MediaPlayer;->sendBroadcastingIntent(Ljava/lang/String;[Ljava/lang/Object;)Z
 
     move-result v0
@@ -774,7 +728,6 @@
     .param p0, "x0"    # Landroid/media/MediaPlayer;
 
     .prologue
-    .line 595
     iget-object v0, p0, Landroid/media/MediaPlayer;->mOnBufferingUpdateListener:Landroid/media/MediaPlayer$OnBufferingUpdateListener;
 
     return-object v0
@@ -785,7 +738,6 @@
     .param p0, "x0"    # Landroid/media/MediaPlayer;
 
     .prologue
-    .line 595
     iget-object v0, p0, Landroid/media/MediaPlayer;->mOnSeekCompleteListener:Landroid/media/MediaPlayer$OnSeekCompleteListener;
 
     return-object v0
@@ -796,7 +748,6 @@
     .param p0, "x0"    # Landroid/media/MediaPlayer;
 
     .prologue
-    .line 595
     iget-object v0, p0, Landroid/media/MediaPlayer;->mOnVideoSizeChangedListener:Landroid/media/MediaPlayer$OnVideoSizeChangedListener;
 
     return-object v0
@@ -808,7 +759,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 595
     iput-boolean p1, p0, Landroid/media/MediaPlayer;->mIsVideo:Z
 
     return p1
@@ -819,7 +769,6 @@
     .param p0, "x0"    # Landroid/media/MediaPlayer;
 
     .prologue
-    .line 595
     iget-object v0, p0, Landroid/media/MediaPlayer;->mIndexTrackPairs:Ljava/util/Vector;
 
     return-object v0
@@ -830,7 +779,6 @@
     .param p0, "x0"    # Landroid/media/MediaPlayer;
 
     .prologue
-    .line 595
     iget-boolean v0, p0, Landroid/media/MediaPlayer;->mIsStart:Z
 
     return v0
@@ -841,7 +789,6 @@
     .param p0, "x0"    # Landroid/media/MediaPlayer;
 
     .prologue
-    .line 595
     iget-boolean v0, p0, Landroid/media/MediaPlayer;->mAIAContext:Z
 
     return v0
@@ -852,7 +799,6 @@
     .param p0, "x0"    # Landroid/media/MediaPlayer;
 
     .prologue
-    .line 595
     iget-object v0, p0, Landroid/media/MediaPlayer;->mOnErrorListener:Landroid/media/MediaPlayer$OnErrorListener;
 
     return-object v0
@@ -863,7 +809,6 @@
     .param p0, "x0"    # Landroid/media/MediaPlayer;
 
     .prologue
-    .line 595
     iget-object v0, p0, Landroid/media/MediaPlayer;->mOnPlayReadyErrorListener:Landroid/media/MediaPlayer$OnPlayReadyErrorListener;
 
     return-object v0
@@ -874,7 +819,6 @@
     .param p0, "x0"    # Landroid/media/MediaPlayer;
 
     .prologue
-    .line 595
     iget-object v0, p0, Landroid/media/MediaPlayer;->mOnInfoListener:Landroid/media/MediaPlayer$OnInfoListener;
 
     return-object v0
@@ -885,7 +829,6 @@
     .param p0, "x0"    # Landroid/media/MediaPlayer;
 
     .prologue
-    .line 595
     iget-object v0, p0, Landroid/media/MediaPlayer;->mOnTimedTextListener:Landroid/media/MediaPlayer$OnTimedTextListener;
 
     return-object v0
@@ -896,7 +839,6 @@
     .param p0, "x0"    # Landroid/media/MediaPlayer;
 
     .prologue
-    .line 595
     iget-object v0, p0, Landroid/media/MediaPlayer;->mOnSubtitleDataListener:Landroid/media/MediaPlayer$OnSubtitleDataListener;
 
     return-object v0
@@ -907,7 +849,6 @@
     .param p0, "x0"    # Landroid/media/MediaPlayer;
 
     .prologue
-    .line 595
     iget-object v0, p0, Landroid/media/MediaPlayer;->mOnTimedMetaDataAvailableListener:Landroid/media/MediaPlayer$OnTimedMetaDataAvailableListener;
 
     return-object v0
@@ -918,7 +859,6 @@
     .param p0, "x0"    # Landroid/media/MediaPlayer;
 
     .prologue
-    .line 595
     iget v0, p0, Landroid/media/MediaPlayer;->mPendingCommand:I
 
     return v0
@@ -930,7 +870,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 595
     iput p1, p0, Landroid/media/MediaPlayer;->mPendingCommand:I
 
     return p1
@@ -941,7 +880,6 @@
     .param p0, "x0"    # Landroid/media/MediaPlayer;
 
     .prologue
-    .line 595
     iget-object v0, p0, Landroid/media/MediaPlayer;->mOpenSubtitleSources:Ljava/util/Vector;
 
     return-object v0
@@ -952,7 +890,6 @@
     .param p0, "x0"    # Landroid/media/MediaPlayer;
 
     .prologue
-    .line 595
     iget-object v0, p0, Landroid/media/MediaPlayer;->mEventHandler:Landroid/media/MediaPlayer$EventHandler;
 
     return-object v0
@@ -963,7 +900,6 @@
     .param p0, "x0"    # Landroid/media/MediaPlayer;
 
     .prologue
-    .line 595
     iget-wide v0, p0, Landroid/media/MediaPlayer;->mNativeContext:J
 
     return-wide v0
@@ -974,7 +910,6 @@
     .param p0, "x0"    # Landroid/media/MediaPlayer;
 
     .prologue
-    .line 595
     invoke-direct {p0}, Landroid/media/MediaPlayer;->scanInternalSubtitleTracks()V
 
     return-void
@@ -985,7 +920,6 @@
     .param p0, "x0"    # Landroid/media/MediaPlayer;
 
     .prologue
-    .line 595
     iget-object v0, p0, Landroid/media/MediaPlayer;->mOnPreparedListener:Landroid/media/MediaPlayer$OnPreparedListener;
 
     return-object v0
@@ -996,7 +930,6 @@
     .param p0, "x0"    # Landroid/media/MediaPlayer;
 
     .prologue
-    .line 595
     iget-object v0, p0, Landroid/media/MediaPlayer;->mOnCompletionListener:Landroid/media/MediaPlayer$OnCompletionListener;
 
     return-object v0
@@ -1008,7 +941,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 595
     invoke-direct {p0, p1}, Landroid/media/MediaPlayer;->stayAwake(Z)V
 
     return-void
@@ -1019,7 +951,6 @@
     .param p0, "mimeType"    # Ljava/lang/String;
 
     .prologue
-    .line 2667
     const-string v0, "application/x-subrip"
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1028,10 +959,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 2668
     const/4 v0, 0x1
 
-    .line 2670
     :goto_0
     return v0
 
@@ -1047,12 +976,10 @@
     .param p1, "resid"    # I
 
     .prologue
-    .line 989
     invoke-static {}, Landroid/media/AudioSystem;->newAudioSessionId()I
 
     move-result v0
 
-    .line 990
     .local v0, "s":I
     const/4 v1, 0x0
 
@@ -1083,7 +1010,6 @@
     .prologue
     const/4 v9, 0x0
 
-    .line 1007
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -1093,39 +1019,32 @@
 
     move-result-object v7
 
-    .line 1008
     .local v7, "afd":Landroid/content/res/AssetFileDescriptor;
     if-nez v7, :cond_0
 
     move-object v0, v9
 
-    .line 1031
     .end local v7    # "afd":Landroid/content/res/AssetFileDescriptor;
     :goto_0
     return-object v0
 
-    .line 1010
     .restart local v7    # "afd":Landroid/content/res/AssetFileDescriptor;
     :cond_0
     new-instance v0, Landroid/media/MediaPlayer;
 
     invoke-direct {v0}, Landroid/media/MediaPlayer;-><init>()V
 
-    .line 1012
     .local v0, "mp":Landroid/media/MediaPlayer;
     if-eqz p2, :cond_1
 
     move-object v6, p2
 
-    .line 1014
     .local v6, "aa":Landroid/media/AudioAttributes;
     :goto_1
     invoke-virtual {v0, v6}, Landroid/media/MediaPlayer;->setAudioAttributes(Landroid/media/AudioAttributes;)V
 
-    .line 1015
     invoke-virtual {v0, p3}, Landroid/media/MediaPlayer;->setAudioSessionId(I)V
 
-    .line 1017
     invoke-virtual {v7}, Landroid/content/res/AssetFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
 
     move-result-object v1
@@ -1140,10 +1059,8 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/media/MediaPlayer;->setDataSource(Ljava/io/FileDescriptor;JJ)V
 
-    .line 1018
     invoke-virtual {v7}, Landroid/content/res/AssetFileDescriptor;->close()V
 
-    .line 1019
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->prepare()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
@@ -1152,14 +1069,12 @@
 
     goto :goto_0
 
-    .line 1021
     .end local v0    # "mp":Landroid/media/MediaPlayer;
     .end local v6    # "aa":Landroid/media/AudioAttributes;
     .end local v7    # "afd":Landroid/content/res/AssetFileDescriptor;
     :catch_0
     move-exception v8
 
-    .line 1022
     .local v8, "ex":Ljava/io/IOException;
     const-string v1, "MediaPlayer"
 
@@ -1171,10 +1086,8 @@
     :goto_2
     move-object v0, v9
 
-    .line 1031
     goto :goto_0
 
-    .line 1012
     .restart local v0    # "mp":Landroid/media/MediaPlayer;
     .restart local v7    # "afd":Landroid/content/res/AssetFileDescriptor;
     :cond_1
@@ -1193,13 +1106,11 @@
 
     goto :goto_1
 
-    .line 1024
     .end local v0    # "mp":Landroid/media/MediaPlayer;
     .end local v7    # "afd":Landroid/content/res/AssetFileDescriptor;
     :catch_1
     move-exception v8
 
-    .line 1025
     .local v8, "ex":Ljava/lang/IllegalArgumentException;
     const-string v1, "MediaPlayer"
 
@@ -1209,12 +1120,10 @@
 
     goto :goto_2
 
-    .line 1027
     .end local v8    # "ex":Ljava/lang/IllegalArgumentException;
     :catch_2
     move-exception v8
 
-    .line 1028
     .local v8, "ex":Ljava/lang/SecurityException;
     const-string v1, "MediaPlayer"
 
@@ -1231,7 +1140,6 @@
     .param p1, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 906
     const/4 v0, 0x0
 
     invoke-static {p0, p1, v0}, Landroid/media/MediaPlayer;->create(Landroid/content/Context;Landroid/net/Uri;Landroid/view/SurfaceHolder;)Landroid/media/MediaPlayer;
@@ -1248,12 +1156,10 @@
     .param p2, "holder"    # Landroid/view/SurfaceHolder;
 
     .prologue
-    .line 926
     invoke-static {}, Landroid/media/AudioSystem;->newAudioSessionId()I
 
     move-result v0
 
-    .line 927
     .local v0, "s":I
     const/4 v1, 0x0
 
@@ -1283,46 +1189,36 @@
     .param p4, "audioSessionId"    # I
 
     .prologue
-    .line 945
     :try_start_0
     new-instance v2, Landroid/media/MediaPlayer;
 
     invoke-direct {v2}, Landroid/media/MediaPlayer;-><init>()V
 
-    .line 946
     .local v2, "mp":Landroid/media/MediaPlayer;
     if-eqz p3, :cond_1
 
     move-object v0, p3
 
-    .line 948
     .local v0, "aa":Landroid/media/AudioAttributes;
     :goto_0
     invoke-virtual {v2, v0}, Landroid/media/MediaPlayer;->setAudioAttributes(Landroid/media/AudioAttributes;)V
 
-    .line 949
     invoke-virtual {v2, p4}, Landroid/media/MediaPlayer;->setAudioSessionId(I)V
 
-    .line 950
     invoke-virtual {v2, p0, p1}, Landroid/media/MediaPlayer;->setDataSource(Landroid/content/Context;Landroid/net/Uri;)V
 
-    .line 951
     if-eqz p2, :cond_0
 
-    .line 952
     invoke-virtual {v2, p2}, Landroid/media/MediaPlayer;->setDisplay(Landroid/view/SurfaceHolder;)V
 
-    .line 954
     :cond_0
     invoke-virtual {v2}, Landroid/media/MediaPlayer;->prepare()V
 
-    .line 967
     .end local v0    # "aa":Landroid/media/AudioAttributes;
     .end local v2    # "mp":Landroid/media/MediaPlayer;
     :goto_1
     return-object v2
 
-    .line 946
     .restart local v2    # "mp":Landroid/media/MediaPlayer;
     :cond_1
     new-instance v3, Landroid/media/AudioAttributes$Builder;
@@ -1339,12 +1235,10 @@
 
     goto :goto_0
 
-    .line 956
     .end local v2    # "mp":Landroid/media/MediaPlayer;
     :catch_0
     move-exception v1
 
-    .line 957
     .local v1, "ex":Ljava/io/IOException;
     const-string v3, "MediaPlayer"
 
@@ -1352,18 +1246,15 @@
 
     invoke-static {v3, v4, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 967
     .end local v1    # "ex":Ljava/io/IOException;
     :goto_2
     const/4 v2, 0x0
 
     goto :goto_1
 
-    .line 959
     :catch_1
     move-exception v1
 
-    .line 960
     .local v1, "ex":Ljava/lang/IllegalArgumentException;
     const-string v3, "MediaPlayer"
 
@@ -1373,12 +1264,10 @@
 
     goto :goto_2
 
-    .line 962
     .end local v1    # "ex":Ljava/lang/IllegalArgumentException;
     :catch_2
     move-exception v1
 
-    .line 963
     .local v1, "ex":Ljava/lang/SecurityException;
     const-string v3, "MediaPlayer"
 
@@ -1393,21 +1282,18 @@
     .locals 2
 
     .prologue
-    .line 1457
     iget v0, p0, Landroid/media/MediaPlayer;->mStreamType:I
 
     const/high16 v1, -0x80000000
 
     if-ne v0, v1, :cond_0
 
-    .line 1458
     invoke-direct {p0}, Landroid/media/MediaPlayer;->_getAudioStreamType()I
 
     move-result v0
 
     iput v0, p0, Landroid/media/MediaPlayer;->mStreamType:I
 
-    .line 1460
     :cond_0
     iget v0, p0, Landroid/media/MediaPlayer;->mStreamType:I
 
@@ -1426,33 +1312,27 @@
     .end annotation
 
     .prologue
-    .line 2629
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 2630
     .local v1, "request":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 2632
     .local v0, "reply":Landroid/os/Parcel;
     :try_start_0
     const-string v3, "android.media.IMediaPlayer"
 
     invoke-virtual {v1, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 2633
     const/4 v3, 0x1
 
     invoke-virtual {v1, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 2634
     invoke-virtual {p0, v1, v0}, Landroid/media/MediaPlayer;->invoke(Landroid/os/Parcel;Landroid/os/Parcel;)V
 
-    .line 2635
     sget-object v3, Landroid/media/MediaPlayer$TrackInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->createTypedArray(Landroid/os/Parcelable$Creator;)[Ljava/lang/Object;
@@ -1463,23 +1343,19 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2638
     .local v2, "trackInfo":[Landroid/media/MediaPlayer$TrackInfo;
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 2639
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-object v2
 
-    .line 2638
     .end local v2    # "trackInfo":[Landroid/media/MediaPlayer$TrackInfo;
     :catchall_0
     move-exception v3
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 2639
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v3
@@ -1496,8 +1372,7 @@
 
     const/4 v4, 0x0
 
-    .line 1050
-    const-string/jumbo v5, "package"
+    const-string v5, "package"
 
     invoke-static {v5}, Landroid/os/ServiceManager;->checkService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -1507,11 +1382,9 @@
 
     move-result-object v2
 
-    .line 1051
     .local v2, "pm":Landroid/content/pm/IPackageManager;
     const/4 v1, 0x0
 
-    .line 1054
     .local v1, "pi":Landroid/content/pm/PackageInfo;
     :try_start_0
     const-string v5, "com.samsung.android.providers.context"
@@ -1532,10 +1405,8 @@
 
     move-result-object v1
 
-    .line 1062
     sput-boolean v4, Landroid/media/MediaPlayer;->mPmExceptionForContextAware:Z
 
-    .line 1064
     if-eqz v1, :cond_0
 
     iget v5, v1, Landroid/content/pm/PackageInfo;->versionCode:I
@@ -1544,42 +1415,35 @@
 
     if-lt v5, v6, :cond_0
 
-    .line 1065
     const-string v4, "MediaPlayer"
 
     const-string v5, "Need to enable context aware info"
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1069
     :goto_0
     return v3
 
-    .line 1055
     :catch_0
     move-exception v0
 
-    .line 1056
     .local v0, "e":Landroid/os/RemoteException;
     const-string v5, "MediaPlayer"
 
-    const-string/jumbo v6, "isNeedContextAwareInfoBroadCast RemoteException"
+    const-string v6, "isNeedContextAwareInfoBroadCast RemoteException"
 
     invoke-static {v5, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1058
     sput-boolean v3, Landroid/media/MediaPlayer;->mPmExceptionForContextAware:Z
 
     move v3, v4
 
-    .line 1059
     goto :goto_0
 
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     move v3, v4
 
-    .line 1069
     goto :goto_0
 .end method
 
@@ -1589,17 +1453,14 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1431
     iget-boolean v4, p0, Landroid/media/MediaPlayer;->mBypassInterruptionPolicy:Z
 
     if-eqz v4, :cond_1
 
-    .line 1452
     :cond_0
     :goto_0
     return v3
 
-    .line 1442
     :cond_1
     :try_start_0
     iget v4, p0, Landroid/media/MediaPlayer;->mUsage:I
@@ -1610,7 +1471,6 @@
 
     iget v2, p0, Landroid/media/MediaPlayer;->mUsage:I
 
-    .line 1444
     .local v2, "usage":I
     :goto_1
     iget-object v4, p0, Landroid/media/MediaPlayer;->mAppOps:Lcom/android/internal/app/IAppOpsService;
@@ -1629,11 +1489,9 @@
 
     move-result v1
 
-    .line 1447
     .local v1, "mode":I
     if-eqz v1, :cond_2
 
-    .line 1448
     const-string v4, "MediaPlayer"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1698,7 +1556,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1450
     :cond_2
     if-eqz v1, :cond_0
 
@@ -1706,7 +1563,6 @@
 
     goto :goto_0
 
-    .line 1442
     .end local v1    # "mode":I
     .end local v2    # "usage":I
     :cond_3
@@ -1722,11 +1578,9 @@
 
     goto :goto_1
 
-    .line 1451
     :catch_0
     move-exception v0
 
-    .line 1452
     .local v0, "e":Landroid/os/RemoteException;
     goto :goto_0
 .end method
@@ -1738,7 +1592,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 4661
     if-eq p1, v0, :cond_0
 
     const/4 v1, 0x2
@@ -1794,18 +1647,15 @@
     .locals 7
 
     .prologue
-    .line 2873
     invoke-direct {p0}, Landroid/media/MediaPlayer;->getInbandTrackInfo()[Landroid/media/MediaPlayer$TrackInfo;
 
     move-result-object v2
 
-    .line 2874
     .local v2, "tracks":[Landroid/media/MediaPlayer$TrackInfo;
     iget-object v4, p0, Landroid/media/MediaPlayer;->mIndexTrackPairs:Ljava/util/Vector;
 
     monitor-enter v4
 
-    .line 2875
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -1815,7 +1665,6 @@
 
     if-ge v0, v3, :cond_2
 
-    .line 2876
     iget-object v3, p0, Landroid/media/MediaPlayer;->mInbandTrackIndices:Ljava/util/BitSet;
 
     invoke-virtual {v3, v0}, Ljava/util/BitSet;->get(I)Z
@@ -1824,19 +1673,16 @@
 
     if-eqz v3, :cond_0
 
-    .line 2875
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 2879
     :cond_0
     iget-object v3, p0, Landroid/media/MediaPlayer;->mInbandTrackIndices:Ljava/util/BitSet;
 
     invoke-virtual {v3, v0}, Ljava/util/BitSet;->set(I)V
 
-    .line 2883
     aget-object v3, v2, v0
 
     invoke-virtual {v3}, Landroid/media/MediaPlayer$TrackInfo;->getTrackType()I
@@ -1847,7 +1693,6 @@
 
     if-ne v3, v5, :cond_1
 
-    .line 2884
     iget-object v3, p0, Landroid/media/MediaPlayer;->mSubtitleController:Landroid/media/SubtitleController;
 
     aget-object v5, v2, v0
@@ -1860,7 +1705,6 @@
 
     move-result-object v1
 
-    .line 2886
     .local v1, "track":Landroid/media/SubtitleTrack;
     iget-object v3, p0, Landroid/media/MediaPlayer;->mIndexTrackPairs:Ljava/util/Vector;
 
@@ -1876,7 +1720,6 @@
 
     goto :goto_1
 
-    .line 2891
     .end local v1    # "track":Landroid/media/SubtitleTrack;
     :catchall_0
     move-exception v3
@@ -1887,7 +1730,6 @@
 
     throw v3
 
-    .line 2888
     :cond_1
     :try_start_1
     iget-object v3, p0, Landroid/media/MediaPlayer;->mIndexTrackPairs:Ljava/util/Vector;
@@ -1906,13 +1748,11 @@
 
     goto :goto_1
 
-    .line 2891
     :cond_2
     monitor-exit v4
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 2892
     return-void
 .end method
 
@@ -1925,7 +1765,6 @@
     .param p4, "obj"    # Ljava/lang/Object;
 
     .prologue
-    .line 3967
     const/16 v2, -0x31
 
     if-eq p3, v2, :cond_0
@@ -1942,18 +1781,16 @@
 
     if-ne p3, v2, :cond_1
 
-    .line 3971
     :cond_0
     if-eqz p4, :cond_1
 
-    .line 3972
     const-string v3, "MediaPlayer"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "postEventFromNative Error String is"
+    const-string v4, "postEventFromNative Error String is"
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1973,7 +1810,6 @@
 
     invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3975
     :cond_1
     check-cast p0, Ljava/lang/ref/WeakReference;
 
@@ -1984,16 +1820,13 @@
 
     check-cast v1, Landroid/media/MediaPlayer;
 
-    .line 3976
     .local v1, "mp":Landroid/media/MediaPlayer;
     if-nez v1, :cond_3
 
-    .line 3988
     :cond_2
     :goto_0
     return-void
 
-    .line 3980
     :cond_3
     const/16 v2, 0xc8
 
@@ -2003,23 +1836,19 @@
 
     if-ne p2, v2, :cond_4
 
-    .line 3982
     invoke-virtual {v1}, Landroid/media/MediaPlayer;->start()V
 
-    .line 3984
     :cond_4
     iget-object v2, v1, Landroid/media/MediaPlayer;->mEventHandler:Landroid/media/MediaPlayer$EventHandler;
 
     if-eqz v2, :cond_2
 
-    .line 3985
     iget-object v2, v1, Landroid/media/MediaPlayer;->mEventHandler:Landroid/media/MediaPlayer$EventHandler;
 
     invoke-virtual {v2, p1, p2, p3, p4}, Landroid/media/MediaPlayer$EventHandler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v0
 
-    .line 3986
     .local v0, "m":Landroid/os/Message;
     iget-object v2, v1, Landroid/media/MediaPlayer;->mEventHandler:Landroid/media/MediaPlayer$EventHandler;
 
@@ -2033,7 +1862,6 @@
     .param p1, "path"    # Ljava/lang/String;
 
     .prologue
-    .line 1262
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v2
@@ -2046,7 +1874,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 1263
     iget-object v2, p0, Landroid/media/MediaPlayer;->mItsOnInstance:Ljava/lang/Object;
 
     if-eqz v2, :cond_0
@@ -2055,7 +1882,6 @@
 
     if-nez v2, :cond_1
 
-    .line 1265
     :cond_0
     :try_start_0
     const-string v2, "com.itsoninc.android.ItsOnOemApi"
@@ -2064,7 +1890,6 @@
 
     move-result-object v1
 
-    .line 1266
     .local v1, "itsOnOemApiClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const-string v2, "getInstance"
 
@@ -2088,8 +1913,7 @@
 
     iput-object v2, p0, Landroid/media/MediaPlayer;->mItsOnInstance:Ljava/lang/Object;
 
-    .line 1267
-    const-string/jumbo v2, "registerMediaMapping"
+    const-string v2, "registerMediaMapping"
 
     const/4 v3, 0x1
 
@@ -2109,7 +1933,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1273
     .end local v1    # "itsOnOemApiClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :cond_1
     :goto_0
@@ -2130,16 +1953,13 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 1278
     :cond_2
     :goto_1
     return-void
 
-    .line 1268
     :catch_0
     move-exception v0
 
-    .line 1269
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "MediaPlayer"
 
@@ -2149,12 +1969,10 @@
 
     goto :goto_0
 
-    .line 1274
     .end local v0    # "e":Ljava/lang/Exception;
     :catch_1
     move-exception v0
 
-    .line 1275
     .restart local v0    # "e":Ljava/lang/Exception;
     const-string v2, "MediaPlayer"
 
@@ -2169,36 +1987,29 @@
     .locals 2
 
     .prologue
-    .line 2860
     iget-object v0, p0, Landroid/media/MediaPlayer;->mSubtitleController:Landroid/media/SubtitleController;
 
     if-nez v0, :cond_0
 
-    .line 2861
     const-string v0, "MediaPlayer"
 
-    const-string/jumbo v1, "setSubtitleAnchor in MediaPlayer"
+    const-string v1, "setSubtitleAnchor in MediaPlayer"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2862
     invoke-direct {p0}, Landroid/media/MediaPlayer;->setSubtitleAnchor()V
 
-    .line 2865
     :cond_0
     invoke-direct {p0}, Landroid/media/MediaPlayer;->populateInbandTracks()V
 
-    .line 2867
     iget-object v0, p0, Landroid/media/MediaPlayer;->mSubtitleController:Landroid/media/SubtitleController;
 
     if-eqz v0, :cond_1
 
-    .line 2868
     iget-object v0, p0, Landroid/media/MediaPlayer;->mSubtitleController:Landroid/media/SubtitleController;
 
     invoke-virtual {v0}, Landroid/media/SubtitleController;->selectDefaultTrack()V
 
-    .line 2870
     :cond_1
     return-void
 .end method
@@ -2214,25 +2025,21 @@
     .end annotation
 
     .prologue
-    .line 3537
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 3538
     .local v1, "request":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 3540
     .local v0, "reply":Landroid/os/Parcel;
     :try_start_0
     const-string v2, "android.media.IMediaPlayer"
 
     invoke-virtual {v1, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 3541
     if-eqz p2, :cond_0
 
     const/4 v2, 0x4
@@ -2240,36 +2047,28 @@
     :goto_0
     invoke-virtual {v1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 3542
     invoke-virtual {v1, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 3543
     invoke-virtual {p0, v1, v0}, Landroid/media/MediaPlayer;->invoke(Landroid/os/Parcel;Landroid/os/Parcel;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3545
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 3546
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 3548
     return-void
 
-    .line 3541
     :cond_0
     const/4 v2, 0x5
 
     goto :goto_0
 
-    .line 3545
     :catchall_0
     move-exception v2
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 3546
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v2
@@ -2288,13 +2087,10 @@
     .prologue
     const/4 v7, 0x3
 
-    .line 3488
     invoke-direct {p0}, Landroid/media/MediaPlayer;->populateInbandTracks()V
 
-    .line 3490
     const/4 v2, 0x0
 
-    .line 3492
     .local v2, "p":Landroid/util/Pair;, "Landroid/util/Pair<Ljava/lang/Integer;Landroid/media/SubtitleTrack;>;"
     :try_start_0
     iget-object v6, p0, Landroid/media/MediaPlayer;->mIndexTrackPairs:Ljava/util/Vector;
@@ -2311,16 +2107,13 @@
     :try_end_0
     .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3498
     iget-object v4, v2, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v4, Landroid/media/SubtitleTrack;
 
-    .line 3499
     .local v4, "track":Landroid/media/SubtitleTrack;
     if-nez v4, :cond_1
 
-    .line 3501
     iget-object v6, v2, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v6, Ljava/lang/Integer;
@@ -2331,21 +2124,17 @@
 
     invoke-direct {p0, v6, p2}, Landroid/media/MediaPlayer;->selectOrDeselectInbandTrack(IZ)V
 
-    .line 3533
     .end local v4    # "track":Landroid/media/SubtitleTrack;
     :cond_0
     :goto_0
     return-void
 
-    .line 3493
     :catch_0
     move-exception v1
 
-    .line 3495
     .local v1, "e":Ljava/lang/ArrayIndexOutOfBoundsException;
     goto :goto_0
 
-    .line 3505
     .end local v1    # "e":Ljava/lang/ArrayIndexOutOfBoundsException;
     .restart local v4    # "track":Landroid/media/SubtitleTrack;
     :cond_1
@@ -2353,10 +2142,8 @@
 
     if-eqz v6, :cond_0
 
-    .line 3509
     if-nez p2, :cond_3
 
-    .line 3511
     iget-object v6, p0, Landroid/media/MediaPlayer;->mSubtitleController:Landroid/media/SubtitleController;
 
     invoke-virtual {v6}, Landroid/media/SubtitleController;->getSelectedTrack()Landroid/media/SubtitleTrack;
@@ -2365,7 +2152,6 @@
 
     if-ne v6, v4, :cond_2
 
-    .line 3512
     iget-object v6, p0, Landroid/media/MediaPlayer;->mSubtitleController:Landroid/media/SubtitleController;
 
     const/4 v7, 0x0
@@ -2374,17 +2160,15 @@
 
     goto :goto_0
 
-    .line 3514
     :cond_2
     const-string v6, "MediaPlayer"
 
-    const-string/jumbo v7, "trying to deselect track that was not selected"
+    const-string v7, "trying to deselect track that was not selected"
 
     invoke-static {v6, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 3520
     :cond_3
     invoke-virtual {v4}, Landroid/media/SubtitleTrack;->getTrackType()I
 
@@ -2392,18 +2176,15 @@
 
     if-ne v6, v7, :cond_5
 
-    .line 3521
     invoke-virtual {p0, v7}, Landroid/media/MediaPlayer;->getSelectedTrack(I)I
 
     move-result v5
 
-    .line 3522
     .local v5, "ttIndex":I
     iget-object v7, p0, Landroid/media/MediaPlayer;->mIndexTrackPairs:Ljava/util/Vector;
 
     monitor-enter v7
 
-    .line 3523
     if-ltz v5, :cond_4
 
     :try_start_1
@@ -2415,7 +2196,6 @@
 
     if-ge v5, v6, :cond_4
 
-    .line 3524
     iget-object v6, p0, Landroid/media/MediaPlayer;->mIndexTrackPairs:Ljava/util/Vector;
 
     invoke-virtual {v6, v5}, Ljava/util/Vector;->get(I)Ljava/lang/Object;
@@ -2424,7 +2204,6 @@
 
     check-cast v3, Landroid/util/Pair;
 
-    .line 3525
     .local v3, "p2":Landroid/util/Pair;, "Landroid/util/Pair<Ljava/lang/Integer;Landroid/media/SubtitleTrack;>;"
     iget-object v6, v3, Landroid/util/Pair;->first:Ljava/lang/Object;
 
@@ -2434,7 +2213,6 @@
 
     if-nez v6, :cond_4
 
-    .line 3527
     iget-object v6, v3, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v6, Ljava/lang/Integer;
@@ -2447,14 +2225,12 @@
 
     invoke-direct {p0, v6, v8}, Landroid/media/MediaPlayer;->selectOrDeselectInbandTrack(IZ)V
 
-    .line 3530
     .end local v3    # "p2":Landroid/util/Pair;, "Landroid/util/Pair<Ljava/lang/Integer;Landroid/media/SubtitleTrack;>;"
     :cond_4
     monitor-exit v7
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 3532
     .end local v5    # "ttIndex":I
     :cond_5
     iget-object v6, p0, Landroid/media/MediaPlayer;->mSubtitleController:Landroid/media/SubtitleController;
@@ -2463,7 +2239,6 @@
 
     goto :goto_0
 
-    .line 3530
     .restart local v5    # "ttIndex":I
     :catchall_0
     move-exception v6
@@ -2482,7 +2257,6 @@
     .param p2, "extraData"    # [Ljava/lang/Object;
 
     .prologue
-    .line 3992
     move-object/from16 v0, p2
 
     array-length v1, v0
@@ -2491,14 +2265,13 @@
 
     if-eqz v1, :cond_0
 
-    .line 3993
     const-string v1, "MediaPlayer"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "sendBroadcastingIntent invailed param - "
+    const-string v4, "sendBroadcastingIntent invailed param - "
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2516,14 +2289,11 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3994
     const/4 v1, 0x0
 
-    .line 4031
     :goto_0
     return v1
 
-    .line 3997
     :cond_0
     new-instance v3, Landroid/content/Intent;
 
@@ -2531,13 +2301,11 @@
 
     invoke-direct {v3, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 3998
     .local v3, "intent":Landroid/content/Intent;
     const/high16 v1, 0x4000000
 
     invoke-virtual {v3, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 4000
     const-string v1, "android.media.IMediaPlayer.videoexist"
 
     move-object/from16 v0, p1
@@ -2548,19 +2316,16 @@
 
     if-eqz v1, :cond_1
 
-    .line 4001
     const-string v1, "MediaPlayer"
 
-    const-string/jumbo v2, "this is IMEDIA_PLAYER_VIDEO_EXIST"
+    const-string v2, "this is IMEDIA_PLAYER_VIDEO_EXIST"
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4002
     const/4 v1, 0x0
 
     invoke-virtual {v3, v1}, Landroid/content/Intent;->setAllowFds(Z)V
 
-    .line 4006
     :cond_1
     const/16 v17, 0x0
 
@@ -2575,7 +2340,6 @@
 
     if-ge v0, v1, :cond_4
 
-    .line 4007
     add-int/lit8 v1, v17, 0x1
 
     aget-object v1, p2, v1
@@ -2584,7 +2348,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 4008
     aget-object v1, p2, v17
 
     invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -2601,13 +2364,11 @@
 
     invoke-virtual {v3, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 4006
     :goto_2
     add-int/lit8 v17, v17, 0x2
 
     goto :goto_1
 
-    .line 4009
     :cond_2
     add-int/lit8 v1, v17, 0x1
 
@@ -2617,7 +2378,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 4010
     aget-object v1, p2, v17
 
     invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -2636,24 +2396,20 @@
 
     goto :goto_2
 
-    .line 4015
     :catch_0
     move-exception v16
 
-    .line 4016
     .local v16, "ex":Ljava/lang/ClassCastException;
     const-string v1, "MediaPlayer"
 
-    const-string/jumbo v2, "sendBroadcast(ClassCastException) fail"
+    const-string v2, "sendBroadcast(ClassCastException) fail"
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4017
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 4012
     .end local v16    # "ex":Ljava/lang/ClassCastException;
     :cond_3
     :try_start_1
@@ -2695,7 +2451,6 @@
 
     goto :goto_2
 
-    .line 4021
     :cond_4
     :try_start_2
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
@@ -2734,24 +2489,20 @@
     :try_end_2
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 4031
     const/4 v1, 0x1
 
     goto/16 :goto_0
 
-    .line 4026
     :catch_1
     move-exception v15
 
-    .line 4027
     .local v15, "e":Landroid/os/RemoteException;
     const-string v1, "MediaPlayer"
 
-    const-string/jumbo v2, "sendBroadcast fail"
+    const-string v2, "sendBroadcast fail"
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4028
     const/4 v1, 0x0
 
     goto/16 :goto_0
@@ -2772,18 +2523,15 @@
     .end annotation
 
     .prologue
-    .line 1197
     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v5
 
-    .line 1198
     .local v5, "uri":Landroid/net/Uri;
     invoke-virtual {v5}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 1199
     .local v4, "scheme":Ljava/lang/String;
     const-string v6, "file"
 
@@ -2793,12 +2541,10 @@
 
     if-eqz v6, :cond_4
 
-    .line 1200
     invoke-virtual {v5}, Landroid/net/Uri;->getPath()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 1217
     :cond_0
     const-string v6, "file://"
 
@@ -2808,7 +2554,6 @@
 
     if-eqz v6, :cond_1
 
-    .line 1218
     const-string v6, "file://"
 
     const-string v7, ""
@@ -2817,7 +2562,6 @@
 
     move-result-object p1
 
-    .line 1223
     :cond_1
     const-string v6, ".sdp"
 
@@ -2835,7 +2579,6 @@
 
     if-eqz v6, :cond_5
 
-    .line 1224
     :cond_2
     const-string v6, "/storage/emulated/"
 
@@ -2845,31 +2588,25 @@
 
     move-result-object v3
 
-    .line 1227
     .local v3, "newPath":Ljava/lang/String;
     invoke-direct {p0, v3}, Landroid/media/MediaPlayer;->registerMediaMapping(Ljava/lang/String;)V
 
-    .line 1230
     invoke-static {p1}, Landroid/media/MediaHTTPService;->createHttpServiceBinderIfNecessary(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v6
 
     invoke-direct {p0, v6, v3, p2, p3}, Landroid/media/MediaPlayer;->nativeSetDataSource(Landroid/os/IBinder;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 1258
     .end local v3    # "newPath":Ljava/lang/String;
     :cond_3
     :goto_0
     return-void
 
-    .line 1201
     :cond_4
     if-eqz v4, :cond_0
 
-    .line 1204
     invoke-direct {p0, p1}, Landroid/media/MediaPlayer;->registerMediaMapping(Ljava/lang/String;)V
 
-    .line 1208
     invoke-static {p1}, Landroid/media/MediaHTTPService;->createHttpServiceBinderIfNecessary(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v6
@@ -2878,13 +2615,11 @@
 
     goto :goto_0
 
-    .line 1237
     :cond_5
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1238
     .local v1, "file":Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
@@ -2892,51 +2627,43 @@
 
     if-eqz v6, :cond_7
 
-    .line 1239
     new-instance v2, Ljava/io/FileInputStream;
 
     invoke-direct {v2, v1}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    .line 1243
     .local v2, "is":Ljava/io/FileInputStream;
     :try_start_0
     invoke-virtual {v2}, Ljava/io/FileInputStream;->getFD()Ljava/io/FileDescriptor;
 
     move-result-object v0
 
-    .line 1244
     .local v0, "fd":Ljava/io/FileDescriptor;
     invoke-virtual {p0, v0}, Landroid/media/MediaPlayer;->setDataSource(Ljava/io/FileDescriptor;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1246
     if-eqz v2, :cond_3
 
-    .line 1247
     invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
 
     goto :goto_0
 
-    .line 1246
     .end local v0    # "fd":Ljava/io/FileDescriptor;
     :catchall_0
     move-exception v6
 
     if-eqz v2, :cond_6
 
-    .line 1247
     invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
 
     :cond_6
     throw v6
 
-    .line 1256
     .end local v2    # "is":Ljava/io/FileInputStream;
     :cond_7
     new-instance v6, Ljava/io/IOException;
 
-    const-string/jumbo v7, "setDataSource failed."
+    const-string v7, "setDataSource failed."
 
     invoke-direct {v6, v7}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 
@@ -2947,7 +2674,6 @@
     .locals 5
 
     .prologue
-    .line 2700
     monitor-enter p0
 
     :try_start_0
@@ -2955,18 +2681,15 @@
 
     if-nez v3, :cond_0
 
-    .line 2701
     new-instance v2, Landroid/os/HandlerThread;
 
     const-string v3, "SetSubtitleAnchorThread"
 
     invoke-direct {v2, v3}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
 
-    .line 2702
     .local v2, "thread":Landroid/os/HandlerThread;
     invoke-virtual {v2}, Landroid/os/HandlerThread;->start()V
 
-    .line 2703
     new-instance v1, Landroid/os/Handler;
 
     invoke-virtual {v2}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
@@ -2975,7 +2698,6 @@
 
     invoke-direct {v1, v3}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 2704
     .local v1, "handler":Landroid/os/Handler;
     new-instance v3, Landroid/media/MediaPlayer$1;
 
@@ -2985,14 +2707,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2723
     :try_start_1
     invoke-virtual {v2}, Landroid/os/HandlerThread;->join()V
     :try_end_1
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 2729
     .end local v1    # "handler":Landroid/os/Handler;
     .end local v2    # "thread":Landroid/os/HandlerThread;
     :cond_0
@@ -3001,13 +2721,11 @@
 
     return-void
 
-    .line 2724
     .restart local v1    # "handler":Landroid/os/Handler;
     .restart local v2    # "thread":Landroid/os/HandlerThread;
     :catch_0
     move-exception v0
 
-    .line 2725
     .local v0, "e":Ljava/lang/InterruptedException;
     :try_start_2
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
@@ -3016,7 +2734,6 @@
 
     invoke-virtual {v3}, Ljava/lang/Thread;->interrupt()V
 
-    .line 2726
     const-string v3, "MediaPlayer"
 
     const-string v4, "failed to join SetSubtitleAnchorThread"
@@ -3027,7 +2744,6 @@
 
     goto :goto_0
 
-    .line 2700
     .end local v0    # "e":Ljava/lang/InterruptedException;
     .end local v1    # "handler":Landroid/os/Handler;
     .end local v2    # "thread":Landroid/os/HandlerThread;
@@ -3044,12 +2760,10 @@
     .param p1, "awake"    # Z
 
     .prologue
-    .line 1587
     iget-object v0, p0, Landroid/media/MediaPlayer;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     if-eqz v0, :cond_0
 
-    .line 1588
     if-eqz p1, :cond_1
 
     iget-object v0, p0, Landroid/media/MediaPlayer;->mWakeLock:Landroid/os/PowerManager$WakeLock;
@@ -3060,23 +2774,18 @@
 
     if-nez v0, :cond_1
 
-    .line 1589
     iget-object v0, p0, Landroid/media/MediaPlayer;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
-    .line 1594
     :cond_0
     :goto_0
     iput-boolean p1, p0, Landroid/media/MediaPlayer;->mStayAwake:Z
 
-    .line 1595
     invoke-direct {p0}, Landroid/media/MediaPlayer;->updateSurfaceScreenOn()V
 
-    .line 1596
     return-void
 
-    .line 1590
     :cond_1
     if-nez p1, :cond_0
 
@@ -3088,7 +2797,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1591
     iget-object v0, p0, Landroid/media/MediaPlayer;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
@@ -3100,12 +2808,10 @@
     .locals 2
 
     .prologue
-    .line 1599
     iget-object v0, p0, Landroid/media/MediaPlayer;->mSurfaceHolder:Landroid/view/SurfaceHolder;
 
     if-eqz v0, :cond_0
 
-    .line 1600
     iget-object v1, p0, Landroid/media/MediaPlayer;->mSurfaceHolder:Landroid/view/SurfaceHolder;
 
     iget-boolean v0, p0, Landroid/media/MediaPlayer;->mScreenOnWhilePlaying:Z
@@ -3121,11 +2827,9 @@
     :goto_0
     invoke-interface {v1, v0}, Landroid/view/SurfaceHolder;->setKeepScreenOn(Z)V
 
-    .line 1602
     :cond_0
     return-void
 
-    .line 1600
     :cond_1
     const/4 v0, 0x0
 
@@ -3145,34 +2849,27 @@
     .end annotation
 
     .prologue
-    .line 2801
     move-object v1, p1
 
-    .line 2802
     .local v1, "fIs":Ljava/io/InputStream;
     move-object v0, p2
 
-    .line 2804
     .local v0, "fFormat":Landroid/media/MediaFormat;
     if-eqz p1, :cond_0
 
-    .line 2807
     iget-object v5, p0, Landroid/media/MediaPlayer;->mOpenSubtitleSources:Ljava/util/Vector;
 
     monitor-enter v5
 
-    .line 2808
     :try_start_0
     iget-object v4, p0, Landroid/media/MediaPlayer;->mOpenSubtitleSources:Ljava/util/Vector;
 
     invoke-virtual {v4, p1}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
-    .line 2809
     monitor-exit v5
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2815
     :goto_0
     new-instance v3, Landroid/os/HandlerThread;
 
@@ -3182,11 +2879,9 @@
 
     invoke-direct {v3, v4, v5}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;I)V
 
-    .line 2821
     .local v3, "thread":Landroid/os/HandlerThread;
     invoke-virtual {v3}, Landroid/os/HandlerThread;->start()V
 
-    .line 2822
     new-instance v2, Landroid/os/Handler;
 
     invoke-virtual {v3}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
@@ -3195,7 +2890,6 @@
 
     invoke-direct {v2, v4}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 2823
     .local v2, "handler":Landroid/os/Handler;
     new-instance v4, Landroid/media/MediaPlayer$3;
 
@@ -3203,10 +2897,8 @@
 
     invoke-virtual {v2, v4}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 2857
     return-void
 
-    .line 2809
     .end local v2    # "handler":Landroid/os/Handler;
     .end local v3    # "thread":Landroid/os/HandlerThread;
     :catchall_0
@@ -3219,7 +2911,6 @@
 
     throw v4
 
-    .line 2811
     :cond_0
     const-string v4, "MediaPlayer"
 
@@ -3244,12 +2935,10 @@
     .end annotation
 
     .prologue
-    .line 2958
     invoke-virtual {p2}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 2959
     .local v3, "scheme":Ljava/lang/String;
     if-eqz v3, :cond_0
 
@@ -3261,7 +2950,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 2960
     :cond_0
     invoke-virtual {p2}, Landroid/net/Uri;->getPath()Ljava/lang/String;
 
@@ -3269,25 +2957,21 @@
 
     invoke-virtual {p0, v4, p3}, Landroid/media/MediaPlayer;->addTimedTextSource(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2986
     :cond_1
     :goto_0
     return-void
 
-    .line 2964
     :cond_2
     const/4 v1, 0x0
 
-    .line 2966
     .local v1, "fd":Landroid/content/res/AssetFileDescriptor;
     :try_start_0
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
-    .line 2967
     .local v2, "resolver":Landroid/content/ContentResolver;
-    const-string/jumbo v4, "r"
+    const-string v4, "r"
 
     invoke-virtual {v2, p2, v4}, Landroid/content/ContentResolver;->openAssetFileDescriptor(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/res/AssetFileDescriptor;
     :try_end_0
@@ -3297,18 +2981,14 @@
 
     move-result-object v1
 
-    .line 2968
     if-nez v1, :cond_3
 
-    .line 2982
     if-eqz v1, :cond_1
 
-    .line 2983
     invoke-virtual {v1}, Landroid/content/res/AssetFileDescriptor;->close()V
 
     goto :goto_0
 
-    .line 2971
     :cond_3
     :try_start_1
     invoke-virtual {v1}, Landroid/content/res/AssetFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
@@ -3321,20 +3001,16 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 2982
     if-eqz v1, :cond_1
 
-    .line 2983
     invoke-virtual {v1}, Landroid/content/res/AssetFileDescriptor;->close()V
 
     goto :goto_0
 
-    .line 2973
     .end local v2    # "resolver":Landroid/content/ContentResolver;
     :catch_0
     move-exception v0
 
-    .line 2975
     .local v0, "ex":Ljava/lang/SecurityException;
     :try_start_2
     const-string v4, "MediaPlayer"
@@ -3345,20 +3021,16 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 2982
     if-eqz v1, :cond_1
 
-    .line 2983
     invoke-virtual {v1}, Landroid/content/res/AssetFileDescriptor;->close()V
 
     goto :goto_0
 
-    .line 2977
     .end local v0    # "ex":Ljava/lang/SecurityException;
     :catch_1
     move-exception v0
 
-    .line 2979
     .local v0, "ex":Ljava/io/IOException;
     :try_start_3
     const-string v4, "MediaPlayer"
@@ -3369,22 +3041,18 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 2982
     if-eqz v1, :cond_1
 
-    .line 2983
     invoke-virtual {v1}, Landroid/content/res/AssetFileDescriptor;->close()V
 
     goto :goto_0
 
-    .line 2982
     .end local v0    # "ex":Ljava/io/IOException;
     :catchall_0
     move-exception v4
 
     if-eqz v1, :cond_4
 
-    .line 2983
     invoke-virtual {v1}, Landroid/content/res/AssetFileDescriptor;->close()V
 
     :cond_4
@@ -3405,14 +3073,12 @@
     .end annotation
 
     .prologue
-    .line 3030
     invoke-static/range {p6 .. p6}, Landroid/media/MediaPlayer;->availableMimeTypeForExternalSource(Ljava/lang/String;)Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 3031
     new-instance v3, Ljava/lang/IllegalArgumentException;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -3441,7 +3107,6 @@
 
     throw v3
 
-    .line 3036
     :cond_0
     :try_start_0
     sget-object v3, Llibcore/io/Libcore;->os:Llibcore/io/Os;
@@ -3454,38 +3119,32 @@
 
     move-result-object v14
 
-    .line 3042
     .local v14, "fd2":Ljava/io/FileDescriptor;
     new-instance v13, Landroid/media/MediaFormat;
 
     invoke-direct {v13}, Landroid/media/MediaFormat;-><init>()V
 
-    .line 3043
     .local v13, "fFormat":Landroid/media/MediaFormat;
-    const-string/jumbo v3, "mime"
+    const-string v3, "mime"
 
     move-object/from16 v0, p6
 
     invoke-virtual {v13, v3, v0}, Landroid/media/MediaFormat;->setString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3044
-    const-string/jumbo v3, "is-timed-text"
+    const-string v3, "is-timed-text"
 
     const/4 v4, 0x1
 
     invoke-virtual {v13, v3, v4}, Landroid/media/MediaFormat;->setInteger(Ljava/lang/String;I)V
 
-    .line 3047
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/media/MediaPlayer;->mSubtitleController:Landroid/media/SubtitleController;
 
     if-nez v3, :cond_1
 
-    .line 3048
     invoke-direct/range {p0 .. p0}, Landroid/media/MediaPlayer;->setSubtitleAnchor()V
 
-    .line 3051
     :cond_1
     move-object/from16 v0, p0
 
@@ -3497,12 +3156,10 @@
 
     if-nez v3, :cond_2
 
-    .line 3053
     invoke-static {}, Landroid/app/ActivityThread;->currentApplication()Landroid/app/Application;
 
     move-result-object v2
 
-    .line 3054
     .local v2, "context":Landroid/content/Context;
     move-object/from16 v0, p0
 
@@ -3522,7 +3179,6 @@
 
     invoke-virtual {v3, v4}, Landroid/media/SubtitleController;->registerRenderer(Landroid/media/SubtitleController$Renderer;)V
 
-    .line 3056
     .end local v2    # "context":Landroid/content/Context;
     :cond_2
     move-object/from16 v0, p0
@@ -3533,7 +3189,6 @@
 
     move-result-object v10
 
-    .line 3057
     .local v10, "track":Landroid/media/SubtitleTrack;
     move-object/from16 v0, p0
 
@@ -3541,7 +3196,6 @@
 
     monitor-enter v4
 
-    .line 3058
     :try_start_1
     move-object/from16 v0, p0
 
@@ -3559,23 +3213,18 @@
 
     invoke-virtual {v3, v0}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
-    .line 3059
     monitor-exit v4
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 3061
     move-object v5, v14
 
-    .line 3062
     .local v5, "fd3":Ljava/io/FileDescriptor;
     move-wide/from16 v6, p2
 
-    .line 3063
     .local v6, "offset2":J
     move-wide/from16 v8, p4
 
-    .line 3064
     .local v8, "length2":J
     new-instance v11, Landroid/os/HandlerThread;
 
@@ -3585,11 +3234,9 @@
 
     invoke-direct {v11, v3, v4}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;I)V
 
-    .line 3067
     .local v11, "thread":Landroid/os/HandlerThread;
     invoke-virtual {v11}, Landroid/os/HandlerThread;->start()V
 
-    .line 3068
     new-instance v15, Landroid/os/Handler;
 
     invoke-virtual {v11}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
@@ -3598,7 +3245,6 @@
 
     invoke-direct {v15, v3}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 3069
     .local v15, "handler":Landroid/os/Handler;
     new-instance v3, Landroid/media/MediaPlayer$4;
 
@@ -3608,10 +3254,8 @@
 
     invoke-virtual {v15, v3}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 3111
     return-void
 
-    .line 3037
     .end local v5    # "fd3":Ljava/io/FileDescriptor;
     .end local v6    # "offset2":J
     .end local v8    # "length2":J
@@ -3623,7 +3267,6 @@
     :catch_0
     move-exception v12
 
-    .line 3038
     .local v12, "ex":Landroid/system/ErrnoException;
     const-string v3, "MediaPlayer"
 
@@ -3633,14 +3276,12 @@
 
     invoke-static {v3, v4, v12}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 3039
     new-instance v3, Ljava/lang/RuntimeException;
 
     invoke-direct {v3, v12}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
 
     throw v3
 
-    .line 3059
     .end local v12    # "ex":Landroid/system/ErrnoException;
     .restart local v10    # "track":Landroid/media/SubtitleTrack;
     .restart local v13    # "fFormat":Landroid/media/MediaFormat;
@@ -3668,7 +3309,6 @@
     .end annotation
 
     .prologue
-    .line 3007
     const-wide/16 v2, 0x0
 
     const-wide v4, 0x7ffffffffffffffL
@@ -3681,7 +3321,6 @@
 
     invoke-virtual/range {v0 .. v6}, Landroid/media/MediaPlayer;->addTimedTextSource(Ljava/io/FileDescriptor;JJLjava/lang/String;)V
 
-    .line 3008
     return-void
 .end method
 
@@ -3698,14 +3337,12 @@
     .end annotation
 
     .prologue
-    .line 2912
     invoke-static {p2}, Landroid/media/MediaPlayer;->availableMimeTypeForExternalSource(Ljava/lang/String;)Z
 
     move-result v4
 
     if-nez v4, :cond_0
 
-    .line 2913
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -3724,7 +3361,6 @@
 
     move-result-object v3
 
-    .line 2914
     .local v3, "msg":Ljava/lang/String;
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
@@ -3732,14 +3368,12 @@
 
     throw v4
 
-    .line 2917
     .end local v3    # "msg":Ljava/lang/String;
     :cond_0
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 2918
     .local v1, "file":Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
@@ -3747,48 +3381,39 @@
 
     if-eqz v4, :cond_3
 
-    .line 2919
     new-instance v2, Ljava/io/FileInputStream;
 
     invoke-direct {v2, v1}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    .line 2923
     .local v2, "is":Ljava/io/FileInputStream;
     :try_start_0
     invoke-virtual {v2}, Ljava/io/FileInputStream;->getFD()Ljava/io/FileDescriptor;
 
     move-result-object v0
 
-    .line 2924
     .local v0, "fd":Ljava/io/FileDescriptor;
     invoke-virtual {p0, v0, p2}, Landroid/media/MediaPlayer;->addTimedTextSource(Ljava/io/FileDescriptor;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2926
     if-eqz v2, :cond_1
 
-    .line 2927
     invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
 
-    .line 2939
     :cond_1
     return-void
 
-    .line 2926
     .end local v0    # "fd":Ljava/io/FileDescriptor;
     :catchall_0
     move-exception v4
 
     if-eqz v2, :cond_2
 
-    .line 2927
     invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
 
     :cond_2
     throw v4
 
-    .line 2937
     .end local v2    # "is":Ljava/io/FileInputStream;
     :cond_3
     new-instance v4, Ljava/io/IOException;
@@ -3811,14 +3436,12 @@
     .end annotation
 
     .prologue
-    .line 3134
     invoke-static {p2}, Landroid/media/MediaPlayer;->availableMimeTypeForExternalSource(Ljava/lang/String;)Z
 
     move-result v6
 
     if-nez v6, :cond_0
 
-    .line 3135
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -3837,7 +3460,6 @@
 
     move-result-object v3
 
-    .line 3136
     .local v3, "msg":Ljava/lang/String;
     new-instance v6, Ljava/lang/IllegalArgumentException;
 
@@ -3845,14 +3467,12 @@
 
     throw v6
 
-    .line 3139
     .end local v3    # "msg":Ljava/lang/String;
     :cond_0
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 3140
     .local v1, "file":Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
@@ -3860,25 +3480,21 @@
 
     if-eqz v6, :cond_3
 
-    .line 3141
     new-instance v2, Ljava/io/FileInputStream;
 
     invoke-direct {v2, v1}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    .line 3143
     .local v2, "is":Ljava/io/FileInputStream;
     :try_start_0
     invoke-virtual {v2}, Ljava/io/FileInputStream;->getFD()Ljava/io/FileDescriptor;
 
     move-result-object v0
 
-    .line 3145
     .local v0, "fd":Ljava/io/FileDescriptor;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v5
 
-    .line 3146
     .local v5, "request":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
     :try_end_0
@@ -3886,76 +3502,60 @@
 
     move-result-object v4
 
-    .line 3148
     .local v4, "reply":Landroid/os/Parcel;
     :try_start_1
     const-string v6, "android.media.IMediaPlayer"
 
     invoke-virtual {v5, v6}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 3149
     const/4 v6, 0x3
 
     invoke-virtual {v5, v6}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 3150
     invoke-virtual {v5, v0}, Landroid/os/Parcel;->writeFileDescriptor(Ljava/io/FileDescriptor;)V
 
-    .line 3151
     const-wide/16 v6, 0x0
 
     invoke-virtual {v5, v6, v7}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 3152
     const-wide v6, 0x7ffffffffffffffL
 
     invoke-virtual {v5, v6, v7}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 3153
     invoke-virtual {v5, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 3154
     invoke-virtual {p0, v5, v4}, Landroid/media/MediaPlayer;->invoke(Landroid/os/Parcel;Landroid/os/Parcel;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 3156
     :try_start_2
     invoke-virtual {v5}, Landroid/os/Parcel;->recycle()V
 
-    .line 3157
     invoke-virtual {v4}, Landroid/os/Parcel;->recycle()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 3160
     if-eqz v2, :cond_1
 
-    .line 3161
     invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
 
-    .line 3169
     :cond_1
     invoke-direct {p0}, Landroid/media/MediaPlayer;->populateInbandTracks()V
 
-    .line 3170
     return-void
 
-    .line 3156
     :catchall_0
     move-exception v6
 
     :try_start_3
     invoke-virtual {v5}, Landroid/os/Parcel;->recycle()V
 
-    .line 3157
     invoke-virtual {v4}, Landroid/os/Parcel;->recycle()V
 
     throw v6
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 3160
     .end local v0    # "fd":Ljava/io/FileDescriptor;
     .end local v4    # "reply":Landroid/os/Parcel;
     .end local v5    # "request":Landroid/os/Parcel;
@@ -3964,13 +3564,11 @@
 
     if-eqz v2, :cond_2
 
-    .line 3161
     invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
 
     :cond_2
     throw v6
 
-    .line 3166
     .end local v2    # "is":Ljava/io/FileInputStream;
     :cond_3
     new-instance v6, Ljava/io/IOException;
@@ -3993,12 +3591,10 @@
     .end annotation
 
     .prologue
-    .line 3482
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Landroid/media/MediaPlayer;->selectOrDeselectTrack(IZ)V
 
-    .line 3483
     return-void
 .end method
 
@@ -4010,19 +3606,15 @@
     .prologue
     const/high16 v3, 0x3f800000    # 1.0f
 
-    .line 1701
     new-instance v1, Landroid/media/PlaybackParams;
 
     invoke-direct {v1}, Landroid/media/PlaybackParams;-><init>()V
 
-    .line 1702
     .local v1, "params":Landroid/media/PlaybackParams;
     invoke-virtual {v1}, Landroid/media/PlaybackParams;->allowDefaults()Landroid/media/PlaybackParams;
 
-    .line 1703
     packed-switch p2, :pswitch_data_0
 
-    .line 1715
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -4047,7 +3639,6 @@
 
     move-result-object v0
 
-    .line 1716
     .local v0, "msg":Ljava/lang/String;
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
@@ -4055,7 +3646,6 @@
 
     throw v2
 
-    .line 1705
     .end local v0    # "msg":Ljava/lang/String;
     :pswitch_0
     invoke-virtual {v1, p1}, Landroid/media/PlaybackParams;->setSpeed(F)Landroid/media/PlaybackParams;
@@ -4064,11 +3654,9 @@
 
     invoke-virtual {v2, v3}, Landroid/media/PlaybackParams;->setPitch(F)Landroid/media/PlaybackParams;
 
-    .line 1718
     :goto_0
     return-object v1
 
-    .line 1708
     :pswitch_1
     invoke-virtual {v1, p1}, Landroid/media/PlaybackParams;->setSpeed(F)Landroid/media/PlaybackParams;
 
@@ -4084,7 +3672,6 @@
 
     goto :goto_0
 
-    .line 1712
     :pswitch_2
     invoke-virtual {v1, p1}, Landroid/media/PlaybackParams;->setSpeed(F)Landroid/media/PlaybackParams;
 
@@ -4094,7 +3681,6 @@
 
     goto :goto_0
 
-    .line 1703
     nop
 
     :pswitch_data_0
@@ -4109,7 +3695,6 @@
     .locals 0
 
     .prologue
-    .line 3616
     invoke-direct {p0}, Landroid/media/MediaPlayer;->native_finalize()V
 
     return-void
@@ -4144,14 +3729,12 @@
     .end annotation
 
     .prologue
-    .line 3184
     invoke-static {p2}, Landroid/media/MediaPlayer;->availableMimeTypeForExternalSource(Ljava/lang/String;)Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 3185
     new-instance v3, Ljava/lang/IllegalArgumentException;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -4176,66 +3759,54 @@
 
     throw v3
 
-    .line 3187
     :cond_0
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 3188
     .local v1, "request":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 3189
     .local v0, "reply":Landroid/os/Parcel;
     const/4 v2, 0x0
 
-    .line 3191
     .local v2, "ret":[B
     :try_start_0
     const-string v3, "android.media.IMediaPlayer"
 
     invoke-virtual {v1, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 3192
     const/16 v3, 0xb
 
     invoke-virtual {v1, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 3193
     invoke-virtual {v1, p1}, Landroid/os/Parcel;->writeFileDescriptor(Ljava/io/FileDescriptor;)V
 
-    .line 3194
     const-wide/16 v4, 0x0
 
     invoke-virtual {v1, v4, v5}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 3195
     const-wide v4, 0x7ffffffffffffffL
 
     invoke-virtual {v1, v4, v5}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 3196
     invoke-virtual {v1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 3197
     invoke-virtual {p0, v1, v0}, Landroid/media/MediaPlayer;->invoke(Landroid/os/Parcel;Landroid/os/Parcel;)V
 
-    .line 3198
     const/4 v3, 0x0
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->setDataPosition(I)V
 
-    .line 3199
     const-string v3, "MediaPlayer"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "parcel size = "
+    const-string v5, "parcel size = "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4255,29 +3826,23 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3200
     invoke-virtual {v0}, Landroid/os/Parcel;->marshall()[B
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v2
 
-    .line 3202
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 3203
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 3205
     return-object v2
 
-    .line 3202
     :catchall_0
     move-exception v3
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 3203
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v3
@@ -4292,40 +3857,33 @@
     .end annotation
 
     .prologue
-    .line 3217
     const-string v3, "MediaPlayer"
 
     const-string v4, "getInbandSubtilteTrackInfo"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3218
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 3219
     .local v1, "request":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 3221
     .local v0, "reply":Landroid/os/Parcel;
     :try_start_0
     const-string v3, "android.media.IMediaPlayer"
 
     invoke-virtual {v1, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 3222
     const/16 v3, 0x9
 
     invoke-virtual {v1, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 3223
     invoke-virtual {p0, v1, v0}, Landroid/media/MediaPlayer;->invoke(Landroid/os/Parcel;Landroid/os/Parcel;)V
 
-    .line 3224
     sget-object v3, Landroid/media/MediaPlayer$TrackInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->createTypedArray(Landroid/os/Parcelable$Creator;)[Ljava/lang/Object;
@@ -4336,23 +3894,19 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3228
     .local v2, "trackInfo":[Landroid/media/MediaPlayer$TrackInfo;
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 3229
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-object v2
 
-    .line 3228
     .end local v2    # "trackInfo":[Landroid/media/MediaPlayer$TrackInfo;
     :catchall_0
     move-exception v3
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 3229
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v3
@@ -4363,25 +3917,20 @@
     .param p1, "key"    # I
 
     .prologue
-    .line 2264
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 2265
     .local v0, "p":Landroid/os/Parcel;
     invoke-direct {p0, p1, v0}, Landroid/media/MediaPlayer;->getParameter(ILandroid/os/Parcel;)V
 
-    .line 2266
     invoke-virtual {v0}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 2267
     .local v1, "ret":I
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 2268
     return v1
 .end method
 
@@ -4389,19 +3938,16 @@
     .locals 1
 
     .prologue
-    .line 3649
     iget-object v0, p0, Landroid/media/MediaPlayer;->mTimeProvider:Landroid/media/MediaPlayer$TimeProvider;
 
     if-nez v0, :cond_0
 
-    .line 3650
     new-instance v0, Landroid/media/MediaPlayer$TimeProvider;
 
     invoke-direct {v0, p0}, Landroid/media/MediaPlayer$TimeProvider;-><init>(Landroid/media/MediaPlayer;)V
 
     iput-object v0, p0, Landroid/media/MediaPlayer;->mTimeProvider:Landroid/media/MediaPlayer$TimeProvider;
 
-    .line 3652
     :cond_0
     iget-object v0, p0, Landroid/media/MediaPlayer;->mTimeProvider:Landroid/media/MediaPlayer$TimeProvider;
 
@@ -4416,18 +3962,15 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1859
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 1860
     .local v1, "reply":Landroid/os/Parcel;
     new-instance v0, Landroid/media/Metadata;
 
     invoke-direct {v0}, Landroid/media/Metadata;-><init>()V
 
-    .line 1862
     .local v0, "data":Landroid/media/Metadata;
     invoke-direct {p0, p1, p2, v1}, Landroid/media/MediaPlayer;->native_getMetadata(ZZLandroid/os/Parcel;)Z
 
@@ -4435,18 +3978,15 @@
 
     if-nez v3, :cond_1
 
-    .line 1863
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
     move-object v0, v2
 
-    .line 1873
     .end local v0    # "data":Landroid/media/Metadata;
     :cond_0
     :goto_0
     return-object v0
 
-    .line 1869
     .restart local v0    # "data":Landroid/media/Metadata;
     :cond_1
     invoke-virtual {v0, v1}, Landroid/media/Metadata;->parse(Landroid/os/Parcel;)Z
@@ -4455,12 +3995,10 @@
 
     if-nez v3, :cond_0
 
-    .line 1870
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
     move-object v0, v2
 
-    .line 1871
     goto :goto_0
 .end method
 
@@ -4473,19 +4011,16 @@
     .end annotation
 
     .prologue
-    .line 3268
     const-string v8, "MediaPlayer"
 
     const-string v9, "getOutbandSubtilteTrackInfo"
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3270
     invoke-direct {p0}, Landroid/media/MediaPlayer;->getInbandTrackInfo()[Landroid/media/MediaPlayer$TrackInfo;
 
     move-result-object v7
 
-    .line 3271
     .local v7, "trackInfo":[Landroid/media/MediaPlayer$TrackInfo;
     iget-object v8, p0, Landroid/media/MediaPlayer;->mIndexTrackPairs:Ljava/util/Vector;
 
@@ -4497,42 +4032,34 @@
 
     sub-int v3, v8, v9
 
-    .line 3272
     .local v3, "outOfBandSubtitleTrackNum":I
     if-gtz v3, :cond_1
 
-    .line 3274
     const-string v8, "MediaPlayer"
 
-    const-string/jumbo v9, "no outband subtitle track"
+    const-string v9, "no outband subtitle track"
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3275
     const/4 v8, 0x0
 
     new-array v4, v8, [Landroid/media/MediaPlayer$TrackInfo;
 
-    .line 3294
     :cond_0
     :goto_0
     return-object v4
 
-    .line 3278
     :cond_1
     const/4 v1, 0x0
 
-    .line 3279
     .local v1, "index":I
     new-array v4, v3, [Landroid/media/MediaPlayer$TrackInfo;
 
-    .line 3280
     .local v4, "outTrackInfo":[Landroid/media/MediaPlayer$TrackInfo;
     iget-object v9, p0, Landroid/media/MediaPlayer;->mIndexTrackPairs:Ljava/util/Vector;
 
     monitor-enter v9
 
-    .line 3281
     :try_start_0
     array-length v0, v7
     :try_end_0
@@ -4553,7 +4080,6 @@
 
     if-ge v0, v8, :cond_2
 
-    .line 3282
     iget-object v8, p0, Landroid/media/MediaPlayer;->mIndexTrackPairs:Ljava/util/Vector;
 
     invoke-virtual {v8, v0}, Ljava/util/Vector;->get(I)Ljava/lang/Object;
@@ -4562,18 +4088,15 @@
 
     check-cast v5, Landroid/util/Pair;
 
-    .line 3283
     .local v5, "p":Landroid/util/Pair;, "Landroid/util/Pair<Ljava/lang/Integer;Landroid/media/SubtitleTrack;>;"
     iget-object v8, v5, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     if-nez v8, :cond_3
 
-    .line 3284
     iget-object v6, v5, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v6, Landroid/media/SubtitleTrack;
 
-    .line 3285
     .local v6, "track":Landroid/media/SubtitleTrack;
     invoke-virtual {v6}, Landroid/media/SubtitleTrack;->getTrackType()I
     :try_end_1
@@ -4585,7 +4108,6 @@
 
     if-ne v8, v10, :cond_3
 
-    .line 3286
     add-int/lit8 v1, v2, 0x1
 
     .end local v2    # "index":I
@@ -4607,7 +4129,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 3281
     .end local v6    # "track":Landroid/media/SubtitleTrack;
     :goto_2
     add-int/lit8 v0, v0, 0x1
@@ -4618,7 +4139,6 @@
     .restart local v2    # "index":I
     goto :goto_1
 
-    .line 3291
     .end local v5    # "p":Landroid/util/Pair;, "Landroid/util/Pair<Ljava/lang/Integer;Landroid/media/SubtitleTrack;>;"
     :cond_2
     :try_start_3
@@ -4626,17 +4146,15 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 3292
     if-eq v2, v3, :cond_0
 
-    .line 3293
     const-string v8, "MediaPlayer"
 
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v10, "invalid outband subtitle track number - outOfBandSubtitleTrackNum = "
+    const-string v10, "invalid outband subtitle track number - outOfBandSubtitleTrackNum = "
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4664,7 +4182,6 @@
 
     goto :goto_0
 
-    .line 3291
     .end local v0    # "i":I
     .end local v2    # "index":I
     .restart local v1    # "index":I
@@ -4711,40 +4228,33 @@
     .end annotation
 
     .prologue
-    .line 3242
     const-string v3, "MediaPlayer"
 
     const-string v4, "getOutbandTimedTextTrackInfo"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3244
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 3245
     .local v1, "request":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 3247
     .local v0, "reply":Landroid/os/Parcel;
     :try_start_0
     const-string v3, "android.media.IMediaPlayer"
 
     invoke-virtual {v1, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 3248
     const/16 v3, 0xa
 
     invoke-virtual {v1, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 3249
     invoke-virtual {p0, v1, v0}, Landroid/media/MediaPlayer;->invoke(Landroid/os/Parcel;Landroid/os/Parcel;)V
 
-    .line 3250
     sget-object v3, Landroid/media/MediaPlayer$TrackInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->createTypedArray(Landroid/os/Parcelable$Creator;)[Ljava/lang/Object;
@@ -4755,23 +4265,19 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3254
     .local v2, "trackInfo":[Landroid/media/MediaPlayer$TrackInfo;
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 3255
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-object v2
 
-    .line 3254
     .end local v2    # "trackInfo":[Landroid/media/MediaPlayer$TrackInfo;
     :catchall_0
     move-exception v3
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 3255
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw v3
@@ -4782,16 +4288,13 @@
     .param p1, "key"    # I
 
     .prologue
-    .line 2236
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 2237
     .local v0, "p":Landroid/os/Parcel;
     invoke-direct {p0, p1, v0}, Landroid/media/MediaPlayer;->getParameter(ILandroid/os/Parcel;)V
 
-    .line 2238
     return-object v0
 .end method
 
@@ -4808,7 +4311,6 @@
     .end annotation
 
     .prologue
-    .line 3396
     iget-object v6, p0, Landroid/media/MediaPlayer;->mSubtitleController:Landroid/media/SubtitleController;
 
     if-eqz v6, :cond_3
@@ -4821,7 +4323,6 @@
 
     if-ne p1, v6, :cond_3
 
-    .line 3399
     :cond_0
     iget-object v6, p0, Landroid/media/MediaPlayer;->mSubtitleController:Landroid/media/SubtitleController;
 
@@ -4829,16 +4330,13 @@
 
     move-result-object v5
 
-    .line 3400
     .local v5, "subtitleTrack":Landroid/media/SubtitleTrack;
     if-eqz v5, :cond_3
 
-    .line 3401
     iget-object v7, p0, Landroid/media/MediaPlayer;->mIndexTrackPairs:Ljava/util/Vector;
 
     monitor-enter v7
 
-    .line 3402
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -4852,7 +4350,6 @@
 
     if-ge v0, v6, :cond_2
 
-    .line 3403
     iget-object v6, p0, Landroid/media/MediaPlayer;->mIndexTrackPairs:Ljava/util/Vector;
 
     invoke-virtual {v6, v0}, Ljava/util/Vector;->get(I)Ljava/lang/Object;
@@ -4861,7 +4358,6 @@
 
     check-cast v2, Landroid/util/Pair;
 
-    .line 3404
     .local v2, "p":Landroid/util/Pair;, "Landroid/util/Pair<Ljava/lang/Integer;Landroid/media/SubtitleTrack;>;"
     iget-object v6, v2, Landroid/util/Pair;->second:Ljava/lang/Object;
 
@@ -4873,17 +4369,14 @@
 
     if-ne v6, p1, :cond_1
 
-    .line 3405
     monitor-exit v7
 
-    .line 3431
     .end local v0    # "i":I
     .end local v2    # "p":Landroid/util/Pair;, "Landroid/util/Pair<Ljava/lang/Integer;Landroid/media/SubtitleTrack;>;"
     .end local v5    # "subtitleTrack":Landroid/media/SubtitleTrack;
     :goto_1
     return v0
 
-    .line 3402
     .restart local v0    # "i":I
     .restart local v2    # "p":Landroid/util/Pair;, "Landroid/util/Pair<Ljava/lang/Integer;Landroid/media/SubtitleTrack;>;"
     .restart local v5    # "subtitleTrack":Landroid/media/SubtitleTrack;
@@ -4892,14 +4385,12 @@
 
     goto :goto_0
 
-    .line 3408
     .end local v2    # "p":Landroid/util/Pair;, "Landroid/util/Pair<Ljava/lang/Integer;Landroid/media/SubtitleTrack;>;"
     :cond_2
     monitor-exit v7
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3412
     .end local v0    # "i":I
     .end local v5    # "subtitleTrack":Landroid/media/SubtitleTrack;
     :cond_3
@@ -4907,36 +4398,29 @@
 
     move-result-object v4
 
-    .line 3413
     .local v4, "request":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v3
 
-    .line 3415
     .local v3, "reply":Landroid/os/Parcel;
     :try_start_1
     const-string v6, "android.media.IMediaPlayer"
 
     invoke-virtual {v4, v6}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 3416
     const/4 v6, 0x7
 
     invoke-virtual {v4, v6}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 3417
     invoke-virtual {v4, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 3418
     invoke-virtual {p0, v4, v3}, Landroid/media/MediaPlayer;->invoke(Landroid/os/Parcel;Landroid/os/Parcel;)V
 
-    .line 3419
     invoke-virtual {v3}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 3420
     .local v1, "inbandTrackIndex":I
     iget-object v7, p0, Landroid/media/MediaPlayer;->mIndexTrackPairs:Ljava/util/Vector;
 
@@ -4944,7 +4428,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
-    .line 3421
     const/4 v0, 0x0
 
     .restart local v0    # "i":I
@@ -4958,7 +4441,6 @@
 
     if-ge v0, v6, :cond_5
 
-    .line 3422
     iget-object v6, p0, Landroid/media/MediaPlayer;->mIndexTrackPairs:Ljava/util/Vector;
 
     invoke-virtual {v6, v0}, Ljava/util/Vector;->get(I)Ljava/lang/Object;
@@ -4967,7 +4449,6 @@
 
     check-cast v2, Landroid/util/Pair;
 
-    .line 3423
     .restart local v2    # "p":Landroid/util/Pair;, "Landroid/util/Pair<Ljava/lang/Integer;Landroid/media/SubtitleTrack;>;"
     iget-object v6, v2, Landroid/util/Pair;->first:Ljava/lang/Object;
 
@@ -4983,20 +4464,16 @@
 
     if-ne v6, v1, :cond_4
 
-    .line 3424
     monitor-exit v7
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 3430
     invoke-virtual {v4}, Landroid/os/Parcel;->recycle()V
 
-    .line 3431
     invoke-virtual {v3}, Landroid/os/Parcel;->recycle()V
 
     goto :goto_1
 
-    .line 3408
     .end local v1    # "inbandTrackIndex":I
     .end local v2    # "p":Landroid/util/Pair;, "Landroid/util/Pair<Ljava/lang/Integer;Landroid/media/SubtitleTrack;>;"
     .end local v3    # "reply":Landroid/os/Parcel;
@@ -5012,7 +4489,6 @@
 
     throw v6
 
-    .line 3421
     .end local v5    # "subtitleTrack":Landroid/media/SubtitleTrack;
     .restart local v1    # "inbandTrackIndex":I
     .restart local v2    # "p":Landroid/util/Pair;, "Landroid/util/Pair<Ljava/lang/Integer;Landroid/media/SubtitleTrack;>;"
@@ -5023,7 +4499,6 @@
 
     goto :goto_2
 
-    .line 3427
     .end local v2    # "p":Landroid/util/Pair;, "Landroid/util/Pair<Ljava/lang/Integer;Landroid/media/SubtitleTrack;>;"
     :cond_5
     :try_start_4
@@ -5031,19 +4506,15 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 3428
     const/4 v0, -0x1
 
-    .line 3430
     .end local v0    # "i":I
     invoke-virtual {v4}, Landroid/os/Parcel;->recycle()V
 
-    .line 3431
     invoke-virtual {v3}, Landroid/os/Parcel;->recycle()V
 
     goto :goto_1
 
-    .line 3427
     .restart local v0    # "i":I
     :catchall_1
     move-exception v6
@@ -5058,7 +4529,6 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_2
 
-    .line 3430
     .end local v0    # "i":I
     .end local v1    # "inbandTrackIndex":I
     :catchall_2
@@ -5066,7 +4536,6 @@
 
     invoke-virtual {v4}, Landroid/os/Parcel;->recycle()V
 
-    .line 3431
     invoke-virtual {v3}, Landroid/os/Parcel;->recycle()V
 
     throw v6
@@ -5077,25 +4546,20 @@
     .param p1, "key"    # I
 
     .prologue
-    .line 2249
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 2250
     .local v0, "p":Landroid/os/Parcel;
     invoke-direct {p0, p1, v0}, Landroid/media/MediaPlayer;->getParameter(ILandroid/os/Parcel;)V
 
-    .line 2251
     invoke-virtual {v0}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 2252
     .local v1, "ret":Ljava/lang/String;
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 2253
     return-object v1
 .end method
 
@@ -5106,7 +4570,6 @@
     .locals 7
 
     .prologue
-    .line 1796
     :try_start_0
     new-instance v1, Landroid/media/MediaTimestamp;
 
@@ -5143,21 +4606,17 @@
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1801
     :goto_1
     return-object v1
 
-    .line 1796
     :cond_0
     const/4 v6, 0x0
 
     goto :goto_0
 
-    .line 1800
     :catch_0
     move-exception v0
 
-    .line 1801
     .local v0, "e":Ljava/lang/IllegalStateException;
     const/4 v1, 0x0
 
@@ -5173,18 +4632,15 @@
     .end annotation
 
     .prologue
-    .line 2610
     invoke-direct {p0}, Landroid/media/MediaPlayer;->getInbandTrackInfo()[Landroid/media/MediaPlayer$TrackInfo;
 
     move-result-object v4
 
-    .line 2612
     .local v4, "trackInfo":[Landroid/media/MediaPlayer$TrackInfo;
     iget-object v6, p0, Landroid/media/MediaPlayer;->mIndexTrackPairs:Ljava/util/Vector;
 
     monitor-enter v6
 
-    .line 2613
     :try_start_0
     iget-object v5, p0, Landroid/media/MediaPlayer;->mIndexTrackPairs:Ljava/util/Vector;
 
@@ -5194,7 +4650,6 @@
 
     new-array v0, v5, [Landroid/media/MediaPlayer$TrackInfo;
 
-    .line 2614
     .local v0, "allTrackInfo":[Landroid/media/MediaPlayer$TrackInfo;
     const/4 v1, 0x0
 
@@ -5204,7 +4659,6 @@
 
     if-ge v1, v5, :cond_1
 
-    .line 2615
     iget-object v5, p0, Landroid/media/MediaPlayer;->mIndexTrackPairs:Ljava/util/Vector;
 
     invoke-virtual {v5, v1}, Ljava/util/Vector;->get(I)Ljava/lang/Object;
@@ -5213,13 +4667,11 @@
 
     check-cast v2, Landroid/util/Pair;
 
-    .line 2616
     .local v2, "p":Landroid/util/Pair;, "Landroid/util/Pair<Ljava/lang/Integer;Landroid/media/SubtitleTrack;>;"
     iget-object v5, v2, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     if-eqz v5, :cond_0
 
-    .line 2618
     iget-object v5, v2, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v5, Ljava/lang/Integer;
@@ -5232,19 +4684,16 @@
 
     aput-object v5, v0, v1
 
-    .line 2614
     :goto_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 2620
     :cond_0
     iget-object v3, v2, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v3, Landroid/media/SubtitleTrack;
 
-    .line 2621
     .local v3, "track":Landroid/media/SubtitleTrack;
     new-instance v5, Landroid/media/MediaPlayer$TrackInfo;
 
@@ -5262,7 +4711,6 @@
 
     goto :goto_1
 
-    .line 2625
     .end local v0    # "allTrackInfo":[Landroid/media/MediaPlayer$TrackInfo;
     .end local v1    # "i":I
     .end local v2    # "p":Landroid/util/Pair;, "Landroid/util/Pair<Ljava/lang/Integer;Landroid/media/SubtitleTrack;>;"
@@ -5276,7 +4724,6 @@
 
     throw v5
 
-    .line 2624
     .restart local v0    # "allTrackInfo":[Landroid/media/MediaPlayer$TrackInfo;
     .restart local v1    # "i":I
     :cond_1
@@ -5308,21 +4755,17 @@
     .param p2, "reply"    # Landroid/os/Parcel;
 
     .prologue
-    .line 774
     invoke-direct {p0, p1, p2}, Landroid/media/MediaPlayer;->native_invoke(Landroid/os/Parcel;Landroid/os/Parcel;)I
 
     move-result v0
 
-    .line 775
     .local v0, "retcode":I
     const/4 v1, 0x0
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->setDataPosition(I)V
 
-    .line 776
     if-eqz v0, :cond_0
 
-    .line 777
     new-instance v1, Ljava/lang/RuntimeException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -5347,7 +4790,6 @@
 
     throw v1
 
-    .line 779
     :cond_0
     return-void
 .end method
@@ -5362,18 +4804,15 @@
     .locals 2
 
     .prologue
-    .line 754
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 755
     .local v0, "parcel":Landroid/os/Parcel;
     const-string v1, "android.media.IMediaPlayer"
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 756
     return-object v0
 .end method
 
@@ -5382,12 +4821,10 @@
     .param p1, "track"    # Landroid/media/SubtitleTrack;
 
     .prologue
-    .line 2753
     iget v2, p0, Landroid/media/MediaPlayer;->mSelectedSubtitleTrackIndex:I
 
     if-ltz v2, :cond_0
 
-    .line 2755
     :try_start_0
     iget v2, p0, Landroid/media/MediaPlayer;->mSelectedSubtitleTrackIndex:I
 
@@ -5397,33 +4834,27 @@
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 2758
     :goto_0
     const/4 v2, -0x1
 
     iput v2, p0, Landroid/media/MediaPlayer;->mSelectedSubtitleTrackIndex:I
 
-    .line 2760
     :cond_0
     const/4 v2, 0x0
 
     invoke-virtual {p0, v2}, Landroid/media/MediaPlayer;->setOnSubtitleDataListener(Landroid/media/MediaPlayer$OnSubtitleDataListener;)V
 
-    .line 2761
     if-nez p1, :cond_2
 
-    .line 2783
     :cond_1
     :goto_1
     return-void
 
-    .line 2765
     :cond_2
     iget-object v3, p0, Landroid/media/MediaPlayer;->mIndexTrackPairs:Ljava/util/Vector;
 
     monitor-enter v3
 
-    .line 2766
     :try_start_1
     iget-object v2, p0, Landroid/media/MediaPlayer;->mIndexTrackPairs:Ljava/util/Vector;
 
@@ -5445,7 +4876,6 @@
 
     check-cast v1, Landroid/util/Pair;
 
-    .line 2767
     .local v1, "p":Landroid/util/Pair;, "Landroid/util/Pair<Ljava/lang/Integer;Landroid/media/SubtitleTrack;>;"
     iget-object v2, v1, Landroid/util/Pair;->first:Ljava/lang/Object;
 
@@ -5455,7 +4885,6 @@
 
     if-ne v2, p1, :cond_3
 
-    .line 2769
     iget-object v2, v1, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v2, Ljava/lang/Integer;
@@ -5466,19 +4895,16 @@
 
     iput v2, p0, Landroid/media/MediaPlayer;->mSelectedSubtitleTrackIndex:I
 
-    .line 2773
     .end local v1    # "p":Landroid/util/Pair;, "Landroid/util/Pair<Ljava/lang/Integer;Landroid/media/SubtitleTrack;>;"
     :cond_4
     monitor-exit v3
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 2775
     iget v2, p0, Landroid/media/MediaPlayer;->mSelectedSubtitleTrackIndex:I
 
     if-ltz v2, :cond_1
 
-    .line 2777
     :try_start_2
     iget v2, p0, Landroid/media/MediaPlayer;->mSelectedSubtitleTrackIndex:I
 
@@ -5488,7 +4914,6 @@
     :try_end_2
     .catch Ljava/lang/IllegalStateException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 2780
     :goto_2
     iget-object v2, p0, Landroid/media/MediaPlayer;->mSubtitleDataListener:Landroid/media/MediaPlayer$OnSubtitleDataListener;
 
@@ -5496,7 +4921,6 @@
 
     goto :goto_1
 
-    .line 2773
     .end local v0    # "i$":Ljava/util/Iterator;
     :catchall_0
     move-exception v2
@@ -5508,14 +4932,12 @@
 
     throw v2
 
-    .line 2778
     .restart local v0    # "i$":Ljava/util/Iterator;
     :catch_0
     move-exception v2
 
     goto :goto_2
 
-    .line 2756
     .end local v0    # "i$":Ljava/util/Iterator;
     :catch_1
     move-exception v2
@@ -5536,20 +4958,16 @@
 
     const/4 v3, 0x0
 
-    .line 1504
     invoke-direct {p0, v3}, Landroid/media/MediaPlayer;->stayAwake(Z)V
 
-    .line 1506
     sget-boolean v0, Landroid/media/MediaPlayer;->MMFWContextAware:Z
 
     if-eqz v0, :cond_0
 
-    .line 1507
     iget-boolean v0, p0, Landroid/media/MediaPlayer;->mContextAwareSend:Z
 
     if-eqz v0, :cond_1
 
-    .line 1508
     const-string v0, "com.samsung.CONTEXT_AWARE_MUSIC_INFO"
 
     const/16 v1, 0x8
@@ -5560,7 +4978,7 @@
 
     aput-object v2, v1, v3
 
-    const-string/jumbo v2, "pause"
+    const-string v2, "pause"
 
     aput-object v2, v1, v4
 
@@ -5610,14 +5028,13 @@
 
     invoke-direct {p0, v0, v1}, Landroid/media/MediaPlayer;->sendBroadcastingIntent(Ljava/lang/String;[Ljava/lang/Object;)Z
 
-    .line 1509
     const-string v0, "MediaPlayer"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "sendBroadcast CONTEXT_AWARE_MUSIC_INFO - type(pause) - id("
+    const-string v2, "sendBroadcast CONTEXT_AWARE_MUSIC_INFO - type(pause) - id("
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5641,15 +5058,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1523
     :cond_0
     :goto_0
     invoke-direct {p0}, Landroid/media/MediaPlayer;->_pause()V
 
-    .line 1524
     return-void
 
-    .line 1511
     :cond_1
     iput v4, p0, Landroid/media/MediaPlayer;->mPendingCommand:I
 
@@ -5666,13 +5080,10 @@
     .end annotation
 
     .prologue
-    .line 1369
     invoke-direct {p0}, Landroid/media/MediaPlayer;->_prepare()V
 
-    .line 1370
     invoke-direct {p0}, Landroid/media/MediaPlayer;->scanInternalSubtitleTracks()V
 
-    .line 1371
     return-void
 .end method
 
@@ -5694,20 +5105,16 @@
 
     const/4 v4, 0x0
 
-    .line 1962
     invoke-direct {p0, v5}, Landroid/media/MediaPlayer;->stayAwake(Z)V
 
-    .line 1964
     sget-boolean v0, Landroid/media/MediaPlayer;->MMFWContextAware:Z
 
     if-eqz v0, :cond_0
 
-    .line 1965
     iget-boolean v0, p0, Landroid/media/MediaPlayer;->mContextAwareSend:Z
 
     if-eqz v0, :cond_2
 
-    .line 1966
     const-string v0, "com.samsung.CONTEXT_AWARE_MUSIC_INFO"
 
     const/16 v1, 0x8
@@ -5720,7 +5127,7 @@
 
     const/4 v2, 0x1
 
-    const-string/jumbo v3, "stop"
+    const-string v3, "stop"
 
     aput-object v3, v1, v2
 
@@ -5768,14 +5175,13 @@
 
     invoke-direct {p0, v0, v1}, Landroid/media/MediaPlayer;->sendBroadcastingIntent(Ljava/lang/String;[Ljava/lang/Object;)Z
 
-    .line 1967
     const-string v0, "MediaPlayer"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "sendBroadcast CONTEXT_AWARE_MUSIC_INFO - type(release) - id("
+    const-string v2, "sendBroadcast CONTEXT_AWARE_MUSIC_INFO - type(release) - id("
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5799,65 +5205,47 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1968
     iput-boolean v5, p0, Landroid/media/MediaPlayer;->mContextAwareSend:Z
 
-    .line 1982
     :cond_0
     :goto_0
     invoke-direct {p0}, Landroid/media/MediaPlayer;->updateSurfaceScreenOn()V
 
-    .line 1983
     iput-object v4, p0, Landroid/media/MediaPlayer;->mOnPreparedListener:Landroid/media/MediaPlayer$OnPreparedListener;
 
-    .line 1984
     iput-object v4, p0, Landroid/media/MediaPlayer;->mOnBufferingUpdateListener:Landroid/media/MediaPlayer$OnBufferingUpdateListener;
 
-    .line 1985
     iput-object v4, p0, Landroid/media/MediaPlayer;->mOnCompletionListener:Landroid/media/MediaPlayer$OnCompletionListener;
 
-    .line 1986
     iput-object v4, p0, Landroid/media/MediaPlayer;->mOnSeekCompleteListener:Landroid/media/MediaPlayer$OnSeekCompleteListener;
 
-    .line 1987
     iput-object v4, p0, Landroid/media/MediaPlayer;->mOnErrorListener:Landroid/media/MediaPlayer$OnErrorListener;
 
-    .line 1988
     iput-object v4, p0, Landroid/media/MediaPlayer;->mOnInfoListener:Landroid/media/MediaPlayer$OnInfoListener;
 
-    .line 1989
     iput-object v4, p0, Landroid/media/MediaPlayer;->mOnVideoSizeChangedListener:Landroid/media/MediaPlayer$OnVideoSizeChangedListener;
 
-    .line 1990
     iput-object v4, p0, Landroid/media/MediaPlayer;->mOnTimedTextListener:Landroid/media/MediaPlayer$OnTimedTextListener;
 
-    .line 1992
     iput-boolean v5, p0, Landroid/media/MediaPlayer;->mIsStart:Z
 
-    .line 1994
     iget-object v0, p0, Landroid/media/MediaPlayer;->mTimeProvider:Landroid/media/MediaPlayer$TimeProvider;
 
     if-eqz v0, :cond_1
 
-    .line 1995
     iget-object v0, p0, Landroid/media/MediaPlayer;->mTimeProvider:Landroid/media/MediaPlayer$TimeProvider;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer$TimeProvider;->close()V
 
-    .line 1996
     iput-object v4, p0, Landroid/media/MediaPlayer;->mTimeProvider:Landroid/media/MediaPlayer$TimeProvider;
 
-    .line 1998
     :cond_1
     iput-object v4, p0, Landroid/media/MediaPlayer;->mOnSubtitleDataListener:Landroid/media/MediaPlayer$OnSubtitleDataListener;
 
-    .line 1999
     invoke-direct {p0}, Landroid/media/MediaPlayer;->_release()V
 
-    .line 2000
     return-void
 
-    .line 1970
     :cond_2
     iput v6, p0, Landroid/media/MediaPlayer;->mPendingCommand:I
 
@@ -5873,36 +5261,30 @@
     .end annotation
 
     .prologue
-    .line 3343
     const-string v2, "MediaPlayer"
 
-    const-string/jumbo v3, "removeOutbandSubtitleSource"
+    const-string v3, "removeOutbandSubtitleSource"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3345
     iget-object v2, p0, Landroid/media/MediaPlayer;->mSubtitleController:Landroid/media/SubtitleController;
 
     if-nez v2, :cond_0
 
-    .line 3346
     const-string v2, "MediaPlayer"
 
     const-string v3, "Should have subtitle controller already set"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3375
     :goto_0
     return-void
 
-    .line 3350
     :cond_0
     const/4 v2, -0x1
 
     iput v2, p0, Landroid/media/MediaPlayer;->mSelectedSubtitleTrackIndex:I
 
-    .line 3351
     iget-object v2, p0, Landroid/media/MediaPlayer;->mOpenSubtitleSources:Ljava/util/Vector;
 
     invoke-virtual {v2}, Ljava/util/Vector;->isEmpty()Z
@@ -5911,12 +5293,10 @@
 
     if-nez v2, :cond_2
 
-    .line 3353
     iget-object v3, p0, Landroid/media/MediaPlayer;->mOpenSubtitleSources:Ljava/util/Vector;
 
     monitor-enter v3
 
-    .line 3354
     :try_start_0
     iget-object v2, p0, Landroid/media/MediaPlayer;->mOpenSubtitleSources:Ljava/util/Vector;
 
@@ -5940,7 +5320,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3356
     .local v1, "is":Ljava/io/InputStream;
     :try_start_1
     invoke-virtual {v1}, Ljava/io/InputStream;->close()V
@@ -5950,13 +5329,11 @@
 
     goto :goto_1
 
-    .line 3357
     :catch_0
     move-exception v2
 
     goto :goto_1
 
-    .line 3360
     .end local v1    # "is":Ljava/io/InputStream;
     :cond_1
     :try_start_2
@@ -5964,51 +5341,42 @@
 
     invoke-virtual {v2}, Ljava/util/Vector;->clear()V
 
-    .line 3361
     monitor-exit v3
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 3365
     .end local v0    # "i$":Ljava/util/Iterator;
     :cond_2
     iget-object v2, p0, Landroid/media/MediaPlayer;->mSubtitleController:Landroid/media/SubtitleController;
 
     if-eqz v2, :cond_3
 
-    .line 3366
     iget-object v2, p0, Landroid/media/MediaPlayer;->mSubtitleController:Landroid/media/SubtitleController;
 
     invoke-virtual {v2}, Landroid/media/SubtitleController;->resetTracks()V
 
-    .line 3369
     :cond_3
     iget-object v3, p0, Landroid/media/MediaPlayer;->mIndexTrackPairs:Ljava/util/Vector;
 
     monitor-enter v3
 
-    .line 3370
     :try_start_3
     iget-object v2, p0, Landroid/media/MediaPlayer;->mIndexTrackPairs:Ljava/util/Vector;
 
     invoke-virtual {v2}, Ljava/util/Vector;->clear()V
 
-    .line 3371
     iget-object v2, p0, Landroid/media/MediaPlayer;->mInbandTrackIndices:Ljava/util/BitSet;
 
     invoke-virtual {v2}, Ljava/util/BitSet;->clear()V
 
-    .line 3372
     monitor-exit v3
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 3374
     invoke-direct {p0}, Landroid/media/MediaPlayer;->populateInbandTracks()V
 
     goto :goto_0
 
-    .line 3361
     :catchall_0
     move-exception v2
 
@@ -6019,7 +5387,6 @@
 
     throw v2
 
-    .line 3372
     :catchall_1
     move-exception v2
 
@@ -6040,46 +5407,37 @@
     .end annotation
 
     .prologue
-    .line 3306
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v4
 
-    .line 3307
     .local v4, "request":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v3
 
-    .line 3309
     .local v3, "reply":Landroid/os/Parcel;
     :try_start_0
     const-string v6, "android.media.IMediaPlayer"
 
     invoke-virtual {v4, v6}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 3310
     const/16 v6, 0x8
 
     invoke-virtual {v4, v6}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 3311
     invoke-virtual {p0, v4, v3}, Landroid/media/MediaPlayer;->invoke(Landroid/os/Parcel;Landroid/os/Parcel;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3313
     invoke-virtual {v4}, Landroid/os/Parcel;->recycle()V
 
-    .line 3314
     invoke-virtual {v3}, Landroid/os/Parcel;->recycle()V
 
-    .line 3316
     invoke-direct {p0}, Landroid/media/MediaPlayer;->getInbandTrackInfo()[Landroid/media/MediaPlayer$TrackInfo;
 
     move-result-object v1
 
-    .line 3317
     .local v1, "inbandtrackInfo":[Landroid/media/MediaPlayer$TrackInfo;
     iget-object v6, p0, Landroid/media/MediaPlayer;->mIndexTrackPairs:Ljava/util/Vector;
 
@@ -6091,37 +5449,30 @@
 
     sub-int v2, v6, v7
 
-    .line 3318
     .local v2, "outOfBandSubtitleTrackNum":I
     iget-object v7, p0, Landroid/media/MediaPlayer;->mIndexTrackPairs:Ljava/util/Vector;
 
     monitor-enter v7
 
-    .line 3319
     :try_start_1
     iget-object v6, p0, Landroid/media/MediaPlayer;->mIndexTrackPairs:Ljava/util/Vector;
 
     invoke-virtual {v6}, Ljava/util/Vector;->clear()V
 
-    .line 3320
     iget-object v6, p0, Landroid/media/MediaPlayer;->mInbandTrackIndices:Ljava/util/BitSet;
 
     invoke-virtual {v6}, Ljava/util/BitSet;->clear()V
 
-    .line 3321
     monitor-exit v7
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 3322
     invoke-direct {p0}, Landroid/media/MediaPlayer;->populateInbandTracks()V
 
-    .line 3325
     iget-object v7, p0, Landroid/media/MediaPlayer;->mIndexTrackPairs:Ljava/util/Vector;
 
     monitor-enter v7
 
-    .line 3326
     :try_start_2
     iget-object v6, p0, Landroid/media/MediaPlayer;->mSubtitleController:Landroid/media/SubtitleController;
 
@@ -6129,7 +5480,6 @@
 
     move-result-object v5
 
-    .line 3328
     .local v5, "subtitiletracks":[Landroid/media/SubtitleTrack;
     array-length v6, v5
 
@@ -6141,7 +5491,6 @@
 
     if-ge v0, v6, :cond_0
 
-    .line 3329
     iget-object v6, p0, Landroid/media/MediaPlayer;->mIndexTrackPairs:Ljava/util/Vector;
 
     const/4 v8, 0x0
@@ -6156,12 +5505,10 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 3328
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 3313
     .end local v0    # "i":I
     .end local v1    # "inbandtrackInfo":[Landroid/media/MediaPlayer$TrackInfo;
     .end local v2    # "outOfBandSubtitleTrackNum":I
@@ -6171,12 +5518,10 @@
 
     invoke-virtual {v4}, Landroid/os/Parcel;->recycle()V
 
-    .line 3314
     invoke-virtual {v3}, Landroid/os/Parcel;->recycle()V
 
     throw v6
 
-    .line 3321
     .restart local v1    # "inbandtrackInfo":[Landroid/media/MediaPlayer$TrackInfo;
     .restart local v2    # "outOfBandSubtitleTrackNum":I
     :catchall_1
@@ -6189,17 +5534,14 @@
 
     throw v6
 
-    .line 3331
     .restart local v0    # "i":I
     .restart local v5    # "subtitiletracks":[Landroid/media/SubtitleTrack;
     :cond_0
     :try_start_4
     monitor-exit v7
 
-    .line 3332
     return-void
 
-    .line 3331
     .end local v0    # "i":I
     .end local v5    # "subtitiletracks":[Landroid/media/SubtitleTrack;
     :catchall_2
@@ -6222,17 +5564,14 @@
 
     const/4 v6, 0x0
 
-    .line 2010
     const/4 v2, -0x1
 
     iput v2, p0, Landroid/media/MediaPlayer;->mSelectedSubtitleTrackIndex:I
 
-    .line 2011
     iget-object v3, p0, Landroid/media/MediaPlayer;->mOpenSubtitleSources:Ljava/util/Vector;
 
     monitor-enter v3
 
-    .line 2012
     :try_start_0
     iget-object v2, p0, Landroid/media/MediaPlayer;->mOpenSubtitleSources:Ljava/util/Vector;
 
@@ -6256,7 +5595,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2014
     .local v1, "is":Ljava/io/InputStream;
     :try_start_1
     invoke-virtual {v1}, Ljava/io/InputStream;->close()V
@@ -6266,13 +5604,11 @@
 
     goto :goto_0
 
-    .line 2015
     :catch_0
     move-exception v2
 
     goto :goto_0
 
-    .line 2018
     .end local v1    # "is":Ljava/io/InputStream;
     :cond_0
     :try_start_2
@@ -6280,50 +5616,40 @@
 
     invoke-virtual {v2}, Ljava/util/Vector;->clear()V
 
-    .line 2019
     monitor-exit v3
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 2020
     iget-object v2, p0, Landroid/media/MediaPlayer;->mSubtitleController:Landroid/media/SubtitleController;
 
     if-eqz v2, :cond_1
 
-    .line 2021
     iget-object v2, p0, Landroid/media/MediaPlayer;->mSubtitleController:Landroid/media/SubtitleController;
 
     invoke-virtual {v2}, Landroid/media/SubtitleController;->reset()V
 
-    .line 2023
     :cond_1
     iget-object v2, p0, Landroid/media/MediaPlayer;->mTimeProvider:Landroid/media/MediaPlayer$TimeProvider;
 
     if-eqz v2, :cond_2
 
-    .line 2024
     iget-object v2, p0, Landroid/media/MediaPlayer;->mTimeProvider:Landroid/media/MediaPlayer$TimeProvider;
 
     invoke-virtual {v2}, Landroid/media/MediaPlayer$TimeProvider;->close()V
 
-    .line 2025
     iput-object v8, p0, Landroid/media/MediaPlayer;->mTimeProvider:Landroid/media/MediaPlayer$TimeProvider;
 
-    .line 2028
     :cond_2
     invoke-direct {p0, v6}, Landroid/media/MediaPlayer;->stayAwake(Z)V
 
-    .line 2030
     sget-boolean v2, Landroid/media/MediaPlayer;->MMFWContextAware:Z
 
     if-eqz v2, :cond_3
 
-    .line 2031
     iget-boolean v2, p0, Landroid/media/MediaPlayer;->mContextAwareSend:Z
 
     if-eqz v2, :cond_5
 
-    .line 2032
     const-string v2, "com.samsung.CONTEXT_AWARE_MUSIC_INFO"
 
     const/16 v3, 0x8
@@ -6336,7 +5662,7 @@
 
     const/4 v4, 0x1
 
-    const-string/jumbo v5, "stop"
+    const-string v5, "stop"
 
     aput-object v5, v3, v4
 
@@ -6384,14 +5710,13 @@
 
     invoke-direct {p0, v2, v3}, Landroid/media/MediaPlayer;->sendBroadcastingIntent(Ljava/lang/String;[Ljava/lang/Object;)Z
 
-    .line 2033
     const-string v2, "MediaPlayer"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "sendBroadcast CONTEXT_AWARE_MUSIC_INFO - type(reset) - id("
+    const-string v4, "sendBroadcast CONTEXT_AWARE_MUSIC_INFO - type(reset) - id("
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -6415,53 +5740,42 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2034
     iput-boolean v6, p0, Landroid/media/MediaPlayer;->mContextAwareSend:Z
 
-    .line 2049
     :cond_3
     :goto_1
     iput-boolean v6, p0, Landroid/media/MediaPlayer;->mIsStart:Z
 
-    .line 2052
     invoke-direct {p0}, Landroid/media/MediaPlayer;->_reset()V
 
-    .line 2054
     iget-object v2, p0, Landroid/media/MediaPlayer;->mEventHandler:Landroid/media/MediaPlayer$EventHandler;
 
     if-eqz v2, :cond_4
 
-    .line 2055
     iget-object v2, p0, Landroid/media/MediaPlayer;->mEventHandler:Landroid/media/MediaPlayer$EventHandler;
 
     invoke-virtual {v2, v8}, Landroid/media/MediaPlayer$EventHandler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
-    .line 2058
     :cond_4
     iget-object v3, p0, Landroid/media/MediaPlayer;->mIndexTrackPairs:Ljava/util/Vector;
 
     monitor-enter v3
 
-    .line 2059
     :try_start_3
     iget-object v2, p0, Landroid/media/MediaPlayer;->mIndexTrackPairs:Ljava/util/Vector;
 
     invoke-virtual {v2}, Ljava/util/Vector;->clear()V
 
-    .line 2060
     iget-object v2, p0, Landroid/media/MediaPlayer;->mInbandTrackIndices:Ljava/util/BitSet;
 
     invoke-virtual {v2}, Ljava/util/BitSet;->clear()V
 
-    .line 2061
     monitor-exit v3
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 2062
     return-void
 
-    .line 2019
     .end local v0    # "i$":Ljava/util/Iterator;
     :catchall_0
     move-exception v2
@@ -6473,14 +5787,12 @@
 
     throw v2
 
-    .line 2036
     .restart local v0    # "i$":Ljava/util/Iterator;
     :cond_5
     iput v7, p0, Landroid/media/MediaPlayer;->mPendingCommand:I
 
     goto :goto_1
 
-    .line 2061
     :catchall_1
     move-exception v2
 
@@ -6518,12 +5830,10 @@
     .end annotation
 
     .prologue
-    .line 3464
     const/4 v0, 0x1
 
     invoke-direct {p0, p1, v0}, Landroid/media/MediaPlayer;->selectOrDeselectTrack(IZ)V
 
-    .line 3465
     return-void
 .end method
 
@@ -6532,14 +5842,13 @@
     .param p1, "AIAContext"    # Z
 
     .prologue
-    .line 1043
     const-string v0, "MediaPlayer"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "setAIAFlag = "
+    const-string v2, "setAIAFlag = "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -6555,10 +5864,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1044
     iput-boolean p1, p0, Landroid/media/MediaPlayer;->mAIAContext:Z
 
-    .line 1045
     return-void
 .end method
 
@@ -6574,13 +5881,10 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 2280
     if-nez p1, :cond_0
 
-    .line 2281
     const-string v0, "Cannot set AudioAttributes to null"
 
-    .line 2282
     .local v0, "msg":Ljava/lang/String;
     new-instance v3, Ljava/lang/IllegalArgumentException;
 
@@ -6590,7 +5894,6 @@
 
     throw v3
 
-    .line 2284
     .end local v0    # "msg":Ljava/lang/String;
     :cond_0
     invoke-virtual {p1}, Landroid/media/AudioAttributes;->getUsage()I
@@ -6599,7 +5902,6 @@
 
     iput v3, p0, Landroid/media/MediaPlayer;->mUsage:I
 
-    .line 2285
     invoke-virtual {p1}, Landroid/media/AudioAttributes;->getAllFlags()I
 
     move-result v3
@@ -6613,36 +5915,28 @@
     :goto_0
     iput-boolean v3, p0, Landroid/media/MediaPlayer;->mBypassInterruptionPolicy:Z
 
-    .line 2287
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 2288
     .local v1, "pattributes":Landroid/os/Parcel;
     invoke-virtual {p1, v1, v4}, Landroid/media/AudioAttributes;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 2289
     const/16 v3, 0x578
 
     invoke-virtual {p0, v3, v1}, Landroid/media/MediaPlayer;->setParameter(ILandroid/os/Parcel;)Z
 
-    .line 2290
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 2292
     invoke-static {p1}, Landroid/media/AudioAttributes;->toLegacyStreamType(Landroid/media/AudioAttributes;)I
 
     move-result v2
 
-    .line 2293
     .local v2, "stream":I
     invoke-virtual {p0, v2}, Landroid/media/MediaPlayer;->setAudioStreamType(I)V
 
-    .line 2295
     return-void
 
-    .line 2285
     .end local v1    # "pattributes":Landroid/os/Parcel;
     .end local v2    # "stream":I
     :cond_1
@@ -6665,13 +5959,10 @@
     .param p1, "streamtype"    # I
 
     .prologue
-    .line 2076
     invoke-direct {p0, p1}, Landroid/media/MediaPlayer;->_setAudioStreamType(I)V
 
-    .line 2077
     iput p1, p0, Landroid/media/MediaPlayer;->mStreamType:I
 
-    .line 2078
     return-void
 .end method
 
@@ -6680,18 +5971,15 @@
     .param p1, "level"    # F
 
     .prologue
-    .line 2400
     invoke-direct {p0}, Landroid/media/MediaPlayer;->isRestricted()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2404
     :goto_0
     return-void
 
-    .line 2403
     :cond_0
     invoke-direct {p0, p1}, Landroid/media/MediaPlayer;->_setAuxEffectSendLevel(F)V
 
@@ -6712,12 +6000,10 @@
     .end annotation
 
     .prologue
-    .line 1082
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, p2, v0}, Landroid/media/MediaPlayer;->setDataSource(Landroid/content/Context;Landroid/net/Uri;Ljava/util/Map;)V
 
-    .line 1083
     return-void
 .end method
 
@@ -6748,13 +6034,11 @@
     .end annotation
 
     .prologue
-    .line 1099
     .local p3, "headers":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-virtual {p2}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
     move-result-object v9
 
-    .line 1100
     .local v9, "scheme":Ljava/lang/String;
     const-string v0, "file"
 
@@ -6766,7 +6050,6 @@
 
     if-nez v9, :cond_2
 
-    .line 1101
     :cond_0
     invoke-virtual {p2}, Landroid/net/Uri;->getPath()Ljava/lang/String;
 
@@ -6774,12 +6057,10 @@
 
     invoke-virtual {p0, v0}, Landroid/media/MediaPlayer;->setDataSource(Ljava/lang/String;)V
 
-    .line 1147
     :cond_1
     :goto_0
     return-void
 
-    .line 1103
     :cond_2
     const-string v0, "content"
 
@@ -6789,7 +6070,7 @@
 
     if-eqz v0, :cond_3
 
-    const-string/jumbo v0, "settings"
+    const-string v0, "settings"
 
     invoke-virtual {p2}, Landroid/net/Uri;->getAuthority()Ljava/lang/String;
 
@@ -6801,7 +6082,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 1106
     invoke-static {p2}, Landroid/media/RingtoneManager;->getDefaultType(Landroid/net/Uri;)I
 
     move-result v0
@@ -6810,10 +6090,8 @@
 
     move-result-object p2
 
-    .line 1108
     if-nez p2, :cond_3
 
-    .line 1109
     new-instance v0, Ljava/io/FileNotFoundException;
 
     const-string v1, "Failed to resolve default ringtone"
@@ -6822,20 +6100,17 @@
 
     throw v0
 
-    .line 1113
     :cond_3
     const/4 v7, 0x0
 
-    .line 1118
     .local v7, "fd":Landroid/content/res/AssetFileDescriptor;
     :try_start_0
     invoke-static {p1}, Landroid/media/RingtoneManager;->getCurrentProfileContentResolver(Landroid/content/Context;)Landroid/content/ContentResolver;
 
     move-result-object v8
 
-    .line 1121
     .local v8, "resolver":Landroid/content/ContentResolver;
-    const-string/jumbo v0, "r"
+    const-string v0, "r"
 
     invoke-virtual {v8, p2, v0}, Landroid/content/ContentResolver;->openAssetFileDescriptor(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/res/AssetFileDescriptor;
     :try_end_0
@@ -6845,18 +6120,14 @@
 
     move-result-object v7
 
-    .line 1123
     if-nez v7, :cond_4
 
-    .line 1141
     if-eqz v7, :cond_1
 
-    .line 1142
     invoke-virtual {v7}, Landroid/content/res/AssetFileDescriptor;->close()V
 
     goto :goto_0
 
-    .line 1129
     :cond_4
     :try_start_1
     invoke-virtual {v7}, Landroid/content/res/AssetFileDescriptor;->getDeclaredLength()J
@@ -6869,7 +6140,6 @@
 
     if-gez v0, :cond_5
 
-    .line 1130
     invoke-virtual {v7}, Landroid/content/res/AssetFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
 
     move-result-object v0
@@ -6880,16 +6150,13 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1141
     :goto_1
     if-eqz v7, :cond_1
 
-    .line 1142
     invoke-virtual {v7}, Landroid/content/res/AssetFileDescriptor;->close()V
 
     goto :goto_0
 
-    .line 1132
     :cond_5
     :try_start_2
     invoke-virtual {v7}, Landroid/content/res/AssetFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
@@ -6914,14 +6181,12 @@
 
     goto :goto_1
 
-    .line 1135
     .end local v8    # "resolver":Landroid/content/ContentResolver;
     :catch_0
     move-exception v0
 
     move-object v6, v0
 
-    .line 1136
     .local v6, "ex":Ljava/lang/Exception;
     :goto_2
     :try_start_3
@@ -6947,22 +6212,18 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1138
     const-string v0, "MediaPlayer"
 
-    const-string/jumbo v1, "setDataSource IOException | SecurityException happend : "
+    const-string v1, "setDataSource IOException | SecurityException happend : "
 
     invoke-static {v0, v1, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 1141
     if-eqz v7, :cond_6
 
-    .line 1142
     invoke-virtual {v7}, Landroid/content/res/AssetFileDescriptor;->close()V
 
-    .line 1146
     :cond_6
     invoke-virtual {p2}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
@@ -6972,20 +6233,17 @@
 
     goto/16 :goto_0
 
-    .line 1141
     .end local v6    # "ex":Ljava/lang/Exception;
     :catchall_0
     move-exception v0
 
     if-eqz v7, :cond_7
 
-    .line 1142
     invoke-virtual {v7}, Landroid/content/res/AssetFileDescriptor;->close()V
 
     :cond_7
     throw v0
 
-    .line 1135
     :catch_1
     move-exception v0
 
@@ -7005,10 +6263,8 @@
     .end annotation
 
     .prologue
-    .line 1337
     invoke-direct {p0, p1}, Landroid/media/MediaPlayer;->_setDataSource(Landroid/media/MediaDataSource;)V
 
-    .line 1338
     return-void
 .end method
 
@@ -7024,7 +6280,6 @@
     .end annotation
 
     .prologue
-    .line 1308
     const-wide/16 v2, 0x0
 
     const-wide v4, 0x7ffffffffffffffL
@@ -7035,7 +6290,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/media/MediaPlayer;->setDataSource(Ljava/io/FileDescriptor;JJ)V
 
-    .line 1309
     return-void
 .end method
 
@@ -7053,10 +6307,8 @@
     .end annotation
 
     .prologue
-    .line 1323
     invoke-direct/range {p0 .. p5}, Landroid/media/MediaPlayer;->_setDataSource(Ljava/io/FileDescriptor;JJ)V
 
-    .line 1324
     return-void
 .end method
 
@@ -7075,10 +6327,8 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1164
     invoke-direct {p0, p1, v0, v0}, Landroid/media/MediaPlayer;->setDataSource(Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 1165
     return-void
 .end method
 
@@ -7107,36 +6357,29 @@
     .end annotation
 
     .prologue
-    .line 1178
     .local p2, "headers":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const/4 v3, 0x0
 
-    .line 1179
     .local v3, "keys":[Ljava/lang/String;
     const/4 v4, 0x0
 
-    .line 1181
     .local v4, "values":[Ljava/lang/String;
     if-eqz p2, :cond_0
 
-    .line 1182
     invoke-interface {p2}, Ljava/util/Map;->size()I
 
     move-result v5
 
     new-array v3, v5, [Ljava/lang/String;
 
-    .line 1183
     invoke-interface {p2}, Ljava/util/Map;->size()I
 
     move-result v5
 
     new-array v4, v5, [Ljava/lang/String;
 
-    .line 1185
     const/4 v1, 0x0
 
-    .line 1186
     .local v1, "i":I
     invoke-interface {p2}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
@@ -7160,7 +6403,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 1187
     .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -7170,7 +6412,6 @@
 
     aput-object v5, v3, v1
 
-    .line 1188
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v5
@@ -7179,20 +6420,16 @@
 
     aput-object v5, v4, v1
 
-    .line 1189
     add-int/lit8 v1, v1, 0x1
 
-    .line 1190
     goto :goto_0
 
-    .line 1192
     .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     .end local v1    # "i":I
     .end local v2    # "i$":Ljava/util/Iterator;
     :cond_0
     invoke-direct {p0, p1, v3, v4}, Landroid/media/MediaPlayer;->setDataSource(Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 1193
     return-void
 .end method
 
@@ -7201,29 +6438,22 @@
     .param p1, "sh"    # Landroid/view/SurfaceHolder;
 
     .prologue
-    .line 794
     iput-object p1, p0, Landroid/media/MediaPlayer;->mSurfaceHolder:Landroid/view/SurfaceHolder;
 
-    .line 796
     if-eqz p1, :cond_0
 
-    .line 797
     invoke-interface {p1}, Landroid/view/SurfaceHolder;->getSurface()Landroid/view/Surface;
 
     move-result-object v0
 
-    .line 801
     .local v0, "surface":Landroid/view/Surface;
     :goto_0
     invoke-direct {p0, v0}, Landroid/media/MediaPlayer;->_setVideoSurface(Landroid/view/Surface;)V
 
-    .line 802
     invoke-direct {p0}, Landroid/media/MediaPlayer;->updateSurfaceScreenOn()V
 
-    .line 803
     return-void
 
-    .line 799
     .end local v0    # "surface":Landroid/view/Surface;
     :cond_0
     const/4 v0, 0x0
@@ -7252,14 +6482,12 @@
     .end annotation
 
     .prologue
-    .line 1901
     .local p1, "allow":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/Integer;>;"
     .local p2, "block":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/Integer;>;"
     invoke-virtual {p0}, Landroid/media/MediaPlayer;->newRequest()Landroid/os/Parcel;
 
     move-result-object v2
 
-    .line 1907
     .local v2, "request":Landroid/os/Parcel;
     invoke-virtual {v2}, Landroid/os/Parcel;->dataSize()I
 
@@ -7283,7 +6511,6 @@
 
     add-int v0, v4, v5
 
-    .line 1909
     .local v0, "capacity":I
     invoke-virtual {v2}, Landroid/os/Parcel;->dataCapacity()I
 
@@ -7291,10 +6518,8 @@
 
     if-ge v4, v0, :cond_0
 
-    .line 1910
     invoke-virtual {v2, v0}, Landroid/os/Parcel;->setDataCapacity(I)V
 
-    .line 1913
     :cond_0
     invoke-interface {p1}, Ljava/util/Set;->size()I
 
@@ -7302,7 +6527,6 @@
 
     invoke-virtual {v2, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1914
     invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -7321,7 +6545,6 @@
 
     check-cast v3, Ljava/lang/Integer;
 
-    .line 1915
     .local v3, "t":Ljava/lang/Integer;
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
@@ -7331,7 +6554,6 @@
 
     goto :goto_0
 
-    .line 1917
     .end local v3    # "t":Ljava/lang/Integer;
     :cond_1
     invoke-interface {p2}, Ljava/util/Set;->size()I
@@ -7340,7 +6562,6 @@
 
     invoke-virtual {v2, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1918
     invoke-interface {p2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -7358,7 +6579,6 @@
 
     check-cast v3, Ljava/lang/Integer;
 
-    .line 1919
     .restart local v3    # "t":Ljava/lang/Integer;
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
@@ -7368,7 +6588,6 @@
 
     goto :goto_1
 
-    .line 1921
     .end local v3    # "t":Ljava/lang/Integer;
     :cond_2
     invoke-direct {p0, v2}, Landroid/media/MediaPlayer;->native_setMetadataFilter(Landroid/os/Parcel;)I
@@ -7386,10 +6605,8 @@
     .param p1, "listener"    # Landroid/media/MediaPlayer$OnBufferingUpdateListener;
 
     .prologue
-    .line 4120
     iput-object p1, p0, Landroid/media/MediaPlayer;->mOnBufferingUpdateListener:Landroid/media/MediaPlayer$OnBufferingUpdateListener;
 
-    .line 4121
     return-void
 .end method
 
@@ -7398,10 +6615,8 @@
     .param p1, "listener"    # Landroid/media/MediaPlayer$OnCompletionListener;
 
     .prologue
-    .line 4086
     iput-object p1, p0, Landroid/media/MediaPlayer;->mOnCompletionListener:Landroid/media/MediaPlayer$OnCompletionListener;
 
-    .line 4087
     return-void
 .end method
 
@@ -7410,10 +6625,8 @@
     .param p1, "listener"    # Landroid/media/MediaPlayer$OnErrorListener;
 
     .prologue
-    .line 4453
     iput-object p1, p0, Landroid/media/MediaPlayer;->mOnErrorListener:Landroid/media/MediaPlayer$OnErrorListener;
 
-    .line 4454
     return-void
 .end method
 
@@ -7422,10 +6635,8 @@
     .param p1, "listener"    # Landroid/media/MediaPlayer$OnInfoListener;
 
     .prologue
-    .line 4652
     iput-object p1, p0, Landroid/media/MediaPlayer;->mOnInfoListener:Landroid/media/MediaPlayer$OnInfoListener;
 
-    .line 4653
     return-void
 .end method
 
@@ -7434,10 +6645,8 @@
     .param p1, "listener"    # Landroid/media/MediaPlayer$OnPlayReadyErrorListener;
 
     .prologue
-    .line 4441
     iput-object p1, p0, Landroid/media/MediaPlayer;->mOnPlayReadyErrorListener:Landroid/media/MediaPlayer$OnPlayReadyErrorListener;
 
-    .line 4442
     return-void
 .end method
 
@@ -7446,10 +6655,8 @@
     .param p1, "listener"    # Landroid/media/MediaPlayer$OnPreparedListener;
 
     .prologue
-    .line 4059
     iput-object p1, p0, Landroid/media/MediaPlayer;->mOnPreparedListener:Landroid/media/MediaPlayer$OnPreparedListener;
 
-    .line 4060
     return-void
 .end method
 
@@ -7458,10 +6665,8 @@
     .param p1, "listener"    # Landroid/media/MediaPlayer$OnSeekCompleteListener;
 
     .prologue
-    .line 4147
     iput-object p1, p0, Landroid/media/MediaPlayer;->mOnSeekCompleteListener:Landroid/media/MediaPlayer$OnSeekCompleteListener;
 
-    .line 4148
     return-void
 .end method
 
@@ -7470,10 +6675,8 @@
     .param p1, "listener"    # Landroid/media/MediaPlayer$OnSubtitleDataListener;
 
     .prologue
-    .line 4233
     iput-object p1, p0, Landroid/media/MediaPlayer;->mOnSubtitleDataListener:Landroid/media/MediaPlayer$OnSubtitleDataListener;
 
-    .line 4234
     return-void
 .end method
 
@@ -7482,10 +6685,8 @@
     .param p1, "listener"    # Landroid/media/MediaPlayer$OnTimedMetaDataAvailableListener;
 
     .prologue
-    .line 4273
     iput-object p1, p0, Landroid/media/MediaPlayer;->mOnTimedMetaDataAvailableListener:Landroid/media/MediaPlayer$OnTimedMetaDataAvailableListener;
 
-    .line 4274
     return-void
 .end method
 
@@ -7494,10 +6695,8 @@
     .param p1, "listener"    # Landroid/media/MediaPlayer$OnTimedTextListener;
 
     .prologue
-    .line 4208
     iput-object p1, p0, Landroid/media/MediaPlayer;->mOnTimedTextListener:Landroid/media/MediaPlayer$OnTimedTextListener;
 
-    .line 4209
     return-void
 .end method
 
@@ -7506,10 +6705,8 @@
     .param p1, "listener"    # Landroid/media/MediaPlayer$OnVideoSizeChangedListener;
 
     .prologue
-    .line 4179
     iput-object p1, p0, Landroid/media/MediaPlayer;->mOnVideoSizeChangedListener:Landroid/media/MediaPlayer$OnVideoSizeChangedListener;
 
-    .line 4180
     return-void
 .end method
 
@@ -7519,25 +6716,20 @@
     .param p2, "value"    # I
 
     .prologue
-    .line 2212
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 2213
     .local v0, "p":Landroid/os/Parcel;
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 2214
     invoke-virtual {p0, p1, v0}, Landroid/media/MediaPlayer;->setParameter(ILandroid/os/Parcel;)Z
 
     move-result v1
 
-    .line 2215
     .local v1, "ret":Z
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 2216
     return v1
 .end method
 
@@ -7550,25 +6742,20 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 2196
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 2197
     .local v0, "p":Landroid/os/Parcel;
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 2198
     invoke-virtual {p0, p1, v0}, Landroid/media/MediaPlayer;->setParameter(ILandroid/os/Parcel;)Z
 
     move-result v1
 
-    .line 2199
     .local v1, "ret":Z
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 2200
     return v1
 .end method
 
@@ -7586,18 +6773,14 @@
     .end annotation
 
     .prologue
-    .line 3599
     const/4 v0, 0x0
 
-    .line 3600
     .local v0, "addrString":Ljava/lang/String;
     const/4 v1, 0x0
 
-    .line 3602
     .local v1, "port":I
     if-eqz p1, :cond_0
 
-    .line 3603
     invoke-virtual {p1}, Ljava/net/InetSocketAddress;->getAddress()Ljava/net/InetAddress;
 
     move-result-object v3
@@ -7606,22 +6789,18 @@
 
     move-result-object v0
 
-    .line 3604
     invoke-virtual {p1}, Ljava/net/InetSocketAddress;->getPort()I
 
     move-result v1
 
-    .line 3607
     :cond_0
     invoke-direct {p0, v0, v1}, Landroid/media/MediaPlayer;->native_setRetransmitEndpoint(Ljava/lang/String;I)I
 
     move-result v2
 
-    .line 3608
     .local v2, "ret":I
     if-eqz v2, :cond_1
 
-    .line 3609
     new-instance v3, Ljava/lang/IllegalArgumentException;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -7646,7 +6825,6 @@
 
     throw v3
 
-    .line 3611
     :cond_1
     return-void
 .end method
@@ -7656,33 +6834,27 @@
     .param p1, "screenOn"    # Z
 
     .prologue
-    .line 1577
     iget-boolean v0, p0, Landroid/media/MediaPlayer;->mScreenOnWhilePlaying:Z
 
     if-eq v0, p1, :cond_1
 
-    .line 1578
     if-eqz p1, :cond_0
 
     iget-object v0, p0, Landroid/media/MediaPlayer;->mSurfaceHolder:Landroid/view/SurfaceHolder;
 
     if-nez v0, :cond_0
 
-    .line 1579
     const-string v0, "MediaPlayer"
 
-    const-string/jumbo v1, "setScreenOnWhilePlaying(true) is ineffective without a SurfaceHolder"
+    const-string v1, "setScreenOnWhilePlaying(true) is ineffective without a SurfaceHolder"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1581
     :cond_0
     iput-boolean p1, p0, Landroid/media/MediaPlayer;->mScreenOnWhilePlaying:Z
 
-    .line 1582
     invoke-direct {p0}, Landroid/media/MediaPlayer;->updateSurfaceScreenOn()V
 
-    .line 1584
     :cond_1
     return-void
 .end method
@@ -7693,10 +6865,8 @@
     .param p2, "reply"    # Landroid/os/Parcel;
 
     .prologue
-    .line 1289
     invoke-virtual {p0, p1, p2}, Landroid/media/MediaPlayer;->invoke(Landroid/os/Parcel;Landroid/os/Parcel;)V
 
-    .line 1290
     const/4 v0, 0x0
 
     return v0
@@ -7708,15 +6878,12 @@
     .param p2, "anchor"    # Landroid/media/SubtitleController$Anchor;
 
     .prologue
-    .line 2690
     iput-object p1, p0, Landroid/media/MediaPlayer;->mSubtitleController:Landroid/media/SubtitleController;
 
-    .line 2691
     iget-object v0, p0, Landroid/media/MediaPlayer;->mSubtitleController:Landroid/media/SubtitleController;
 
     invoke-virtual {v0, p2}, Landroid/media/SubtitleController;->setAnchor(Landroid/media/SubtitleController$Anchor;)V
 
-    .line 2692
     return-void
 .end method
 
@@ -7725,33 +6892,27 @@
     .param p1, "surface"    # Landroid/view/Surface;
 
     .prologue
-    .line 824
     iget-boolean v0, p0, Landroid/media/MediaPlayer;->mScreenOnWhilePlaying:Z
 
     if-eqz v0, :cond_0
 
     if-eqz p1, :cond_0
 
-    .line 825
     const-string v0, "MediaPlayer"
 
-    const-string/jumbo v1, "setScreenOnWhilePlaying(true) is ineffective for Surface"
+    const-string v1, "setScreenOnWhilePlaying(true) is ineffective for Surface"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 827
     :cond_0
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/media/MediaPlayer;->mSurfaceHolder:Landroid/view/SurfaceHolder;
 
-    .line 828
     invoke-direct {p0, p1}, Landroid/media/MediaPlayer;->_setVideoSurface(Landroid/view/Surface;)V
 
-    .line 829
     invoke-direct {p0}, Landroid/media/MediaPlayer;->updateSurfaceScreenOn()V
 
-    .line 830
     return-void
 .end method
 
@@ -7763,14 +6924,12 @@
     .param p1, "mode"    # I
 
     .prologue
-    .line 873
     invoke-direct {p0, p1}, Landroid/media/MediaPlayer;->isVideoScalingModeSupported(I)Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 874
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -7795,7 +6954,6 @@
 
     move-result-object v0
 
-    .line 875
     .local v0, "msg":Ljava/lang/String;
     new-instance v3, Ljava/lang/IllegalArgumentException;
 
@@ -7803,55 +6961,44 @@
 
     throw v3
 
-    .line 877
     .end local v0    # "msg":Ljava/lang/String;
     :cond_0
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v2
 
-    .line 878
     .local v2, "request":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 880
     .local v1, "reply":Landroid/os/Parcel;
     :try_start_0
     const-string v3, "android.media.IMediaPlayer"
 
     invoke-virtual {v2, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 881
     const/4 v3, 0x6
 
     invoke-virtual {v2, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 882
     invoke-virtual {v2, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 883
     invoke-virtual {p0, v2, v1}, Landroid/media/MediaPlayer;->invoke(Landroid/os/Parcel;Landroid/os/Parcel;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 885
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 886
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 888
     return-void
 
-    .line 885
     :catchall_0
     move-exception v3
 
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 886
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
     throw v3
@@ -7862,10 +7009,8 @@
     .param p1, "volume"    # F
 
     .prologue
-    .line 2342
     invoke-virtual {p0, p1, p1}, Landroid/media/MediaPlayer;->setVolume(FF)V
 
-    .line 2343
     return-void
 .end method
 
@@ -7875,18 +7020,15 @@
     .param p2, "rightVolume"    # F
 
     .prologue
-    .line 2329
     invoke-direct {p0}, Landroid/media/MediaPlayer;->isRestricted()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2333
     :goto_0
     return-void
 
-    .line 2332
     :cond_0
     invoke-direct {p0, p1, p2}, Landroid/media/MediaPlayer;->_setVolume(FF)V
 
@@ -7899,16 +7041,13 @@
     .param p2, "mode"    # I
 
     .prologue
-    .line 1546
     const/4 v1, 0x0
 
-    .line 1547
     .local v1, "washeld":Z
     iget-object v2, p0, Landroid/media/MediaPlayer;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     if-eqz v2, :cond_1
 
-    .line 1548
     iget-object v2, p0, Landroid/media/MediaPlayer;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v2}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
@@ -7917,23 +7056,19 @@
 
     if-eqz v2, :cond_0
 
-    .line 1549
     const/4 v1, 0x1
 
-    .line 1550
     iget-object v2, p0, Landroid/media/MediaPlayer;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v2}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 1552
     :cond_0
     const/4 v2, 0x0
 
     iput-object v2, p0, Landroid/media/MediaPlayer;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 1555
     :cond_1
-    const-string/jumbo v2, "power"
+    const-string v2, "power"
 
     invoke-virtual {p1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -7941,7 +7076,6 @@
 
     check-cast v0, Landroid/os/PowerManager;
 
-    .line 1558
     .local v0, "pm":Landroid/os/PowerManager;
     const-class v2, Landroid/media/MediaPlayer;
 
@@ -7955,22 +7089,18 @@
 
     iput-object v2, p0, Landroid/media/MediaPlayer;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 1560
     iget-object v2, p0, Landroid/media/MediaPlayer;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     const/4 v3, 0x0
 
     invoke-virtual {v2, v3}, Landroid/os/PowerManager$WakeLock;->setReferenceCounted(Z)V
 
-    .line 1561
     if-eqz v1, :cond_2
 
-    .line 1562
     iget-object v2, p0, Landroid/media/MediaPlayer;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v2}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
-    .line 1564
     :cond_2
     return-void
 .end method
@@ -7990,47 +7120,38 @@
 
     const/4 v2, 0x0
 
-    .line 1397
     iget-boolean v0, p0, Landroid/media/MediaPlayer;->mIsVideo:Z
 
     if-eqz v0, :cond_0
 
-    .line 1404
     iget-boolean v0, p0, Landroid/media/MediaPlayer;->mAIAContext:Z
 
     if-nez v0, :cond_3
 
-    .line 1405
     const-string v0, "android.media.IMediaPlayer.videoexist"
 
     new-array v1, v2, [Ljava/lang/Object;
 
     invoke-direct {p0, v0, v1}, Landroid/media/MediaPlayer;->sendBroadcastingIntent(Ljava/lang/String;[Ljava/lang/Object;)Z
 
-    .line 1406
     const-string v0, "MediaPlayer"
 
-    const-string/jumbo v1, "sendBroadcast android.media.IMediaPlayer.videoexist"
+    const-string v1, "sendBroadcast android.media.IMediaPlayer.videoexist"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1411
     :cond_0
     :goto_0
     iput-boolean v4, p0, Landroid/media/MediaPlayer;->mIsStart:Z
 
-    .line 1415
     sget-boolean v0, Landroid/media/MediaPlayer;->MMFWContextAware:Z
 
     if-eqz v0, :cond_1
 
-    .line 1416
     iput-boolean v2, p0, Landroid/media/MediaPlayer;->mContextAwareSend:Z
 
-    .line 1417
     iput v2, p0, Landroid/media/MediaPlayer;->mPendingCommand:I
 
-    .line 1421
     :cond_1
     invoke-direct {p0}, Landroid/media/MediaPlayer;->isRestricted()Z
 
@@ -8038,20 +7159,15 @@
 
     if-eqz v0, :cond_2
 
-    .line 1422
     invoke-direct {p0, v3, v3}, Landroid/media/MediaPlayer;->_setVolume(FF)V
 
-    .line 1424
     :cond_2
     invoke-direct {p0, v4}, Landroid/media/MediaPlayer;->stayAwake(Z)V
 
-    .line 1425
     invoke-direct {p0}, Landroid/media/MediaPlayer;->_start()V
 
-    .line 1426
     return-void
 
-    .line 1409
     :cond_3
     const-string v0, "MediaPlayer"
 
@@ -8075,20 +7191,16 @@
 
     const/4 v4, 0x0
 
-    .line 1472
     invoke-direct {p0, v4}, Landroid/media/MediaPlayer;->stayAwake(Z)V
 
-    .line 1474
     sget-boolean v0, Landroid/media/MediaPlayer;->MMFWContextAware:Z
 
     if-eqz v0, :cond_0
 
-    .line 1475
     iget-boolean v0, p0, Landroid/media/MediaPlayer;->mContextAwareSend:Z
 
     if-eqz v0, :cond_1
 
-    .line 1476
     const-string v0, "com.samsung.CONTEXT_AWARE_MUSIC_INFO"
 
     const/16 v1, 0x8
@@ -8101,7 +7213,7 @@
 
     const/4 v2, 0x1
 
-    const-string/jumbo v3, "stop"
+    const-string v3, "stop"
 
     aput-object v3, v1, v2
 
@@ -8149,14 +7261,13 @@
 
     invoke-direct {p0, v0, v1}, Landroid/media/MediaPlayer;->sendBroadcastingIntent(Ljava/lang/String;[Ljava/lang/Object;)Z
 
-    .line 1477
     const-string v0, "MediaPlayer"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "sendBroadcast CONTEXT_AWARE_MUSIC_INFO - type(stop) - id("
+    const-string v2, "sendBroadcast CONTEXT_AWARE_MUSIC_INFO - type(stop) - id("
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -8180,18 +7291,14 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1478
     iput-boolean v4, p0, Landroid/media/MediaPlayer;->mContextAwareSend:Z
 
-    .line 1492
     :cond_0
     :goto_0
     invoke-direct {p0}, Landroid/media/MediaPlayer;->_stop()V
 
-    .line 1493
     return-void
 
-    .line 1480
     :cond_1
     iput v5, p0, Landroid/media/MediaPlayer;->mPendingCommand:I
 

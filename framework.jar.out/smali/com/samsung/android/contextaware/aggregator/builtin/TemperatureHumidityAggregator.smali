@@ -34,7 +34,6 @@
 
     const/4 v2, 0x0
 
-    .line 55
     move-object v0, p0
 
     move v1, p1
@@ -47,16 +46,12 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/samsung/android/contextaware/aggregator/EnvironmentSensorAggregator;-><init>(ILandroid/content/Context;Landroid/os/Looper;Ljava/util/concurrent/CopyOnWriteArrayList;Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;)V
 
-    .line 38
     iput-object v2, p0, Lcom/samsung/android/contextaware/aggregator/builtin/TemperatureHumidityAggregator;->mCompensationEngine:Lcom/samsung/android/contextaware/lib/builtin/TemperatureHumidityCompensationLibEngine;
 
-    .line 39
     iput-wide v6, p0, Lcom/samsung/android/contextaware/aggregator/builtin/TemperatureHumidityAggregator;->mSleepTime:J
 
-    .line 40
     iput-wide v6, p0, Lcom/samsung/android/contextaware/aggregator/builtin/TemperatureHumidityAggregator;->mWakeupTime:J
 
-    .line 56
     return-void
 .end method
 
@@ -67,10 +62,8 @@
     .param p1, "compensationData"    # [D
 
     .prologue
-    .line 192
     const/4 v0, 0x0
 
-    .line 194
     .local v0, "res":Z
     if-eqz p1, :cond_0
 
@@ -78,11 +71,9 @@
 
     if-lez v1, :cond_1
 
-    .line 195
     :cond_0
     const/4 v0, 0x1
 
-    .line 198
     :cond_1
     return v0
 .end method
@@ -91,13 +82,10 @@
     .locals 0
 
     .prologue
-    .line 299
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->trace()V
 
-    .line 300
     invoke-super {p0}, Lcom/samsung/android/contextaware/aggregator/EnvironmentSensorAggregator;->clear()V
 
-    .line 301
     return-void
 .end method
 
@@ -105,13 +93,10 @@
     .locals 0
 
     .prologue
-    .line 312
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->trace()V
 
-    .line 313
     invoke-super {p0}, Lcom/samsung/android/contextaware/aggregator/EnvironmentSensorAggregator;->clearAccordingToRequest()V
 
-    .line 314
     return-void
 .end method
 
@@ -120,7 +105,6 @@
     .param p1, "rawSensorData"    # [[D
 
     .prologue
-    .line 88
     if-eqz p1, :cond_0
 
     move-object/from16 v0, p1
@@ -131,27 +115,22 @@
 
     if-gt v3, v4, :cond_1
 
-    .line 89
     :cond_0
     const/4 v2, 0x0
 
-    .line 154
     :goto_0
     return-object v2
 
-    .line 92
     :cond_1
     const/4 v3, 0x1
 
     new-array v8, v3, [D
 
-    .line 93
     .local v8, "temperature":[D
     const/4 v3, 0x1
 
     new-array v9, v3, [D
 
-    .line 94
     .local v9, "humidity":[D
     const/4 v3, 0x0
 
@@ -161,7 +140,6 @@
 
     move/from16 v17, v0
 
-    .line 95
     .local v17, "nLenTemp":I
     const/4 v3, 0x1
 
@@ -171,37 +149,30 @@
 
     move/from16 v16, v0
 
-    .line 96
     .local v16, "nLenHumid":I
     invoke-virtual/range {p0 .. p0}, Lcom/samsung/android/contextaware/aggregator/builtin/TemperatureHumidityAggregator;->getLoggingStatus()I
 
     move-result v20
 
-    .line 97
     .local v20, "status":I
     const-wide/16 v14, 0x0
 
-    .line 98
     .local v14, "interval":J
     const-wide/16 v18, 0x0
 
-    .line 100
     .local v18, "startTime":J
     if-eqz v17, :cond_2
 
     if-nez v16, :cond_3
 
-    .line 101
     :cond_2
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 104
     :cond_3
     const/4 v13, 0x0
 
-    .line 106
     .local v13, "nLen":I
     move/from16 v0, v17
 
@@ -209,14 +180,11 @@
 
     if-gt v0, v1, :cond_5
 
-    .line 107
     mul-int/lit8 v13, v17, 0x2
 
-    .line 112
     :goto_1
     new-array v2, v13, [D
 
-    .line 114
     .local v2, "compensatedData":[D
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -230,12 +198,11 @@
 
     iput-wide v4, v0, Lcom/samsung/android/contextaware/aggregator/builtin/TemperatureHumidityAggregator;->mWakeupTime:J
 
-    .line 115
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "sleepTime = "
+    const-string v4, "sleepTime = "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -269,7 +236,6 @@
 
     invoke-static {v3}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->info(Ljava/lang/String;)V
 
-    .line 118
     move-object/from16 v0, p0
 
     iget-wide v4, v0, Lcom/samsung/android/contextaware/aggregator/builtin/TemperatureHumidityAggregator;->mWakeupTime:J
@@ -286,12 +252,10 @@
 
     div-long v14, v4, v6
 
-    .line 120
     const/4 v3, 0x2
 
     if-le v13, v3, :cond_6
 
-    .line 121
     move-object/from16 v0, p0
 
     iget-wide v4, v0, Lcom/samsung/android/contextaware/aggregator/builtin/TemperatureHumidityAggregator;->mSleepTime:J
@@ -326,7 +290,6 @@
 
     add-long v18, v4, v6
 
-    .line 128
     :goto_2
     const/4 v12, 0x0
 
@@ -336,21 +299,18 @@
 
     if-ge v12, v3, :cond_8
 
-    .line 129
     const/4 v3, 0x1
 
     move/from16 v0, v20
 
     if-ne v0, v3, :cond_7
 
-    .line 130
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/samsung/android/contextaware/aggregator/builtin/TemperatureHumidityAggregator;->mCompensationEngine:Lcom/samsung/android/contextaware/lib/builtin/TemperatureHumidityCompensationLibEngine;
 
     invoke-virtual {v3, v8, v9}, Lcom/samsung/android/contextaware/lib/builtin/TemperatureHumidityCompensationLibEngine;->native_temperaturehumidity_getLastCompensatedData([D[D)V
 
-    .line 133
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -389,7 +349,6 @@
 
     invoke-static {v3}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->info(Ljava/lang/String;)V
 
-    .line 148
     :cond_4
     :goto_4
     const/4 v3, 0x0
@@ -398,7 +357,6 @@
 
     aput-wide v4, v2, v12
 
-    .line 149
     add-int v3, v12, v17
 
     const/4 v4, 0x0
@@ -407,12 +365,10 @@
 
     aput-wide v4, v2, v3
 
-    .line 128
     add-int/lit8 v12, v12, 0x1
 
     goto :goto_3
 
-    .line 109
     .end local v2    # "compensatedData":[D
     .end local v12    # "i":I
     :cond_5
@@ -420,7 +376,6 @@
 
     goto/16 :goto_1
 
-    .line 125
     .restart local v2    # "compensatedData":[D
     :cond_6
     move-object/from16 v0, p0
@@ -447,7 +402,6 @@
 
     goto :goto_2
 
-    .line 136
     .restart local v12    # "i":I
     :cond_7
     const/4 v3, 0x2
@@ -456,14 +410,12 @@
 
     if-ne v0, v3, :cond_4
 
-    .line 137
     int-to-long v4, v12
 
     mul-long/2addr v4, v14
 
     add-long v10, v18, v4
 
-    .line 138
     .local v10, "timestamp":J
     move-object/from16 v0, p0
 
@@ -483,7 +435,6 @@
 
     invoke-virtual/range {v3 .. v11}, Lcom/samsung/android/contextaware/lib/builtin/TemperatureHumidityCompensationLibEngine;->native_temperaturehumidity_getCompensatedData(DD[D[DJ)V
 
-    .line 142
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -566,7 +517,6 @@
 
     goto/16 :goto_4
 
-    .line 152
     .end local v10    # "timestamp":J
     :cond_8
     move-object/from16 v0, p0
@@ -584,10 +534,8 @@
     .locals 0
 
     .prologue
-    .line 289
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->trace()V
 
-    .line 290
     return-void
 .end method
 
@@ -595,10 +543,8 @@
     .locals 0
 
     .prologue
-    .line 279
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->trace()V
 
-    .line 280
     return-void
 .end method
 
@@ -606,7 +552,6 @@
     .locals 1
 
     .prologue
-    .line 233
     sget-object v0, Lcom/samsung/android/contextaware/ContextList$ContextType;->AGGREGATOR_TEMPERATURE_HUMIDITY:Lcom/samsung/android/contextaware/ContextList$ContextType;
 
     invoke-virtual {v0}, Lcom/samsung/android/contextaware/ContextList$ContextType;->getCode()Ljava/lang/String;
@@ -620,7 +565,6 @@
     .locals 3
 
     .prologue
-    .line 222
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/String;
@@ -644,7 +588,6 @@
     .locals 1
 
     .prologue
-    .line 325
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/aggregator/builtin/TemperatureHumidityAggregator;->checkFaultDetectionResult()Z
 
     move-result v0
@@ -655,7 +598,6 @@
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->debug(Ljava/lang/String;)V
 
-    .line 326
     invoke-super {p0}, Lcom/samsung/android/contextaware/aggregator/EnvironmentSensorAggregator;->getFaultDetectionResult()Landroid/os/Bundle;
 
     move-result-object v0
@@ -667,7 +609,6 @@
     .locals 0
 
     .prologue
-    .line 244
     return-object p0
 .end method
 
@@ -675,7 +616,6 @@
     .locals 0
 
     .prologue
-    .line 256
     return-object p0
 .end method
 
@@ -683,7 +623,6 @@
     .locals 3
 
     .prologue
-    .line 210
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/String;
@@ -707,14 +646,12 @@
     .locals 1
 
     .prologue
-    .line 66
     new-instance v0, Lcom/samsung/android/contextaware/lib/builtin/TemperatureHumidityCompensationLibEngine;
 
     invoke-direct {v0}, Lcom/samsung/android/contextaware/lib/builtin/TemperatureHumidityCompensationLibEngine;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/aggregator/builtin/TemperatureHumidityAggregator;->mCompensationEngine:Lcom/samsung/android/contextaware/lib/builtin/TemperatureHumidityCompensationLibEngine;
 
-    .line 67
     return-void
 .end method
 
@@ -723,26 +660,21 @@
     .param p1, "compensationData"    # [D
 
     .prologue
-    .line 166
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/aggregator/builtin/TemperatureHumidityAggregator;->getContextValueNames()[Ljava/lang/String;
 
     move-result-object v4
 
-    .line 167
     .local v4, "names":[Ljava/lang/String;
     array-length v5, p1
 
     div-int/lit8 v3, v5, 0x2
 
-    .line 168
     .local v3, "nLen":I
     new-array v1, v3, [D
 
-    .line 169
     .local v1, "compensatedTemp":[D
     new-array v0, v3, [D
 
-    .line 171
     .local v0, "compensatedHumid":[D
     const/4 v2, 0x0
 
@@ -750,24 +682,20 @@
     :goto_0
     if-ge v2, v3, :cond_0
 
-    .line 172
     aget-wide v6, p1, v2
 
     aput-wide v6, v1, v2
 
-    .line 173
     add-int v5, v2, v3
 
     aget-wide v6, p1, v5
 
     aput-wide v6, v0, v2
 
-    .line 171
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 176
     :cond_0
     invoke-super {p0}, Lcom/samsung/android/contextaware/aggregator/EnvironmentSensorAggregator;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
@@ -779,7 +707,6 @@
 
     invoke-virtual {v5, v6, v1}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContext(Ljava/lang/String;[D)V
 
-    .line 177
     invoke-super {p0}, Lcom/samsung/android/contextaware/aggregator/EnvironmentSensorAggregator;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v5
@@ -790,10 +717,8 @@
 
     invoke-virtual {v5, v6, v0}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContext(Ljava/lang/String;[D)V
 
-    .line 179
     invoke-super {p0}, Lcom/samsung/android/contextaware/aggregator/EnvironmentSensorAggregator;->notifyObserver()V
 
-    .line 180
     return-void
 .end method
 
@@ -801,12 +726,10 @@
     .locals 1
 
     .prologue
-    .line 76
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/aggregator/builtin/TemperatureHumidityAggregator;->mCompensationEngine:Lcom/samsung/android/contextaware/lib/builtin/TemperatureHumidityCompensationLibEngine;
 
-    .line 77
     return-void
 .end method
 
@@ -814,7 +737,6 @@
     .locals 6
 
     .prologue
-    .line 266
     invoke-super {p0}, Lcom/samsung/android/contextaware/aggregator/EnvironmentSensorAggregator;->getTimeStampForApStatus()J
 
     move-result-wide v2
@@ -823,13 +745,12 @@
 
     mul-long v0, v2, v4
 
-    .line 267
     .local v0, "timeStamp":J
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "timeStamp = "
+    const-string v3, "timeStamp = "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -849,12 +770,9 @@
 
     invoke-static {v2}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->info(Ljava/lang/String;)V
 
-    .line 268
     iput-wide v0, p0, Lcom/samsung/android/contextaware/aggregator/builtin/TemperatureHumidityAggregator;->mSleepTime:J
 
-    .line 269
     invoke-super {p0}, Lcom/samsung/android/contextaware/aggregator/EnvironmentSensorAggregator;->updateApSleep()V
 
-    .line 270
     return-void
 .end method

@@ -26,7 +26,6 @@
     .param p2, "x0"    # Landroid/os/Looper;
 
     .prologue
-    .line 457
     iput-object p1, p0, Lcom/samsung/android/service/gesture/GestureManager$GestureListenerDelegate$1;->this$1:Lcom/samsung/android/service/gesture/GestureManager$GestureListenerDelegate;
 
     iput-object p3, p0, Lcom/samsung/android/service/gesture/GestureManager$GestureListenerDelegate$1;->val$this$0:Lcom/samsung/android/service/gesture/GestureManager;
@@ -43,7 +42,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 460
     iget-object v1, p0, Lcom/samsung/android/service/gesture/GestureManager$GestureListenerDelegate$1;->this$1:Lcom/samsung/android/service/gesture/GestureManager$GestureListenerDelegate;
 
     # getter for: Lcom/samsung/android/service/gesture/GestureManager$GestureListenerDelegate;->mListener:Lcom/samsung/android/service/gesture/GestureListener;
@@ -53,16 +51,13 @@
 
     if-eqz v1, :cond_0
 
-    .line 461
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/samsung/android/service/gesture/GestureEvent;
 
-    .line 462
     .local v0, "gestureEvent":Lcom/samsung/android/service/gesture/GestureEvent;
     if-eqz v0, :cond_1
 
-    .line 463
     iget-object v1, p0, Lcom/samsung/android/service/gesture/GestureManager$GestureListenerDelegate$1;->this$1:Lcom/samsung/android/service/gesture/GestureManager$GestureListenerDelegate;
 
     # getter for: Lcom/samsung/android/service/gesture/GestureManager$GestureListenerDelegate;->mListener:Lcom/samsung/android/service/gesture/GestureListener;
@@ -72,13 +67,11 @@
 
     invoke-interface {v1, v0}, Lcom/samsung/android/service/gesture/GestureListener;->onGestureEvent(Lcom/samsung/android/service/gesture/GestureEvent;)V
 
-    .line 468
     .end local v0    # "gestureEvent":Lcom/samsung/android/service/gesture/GestureEvent;
     :cond_0
     :goto_0
     return-void
 
-    .line 465
     .restart local v0    # "gestureEvent":Lcom/samsung/android/service/gesture/GestureEvent;
     :cond_1
     const-string v1, "GestureManager"

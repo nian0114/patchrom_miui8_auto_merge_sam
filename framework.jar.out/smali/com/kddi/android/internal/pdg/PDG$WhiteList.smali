@@ -29,7 +29,6 @@
     .locals 1
 
     .prologue
-    .line 50
     const-string v0, "content://com.kddi.android.pdg/white_list"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -38,7 +37,6 @@
 
     sput-object v0, Lcom/kddi/android/internal/pdg/PDG$WhiteList;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 51
     const-string v0, "content://com.kddi.android.pdg.read_only/white_list"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -54,7 +52,6 @@
     .locals 0
 
     .prologue
-    .line 48
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

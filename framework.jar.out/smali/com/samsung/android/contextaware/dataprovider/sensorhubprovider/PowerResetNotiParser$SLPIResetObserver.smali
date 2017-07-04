@@ -27,16 +27,12 @@
     .param p3, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 161
     iput-object p1, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/PowerResetNotiParser$SLPIResetObserver;->this$0:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/PowerResetNotiParser;
 
-    .line 162
     invoke-direct {p0, p2}, Landroid/os/FileObserver;-><init>(Ljava/lang/String;)V
 
-    .line 163
     iput-object p3, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/PowerResetNotiParser$SLPIResetObserver;->mContext:Landroid/content/Context;
 
-    .line 164
     return-void
 .end method
 
@@ -52,7 +48,6 @@
 
     const/4 v6, 0x2
 
-    .line 168
     iget-object v4, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/PowerResetNotiParser$SLPIResetObserver;->this$0:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/PowerResetNotiParser;
 
     # invokes: Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/PowerResetNotiParser;->isSLPISupported()Z
@@ -62,12 +57,10 @@
 
     if-eqz v4, :cond_2
 
-    .line 169
     and-int/lit8 v4, p1, 0x2
 
     if-ne v4, v6, :cond_2
 
-    .line 170
     iget-object v4, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/PowerResetNotiParser$SLPIResetObserver;->this$0:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/PowerResetNotiParser;
 
     const-string v5, "/sys/class/sensors/ssc_core/operation_mode"
@@ -77,7 +70,6 @@
 
     move-result-object v0
 
-    .line 171
     .local v0, "data":Ljava/lang/String;
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -99,7 +91,6 @@
 
     invoke-static {v4}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->info(Ljava/lang/String;)V
 
-    .line 172
     iget-object v4, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/PowerResetNotiParser$SLPIResetObserver;->this$0:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/PowerResetNotiParser;
 
     # getter for: Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/PowerResetNotiParser;->mLastStatus:Ljava/lang/String;
@@ -113,12 +104,10 @@
 
     if-eqz v4, :cond_5
 
-    .line 173
     const/4 v3, -0x1
 
-    .line 174
     .local v3, "temp":I
-    const-string/jumbo v4, "normal"
+    const-string v4, "normal"
 
     invoke-virtual {v4, v0}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
 
@@ -126,20 +115,16 @@
 
     if-nez v4, :cond_3
 
-    .line 175
     const-string v4, "SLPI status : SLPI_RESTORE_STATUS"
 
     invoke-static {v4}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->info(Ljava/lang/String;)V
 
-    .line 176
     const/4 v3, 0x1
 
-    .line 177
     invoke-static {v3, v7}, Lcom/samsung/android/contextaware/utilbundle/CaConvertUtil;->intToByteArr(II)[B
 
     move-result-object v2
 
-    .line 178
     .local v2, "status":[B
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/SensorHubCommManager;->getInstance()Lcom/samsung/android/contextaware/utilbundle/SensorHubCommManager;
 
@@ -153,7 +138,6 @@
 
     move-result v1
 
-    .line 181
     .local v1, "result":I
     sget-object v4, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->SUCCESS:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
@@ -163,14 +147,12 @@
 
     if-eq v1, v4, :cond_0
 
-    .line 182
     invoke-static {v1}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->getMessage(I)Ljava/lang/String;
 
     move-result-object v4
 
     invoke-static {v4}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 184
     :cond_0
     iget-object v4, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/PowerResetNotiParser$SLPIResetObserver;->this$0:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/PowerResetNotiParser;
 
@@ -178,7 +160,6 @@
 
     invoke-virtual {v4, v5}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/PowerResetNotiParser;->notifySensorHubResetObserver(I)V
 
-    .line 203
     :cond_1
     :goto_0
     iget-object v4, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/PowerResetNotiParser$SLPIResetObserver;->this$0:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/PowerResetNotiParser;
@@ -186,7 +167,6 @@
     # setter for: Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/PowerResetNotiParser;->mLastStatus:Ljava/lang/String;
     invoke-static {v4, v0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/PowerResetNotiParser;->access$202(Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/PowerResetNotiParser;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 206
     .end local v0    # "data":Ljava/lang/String;
     .end local v1    # "result":I
     .end local v2    # "status":[B
@@ -195,11 +175,10 @@
     :goto_1
     return-void
 
-    .line 185
     .restart local v0    # "data":Ljava/lang/String;
     .restart local v3    # "temp":I
     :cond_3
-    const-string/jumbo v4, "restrict"
+    const-string v4, "restrict"
 
     invoke-virtual {v4, v0}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
 
@@ -207,20 +186,16 @@
 
     if-nez v4, :cond_4
 
-    .line 186
     const-string v4, "SLPI status : SLPI_RESET_STATUS"
 
     invoke-static {v4}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->info(Ljava/lang/String;)V
 
-    .line 187
     const/4 v3, 0x0
 
-    .line 188
     invoke-static {v3, v7}, Lcom/samsung/android/contextaware/utilbundle/CaConvertUtil;->intToByteArr(II)[B
 
     move-result-object v2
 
-    .line 189
     .restart local v2    # "status":[B
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/SensorHubCommManager;->getInstance()Lcom/samsung/android/contextaware/utilbundle/SensorHubCommManager;
 
@@ -234,7 +209,6 @@
 
     move-result v1
 
-    .line 192
     .restart local v1    # "result":I
     sget-object v4, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->SUCCESS:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
@@ -244,7 +218,6 @@
 
     if-eq v1, v4, :cond_1
 
-    .line 193
     invoke-static {v1}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->getMessage(I)Ljava/lang/String;
 
     move-result-object v4
@@ -253,7 +226,6 @@
 
     goto :goto_0
 
-    .line 196
     .end local v1    # "result":I
     .end local v2    # "status":[B
     :cond_4
@@ -263,7 +235,6 @@
 
     goto :goto_1
 
-    .line 200
     .end local v3    # "temp":I
     :cond_5
     const-string v4, "Status of SLPI is same so skip event!!"
@@ -272,7 +243,6 @@
 
     goto :goto_1
 
-    .line 178
     nop
 
     :array_0
@@ -281,7 +251,6 @@
         0x63t
     .end array-data
 
-    .line 189
     nop
 
     :array_1

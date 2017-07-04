@@ -32,10 +32,8 @@
     .param p4, "objects"    # [Ljava/lang/CharSequence;
 
     .prologue
-    .line 1264
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;II[Ljava/lang/Object;)V
 
-    .line 1265
     return-void
 .end method
 
@@ -46,7 +44,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 1274
     int-to-long v0, p1
 
     return-wide v0
@@ -56,7 +53,6 @@
     .locals 1
 
     .prologue
-    .line 1269
     const/4 v0, 0x1
 
     return v0

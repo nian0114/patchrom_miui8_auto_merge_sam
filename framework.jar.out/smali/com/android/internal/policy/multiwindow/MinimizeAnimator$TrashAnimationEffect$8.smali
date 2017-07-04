@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 1486
     iput-object p1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$8;->this$1:Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;
 
     iput-boolean p2, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$8;->val$removeTask:Z
@@ -49,7 +48,6 @@
     .param p1, "arg0"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 1497
     # getter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->DEBUG_MINIMIZE_REMOVE_ANIM:Z
     invoke-static {}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->access$4300()Z
 
@@ -57,14 +55,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 1498
     const-string v0, "MinimizeAnimator"
 
     const-string v1, "MinimizeAnimator::hideTrashScaleAlphaAnimation() End of ScaleUpAnimation"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1501
     :cond_0
     iget-object v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$8;->this$1:Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;
 
@@ -77,12 +73,10 @@
 
     if-nez v0, :cond_1
 
-    .line 1502
     iget-object v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$8;->this$1:Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->hideTrash()V
 
-    .line 1503
     iget-object v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$8;->this$1:Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;
 
     # getter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->trash:Landroid/view/View;
@@ -92,7 +86,6 @@
 
     invoke-virtual {v0}, Landroid/view/View;->clearAnimation()V
 
-    .line 1504
     iget-object v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$8;->this$1:Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;
 
     # getter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->trashCover:Landroid/widget/ImageView;
@@ -102,12 +95,10 @@
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->clearAnimation()V
 
-    .line 1505
     iget-boolean v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$8;->val$removeTask:Z
 
     if-eqz v0, :cond_2
 
-    .line 1506
     iget-object v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$8;->this$1:Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;
 
     # getter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->trashText:Landroid/widget/TextView;
@@ -117,7 +108,6 @@
 
     invoke-virtual {v0}, Landroid/widget/TextView;->clearAnimation()V
 
-    .line 1507
     iget-object v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$8;->this$1:Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;
 
     # getter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->trashBodyForRemoveAnimation:Landroid/widget/ImageView;
@@ -127,7 +117,6 @@
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->clearAnimation()V
 
-    .line 1508
     iget-object v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$8;->this$1:Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;
 
     iget-object v0, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
@@ -135,7 +124,6 @@
     # invokes: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->hide()V
     invoke-static {v0}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->access$3500(Lcom/android/internal/policy/multiwindow/MinimizeAnimator;)V
 
-    .line 1509
     iget-object v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$8;->this$1:Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;
 
     iget-object v0, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
@@ -160,18 +148,15 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/samsung/android/multiwindow/MultiWindowFacade;->removeAllTasks(Landroid/os/IBinder;IZ)V
 
-    .line 1517
     :cond_1
     :goto_0
     return-void
 
-    .line 1512
     :cond_2
     iget-object v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$8;->val$touchableRegion:Landroid/graphics/Rect;
 
     if-eqz v0, :cond_1
 
-    .line 1513
     iget-object v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$8;->this$1:Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;
 
     iget-object v0, v0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
@@ -191,7 +176,6 @@
     .param p1, "arg0"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 1494
     return-void
 .end method
 
@@ -200,7 +184,6 @@
     .param p1, "arg0"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 1488
     # getter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->DEBUG_MINIMIZE_REMOVE_ANIM:Z
     invoke-static {}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->access$4300()Z
 
@@ -208,14 +191,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 1489
     const-string v0, "MinimizeAnimator"
 
     const-string v1, "MinimizeAnimator::hideTrashScaleAlphaAnimation() Start of ScaleUpAnimation"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1491
     :cond_0
     return-void
 .end method

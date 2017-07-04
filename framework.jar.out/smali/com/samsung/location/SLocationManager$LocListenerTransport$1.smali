@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 350
     iput-object p1, p0, Lcom/samsung/location/SLocationManager$LocListenerTransport$1;->this$1:Lcom/samsung/location/SLocationManager$LocListenerTransport;
 
     iput-object p2, p0, Lcom/samsung/location/SLocationManager$LocListenerTransport$1;->val$this$0:Lcom/samsung/location/SLocationManager;
@@ -42,12 +41,10 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 353
     iget-object v0, p0, Lcom/samsung/location/SLocationManager$LocListenerTransport$1;->this$1:Lcom/samsung/location/SLocationManager$LocListenerTransport;
 
     # invokes: Lcom/samsung/location/SLocationManager$LocListenerTransport;->_handleMessage(Landroid/os/Message;)V
     invoke-static {v0, p1}, Lcom/samsung/location/SLocationManager$LocListenerTransport;->access$000(Lcom/samsung/location/SLocationManager$LocListenerTransport;Landroid/os/Message;)V
 
-    .line 354
     return-void
 .end method

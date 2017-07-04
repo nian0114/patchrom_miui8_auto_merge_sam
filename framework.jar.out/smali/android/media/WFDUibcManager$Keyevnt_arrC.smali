@@ -29,7 +29,6 @@
     .locals 0
 
     .prologue
-    .line 99
     iput-object p1, p0, Landroid/media/WFDUibcManager$Keyevnt_arrC;->this$0:Landroid/media/WFDUibcManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "x1"    # Landroid/media/WFDUibcManager$1;
 
     .prologue
-    .line 99
     invoke-direct {p0, p1}, Landroid/media/WFDUibcManager$Keyevnt_arrC;-><init>(Landroid/media/WFDUibcManager;)V
 
     return-void

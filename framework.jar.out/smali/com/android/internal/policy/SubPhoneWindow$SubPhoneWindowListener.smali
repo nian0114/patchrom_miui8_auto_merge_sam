@@ -24,10 +24,8 @@
     .locals 0
 
     .prologue
-    .line 364
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 365
     return-void
 .end method
 
@@ -38,7 +36,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 369
     return-void
 .end method
 
@@ -48,7 +45,6 @@
     .param p2, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 392
     const/4 v0, 0x0
 
     return v0
@@ -60,17 +56,14 @@
     .param p2, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 373
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
     packed-switch v0, :pswitch_data_0
 
-    .line 385
     const/4 v0, 0x0
 
-    .line 387
     :goto_0
     return v0
 
@@ -79,7 +72,6 @@
 
     goto :goto_0
 
-    .line 373
     nop
 
     :pswitch_data_0

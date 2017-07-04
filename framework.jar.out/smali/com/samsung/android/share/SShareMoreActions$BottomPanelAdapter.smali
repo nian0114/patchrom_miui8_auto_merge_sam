@@ -53,16 +53,13 @@
     .end annotation
 
     .prologue
-    .line 306
     .local p4, "pArSrc":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/samsung/android/share/SShareMoreActions$ActionItem;>;"
     iput-object p1, p0, Lcom/samsung/android/share/SShareMoreActions$BottomPanelAdapter;->this$0:Lcom/samsung/android/share/SShareMoreActions;
 
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
-    .line 307
     iput-object p2, p0, Lcom/samsung/android/share/SShareMoreActions$BottomPanelAdapter;->context:Landroid/content/Context;
 
-    .line 308
     iget-object v0, p0, Lcom/samsung/android/share/SShareMoreActions$BottomPanelAdapter;->context:Landroid/content/Context;
 
     const-string v1, "layout_inflater"
@@ -75,13 +72,10 @@
 
     iput-object v0, p0, Lcom/samsung/android/share/SShareMoreActions$BottomPanelAdapter;->inflater:Landroid/view/LayoutInflater;
 
-    .line 309
     iput-object p4, p0, Lcom/samsung/android/share/SShareMoreActions$BottomPanelAdapter;->arSrc:Ljava/util/ArrayList;
 
-    .line 310
     iput p3, p0, Lcom/samsung/android/share/SShareMoreActions$BottomPanelAdapter;->layout:I
 
-    .line 311
     return-void
 .end method
 
@@ -91,7 +85,6 @@
     .locals 1
 
     .prologue
-    .line 314
     iget-object v0, p0, Lcom/samsung/android/share/SShareMoreActions$BottomPanelAdapter;->arSrc:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -106,7 +99,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 300
     invoke-virtual {p0, p1}, Lcom/samsung/android/share/SShareMoreActions$BottomPanelAdapter;->getItem(I)Ljava/lang/String;
 
     move-result-object v0
@@ -119,7 +111,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 318
     iget-object v0, p0, Lcom/samsung/android/share/SShareMoreActions$BottomPanelAdapter;->arSrc:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -138,7 +129,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 326
     iget-object v0, p0, Lcom/samsung/android/share/SShareMoreActions$BottomPanelAdapter;->arSrc:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -157,7 +147,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 322
     int-to-long v0, p1
 
     return-wide v0
@@ -172,14 +161,11 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 331
     move v2, p1
 
-    .line 332
     .local v2, "pos":I
     if-nez p2, :cond_0
 
-    .line 333
     iget-object v4, p0, Lcom/samsung/android/share/SShareMoreActions$BottomPanelAdapter;->inflater:Landroid/view/LayoutInflater;
 
     iget v5, p0, Lcom/samsung/android/share/SShareMoreActions$BottomPanelAdapter;->layout:I
@@ -188,7 +174,6 @@
 
     move-result-object p2
 
-    .line 335
     :cond_0
     iget-object v4, p0, Lcom/samsung/android/share/SShareMoreActions$BottomPanelAdapter;->this$0:Lcom/samsung/android/share/SShareMoreActions;
 
@@ -207,7 +192,6 @@
 
     iget v0, v4, Landroid/content/res/Configuration;->fontScale:F
 
-    .line 336
     .local v0, "fontScale":F
     const v4, 0x3f99999a    # 1.2f
 
@@ -215,10 +199,8 @@
 
     if-lez v4, :cond_1
 
-    .line 337
     const v0, 0x3f99999a    # 1.2f
 
-    .line 340
     :cond_1
     iget-object v4, p0, Lcom/samsung/android/share/SShareMoreActions$BottomPanelAdapter;->this$0:Lcom/samsung/android/share/SShareMoreActions;
 
@@ -229,12 +211,10 @@
 
     if-eqz v4, :cond_2
 
-    .line 341
     const v4, 0x10809c5
 
     invoke-virtual {p2, v4}, Landroid/view/View;->setBackgroundResource(I)V
 
-    .line 344
     :cond_2
     const v4, 0x1020006
 
@@ -244,7 +224,6 @@
 
     check-cast v1, Landroid/widget/ImageView;
 
-    .line 346
     .local v1, "img":Landroid/widget/ImageView;
     iget-object v4, p0, Lcom/samsung/android/share/SShareMoreActions$BottomPanelAdapter;->arSrc:Ljava/util/ArrayList;
 
@@ -258,7 +237,6 @@
 
     invoke-virtual {v1, v4}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 347
     const v4, 0x1020083
 
     invoke-virtual {p2, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -267,7 +245,6 @@
 
     check-cast v3, Landroid/widget/TextView;
 
-    .line 348
     .local v3, "txt":Landroid/widget/TextView;
     iget-object v4, p0, Lcom/samsung/android/share/SShareMoreActions$BottomPanelAdapter;->this$0:Lcom/samsung/android/share/SShareMoreActions;
 
@@ -291,7 +268,6 @@
     # setter for: Lcom/samsung/android/share/SShareMoreActions;->defaultTextSize:F
     invoke-static {v4, v5}, Lcom/samsung/android/share/SShareMoreActions;->access$202(Lcom/samsung/android/share/SShareMoreActions;F)F
 
-    .line 349
     iget-object v4, p0, Lcom/samsung/android/share/SShareMoreActions$BottomPanelAdapter;->this$0:Lcom/samsung/android/share/SShareMoreActions;
 
     # getter for: Lcom/samsung/android/share/SShareMoreActions;->defaultTextSize:F
@@ -303,7 +279,6 @@
 
     invoke-virtual {v3, v7, v4}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 350
     iget-object v4, p0, Lcom/samsung/android/share/SShareMoreActions$BottomPanelAdapter;->arSrc:Ljava/util/ArrayList;
 
     invoke-virtual {v4, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -316,6 +291,5 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 357
     return-object p2
 .end method

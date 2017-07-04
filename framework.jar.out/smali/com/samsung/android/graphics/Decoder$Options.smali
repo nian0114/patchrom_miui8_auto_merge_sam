@@ -43,15 +43,12 @@
     .locals 1
 
     .prologue
-    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 125
     sget-object v0, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     iput-object v0, p0, Lcom/samsung/android/graphics/Decoder$Options;->inPreferredConfig:Landroid/graphics/Bitmap$Config;
 
-    .line 172
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/samsung/android/graphics/Decoder$Options;->isPreview:Z

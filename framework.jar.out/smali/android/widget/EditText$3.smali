@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 331
     iput-object p1, p0, Landroid/widget/EditText$3;->this$0:Landroid/widget/EditText;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 4
 
     .prologue
-    .line 334
     const/4 v1, 0x2
 
     const/4 v2, -0x1
@@ -50,15 +48,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 338
     :goto_0
     return-void
 
-    .line 335
     :catch_0
     move-exception v0
 
-    .line 336
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "TextView"
 

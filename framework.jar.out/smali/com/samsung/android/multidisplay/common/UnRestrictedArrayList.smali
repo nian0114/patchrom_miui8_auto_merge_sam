@@ -24,11 +24,9 @@
     .locals 0
 
     .prologue
-    .line 12
     .local p0, "this":Lcom/samsung/android/multidisplay/common/UnRestrictedArrayList;, "Lcom/samsung/android/multidisplay/common/UnRestrictedArrayList<TE;>;"
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 13
     return-void
 .end method
 
@@ -37,11 +35,9 @@
     .param p1, "capacity"    # I
 
     .prologue
-    .line 20
     .local p0, "this":Lcom/samsung/android/multidisplay/common/UnRestrictedArrayList;, "Lcom/samsung/android/multidisplay/common/UnRestrictedArrayList<TE;>;"
     invoke-direct {p0, p1}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 21
     return-void
 .end method
 
@@ -56,12 +52,10 @@
     .end annotation
 
     .prologue
-    .line 16
     .local p0, "this":Lcom/samsung/android/multidisplay/common/UnRestrictedArrayList;, "Lcom/samsung/android/multidisplay/common/UnRestrictedArrayList<TE;>;"
     .local p1, "collection":Ljava/util/Collection;, "Ljava/util/Collection<+TE;>;"
     invoke-direct {p0, p1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 17
     return-void
 .end method
 
@@ -77,7 +71,6 @@
     .end annotation
 
     .prologue
-    .line 26
     .local p0, "this":Lcom/samsung/android/multidisplay/common/UnRestrictedArrayList;, "Lcom/samsung/android/multidisplay/common/UnRestrictedArrayList<TE;>;"
     .local p2, "object":Ljava/lang/Object;, "TE;"
     :goto_0
@@ -87,7 +80,6 @@
 
     if-lt p1, v0, :cond_0
 
-    .line 27
     invoke-super {p0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
@@ -98,11 +90,9 @@
 
     goto :goto_0
 
-    .line 29
     :cond_0
     invoke-super {p0, p1, p2}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    .line 33
     return-void
 .end method
 
@@ -116,7 +106,6 @@
     .end annotation
 
     .prologue
-    .line 39
     .local p0, "this":Lcom/samsung/android/multidisplay/common/UnRestrictedArrayList;, "Lcom/samsung/android/multidisplay/common/UnRestrictedArrayList<TE;>;"
     :try_start_0
     invoke-super {p0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -125,15 +114,12 @@
 
     move-result-object v1
 
-    .line 41
     :goto_0
     return-object v1
 
-    .line 40
     :catch_0
     move-exception v0
 
-    .line 41
     .local v0, "e":Ljava/lang/IndexOutOfBoundsException;
     const/4 v1, 0x0
 
@@ -150,7 +136,6 @@
     .end annotation
 
     .prologue
-    .line 51
     .local p0, "this":Lcom/samsung/android/multidisplay/common/UnRestrictedArrayList;, "Lcom/samsung/android/multidisplay/common/UnRestrictedArrayList<TE;>;"
     .local p2, "object":Ljava/lang/Object;, "TE;"
     :goto_0
@@ -160,7 +145,6 @@
 
     if-lt p1, v0, :cond_0
 
-    .line 52
     invoke-super {p0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
@@ -171,7 +155,6 @@
 
     goto :goto_0
 
-    .line 54
     :cond_0
     invoke-super {p0, p1, p2}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
 

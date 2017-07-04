@@ -97,26 +97,20 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 408
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 409
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 410
     .local v0, "appContext":Landroid/content/Context;
     if-eqz v0, :cond_0
 
-    .line 411
     iput-object v0, p0, Landroid/telecom/TelecomManager;->mContext:Landroid/content/Context;
 
-    .line 415
     :goto_0
     return-void
 
-    .line 413
     :cond_0
     iput-object p1, p0, Landroid/telecom/TelecomManager;->mContext:Landroid/content/Context;
 
@@ -128,8 +122,7 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 402
-    const-string/jumbo v0, "telecom"
+    const-string v0, "telecom"
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -144,8 +137,7 @@
     .locals 1
 
     .prologue
-    .line 1258
-    const-string/jumbo v0, "telecom"
+    const-string v0, "telecom"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -162,7 +154,6 @@
     .locals 3
 
     .prologue
-    .line 1262
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->getTelecomService()Lcom/android/internal/telecom/ITelecomService;
 
     move-result-object v1
@@ -171,23 +162,19 @@
 
     const/4 v0, 0x1
 
-    .line 1263
     .local v0, "isConnected":Z
     :goto_0
     if-nez v0, :cond_0
 
-    .line 1264
     const-string v1, "TelecomManager"
 
     const-string v2, "Telecom Service not found."
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1266
     :cond_0
     return v0
 
-    .line 1262
     .end local v0    # "isConnected":Z
     :cond_1
     const/4 v0, 0x0
@@ -201,7 +188,6 @@
     .locals 3
 
     .prologue
-    .line 982
     :try_start_0
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->isServiceConnected()Z
 
@@ -209,7 +195,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 983
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->getTelecomService()Lcom/android/internal/telecom/ITelecomService;
 
     move-result-object v1
@@ -218,16 +203,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 988
     :cond_0
     :goto_0
     return-void
 
-    .line 985
     :catch_0
     move-exception v0
 
-    .line 986
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "TelecomManager"
 
@@ -244,7 +226,6 @@
     .param p2, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 1056
     :try_start_0
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->isServiceConnected()Z
 
@@ -252,7 +233,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 1057
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->getTelecomService()Lcom/android/internal/telecom/ITelecomService;
 
     move-result-object v1
@@ -269,16 +249,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1063
     :cond_1
     :goto_0
     return-void
 
-    .line 1060
     :catch_0
     move-exception v0
 
-    .line 1061
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "TelecomManager"
 
@@ -311,7 +288,6 @@
     .param p2, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 1079
     :try_start_0
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->isServiceConnected()Z
 
@@ -319,7 +295,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 1080
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->getTelecomService()Lcom/android/internal/telecom/ITelecomService;
 
     move-result-object v1
@@ -336,16 +311,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1086
     :cond_1
     :goto_0
     return-void
 
-    .line 1083
     :catch_0
     move-exception v0
 
-    .line 1084
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "TelecomManager"
 
@@ -376,16 +348,13 @@
     .locals 4
 
     .prologue
-    .line 1162
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->getTelecomService()Lcom/android/internal/telecom/ITelecomService;
 
     move-result-object v1
 
-    .line 1163
     .local v1, "service":Lcom/android/internal/telecom/ITelecomService;
     if-eqz v1, :cond_0
 
-    .line 1165
     :try_start_0
     iget-object v2, p0, Landroid/telecom/TelecomManager;->mContext:Landroid/content/Context;
 
@@ -397,16 +366,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1170
     :cond_0
     :goto_0
     return-void
 
-    .line 1166
     :catch_0
     move-exception v0
 
-    .line 1167
     .local v0, "e":Landroid/os/RemoteException;
     const-string v2, "TelecomManager"
 
@@ -421,7 +387,6 @@
     .locals 3
 
     .prologue
-    .line 739
     :try_start_0
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->isServiceConnected()Z
 
@@ -429,7 +394,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 740
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->getTelecomService()Lcom/android/internal/telecom/ITelecomService;
 
     move-result-object v1
@@ -444,16 +408,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 745
     :cond_0
     :goto_0
     return-void
 
-    .line 742
     :catch_0
     move-exception v0
 
-    .line 743
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "TelecomManager"
 
@@ -469,7 +430,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 753
     :try_start_0
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->isServiceConnected()Z
 
@@ -483,7 +443,6 @@
 
     if-nez v1, :cond_0
 
-    .line 754
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->getTelecomService()Lcom/android/internal/telecom/ITelecomService;
 
     move-result-object v1
@@ -492,16 +451,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 759
     :cond_0
     :goto_0
     return-void
 
-    .line 756
     :catch_0
     move-exception v0
 
-    .line 757
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "TelecomManager"
 
@@ -516,10 +472,8 @@
     .locals 0
 
     .prologue
-    .line 729
     invoke-virtual {p0}, Landroid/telecom/TelecomManager;->clearAccounts()V
 
-    .line 730
     return-void
 .end method
 
@@ -529,31 +483,25 @@
     .param p2, "isEnabled"    # Z
 
     .prologue
-    .line 1247
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->getTelecomService()Lcom/android/internal/telecom/ITelecomService;
 
     move-result-object v1
 
-    .line 1248
     .local v1, "service":Lcom/android/internal/telecom/ITelecomService;
     if-eqz v1, :cond_0
 
-    .line 1250
     :try_start_0
     invoke-interface {v1, p1, p2}, Lcom/android/internal/telecom/ITelecomService;->enablePhoneAccount(Landroid/telecom/PhoneAccountHandle;Z)Z
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1255
     :cond_0
     :goto_0
     return-void
 
-    .line 1251
     :catch_0
     move-exception v0
 
-    .line 1252
     .local v0, "e":Landroid/os/RemoteException;
     const-string v2, "TelecomManager"
 
@@ -568,7 +516,6 @@
     .locals 3
 
     .prologue
-    .line 963
     :try_start_0
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->isServiceConnected()Z
 
@@ -576,7 +523,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 964
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->getTelecomService()Lcom/android/internal/telecom/ITelecomService;
 
     move-result-object v1
@@ -587,15 +533,12 @@
 
     move-result v1
 
-    .line 969
     :goto_0
     return v1
 
-    .line 966
     :catch_0
     move-exception v0
 
-    .line 967
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "TelecomManager"
 
@@ -603,7 +546,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 969
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -616,18 +558,15 @@
     .param p1, "accountHandle"    # Landroid/telecom/PhoneAccountHandle;
 
     .prologue
-    .line 1144
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->getTelecomService()Lcom/android/internal/telecom/ITelecomService;
 
     move-result-object v1
 
-    .line 1145
     .local v1, "service":Lcom/android/internal/telecom/ITelecomService;
     if-eqz v1, :cond_0
 
     if-eqz p1, :cond_0
 
-    .line 1147
     :try_start_0
     iget-object v2, p0, Landroid/telecom/TelecomManager;->mContext:Landroid/content/Context;
 
@@ -641,15 +580,12 @@
 
     move-result-object v2
 
-    .line 1152
     :goto_0
     return-object v2
 
-    .line 1148
     :catch_0
     move-exception v0
 
-    .line 1149
     .local v0, "e":Landroid/os/RemoteException;
     const-string v2, "TelecomManager"
 
@@ -657,7 +593,6 @@
 
     invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1152
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const-string v2, "content://icc/adn"
@@ -682,7 +617,6 @@
     .end annotation
 
     .prologue
-    .line 675
     :try_start_0
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->isServiceConnected()Z
 
@@ -690,7 +624,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 676
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->getTelecomService()Lcom/android/internal/telecom/ITelecomService;
 
     move-result-object v1
@@ -701,15 +634,12 @@
 
     move-result-object v1
 
-    .line 681
     :goto_0
     return-object v1
 
-    .line 678
     :catch_0
     move-exception v0
 
-    .line 679
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "TelecomManager"
 
@@ -717,7 +647,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 681
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     sget-object v1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
@@ -738,7 +667,6 @@
     .end annotation
 
     .prologue
-    .line 657
     :try_start_0
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->isServiceConnected()Z
 
@@ -746,7 +674,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 658
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->getTelecomService()Lcom/android/internal/telecom/ITelecomService;
 
     move-result-object v1
@@ -757,15 +684,12 @@
 
     move-result-object v1
 
-    .line 663
     :goto_0
     return-object v1
 
-    .line 660
     :catch_0
     move-exception v0
 
-    .line 661
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "TelecomManager"
 
@@ -773,7 +697,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 663
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     sget-object v1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
@@ -785,7 +708,6 @@
     .locals 3
 
     .prologue
-    .line 639
     :try_start_0
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->isServiceConnected()Z
 
@@ -793,7 +715,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 640
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->getTelecomService()Lcom/android/internal/telecom/ITelecomService;
 
     move-result-object v1
@@ -804,15 +725,12 @@
 
     move-result v1
 
-    .line 645
     :goto_0
     return v1
 
-    .line 642
     :catch_0
     move-exception v0
 
-    .line 643
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "TelecomManager"
 
@@ -820,7 +738,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 645
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -841,7 +758,6 @@
     .end annotation
 
     .prologue
-    .line 571
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Landroid/telecom/TelecomManager;->getCallCapablePhoneAccounts(Z)Ljava/util/List;
@@ -865,7 +781,6 @@
     .end annotation
 
     .prologue
-    .line 583
     :try_start_0
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->isServiceConnected()Z
 
@@ -873,7 +788,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 584
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->getTelecomService()Lcom/android/internal/telecom/ITelecomService;
 
     move-result-object v1
@@ -890,15 +804,12 @@
 
     move-result-object v1
 
-    .line 591
     :goto_0
     return-object v1
 
-    .line 587
     :catch_0
     move-exception v0
 
-    .line 588
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "TelecomManager"
 
@@ -928,7 +839,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 591
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     new-instance v1, Ljava/util/ArrayList;
@@ -942,7 +852,6 @@
     .locals 3
 
     .prologue
-    .line 928
     :try_start_0
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->isServiceConnected()Z
 
@@ -950,7 +859,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 929
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->getTelecomService()Lcom/android/internal/telecom/ITelecomService;
 
     move-result-object v1
@@ -961,15 +869,12 @@
 
     move-result v1
 
-    .line 934
     :goto_0
     return v1
 
-    .line 931
     :catch_0
     move-exception v0
 
-    .line 932
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "TelecomManager"
 
@@ -977,7 +882,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 934
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -989,7 +893,6 @@
     .locals 1
 
     .prologue
-    .line 532
     invoke-virtual {p0}, Landroid/telecom/TelecomManager;->getSimCallManager()Landroid/telecom/PhoneAccountHandle;
 
     move-result-object v0
@@ -1001,7 +904,6 @@
     .locals 3
 
     .prologue
-    .line 1032
     :try_start_0
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->isServiceConnected()Z
 
@@ -1009,7 +911,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1033
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->getTelecomService()Lcom/android/internal/telecom/ITelecomService;
 
     move-result-object v1
@@ -1026,15 +927,12 @@
 
     move-result v1
 
-    .line 1038
     :goto_0
     return v1
 
-    .line 1035
     :catch_0
     move-exception v0
 
-    .line 1036
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "TelecomManager"
 
@@ -1042,7 +940,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1038
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -1054,7 +951,6 @@
     .locals 3
 
     .prologue
-    .line 787
     :try_start_0
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->isServiceConnected()Z
 
@@ -1062,7 +958,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 788
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->getTelecomService()Lcom/android/internal/telecom/ITelecomService;
 
     move-result-object v1
@@ -1073,15 +968,12 @@
 
     move-result-object v1
 
-    .line 793
     :goto_0
     return-object v1
 
-    .line 790
     :catch_0
     move-exception v0
 
-    .line 791
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "TelecomManager"
 
@@ -1089,7 +981,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 793
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -1102,7 +993,6 @@
     .param p1, "uriScheme"    # Ljava/lang/String;
 
     .prologue
-    .line 438
     :try_start_0
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->isServiceConnected()Z
 
@@ -1110,7 +1000,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 439
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->getTelecomService()Lcom/android/internal/telecom/ITelecomService;
 
     move-result-object v1
@@ -1127,15 +1016,12 @@
 
     move-result-object v1
 
-    .line 445
     :goto_0
     return-object v1
 
-    .line 442
     :catch_0
     move-exception v0
 
-    .line 443
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "TelecomManager"
 
@@ -1143,7 +1029,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 445
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -1155,7 +1040,6 @@
     .locals 3
 
     .prologue
-    .line 770
     :try_start_0
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->isServiceConnected()Z
 
@@ -1163,7 +1047,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 771
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->getTelecomService()Lcom/android/internal/telecom/ITelecomService;
 
     move-result-object v1
@@ -1174,15 +1057,12 @@
 
     move-result-object v1
 
-    .line 776
     :goto_0
     return-object v1
 
-    .line 773
     :catch_0
     move-exception v0
 
-    .line 774
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "TelecomManager"
 
@@ -1190,7 +1070,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 776
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -1203,7 +1082,6 @@
     .param p1, "accountHandle"    # Landroid/telecom/PhoneAccountHandle;
 
     .prologue
-    .line 884
     :try_start_0
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->isServiceConnected()Z
 
@@ -1211,7 +1089,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 885
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->getTelecomService()Lcom/android/internal/telecom/ITelecomService;
 
     move-result-object v1
@@ -1228,15 +1105,12 @@
 
     move-result-object v1
 
-    .line 891
     :goto_0
     return-object v1
 
-    .line 888
     :catch_0
     move-exception v0
 
-    .line 889
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "TelecomManager"
 
@@ -1244,7 +1118,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 891
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -1257,7 +1130,6 @@
     .param p1, "account"    # Landroid/telecom/PhoneAccountHandle;
 
     .prologue
-    .line 621
     :try_start_0
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->isServiceConnected()Z
 
@@ -1265,7 +1137,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 622
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->getTelecomService()Lcom/android/internal/telecom/ITelecomService;
 
     move-result-object v1
@@ -1276,15 +1147,12 @@
 
     move-result-object v1
 
-    .line 627
     :goto_0
     return-object v1
 
-    .line 624
     :catch_0
     move-exception v0
 
-    .line 625
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "TelecomManager"
 
@@ -1292,7 +1160,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 627
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -1313,7 +1180,6 @@
     .end annotation
 
     .prologue
-    .line 603
     :try_start_0
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->isServiceConnected()Z
 
@@ -1321,7 +1187,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 604
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->getTelecomService()Lcom/android/internal/telecom/ITelecomService;
 
     move-result-object v1
@@ -1338,15 +1203,12 @@
 
     move-result-object v1
 
-    .line 609
     :goto_0
     return-object v1
 
-    .line 606
     :catch_0
     move-exception v0
 
-    .line 607
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "TelecomManager"
 
@@ -1354,7 +1216,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 609
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -1378,7 +1239,6 @@
     .end annotation
 
     .prologue
-    .line 551
     :try_start_0
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->isServiceConnected()Z
 
@@ -1386,7 +1246,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 552
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->getTelecomService()Lcom/android/internal/telecom/ITelecomService;
 
     move-result-object v1
@@ -1403,15 +1262,12 @@
 
     move-result-object v1
 
-    .line 558
     :goto_0
     return-object v1
 
-    .line 555
     :catch_0
     move-exception v0
 
-    .line 556
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "TelecomManager"
 
@@ -1419,7 +1275,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 558
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     new-instance v1, Ljava/util/ArrayList;
@@ -1433,7 +1288,6 @@
     .locals 3
 
     .prologue
-    .line 493
     :try_start_0
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->isServiceConnected()Z
 
@@ -1441,7 +1295,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 494
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->getTelecomService()Lcom/android/internal/telecom/ITelecomService;
 
     move-result-object v1
@@ -1452,15 +1305,12 @@
 
     move-result-object v1
 
-    .line 499
     :goto_0
     return-object v1
 
-    .line 496
     :catch_0
     move-exception v0
 
-    .line 497
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "TelecomManager"
 
@@ -1468,7 +1318,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 499
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -1481,7 +1330,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 513
     :try_start_0
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->isServiceConnected()Z
 
@@ -1489,7 +1337,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 514
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->getTelecomService()Lcom/android/internal/telecom/ITelecomService;
 
     move-result-object v1
@@ -1500,15 +1347,12 @@
 
     move-result-object v1
 
-    .line 519
     :goto_0
     return-object v1
 
-    .line 516
     :catch_0
     move-exception v0
 
-    .line 517
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "TelecomManager"
 
@@ -1516,7 +1360,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 519
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -1528,7 +1371,6 @@
     .locals 3
 
     .prologue
-    .line 829
     :try_start_0
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->isServiceConnected()Z
 
@@ -1536,7 +1378,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 830
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->getTelecomService()Lcom/android/internal/telecom/ITelecomService;
 
     move-result-object v1
@@ -1547,15 +1388,12 @@
 
     move-result-object v1
 
-    .line 835
     :goto_0
     return-object v1
 
-    .line 832
     :catch_0
     move-exception v0
 
-    .line 833
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "TelecomManager"
 
@@ -1563,7 +1401,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 835
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -1575,7 +1412,6 @@
     .locals 3
 
     .prologue
-    .line 461
     :try_start_0
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->isServiceConnected()Z
 
@@ -1583,7 +1419,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 462
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->getTelecomService()Lcom/android/internal/telecom/ITelecomService;
 
     move-result-object v1
@@ -1594,15 +1429,12 @@
 
     move-result-object v1
 
-    .line 467
     :goto_0
     return-object v1
 
-    .line 464
     :catch_0
     move-exception v0
 
-    .line 465
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "TelecomManager"
 
@@ -1610,7 +1442,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 467
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -1623,7 +1454,6 @@
     .param p1, "accountHandle"    # Landroid/telecom/PhoneAccountHandle;
 
     .prologue
-    .line 866
     :try_start_0
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->isServiceConnected()Z
 
@@ -1631,7 +1461,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 867
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->getTelecomService()Lcom/android/internal/telecom/ITelecomService;
 
     move-result-object v1
@@ -1648,15 +1477,12 @@
 
     move-result-object v1
 
-    .line 873
     :goto_0
     return-object v1
 
-    .line 870
     :catch_0
     move-exception v0
 
-    .line 871
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "TelecomManager"
 
@@ -1664,7 +1490,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 873
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -1677,16 +1502,13 @@
     .param p1, "dialString"    # Ljava/lang/String;
 
     .prologue
-    .line 1101
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->getTelecomService()Lcom/android/internal/telecom/ITelecomService;
 
     move-result-object v1
 
-    .line 1102
     .local v1, "service":Lcom/android/internal/telecom/ITelecomService;
     if-eqz v1, :cond_0
 
-    .line 1104
     :try_start_0
     iget-object v2, p0, Landroid/telecom/TelecomManager;->mContext:Landroid/content/Context;
 
@@ -1700,15 +1522,12 @@
 
     move-result v2
 
-    .line 1109
     :goto_0
     return v2
 
-    .line 1105
     :catch_0
     move-exception v0
 
-    .line 1106
     .local v0, "e":Landroid/os/RemoteException;
     const-string v2, "TelecomManager"
 
@@ -1716,7 +1535,6 @@
 
     invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1109
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v2, 0x0
@@ -1730,16 +1548,13 @@
     .param p2, "accountHandle"    # Landroid/telecom/PhoneAccountHandle;
 
     .prologue
-    .line 1125
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->getTelecomService()Lcom/android/internal/telecom/ITelecomService;
 
     move-result-object v1
 
-    .line 1126
     .local v1, "service":Lcom/android/internal/telecom/ITelecomService;
     if-eqz v1, :cond_0
 
-    .line 1128
     :try_start_0
     iget-object v2, p0, Landroid/telecom/TelecomManager;->mContext:Landroid/content/Context;
 
@@ -1753,15 +1568,12 @@
 
     move-result v2
 
-    .line 1134
     :goto_0
     return v2
 
-    .line 1130
     :catch_0
     move-exception v0
 
-    .line 1131
     .local v0, "e":Landroid/os/RemoteException;
     const-string v2, "TelecomManager"
 
@@ -1769,7 +1581,6 @@
 
     invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1134
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v2, 0x0
@@ -1781,7 +1592,6 @@
     .locals 3
 
     .prologue
-    .line 903
     :try_start_0
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->isServiceConnected()Z
 
@@ -1789,7 +1599,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 904
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->getTelecomService()Lcom/android/internal/telecom/ITelecomService;
 
     move-result-object v1
@@ -1806,15 +1615,12 @@
 
     move-result v1
 
-    .line 909
     :goto_0
     return v1
 
-    .line 906
     :catch_0
     move-exception v0
 
-    .line 907
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "TelecomManager"
 
@@ -1822,7 +1628,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 909
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -1834,7 +1639,6 @@
     .locals 3
 
     .prologue
-    .line 945
     :try_start_0
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->isServiceConnected()Z
 
@@ -1842,7 +1646,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 946
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->getTelecomService()Lcom/android/internal/telecom/ITelecomService;
 
     move-result-object v1
@@ -1859,15 +1662,12 @@
 
     move-result v1
 
-    .line 951
     :goto_0
     return v1
 
-    .line 948
     :catch_0
     move-exception v0
 
-    .line 949
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "TelecomManager"
 
@@ -1875,7 +1675,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 951
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -1887,7 +1686,6 @@
     .locals 3
 
     .prologue
-    .line 1011
     :try_start_0
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->isServiceConnected()Z
 
@@ -1895,7 +1693,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1012
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->getTelecomService()Lcom/android/internal/telecom/ITelecomService;
 
     move-result-object v1
@@ -1912,15 +1709,12 @@
 
     move-result v1
 
-    .line 1017
     :goto_0
     return v1
 
-    .line 1014
     :catch_0
     move-exception v0
 
-    .line 1015
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "TelecomManager"
 
@@ -1928,7 +1722,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1017
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -1942,7 +1735,6 @@
     .param p2, "number"    # Ljava/lang/String;
 
     .prologue
-    .line 847
     :try_start_0
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->isServiceConnected()Z
 
@@ -1950,7 +1742,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 848
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->getTelecomService()Lcom/android/internal/telecom/ITelecomService;
 
     move-result-object v1
@@ -1967,15 +1758,12 @@
 
     move-result v1
 
-    .line 854
     :goto_0
     return v1
 
-    .line 851
     :catch_0
     move-exception v0
 
-    .line 852
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "TelecomManager"
 
@@ -1983,7 +1771,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 854
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -1997,26 +1784,21 @@
     .param p2, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 1224
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->getTelecomService()Lcom/android/internal/telecom/ITelecomService;
 
     move-result-object v1
 
-    .line 1225
     .local v1, "service":Lcom/android/internal/telecom/ITelecomService;
     if-eqz v1, :cond_2
 
-    .line 1226
     if-nez p1, :cond_0
 
-    .line 1227
     const-string v2, "TelecomManager"
 
     const-string v3, "Cannot place call to empty address."
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1230
     :cond_0
     if-nez p2, :cond_1
 
@@ -2037,16 +1819,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1236
     :cond_2
     :goto_0
     return-void
 
-    .line 1232
     :catch_0
     move-exception v0
 
-    .line 1233
     .local v0, "e":Landroid/os/RemoteException;
     const-string v2, "TelecomManager"
 
@@ -2062,7 +1841,6 @@
     .param p1, "account"    # Landroid/telecom/PhoneAccount;
 
     .prologue
-    .line 700
     :try_start_0
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->isServiceConnected()Z
 
@@ -2070,7 +1848,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 701
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->getTelecomService()Lcom/android/internal/telecom/ITelecomService;
 
     move-result-object v1
@@ -2079,16 +1856,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 706
     :cond_0
     :goto_0
     return-void
 
-    .line 703
     :catch_0
     move-exception v0
 
-    .line 704
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "TelecomManager"
 
@@ -2104,7 +1878,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 812
     :try_start_0
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->isServiceConnected()Z
 
@@ -2112,7 +1885,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 813
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->getTelecomService()Lcom/android/internal/telecom/ITelecomService;
 
     move-result-object v1
@@ -2123,15 +1895,12 @@
 
     move-result v1
 
-    .line 818
     :goto_0
     return v1
 
-    .line 815
     :catch_0
     move-exception v0
 
-    .line 816
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "TelecomManager"
 
@@ -2139,7 +1908,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 818
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -2152,7 +1920,6 @@
     .param p1, "accountHandle"    # Landroid/telecom/PhoneAccountHandle;
 
     .prologue
-    .line 476
     :try_start_0
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->isServiceConnected()Z
 
@@ -2160,7 +1927,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 477
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->getTelecomService()Lcom/android/internal/telecom/ITelecomService;
 
     move-result-object v1
@@ -2169,16 +1935,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 482
     :cond_0
     :goto_0
     return-void
 
-    .line 479
     :catch_0
     move-exception v0
 
-    .line 480
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "TelecomManager"
 
@@ -2194,16 +1957,13 @@
     .param p1, "showDialpad"    # Z
 
     .prologue
-    .line 1183
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->getTelecomService()Lcom/android/internal/telecom/ITelecomService;
 
     move-result-object v1
 
-    .line 1184
     .local v1, "service":Lcom/android/internal/telecom/ITelecomService;
     if-eqz v1, :cond_0
 
-    .line 1186
     :try_start_0
     iget-object v2, p0, Landroid/telecom/TelecomManager;->mContext:Landroid/content/Context;
 
@@ -2215,16 +1975,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1191
     :cond_0
     :goto_0
     return-void
 
-    .line 1187
     :catch_0
     move-exception v0
 
-    .line 1188
     .local v0, "e":Landroid/os/RemoteException;
     const-string v2, "TelecomManager"
 
@@ -2239,7 +1996,6 @@
     .locals 3
 
     .prologue
-    .line 995
     :try_start_0
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->isServiceConnected()Z
 
@@ -2247,7 +2003,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 996
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->getTelecomService()Lcom/android/internal/telecom/ITelecomService;
 
     move-result-object v1
@@ -2262,16 +2017,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1001
     :cond_0
     :goto_0
     return-void
 
-    .line 998
     :catch_0
     move-exception v0
 
-    .line 999
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "TelecomManager"
 
@@ -2287,7 +2039,6 @@
     .param p1, "accountHandle"    # Landroid/telecom/PhoneAccountHandle;
 
     .prologue
-    .line 715
     :try_start_0
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->isServiceConnected()Z
 
@@ -2295,7 +2046,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 716
     invoke-direct {p0}, Landroid/telecom/TelecomManager;->getTelecomService()Lcom/android/internal/telecom/ITelecomService;
 
     move-result-object v1
@@ -2304,16 +2054,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 721
     :cond_0
     :goto_0
     return-void
 
-    .line 718
     :catch_0
     move-exception v0
 
-    .line 719
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "TelecomManager"
 

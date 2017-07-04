@@ -35,18 +35,15 @@
     .prologue
     const/16 v4, 0x4f4c
 
-    .line 40
     const/4 v1, 0x0
 
     sput-boolean v1, Landroid/media/SamsungAudioManager$AudioLog;->isSecLogEnable:Z
 
-    .line 49
     sput v4, Landroid/media/SamsungAudioManager$AudioLog;->debugLevel:I
 
-    .line 53
     const-string v1, "1"
 
-    const-string/jumbo v2, "persist.log.seclevel"
+    const-string v2, "persist.log.seclevel"
 
     const-string v3, "0"
 
@@ -60,9 +57,8 @@
 
     sput-boolean v1, Landroid/media/SamsungAudioManager$AudioLog;->isSecLogEnable:Z
 
-    .line 57
     :try_start_0
-    const-string/jumbo v1, "ro.debug_level"
+    const-string v1, "ro.debug_level"
 
     const-string v2, "0x4f4c"
 
@@ -86,17 +82,14 @@
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 61
     .local v0, "ne":Ljava/lang/NumberFormatException;
     :goto_0
     return-void
 
-    .line 58
     .end local v0    # "ne":Ljava/lang/NumberFormatException;
     :catch_0
     move-exception v0
 
-    .line 59
     .restart local v0    # "ne":Ljava/lang/NumberFormatException;
     sput v4, Landroid/media/SamsungAudioManager$AudioLog;->debugLevel:I
 
@@ -107,7 +100,6 @@
     .locals 0
 
     .prologue
-    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -121,18 +113,14 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 64
     if-nez p1, :cond_1
 
-    .line 65
     sget-boolean v0, Landroid/media/SamsungAudioManager$AudioLog;->isSecLogEnable:Z
 
-    .line 68
     :cond_0
     :goto_0
     return v0
 
-    .line 66
     :cond_1
     const/16 v1, 0x4f4c
 
@@ -146,7 +134,6 @@
 
     if-ne p1, v1, :cond_0
 
-    .line 67
     :cond_2
     sget v1, Landroid/media/SamsungAudioManager$AudioLog;->debugLevel:I
 

@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 199
     iput-object p1, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentLocationManager$2;->this$0:Lcom/samsung/android/contextaware/utilbundle/CaCurrentLocationManager;
 
     iput-object p2, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentLocationManager$2;->val$provider:Ljava/lang/String;
@@ -44,7 +43,6 @@
     .locals 7
 
     .prologue
-    .line 202
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentLocationManager$2;->this$0:Lcom/samsung/android/contextaware/utilbundle/CaCurrentLocationManager;
 
     # getter for: Lcom/samsung/android/contextaware/utilbundle/CaCurrentLocationManager;->mGpsManager:Landroid/location/LocationManager;
@@ -74,6 +72,5 @@
 
     invoke-virtual/range {v0 .. v6}, Landroid/location/LocationManager;->requestLocationUpdates(Ljava/lang/String;JFLandroid/location/LocationListener;Landroid/os/Looper;)V
 
-    .line 204
     return-void
 .end method

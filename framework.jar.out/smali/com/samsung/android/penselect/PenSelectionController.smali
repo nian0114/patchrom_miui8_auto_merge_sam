@@ -22,10 +22,8 @@
     .locals 0
 
     .prologue
-    .line 52
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 53
     return-void
 .end method
 
@@ -33,19 +31,16 @@
     .locals 1
 
     .prologue
-    .line 46
     sget-object v0, Lcom/samsung/android/penselect/PenSelectionController;->sInstance:Lcom/samsung/android/penselect/PenSelectionController;
 
     if-nez v0, :cond_0
 
-    .line 47
     new-instance v0, Lcom/samsung/android/penselect/PenSelectionController;
 
     invoke-direct {v0}, Lcom/samsung/android/penselect/PenSelectionController;-><init>()V
 
     sput-object v0, Lcom/samsung/android/penselect/PenSelectionController;->sInstance:Lcom/samsung/android/penselect/PenSelectionController;
 
-    .line 49
     :cond_0
     sget-object v0, Lcom/samsung/android/penselect/PenSelectionController;->sInstance:Lcom/samsung/android/penselect/PenSelectionController;
 
@@ -61,10 +56,8 @@
     .prologue
     const/4 v8, 0x1
 
-    .line 60
     const/4 v2, 0x0
 
-    .line 62
     .local v2, "haveContents":Z
     invoke-direct {p0, p2}, Lcom/samsung/android/penselect/PenSelectionController;->isVisibleView(Landroid/view/View;)Z
 
@@ -72,17 +65,14 @@
 
     if-ne v7, v8, :cond_0
 
-    .line 63
     instance-of v7, p2, Landroid/widget/TextView;
 
     if-eqz v7, :cond_2
 
     move-object v5, p2
 
-    .line 64
     check-cast v5, Landroid/widget/TextView;
 
-    .line 66
     .local v5, "textView":Landroid/widget/TextView;
     invoke-virtual {v5}, Landroid/widget/TextView;->hasMultiSelection()Z
 
@@ -90,12 +80,10 @@
 
     if-ne v7, v8, :cond_0
 
-    .line 67
     invoke-virtual {v5}, Landroid/widget/TextView;->getMultiSelectionText()Ljava/lang/CharSequence;
 
     move-result-object v4
 
-    .line 68
     .local v4, "selectedText":Ljava/lang/CharSequence;
     invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -103,7 +91,6 @@
 
     if-nez v7, :cond_0
 
-    .line 69
     iget-object v7, p3, Lcom/samsung/android/penselect/PenSelectionController$PenSelectionContents;->mContentStr:Ljava/lang/String;
 
     invoke-static {v7}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -112,24 +99,20 @@
 
     if-eqz v7, :cond_1
 
-    .line 70
     invoke-interface {v4}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object v7
 
     iput-object v7, p3, Lcom/samsung/android/penselect/PenSelectionController$PenSelectionContents;->mContentStr:Ljava/lang/String;
 
-    .line 74
     :goto_0
     const/4 v2, 0x1
 
-    .line 90
     .end local v4    # "selectedText":Ljava/lang/CharSequence;
     .end local v5    # "textView":Landroid/widget/TextView;
     :cond_0
     return v2
 
-    .line 72
     .restart local v4    # "selectedText":Ljava/lang/CharSequence;
     .restart local v5    # "textView":Landroid/widget/TextView;
     :cond_1
@@ -165,7 +148,6 @@
 
     goto :goto_0
 
-    .line 78
     .end local v4    # "selectedText":Ljava/lang/CharSequence;
     .end local v5    # "textView":Landroid/widget/TextView;
     :cond_2
@@ -175,16 +157,13 @@
 
     move-object v6, p2
 
-    .line 79
     check-cast v6, Landroid/view/ViewGroup;
 
-    .line 80
     .local v6, "vg":Landroid/view/ViewGroup;
     invoke-virtual {v6}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v1
 
-    .line 82
     .local v1, "childCount":I
     const/4 v3, 0x0
 
@@ -192,12 +171,10 @@
     :goto_1
     if-ge v3, v1, :cond_0
 
-    .line 83
     invoke-virtual {v6, v3}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 84
     .local v0, "child":Landroid/view/View;
     invoke-direct {p0, p1, v0, p3}, Lcom/samsung/android/penselect/PenSelectionController;->getPenSelectionContents(Landroid/content/Context;Landroid/view/View;Lcom/samsung/android/penselect/PenSelectionController$PenSelectionContents;)Z
 
@@ -205,10 +182,8 @@
 
     if-ne v7, v8, :cond_3
 
-    .line 85
     const/4 v2, 0x1
 
-    .line 82
     :cond_3
     add-int/lit8 v3, v3, 0x1
 
@@ -220,7 +195,6 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 56
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Landroid/view/View;->getVisibility()I
@@ -264,28 +238,23 @@
 
     const/4 v2, 0x0
 
-    .line 185
     invoke-virtual {p1}, Landroid/view/View;->getVisibility()I
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 194
     :goto_0
     return v2
 
-    .line 188
     :cond_0
     const/4 v3, 0x2
 
     new-array v1, v3, [I
 
-    .line 189
     .local v1, "screenOffsetOfView":[I
     invoke-virtual {p1, v1}, Landroid/view/View;->getLocationOnScreen([I)V
 
-    .line 191
     new-instance v0, Landroid/graphics/Rect;
 
     aget v3, v1, v2
@@ -310,7 +279,6 @@
 
     invoke-direct {v0, v3, v4, v2, v5}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 194
     .local v0, "rect":Landroid/graphics/Rect;
     invoke-virtual {v0, p2}, Landroid/graphics/Rect;->contains(Landroid/graphics/Rect;)Z
 
@@ -327,10 +295,8 @@
     .prologue
     const/4 v7, 0x1
 
-    .line 102
     move-object v5, p2
 
-    .line 104
     .local v5, "view":Landroid/view/View;
     instance-of v6, v5, Landroid/widget/TextView;
 
@@ -338,10 +304,8 @@
 
     move-object v3, v5
 
-    .line 105
     check-cast v3, Landroid/widget/TextView;
 
-    .line 107
     .local v3, "textView":Landroid/widget/TextView;
     invoke-virtual {v3}, Landroid/widget/TextView;->hasMultiSelection()Z
 
@@ -349,15 +313,12 @@
 
     if-ne v6, v7, :cond_0
 
-    .line 108
     invoke-virtual {v3}, Landroid/widget/TextView;->clearMultiSelection()Z
 
-    .line 119
     .end local v3    # "textView":Landroid/widget/TextView;
     :cond_0
     return v7
 
-    .line 110
     :cond_1
     instance-of v6, v5, Landroid/view/ViewGroup;
 
@@ -365,16 +326,13 @@
 
     move-object v4, v5
 
-    .line 111
     check-cast v4, Landroid/view/ViewGroup;
 
-    .line 112
     .local v4, "vg":Landroid/view/ViewGroup;
     invoke-virtual {v4}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v1
 
-    .line 114
     .local v1, "childCount":I
     const/4 v2, 0x0
 
@@ -382,16 +340,13 @@
     :goto_0
     if-ge v2, v1, :cond_0
 
-    .line 115
     invoke-virtual {v4, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 116
     .local v0, "child":Landroid/view/View;
     invoke-virtual {p0, p1, v0}, Lcom/samsung/android/penselect/PenSelectionController;->clearAllPenSelection(Landroid/content/Context;Landroid/view/View;)Z
 
-    .line 114
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
@@ -404,10 +359,8 @@
     .param p3, "rect"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 150
     move-object v6, p2
 
-    .line 152
     .local v6, "view":Landroid/view/View;
     invoke-virtual {p0, v6, p3}, Lcom/samsung/android/penselect/PenSelectionController;->checkRectInView(Landroid/view/View;Landroid/graphics/Rect;)Z
 
@@ -415,36 +368,29 @@
 
     if-eqz v7, :cond_5
 
-    .line 153
     instance-of v7, v6, Landroid/view/ViewGroup;
 
     if-eqz v7, :cond_0
 
     move-object v5, v6
 
-    .line 154
     check-cast v5, Landroid/view/ViewGroup;
 
-    .line 155
     .local v5, "vg":Landroid/view/ViewGroup;
     const/4 v4, 0x0
 
-    .line 156
     .local v4, "retView":Landroid/view/View;
     invoke-virtual {v5}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v2
 
-    .line 158
     .local v2, "childCount":I
     if-nez v2, :cond_2
 
-    .line 159
     instance-of v7, v6, Landroid/webkit/WebView;
 
     if-eqz v7, :cond_1
 
-    .line 180
     .end local v2    # "childCount":I
     .end local v4    # "retView":Landroid/view/View;
     .end local v5    # "vg":Landroid/view/ViewGroup;
@@ -453,7 +399,6 @@
     :goto_0
     return-object v6
 
-    .line 162
     .restart local v2    # "childCount":I
     .restart local v4    # "retView":Landroid/view/View;
     .restart local v5    # "vg":Landroid/view/ViewGroup;
@@ -463,7 +408,6 @@
 
     move-result-object v0
 
-    .line 163
     .local v0, "background":Landroid/graphics/drawable/Drawable;
     if-eqz v0, :cond_2
 
@@ -483,7 +427,6 @@
 
     if-gt v7, v8, :cond_0
 
-    .line 167
     .end local v0    # "background":Landroid/graphics/drawable/Drawable;
     :cond_2
     add-int/lit8 v3, v2, -0x1
@@ -492,35 +435,29 @@
     :goto_1
     if-ltz v3, :cond_3
 
-    .line 168
     invoke-virtual {v5, v3}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 169
     .local v1, "child":Landroid/view/View;
     invoke-virtual {p0, p1, v1, p3}, Lcom/samsung/android/penselect/PenSelectionController;->findTargetTextView(Landroid/content/Context;Landroid/view/View;Landroid/graphics/Rect;)Landroid/view/View;
 
     move-result-object v4
 
-    .line 170
     if-eqz v4, :cond_4
 
     .end local v1    # "child":Landroid/view/View;
     :cond_3
     move-object v6, v4
 
-    .line 174
     goto :goto_0
 
-    .line 167
     .restart local v1    # "child":Landroid/view/View;
     :cond_4
     add-int/lit8 v3, v3, -0x1
 
     goto :goto_1
 
-    .line 180
     .end local v1    # "child":Landroid/view/View;
     .end local v2    # "childCount":I
     .end local v3    # "i":I
@@ -538,16 +475,13 @@
     .param p2, "topMostView"    # Landroid/view/View;
 
     .prologue
-    .line 95
     new-instance v0, Lcom/samsung/android/penselect/PenSelectionController$PenSelectionContents;
 
     invoke-direct {v0}, Lcom/samsung/android/penselect/PenSelectionController$PenSelectionContents;-><init>()V
 
-    .line 96
     .local v0, "contents":Lcom/samsung/android/penselect/PenSelectionController$PenSelectionContents;
     invoke-direct {p0, p1, p2, v0}, Lcom/samsung/android/penselect/PenSelectionController;->getPenSelectionContents(Landroid/content/Context;Landroid/view/View;Lcom/samsung/android/penselect/PenSelectionController$PenSelectionContents;)Z
 
-    .line 97
     iget-object v1, v0, Lcom/samsung/android/penselect/PenSelectionController$PenSelectionContents;->mContentStr:Ljava/lang/String;
 
     return-object v1
@@ -563,10 +497,8 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 124
     move-object v5, p2
 
-    .line 126
     .local v5, "view":Landroid/view/View;
     instance-of v7, v5, Landroid/widget/TextView;
 
@@ -574,10 +506,8 @@
 
     move-object v3, v5
 
-    .line 127
     check-cast v3, Landroid/widget/TextView;
 
-    .line 129
     .local v3, "textView":Landroid/widget/TextView;
     invoke-virtual {v3}, Landroid/widget/TextView;->hasMultiSelection()Z
 
@@ -585,20 +515,17 @@
 
     if-ne v7, v6, :cond_2
 
-    .line 130
     invoke-virtual {v3, p3, p4}, Landroid/widget/TextView;->isMultiSelectionLinkArea(II)Z
 
     move-result v7
 
     if-ne v7, v6, :cond_2
 
-    .line 145
     .end local v3    # "textView":Landroid/widget/TextView;
     :cond_0
     :goto_0
     return v6
 
-    .line 134
     :cond_1
     instance-of v7, v5, Landroid/view/ViewGroup;
 
@@ -606,16 +533,13 @@
 
     move-object v4, v5
 
-    .line 135
     check-cast v4, Landroid/view/ViewGroup;
 
-    .line 136
     .local v4, "vg":Landroid/view/ViewGroup;
     invoke-virtual {v4}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v1
 
-    .line 138
     .local v1, "childCount":I
     const/4 v2, 0x0
 
@@ -623,12 +547,10 @@
     :goto_1
     if-ge v2, v1, :cond_2
 
-    .line 139
     invoke-virtual {v4, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 140
     .local v0, "child":Landroid/view/View;
     invoke-virtual {p0, p1, v0, p3, p4}, Lcom/samsung/android/penselect/PenSelectionController;->isPenSelectionArea(Landroid/content/Context;Landroid/view/View;II)Z
 
@@ -636,12 +558,10 @@
 
     if-eq v7, v6, :cond_0
 
-    .line 138
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 145
     .end local v0    # "child":Landroid/view/View;
     .end local v1    # "childCount":I
     .end local v2    # "i":I

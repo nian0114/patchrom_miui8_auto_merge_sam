@@ -12,13 +12,10 @@
     .locals 0
 
     .prologue
-    .line 26
     invoke-direct {p0}, Lcom/absolute/android/persistence/IABTPersistenceLog$Stub;-><init>()V
 
-    .line 27
     iput-object p1, p0, Lcom/absolute/android/persistservice/ad;->a:Lcom/absolute/android/persistservice/v;
 
-    .line 28
     return-void
 .end method
 
@@ -28,12 +25,10 @@
     .locals 1
 
     .prologue
-    .line 55
     iget-object v0, p0, Lcom/absolute/android/persistservice/ad;->a:Lcom/absolute/android/persistservice/v;
 
     invoke-virtual {v0}, Lcom/absolute/android/persistservice/v;->b()V
 
-    .line 56
     return-void
 .end method
 
@@ -41,7 +36,6 @@
     .locals 1
 
     .prologue
-    .line 34
     iget-object v0, p0, Lcom/absolute/android/persistservice/ad;->a:Lcom/absolute/android/persistservice/v;
 
     invoke-virtual {v0, p1}, Lcom/absolute/android/persistservice/v;->a(I)Lcom/absolute/android/persistence/IABTLogIterator;
@@ -55,7 +49,6 @@
     .locals 1
 
     .prologue
-    .line 69
     iget-object v0, p0, Lcom/absolute/android/persistservice/ad;->a:Lcom/absolute/android/persistservice/v;
 
     invoke-virtual {v0}, Lcom/absolute/android/persistservice/v;->d()I
@@ -69,7 +62,6 @@
     .locals 1
 
     .prologue
-    .line 62
     iget-object v0, p0, Lcom/absolute/android/persistservice/ad;->a:Lcom/absolute/android/persistservice/v;
 
     invoke-virtual {v0}, Lcom/absolute/android/persistservice/v;->c()I
@@ -83,12 +75,10 @@
     .locals 1
 
     .prologue
-    .line 41
     iget-object v0, p0, Lcom/absolute/android/persistservice/ad;->a:Lcom/absolute/android/persistservice/v;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/absolute/android/persistservice/v;->a(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 42
     return-void
 .end method
 
@@ -96,11 +86,9 @@
     .locals 1
 
     .prologue
-    .line 48
     iget-object v0, p0, Lcom/absolute/android/persistservice/ad;->a:Lcom/absolute/android/persistservice/v;
 
     invoke-virtual {v0, p1, p2}, Lcom/absolute/android/persistservice/v;->a(II)V
 
-    .line 49
     return-void
 .end method

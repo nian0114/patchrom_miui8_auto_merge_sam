@@ -30,7 +30,6 @@
     .locals 1
 
     .prologue
-    .line 163
     new-instance v0, Landroid/hardware/scontext/SContextTestFlatMotion$1;
 
     invoke-direct {v0}, Landroid/hardware/scontext/SContextTestFlatMotion$1;-><init>()V
@@ -44,17 +43,14 @@
     .locals 1
 
     .prologue
-    .line 98
     invoke-direct {p0}, Landroid/hardware/scontext/SContextEventContext;-><init>()V
 
-    .line 99
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/hardware/scontext/SContextTestFlatMotion;->mContext:Landroid/os/Bundle;
 
-    .line 100
     return-void
 .end method
 
@@ -63,13 +59,10 @@
     .param p1, "src"    # Landroid/os/Parcel;
 
     .prologue
-    .line 105
     invoke-direct {p0}, Landroid/hardware/scontext/SContextEventContext;-><init>()V
 
-    .line 106
     invoke-direct {p0, p1}, Landroid/hardware/scontext/SContextTestFlatMotion;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 107
     return-void
 .end method
 
@@ -78,14 +71,12 @@
     .param p1, "src"    # Landroid/os/Parcel;
 
     .prologue
-    .line 155
     invoke-virtual {p1}, Landroid/os/Parcel;->readBundle()Landroid/os/Bundle;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/hardware/scontext/SContextTestFlatMotion;->mContext:Landroid/os/Bundle;
 
-    .line 156
     return-void
 .end method
 
@@ -95,7 +86,6 @@
     .locals 1
 
     .prologue
-    .line 89
     invoke-super {p0}, Landroid/hardware/scontext/SContextEventContext;->describeContents()I
 
     move-result v0
@@ -107,7 +97,6 @@
     .locals 2
 
     .prologue
-    .line 121
     iget-object v0, p0, Landroid/hardware/scontext/SContextTestFlatMotion;->mContext:Landroid/os/Bundle;
 
     const-string v1, "Action"
@@ -124,10 +113,8 @@
     .param p1, "context"    # Landroid/os/Bundle;
 
     .prologue
-    .line 131
     iput-object p1, p0, Landroid/hardware/scontext/SContextTestFlatMotion;->mContext:Landroid/os/Bundle;
 
-    .line 132
     return-void
 .end method
 
@@ -137,11 +124,9 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 145
     iget-object v0, p0, Landroid/hardware/scontext/SContextTestFlatMotion;->mContext:Landroid/os/Bundle;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
 
-    .line 146
     return-void
 .end method

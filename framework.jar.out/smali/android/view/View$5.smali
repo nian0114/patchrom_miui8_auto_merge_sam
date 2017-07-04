@@ -29,7 +29,6 @@
     .param p1, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 22196
     invoke-direct {p0, p1}, Landroid/util/FloatProperty;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -42,7 +41,6 @@
     .param p1, "object"    # Landroid/view/View;
 
     .prologue
-    .line 22204
     invoke-virtual {p1}, Landroid/view/View;->getTranslationZ()F
 
     move-result v0
@@ -59,7 +57,6 @@
     .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
-    .line 22196
     check-cast p1, Landroid/view/View;
 
     .end local p1    # "x0":Ljava/lang/Object;
@@ -76,10 +73,8 @@
     .param p2, "value"    # F
 
     .prologue
-    .line 22199
     invoke-virtual {p1, p2}, Landroid/view/View;->setTranslationZ(F)V
 
-    .line 22200
     return-void
 .end method
 
@@ -89,7 +84,6 @@
     .param p2, "x1"    # F
 
     .prologue
-    .line 22196
     check-cast p1, Landroid/view/View;
 
     .end local p1    # "x0":Ljava/lang/Object;

@@ -21,17 +21,14 @@
     .locals 1
 
     .prologue
-    .line 32
     invoke-direct {p0}, Landroid/graphics/ImageFilter;-><init>()V
 
-    .line 33
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/graphics/ImageFilterSet;->mImageFilters:Ljava/util/ArrayList;
 
-    .line 34
     return-void
 .end method
 
@@ -42,14 +39,11 @@
     .param p1, "filter"    # Landroid/graphics/ImageFilter;
 
     .prologue
-    .line 63
     if-nez p1, :cond_0
 
-    .line 66
     :goto_0
     return-void
 
-    .line 65
     :cond_0
     iget-object v0, p0, Landroid/graphics/ImageFilterSet;->mImageFilters:Ljava/util/ArrayList;
 
@@ -62,12 +56,10 @@
     .locals 1
 
     .prologue
-    .line 76
     iget-object v0, p0, Landroid/graphics/ImageFilterSet;->mImageFilters:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 77
     return-void
 .end method
 
@@ -75,12 +67,10 @@
     .locals 3
 
     .prologue
-    .line 47
     new-instance v1, Landroid/graphics/ImageFilterSet;
 
     invoke-direct {v1}, Landroid/graphics/ImageFilterSet;-><init>()V
 
-    .line 48
     .local v1, "imageFilterSet":Landroid/graphics/ImageFilterSet;
     const/4 v0, 0x0
 
@@ -94,7 +84,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 49
     iget-object v2, p0, Landroid/graphics/ImageFilterSet;->mImageFilters:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -109,12 +98,10 @@
 
     invoke-virtual {v1, v2}, Landroid/graphics/ImageFilterSet;->addFilter(Landroid/graphics/ImageFilter;)V
 
-    .line 48
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 50
     :cond_0
     return-object v1
 .end method
@@ -128,7 +115,6 @@
     .end annotation
 
     .prologue
-    .line 20
     invoke-virtual {p0}, Landroid/graphics/ImageFilterSet;->clone()Landroid/graphics/ImageFilter;
 
     move-result-object v0
@@ -141,7 +127,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 102
     iget-object v0, p0, Landroid/graphics/ImageFilterSet;->mImageFilters:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -150,7 +135,6 @@
 
     if-ge p1, v0, :cond_0
 
-    .line 103
     iget-object v0, p0, Landroid/graphics/ImageFilterSet;->mImageFilters:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -159,7 +143,6 @@
 
     check-cast v0, Landroid/graphics/ImageFilter;
 
-    .line 105
     :goto_0
     return-object v0
 
@@ -173,7 +156,6 @@
     .locals 1
 
     .prologue
-    .line 88
     iget-object v0, p0, Landroid/graphics/ImageFilterSet;->mImageFilters:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I

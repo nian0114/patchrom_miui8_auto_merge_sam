@@ -48,7 +48,6 @@
     .locals 1
 
     .prologue
-    .line 110
     new-instance v0, Landroid/net/wifi/PPPOEConfig$1;
 
     invoke-direct {v0}, Landroid/net/wifi/PPPOEConfig$1;-><init>()V
@@ -66,45 +65,34 @@
 
     const/4 v0, 0x0
 
-    .line 61
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 62
     iput-object v0, p0, Landroid/net/wifi/PPPOEConfig;->username:Ljava/lang/String;
 
-    .line 63
     iput-object v0, p0, Landroid/net/wifi/PPPOEConfig;->password:Ljava/lang/String;
 
-    .line 64
     iput-object v0, p0, Landroid/net/wifi/PPPOEConfig;->interf:Ljava/lang/String;
 
-    .line 65
     const/16 v0, 0x14
 
     iput v0, p0, Landroid/net/wifi/PPPOEConfig;->lcp_echo_interval:I
 
-    .line 66
     const/4 v0, 0x3
 
     iput v0, p0, Landroid/net/wifi/PPPOEConfig;->lcp_echo_failure:I
 
-    .line 67
     iput v1, p0, Landroid/net/wifi/PPPOEConfig;->mtu:I
 
-    .line 68
     iput v1, p0, Landroid/net/wifi/PPPOEConfig;->mru:I
 
-    .line 69
     const/4 v0, 0x5
 
     iput v0, p0, Landroid/net/wifi/PPPOEConfig;->timeout:I
 
-    .line 70
     const/16 v0, 0x584
 
     iput v0, p0, Landroid/net/wifi/PPPOEConfig;->MSS:I
 
-    .line 71
     return-void
 .end method
 
@@ -114,7 +102,6 @@
     .locals 1
 
     .prologue
-    .line 93
     const/4 v0, 0x0
 
     return v0
@@ -124,12 +111,10 @@
     .locals 3
 
     .prologue
-    .line 76
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 78
     .local v0, "sb":Ljava/lang/StringBuffer;
     const-string v1, "Username: "
 
@@ -237,7 +222,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
 
-    .line 88
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -251,51 +235,41 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 98
     iget-object v0, p0, Landroid/net/wifi/PPPOEConfig;->username:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 99
     iget-object v0, p0, Landroid/net/wifi/PPPOEConfig;->password:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 100
     iget-object v0, p0, Landroid/net/wifi/PPPOEConfig;->interf:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 101
     iget v0, p0, Landroid/net/wifi/PPPOEConfig;->lcp_echo_interval:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 102
     iget v0, p0, Landroid/net/wifi/PPPOEConfig;->lcp_echo_failure:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 103
     iget v0, p0, Landroid/net/wifi/PPPOEConfig;->mtu:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 104
     iget v0, p0, Landroid/net/wifi/PPPOEConfig;->mru:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 105
     iget v0, p0, Landroid/net/wifi/PPPOEConfig;->timeout:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 106
     iget v0, p0, Landroid/net/wifi/PPPOEConfig;->MSS:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 107
     return-void
 .end method

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 116
     iput-object p1, p0, Lcom/sec/android/emergencymode/EmergencyManager$1;->this$0:Lcom/sec/android/emergencymode/EmergencyManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -43,21 +42,17 @@
 
     const/4 v4, 0x0
 
-    .line 119
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 120
     .local v0, "action":Ljava/lang/String;
     if-nez v0, :cond_1
 
-    .line 143
     :cond_0
     :goto_0
     return-void
 
-    .line 122
     :cond_1
     const-string v5, "EmergencyManager"
 
@@ -81,7 +76,6 @@
 
     invoke-static {v5, v6}, Lcom/sec/android/emergencymode/Elog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 123
     const-string v5, "com.samsung.intent.action.EMERGENCY_START_SERVICE_BY_ORDER"
 
     invoke-virtual {v0, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -98,7 +92,6 @@
 
     if-eqz v5, :cond_7
 
-    .line 126
     :cond_2
     const-string v5, "enabled"
 
@@ -106,7 +99,6 @@
 
     move-result v1
 
-    .line 127
     .local v1, "enabled":Z
     const-string v5, "flag"
 
@@ -114,7 +106,6 @@
 
     move-result v2
 
-    .line 128
     .local v2, "flag":I
     const-string v5, "skipdialog"
 
@@ -122,11 +113,9 @@
 
     move-result v3
 
-    .line 129
     .local v3, "skipdialog":Z
     if-eq v2, v8, :cond_0
 
-    .line 130
     const/16 v4, 0x800
 
     if-ne v2, v4, :cond_3
@@ -155,7 +144,6 @@
 
     if-nez v4, :cond_6
 
-    .line 132
     :cond_5
     const-string v4, "EmergencyManager"
 
@@ -181,7 +169,6 @@
 
     goto :goto_0
 
-    .line 135
     :cond_6
     iget-object v4, p0, Lcom/sec/android/emergencymode/EmergencyManager$1;->this$0:Lcom/sec/android/emergencymode/EmergencyManager;
 
@@ -190,7 +177,6 @@
 
     goto :goto_0
 
-    .line 138
     .end local v1    # "enabled":Z
     .end local v2    # "flag":I
     .end local v3    # "skipdialog":Z
@@ -203,7 +189,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 139
     iget-object v5, p0, Lcom/sec/android/emergencymode/EmergencyManager$1;->this$0:Lcom/sec/android/emergencymode/EmergencyManager;
 
     # getter for: Lcom/sec/android/emergencymode/EmergencyManager;->mContext:Landroid/content/Context;
@@ -219,12 +204,10 @@
 
     const/4 v1, 0x1
 
-    .line 140
     .restart local v1    # "enabled":Z
     :goto_1
     const/16 v2, 0x10
 
-    .line 141
     .restart local v2    # "flag":I
     iget-object v5, p0, Lcom/sec/android/emergencymode/EmergencyManager$1;->this$0:Lcom/sec/android/emergencymode/EmergencyManager;
 
@@ -238,6 +221,5 @@
     :cond_8
     move v1, v4
 
-    .line 139
     goto :goto_1
 .end method

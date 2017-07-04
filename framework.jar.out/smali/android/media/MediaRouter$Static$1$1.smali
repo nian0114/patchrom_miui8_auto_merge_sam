@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 110
     iput-object p1, p0, Landroid/media/MediaRouter$Static$1$1;->this$1:Landroid/media/MediaRouter$Static$1;
 
     iput-wide p2, p0, Landroid/media/MediaRouter$Static$1$1;->val$AudioRoutesChangedTime:J
@@ -48,7 +47,6 @@
     .locals 4
 
     .prologue
-    .line 113
     iget-wide v0, p0, Landroid/media/MediaRouter$Static$1$1;->val$AudioRoutesChangedTime:J
 
     sget-object v2, Landroid/media/MediaRouter;->sStatic:Landroid/media/MediaRouter$Static;
@@ -75,7 +73,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 116
     const-string v0, "MediaRouter"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -106,11 +103,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 121
     :goto_0
     return-void
 
-    .line 120
     :cond_0
     iget-object v0, p0, Landroid/media/MediaRouter$Static$1$1;->this$1:Landroid/media/MediaRouter$Static$1;
 

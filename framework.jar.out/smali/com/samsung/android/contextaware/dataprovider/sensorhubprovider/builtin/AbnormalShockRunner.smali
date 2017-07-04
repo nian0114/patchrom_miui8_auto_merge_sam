@@ -23,22 +23,18 @@
     .param p3, "observable"    # Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;
 
     .prologue
-    .line 65
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0, p3}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/LibTypeProvider;-><init>(ILandroid/content/Context;Landroid/os/Looper;Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;)V
 
-    .line 48
     const/4 v0, 0x3
 
     iput v0, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/AbnormalShockRunner;->mStrength:I
 
-    .line 51
     const/16 v0, 0xc8
 
     iput v0, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/AbnormalShockRunner;->mDuration:I
 
-    .line 66
     return-void
 .end method
 
@@ -48,13 +44,10 @@
     .locals 0
 
     .prologue
-    .line 259
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->trace()V
 
-    .line 260
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/LibTypeProvider;->clear()V
 
-    .line 261
     return-void
 .end method
 
@@ -62,13 +55,10 @@
     .locals 0
 
     .prologue
-    .line 248
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->trace()V
 
-    .line 249
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/LibTypeProvider;->disable()V
 
-    .line 250
     return-void
 .end method
 
@@ -76,13 +66,10 @@
     .locals 0
 
     .prologue
-    .line 235
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->trace()V
 
-    .line 236
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/LibTypeProvider;->enable()V
 
-    .line 237
     return-void
 .end method
 
@@ -90,7 +77,6 @@
     .locals 1
 
     .prologue
-    .line 76
     sget-object v0, Lcom/samsung/android/contextaware/ContextList$ContextType;->SENSORHUB_RUNNER_ABNORMAL_SHOCK:Lcom/samsung/android/contextaware/ContextList$ContextType;
 
     invoke-virtual {v0}, Lcom/samsung/android/contextaware/ContextList$ContextType;->getCode()Ljava/lang/String;
@@ -104,7 +90,6 @@
     .locals 3
 
     .prologue
-    .line 116
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljava/lang/String;
@@ -128,12 +113,10 @@
 
     const/4 v3, 0x0
 
-    .line 98
     const/4 v2, 0x3
 
     new-array v1, v2, [B
 
-    .line 99
     .local v1, "packet":[B
     iget v2, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/AbnormalShockRunner;->mStrength:I
 
@@ -141,25 +124,21 @@
 
     aput-byte v2, v1, v3
 
-    .line 100
     iget v2, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/AbnormalShockRunner;->mDuration:I
 
     invoke-static {v2, v5}, Lcom/samsung/android/contextaware/utilbundle/CaConvertUtil;->intToByteArr(II)[B
 
     move-result-object v0
 
-    .line 101
     .local v0, "data":[B
     aget-byte v2, v0, v3
 
     aput-byte v2, v1, v4
 
-    .line 102
     aget-byte v2, v0, v4
 
     aput-byte v2, v1, v5
 
-    .line 104
     return-object v1
 .end method
 
@@ -167,7 +146,6 @@
     .locals 1
 
     .prologue
-    .line 272
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/AbnormalShockRunner;->checkFaultDetectionResult()Z
 
     move-result v0
@@ -178,7 +156,6 @@
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->debug(Ljava/lang/String;)V
 
-    .line 273
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/LibTypeProvider;->getFaultDetectionResult()Landroid/os/Bundle;
 
     move-result-object v0
@@ -190,7 +167,6 @@
     .locals 1
 
     .prologue
-    .line 87
     const/16 v0, 0x26
 
     return v0
@@ -200,7 +176,6 @@
     .locals 0
 
     .prologue
-    .line 211
     return-object p0
 .end method
 
@@ -208,7 +183,6 @@
     .locals 0
 
     .prologue
-    .line 223
     return-object p0
 .end method
 
@@ -220,16 +194,14 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 179
     move v2, p2
 
-    .line 181
     .local v2, "tmpNext":I
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "parse:"
+    const-string v5, "parse:"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -245,14 +217,12 @@
 
     invoke-static {v4}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->info(Ljava/lang/String;)V
 
-    .line 182
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/AbnormalShockRunner;->getContextValueNames()[Ljava/lang/String;
 
     move-result-object v4
 
     aget-object v0, v4, v6
 
-    .line 184
     .local v0, "name":Ljava/lang/String;
     array-length v4, p1
 
@@ -262,7 +232,6 @@
 
     if-gez v4, :cond_0
 
-    .line 185
     sget-object v4, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_PACKET_LOST:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     invoke-virtual {v4}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->getMessage()Ljava/lang/String;
@@ -271,14 +240,11 @@
 
     invoke-static {v4}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 186
     const/4 v4, -0x1
 
-    .line 200
     :goto_0
     return v4
 
-    .line 189
     :cond_0
     const/4 v4, 0x4
 
@@ -318,7 +284,6 @@
 
     move-result v1
 
-    .line 196
     .local v1, "status":I
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/LibTypeProvider;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
@@ -326,12 +291,10 @@
 
     invoke-virtual {v4, v0, v1}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContext(Ljava/lang/String;I)V
 
-    .line 198
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/LibTypeProvider;->notifyObserver()V
 
     move v4, v2
 
-    .line 200
     goto :goto_0
 .end method
 
@@ -352,16 +315,13 @@
 
     const/4 v5, 0x0
 
-    .line 128
     const/4 v2, 0x1
 
-    .line 129
     .local v2, "result":Z
     const/16 v4, 0x2c
 
     if-ne p1, v4, :cond_2
 
-    .line 130
     check-cast p2, Lcom/samsung/android/contextaware/manager/ContextAwarePropertyBundle;
 
     .end local p2    # "value":Ljava/lang/Object;, "TE;"
@@ -375,7 +335,6 @@
 
     move-result v3
 
-    .line 132
     .local v3, "strength":I
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -401,27 +360,23 @@
 
     invoke-static {v4}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->info(Ljava/lang/String;)V
 
-    .line 134
     if-lez v3, :cond_0
 
     const/4 v4, 0x5
 
     if-le v3, v4, :cond_1
 
-    .line 135
     :cond_0
-    const-string/jumbo v4, "range error of abnormal shock strength (range : 1~5)"
+    const-string v4, "range error of abnormal shock strength (range : 1~5)"
 
     invoke-static {v4}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->warning(Ljava/lang/String;)V
 
     move v4, v5
 
-    .line 167
     .end local v3    # "strength":I
     :goto_0
     return v4
 
-    .line 139
     .restart local v3    # "strength":I
     :cond_1
     iput v3, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/AbnormalShockRunner;->mStrength:I
@@ -430,17 +385,14 @@
     :goto_1
     move v4, v2
 
-    .line 167
     goto :goto_0
 
-    .line 140
     .restart local p2    # "value":Ljava/lang/Object;, "TE;"
     :cond_2
     const/16 v4, 0x2d
 
     if-ne p1, v4, :cond_5
 
-    .line 142
     check-cast p2, Lcom/samsung/android/contextaware/manager/ContextAwarePropertyBundle;
 
     .end local p2    # "value":Ljava/lang/Object;, "TE;"
@@ -454,7 +406,6 @@
 
     move-result v1
 
-    .line 144
     .local v1, "duration":I
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -480,31 +431,26 @@
 
     invoke-static {v4}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->info(Ljava/lang/String;)V
 
-    .line 146
     if-lez v1, :cond_3
 
     const/16 v4, 0x1388
 
     if-le v1, v4, :cond_4
 
-    .line 147
     :cond_3
-    const-string/jumbo v4, "range error of abnormal shock duration (range : 1~5000)"
+    const-string v4, "range error of abnormal shock duration (range : 1~5000)"
 
     invoke-static {v4}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->warning(Ljava/lang/String;)V
 
     move v4, v5
 
-    .line 149
     goto :goto_0
 
-    .line 151
     :cond_4
     iput v1, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/AbnormalShockRunner;->mDuration:I
 
     goto :goto_1
 
-    .line 152
     .end local v1    # "duration":I
     .restart local p2    # "value":Ljava/lang/Object;, "TE;"
     :cond_5
@@ -512,7 +458,6 @@
 
     if-ne p1, v4, :cond_6
 
-    .line 154
     check-cast p2, Lcom/samsung/android/contextaware/manager/ContextAwarePropertyBundle;
 
     .end local p2    # "value":Ljava/lang/Object;, "TE;"
@@ -526,7 +471,6 @@
 
     move-result v0
 
-    .line 156
     .local v0, "action":I
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -552,7 +496,6 @@
 
     invoke-static {v4}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->info(Ljava/lang/String;)V
 
-    .line 159
     const/16 v4, 0x17
 
     const/16 v5, 0x26
@@ -565,10 +508,8 @@
 
     move-result v2
 
-    .line 164
     goto :goto_1
 
-    .line 165
     .end local v0    # "action":I
     .restart local p2    # "value":Ljava/lang/Object;, "TE;"
     :cond_6

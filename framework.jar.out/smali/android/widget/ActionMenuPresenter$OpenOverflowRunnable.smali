@@ -29,15 +29,12 @@
     .param p2, "popup"    # Landroid/widget/ActionMenuPresenter$OverflowPopup;
 
     .prologue
-    .line 1408
     iput-object p1, p0, Landroid/widget/ActionMenuPresenter$OpenOverflowRunnable;->this$0:Landroid/widget/ActionMenuPresenter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1409
     iput-object p2, p0, Landroid/widget/ActionMenuPresenter$OpenOverflowRunnable;->mPopup:Landroid/widget/ActionMenuPresenter$OverflowPopup;
 
-    .line 1410
     return-void
 .end method
 
@@ -47,7 +44,6 @@
     .locals 3
 
     .prologue
-    .line 1414
     iget-object v1, p0, Landroid/widget/ActionMenuPresenter$OpenOverflowRunnable;->this$0:Landroid/widget/ActionMenuPresenter;
 
     # getter for: Landroid/widget/ActionMenuPresenter;->mMenu:Lcom/android/internal/view/menu/MenuBuilder;
@@ -57,7 +53,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1415
     iget-object v1, p0, Landroid/widget/ActionMenuPresenter$OpenOverflowRunnable;->this$0:Landroid/widget/ActionMenuPresenter;
 
     # getter for: Landroid/widget/ActionMenuPresenter;->mMenu:Lcom/android/internal/view/menu/MenuBuilder;
@@ -67,7 +62,6 @@
 
     invoke-virtual {v1}, Lcom/android/internal/view/menu/MenuBuilder;->changeMenuMode()V
 
-    .line 1417
     :cond_0
     iget-object v1, p0, Landroid/widget/ActionMenuPresenter$OpenOverflowRunnable;->this$0:Landroid/widget/ActionMenuPresenter;
 
@@ -78,7 +72,6 @@
 
     check-cast v0, Landroid/view/View;
 
-    .line 1418
     .local v0, "menuView":Landroid/view/View;
     if-eqz v0, :cond_1
 
@@ -96,7 +89,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 1419
     iget-object v1, p0, Landroid/widget/ActionMenuPresenter$OpenOverflowRunnable;->this$0:Landroid/widget/ActionMenuPresenter;
 
     iget-object v2, p0, Landroid/widget/ActionMenuPresenter$OpenOverflowRunnable;->mPopup:Landroid/widget/ActionMenuPresenter$OverflowPopup;
@@ -104,7 +96,6 @@
     # setter for: Landroid/widget/ActionMenuPresenter;->mOverflowPopup:Landroid/widget/ActionMenuPresenter$OverflowPopup;
     invoke-static {v1, v2}, Landroid/widget/ActionMenuPresenter;->access$1702(Landroid/widget/ActionMenuPresenter;Landroid/widget/ActionMenuPresenter$OverflowPopup;)Landroid/widget/ActionMenuPresenter$OverflowPopup;
 
-    .line 1421
     :cond_1
     iget-object v1, p0, Landroid/widget/ActionMenuPresenter$OpenOverflowRunnable;->this$0:Landroid/widget/ActionMenuPresenter;
 
@@ -113,6 +104,5 @@
     # setter for: Landroid/widget/ActionMenuPresenter;->mPostedOpenRunnable:Landroid/widget/ActionMenuPresenter$OpenOverflowRunnable;
     invoke-static {v1, v2}, Landroid/widget/ActionMenuPresenter;->access$2402(Landroid/widget/ActionMenuPresenter;Landroid/widget/ActionMenuPresenter$OpenOverflowRunnable;)Landroid/widget/ActionMenuPresenter$OpenOverflowRunnable;
 
-    .line 1422
     return-void
 .end method

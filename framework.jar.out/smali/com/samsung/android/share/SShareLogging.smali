@@ -60,16 +60,12 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 44
     iput-object p1, p0, Lcom/samsung/android/share/SShareLogging;->mContext:Landroid/content/Context;
 
-    .line 45
     iput-object p2, p0, Lcom/samsung/android/share/SShareLogging;->mIntent:Landroid/content/Intent;
 
-    .line 46
     return-void
 .end method
 
@@ -78,12 +74,10 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 49
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 50
     .local v0, "action":Ljava/lang/String;
     const-string v1, "android.intent.action.SEND"
 
@@ -101,11 +95,9 @@
 
     if-eqz v1, :cond_1
 
-    .line 51
     :cond_0
     const/4 v1, 0x1
 
-    .line 53
     :goto_0
     return v1
 
@@ -123,7 +115,6 @@
     .param p2, "extra"    # Ljava/lang/String;
 
     .prologue
-    .line 60
     iget-object v2, p0, Lcom/samsung/android/share/SShareLogging;->mIntent:Landroid/content/Intent;
 
     invoke-direct {p0, v2}, Lcom/samsung/android/share/SShareLogging;->checkSurveyCondition(Landroid/content/Intent;)Z
@@ -132,7 +123,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 61
     iget-object v2, p0, Lcom/samsung/android/share/SShareLogging;->mContext:Landroid/content/Context;
 
     const-string v3, "com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY"
@@ -143,12 +133,10 @@
 
     if-nez v2, :cond_1
 
-    .line 62
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
 
-    .line 63
     .local v1, "cv":Landroid/content/ContentValues;
     const-string v2, "app_id"
 
@@ -156,50 +144,41 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 64
     const-string v2, "feature"
 
     invoke-virtual {v1, v2, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 65
     const-string v2, "extra"
 
     invoke-virtual {v1, v2, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 67
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 68
     .local v0, "broadcastIntent":Landroid/content/Intent;
     const-string v2, "com.samsung.android.providers.context.log.action.USE_APP_FEATURE_SURVEY"
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 69
     const-string v2, "data"
 
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 70
     const-string v2, "com.samsung.android.providers.context"
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 74
     iget-object v2, p0, Lcom/samsung/android/share/SShareLogging;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 79
     .end local v0    # "broadcastIntent":Landroid/content/Intent;
     .end local v1    # "cv":Landroid/content/ContentValues;
     :cond_0
     :goto_0
     return-void
 
-    .line 76
     :cond_1
     const-string v2, "SShareLogging"
 

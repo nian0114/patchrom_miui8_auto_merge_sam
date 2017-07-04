@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 113
     iput-object p1, p0, Landroid/net/wifi/PppoeStateMachine$2;->this$0:Landroid/net/wifi/PppoeStateMachine;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 116
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 117
     .local v0, "action":Ljava/lang/String;
     const-string v2, "android.net.wifi.STATE_CHANGE"
 
@@ -54,8 +51,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 118
-    const-string/jumbo v2, "networkInfo"
+    const-string v2, "networkInfo"
 
     invoke-virtual {p2, v2}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
 
@@ -63,7 +59,6 @@
 
     check-cast v1, Landroid/net/NetworkInfo;
 
-    .line 120
     .local v1, "networkInfo":Landroid/net/NetworkInfo;
     sget-object v2, Landroid/net/wifi/PppoeStateMachine$3;->$SwitchMap$android$net$NetworkInfo$DetailedState:[I
 
@@ -79,13 +74,11 @@
 
     packed-switch v2, :pswitch_data_0
 
-    .line 134
     .end local v1    # "networkInfo":Landroid/net/NetworkInfo;
     :cond_0
     :goto_0
     return-void
 
-    .line 123
     .restart local v1    # "networkInfo":Landroid/net/NetworkInfo;
     :pswitch_0
     iget-object v2, p0, Landroid/net/wifi/PppoeStateMachine$2;->this$0:Landroid/net/wifi/PppoeStateMachine;
@@ -95,7 +88,6 @@
     # setter for: Landroid/net/wifi/PppoeStateMachine;->mWifiConnected:Z
     invoke-static {v2, v3}, Landroid/net/wifi/PppoeStateMachine;->access$102(Landroid/net/wifi/PppoeStateMachine;Z)Z
 
-    .line 124
     iget-object v2, p0, Landroid/net/wifi/PppoeStateMachine$2;->this$0:Landroid/net/wifi/PppoeStateMachine;
 
     const v3, 0x70004
@@ -104,15 +96,13 @@
 
     goto :goto_0
 
-    .line 127
     :pswitch_1
     const-string v2, "PppoeStateMachine"
 
-    const-string/jumbo v3, "onreceive: connected"
+    const-string v3, "onreceive: connected"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 128
     iget-object v2, p0, Landroid/net/wifi/PppoeStateMachine$2;->this$0:Landroid/net/wifi/PppoeStateMachine;
 
     const/4 v3, 0x1
@@ -122,7 +112,6 @@
 
     goto :goto_0
 
-    .line 120
     nop
 
     :pswitch_data_0

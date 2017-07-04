@@ -14,7 +14,6 @@
     .locals 1
 
     .prologue
-    .line 12
     const-string v0, "content://com.samsung.android.coreapps.rshare/recent_share_contacts"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -30,7 +29,6 @@
     .locals 0
 
     .prologue
-    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -43,10 +41,8 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 18
     const/4 v7, 0x0
 
-    .line 19
     .local v7, "result":Z
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -64,25 +60,20 @@
 
     move-result-object v6
 
-    .line 20
     .local v6, "cursor":Landroid/database/Cursor;
     if-eqz v6, :cond_1
 
-    .line 21
     invoke-interface {v6}, Landroid/database/Cursor;->getCount()I
 
     move-result v0
 
     if-lez v0, :cond_0
 
-    .line 22
     const/4 v7, 0x1
 
-    .line 24
     :cond_0
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 26
     :cond_1
     return v7
 .end method

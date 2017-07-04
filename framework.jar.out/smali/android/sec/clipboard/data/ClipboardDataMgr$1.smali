@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 68
     iput-object p1, p0, Landroid/sec/clipboard/data/ClipboardDataMgr$1;->this$0:Landroid/sec/clipboard/data/ClipboardDataMgr;
 
     invoke-direct {p0}, Landroid/sec/clipboard/data/IClipboardDataList$Stub;-><init>()V
@@ -43,7 +42,6 @@
     .end annotation
 
     .prologue
-    .line 74
     iget-object v0, p0, Landroid/sec/clipboard/data/ClipboardDataMgr$1;->this$0:Landroid/sec/clipboard/data/ClipboardDataMgr;
 
     invoke-virtual {v0, p1}, Landroid/sec/clipboard/data/ClipboardDataMgr;->getItem(I)Landroid/sec/clipboard/data/ClipboardData;
@@ -63,7 +61,6 @@
     .end annotation
 
     .prologue
-    .line 95
     iget-object v0, p0, Landroid/sec/clipboard/data/ClipboardDataMgr$1;->this$0:Landroid/sec/clipboard/data/ClipboardDataMgr;
 
     invoke-virtual {v0, p1}, Landroid/sec/clipboard/data/ClipboardDataMgr;->getScrapItem(I)Landroid/sec/clipboard/data/ClipboardData;
@@ -83,7 +80,6 @@
     .end annotation
 
     .prologue
-    .line 78
     iget-object v0, p0, Landroid/sec/clipboard/data/ClipboardDataMgr$1;->this$0:Landroid/sec/clipboard/data/ClipboardDataMgr;
 
     invoke-virtual {v0, p1}, Landroid/sec/clipboard/data/ClipboardDataMgr;->removeData(I)Z
@@ -103,7 +99,6 @@
     .end annotation
 
     .prologue
-    .line 91
     iget-object v0, p0, Landroid/sec/clipboard/data/ClipboardDataMgr$1;->this$0:Landroid/sec/clipboard/data/ClipboardDataMgr;
 
     invoke-virtual {v0, p1}, Landroid/sec/clipboard/data/ClipboardDataMgr;->removeScrapData(I)Z
@@ -122,7 +117,6 @@
     .end annotation
 
     .prologue
-    .line 99
     iget-object v0, p0, Landroid/sec/clipboard/data/ClipboardDataMgr$1;->this$0:Landroid/sec/clipboard/data/ClipboardDataMgr;
 
     invoke-virtual {v0}, Landroid/sec/clipboard/data/ClipboardDataMgr;->scrapSize()I
@@ -141,7 +135,6 @@
     .end annotation
 
     .prologue
-    .line 70
     iget-object v0, p0, Landroid/sec/clipboard/data/ClipboardDataMgr$1;->this$0:Landroid/sec/clipboard/data/ClipboardDataMgr;
 
     invoke-virtual {v0}, Landroid/sec/clipboard/data/ClipboardDataMgr;->size()I
@@ -162,7 +155,6 @@
     .end annotation
 
     .prologue
-    .line 82
     iget-object v0, p0, Landroid/sec/clipboard/data/ClipboardDataMgr$1;->this$0:Landroid/sec/clipboard/data/ClipboardDataMgr;
 
     invoke-virtual {v0, p1, p2}, Landroid/sec/clipboard/data/ClipboardDataMgr;->updateData(ILandroid/sec/clipboard/data/ClipboardData;)Z
@@ -183,7 +175,6 @@
     .end annotation
 
     .prologue
-    .line 87
     iget-object v0, p0, Landroid/sec/clipboard/data/ClipboardDataMgr$1;->this$0:Landroid/sec/clipboard/data/ClipboardDataMgr;
 
     invoke-virtual {v0, p1, p2}, Landroid/sec/clipboard/data/ClipboardDataMgr;->updateScrapData(ILandroid/sec/clipboard/data/ClipboardData;)Z

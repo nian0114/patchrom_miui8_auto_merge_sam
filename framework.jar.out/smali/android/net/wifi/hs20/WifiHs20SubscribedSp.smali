@@ -70,7 +70,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 13
     invoke-static {}, Landroid/os/Debug;->isProductShip()I
 
     move-result v1
@@ -82,7 +81,6 @@
     :cond_0
     sput-boolean v0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->DBG:Z
 
-    .line 229
     new-instance v0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp$1;
 
     invoke-direct {v0}, Landroid/net/wifi/hs20/WifiHs20SubscribedSp$1;-><init>()V
@@ -111,55 +109,38 @@
     .param p15, "_credType"    # Landroid/net/wifi/hs20/WifiHs20SubscribedSp$CredType;
 
     .prologue
-    .line 54
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 55
     iput p1, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->hsId:I
 
-    .line 56
     iput-boolean p2, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->isEnabled:Z
 
-    .line 57
     iput p3, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->credId:I
 
-    .line 58
     iput-object p4, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->fqdn:Ljava/lang/String;
 
-    .line 59
     iput-object p5, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->realm:Ljava/lang/String;
 
-    .line 60
     iput-object p6, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->friendlyName:Ljava/lang/String;
 
-    .line 61
     iput-object p7, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->iconFileName:Ljava/lang/String;
 
-    .line 62
     iput-object p8, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->creationDate:Ljava/lang/String;
 
-    .line 63
     iput-object p9, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->expiryDate:Ljava/lang/String;
 
-    .line 64
     iput-object p10, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->typeOfSubscription:Ljava/lang/String;
 
-    .line 65
     iput p11, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->dataLimit:I
 
-    .line 66
     iput p12, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->timeLimit:I
 
-    .line 67
     iput p13, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->priority:I
 
-    .line 68
     iput p14, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->subscriptionPriority:I
 
-    .line 69
     iput-object p15, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->credType:Landroid/net/wifi/hs20/WifiHs20SubscribedSp$CredType;
 
-    .line 70
     return-void
 .end method
 
@@ -168,85 +149,68 @@
     .param p1, "source"    # Landroid/net/wifi/hs20/WifiHs20SubscribedSp;
 
     .prologue
-    .line 73
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 74
     iget v0, p1, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->hsId:I
 
     iput v0, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->hsId:I
 
-    .line 75
     iget-boolean v0, p1, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->isEnabled:Z
 
     iput-boolean v0, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->isEnabled:Z
 
-    .line 76
     iget v0, p1, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->credId:I
 
     iput v0, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->credId:I
 
-    .line 77
     iget-object v0, p1, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->fqdn:Ljava/lang/String;
 
     iput-object v0, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->fqdn:Ljava/lang/String;
 
-    .line 78
     iget-object v0, p1, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->realm:Ljava/lang/String;
 
     iput-object v0, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->realm:Ljava/lang/String;
 
-    .line 79
     iget-object v0, p1, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->friendlyName:Ljava/lang/String;
 
     iput-object v0, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->friendlyName:Ljava/lang/String;
 
-    .line 80
     iget-object v0, p1, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->iconFileName:Ljava/lang/String;
 
     iput-object v0, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->iconFileName:Ljava/lang/String;
 
-    .line 81
     iget-object v0, p1, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->creationDate:Ljava/lang/String;
 
     iput-object v0, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->creationDate:Ljava/lang/String;
 
-    .line 82
     iget-object v0, p1, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->expiryDate:Ljava/lang/String;
 
     iput-object v0, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->expiryDate:Ljava/lang/String;
 
-    .line 83
     iget-object v0, p1, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->typeOfSubscription:Ljava/lang/String;
 
     iput-object v0, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->typeOfSubscription:Ljava/lang/String;
 
-    .line 84
     iget v0, p1, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->dataLimit:I
 
     iput v0, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->dataLimit:I
 
-    .line 85
     iget v0, p1, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->timeLimit:I
 
     iput v0, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->timeLimit:I
 
-    .line 86
     iget v0, p1, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->priority:I
 
     iput v0, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->priority:I
 
-    .line 87
     iget v0, p1, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->subscriptionPriority:I
 
     iput v0, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->subscriptionPriority:I
 
-    .line 88
     iget-object v0, p1, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->credType:Landroid/net/wifi/hs20/WifiHs20SubscribedSp$CredType;
 
     iput-object v0, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->credType:Landroid/net/wifi/hs20/WifiHs20SubscribedSp$CredType;
 
-    .line 89
     return-void
 .end method
 
@@ -256,7 +220,6 @@
     .locals 1
 
     .prologue
-    .line 205
     const/4 v0, 0x0
 
     return v0
@@ -266,7 +229,6 @@
     .locals 1
 
     .prologue
-    .line 128
     iget-object v0, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->creationDate:Ljava/lang/String;
 
     return-object v0
@@ -276,7 +238,6 @@
     .locals 1
 
     .prologue
-    .line 103
     iget v0, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->credId:I
 
     return v0
@@ -286,7 +247,6 @@
     .locals 1
 
     .prologue
-    .line 173
     iget-object v0, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->credType:Landroid/net/wifi/hs20/WifiHs20SubscribedSp$CredType;
 
     return-object v0
@@ -296,7 +256,6 @@
     .locals 1
 
     .prologue
-    .line 143
     iget v0, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->dataLimit:I
 
     return v0
@@ -306,7 +265,6 @@
     .locals 1
 
     .prologue
-    .line 133
     iget-object v0, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->expiryDate:Ljava/lang/String;
 
     return-object v0
@@ -316,7 +274,6 @@
     .locals 1
 
     .prologue
-    .line 108
     iget-object v0, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->fqdn:Ljava/lang/String;
 
     return-object v0
@@ -326,7 +283,6 @@
     .locals 1
 
     .prologue
-    .line 118
     iget-object v0, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->friendlyName:Ljava/lang/String;
 
     return-object v0
@@ -336,7 +292,6 @@
     .locals 1
 
     .prologue
-    .line 93
     iget v0, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->hsId:I
 
     return v0
@@ -346,7 +301,6 @@
     .locals 1
 
     .prologue
-    .line 123
     iget-object v0, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->iconFileName:Ljava/lang/String;
 
     return-object v0
@@ -356,7 +310,6 @@
     .locals 1
 
     .prologue
-    .line 153
     iget v0, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->priority:I
 
     return v0
@@ -366,7 +319,6 @@
     .locals 1
 
     .prologue
-    .line 113
     iget-object v0, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->realm:Ljava/lang/String;
 
     return-object v0
@@ -376,7 +328,6 @@
     .locals 1
 
     .prologue
-    .line 158
     iget v0, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->subscriptionPriority:I
 
     return v0
@@ -386,7 +337,6 @@
     .locals 1
 
     .prologue
-    .line 148
     iget v0, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->timeLimit:I
 
     return v0
@@ -396,7 +346,6 @@
     .locals 1
 
     .prologue
-    .line 138
     iget-object v0, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->typeOfSubscription:Ljava/lang/String;
 
     return-object v0
@@ -406,7 +355,6 @@
     .locals 1
 
     .prologue
-    .line 98
     iget-boolean v0, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->isEnabled:Z
 
     return v0
@@ -417,10 +365,8 @@
     .param p1, "_credType"    # Landroid/net/wifi/hs20/WifiHs20SubscribedSp$CredType;
 
     .prologue
-    .line 178
     iput-object p1, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->credType:Landroid/net/wifi/hs20/WifiHs20SubscribedSp$CredType;
 
-    .line 179
     return-void
 .end method
 
@@ -429,10 +375,8 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 163
     iput-boolean p1, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->isEnabled:Z
 
-    .line 164
     return-void
 .end method
 
@@ -441,10 +385,8 @@
     .param p1, "_priority"    # I
 
     .prologue
-    .line 168
     iput p1, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->priority:I
 
-    .line 169
     return-void
 .end method
 
@@ -452,18 +394,15 @@
     .locals 4
 
     .prologue
-    .line 184
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 185
     .local v1, "sb":Ljava/lang/StringBuffer;
     const-string v0, "<none>"
 
-    .line 186
     .local v0, "none":Ljava/lang/String;
-    const-string/jumbo v2, "hsId: "
+    const-string v2, "hsId: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
@@ -679,14 +618,12 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 199
     invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v2
 
     return-object v2
 
-    .line 186
     .restart local v0    # "none":Ljava/lang/String;
     :cond_0
     iget-object v2, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->fqdn:Ljava/lang/String;
@@ -730,12 +667,10 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 211
     iget v0, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->hsId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 212
     iget-boolean v0, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->isEnabled:Z
 
     if-eqz v0, :cond_0
@@ -747,67 +682,54 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 213
     iget v0, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->credId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 214
     iget-object v0, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->fqdn:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 215
     iget-object v0, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->realm:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 216
     iget-object v0, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->friendlyName:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 217
     iget-object v0, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->iconFileName:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 218
     iget-object v0, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->creationDate:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 219
     iget-object v0, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->expiryDate:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 220
     iget-object v0, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->typeOfSubscription:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 221
     iget v0, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->dataLimit:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 222
     iget v0, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->timeLimit:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 223
     iget v0, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->priority:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 224
     iget v0, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->subscriptionPriority:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 225
     iget-object v0, p0, Landroid/net/wifi/hs20/WifiHs20SubscribedSp;->credType:Landroid/net/wifi/hs20/WifiHs20SubscribedSp$CredType;
 
     invoke-virtual {v0}, Landroid/net/wifi/hs20/WifiHs20SubscribedSp$CredType;->name()Ljava/lang/String;
@@ -816,10 +738,8 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 226
     return-void
 
-    .line 212
     :cond_0
     const/4 v0, 0x0
 

@@ -25,18 +25,14 @@
     .param p3, "drawableRtl"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 1403
     iput-object p1, p0, Landroid/widget/MultiSelectPopupWindow$SelectionStartHandleView;->this$0:Landroid/widget/MultiSelectPopupWindow;
 
-    .line 1404
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/MultiSelectPopupWindow$HandleView;-><init>(Landroid/widget/MultiSelectPopupWindow;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    .line 1405
     const/4 v0, 0x1
 
     iput v0, p0, Landroid/widget/MultiSelectPopupWindow$SelectionStartHandleView;->mHandleType:I
 
-    .line 1406
     return-void
 .end method
 
@@ -44,7 +40,6 @@
     .locals 4
 
     .prologue
-    .line 1506
     iget-object v2, p0, Landroid/widget/MultiSelectPopupWindow$SelectionStartHandleView;->this$0:Landroid/widget/MultiSelectPopupWindow;
 
     # invokes: Landroid/widget/MultiSelectPopupWindow;->getPositionListener()Landroid/widget/MultiSelectPopupWindow$PositionListener;
@@ -52,7 +47,6 @@
 
     move-result-object v1
 
-    .line 1507
     .local v1, "positionListener":Landroid/widget/MultiSelectPopupWindow$PositionListener;
     iget-object v2, p0, Landroid/widget/MultiSelectPopupWindow$SelectionStartHandleView;->mDrawableRtl:Landroid/graphics/drawable/Drawable;
 
@@ -62,7 +56,6 @@
 
     div-int/lit8 v0, v2, 0x2
 
-    .line 1509
     .local v0, "iconSize":I
     iget v2, p0, Landroid/widget/MultiSelectPopupWindow$SelectionStartHandleView;->mPositionX:I
 
@@ -101,33 +94,26 @@
 
     const/4 v3, 0x0
 
-    .line 1470
     iget-boolean v0, p0, Landroid/widget/MultiSelectPopupWindow$SelectionStartHandleView;->mbSwitchCursor:Z
 
-    .line 1472
     .local v0, "bSwitchCursor":Z
     iput-boolean v3, p0, Landroid/widget/MultiSelectPopupWindow$SelectionStartHandleView;->mbSwitchCursor:Z
 
-    .line 1473
     invoke-direct {p0}, Landroid/widget/MultiSelectPopupWindow$SelectionStartHandleView;->isHandleViewScreenOut()Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    .line 1474
     iput-boolean v2, p0, Landroid/widget/MultiSelectPopupWindow$SelectionStartHandleView;->mbSwitchCursor:Z
 
-    .line 1477
     :cond_0
     iget-boolean v4, p0, Landroid/widget/MultiSelectPopupWindow$SelectionStartHandleView;->mbSwitchCursor:Z
 
     if-eq v0, v4, :cond_1
 
-    .line 1478
     invoke-virtual {p0}, Landroid/widget/MultiSelectPopupWindow$SelectionStartHandleView;->updateDrawable()V
 
-    .line 1479
     # getter for: Landroid/widget/MultiSelectPopupWindow;->mTextView:Landroid/widget/TextView;
     invoke-static {}, Landroid/widget/MultiSelectPopupWindow;->access$100()Landroid/widget/TextView;
 
@@ -137,7 +123,6 @@
 
     move-result-object v1
 
-    .line 1480
     .local v1, "layout":Landroid/text/Layout;
     invoke-virtual {p0}, Landroid/widget/MultiSelectPopupWindow$SelectionStartHandleView;->getCurrentCursorOffset()I
 
@@ -161,7 +146,6 @@
 
     iput v3, p0, Landroid/widget/MultiSelectPopupWindow$SelectionStartHandleView;->mPositionX:I
 
-    .line 1481
     iget v3, p0, Landroid/widget/MultiSelectPopupWindow$SelectionStartHandleView;->mPositionX:I
 
     # getter for: Landroid/widget/MultiSelectPopupWindow;->mTextView:Landroid/widget/TextView;
@@ -177,7 +161,6 @@
 
     iput v3, p0, Landroid/widget/MultiSelectPopupWindow$SelectionStartHandleView;->mPositionX:I
 
-    .line 1484
     .end local v1    # "layout":Landroid/text/Layout;
     :goto_0
     return v2
@@ -192,7 +175,6 @@
     .locals 3
 
     .prologue
-    .line 1419
     # getter for: Landroid/widget/MultiSelectPopupWindow;->mTextView:Landroid/widget/TextView;
     invoke-static {}, Landroid/widget/MultiSelectPopupWindow;->access$100()Landroid/widget/TextView;
 
@@ -202,18 +184,15 @@
 
     move-result-object v0
 
-    .line 1420
     .local v0, "text":Ljava/lang/CharSequence;
     if-nez v0, :cond_0
 
-    .line 1421
     const-string v1, "MultiSelectPopupWindow"
 
     const-string v2, "getTextFormultiSelection() text is null"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1424
     :cond_0
     invoke-static {v0}, Landroid/text/MultiSelection;->getSelectionStart(Ljava/lang/CharSequence;)I
 
@@ -228,17 +207,14 @@
     .param p2, "isRtlRun"    # Z
 
     .prologue
-    .line 1410
     if-eqz p2, :cond_0
 
-    .line 1411
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v0
 
     div-int/lit8 v0, v0, 0x4
 
-    .line 1413
     :goto_0
     return v0
 
@@ -261,21 +237,16 @@
     .param p3, "parentScrolled"    # Z
 
     .prologue
-    .line 1455
     invoke-super {p0, p1, p2, p3}, Landroid/widget/MultiSelectPopupWindow$HandleView;->positionAtCursorOffset(IZZ)V
 
-    .line 1456
     invoke-virtual {p0}, Landroid/widget/MultiSelectPopupWindow$SelectionStartHandleView;->calculateForSwitchingCursor()Z
 
-    .line 1457
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/widget/MultiSelectPopupWindow$SelectionStartHandleView;->mPositionHasChanged:Z
 
-    .line 1458
     invoke-virtual {p0}, Landroid/widget/MultiSelectPopupWindow$SelectionStartHandleView;->invalidate()V
 
-    .line 1459
     return-void
 .end method
 
@@ -283,7 +254,6 @@
     .locals 1
 
     .prologue
-    .line 1462
     invoke-direct {p0}, Landroid/widget/MultiSelectPopupWindow$SelectionStartHandleView;->isHandleViewScreenOut()Z
 
     move-result v0
@@ -294,7 +264,6 @@
 
     if-nez v0, :cond_0
 
-    .line 1463
     # getter for: Landroid/widget/MultiSelectPopupWindow;->mTextView:Landroid/widget/TextView;
     invoke-static {}, Landroid/widget/MultiSelectPopupWindow;->access$100()Landroid/widget/TextView;
 
@@ -302,10 +271,8 @@
 
     invoke-virtual {v0}, Landroid/widget/TextView;->invalidate()V
 
-    .line 1464
     const/4 v0, 0x1
 
-    .line 1466
     :goto_0
     return v0
 
@@ -319,16 +286,13 @@
     .locals 4
 
     .prologue
-    .line 1488
     invoke-virtual {p0}, Landroid/widget/MultiSelectPopupWindow$SelectionStartHandleView;->getCurrentCursorOffset()I
 
     move-result v1
 
-    .line 1489
     .local v1, "offset":I
     iget-object v2, p0, Landroid/widget/MultiSelectPopupWindow$SelectionStartHandleView;->mDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 1490
     .local v2, "oldDrawable":Landroid/graphics/drawable/Drawable;
     # getter for: Landroid/widget/MultiSelectPopupWindow;->mTextView:Landroid/widget/TextView;
     invoke-static {}, Landroid/widget/MultiSelectPopupWindow;->access$100()Landroid/widget/TextView;
@@ -343,18 +307,15 @@
 
     move-result v0
 
-    .line 1492
     .local v0, "isRtlCharAtOffset":Z
     iget-boolean v3, p0, Landroid/widget/MultiSelectPopupWindow$SelectionStartHandleView;->mbSwitchCursor:Z
 
     if-eqz v3, :cond_0
 
-    .line 1493
     if-nez v0, :cond_2
 
     const/4 v0, 0x1
 
-    .line 1496
     :cond_0
     :goto_0
     if-eqz v0, :cond_3
@@ -364,7 +325,6 @@
     :goto_1
     iput-object v3, p0, Landroid/widget/MultiSelectPopupWindow$SelectionStartHandleView;->mDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 1497
     iget-object v3, p0, Landroid/widget/MultiSelectPopupWindow$SelectionStartHandleView;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0, v3, v0}, Landroid/widget/MultiSelectPopupWindow$SelectionStartHandleView;->getHotspotX(Landroid/graphics/drawable/Drawable;Z)I
@@ -373,28 +333,22 @@
 
     iput v3, p0, Landroid/widget/MultiSelectPopupWindow$SelectionStartHandleView;->mHotspotX:I
 
-    .line 1499
     iget-object v3, p0, Landroid/widget/MultiSelectPopupWindow$SelectionStartHandleView;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eq v2, v3, :cond_1
 
-    .line 1500
     invoke-virtual {p0}, Landroid/widget/MultiSelectPopupWindow$SelectionStartHandleView;->recalHandleView()V
 
-    .line 1501
     invoke-virtual {p0}, Landroid/widget/MultiSelectPopupWindow$SelectionStartHandleView;->invalidate()V
 
-    .line 1503
     :cond_1
     return-void
 
-    .line 1493
     :cond_2
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 1496
     :cond_3
     iget-object v3, p0, Landroid/widget/MultiSelectPopupWindow$SelectionStartHandleView;->mDrawableLtr:Landroid/graphics/drawable/Drawable;
 
@@ -409,7 +363,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 1441
     # getter for: Landroid/widget/MultiSelectPopupWindow;->mTextView:Landroid/widget/TextView;
     invoke-static {}, Landroid/widget/MultiSelectPopupWindow;->access$100()Landroid/widget/TextView;
 
@@ -419,7 +372,6 @@
 
     move-result v0
 
-    .line 1442
     .local v0, "offset":I
     # getter for: Landroid/widget/MultiSelectPopupWindow;->mTextView:Landroid/widget/TextView;
     invoke-static {}, Landroid/widget/MultiSelectPopupWindow;->access$100()Landroid/widget/TextView;
@@ -430,30 +382,24 @@
 
     move-result-object v2
 
-    .line 1444
     .local v2, "text":Ljava/lang/CharSequence;
     invoke-static {v2}, Landroid/text/MultiSelection;->getSelectionEnd(Ljava/lang/CharSequence;)I
 
     move-result v1
 
-    .line 1445
     .local v1, "selectionEnd":I
     if-ne v0, v1, :cond_0
 
-    .line 1452
     :goto_0
     return-void
 
-    .line 1448
     :cond_0
     iget v3, p0, Landroid/widget/MultiSelectPopupWindow$SelectionStartHandleView;->mStartRange:I
 
     if-ge v0, v3, :cond_1
 
-    .line 1449
     iget v0, p0, Landroid/widget/MultiSelectPopupWindow$SelectionStartHandleView;->mStartRange:I
 
-    .line 1451
     :cond_1
     invoke-virtual {p0, v0, v4, v4}, Landroid/widget/MultiSelectPopupWindow$SelectionStartHandleView;->positionAtCursorOffset(IZZ)V
 
@@ -465,7 +411,6 @@
     .param p1, "offset"    # I
 
     .prologue
-    .line 1429
     # getter for: Landroid/widget/MultiSelectPopupWindow;->mTextView:Landroid/widget/TextView;
     invoke-static {}, Landroid/widget/MultiSelectPopupWindow;->access$100()Landroid/widget/TextView;
 
@@ -475,25 +420,21 @@
 
     move-result-object v0
 
-    .line 1430
     .local v0, "text":Ljava/lang/CharSequence;
     if-nez v0, :cond_0
 
-    .line 1431
     const-string v1, "MultiSelectPopupWindow"
 
     const-string v2, "getTextFormultiSelection() text is null"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1437
     :goto_0
     return-void
 
     :cond_0
     move-object v1, v0
 
-    .line 1435
     check-cast v1, Landroid/text/Spannable;
 
     invoke-static {v0}, Landroid/text/MultiSelection;->getSelectionEnd(Ljava/lang/CharSequence;)I
@@ -502,7 +443,6 @@
 
     invoke-static {v1, p1, v2}, Landroid/text/MultiSelection;->setSelection(Landroid/text/Spannable;II)V
 
-    .line 1436
     invoke-virtual {p0}, Landroid/widget/MultiSelectPopupWindow$SelectionStartHandleView;->updateDrawable()V
 
     goto :goto_0

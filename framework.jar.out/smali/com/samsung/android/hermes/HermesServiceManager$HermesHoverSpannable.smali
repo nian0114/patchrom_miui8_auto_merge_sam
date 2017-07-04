@@ -26,20 +26,16 @@
     .param p2, "kResult"    # Lcom/samsung/android/hermes/KerykeionResult;
 
     .prologue
-    .line 909
     iput-object p1, p0, Lcom/samsung/android/hermes/HermesServiceManager$HermesHoverSpannable;->this$0:Lcom/samsung/android/hermes/HermesServiceManager;
 
     invoke-direct {p0}, Landroid/text/style/HoverableSpan;-><init>()V
 
-    .line 907
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/samsung/android/hermes/HermesServiceManager$HermesHoverSpannable;->mResult:Lcom/samsung/android/hermes/KerykeionResult;
 
-    .line 910
     iput-object p2, p0, Lcom/samsung/android/hermes/HermesServiceManager$HermesHoverSpannable;->mResult:Lcom/samsung/android/hermes/KerykeionResult;
 
-    .line 911
     return-void
 .end method
 
@@ -50,7 +46,6 @@
     .param p1, "widget"    # Landroid/view/View;
 
     .prologue
-    .line 922
     # getter for: Lcom/samsung/android/hermes/HermesServiceManager;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/samsung/android/hermes/HermesServiceManager;->access$400()Ljava/lang/String;
 
@@ -60,16 +55,13 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 924
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    .line 925
     .local v0, "rect":Landroid/graphics/Rect;
     invoke-virtual {p1, v0}, Landroid/view/View;->getGlobalVisibleRect(Landroid/graphics/Rect;)Z
 
-    .line 926
     iget-object v1, p0, Lcom/samsung/android/hermes/HermesServiceManager$HermesHoverSpannable;->this$0:Lcom/samsung/android/hermes/HermesServiceManager;
 
     iget-object v2, p0, Lcom/samsung/android/hermes/HermesServiceManager$HermesHoverSpannable;->this$0:Lcom/samsung/android/hermes/HermesServiceManager;
@@ -100,7 +92,6 @@
     # invokes: Lcom/samsung/android/hermes/HermesServiceManager;->startHermesTickerService(Ljava/lang/String;Landroid/graphics/Rect;)V
     invoke-static {v1, v2, v0}, Lcom/samsung/android/hermes/HermesServiceManager;->access$800(Lcom/samsung/android/hermes/HermesServiceManager;Ljava/lang/String;Landroid/graphics/Rect;)V
 
-    .line 928
     return-void
 .end method
 
@@ -109,7 +100,6 @@
     .param p1, "widget"    # Landroid/view/View;
 
     .prologue
-    .line 933
     return-void
 .end method
 
@@ -118,19 +108,15 @@
     .param p1, "ds"    # Landroid/text/TextPaint;
 
     .prologue
-    .line 915
     const v0, -0xffff01
 
     invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setColor(I)V
 
-    .line 916
     const/4 v0, 0x1
 
     invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setUnderlineText(Z)V
 
-    .line 917
     invoke-super {p0, p1}, Landroid/text/style/HoverableSpan;->updateDrawState(Landroid/text/TextPaint;)V
 
-    .line 918
     return-void
 .end method

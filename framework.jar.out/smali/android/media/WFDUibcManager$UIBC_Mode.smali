@@ -52,7 +52,6 @@
 
     const/4 v2, 0x0
 
-    .line 91
     new-instance v0, Landroid/media/WFDUibcManager$UIBC_Mode;
 
     const-string v1, "NORMAL"
@@ -61,7 +60,6 @@
 
     sput-object v0, Landroid/media/WFDUibcManager$UIBC_Mode;->NORMAL:Landroid/media/WFDUibcManager$UIBC_Mode;
 
-    .line 92
     new-instance v0, Landroid/media/WFDUibcManager$UIBC_Mode;
 
     const-string v1, "FORCE_VALUE"
@@ -70,7 +68,6 @@
 
     sput-object v0, Landroid/media/WFDUibcManager$UIBC_Mode;->FORCE_VALUE:Landroid/media/WFDUibcManager$UIBC_Mode;
 
-    .line 93
     new-instance v0, Landroid/media/WFDUibcManager$UIBC_Mode;
 
     const-string v1, "CAMERA"
@@ -79,7 +76,6 @@
 
     sput-object v0, Landroid/media/WFDUibcManager$UIBC_Mode;->CAMERA:Landroid/media/WFDUibcManager$UIBC_Mode;
 
-    .line 94
     new-instance v0, Landroid/media/WFDUibcManager$UIBC_Mode;
 
     const-string v1, "FULL_SCREEN"
@@ -88,7 +84,6 @@
 
     sput-object v0, Landroid/media/WFDUibcManager$UIBC_Mode;->FULL_SCREEN:Landroid/media/WFDUibcManager$UIBC_Mode;
 
-    .line 95
     new-instance v0, Landroid/media/WFDUibcManager$UIBC_Mode;
 
     const-string v1, "PRESENTATION"
@@ -97,7 +92,6 @@
 
     sput-object v0, Landroid/media/WFDUibcManager$UIBC_Mode;->PRESENTATION:Landroid/media/WFDUibcManager$UIBC_Mode;
 
-    .line 90
     const/4 v0, 0x5
 
     new-array v0, v0, [Landroid/media/WFDUibcManager$UIBC_Mode;
@@ -136,7 +130,6 @@
     .end annotation
 
     .prologue
-    .line 90
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -147,7 +140,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 90
     const-class v0, Landroid/media/WFDUibcManager$UIBC_Mode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -163,7 +155,6 @@
     .locals 1
 
     .prologue
-    .line 90
     sget-object v0, Landroid/media/WFDUibcManager$UIBC_Mode;->$VALUES:[Landroid/media/WFDUibcManager$UIBC_Mode;
 
     invoke-virtual {v0}, [Landroid/media/WFDUibcManager$UIBC_Mode;->clone()Ljava/lang/Object;

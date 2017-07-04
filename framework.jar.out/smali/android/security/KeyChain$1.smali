@@ -28,12 +28,10 @@
     .locals 1
 
     .prologue
-    .line 684
     iput-object p1, p0, Landroid/security/KeyChain$1;->val$q:Ljava/util/concurrent/BlockingQueue;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 685
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/security/KeyChain$1;->mConnectedAtLeastOnce:Z
@@ -49,17 +47,14 @@
     .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
-    .line 687
     iget-boolean v0, p0, Landroid/security/KeyChain$1;->mConnectedAtLeastOnce:Z
 
     if-nez v0, :cond_0
 
-    .line 688
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/security/KeyChain$1;->mConnectedAtLeastOnce:Z
 
-    .line 690
     :try_start_0
     iget-object v0, p0, Landroid/security/KeyChain$1;->val$q:Ljava/util/concurrent/BlockingQueue;
 
@@ -71,12 +66,10 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 695
     :cond_0
     :goto_0
     return-void
 
-    .line 691
     :catch_0
     move-exception v0
 
@@ -88,6 +81,5 @@
     .param p1, "name"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 696
     return-void
 .end method

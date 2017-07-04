@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 742
     invoke-direct {p0}, Landroid/telecom/Call$Callback;-><init>()V
 
     return-void

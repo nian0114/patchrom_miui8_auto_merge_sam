@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 51
     iput-object p1, p0, Lcom/samsung/android/contextaware/utilbundle/autotest/LibraryStressTest$1;->this$0:Lcom/samsung/android/contextaware/utilbundle/autotest/LibraryStressTest;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,12 +41,10 @@
     .param p2, "context"    # Landroid/os/Bundle;
 
     .prologue
-    .line 55
     sget v0, Lcom/samsung/android/contextaware/ContextAwareManager;->CMD_PROCESS_FAULT_DETECTION:I
 
     if-ne p1, v0, :cond_0
 
-    .line 56
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -98,7 +95,6 @@
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 61
     :cond_0
     return-void
 .end method

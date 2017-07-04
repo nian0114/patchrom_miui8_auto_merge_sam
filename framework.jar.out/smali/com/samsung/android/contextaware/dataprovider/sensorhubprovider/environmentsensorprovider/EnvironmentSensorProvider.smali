@@ -15,17 +15,14 @@
     .param p3, "observable"    # Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;
 
     .prologue
-    .line 48
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0, p3}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/LibTypeProvider;-><init>(ILandroid/content/Context;Landroid/os/Looper;Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;)V
 
-    .line 34
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/environmentsensorprovider/EnvironmentSensorProvider;->mLoggingStatus:I
 
-    .line 49
     return-void
 .end method
 
@@ -34,30 +31,24 @@
     .param p1, "status"    # I
 
     .prologue
-    .line 173
     const/4 v0, 0x0
 
-    .line 175
     .local v0, "str":Ljava/lang/String;
     const/4 v1, 0x2
 
     if-ne p1, v1, :cond_1
 
-    .line 176
     const-string v0, "AP_SLEEP"
 
-    .line 181
     :cond_0
     :goto_0
     return-object v0
 
-    .line 177
     :cond_1
     const/4 v1, 0x1
 
     if-ne p1, v1, :cond_0
 
-    .line 178
     const-string v0, "AP_WAKEUP"
 
     goto :goto_0
@@ -73,7 +64,6 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 102
     if-eqz p2, :cond_0
 
     invoke-virtual {p2}, Ljava/lang/String;->isEmpty()Z
@@ -82,17 +72,14 @@
 
     if-eqz v9, :cond_1
 
-    .line 103
     :cond_0
     const-string v9, "key is null"
 
     invoke-static {v9}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 143
     :goto_0
     return-object v8
 
-    .line 107
     :cond_1
     if-eqz p1, :cond_2
 
@@ -102,7 +89,6 @@
 
     if-nez v9, :cond_3
 
-    .line 108
     :cond_2
     const-string v9, "bundle is null"
 
@@ -110,7 +96,6 @@
 
     goto :goto_0
 
-    .line 112
     :cond_3
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/environmentsensorprovider/EnvironmentSensorProvider;->getContextValueNames()[Ljava/lang/String;
 
@@ -120,13 +105,11 @@
 
     aget-object v5, v9, v10
 
-    .line 113
     .local v5, "loggingStatus":Ljava/lang/String;
     new-instance v6, Ljava/lang/StringBuffer;
 
     invoke-direct {v6}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 115
     .local v6, "str":Ljava/lang/StringBuffer;
     invoke-virtual {p2, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -134,7 +117,6 @@
 
     if-eqz v9, :cond_6
 
-    .line 117
     :try_start_0
     invoke-virtual {p1, p2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -142,7 +124,6 @@
 
     if-nez v9, :cond_4
 
-    .line 118
     const-string v9, "bundle.getString(key) is null"
 
     invoke-static {v9}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
@@ -151,17 +132,14 @@
 
     goto :goto_0
 
-    .line 123
     :catch_0
     move-exception v1
 
-    .line 124
     .local v1, "e":Ljava/lang/NumberFormatException;
     invoke-static {v1}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->exception(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
-    .line 121
     .end local v1    # "e":Ljava/lang/NumberFormatException;
     :cond_4
     :try_start_1
@@ -185,7 +163,6 @@
     :try_end_1
     .catch Ljava/lang/NumberFormatException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 143
     :cond_5
     :goto_1
     invoke-virtual {v6}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
@@ -194,13 +171,11 @@
 
     goto :goto_0
 
-    .line 128
     :cond_6
     invoke-virtual {p1, p2}, Landroid/os/Bundle;->getStringArray(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v7
 
-    .line 130
     .local v7, "strArray":[Ljava/lang/String;
     if-eqz v7, :cond_7
 
@@ -208,7 +183,6 @@
 
     if-gtz v9, :cond_8
 
-    .line 131
     :cond_7
     const-string v9, "bundle.getStringArray(key) is null"
 
@@ -216,7 +190,6 @@
 
     goto :goto_0
 
-    .line 135
     :cond_8
     move-object v0, v7
 
@@ -232,7 +205,6 @@
 
     aget-object v3, v0, v2
 
-    .line 136
     .local v3, "j":Ljava/lang/String;
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -254,12 +226,10 @@
 
     invoke-virtual {v6, v8}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 135
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
-    .line 138
     .end local v3    # "j":Ljava/lang/String;
     :cond_9
     const-string v8, ","
@@ -270,7 +240,6 @@
 
     if-lez v8, :cond_5
 
-    .line 139
     const-string v8, ","
 
     invoke-virtual {v6, v8}, Ljava/lang/StringBuffer;->lastIndexOf(Ljava/lang/String;)I
@@ -290,7 +259,6 @@
     .locals 1
 
     .prologue
-    .line 59
     const/16 v0, 0xc
 
     return v0
@@ -300,7 +268,6 @@
     .locals 1
 
     .prologue
-    .line 89
     invoke-static {}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/environmentsensorprovider/EnvironmentSensorHandler;->getInstance()Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/environmentsensorprovider/EnvironmentSensorHandler;
 
     move-result-object v0
@@ -316,7 +283,6 @@
     .locals 1
 
     .prologue
-    .line 152
     iget v0, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/environmentsensorprovider/EnvironmentSensorProvider;->mLoggingStatus:I
 
     return v0
@@ -327,10 +293,8 @@
     .param p1, "status"    # I
 
     .prologue
-    .line 162
     iput p1, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/environmentsensorprovider/EnvironmentSensorProvider;->mLoggingStatus:I
 
-    .line 163
     return-void
 .end method
 
@@ -346,17 +310,14 @@
     .end annotation
 
     .prologue
-    .line 71
     .local p2, "value":Ljava/lang/Object;, "TE;"
     const/4 v0, 0x1
 
-    .line 72
     .local v0, "result":Z
     const/16 v1, 0xd
 
     if-ne p1, v1, :cond_0
 
-    .line 73
     invoke-static {}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/environmentsensorprovider/EnvironmentSensorHandler;->getInstance()Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/environmentsensorprovider/EnvironmentSensorHandler;
 
     move-result-object v2
@@ -376,12 +337,11 @@
 
     invoke-virtual {v2, v1}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/environmentsensorprovider/EnvironmentSensorHandler;->setInterval(I)V
 
-    .line 75
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "setProperty (Interval) = "
+    const-string v2, "setProperty (Interval) = "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -405,11 +365,9 @@
 
     invoke-static {v1}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->info(Ljava/lang/String;)V
 
-    .line 80
     :goto_0
     return v0
 
-    .line 78
     .restart local p2    # "value":Ljava/lang/Object;, "TE;"
     :cond_0
     const/4 v0, 0x0

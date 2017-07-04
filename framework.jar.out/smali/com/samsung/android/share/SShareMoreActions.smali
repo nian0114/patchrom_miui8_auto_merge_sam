@@ -111,49 +111,36 @@
 
     const/4 v2, 0x0
 
-    .line 83
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 48
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/samsung/android/share/SShareMoreActions;->wifiManager:Landroid/net/wifi/WifiManager;
 
-    .line 49
     iput-boolean v2, p0, Lcom/samsung/android/share/SShareMoreActions;->bottomPanelExpaned:Z
 
-    .line 53
     iput v2, p0, Lcom/samsung/android/share/SShareMoreActions;->mSharePanelVisibleHeight:I
 
-    .line 78
     iput-boolean v2, p0, Lcom/samsung/android/share/SShareMoreActions;->mEnabledShowBtnBg:Z
 
-    .line 84
     iput-object p1, p0, Lcom/samsung/android/share/SShareMoreActions;->mActivity:Landroid/app/Activity;
 
-    .line 85
     iput-object p2, p0, Lcom/samsung/android/share/SShareMoreActions;->mContext:Landroid/content/Context;
 
-    .line 86
     iput-object p4, p0, Lcom/samsung/android/share/SShareMoreActions;->mWindow:Landroid/view/Window;
 
-    .line 87
     iput-object p3, p0, Lcom/samsung/android/share/SShareMoreActions;->mFeature:Lcom/samsung/android/share/SShareCommon;
 
-    .line 88
     iput-object p5, p0, Lcom/samsung/android/share/SShareMoreActions;->mLaunchedFromPackage:Ljava/lang/String;
 
-    .line 89
     invoke-virtual {p2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 90
     .local v0, "contentResolver":Landroid/content/ContentResolver;
     if-eqz v0, :cond_0
 
-    .line 91
-    const-string/jumbo v1, "show_button_background"
+    const-string v1, "show_button_background"
 
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -161,10 +148,8 @@
 
     if-ne v1, v3, :cond_0
 
-    .line 92
     iput-boolean v3, p0, Lcom/samsung/android/share/SShareMoreActions;->mEnabledShowBtnBg:Z
 
-    .line 95
     :cond_0
     return-void
 .end method
@@ -174,7 +159,6 @@
     .param p0, "x0"    # Lcom/samsung/android/share/SShareMoreActions;
 
     .prologue
-    .line 38
     iget-object v0, p0, Lcom/samsung/android/share/SShareMoreActions;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -185,7 +169,6 @@
     .param p0, "x0"    # Lcom/samsung/android/share/SShareMoreActions;
 
     .prologue
-    .line 38
     iget-boolean v0, p0, Lcom/samsung/android/share/SShareMoreActions;->mEnabledShowBtnBg:Z
 
     return v0
@@ -196,7 +179,6 @@
     .param p0, "x0"    # Lcom/samsung/android/share/SShareMoreActions;
 
     .prologue
-    .line 38
     iget v0, p0, Lcom/samsung/android/share/SShareMoreActions;->defaultTextSize:F
 
     return v0
@@ -208,7 +190,6 @@
     .param p1, "x1"    # F
 
     .prologue
-    .line 38
     iput p1, p0, Lcom/samsung/android/share/SShareMoreActions;->defaultTextSize:F
 
     return p1
@@ -220,7 +201,6 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 255
     iget-object v4, p0, Lcom/samsung/android/share/SShareMoreActions;->mContext:Landroid/content/Context;
 
     const-string v5, "connectivity"
@@ -231,13 +211,11 @@
 
     check-cast v0, Landroid/net/ConnectivityManager;
 
-    .line 256
     .local v0, "cm":Landroid/net/ConnectivityManager;
     invoke-virtual {v0, v3}, Landroid/net/ConnectivityManager;->getNetworkInfo(I)Landroid/net/NetworkInfo;
 
     move-result-object v1
 
-    .line 257
     .local v1, "ni_wifi":Landroid/net/NetworkInfo;
     const/16 v4, 0xd
 
@@ -245,7 +223,6 @@
 
     move-result-object v2
 
-    .line 259
     .local v2, "ni_wifiDirect":Landroid/net/NetworkInfo;
     if-eqz v1, :cond_0
 
@@ -268,7 +245,6 @@
 
     if-ne v4, v5, :cond_2
 
-    .line 263
     :cond_1
     :goto_0
     return v3
@@ -283,7 +259,6 @@
     .locals 3
 
     .prologue
-    .line 268
     iget-object v1, p0, Lcom/samsung/android/share/SShareMoreActions;->mContext:Landroid/content/Context;
 
     const-string v2, "display"
@@ -294,7 +269,6 @@
 
     check-cast v0, Landroid/hardware/display/DisplayManager;
 
-    .line 270
     .local v0, "dm":Landroid/hardware/display/DisplayManager;
     invoke-virtual {v0}, Landroid/hardware/display/DisplayManager;->isDLNADeviceConnected()Z
 
@@ -314,11 +288,9 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 272
     :cond_0
     const/4 v1, 0x1
 
-    .line 274
     :goto_0
     return v1
 
@@ -332,7 +304,6 @@
     .locals 1
 
     .prologue
-    .line 285
     iget v0, p0, Lcom/samsung/android/share/SShareMoreActions;->mSharePanelVisibleHeight:I
 
     return v0
@@ -342,12 +313,10 @@
     .locals 2
 
     .prologue
-    .line 250
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v0
 
-    .line 251
     .local v0, "userId":I
     const/16 v1, 0x64
 
@@ -382,34 +351,27 @@
 
     const/4 v7, 0x1
 
-    .line 101
     if-nez p1, :cond_1
 
-    .line 157
     :cond_0
     :goto_0
     return-void
 
-    .line 106
     :cond_1
     const/4 v1, 0x0
 
-    .line 107
     .local v1, "isAPConnected":Z
     const/4 v2, 0x0
 
-    .line 109
     .local v2, "isScreenMirroringRunning":Z
     invoke-direct {p0}, Lcom/samsung/android/share/SShareMoreActions;->checkAPConnection()Z
 
     move-result v1
 
-    .line 110
     invoke-direct {p0}, Lcom/samsung/android/share/SShareMoreActions;->checkScreenMirroringRunning()Z
 
     move-result v2
 
-    .line 111
     const-string v3, "SShareMoreActions"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -442,22 +404,18 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 113
     iput-object p1, p0, Lcom/samsung/android/share/SShareMoreActions;->mBottomPanel:Landroid/view/ViewGroup;
 
-    .line 114
     iget-object v3, p0, Lcom/samsung/android/share/SShareMoreActions;->mBottomPanel:Landroid/view/ViewGroup;
 
     invoke-virtual {v3, v8}, Landroid/view/ViewGroup;->setVisibility(I)V
 
-    .line 115
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v3, p0, Lcom/samsung/android/share/SShareMoreActions;->arItem:Ljava/util/ArrayList;
 
-    .line 118
     iget-object v3, p0, Lcom/samsung/android/share/SShareMoreActions;->mFeature:Lcom/samsung/android/share/SShareCommon;
 
     invoke-virtual {v3}, Lcom/samsung/android/share/SShareCommon;->getChangePlayerEnable()I
@@ -468,7 +426,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 119
     new-instance v0, Lcom/samsung/android/share/SShareMoreActions$ActionItem;
 
     const/16 v3, 0x65
@@ -485,13 +442,11 @@
 
     invoke-direct {v0, p0, v3, v4, v5}, Lcom/samsung/android/share/SShareMoreActions$ActionItem;-><init>(Lcom/samsung/android/share/SShareMoreActions;IILjava/lang/String;)V
 
-    .line 120
     .local v0, "ai":Lcom/samsung/android/share/SShareMoreActions$ActionItem;
     iget-object v3, p0, Lcom/samsung/android/share/SShareMoreActions;->arItem:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 123
     .end local v0    # "ai":Lcom/samsung/android/share/SShareMoreActions$ActionItem;
     :cond_2
     iget-object v3, p0, Lcom/samsung/android/share/SShareMoreActions;->mFeature:Lcom/samsung/android/share/SShareCommon;
@@ -502,7 +457,6 @@
 
     if-ne v3, v7, :cond_3
 
-    .line 124
     new-instance v0, Lcom/samsung/android/share/SShareMoreActions$ActionItem;
 
     const/16 v3, 0x66
@@ -519,13 +473,11 @@
 
     invoke-direct {v0, p0, v3, v4, v5}, Lcom/samsung/android/share/SShareMoreActions$ActionItem;-><init>(Lcom/samsung/android/share/SShareMoreActions;IILjava/lang/String;)V
 
-    .line 125
     .restart local v0    # "ai":Lcom/samsung/android/share/SShareMoreActions$ActionItem;
     iget-object v3, p0, Lcom/samsung/android/share/SShareMoreActions;->arItem:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 128
     .end local v0    # "ai":Lcom/samsung/android/share/SShareMoreActions$ActionItem;
     :cond_3
     iget-object v3, p0, Lcom/samsung/android/share/SShareMoreActions;->mFeature:Lcom/samsung/android/share/SShareCommon;
@@ -549,7 +501,6 @@
     :cond_4
     if-nez v2, :cond_5
 
-    .line 129
     new-instance v0, Lcom/samsung/android/share/SShareMoreActions$ActionItem;
 
     const/16 v3, 0x67
@@ -560,13 +511,11 @@
 
     invoke-direct {v0, p0, v3, v4, v5}, Lcom/samsung/android/share/SShareMoreActions$ActionItem;-><init>(Lcom/samsung/android/share/SShareMoreActions;IILjava/lang/String;)V
 
-    .line 130
     .restart local v0    # "ai":Lcom/samsung/android/share/SShareMoreActions$ActionItem;
     iget-object v3, p0, Lcom/samsung/android/share/SShareMoreActions;->arItem:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 133
     .end local v0    # "ai":Lcom/samsung/android/share/SShareMoreActions$ActionItem;
     :cond_5
     iget-object v3, p0, Lcom/samsung/android/share/SShareMoreActions;->mFeature:Lcom/samsung/android/share/SShareCommon;
@@ -577,7 +526,6 @@
 
     if-ne v3, v7, :cond_6
 
-    .line 134
     new-instance v0, Lcom/samsung/android/share/SShareMoreActions$ActionItem;
 
     const/16 v3, 0x68
@@ -594,13 +542,11 @@
 
     invoke-direct {v0, p0, v3, v4, v5}, Lcom/samsung/android/share/SShareMoreActions$ActionItem;-><init>(Lcom/samsung/android/share/SShareMoreActions;IILjava/lang/String;)V
 
-    .line 135
     .restart local v0    # "ai":Lcom/samsung/android/share/SShareMoreActions$ActionItem;
     iget-object v3, p0, Lcom/samsung/android/share/SShareMoreActions;->arItem:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 138
     .end local v0    # "ai":Lcom/samsung/android/share/SShareMoreActions$ActionItem;
     :cond_6
     iget-object v3, p0, Lcom/samsung/android/share/SShareMoreActions;->mFeature:Lcom/samsung/android/share/SShareCommon;
@@ -611,7 +557,6 @@
 
     if-ne v3, v7, :cond_7
 
-    .line 139
     new-instance v0, Lcom/samsung/android/share/SShareMoreActions$ActionItem;
 
     const/16 v3, 0x69
@@ -628,13 +573,11 @@
 
     invoke-direct {v0, p0, v3, v4, v5}, Lcom/samsung/android/share/SShareMoreActions$ActionItem;-><init>(Lcom/samsung/android/share/SShareMoreActions;IILjava/lang/String;)V
 
-    .line 140
     .restart local v0    # "ai":Lcom/samsung/android/share/SShareMoreActions$ActionItem;
     iget-object v3, p0, Lcom/samsung/android/share/SShareMoreActions;->arItem:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 143
     .end local v0    # "ai":Lcom/samsung/android/share/SShareMoreActions$ActionItem;
     :cond_7
     new-instance v3, Lcom/samsung/android/share/SShareMoreActions$BottomPanelAdapter;
@@ -649,7 +592,6 @@
 
     iput-object v3, p0, Lcom/samsung/android/share/SShareMoreActions;->mBottomAdapter:Lcom/samsung/android/share/SShareMoreActions$BottomPanelAdapter;
 
-    .line 145
     iget-object v3, p0, Lcom/samsung/android/share/SShareMoreActions;->mWindow:Landroid/view/Window;
 
     const v4, 0x10204cc
@@ -662,7 +604,6 @@
 
     iput-object v3, p0, Lcom/samsung/android/share/SShareMoreActions;->mGridMoreActions:Landroid/widget/GridView;
 
-    .line 147
     iget-object v3, p0, Lcom/samsung/android/share/SShareMoreActions;->mGridMoreActions:Landroid/widget/GridView;
 
     if-eqz v3, :cond_0
@@ -675,24 +616,20 @@
 
     if-lez v3, :cond_0
 
-    .line 148
     iget-object v3, p0, Lcom/samsung/android/share/SShareMoreActions;->mGridMoreActions:Landroid/widget/GridView;
 
     invoke-virtual {v3, v8}, Landroid/widget/GridView;->setVisibility(I)V
 
-    .line 149
     iget-object v3, p0, Lcom/samsung/android/share/SShareMoreActions;->mGridMoreActions:Landroid/widget/GridView;
 
     iget-object v4, p0, Lcom/samsung/android/share/SShareMoreActions;->mBottomAdapter:Lcom/samsung/android/share/SShareMoreActions$BottomPanelAdapter;
 
     invoke-virtual {v3, v4}, Landroid/widget/GridView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 150
     iget-object v3, p0, Lcom/samsung/android/share/SShareMoreActions;->mGridMoreActions:Landroid/widget/GridView;
 
     invoke-virtual {v3, p2}, Landroid/widget/GridView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 151
     iget-object v3, p0, Lcom/samsung/android/share/SShareMoreActions;->arItem:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
@@ -701,14 +638,12 @@
 
     if-ne v3, v9, :cond_8
 
-    .line 152
     iget-object v3, p0, Lcom/samsung/android/share/SShareMoreActions;->mGridMoreActions:Landroid/widget/GridView;
 
     invoke-virtual {v3, v9}, Landroid/widget/GridView;->setNumColumns(I)V
 
     goto/16 :goto_0
 
-    .line 154
     :cond_8
     iget-object v3, p0, Lcom/samsung/android/share/SShareMoreActions;->mGridMoreActions:Landroid/widget/GridView;
 
@@ -724,10 +659,8 @@
     .param p1, "pHeight"    # I
 
     .prologue
-    .line 281
     iput p1, p0, Lcom/samsung/android/share/SShareMoreActions;->mSharePanelVisibleHeight:I
 
-    .line 282
     return-void
 .end method
 
@@ -739,14 +672,12 @@
     .prologue
     const/4 v7, 0x1
 
-    .line 165
     iget-object v6, p0, Lcom/samsung/android/share/SShareMoreActions;->mBottomAdapter:Lcom/samsung/android/share/SShareMoreActions$BottomPanelAdapter;
 
     invoke-virtual {v6, p1}, Lcom/samsung/android/share/SShareMoreActions$BottomPanelAdapter;->getItemActionId(I)I
 
     move-result v0
 
-    .line 169
     .local v0, "actionID":I
     iget-object v6, p0, Lcom/samsung/android/share/SShareMoreActions;->mFeature:Lcom/samsung/android/share/SShareCommon;
 
@@ -756,83 +687,66 @@
 
     if-ne v6, v7, :cond_0
 
-    .line 171
     new-instance v4, Lcom/samsung/android/share/SShareLogging;
 
     iget-object v6, p0, Lcom/samsung/android/share/SShareMoreActions;->mContext:Landroid/content/Context;
 
     invoke-direct {v4, v6, p2}, Lcom/samsung/android/share/SShareLogging;-><init>(Landroid/content/Context;Landroid/content/Intent;)V
 
-    .line 173
     .local v4, "sshareLogging":Lcom/samsung/android/share/SShareLogging;
     packed-switch v0, :pswitch_data_0
 
-    .line 190
     const-string v1, "Wrong ID"
 
-    .line 195
     .local v1, "detailInfo":Ljava/lang/String;
     :goto_0
     const-string v6, "MORE"
 
     invoke-virtual {v4, v6, v1}, Lcom/samsung/android/share/SShareLogging;->insertLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 199
     .end local v1    # "detailInfo":Ljava/lang/String;
     .end local v4    # "sshareLogging":Lcom/samsung/android/share/SShareLogging;
     :cond_0
     packed-switch v0, :pswitch_data_1
 
-    .line 248
     :goto_1
     return-void
 
-    .line 175
     .restart local v4    # "sshareLogging":Lcom/samsung/android/share/SShareLogging;
     :pswitch_0
     const-string v1, "Change Player"
 
-    .line 176
     .restart local v1    # "detailInfo":Ljava/lang/String;
     goto :goto_0
 
-    .line 178
     .end local v1    # "detailInfo":Ljava/lang/String;
     :pswitch_1
     const-string v1, "Screen Mirroring"
 
-    .line 179
     .restart local v1    # "detailInfo":Ljava/lang/String;
     goto :goto_0
 
-    .line 181
     .end local v1    # "detailInfo":Ljava/lang/String;
     :pswitch_2
     const-string v1, "Smart View"
 
-    .line 182
     .restart local v1    # "detailInfo":Ljava/lang/String;
     goto :goto_0
 
-    .line 184
     .end local v1    # "detailInfo":Ljava/lang/String;
     :pswitch_3
     const-string v1, "Nearby sharing"
 
-    .line 185
     .restart local v1    # "detailInfo":Ljava/lang/String;
     goto :goto_0
 
-    .line 187
     .end local v1    # "detailInfo":Ljava/lang/String;
     :pswitch_4
     const-string v1, "Print"
 
-    .line 188
     .restart local v1    # "detailInfo":Ljava/lang/String;
     goto :goto_0
 
-    .line 201
     .end local v1    # "detailInfo":Ljava/lang/String;
     .end local v4    # "sshareLogging":Lcom/samsung/android/share/SShareLogging;
     :pswitch_5
@@ -843,15 +757,13 @@
 
     invoke-direct {v3, v6}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 202
     .local v3, "intent":Landroid/content/Intent;
-    const-string/jumbo v6, "more_actions_package_name"
+    const-string v6, "more_actions_package_name"
 
     iget-object v7, p0, Lcom/samsung/android/share/SShareMoreActions;->mLaunchedFromPackage:Ljava/lang/String;
 
     invoke-virtual {v3, v6, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 203
     iget-object v6, p0, Lcom/samsung/android/share/SShareMoreActions;->mContext:Landroid/content/Context;
 
     invoke-virtual {v6, v3}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
@@ -861,12 +773,10 @@
 
     goto :goto_1
 
-    .line 242
     .end local v3    # "intent":Landroid/content/Intent;
     :catch_0
     move-exception v2
 
-    .line 243
     .local v2, "e":Landroid/content/ActivityNotFoundException;
     const-string v6, "SShareMoreActions"
 
@@ -876,7 +786,6 @@
 
     goto :goto_1
 
-    .line 207
     .end local v2    # "e":Landroid/content/ActivityNotFoundException;
     :pswitch_6
     :try_start_1
@@ -886,30 +795,26 @@
 
     invoke-direct {v3, v6}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 208
     .restart local v3    # "intent":Landroid/content/Intent;
-    const-string/jumbo v6, "show_dialog_once"
+    const-string v6, "show_dialog_once"
 
     const/4 v7, 0x1
 
     invoke-virtual {v3, v6, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 209
-    const-string/jumbo v6, "tag_write_if_success"
+    const-string v6, "tag_write_if_success"
 
     const/4 v7, 0x0
 
     invoke-virtual {v3, v6, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 210
-    const-string/jumbo v6, "more_actions_package_name"
+    const-string v6, "more_actions_package_name"
 
     iget-object v7, p0, Lcom/samsung/android/share/SShareMoreActions;->mLaunchedFromPackage:Ljava/lang/String;
 
     invoke-virtual {v3, v6, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 211
-    const-string/jumbo v6, "more_actions_screen_sharing_mode"
+    const-string v6, "more_actions_screen_sharing_mode"
 
     iget-object v7, p0, Lcom/samsung/android/share/SShareMoreActions;->mFeature:Lcom/samsung/android/share/SShareCommon;
 
@@ -919,8 +824,7 @@
 
     invoke-virtual {v3, v6, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 212
-    const-string/jumbo v6, "more_actions_knox_state"
+    const-string v6, "more_actions_knox_state"
 
     invoke-direct {p0}, Lcom/samsung/android/share/SShareMoreActions;->isKnoxMode()Z
 
@@ -928,12 +832,10 @@
 
     invoke-virtual {v3, v6, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 218
     const/high16 v6, 0x14800000
 
     invoke-virtual {v3, v6}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 220
     iget-object v6, p0, Lcom/samsung/android/share/SShareMoreActions;->mActivity:Landroid/app/Activity;
 
     sget-object v7, Landroid/os/UserHandle;->CURRENT:Landroid/os/UserHandle;
@@ -945,12 +847,10 @@
 
     goto :goto_1
 
-    .line 244
     .end local v3    # "intent":Landroid/content/Intent;
     :catch_1
     move-exception v2
 
-    .line 245
     .local v2, "e":Ljava/lang/Exception;
     const-string v6, "SShareMoreActions"
 
@@ -958,12 +858,10 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 246
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_1
 
-    .line 224
     .end local v2    # "e":Ljava/lang/Exception;
     :pswitch_7
     :try_start_2
@@ -971,18 +869,15 @@
 
     invoke-direct {v3, p2}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
 
-    .line 225
     .restart local v3    # "intent":Landroid/content/Intent;
     const-string v6, "com.samsung.android.qconnect"
 
     invoke-virtual {v3, v6}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 226
     const-string v6, "com.samsung.android.qconnect.action.DEVICE_PICKER"
 
     invoke-virtual {v3, v6}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 227
     const-string v6, "extra_height"
 
     invoke-direct {p0}, Lcom/samsung/android/share/SShareMoreActions;->getSharePanelVisibieHeight()I
@@ -991,7 +886,6 @@
 
     invoke-virtual {v3, v6, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 228
     iget-object v6, p0, Lcom/samsung/android/share/SShareMoreActions;->mActivity:Landroid/app/Activity;
 
     sget-object v7, Landroid/os/UserHandle;->CURRENT:Landroid/os/UserHandle;
@@ -1000,7 +894,6 @@
 
     goto/16 :goto_1
 
-    .line 231
     .end local v3    # "intent":Landroid/content/Intent;
     :pswitch_8
     const-string v6, "android.intent.extra.STREAM"
@@ -1011,7 +904,6 @@
 
     check-cast v5, Landroid/net/Uri;
 
-    .line 232
     .local v5, "stream":Landroid/net/Uri;
     new-instance v3, Landroid/content/Intent;
 
@@ -1019,20 +911,17 @@
 
     invoke-direct {v3, v6}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 233
     .restart local v3    # "intent":Landroid/content/Intent;
-    const-string/jumbo v6, "more_actions_package_name"
+    const-string v6, "more_actions_package_name"
 
     iget-object v7, p0, Lcom/samsung/android/share/SShareMoreActions;->mLaunchedFromPackage:Ljava/lang/String;
 
     invoke-virtual {v3, v6, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 234
     const-string v6, "android.intent.extra.STREAM"
 
     invoke-virtual {v3, v6, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 235
     iget-object v6, p0, Lcom/samsung/android/share/SShareMoreActions;->mContext:Landroid/content/Context;
 
     invoke-virtual {v6, v3}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
@@ -1042,7 +931,6 @@
 
     goto/16 :goto_1
 
-    .line 173
     nop
 
     :pswitch_data_0
@@ -1054,7 +942,6 @@
         :pswitch_4
     .end packed-switch
 
-    .line 199
     :pswitch_data_1
     .packed-switch 0x65
         :pswitch_5

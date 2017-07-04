@@ -169,254 +169,202 @@
 
     const/4 v2, 0x0
 
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 37
     const-string v0, "LppAlgorithm"
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->TAG:Ljava/lang/String;
 
-    .line 39
     const-wide/high16 v0, 0x4034000000000000L    # 20.0
 
     iput-wide v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->MAX_MOVEMENT_SPEED_VEHICLE:D
 
-    .line 40
     const-wide/high16 v0, 0x4000000000000000L    # 2.0
 
     iput-wide v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->MAX_MOVEMENT_SPEED_RUN:D
 
-    .line 41
     iput-wide v8, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->MAX_MOVEMENT_SPEED_WALK:D
 
-    .line 42
     iput-wide v8, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->MAX_MOVEMENT_SPEED_STATIONARY:D
 
-    .line 43
     const-wide/high16 v0, 0x4034000000000000L    # 20.0
 
     iput-wide v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->MIN_MOVEMENT_DISTANCE:D
 
-    .line 44
     const-wide v0, 0x40b3880000000000L    # 5000.0
 
     iput-wide v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->MIN_UPDTAE_TIME:D
 
-    .line 46
     const-wide/16 v0, 0x14
 
     iput-wide v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->Trajectory_Time_Gap:J
 
-    .line 48
     const-wide/high16 v0, 0x4024000000000000L    # 10.0
 
     iput-wide v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->Position_Jump_Sec_TH:D
 
-    .line 51
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->mLPPLnr:Lcom/samsung/android/contextaware/aggregator/lpp/LppAlgoListener;
 
-    .line 53
     new-instance v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
     invoke-direct {v0}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->OldLoc:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
-    .line 55
     new-instance v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
     invoke-direct {v0}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->CurrentLoc:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
-    .line 56
     new-instance v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
     invoke-direct {v0}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->FilterdOldLoc:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
-    .line 57
     new-instance v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
     invoke-direct {v0}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->FilterdOlderLoc:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
-    .line 58
     new-instance v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
     invoke-direct {v0}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->CurrSetLoc:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
-    .line 60
     iput-boolean v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->flag_AlgorithmOn:Z
 
-    .line 61
     iput-boolean v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->mFlagIsGPSBatchMode:Z
 
-    .line 62
     iput-boolean v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->mFlagStayingArea:Z
 
-    .line 63
     iput-boolean v3, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->mFlagLocInputReady:Z
 
-    .line 64
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->mAPDRResults:Ljava/util/ArrayList;
 
-    .line 65
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->mAPDRStack:Ljava/util/ArrayList;
 
-    .line 66
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->mInputPosBuf:Ljava/util/ArrayList;
 
-    .line 67
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->mInputPosBufSync:Ljava/util/ArrayList;
 
-    .line 68
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->mLPPPosition:Ljava/util/ArrayList;
 
-    .line 70
     iput v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->_DATAFROMAPDR:I
 
-    .line 71
     iput v3, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->_DATAFROMGPS:I
 
-    .line 72
     const/4 v0, 0x2
 
     iput v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->_DATAFROMNETWORK:I
 
-    .line 74
     const-wide/high16 v0, 0x4014000000000000L    # 5.0
 
     iput-wide v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->POS_SET_RADIUS:D
 
-    .line 75
     const-wide/high16 v0, 0x4000000000000000L    # 2.0
 
     iput-wide v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->POS_SET_TIME:D
 
-    .line 77
     iput v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->RST_LOC_VALID_CHK_NOUPDATE:I
 
-    .line 78
     iput v3, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->RST_LOC_VALID_CHK_NEWSET:I
 
-    .line 79
     const/4 v0, 0x2
 
     iput v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->RST_LOC_VALID_CHK_STATIONARY:I
 
-    .line 82
     const/16 v0, 0x1f4
 
     iput v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->APDRMAXNUMBER:I
 
-    .line 83
     iput-boolean v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->Flag_Loc_init:Z
 
-    .line 84
     iput-boolean v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->Flag_First_loc:Z
 
-    .line 85
     iput-boolean v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->Flag_FineLocAcquired:Z
 
-    .line 88
     new-instance v0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/KalmanFilter;
 
     invoke-direct {v0, v4, v4}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/KalmanFilter;-><init>(II)V
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->PosKF:Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/KalmanFilter;
 
-    .line 166
     iput-wide v6, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->Cnt_SameLocSet:J
 
-    .line 339
     iput v3, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->lastStatus:I
 
-    .line 439
     iput v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->STATE_UNKNWON:I
 
-    .line 440
     iput v3, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->STATE_STATIONARY:I
 
-    .line 441
     const/4 v0, 0x4
 
     iput v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->STATE_VEHICLE:I
 
-    .line 448
     iput-wide v6, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->time_lastSent:J
 
-    .line 450
     new-instance v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
     invoke-direct {v0}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->AlgoLocP:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
-    .line 451
     new-instance v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
     invoke-direct {v0}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->AlgoLocPP:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
-    .line 452
     new-instance v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
     invoke-direct {v0}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->AlgoLocPPP:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
-    .line 488
     iput-wide v6, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->lastTrajTime:J
 
-    .line 704
     new-array v0, v4, [D
 
     fill-array-data v0, :array_0
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->Origin_LLH:[D
 
-    .line 705
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->Prev_StateTime:D
 
-    .line 706
     new-array v0, v4, [D
 
     fill-array-data v0, :array_1
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->ProcessNoisePerSecondVehicle:[D
 
-    .line 707
     new-array v0, v4, [D
 
     fill-array-data v0, :array_2
@@ -425,7 +373,6 @@
 
     return-void
 
-    .line 704
     nop
 
     :array_0
@@ -435,7 +382,6 @@
         0x4059000000000000L    # 100.0
     .end array-data
 
-    .line 706
     :array_1
     .array-data 8
         0x4024000000000000L    # 10.0
@@ -443,7 +389,6 @@
         0x3fe0000000000000L    # 0.5
     .end array-data
 
-    .line 707
     :array_2
     .array-data 8
         0x3ff0000000000000L    # 1.0
@@ -459,18 +404,15 @@
     .param p3, "flag_fixPos"    # Z
 
     .prologue
-    .line 344
     new-instance v7, Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;
 
     invoke-direct {v7}, Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;-><init>()V
 
-    .line 345
     .local v7, "apdrCurrent":Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;
     new-instance v8, Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;
 
     invoke-direct {v8}, Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;-><init>()V
 
-    .line 347
     .local v8, "apdrOld":Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;
     move-object/from16 v0, p0
 
@@ -497,7 +439,6 @@
 
     check-cast v6, Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;
 
-    .line 348
     .local v6, "apdr":Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;
     iget-wide v0, v7, Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;->utctime:J
 
@@ -511,7 +452,6 @@
 
     if-gez v18, :cond_1
 
-    .line 349
     iget-wide v0, v6, Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;->utctime:J
 
     move-wide/from16 v18, v0
@@ -524,10 +464,8 @@
 
     if-gez v18, :cond_1
 
-    .line 350
     invoke-virtual {v7, v6}, Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;->set(Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;)V
 
-    .line 353
     :cond_1
     iget-wide v0, v8, Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;->utctime:J
 
@@ -541,7 +479,6 @@
 
     if-gez v18, :cond_0
 
-    .line 354
     iget-wide v0, v6, Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;->utctime:J
 
     move-wide/from16 v18, v0
@@ -554,21 +491,17 @@
 
     if-gez v18, :cond_0
 
-    .line 355
     invoke-virtual {v8, v6}, Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;->set(Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;)V
 
     goto :goto_0
 
-    .line 360
     .end local v6    # "apdr":Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;
     :cond_2
     iget v9, v7, Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;->movingStatus:I
 
-    .line 361
     .local v9, "currStatus":I
     const-wide/high16 v4, 0x4024000000000000L    # 10.0
 
-    .line 364
     .local v4, "MAX_VELOCITY":D
     const/16 v18, 0x1
 
@@ -588,7 +521,6 @@
 
     if-ne v0, v1, :cond_8
 
-    .line 366
     :cond_3
     const/16 v18, 0x4
 
@@ -608,17 +540,14 @@
 
     if-ne v0, v1, :cond_7
 
-    .line 367
     :cond_4
     const-wide/high16 v4, 0x4034000000000000L    # 20.0
 
-    .line 384
     :goto_1
     invoke-virtual/range {p1 .. p2}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->distanceTo(Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;)D
 
     move-result-wide v10
 
-    .line 385
     .local v10, "dist_2_point":D
     invoke-virtual/range {p1 .. p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->getTime()J
 
@@ -640,11 +569,9 @@
 
     mul-double v16, v18, v20
 
-    .line 386
     .local v16, "timediff":D
     mul-double v14, v4, v16
 
-    .line 388
     .local v14, "maxDistance":D
     const/16 v18, 0x2
 
@@ -664,7 +591,6 @@
 
     if-ne v0, v1, :cond_5
 
-    .line 389
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->APDRMAXNUMBER:I
@@ -685,7 +611,6 @@
 
     if-lez v18, :cond_5
 
-    .line 390
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->APDRMAXNUMBER:I
@@ -702,11 +627,9 @@
 
     mul-double v14, v18, v20
 
-    .line 394
     :cond_5
     const/4 v13, 0x0
 
-    .line 396
     .local v13, "result":I
     const-wide/16 v18, 0x0
 
@@ -714,7 +637,6 @@
 
     if-lez v18, :cond_6
 
-    .line 398
     invoke-virtual/range {p1 .. p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->getLoc()Landroid/location/Location;
 
     move-result-object v18
@@ -731,15 +653,12 @@
 
     if-nez v18, :cond_d
 
-    .line 399
     const/4 v13, 0x1
 
-    .line 434
     :cond_6
     :goto_2
     return v13
 
-    .line 370
     .end local v10    # "dist_2_point":D
     .end local v13    # "result":I
     .end local v14    # "maxDistance":D
@@ -749,7 +668,6 @@
 
     goto :goto_1
 
-    .line 374
     :cond_8
     const/16 v18, 0x2
 
@@ -769,13 +687,11 @@
 
     if-ne v0, v1, :cond_a
 
-    .line 375
     :cond_9
     const-wide/high16 v4, 0x3ff0000000000000L    # 1.0
 
     goto/16 :goto_1
 
-    .line 377
     :cond_a
     const/16 v18, 0x3
 
@@ -795,19 +711,16 @@
 
     if-ne v0, v1, :cond_c
 
-    .line 378
     :cond_b
     const-wide/high16 v4, 0x4000000000000000L    # 2.0
 
     goto/16 :goto_1
 
-    .line 381
     :cond_c
     const-wide/high16 v4, 0x4034000000000000L    # 20.0
 
     goto/16 :goto_1
 
-    .line 401
     .restart local v10    # "dist_2_point":D
     .restart local v13    # "result":I
     .restart local v14    # "maxDistance":D
@@ -831,7 +744,6 @@
 
     if-lez v18, :cond_f
 
-    .line 402
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->mAPDRResults:Ljava/util/ArrayList;
@@ -855,7 +767,6 @@
 
     check-cast v6, Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;
 
-    .line 403
     .restart local v6    # "apdr":Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;
     new-instance v18, Ljava/lang/StringBuilder;
 
@@ -905,7 +816,6 @@
 
     goto :goto_3
 
-    .line 405
     .end local v6    # "apdr":Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;
     :cond_e
     new-instance v18, Ljava/lang/StringBuilder;
@@ -948,7 +858,6 @@
 
     invoke-direct {v0, v1}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->SendStatus(Ljava/lang/String;)V
 
-    .line 406
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -989,7 +898,6 @@
 
     invoke-direct {v0, v1}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->SendStatus(Ljava/lang/String;)V
 
-    .line 407
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -1028,7 +936,6 @@
 
     invoke-direct {v0, v1}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->SendStatus(Ljava/lang/String;)V
 
-    .line 408
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -1085,12 +992,10 @@
 
     invoke-direct {v0, v1}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->SendStatus(Ljava/lang/String;)V
 
-    .line 411
     const/4 v13, 0x0
 
     goto/16 :goto_2
 
-    .line 413
     :cond_f
     const-wide/high16 v18, 0x4034000000000000L    # 20.0
 
@@ -1104,7 +1009,6 @@
 
     if-lez v18, :cond_11
 
-    .line 414
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->mAPDRResults:Ljava/util/ArrayList;
@@ -1128,7 +1032,6 @@
 
     check-cast v6, Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;
 
-    .line 415
     .restart local v6    # "apdr":Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;
     new-instance v18, Ljava/lang/StringBuilder;
 
@@ -1178,7 +1081,6 @@
 
     goto :goto_4
 
-    .line 417
     .end local v6    # "apdr":Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;
     :cond_10
     new-instance v18, Ljava/lang/StringBuilder;
@@ -1221,7 +1123,6 @@
 
     invoke-direct {v0, v1}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->SendStatus(Ljava/lang/String;)V
 
-    .line 418
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -1262,7 +1163,6 @@
 
     invoke-direct {v0, v1}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->SendStatus(Ljava/lang/String;)V
 
-    .line 419
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -1301,7 +1201,6 @@
 
     invoke-direct {v0, v1}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->SendStatus(Ljava/lang/String;)V
 
-    .line 420
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -1358,12 +1257,10 @@
 
     invoke-direct {v0, v1}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->SendStatus(Ljava/lang/String;)V
 
-    .line 423
     const/4 v13, 0x0
 
     goto/16 :goto_2
 
-    .line 426
     :cond_11
     const/16 v18, 0x1
 
@@ -1371,12 +1268,10 @@
 
     if-ne v9, v0, :cond_12
 
-    .line 427
     const/4 v13, 0x2
 
     goto/16 :goto_2
 
-    .line 430
     :cond_12
     const/4 v13, 0x1
 
@@ -1388,7 +1283,6 @@
     .param p1, "lpploca"    # Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
     .prologue
-    .line 286
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1413,7 +1307,6 @@
 
     invoke-direct {p0, v4}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->SendStatus(Ljava/lang/String;)V
 
-    .line 289
     iget-object v4, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->OldLoc:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
     invoke-virtual {v4}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->getLoc()Landroid/location/Location;
@@ -1432,16 +1325,13 @@
 
     if-eqz v4, :cond_0
 
-    .line 290
     iget-object v4, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->OldLoc:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
     invoke-virtual {v4, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->set(Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;)V
 
-    .line 293
     :cond_0
     const/4 v0, 0x0
 
-    .line 295
     .local v0, "flag_goAlgo":Z
     iget-wide v4, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->Cnt_SameLocSet:J
 
@@ -1451,7 +1341,6 @@
 
     iput-wide v4, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->Cnt_SameLocSet:J
 
-    .line 296
     const-wide v4, 0x40c3880000000000L    # 10000.0
 
     iget-wide v6, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->lastTrajTime:J
@@ -1470,30 +1359,24 @@
 
     if-gez v4, :cond_3
 
-    .line 297
     const/4 v0, 0x1
 
-    .line 298
     const-wide/16 v4, 0x0
 
     iput-wide v4, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->Cnt_SameLocSet:J
 
-    .line 304
     :cond_1
     :goto_0
     if-eqz v0, :cond_9
 
-    .line 306
     iget-object v4, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->CurrSetLoc:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
     invoke-virtual {v4, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->set(Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;)V
 
-    .line 309
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 310
     .local v2, "mAPDRDeleteList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;>;"
     iget-object v4, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->mAPDRResults:Ljava/util/ArrayList;
 
@@ -1516,7 +1399,6 @@
 
     check-cast v3, Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;
 
-    .line 311
     .local v3, "sample":Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;
     iget-wide v4, v3, Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;->utctime:J
 
@@ -1530,12 +1412,10 @@
 
     if-gez v4, :cond_2
 
-    .line 312
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 299
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v2    # "mAPDRDeleteList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;>;"
     .end local v3    # "sample":Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;
@@ -1548,12 +1428,10 @@
 
     if-lez v4, :cond_1
 
-    .line 301
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 316
     .restart local v1    # "i$":Ljava/util/Iterator;
     .restart local v2    # "mAPDRDeleteList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;>;"
     :cond_4
@@ -1581,25 +1459,21 @@
 
     invoke-direct {p0, v4}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->SendStatus(Ljava/lang/String;)V
 
-    .line 317
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v4
 
     if-lez v4, :cond_5
 
-    .line 318
     iget-object v4, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->mAPDRResults:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v2}, Ljava/util/ArrayList;->removeAll(Ljava/util/Collection;)Z
 
-    .line 322
     :cond_5
     iget-object v4, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->mAPDRStack:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->clear()V
 
-    .line 323
     iget-object v4, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->mAPDRResults:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1620,7 +1494,6 @@
 
     check-cast v3, Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;
 
-    .line 324
     .restart local v3    # "sample":Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;
     iget-wide v4, v3, Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;->utctime:J
 
@@ -1634,7 +1507,6 @@
 
     if-gez v4, :cond_6
 
-    .line 325
     iget-object v4, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->mAPDRStack:Ljava/util/ArrayList;
 
     new-instance v5, Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;
@@ -1645,30 +1517,25 @@
 
     goto :goto_2
 
-    .line 329
     .end local v3    # "sample":Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;
     :cond_7
     iget-boolean v4, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->flag_AlgorithmOn:Z
 
     if-eqz v4, :cond_8
 
-    .line 330
     invoke-direct {p0}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->LppAlgorithmRun()V
 
-    .line 333
     :cond_8
     const-string v4, "LppAlgorithmRun end"
 
     invoke-direct {p0, v4}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->SendStatus(Ljava/lang/String;)V
 
-    .line 335
     iget-object v4, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->OldLoc:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
     iget-object v5, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->CurrSetLoc:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
     invoke-virtual {v4, v5}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->set(Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;)V
 
-    .line 337
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v2    # "mAPDRDeleteList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;>;"
     :cond_9
@@ -1679,28 +1546,24 @@
     .locals 2
 
     .prologue
-    .line 458
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->AlgoLocPPP:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
     iget-object v1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->AlgoLocPP:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->set(Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;)V
 
-    .line 459
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->AlgoLocPP:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
     iget-object v1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->OldLoc:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->set(Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;)V
 
-    .line 460
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->AlgoLocP:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
     iget-object v1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->CurrSetLoc:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->set(Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;)V
 
-    .line 462
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->AlgoLocPPP:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
     invoke-virtual {v0}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->getLoc()Landroid/location/Location;
@@ -1719,23 +1582,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 463
     const-string v0, "LppAlgorithmRun - Initial update"
 
     invoke-direct {p0, v0}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->SendStatus(Ljava/lang/String;)V
 
-    .line 485
     :goto_0
     return-void
 
-    .line 468
     :cond_0
     invoke-direct {p0}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->estimateSinglePoint()V
 
-    .line 472
     invoke-direct {p0}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->makeTrajectory()V
 
-    .line 476
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->mLPPPosition:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -1746,14 +1604,12 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 477
     const-string v0, "ERROR: LppAlgorithmRun() unkwon error - [mLPPPosition.size() < 1]"
 
     invoke-direct {p0, v0}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->SendStatus(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 481
     :cond_1
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->mLPPLnr:Lcom/samsung/android/contextaware/aggregator/lpp/LppAlgoListener;
 
@@ -1761,7 +1617,6 @@
 
     invoke-interface {v0, v1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppAlgoListener;->onUpdateLPPtraj(Ljava/util/ArrayList;)V
 
-    .line 482
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->mLPPPosition:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
@@ -1774,10 +1629,8 @@
     .param p1, "LocMeas"    # Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
     .prologue
-    .line 712
     move-object/from16 v3, p1
 
-    .line 715
     .local v3, "result":Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
     const/4 v4, 0x3
 
@@ -1785,7 +1638,6 @@
 
     move-object/from16 v20, v0
 
-    .line 716
     .local v20, "resultENU":[D
     move-object/from16 v0, p0
 
@@ -1813,7 +1665,6 @@
 
     invoke-virtual/range {v3 .. v9}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->setOrigin(DDD)V
 
-    .line 717
     const/4 v4, 0x0
 
     invoke-virtual {v3}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->getPosEastLocal()D
@@ -1822,7 +1673,6 @@
 
     aput-wide v6, v20, v4
 
-    .line 718
     const/4 v4, 0x1
 
     invoke-virtual {v3}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->getPosNorthLocal()D
@@ -1831,7 +1681,6 @@
 
     aput-wide v6, v20, v4
 
-    .line 719
     const/4 v4, 0x2
 
     invoke-virtual {v3}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->getPosUpLocal()D
@@ -1840,7 +1689,6 @@
 
     aput-wide v6, v20, v4
 
-    .line 721
     const/4 v4, 0x0
 
     aget-wide v4, v20, v4
@@ -1875,7 +1723,6 @@
 
     add-double v10, v4, v6
 
-    .line 722
     .local v10, "Dist":D
     const-wide v4, 0x41d502f900000000L    # 1.410065408E9
 
@@ -1883,7 +1730,6 @@
 
     if-lez v4, :cond_0
 
-    .line 728
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->Origin_LLH:[D
@@ -1896,7 +1742,6 @@
 
     aput-wide v6, v4, v5
 
-    .line 729
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->Origin_LLH:[D
@@ -1909,7 +1754,6 @@
 
     aput-wide v6, v4, v5
 
-    .line 730
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->Origin_LLH:[D
@@ -1922,7 +1766,6 @@
 
     aput-wide v6, v4, v5
 
-    .line 731
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->Origin_LLH:[D
@@ -1949,10 +1792,8 @@
 
     invoke-virtual/range {v3 .. v9}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->setOrigin(DDD)V
 
-    .line 733
     invoke-direct/range {p0 .. p0}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->PositionFilteringInit()V
 
-    .line 734
     const/4 v4, 0x3
 
     new-array v0, v4, [D
@@ -1983,7 +1824,6 @@
 
     aput-wide v6, v19, v4
 
-    .line 735
     .local v19, "mStateInit":[D
     move-object/from16 v0, p0
 
@@ -1993,7 +1833,6 @@
 
     invoke-virtual {v4, v0}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/KalmanFilter;->setInitialState([D)Z
 
-    .line 737
     invoke-virtual {v3}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->getTime()J
 
     move-result-wide v4
@@ -2004,13 +1843,11 @@
 
     iput-wide v4, v0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->Prev_StateTime:D
 
-    .line 804
     .end local v3    # "result":Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
     .end local v19    # "mStateInit":[D
     :goto_0
     return-object v3
 
-    .line 744
     .restart local v3    # "result":Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
     :cond_0
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2067,7 +1904,6 @@
 
     invoke-direct {v0, v4}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->SendStatus(Ljava/lang/String;)V
 
-    .line 746
     invoke-virtual {v3}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->getTime()J
 
     move-result-wide v4
@@ -2084,7 +1920,6 @@
 
     mul-double v16, v4, v6
 
-    .line 747
     .local v16, "delT":D
     invoke-virtual {v3}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->getTime()J
 
@@ -2096,7 +1931,6 @@
 
     iput-wide v4, v0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->Prev_StateTime:D
 
-    .line 750
     invoke-virtual {v3}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->getMovingStatus()I
 
     move-result v4
@@ -2105,7 +1939,6 @@
 
     if-ne v4, v5, :cond_1
 
-    .line 751
     const/4 v4, 0x3
 
     new-array v0, v4, [[D
@@ -2214,7 +2047,6 @@
 
     aput-object v5, v18, v4
 
-    .line 752
     .local v18, "mProcessNoise":[[D
     move-object/from16 v0, p0
 
@@ -2228,7 +2060,6 @@
 
     if-nez v4, :cond_1
 
-    .line 753
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->TAG:Ljava/lang/String;
@@ -2237,12 +2068,10 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 754
     const/4 v3, 0x0
 
     goto/16 :goto_0
 
-    .line 759
     .end local v18    # "mProcessNoise":[[D
     :cond_1
     invoke-virtual {v3}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->getMovingStatus()I
@@ -2253,7 +2082,6 @@
 
     if-ne v4, v5, :cond_3
 
-    .line 761
     const/4 v4, 0x3
 
     new-array v0, v4, [[D
@@ -2290,7 +2118,6 @@
 
     aput-object v5, v18, v4
 
-    .line 762
     .restart local v18    # "mProcessNoise":[[D
     move-object/from16 v0, p0
 
@@ -2304,7 +2131,6 @@
 
     if-nez v4, :cond_2
 
-    .line 763
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->TAG:Ljava/lang/String;
@@ -2313,12 +2139,10 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 764
     const/4 v3, 0x0
 
     goto/16 :goto_0
 
-    .line 766
     :cond_2
     move-object/from16 v0, p0
 
@@ -2332,7 +2156,6 @@
 
     if-nez v4, :cond_3
 
-    .line 767
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->TAG:Ljava/lang/String;
@@ -2341,12 +2164,10 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 768
     const/4 v3, 0x0
 
     goto/16 :goto_0
 
-    .line 772
     .end local v18    # "mProcessNoise":[[D
     :cond_3
     const/4 v4, 0x3
@@ -2401,7 +2222,6 @@
 
     aput-object v5, v13, v4
 
-    .line 774
     .local v13, "Meas":[[D
     new-instance v21, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/Matrix;
 
@@ -2409,7 +2229,6 @@
 
     invoke-direct {v0, v13}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/Matrix;-><init>([[D)V
 
-    .line 775
     .local v21, "z":Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/Matrix;
     invoke-virtual {v3}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->getAccuracy()F
 
@@ -2421,7 +2240,6 @@
 
     if-gez v4, :cond_5
 
-    .line 776
     invoke-virtual {v3}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->getLoc()Landroid/location/Location;
 
     move-result-object v4
@@ -2430,7 +2248,7 @@
 
     move-result-object v4
 
-    const-string/jumbo v5, "network"
+    const-string v5, "network"
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2438,7 +2256,6 @@
 
     if-eqz v4, :cond_4
 
-    .line 777
     const/4 v4, 0x3
 
     new-array v14, v4, [[D
@@ -2541,7 +2358,6 @@
 
     aput-object v5, v14, v4
 
-    .line 778
     .local v14, "MeasNoise":[[D
     move-object/from16 v0, p0
 
@@ -2549,7 +2365,6 @@
 
     invoke-virtual {v4, v14}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/KalmanFilter;->setMeasurementNoise([[D)Z
 
-    .line 790
     :goto_1
     move-object/from16 v0, p0
 
@@ -2563,7 +2378,6 @@
 
     if-nez v4, :cond_6
 
-    .line 791
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->TAG:Ljava/lang/String;
@@ -2572,12 +2386,10 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 792
     const/4 v3, 0x0
 
     goto/16 :goto_0
 
-    .line 780
     .end local v14    # "MeasNoise":[[D
     :cond_4
     const/4 v4, 0x3
@@ -2716,7 +2528,6 @@
 
     aput-object v5, v14, v4
 
-    .line 781
     .restart local v14    # "MeasNoise":[[D
     move-object/from16 v0, p0
 
@@ -2726,7 +2537,6 @@
 
     goto/16 :goto_1
 
-    .line 785
     .end local v14    # "MeasNoise":[[D
     :cond_5
     const/4 v4, 0x3
@@ -2849,7 +2659,6 @@
 
     aput-object v5, v14, v4
 
-    .line 786
     .restart local v14    # "MeasNoise":[[D
     move-object/from16 v0, p0
 
@@ -2859,7 +2668,6 @@
 
     goto/16 :goto_1
 
-    .line 795
     :cond_6
     move-object/from16 v0, p0
 
@@ -2869,7 +2677,6 @@
 
     move-result-object v2
 
-    .line 796
     .local v2, "ENU_updated":[D
     const/4 v4, 0x3
 
@@ -2927,13 +2734,11 @@
 
     aput-wide v6, v15, v4
 
-    .line 797
     .local v15, "Origin_LLH_radian":[D
     invoke-static {v2, v15}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/CoordinateTransform;->enu2llh([D[D)[D
 
     move-result-object v12
 
-    .line 799
     .local v12, "LLH_updated":[D
     const/4 v4, 0x0
 
@@ -2949,7 +2754,6 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->setLatitude(D)V
 
-    .line 800
     const/4 v4, 0x1
 
     aget-wide v4, v12, v4
@@ -2964,7 +2768,6 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->setLongitude(D)V
 
-    .line 801
     const/4 v4, 0x2
 
     aget-wide v4, v12, v4
@@ -2973,7 +2776,6 @@
 
     goto/16 :goto_0
 
-    .line 761
     nop
 
     :array_0
@@ -2997,7 +2799,6 @@
         0x4039000000000000L    # 25.0
     .end array-data
 
-    .line 777
     :array_3
     .array-data 8
         0x0
@@ -3018,12 +2819,10 @@
 
     const/4 v6, 0x3
 
-    .line 809
     const-string v5, "PositionFilteringInit()"
 
     invoke-direct {p0, v5}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->SendStatus(Ljava/lang/String;)V
 
-    .line 813
     new-array v0, v6, [[D
 
     new-array v5, v6, [D
@@ -3044,13 +2843,11 @@
 
     aput-object v5, v0, v9
 
-    .line 814
     .local v0, "mCovMatrix":[[D
     iget-object v5, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->PosKF:Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/KalmanFilter;
 
     invoke-virtual {v5, v0}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/KalmanFilter;->setInitialCovariance([[D)Z
 
-    .line 816
     new-array v1, v6, [[D
 
     new-array v5, v6, [D
@@ -3071,24 +2868,20 @@
 
     aput-object v5, v1, v9
 
-    .line 817
     .local v1, "mMeasMatrix":[[D
     iget-object v5, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->PosKF:Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/KalmanFilter;
 
     invoke-virtual {v5, v1}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/KalmanFilter;->setMeasurementMatrix([[D)Z
 
-    .line 819
     new-array v4, v6, [D
 
     fill-array-data v4, :array_6
 
-    .line 820
     .local v4, "mStateInit":[D
     iget-object v5, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->PosKF:Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/KalmanFilter;
 
     invoke-virtual {v5, v4}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/KalmanFilter;->setInitialState([D)Z
 
-    .line 822
     new-array v2, v6, [[D
 
     new-array v5, v6, [D
@@ -3109,13 +2902,11 @@
 
     aput-object v5, v2, v9
 
-    .line 823
     .local v2, "mMeasNoise":[[D
     iget-object v5, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->PosKF:Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/KalmanFilter;
 
     invoke-virtual {v5, v2}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/KalmanFilter;->setMeasurementNoise([[D)Z
 
-    .line 825
     new-array v3, v6, [[D
 
     new-array v5, v6, [D
@@ -3136,21 +2927,17 @@
 
     aput-object v5, v3, v9
 
-    .line 826
     .local v3, "mProcessNoise":[[D
     iget-object v5, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->PosKF:Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/KalmanFilter;
 
     invoke-virtual {v5, v3}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/KalmanFilter;->setProcessNoise([[D)Z
 
-    .line 828
     iget-object v5, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->PosKF:Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/KalmanFilter;
 
     invoke-virtual {v5, v1}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/KalmanFilter;->setTransitionMatrix([[D)Z
 
-    .line 829
     return-void
 
-    .line 813
     nop
 
     :array_0
@@ -3174,7 +2961,6 @@
         0x4059000000000000L    # 100.0
     .end array-data
 
-    .line 816
     :array_3
     .array-data 8
         0x3ff0000000000000L    # 1.0
@@ -3196,7 +2982,6 @@
         0x3ff0000000000000L    # 1.0
     .end array-data
 
-    .line 819
     :array_6
     .array-data 8
         0x0
@@ -3204,7 +2989,6 @@
         0x0
     .end array-data
 
-    .line 822
     :array_7
     .array-data 8
         0x4030000000000000L    # 16.0
@@ -3226,7 +3010,6 @@
         0x40c3880000000000L    # 10000.0
     .end array-data
 
-    .line 825
     :array_a
     .array-data 8
         0x4069000000000000L    # 200.0
@@ -3254,12 +3037,10 @@
     .param p1, "str"    # Ljava/lang/String;
 
     .prologue
-    .line 971
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->mLPPLnr:Lcom/samsung/android/contextaware/aggregator/lpp/LppAlgoListener;
 
     if-eqz v0, :cond_0
 
-    .line 972
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->mLPPLnr:Lcom/samsung/android/contextaware/aggregator/lpp/LppAlgoListener;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3282,7 +3063,6 @@
 
     invoke-interface {v0, v1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppAlgoListener;->status(Ljava/lang/String;)V
 
-    .line 974
     :cond_0
     return-void
 .end method
@@ -3292,16 +3072,13 @@
     .param p1, "time"    # J
 
     .prologue
-    .line 667
     new-instance v0, Landroid/text/format/Time;
 
     invoke-direct {v0}, Landroid/text/format/Time;-><init>()V
 
-    .line 668
     .local v0, "dataLocalTime":Landroid/text/format/Time;
     invoke-virtual {v0, p1, p2}, Landroid/text/format/Time;->set(J)V
 
-    .line 669
     iget v1, v0, Landroid/text/format/Time;->second:I
 
     int-to-long v6, v1
@@ -3324,7 +3101,6 @@
 
     sub-long v2, v6, v8
 
-    .line 670
     .local v2, "diff_sec":J
     long-to-double v6, p1
 
@@ -3346,7 +3122,6 @@
 
     mul-long v4, v6, v8
 
-    .line 671
     .local v4, "result":J
     return-wide v4
 .end method
@@ -3355,10 +3130,8 @@
     .locals 5
 
     .prologue
-    .line 676
     const/4 v0, 0x0
 
-    .line 679
     .local v0, "EstResult":Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
     iget-object v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->AlgoLocPP:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
@@ -3378,25 +3151,21 @@
 
     if-nez v2, :cond_0
 
-    .line 680
     new-instance v1, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
     iget-object v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->AlgoLocPP:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
     invoke-direct {v1, v2}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;-><init>(Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;)V
 
-    .line 681
     .local v1, "LocMeas":Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
     const/4 v2, 0x4
 
     invoke-virtual {v1, v2}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->setMovingStatus(I)V
 
-    .line 682
     invoke-direct {p0, v1}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->PositionFiltering(Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;)Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
     move-result-object v0
 
-    .line 686
     .end local v1    # "LocMeas":Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
     :cond_0
     iget-object v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->FilterdOlderLoc:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
@@ -3405,17 +3174,14 @@
 
     invoke-virtual {v2, v3}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->set(Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;)V
 
-    .line 689
     if-eqz v0, :cond_1
 
-    .line 691
     iget-object v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->FilterdOldLoc:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
     iget-object v3, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->AlgoLocPP:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
     invoke-virtual {v2, v3}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->set(Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;)V
 
-    .line 698
     :goto_0
     iget-object v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->CurrentLoc:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
@@ -3423,7 +3189,6 @@
 
     invoke-virtual {v2, v3}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->set(Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;)V
 
-    .line 700
     iget-object v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->FilterdOldLoc:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
     iget-object v3, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->FilterdOlderLoc:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
@@ -3432,16 +3197,13 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->estimateVelocity(Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;)V
 
-    .line 701
     return-void
 
-    .line 694
     :cond_1
     const-string v2, "EstimateSinglePoint(), abnormal filter output - null"
 
     invoke-direct {p0, v2}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->SendStatus(Ljava/lang/String;)V
 
-    .line 695
     iget-object v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->FilterdOldLoc:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
     iget-object v3, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->AlgoLocPP:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
@@ -3455,7 +3217,6 @@
     .locals 78
 
     .prologue
-    .line 493
     new-instance v3, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
     move-object/from16 v0, p0
@@ -3464,7 +3225,6 @@
 
     invoke-direct {v3, v4}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;-><init>(Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;)V
 
-    .line 494
     .local v3, "loc1":Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
     new-instance v56, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
@@ -3476,7 +3236,6 @@
 
     invoke-direct {v0, v4}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;-><init>(Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;)V
 
-    .line 495
     .local v56, "loc2":Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
     move-object/from16 v0, p0
 
@@ -3504,7 +3263,6 @@
 
     invoke-virtual/range {v3 .. v9}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->setOrigin(DDD)V
 
-    .line 496
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->Origin_LLH:[D
@@ -3533,7 +3291,6 @@
 
     invoke-virtual/range {v5 .. v11}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->setOrigin(DDD)V
 
-    .line 498
     move-object/from16 v0, p0
 
     iget-wide v10, v0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->lastTrajTime:J
@@ -3544,7 +3301,6 @@
 
     if-nez v4, :cond_2
 
-    .line 499
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->FilterdOlderLoc:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
@@ -3559,19 +3315,16 @@
 
     if-nez v4, :cond_1
 
-    .line 501
-    const-string/jumbo v4, "makeTrajectory : No need to update"
+    const-string v4, "makeTrajectory : No need to update"
 
     move-object/from16 v0, p0
 
     invoke-direct {v0, v4}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->SendStatus(Ljava/lang/String;)V
 
-    .line 664
     :cond_0
     :goto_0
     return-void
 
-    .line 505
     :cond_1
     move-object/from16 v0, p0
 
@@ -3591,7 +3344,6 @@
 
     iput-wide v10, v0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->lastTrajTime:J
 
-    .line 508
     :cond_2
     const-wide/high16 v10, 0x4034000000000000L    # 20.0
 
@@ -3613,11 +3365,9 @@
 
     sub-double v72, v10, v12
 
-    .line 510
     .local v72, "time_diff":D
     const/16 v45, 0x1
 
-    .line 514
     .local v45, "dataValid":Z
     invoke-virtual {v3}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->getTime()J
 
@@ -3629,7 +3379,6 @@
 
     mul-double v64, v10, v12
 
-    .line 515
     .local v64, "t1":D
     invoke-virtual/range {v56 .. v56}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->getTime()J
 
@@ -3641,7 +3390,6 @@
 
     mul-double v70, v10, v12
 
-    .line 516
     .local v70, "t2":D
     sub-double v10, v70, v64
 
@@ -3649,7 +3397,6 @@
 
     mul-double v66, v10, v12
 
-    .line 517
     .local v66, "t1_p1":D
     sub-double v10, v70, v64
 
@@ -3657,11 +3404,9 @@
 
     mul-double v68, v10, v12
 
-    .line 518
     .local v68, "t1_p2":D
     sub-double v46, v70, v64
 
-    .line 520
     .local v46, "del_t1_t2":D
     const-wide/16 v10, 0x0
 
@@ -3669,37 +3414,30 @@
 
     if-gtz v4, :cond_6
 
-    .line 521
     const-string v4, "WARNING: makeTrajectory - abnormal t1, t2"
 
     move-object/from16 v0, p0
 
     invoke-direct {v0, v4}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->SendStatus(Ljava/lang/String;)V
 
-    .line 522
     const/16 v45, 0x0
 
-    .line 523
     const-wide/16 v30, 0x0
 
-    .line 524
     .local v30, "X_D1_2":D
     const-wide/16 v40, 0x0
 
-    .line 540
     .local v40, "Y_D1_2":D
     :goto_1
     invoke-virtual {v3}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->getFilteredVelocity()[D
 
     move-result-object v21
 
-    .line 541
     .local v21, "XY_D1_filtered":[D
     invoke-virtual/range {v56 .. v56}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->getFilteredVelocity()[D
 
     move-result-object v26
 
-    .line 543
     .local v26, "XY_D2_filtered":[D
     const/4 v4, 0x0
 
@@ -3742,15 +3480,12 @@
 
     if-nez v4, :cond_5
 
-    .line 545
     :cond_4
     const/16 v45, 0x0
 
-    .line 548
     :cond_5
     if-eqz v45, :cond_8
 
-    .line 550
     mul-double v10, v30, v30
 
     mul-double v12, v40, v40
@@ -3761,31 +3496,26 @@
 
     move-result-wide v58
 
-    .line 552
     .local v58, "norm":D
     invoke-virtual {v3}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->getPosEastLocal()D
 
     move-result-wide v22
 
-    .line 553
     .local v22, "X1":D
     invoke-virtual {v3}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->getPosNorthLocal()D
 
     move-result-wide v34
 
-    .line 554
     .local v34, "Y1":D
     invoke-virtual/range {v56 .. v56}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->getPosEastLocal()D
 
     move-result-wide v24
 
-    .line 555
     .local v24, "X2":D
     invoke-virtual/range {v56 .. v56}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->getPosNorthLocal()D
 
     move-result-wide v36
 
-    .line 557
     .local v36, "Y2":D
     const/4 v4, 0x0
 
@@ -3793,7 +3523,6 @@
 
     mul-double v28, v10, v58
 
-    .line 558
     .local v28, "X_D1":D
     const/4 v4, 0x1
 
@@ -3801,7 +3530,6 @@
 
     mul-double v38, v10, v58
 
-    .line 559
     .local v38, "Y_D1":D
     const/4 v4, 0x0
 
@@ -3809,7 +3537,6 @@
 
     mul-double v32, v10, v58
 
-    .line 560
     .local v32, "X_D2":D
     const/4 v4, 0x1
 
@@ -3817,23 +3544,18 @@
 
     mul-double v42, v10, v58
 
-    .line 566
     .local v42, "Y_D2":D
     move-wide/from16 v48, v28
 
-    .line 567
     .local v48, "e_x":D
     move-wide/from16 v52, v22
 
-    .line 568
     .local v52, "f_x":D
     move-wide/from16 v50, v38
 
-    .line 569
     .local v50, "e_y":D
     move-wide/from16 v54, v34
 
-    .line 581
     .local v54, "f_y":D
     const/4 v4, 0x4
 
@@ -4041,7 +3763,6 @@
 
     aput-object v10, v57, v4
 
-    .line 595
     .local v57, "vals":[[D
     new-instance v2, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/Matrix;
 
@@ -4049,7 +3770,6 @@
 
     invoke-direct {v2, v0}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/Matrix;-><init>([[D)V
 
-    .line 597
     .local v2, "A_mat":Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/Matrix;
     const/4 v4, 0x4
 
@@ -4117,7 +3837,6 @@
 
     aput-object v10, v74, v4
 
-    .line 599
     .local v74, "valsX":[[D
     new-instance v76, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/Matrix;
 
@@ -4127,7 +3846,6 @@
 
     invoke-direct {v0, v1}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/Matrix;-><init>([[D)V
 
-    .line 601
     .local v76, "x_":Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/Matrix;
     const/4 v4, 0x4
 
@@ -4195,7 +3913,6 @@
 
     aput-object v10, v75, v4
 
-    .line 603
     .local v75, "valsY":[[D
     new-instance v77, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/Matrix;
 
@@ -4205,7 +3922,6 @@
 
     invoke-direct {v0, v1}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/Matrix;-><init>([[D)V
 
-    .line 605
     .local v77, "y_":Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/Matrix;
     invoke-virtual {v2}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/Matrix;->inverse()Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/Matrix;
 
@@ -4217,7 +3933,6 @@
 
     move-result-object v27
 
-    .line 606
     .local v27, "X_coef":Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/Matrix;
     invoke-virtual {v2}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/Matrix;->inverse()Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/Matrix;
 
@@ -4229,7 +3944,6 @@
 
     move-result-object v44
 
-    .line 609
     .local v44, "Y_coef":Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/Matrix;
     new-instance v5, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
@@ -4237,7 +3951,6 @@
 
     invoke-direct {v5, v0}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;-><init>(Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;)V
 
-    .line 612
     .local v5, "LocOut":Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
     move-object/from16 v0, p0
 
@@ -4265,7 +3978,6 @@
 
     invoke-virtual/range {v5 .. v11}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->setOrigin(DDD)V
 
-    .line 614
     move-wide/from16 v62, v72
 
     .local v62, "t":D
@@ -4274,7 +3986,6 @@
 
     if-gez v4, :cond_0
 
-    .line 619
     const/4 v4, 0x0
 
     const/4 v10, 0x0
@@ -4355,7 +4066,6 @@
 
     add-double v6, v10, v52
 
-    .line 622
     .local v6, "X_traj":D
     const/4 v4, 0x0
 
@@ -4437,7 +4147,6 @@
 
     add-double v8, v10, v54
 
-    .line 626
     .local v8, "Y_traj":D
     invoke-virtual/range {v56 .. v56}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->getAltitude()D
 
@@ -4445,7 +4154,6 @@
 
     invoke-virtual/range {v5 .. v11}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->setPosENU(DDD)V
 
-    .line 627
     invoke-virtual {v5}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->getLoc()Landroid/location/Location;
 
     move-result-object v4
@@ -4464,7 +4172,6 @@
 
     invoke-virtual {v4, v10, v11}, Landroid/location/Location;->setTime(J)V
 
-    .line 628
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->mLPPPosition:Ljava/util/ArrayList;
@@ -4475,7 +4182,6 @@
 
     invoke-virtual {v4, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 630
     invoke-virtual {v5}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->getTime()J
 
     move-result-wide v10
@@ -4484,14 +4190,12 @@
 
     iput-wide v10, v0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->lastTrajTime:J
 
-    .line 614
     const-wide/high16 v10, 0x4034000000000000L    # 20.0
 
     add-double v62, v62, v10
 
     goto/16 :goto_2
 
-    .line 525
     .end local v2    # "A_mat":Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/Matrix;
     .end local v5    # "LocOut":Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
     .end local v6    # "X_traj":D
@@ -4528,27 +4232,22 @@
 
     if-lez v4, :cond_7
 
-    .line 526
     const-string v4, "WARNING: makeTrajectory - too much gap between t1 and t2"
 
     move-object/from16 v0, p0
 
     invoke-direct {v0, v4}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->SendStatus(Ljava/lang/String;)V
 
-    .line 527
     const/16 v45, 0x0
 
-    .line 528
     const-wide/16 v30, 0x0
 
-    .line 529
     .restart local v30    # "X_D1_2":D
     const-wide/16 v40, 0x0
 
     .restart local v40    # "Y_D1_2":D
     goto/16 :goto_1
 
-    .line 531
     .end local v30    # "X_D1_2":D
     .end local v40    # "Y_D1_2":D
     :cond_7
@@ -4566,7 +4265,6 @@
 
     div-double v30, v10, v12
 
-    .line 533
     .restart local v30    # "X_D1_2":D
     invoke-virtual/range {v56 .. v56}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->getPosNorthLocal()D
 
@@ -4585,7 +4283,6 @@
     .restart local v40    # "Y_D1_2":D
     goto/16 :goto_1
 
-    .line 635
     .restart local v21    # "XY_D1_filtered":[D
     .restart local v26    # "XY_D2_filtered":[D
     :cond_8
@@ -4595,7 +4292,6 @@
 
     if-lez v4, :cond_9
 
-    .line 636
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->mLPPPosition:Ljava/util/ArrayList;
@@ -4608,7 +4304,6 @@
 
     invoke-virtual {v4, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 637
     invoke-virtual/range {v56 .. v56}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->getTime()J
 
     move-result-wide v10
@@ -4619,7 +4314,6 @@
 
     goto/16 :goto_0
 
-    .line 638
     :cond_9
     const-wide/16 v10, 0x0
 
@@ -4627,12 +4321,10 @@
 
     if-lez v4, :cond_0
 
-    .line 639
     new-instance v5, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
     invoke-direct {v5, v3}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;-><init>(Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;)V
 
-    .line 640
     .restart local v5    # "LocOut":Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
     const/4 v4, 0x2
 
@@ -4640,7 +4332,6 @@
 
     move-object/from16 v18, v0
 
-    .line 641
     .local v18, "EN1":[D
     const/4 v4, 0x2
 
@@ -4648,7 +4339,6 @@
 
     move-object/from16 v19, v0
 
-    .line 642
     .local v19, "EN2":[D
     const/4 v4, 0x2
 
@@ -4656,7 +4346,6 @@
 
     move-object/from16 v20, v0
 
-    .line 644
     .local v20, "EN_new":[D
     const/4 v4, 0x0
 
@@ -4666,7 +4355,6 @@
 
     aput-wide v10, v18, v4
 
-    .line 645
     const/4 v4, 0x1
 
     invoke-virtual {v3}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->getPosNorthLocal()D
@@ -4675,7 +4363,6 @@
 
     aput-wide v10, v18, v4
 
-    .line 646
     const/4 v4, 0x0
 
     invoke-virtual/range {v56 .. v56}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->getPosEastLocal()D
@@ -4684,7 +4371,6 @@
 
     aput-wide v10, v19, v4
 
-    .line 647
     const/4 v4, 0x1
 
     invoke-virtual/range {v56 .. v56}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->getPosNorthLocal()D
@@ -4693,7 +4379,6 @@
 
     aput-wide v10, v19, v4
 
-    .line 649
     move-wide/from16 v62, v72
 
     .restart local v62    # "t":D
@@ -4702,10 +4387,8 @@
 
     if-gez v4, :cond_0
 
-    .line 651
     div-double v60, v62, v46
 
-    .line 653
     .local v60, "ratio":D
     const/4 v4, 0x0
 
@@ -4729,7 +4412,6 @@
 
     aput-wide v10, v20, v4
 
-    .line 654
     const/4 v4, 0x1
 
     const/4 v10, 0x1
@@ -4752,7 +4434,6 @@
 
     aput-wide v10, v20, v4
 
-    .line 656
     const/4 v4, 0x0
 
     aget-wide v12, v20, v4
@@ -4769,7 +4450,6 @@
 
     invoke-virtual/range {v11 .. v17}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->setPosENU(DDD)V
 
-    .line 657
     invoke-virtual {v5}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->getLoc()Landroid/location/Location;
 
     move-result-object v4
@@ -4788,7 +4468,6 @@
 
     invoke-virtual {v4, v10, v11}, Landroid/location/Location;->setTime(J)V
 
-    .line 659
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->mLPPPosition:Ljava/util/ArrayList;
@@ -4799,7 +4478,6 @@
 
     invoke-virtual {v4, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 660
     invoke-virtual {v5}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->getTime()J
 
     move-result-wide v10
@@ -4808,7 +4486,6 @@
 
     iput-wide v10, v0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->lastTrajTime:J
 
-    .line 649
     const-wide/high16 v10, 0x4034000000000000L    # 20.0
 
     add-double v62, v62, v10
@@ -4829,40 +4506,33 @@
 
     const/4 v8, 0x1
 
-    .line 117
     if-nez p1, :cond_0
 
-    .line 118
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v1, "resetwithLastLoc() unknown error - lastloc is null"
+    const-string v1, "resetwithLastLoc() unknown error - lastloc is null"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 147
     :goto_0
     return-void
 
-    .line 122
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->LastLMLoc:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
     if-nez v0, :cond_1
 
-    .line 123
     new-instance v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
     invoke-direct {v0, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;-><init>(Landroid/location/Location;)V
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->LastLMLoc:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
-    .line 128
     :goto_1
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->OldLoc:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
     invoke-virtual {v0, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->set(Landroid/location/Location;)V
 
-    .line 129
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->Origin_LLH:[D
 
     invoke-virtual {p1}, Landroid/location/Location;->getLatitude()D
@@ -4871,7 +4541,6 @@
 
     aput-wide v2, v0, v4
 
-    .line 130
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->Origin_LLH:[D
 
     invoke-virtual {p1}, Landroid/location/Location;->getLongitude()D
@@ -4880,7 +4549,6 @@
 
     aput-wide v2, v0, v8
 
-    .line 131
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->Origin_LLH:[D
 
     invoke-virtual {p1}, Landroid/location/Location;->getAltitude()D
@@ -4889,7 +4557,6 @@
 
     aput-wide v2, v0, v6
 
-    .line 132
     iget-object v1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->OldLoc:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->Origin_LLH:[D
@@ -4906,34 +4573,28 @@
 
     invoke-virtual/range {v1 .. v7}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->setOrigin(DDD)V
 
-    .line 134
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->CurrentLoc:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
     iget-object v1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->OldLoc:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->set(Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;)V
 
-    .line 136
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->mAPDRStack:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 137
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->mAPDRStack:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 138
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->mLPPPosition:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 140
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->mInputPosBuf:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 141
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->mInputPosBuf:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
@@ -4942,23 +4603,18 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 142
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->mInputPosBufSync:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 143
     iput-boolean v8, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->mFlagLocInputReady:Z
 
-    .line 145
     iput-wide v10, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->lastTrajTime:J
 
-    .line 146
     iput-wide v10, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->Cnt_SameLocSet:J
 
     goto :goto_0
 
-    .line 125
     :cond_1
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->LastLMLoc:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
@@ -4985,7 +4641,6 @@
     .local p1, "listAPDR":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;>;"
     const/4 v6, 0x1
 
-    .line 150
     iget-object v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -5012,12 +4667,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 151
     new-instance v0, Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;
 
     invoke-direct {v0}, Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;-><init>()V
 
-    .line 152
     .local v0, "apdrD":Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;
     const/4 v1, 0x0
 
@@ -5029,7 +4682,6 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 153
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -5112,7 +4764,6 @@
 
     invoke-direct {p0, v2}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->SendStatus(Ljava/lang/String;)V
 
-    .line 158
     invoke-virtual {p1, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -5121,7 +4772,6 @@
 
     invoke-virtual {v0, v2}, Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;->set(Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;)V
 
-    .line 159
     iget-object v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->mAPDRResults:Ljava/util/ArrayList;
 
     new-instance v3, Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;
@@ -5130,21 +4780,17 @@
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 160
     iget v2, v0, Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;->movingStatus:I
 
     if-ne v2, v6, :cond_0
 
-    .line 161
     invoke-virtual {p0, v6}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->setStayingAreaFlag(I)V
 
-    .line 152
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 164
     :cond_1
     return-void
 .end method
@@ -5158,21 +4804,17 @@
 
     const/4 v10, 0x1
 
-    .line 171
     if-nez p1, :cond_0
 
-    .line 172
     iget-object v5, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->TAG:Ljava/lang/String;
 
     const-string v6, "deliverLocationData - loc is null"
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 283
     :goto_0
     return-void
 
-    .line 176
     :cond_0
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -5296,15 +4938,12 @@
 
     invoke-direct {p0, v5}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->SendStatus(Ljava/lang/String;)V
 
-    .line 179
     iget-object v5, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->LastLMLoc:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
     if-nez v5, :cond_1
 
-    .line 180
     invoke-direct {p0, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->resetwithLastLoc(Landroid/location/Location;)V
 
-    .line 184
     :cond_1
     iget-object v5, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->mInputPosBufSync:Ljava/util/ArrayList;
 
@@ -5314,7 +4953,6 @@
 
     invoke-virtual {v5, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 186
     iget-object v5, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->mInputPosBufSync:Ljava/util/ArrayList;
 
     invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
@@ -5325,12 +4963,10 @@
 
     if-le v5, v6, :cond_2
 
-    .line 188
     iget-object v5, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->mInputPosBufSync:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v8}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 190
     :cond_2
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -5358,7 +4994,6 @@
 
     invoke-direct {p0, v5}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->SendStatus(Ljava/lang/String;)V
 
-    .line 193
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -5381,15 +5016,12 @@
 
     invoke-direct {p0, v5}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->SendStatus(Ljava/lang/String;)V
 
-    .line 194
     iget-boolean v5, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->mFlagLocInputReady:Z
 
     if-eqz v5, :cond_5
 
-    .line 195
     iput-boolean v8, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->mFlagLocInputReady:Z
 
-    .line 197
     iget-object v5, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->mInputPosBufSync:Ljava/util/ArrayList;
 
     invoke-virtual {v5}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -5410,7 +5042,6 @@
 
     check-cast v3, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
-    .line 198
     .local v3, "lppl":Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
     iget-object v5, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->mInputPosBuf:Ljava/util/ArrayList;
 
@@ -5418,14 +5049,12 @@
 
     goto :goto_1
 
-    .line 200
     .end local v3    # "lppl":Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
     :cond_3
     iget-object v5, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->mInputPosBufSync:Ljava/util/ArrayList;
 
     invoke-virtual {v5}, Ljava/util/ArrayList;->clear()V
 
-    .line 208
     iget-object v5, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->mInputPosBuf:Ljava/util/ArrayList;
 
     new-instance v6, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm$1;
@@ -5434,15 +5063,12 @@
 
     invoke-static {v5, v6}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    .line 217
     iget-boolean v5, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->mFlagIsGPSBatchMode:Z
 
     if-nez v5, :cond_a
 
-    .line 220
     const/4 v1, 0x0
 
-    .line 222
     .local v1, "Flag_Stationary":Z
     iget-object v5, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->mInputPosBuf:Ljava/util/ArrayList;
 
@@ -5463,11 +5089,9 @@
 
     check-cast v4, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
-    .line 224
     .local v4, "lpploca":Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
     const/4 v0, 0x1
 
-    .line 225
     .local v0, "Flag_LocOK":Z
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -5491,12 +5115,10 @@
 
     invoke-direct {p0, v5}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->SendStatus(Ljava/lang/String;)V
 
-    .line 228
     iget-boolean v5, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->Flag_FineLocAcquired:Z
 
     if-eqz v5, :cond_6
 
-    .line 230
     iget-object v5, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->LastLMLoc:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
     invoke-direct {p0, v4, v5, v10}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->LocValidCheck(Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;Z)I
@@ -5505,20 +5127,15 @@
 
     packed-switch v5, :pswitch_data_0
 
-    .line 242
     const/4 v0, 0x0
 
-    .line 258
     :goto_3
     if-eqz v0, :cond_8
 
-    .line 260
     invoke-direct {p0, v4}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->LppAlgorithmCheckAndRun(Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;)V
 
-    .line 263
     if-eqz v1, :cond_4
 
-    .line 264
     invoke-virtual {v4}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->getLoc()Landroid/location/Location;
 
     move-result-object v5
@@ -5537,10 +5154,8 @@
 
     invoke-virtual {v5, v6, v7}, Landroid/location/Location;->setTime(J)V
 
-    .line 265
     invoke-direct {p0, v4}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->LppAlgorithmCheckAndRun(Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;)V
 
-    .line 268
     :cond_4
     iget-object v5, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->LastLMLoc:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
@@ -5548,7 +5163,6 @@
 
     goto :goto_2
 
-    .line 203
     .end local v0    # "Flag_LocOK":Z
     .end local v1    # "Flag_Stationary":Z
     .end local v2    # "i$":Ljava/util/Iterator;
@@ -5560,7 +5174,6 @@
 
     goto/16 :goto_0
 
-    .line 232
     .restart local v0    # "Flag_LocOK":Z
     .restart local v1    # "Flag_Stationary":Z
     .restart local v2    # "i$":Ljava/util/Iterator;
@@ -5568,27 +5181,20 @@
     :pswitch_0
     const/4 v0, 0x0
 
-    .line 233
     goto :goto_3
 
-    .line 235
     :pswitch_1
     const/4 v0, 0x1
 
-    .line 236
     goto :goto_3
 
-    .line 238
     :pswitch_2
     const/4 v0, 0x1
 
-    .line 239
     const/4 v1, 0x1
 
-    .line 240
     goto :goto_3
 
-    .line 247
     :cond_6
     invoke-virtual {v4}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->getAccuracy()F
 
@@ -5600,7 +5206,6 @@
 
     if-lez v5, :cond_7
 
-    .line 248
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -5625,12 +5230,10 @@
 
     invoke-direct {p0, v5}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->SendStatus(Ljava/lang/String;)V
 
-    .line 249
     const/4 v0, 0x0
 
     goto :goto_3
 
-    .line 252
     :cond_7
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -5656,15 +5259,12 @@
 
     invoke-direct {p0, v5}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->SendStatus(Ljava/lang/String;)V
 
-    .line 253
     iput-boolean v10, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->Flag_FineLocAcquired:Z
 
-    .line 254
     const/4 v0, 0x1
 
     goto :goto_3
 
-    .line 271
     :cond_8
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -5692,7 +5292,6 @@
 
     goto/16 :goto_2
 
-    .line 275
     .end local v0    # "Flag_LocOK":Z
     .end local v4    # "lpploca":Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
     :cond_9
@@ -5700,14 +5299,12 @@
 
     invoke-virtual {v5}, Ljava/util/ArrayList;->clear()V
 
-    .line 282
     .end local v1    # "Flag_Stationary":Z
     :goto_4
     iput-boolean v10, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->mFlagLocInputReady:Z
 
     goto/16 :goto_0
 
-    .line 279
     :cond_a
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -5737,7 +5334,6 @@
 
     goto :goto_4
 
-    .line 230
     nop
 
     :pswitch_data_0
@@ -5755,26 +5351,20 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 91
     iput-object p1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->mLPPLnr:Lcom/samsung/android/contextaware/aggregator/lpp/LppAlgoListener;
 
-    .line 92
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->TAG:Ljava/lang/String;
 
     const-string v1, "init()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 93
     iput-boolean v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->flag_AlgorithmOn:Z
 
-    .line 94
     iput-boolean v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->Flag_FineLocAcquired:Z
 
-    .line 96
     invoke-direct {p0}, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->PositionFilteringInit()V
 
-    .line 97
     return-void
 .end method
 
@@ -5783,10 +5373,8 @@
     .param p1, "flag"    # Z
 
     .prologue
-    .line 977
     iput-boolean p1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->mFlagIsGPSBatchMode:Z
 
-    .line 978
     return-void
 .end method
 
@@ -5795,12 +5383,10 @@
     .param p1, "status"    # I
 
     .prologue
-    .line 981
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->mFlagStayingArea:Z
 
-    .line 982
     return-void
 .end method
 
@@ -5808,12 +5394,10 @@
     .locals 1
 
     .prologue
-    .line 100
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->flag_AlgorithmOn:Z
 
-    .line 101
     return-void
 .end method
 
@@ -5821,7 +5405,6 @@
     .locals 3
 
     .prologue
-    .line 105
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -5850,7 +5433,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 107
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->mLPPPosition:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -5863,29 +5445,24 @@
 
     if-eqz v0, :cond_0
 
-    .line 108
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->mLPPLnr:Lcom/samsung/android/contextaware/aggregator/lpp/LppAlgoListener;
 
     iget-object v1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->mLPPPosition:Ljava/util/ArrayList;
 
     invoke-interface {v0, v1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppAlgoListener;->onUpdateLPPtraj(Ljava/util/ArrayList;)V
 
-    .line 109
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->mLPPPosition:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 111
     :cond_0
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->LastLMLoc:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
-    .line 112
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;->flag_AlgorithmOn:Z
 
-    .line 113
     return-void
 .end method

@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 794
     invoke-direct {p0}, Landroid/app/SystemServiceRegistry$StaticServiceFetcher;-><init>()V
 
     return-void
@@ -40,20 +39,17 @@
     .locals 3
 
     .prologue
-    .line 796
-    const-string/jumbo v2, "ktuca"
+    const-string v2, "ktuca"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 797
     .local v0, "b":Landroid/os/IBinder;
     invoke-static {v0}, Landroid/ktuca/IKtUcaIF$Stub;->asInterface(Landroid/os/IBinder;)Landroid/ktuca/IKtUcaIF;
 
     move-result-object v1
 
-    .line 798
     .local v1, "service":Landroid/ktuca/IKtUcaIF;
     new-instance v2, Landroid/ktuca/KtUcaManager;
 
@@ -66,7 +62,6 @@
     .locals 1
 
     .prologue
-    .line 794
     invoke-virtual {p0}, Landroid/app/SystemServiceRegistry$59;->createService()Landroid/ktuca/KtUcaManager;
 
     move-result-object v0

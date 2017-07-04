@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 1628
     iput-object p1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$11;->this$1:Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;
 
     iput-object p2, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$11;->val$animSet:Landroid/view/animation/AnimationSet;
@@ -44,7 +43,6 @@
     .locals 2
 
     .prologue
-    .line 1631
     iget-object v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$11;->this$1:Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;
 
     # getter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;->trashCover:Landroid/widget/ImageView;
@@ -56,6 +54,5 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 1632
     return-void
 .end method

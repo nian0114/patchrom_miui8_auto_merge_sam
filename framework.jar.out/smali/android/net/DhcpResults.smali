@@ -37,7 +37,6 @@
     .locals 1
 
     .prologue
-    .line 135
     new-instance v0, Landroid/net/DhcpResults$1;
 
     invoke-direct {v0}, Landroid/net/DhcpResults$1;-><init>()V
@@ -51,10 +50,8 @@
     .locals 0
 
     .prologue
-    .line 52
     invoke-direct {p0}, Landroid/net/StaticIpConfiguration;-><init>()V
 
-    .line 53
     return-void
 .end method
 
@@ -63,33 +60,26 @@
     .param p1, "source"    # Landroid/net/DhcpResults;
 
     .prologue
-    .line 61
     invoke-direct {p0, p1}, Landroid/net/StaticIpConfiguration;-><init>(Landroid/net/StaticIpConfiguration;)V
 
-    .line 63
     if-eqz p1, :cond_0
 
-    .line 65
     iget-object v0, p1, Landroid/net/DhcpResults;->serverAddress:Ljava/net/Inet4Address;
 
     iput-object v0, p0, Landroid/net/DhcpResults;->serverAddress:Ljava/net/Inet4Address;
 
-    .line 66
     iget-object v0, p1, Landroid/net/DhcpResults;->vendorInfo:Ljava/lang/String;
 
     iput-object v0, p0, Landroid/net/DhcpResults;->vendorInfo:Ljava/lang/String;
 
-    .line 67
     iget v0, p1, Landroid/net/DhcpResults;->leaseDuration:I
 
     iput v0, p0, Landroid/net/DhcpResults;->leaseDuration:I
 
-    .line 69
     iget v0, p1, Landroid/net/DhcpResults;->resultAfterRoaming:I
 
     iput v0, p0, Landroid/net/DhcpResults;->resultAfterRoaming:I
 
-    .line 71
     :cond_0
     return-void
 .end method
@@ -99,10 +89,8 @@
     .param p1, "source"    # Landroid/net/StaticIpConfiguration;
 
     .prologue
-    .line 56
     invoke-direct {p0, p1}, Landroid/net/StaticIpConfiguration;-><init>(Landroid/net/StaticIpConfiguration;)V
 
-    .line 57
     return-void
 .end method
 
@@ -112,7 +100,6 @@
     .param p1, "x1"    # Landroid/os/Parcel;
 
     .prologue
-    .line 33
     invoke-static {p0, p1}, Landroid/net/DhcpResults;->readFromParcel(Landroid/net/DhcpResults;Landroid/os/Parcel;)V
 
     return-void
@@ -124,17 +111,14 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 160
     invoke-static {p0, p1}, Landroid/net/StaticIpConfiguration;->readFromParcel(Landroid/net/StaticIpConfiguration;Landroid/os/Parcel;)V
 
-    .line 161
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/net/DhcpResults;->leaseDuration:I
 
-    .line 162
     invoke-static {p1}, Landroid/net/NetworkUtils;->unparcelInetAddress(Landroid/os/Parcel;)Ljava/net/InetAddress;
 
     move-result-object v0
@@ -143,14 +127,12 @@
 
     iput-object v0, p0, Landroid/net/DhcpResults;->serverAddress:Ljava/net/Inet4Address;
 
-    .line 163
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/net/DhcpResults;->vendorInfo:Ljava/lang/String;
 
-    .line 164
     return-void
 .end method
 
@@ -161,14 +143,12 @@
     .param p1, "addrString"    # Ljava/lang/String;
 
     .prologue
-    .line 190
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 192
     :try_start_0
     iget-object v1, p0, Landroid/net/DhcpResults;->dnsServers:Ljava/util/ArrayList;
 
@@ -180,18 +160,15 @@
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 198
     :cond_0
     const/4 v1, 0x0
 
     :goto_0
     return v1
 
-    .line 193
     :catch_0
     move-exception v0
 
-    .line 194
     .local v0, "e":Ljava/lang/IllegalArgumentException;
     const-string v1, "DhcpResults"
 
@@ -215,7 +192,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 195
     const/4 v1, 0x1
 
     goto :goto_0
@@ -227,21 +203,16 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 99
     invoke-super {p0}, Landroid/net/StaticIpConfiguration;->clear()V
 
-    .line 100
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/net/DhcpResults;->vendorInfo:Ljava/lang/String;
 
-    .line 101
     iput v1, p0, Landroid/net/DhcpResults;->leaseDuration:I
 
-    .line 103
     iput v1, p0, Landroid/net/DhcpResults;->resultAfterRoaming:I
 
-    .line 104
     return-void
 .end method
 
@@ -254,16 +225,13 @@
 
     const/4 v2, 0x0
 
-    .line 121
     if-ne p0, p1, :cond_1
 
-    .line 127
     .end local p1    # "obj":Ljava/lang/Object;
     :cond_0
     :goto_0
     return v1
 
-    .line 123
     .restart local p1    # "obj":Ljava/lang/Object;
     :cond_1
     instance-of v3, p1, Landroid/net/DhcpResults;
@@ -277,10 +245,8 @@
     :cond_2
     move-object v0, p1
 
-    .line 125
     check-cast v0, Landroid/net/DhcpResults;
 
-    .line 127
     .local v0, "target":Landroid/net/DhcpResults;
     check-cast p1, Landroid/net/StaticIpConfiguration;
 
@@ -333,12 +299,10 @@
     .locals 2
 
     .prologue
-    .line 91
     iget-object v0, p0, Landroid/net/DhcpResults;->vendorInfo:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    .line 92
     iget-object v0, p0, Landroid/net/DhcpResults;->vendorInfo:Ljava/lang/String;
 
     const-string v1, "ANDROID_METERED"
@@ -347,7 +311,6 @@
 
     move-result v0
 
-    .line 94
     :goto_0
     return v0
 
@@ -362,10 +325,8 @@
     .param p1, "newDomains"    # Ljava/lang/String;
 
     .prologue
-    .line 231
     iput-object p1, p0, Landroid/net/DhcpResults;->domains:Ljava/lang/String;
 
-    .line 232
     return-void
 .end method
 
@@ -374,7 +335,6 @@
     .param p1, "addrString"    # Ljava/lang/String;
 
     .prologue
-    .line 181
     :try_start_0
     invoke-static {p1}, Landroid/net/NetworkUtils;->numericToInetAddress(Ljava/lang/String;)Ljava/net/InetAddress;
 
@@ -384,17 +344,14 @@
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 186
     const/4 v1, 0x0
 
     :goto_0
     return v1
 
-    .line 182
     :catch_0
     move-exception v0
 
-    .line 183
     .local v0, "e":Ljava/lang/IllegalArgumentException;
     const-string v1, "DhcpResults"
 
@@ -402,7 +359,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "setGateway failed with addrString "
+    const-string v3, "setGateway failed with addrString "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -418,7 +375,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 184
     const/4 v1, 0x1
 
     goto :goto_0
@@ -430,7 +386,6 @@
     .param p2, "prefixLength"    # I
 
     .prologue
-    .line 170
     :try_start_0
     invoke-static {p1}, Landroid/net/NetworkUtils;->numericToInetAddress(Ljava/lang/String;)Ljava/net/InetAddress;
 
@@ -438,7 +393,6 @@
 
     check-cast v0, Ljava/net/Inet4Address;
 
-    .line 171
     .local v0, "addr":Ljava/net/Inet4Address;
     new-instance v2, Landroid/net/LinkAddress;
 
@@ -449,18 +403,15 @@
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 176
     const/4 v2, 0x0
 
     .end local v0    # "addr":Ljava/net/Inet4Address;
     :goto_0
     return v2
 
-    .line 172
     :catch_0
     move-exception v1
 
-    .line 173
     .local v1, "e":Ljava/lang/RuntimeException;
     :goto_1
     const-string v2, "DhcpResults"
@@ -469,7 +420,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "setIpAddress failed with addrString "
+    const-string v4, "setIpAddress failed with addrString "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -495,12 +446,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 174
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 172
     .end local v1    # "e":Ljava/lang/RuntimeException;
     :catch_1
     move-exception v1
@@ -513,10 +462,8 @@
     .param p1, "duration"    # I
 
     .prologue
-    .line 217
     iput p1, p0, Landroid/net/DhcpResults;->leaseDuration:I
 
-    .line 218
     return-void
 .end method
 
@@ -525,10 +472,8 @@
     .param p1, "RoamingResult"    # I
 
     .prologue
-    .line 223
     iput p1, p0, Landroid/net/DhcpResults;->resultAfterRoaming:I
 
-    .line 224
     return-void
 .end method
 
@@ -537,7 +482,6 @@
     .param p1, "addrString"    # Ljava/lang/String;
 
     .prologue
-    .line 204
     if-eqz p1, :cond_0
 
     :try_start_0
@@ -547,7 +491,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 205
     :cond_0
     sget-object v1, Ljava/net/Inet4Address;->LOOPBACK:Ljava/net/InetAddress;
 
@@ -555,14 +498,12 @@
 
     iput-object v1, p0, Landroid/net/DhcpResults;->serverAddress:Ljava/net/Inet4Address;
 
-    .line 213
     :goto_0
     const/4 v1, 0x0
 
     :goto_1
     return v1
 
-    .line 207
     :cond_1
     invoke-static {p1}, Landroid/net/NetworkUtils;->numericToInetAddress(Ljava/lang/String;)Ljava/net/InetAddress;
 
@@ -577,11 +518,9 @@
 
     goto :goto_0
 
-    .line 209
     :catch_0
     move-exception v0
 
-    .line 210
     .local v0, "e":Ljava/lang/RuntimeException;
     :goto_2
     const-string v1, "DhcpResults"
@@ -590,7 +529,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "setServerAddress failed with addrString "
+    const-string v3, "setServerAddress failed with addrString "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -606,12 +545,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 211
     const/4 v1, 0x1
 
     goto :goto_1
 
-    .line 209
     .end local v0    # "e":Ljava/lang/RuntimeException;
     :catch_1
     move-exception v0
@@ -624,10 +561,8 @@
     .param p1, "info"    # Ljava/lang/String;
 
     .prologue
-    .line 227
     iput-object p1, p0, Landroid/net/DhcpResults;->vendorInfo:Ljava/lang/String;
 
-    .line 228
     return-void
 .end method
 
@@ -635,7 +570,6 @@
     .locals 3
 
     .prologue
-    .line 108
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-super {p0}, Landroid/net/StaticIpConfiguration;->toString()Ljava/lang/String;
@@ -644,7 +578,6 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuffer;-><init>(Ljava/lang/String;)V
 
-    .line 110
     .local v0, "str":Ljava/lang/StringBuffer;
     const-string v1, " DHCP server "
 
@@ -656,7 +589,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/Object;)Ljava/lang/StringBuffer;
 
-    .line 111
     const-string v1, " Vendor info "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
@@ -667,7 +599,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 112
     const-string v1, " lease "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
@@ -684,7 +615,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 114
     iget v1, p0, Landroid/net/DhcpResults;->resultAfterRoaming:I
 
     const/4 v2, 0x2
@@ -695,7 +625,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 116
     :cond_0
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
@@ -709,15 +638,12 @@
     .param p1, "orig"    # Landroid/net/DhcpResults;
 
     .prologue
-    .line 79
     if-nez p1, :cond_1
 
-    .line 84
     :cond_0
     :goto_0
     return-void
 
-    .line 80
     :cond_1
     iget-object v0, p0, Landroid/net/DhcpResults;->gateway:Ljava/net/InetAddress;
 
@@ -727,7 +653,6 @@
 
     iput-object v0, p0, Landroid/net/DhcpResults;->gateway:Ljava/net/InetAddress;
 
-    .line 81
     :cond_2
     iget-object v0, p0, Landroid/net/DhcpResults;->dnsServers:Ljava/util/ArrayList;
 
@@ -737,7 +662,6 @@
 
     if-nez v0, :cond_0
 
-    .line 82
     iget-object v0, p0, Landroid/net/DhcpResults;->dnsServers:Ljava/util/ArrayList;
 
     iget-object v1, p1, Landroid/net/DhcpResults;->dnsServers:Ljava/util/ArrayList;
@@ -753,29 +677,23 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 150
     invoke-super {p0, p1, p2}, Landroid/net/StaticIpConfiguration;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 151
     iget v0, p0, Landroid/net/DhcpResults;->leaseDuration:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 152
     iget-object v0, p0, Landroid/net/DhcpResults;->serverAddress:Ljava/net/Inet4Address;
 
     invoke-static {p1, v0, p2}, Landroid/net/NetworkUtils;->parcelInetAddress(Landroid/os/Parcel;Ljava/net/InetAddress;I)V
 
-    .line 153
     iget-object v0, p0, Landroid/net/DhcpResults;->vendorInfo:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 156
     iget v0, p0, Landroid/net/DhcpResults;->resultAfterRoaming:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 157
     return-void
 .end method

@@ -48,7 +48,6 @@
 
     const/4 v2, 0x0
 
-    .line 136
     new-instance v0, Lcom/android/server/SecExternalDisplayService$EDSToast;
 
     const-string v1, "EDS_TOAST_HDMI_CONNECTED"
@@ -57,7 +56,6 @@
 
     sput-object v0, Lcom/android/server/SecExternalDisplayService$EDSToast;->EDS_TOAST_HDMI_CONNECTED:Lcom/android/server/SecExternalDisplayService$EDSToast;
 
-    .line 137
     new-instance v0, Lcom/android/server/SecExternalDisplayService$EDSToast;
 
     const-string v1, "EDS_TOAST_HDMI_DISCONNECTED"
@@ -66,7 +64,6 @@
 
     sput-object v0, Lcom/android/server/SecExternalDisplayService$EDSToast;->EDS_TOAST_HDMI_DISCONNECTED:Lcom/android/server/SecExternalDisplayService$EDSToast;
 
-    .line 138
     new-instance v0, Lcom/android/server/SecExternalDisplayService$EDSToast;
 
     const-string v1, "EDS_TOAST_WFD_DISCONNECTED"
@@ -75,7 +72,6 @@
 
     sput-object v0, Lcom/android/server/SecExternalDisplayService$EDSToast;->EDS_TOAST_WFD_DISCONNECTED:Lcom/android/server/SecExternalDisplayService$EDSToast;
 
-    .line 135
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/android/server/SecExternalDisplayService$EDSToast;
@@ -107,13 +103,10 @@
     .end annotation
 
     .prologue
-    .line 141
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 142
     iput p3, p0, Lcom/android/server/SecExternalDisplayService$EDSToast;->value:I
 
-    .line 143
     return-void
 .end method
 
@@ -122,10 +115,8 @@
     .param p0, "value"    # I
 
     .prologue
-    .line 148
     const/4 v3, 0x0
 
-    .line 149
     .local v3, "retStatus":Lcom/android/server/SecExternalDisplayService$EDSToast;
     invoke-static {}, Lcom/android/server/SecExternalDisplayService$EDSToast;->values()[Lcom/android/server/SecExternalDisplayService$EDSToast;
 
@@ -143,7 +134,6 @@
 
     aget-object v4, v0, v1
 
-    .line 150
     .local v4, "tempVal":Lcom/android/server/SecExternalDisplayService$EDSToast;
     invoke-virtual {v4}, Lcom/android/server/SecExternalDisplayService$EDSToast;->getValue()I
 
@@ -151,15 +141,12 @@
 
     if-ne v5, p0, :cond_1
 
-    .line 151
     move-object v3, v4
 
-    .line 155
     .end local v4    # "tempVal":Lcom/android/server/SecExternalDisplayService$EDSToast;
     :cond_0
     return-object v3
 
-    .line 149
     .restart local v4    # "tempVal":Lcom/android/server/SecExternalDisplayService$EDSToast;
     :cond_1
     add-int/lit8 v1, v1, 0x1
@@ -172,7 +159,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 135
     const-class v0, Lcom/android/server/SecExternalDisplayService$EDSToast;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -188,7 +174,6 @@
     .locals 1
 
     .prologue
-    .line 135
     sget-object v0, Lcom/android/server/SecExternalDisplayService$EDSToast;->$VALUES:[Lcom/android/server/SecExternalDisplayService$EDSToast;
 
     invoke-virtual {v0}, [Lcom/android/server/SecExternalDisplayService$EDSToast;->clone()Ljava/lang/Object;
@@ -206,7 +191,6 @@
     .locals 1
 
     .prologue
-    .line 145
     iget v0, p0, Lcom/android/server/SecExternalDisplayService$EDSToast;->value:I
 
     return v0

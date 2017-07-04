@@ -88,15 +88,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 96
     const/4 v0, 0x0
 
     sput-boolean v0, Lorg/codeaurora/Performance;->isFlingEnabled:Z
 
-    .line 143
     sput-object v1, Lorg/codeaurora/Performance;->mTouchInfo:Lorg/codeaurora/Performance$TouchInfo;
 
-    .line 144
     sput-object v1, Lorg/codeaurora/Performance;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     return-void
@@ -108,36 +105,28 @@
     .prologue
     const/16 v1, 0xc
 
-    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 84
     const/4 v0, 0x0
 
     iput v0, p0, Lorg/codeaurora/Performance;->handle:I
 
-    .line 100
     const/4 v0, 0x6
 
     iput v0, p0, Lorg/codeaurora/Performance;->mDivFact:I
 
-    .line 102
     iput v1, p0, Lorg/codeaurora/Performance;->mWDragPix:I
 
-    .line 103
     iput v1, p0, Lorg/codeaurora/Performance;->mHDragPix:I
 
-    .line 105
     const/16 v0, 0x96
 
     iput v0, p0, Lorg/codeaurora/Performance;->mMinVelocity:I
 
-    .line 106
     const/16 v0, 0x5dc0
 
     iput v0, p0, Lorg/codeaurora/Performance;->mMaxVelocity:I
 
-    .line 43
     return-void
 .end method
 
@@ -146,7 +135,6 @@
     .param p0, "x0"    # Z
 
     .prologue
-    .line 36
     sput-boolean p0, Lorg/codeaurora/Performance;->isFlingEnabled:Z
 
     return p0
@@ -170,10 +158,8 @@
     .locals 0
 
     .prologue
-    .line 268
     invoke-direct {p0}, Lorg/codeaurora/Performance;->native_deinit()V
 
-    .line 269
     return-void
 .end method
 
@@ -183,10 +169,8 @@
     .param p2, "list"    # [I
 
     .prologue
-    .line 89
     const/4 v0, 0x0
 
-    .line 90
     .local v0, "rc":I
     iget v1, p0, Lorg/codeaurora/Performance;->handle:I
 
@@ -196,15 +180,12 @@
 
     iput v1, p0, Lorg/codeaurora/Performance;->handle:I
 
-    .line 91
     iget v1, p0, Lorg/codeaurora/Performance;->handle:I
 
     if-nez v1, :cond_0
 
-    .line 92
     const/4 v0, -0x1
 
-    .line 93
     :cond_0
     return v0
 .end method
@@ -217,22 +198,18 @@
     .param p4, "list"    # [I
 
     .prologue
-    .line 150
     const/4 v10, -0x1
 
-    .line 151
     .local v10, "rc":I
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v3
 
-    .line 152
     .local v3, "actionMasked":I
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getActionIndex()I
 
     move-result v9
 
-    .line 153
     .local v9, "pointerIndex":I
     move-object/from16 v0, p1
 
@@ -240,7 +217,6 @@
 
     move-result v8
 
-    .line 154
     .local v8, "pointerId":I
     move-object/from16 v0, p1
 
@@ -250,7 +226,6 @@
 
     float-to-int v13, v15
 
-    .line 155
     .local v13, "y":I
     move-object/from16 v0, p1
 
@@ -260,7 +235,6 @@
 
     float-to-int v11, v15
 
-    .line 157
     .local v11, "x":I
     int-to-float v15, v11
 
@@ -278,7 +252,6 @@
 
     float-to-int v4, v15
 
-    .line 158
     .local v4, "dx":I
     int-to-float v15, v13
 
@@ -296,22 +269,18 @@
 
     float-to-int v5, v15
 
-    .line 160
     .local v5, "dy":I
     const/4 v7, 0x0
 
-    .line 162
     .local v7, "isBoostRequired":Z
     packed-switch v3, :pswitch_data_0
 
-    .line 252
     :cond_0
     :goto_0
     const/4 v15, 0x1
 
     if-ne v7, v15, :cond_1
 
-    .line 253
     move-object/from16 v0, p0
 
     iget v15, v0, Lorg/codeaurora/Performance;->handle:I
@@ -330,53 +299,44 @@
 
     iput v15, v0, Lorg/codeaurora/Performance;->handle:I
 
-    .line 254
     move-object/from16 v0, p0
 
     iget v15, v0, Lorg/codeaurora/Performance;->handle:I
 
     if-eqz v15, :cond_1
 
-    .line 255
     const/4 v10, 0x0
 
-    .line 258
     :cond_1
     return v10
 
-    .line 164
     :pswitch_0
     sget-object v15, Lorg/codeaurora/Performance;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     if-nez v15, :cond_4
 
-    .line 166
     invoke-static {}, Landroid/view/VelocityTracker;->obtain()Landroid/view/VelocityTracker;
 
     move-result-object v15
 
     sput-object v15, Lorg/codeaurora/Performance;->mVelocityTracker:Landroid/view/VelocityTracker;
 
-    .line 173
     :goto_1
     sget-object v15, Lorg/codeaurora/Performance;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     if-eqz v15, :cond_2
 
-    .line 175
     sget-object v15, Lorg/codeaurora/Performance;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     move-object/from16 v0, p1
 
     invoke-virtual {v15, v0}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
 
-    .line 177
     :cond_2
     sget-object v15, Lorg/codeaurora/Performance;->mTouchInfo:Lorg/codeaurora/Performance$TouchInfo;
 
     if-nez v15, :cond_3
 
-    .line 178
     new-instance v15, Lorg/codeaurora/Performance$TouchInfo;
 
     move-object/from16 v0, p0
@@ -385,25 +345,21 @@
 
     sput-object v15, Lorg/codeaurora/Performance;->mTouchInfo:Lorg/codeaurora/Performance$TouchInfo;
 
-    .line 180
     :cond_3
     sget-object v15, Lorg/codeaurora/Performance;->mTouchInfo:Lorg/codeaurora/Performance$TouchInfo;
 
     if-eqz v15, :cond_0
 
-    .line 182
     sget-object v15, Lorg/codeaurora/Performance;->mTouchInfo:Lorg/codeaurora/Performance$TouchInfo;
 
     # invokes: Lorg/codeaurora/Performance$TouchInfo;->reset()V
     invoke-static {v15}, Lorg/codeaurora/Performance$TouchInfo;->access$100(Lorg/codeaurora/Performance$TouchInfo;)V
 
-    .line 184
     sget-object v15, Lorg/codeaurora/Performance;->mTouchInfo:Lorg/codeaurora/Performance$TouchInfo;
 
     # invokes: Lorg/codeaurora/Performance$TouchInfo;->setStartXY(II)V
     invoke-static {v15, v4, v5}, Lorg/codeaurora/Performance$TouchInfo;->access$200(Lorg/codeaurora/Performance$TouchInfo;II)V
 
-    .line 186
     sget-object v15, Lorg/codeaurora/Performance;->mTouchInfo:Lorg/codeaurora/Performance$TouchInfo;
 
     move-object/from16 v0, p0
@@ -471,7 +427,6 @@
 
     goto/16 :goto_0
 
-    .line 170
     :cond_4
     sget-object v15, Lorg/codeaurora/Performance;->mVelocityTracker:Landroid/view/VelocityTracker;
 
@@ -479,26 +434,22 @@
 
     goto :goto_1
 
-    .line 193
     :pswitch_1
     sget-object v15, Lorg/codeaurora/Performance;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     if-eqz v15, :cond_5
 
-    .line 195
     sget-object v15, Lorg/codeaurora/Performance;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     move-object/from16 v0, p1
 
     invoke-virtual {v15, v0}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
 
-    .line 198
     :cond_5
     sget-object v15, Lorg/codeaurora/Performance;->mTouchInfo:Lorg/codeaurora/Performance$TouchInfo;
 
     if-eqz v15, :cond_0
 
-    .line 199
     sget-object v15, Lorg/codeaurora/Performance;->mTouchInfo:Lorg/codeaurora/Performance$TouchInfo;
 
     # getter for: Lorg/codeaurora/Performance$TouchInfo;->mCurX:I
@@ -512,7 +463,6 @@
 
     move-result v12
 
-    .line 200
     .local v12, "xdiff":I
     sget-object v15, Lorg/codeaurora/Performance;->mTouchInfo:Lorg/codeaurora/Performance$TouchInfo;
 
@@ -527,14 +477,12 @@
 
     move-result v14
 
-    .line 202
     .local v14, "ydiff":I
     sget-object v15, Lorg/codeaurora/Performance;->mTouchInfo:Lorg/codeaurora/Performance$TouchInfo;
 
     # invokes: Lorg/codeaurora/Performance$TouchInfo;->setXY(II)V
     invoke-static {v15, v4, v5}, Lorg/codeaurora/Performance$TouchInfo;->access$600(Lorg/codeaurora/Performance$TouchInfo;II)V
 
-    .line 204
     sget-object v15, Lorg/codeaurora/Performance;->mTouchInfo:Lorg/codeaurora/Performance$TouchInfo;
 
     # getter for: Lorg/codeaurora/Performance$TouchInfo;->mMinDragW:I
@@ -553,13 +501,11 @@
 
     if-le v14, v15, :cond_0
 
-    .line 207
     :cond_6
     const/4 v7, 0x1
 
     goto/16 :goto_0
 
-    .line 214
     .end local v12    # "xdiff":I
     .end local v14    # "ydiff":I
     :pswitch_2
@@ -567,14 +513,12 @@
 
     if-eqz v15, :cond_7
 
-    .line 216
     sget-object v15, Lorg/codeaurora/Performance;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     move-object/from16 v0, p1
 
     invoke-virtual {v15, v0}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
 
-    .line 218
     sget-object v15, Lorg/codeaurora/Performance;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     const/16 v16, 0x3e8
@@ -593,7 +537,6 @@
 
     invoke-virtual/range {v15 .. v17}, Landroid/view/VelocityTracker;->computeCurrentVelocity(IF)V
 
-    .line 219
     sget-object v15, Lorg/codeaurora/Performance;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     invoke-virtual {v15, v8}, Landroid/view/VelocityTracker;->getYVelocity(I)F
@@ -606,7 +549,6 @@
 
     move-result v6
 
-    .line 221
     .local v6, "initialVelocity":I
     move-object/from16 v0, p0
 
@@ -614,7 +556,6 @@
 
     if-le v6, v15, :cond_7
 
-    .line 223
     move/from16 v0, p3
 
     int-to-float v15, v0
@@ -651,20 +592,16 @@
 
     move/from16 p3, v0
 
-    .line 225
     const/4 v7, 0x1
 
-    .line 226
     goto/16 :goto_0
 
-    .line 229
     .end local v6    # "initialVelocity":I
     :cond_7
     sget-object v15, Lorg/codeaurora/Performance;->mTouchInfo:Lorg/codeaurora/Performance$TouchInfo;
 
     if-eqz v15, :cond_0
 
-    .line 230
     sget-object v15, Lorg/codeaurora/Performance;->mTouchInfo:Lorg/codeaurora/Performance$TouchInfo;
 
     # getter for: Lorg/codeaurora/Performance$TouchInfo;->mCurX:I
@@ -678,7 +615,6 @@
 
     move-result v12
 
-    .line 231
     .restart local v12    # "xdiff":I
     sget-object v15, Lorg/codeaurora/Performance;->mTouchInfo:Lorg/codeaurora/Performance$TouchInfo;
 
@@ -693,7 +629,6 @@
 
     move-result v14
 
-    .line 233
     .restart local v14    # "ydiff":I
     sget-object v15, Lorg/codeaurora/Performance;->mTouchInfo:Lorg/codeaurora/Performance$TouchInfo;
 
@@ -713,13 +648,11 @@
 
     if-le v14, v15, :cond_0
 
-    .line 236
     :cond_8
     const/4 v7, 0x1
 
     goto/16 :goto_0
 
-    .line 243
     .end local v12    # "xdiff":I
     .end local v14    # "ydiff":I
     :pswitch_3
@@ -727,7 +660,6 @@
 
     if-eqz v15, :cond_0
 
-    .line 244
     sget-object v15, Lorg/codeaurora/Performance;->mTouchInfo:Lorg/codeaurora/Performance$TouchInfo;
 
     # invokes: Lorg/codeaurora/Performance$TouchInfo;->reset()V
@@ -735,7 +667,6 @@
 
     goto/16 :goto_0
 
-    .line 162
     nop
 
     :pswitch_data_0
@@ -751,7 +682,6 @@
     .locals 1
 
     .prologue
-    .line 263
     iget v0, p0, Lorg/codeaurora/Performance;->handle:I
 
     invoke-direct {p0, v0}, Lorg/codeaurora/Performance;->native_perf_lock_rel(I)I

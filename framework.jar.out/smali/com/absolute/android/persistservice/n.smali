@@ -16,22 +16,18 @@
     .locals 1
 
     .prologue
-    .line 629
     iput-object p1, p0, Lcom/absolute/android/persistservice/n;->a:Lcom/absolute/android/persistservice/l;
 
-    .line 630
     const-string v0, "RunningServicesWorkerThread"
 
     invoke-direct {p0, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
 
-    .line 632
     new-instance v0, Ljava/util/Hashtable;
 
     invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
 
     iput-object v0, p0, Lcom/absolute/android/persistservice/n;->b:Ljava/util/Hashtable;
 
-    .line 633
     return-void
 .end method
 
@@ -39,7 +35,6 @@
     .locals 1
 
     .prologue
-    .line 617
     iget-object v0, p0, Lcom/absolute/android/persistservice/n;->b:Ljava/util/Hashtable;
 
     return-object v0
@@ -51,10 +46,8 @@
     .locals 3
 
     .prologue
-    .line 656
     monitor-enter p0
 
-    .line 657
     :goto_0
     :try_start_0
     iget-object v0, p0, Lcom/absolute/android/persistservice/n;->c:Lcom/absolute/android/persistservice/o;
@@ -63,7 +56,6 @@
 
     if-nez v0, :cond_0
 
-    .line 660
     :try_start_1
     invoke-virtual {p0}, Ljava/lang/Object;->wait()V
     :try_end_1
@@ -72,11 +64,9 @@
 
     goto :goto_0
 
-    .line 661
     :catch_0
     move-exception v0
 
-    .line 662
     :try_start_2
     iget-object v1, p0, Lcom/absolute/android/persistservice/n;->a:Lcom/absolute/android/persistservice/l;
 
@@ -88,7 +78,6 @@
 
     goto :goto_0
 
-    .line 665
     :catchall_0
     move-exception v0
 
@@ -104,7 +93,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 666
     return-void
 .end method
 
@@ -112,7 +100,6 @@
     .locals 1
 
     .prologue
-    .line 703
     monitor-enter p0
 
     :try_start_0
@@ -122,12 +109,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 704
     monitor-exit p0
 
     return-void
 
-    .line 703
     :catchall_0
     move-exception v0
 
@@ -140,7 +125,6 @@
     .locals 6
 
     .prologue
-    .line 680
     monitor-enter p0
 
     :try_start_0
@@ -150,7 +134,6 @@
 
     invoke-virtual {v0, v1, p1}, Lcom/absolute/android/persistservice/o;->removeMessages(ILjava/lang/Object;)V
 
-    .line 682
     iget-object v0, p0, Lcom/absolute/android/persistservice/n;->b:Ljava/util/Hashtable;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -159,7 +142,6 @@
 
     invoke-virtual {v0, p1, v1}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 685
     iget-object v0, p0, Lcom/absolute/android/persistservice/n;->a:Lcom/absolute/android/persistservice/l;
 
     iget-object v0, v0, Lcom/absolute/android/persistservice/l;->a:Lcom/absolute/android/persistservice/v;
@@ -200,7 +182,6 @@
 
     invoke-virtual {v0, v1}, Lcom/absolute/android/persistservice/v;->c(Ljava/lang/String;)V
 
-    .line 689
     iget-object v0, p0, Lcom/absolute/android/persistservice/n;->c:Lcom/absolute/android/persistservice/o;
 
     const/4 v1, 0x2
@@ -209,7 +190,6 @@
 
     move-result-object v0
 
-    .line 692
     iget-object v1, p0, Lcom/absolute/android/persistservice/n;->c:Lcom/absolute/android/persistservice/o;
 
     int-to-long v2, p2
@@ -222,12 +202,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 693
     monitor-exit p0
 
     return-void
 
-    .line 680
     :catchall_0
     move-exception v0
 
@@ -240,7 +218,6 @@
     .locals 1
 
     .prologue
-    .line 714
     iget-object v0, p0, Lcom/absolute/android/persistservice/n;->b:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p1}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -249,7 +226,6 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 715
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
@@ -269,13 +245,10 @@
     .locals 2
 
     .prologue
-    .line 641
     invoke-static {}, Landroid/os/Looper;->prepare()V
 
-    .line 643
     monitor-enter p0
 
-    .line 644
     :try_start_0
     new-instance v0, Lcom/absolute/android/persistservice/o;
 
@@ -285,21 +258,16 @@
 
     iput-object v0, p0, Lcom/absolute/android/persistservice/n;->c:Lcom/absolute/android/persistservice/o;
 
-    .line 647
     invoke-virtual {p0}, Ljava/lang/Object;->notify()V
 
-    .line 648
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 649
     invoke-static {}, Landroid/os/Looper;->loop()V
 
-    .line 650
     return-void
 
-    .line 648
     :catchall_0
     move-exception v0
 

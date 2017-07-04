@@ -26,35 +26,28 @@
     .locals 1
 
     .prologue
-    .line 68
     invoke-direct {p0}, Landroid/sec/clipboard/data/list/ClipboardDataHtml;-><init>()V
 
-    .line 54
     const-string v0, ""
 
     iput-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataHTMLFragment;->mValue:Ljava/lang/String;
 
-    .line 56
     const-string v0, ""
 
     iput-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataHTMLFragment;->mValueUrl:Ljava/lang/String;
 
-    .line 58
     const-string v0, ""
 
     iput-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataHTMLFragment;->mValuePlainText:Ljava/lang/String;
 
-    .line 60
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataHTMLFragment;->mFirstImg:Landroid/graphics/Bitmap;
 
-    .line 62
     const-string v0, ""
 
     iput-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataHTMLFragment;->mFirstImgPath:Ljava/lang/String;
 
-    .line 69
     return-void
 .end method
 
@@ -64,7 +57,6 @@
     .locals 1
 
     .prologue
-    .line 300
     invoke-super {p0}, Landroid/sec/clipboard/data/list/ClipboardDataHtml;->getFirstImgPath()Ljava/lang/String;
 
     move-result-object v0
@@ -76,7 +68,6 @@
     .locals 1
 
     .prologue
-    .line 151
     invoke-super {p0}, Landroid/sec/clipboard/data/list/ClipboardDataHtml;->getHtml()Ljava/lang/String;
 
     move-result-object v0
@@ -88,7 +79,6 @@
     .locals 1
 
     .prologue
-    .line 160
     iget-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataHTMLFragment;->mValueUrl:Ljava/lang/String;
 
     return-object v0
@@ -100,7 +90,6 @@
     .param p2, "altData"    # Landroid/sec/clipboard/data/ClipboardData;
 
     .prologue
-    .line 81
     invoke-super {p0, p1, p2}, Landroid/sec/clipboard/data/list/ClipboardDataHtml;->SetAlternateFormat(ILandroid/sec/clipboard/data/ClipboardData;)Z
 
     move-result v0
@@ -113,7 +102,6 @@
     .param p1, "FilePath"    # Ljava/lang/String;
 
     .prologue
-    .line 291
     invoke-super {p0, p1}, Landroid/sec/clipboard/data/list/ClipboardDataHtml;->setFirstImgPath(Ljava/lang/String;)Z
 
     move-result v0
@@ -126,7 +114,6 @@
     .param p1, "text"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 99
     invoke-super {p0, p1}, Landroid/sec/clipboard/data/list/ClipboardDataHtml;->setHtml(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -140,7 +127,6 @@
     .param p2, "HtmlUrl"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 135
     iget-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataHTMLFragment;->mValuePlainText:Ljava/lang/String;
 
     invoke-virtual {p0, v0, p1}, Landroid/sec/clipboard/data/list/ClipboardDataHTMLFragment;->SetHTMLFragmentInternal(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
@@ -149,14 +135,11 @@
 
     if-nez v0, :cond_0
 
-    .line 136
     const/4 v0, 0x0
 
-    .line 142
     :goto_0
     return v0
 
-    .line 139
     :cond_0
     if-eqz p2, :cond_1
 
@@ -166,14 +149,12 @@
 
     if-lez v0, :cond_1
 
-    .line 140
     invoke-interface {p2}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataHTMLFragment;->mValueUrl:Ljava/lang/String;
 
-    .line 142
     :cond_1
     const/4 v0, 0x1
 
@@ -186,7 +167,6 @@
     .param p2, "html"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 106
     invoke-super {p0, p1, p2}, Landroid/sec/clipboard/data/list/ClipboardDataHtml;->setHtmlInternal(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -200,7 +180,6 @@
     .param p2, "filePath"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 124
     invoke-super {p0, p1, p2}, Landroid/sec/clipboard/data/list/ClipboardDataHtml;->setHtmlWithImagePath(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -215,7 +194,6 @@
     .param p3, "filePath"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 113
     invoke-super {p0, p1, p2, p3}, Landroid/sec/clipboard/data/list/ClipboardDataHtml;->setHtmlWithImagePathInternal(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -227,10 +205,8 @@
     .locals 0
 
     .prologue
-    .line 89
     invoke-super {p0}, Landroid/sec/clipboard/data/list/ClipboardDataHtml;->clearData()V
 
-    .line 90
     return-void
 .end method
 
@@ -239,7 +215,6 @@
     .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
-    .line 250
     invoke-super {p0, p1}, Landroid/sec/clipboard/data/list/ClipboardDataHtml;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -251,10 +226,8 @@
     .locals 6
 
     .prologue
-    .line 181
     const-string v1, ""
 
-    .line 183
     .local v1, "sFileName":Ljava/lang/String;
     :try_start_0
     iget-object v3, p0, Landroid/sec/clipboard/data/list/ClipboardDataHTMLFragment;->mValue:Ljava/lang/String;
@@ -267,12 +240,10 @@
 
     if-ge v3, v4, :cond_1
 
-    .line 184
     sget-boolean v3, Landroid/sec/clipboard/data/ClipboardDefine;->DEBUG:Z
 
     if-eqz v3, :cond_0
 
-    .line 185
     const-string v3, "ClipboardDataHTMLFragment"
 
     const-string v4, "getClipHtmlImageFilePath : Data is empty."
@@ -282,13 +253,11 @@
     :cond_0
     move-object v2, v1
 
-    .line 200
     .end local v1    # "sFileName":Ljava/lang/String;
     .local v2, "sFileName":Ljava/lang/String;
     :goto_0
     return-object v2
 
-    .line 189
     .end local v2    # "sFileName":Ljava/lang/String;
     .restart local v1    # "sFileName":Ljava/lang/String;
     :cond_1
@@ -302,10 +271,8 @@
 
     move-result-object v1
 
-    .line 192
     if-eqz v1, :cond_2
 
-    .line 193
     invoke-static {v1}, Landroid/net/Uri;->decode(Ljava/lang/String;)Ljava/lang/String;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -316,24 +283,20 @@
     :goto_1
     move-object v2, v1
 
-    .line 200
     .end local v1    # "sFileName":Ljava/lang/String;
     .restart local v2    # "sFileName":Ljava/lang/String;
     goto :goto_0
 
-    .line 195
     .end local v2    # "sFileName":Ljava/lang/String;
     .restart local v1    # "sFileName":Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 196
     .local v0, "e":Ljava/lang/Exception;
     sget-boolean v3, Landroid/sec/clipboard/data/ClipboardDefine;->DEBUG:Z
 
     if-eqz v3, :cond_2
 
-    .line 197
     const-string v3, "ClipboardDataHTMLFragment"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -368,10 +331,8 @@
     .param p1, "aInput"    # Ljava/lang/String;
 
     .prologue
-    .line 210
     const-string v2, ""
 
-    .line 212
     .local v2, "lDimen":Ljava/lang/String;
     :try_start_0
     iget-object v7, p0, Landroid/sec/clipboard/data/list/ClipboardDataHTMLFragment;->mValue:Ljava/lang/String;
@@ -384,12 +345,10 @@
 
     if-ge v7, v8, :cond_1
 
-    .line 213
     sget-boolean v7, Landroid/sec/clipboard/data/ClipboardDefine;->DEBUG:Z
 
     if-eqz v7, :cond_0
 
-    .line 214
     const-string v7, "ClipboardDataHTMLFragment"
 
     const-string v8, "getDimensionsFromHTML : Data is empty."
@@ -399,29 +358,24 @@
     :cond_0
     move-object v3, v2
 
-    .line 230
     .end local v2    # "lDimen":Ljava/lang/String;
     .local v3, "lDimen":Ljava/lang/String;
     :goto_0
     return-object v3
 
-    .line 218
     .end local v3    # "lDimen":Ljava/lang/String;
     .restart local v2    # "lDimen":Ljava/lang/String;
     :cond_1
     const-string v0, "<img"
 
-    .line 219
     .local v0, "IMG_BEGIN":Ljava/lang/String;
     iget-object v6, p0, Landroid/sec/clipboard/data/list/ClipboardDataHTMLFragment;->mValue:Ljava/lang/String;
 
-    .line 220
     .local v6, "lImgTag":Ljava/lang/String;
     invoke-virtual {v6}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 221
     iget-object v7, p0, Landroid/sec/clipboard/data/list/ClipboardDataHTMLFragment;->mValue:Ljava/lang/String;
 
     const-string v8, "<img"
@@ -434,7 +388,6 @@
 
     move-result-object v6
 
-    .line 222
     invoke-virtual {p1}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v7
@@ -443,7 +396,6 @@
 
     move-result v4
 
-    .line 223
     .local v4, "lDimenIndex":I
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
@@ -463,7 +415,6 @@
 
     move-result-object v5
 
-    .line 224
     .local v5, "lDimenSub":Ljava/lang/String;
     const/4 v7, 0x0
 
@@ -487,24 +438,20 @@
     :goto_1
     move-object v3, v2
 
-    .line 230
     .end local v2    # "lDimen":Ljava/lang/String;
     .restart local v3    # "lDimen":Ljava/lang/String;
     goto :goto_0
 
-    .line 225
     .end local v3    # "lDimen":Ljava/lang/String;
     .restart local v2    # "lDimen":Ljava/lang/String;
     :catch_0
     move-exception v1
 
-    .line 226
     .local v1, "e":Ljava/lang/Exception;
     sget-boolean v7, Landroid/sec/clipboard/data/ClipboardDefine;->DEBUG:Z
 
     if-eqz v7, :cond_2
 
-    .line 227
     const-string v7, "ClipboardDataHTMLFragment"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -540,7 +487,6 @@
     .param p2, "reqHeight"    # I
 
     .prologue
-    .line 172
     invoke-super {p0, p1, p2}, Landroid/sec/clipboard/data/list/ClipboardDataHtml;->getFirstImage(II)Landroid/graphics/Bitmap;
 
     move-result-object v0
@@ -552,7 +498,6 @@
     .locals 1
 
     .prologue
-    .line 240
     invoke-super {p0}, Landroid/sec/clipboard/data/list/ClipboardDataHtml;->getPlainText()Ljava/lang/String;
 
     move-result-object v0
@@ -565,7 +510,6 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 307
     return-void
 .end method
 
@@ -574,10 +518,8 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 272
     invoke-super {p0, p1}, Landroid/sec/clipboard/data/list/ClipboardDataHtml;->readFromSource(Landroid/os/Parcel;)V
 
-    .line 273
     return-void
 .end method
 
@@ -585,7 +527,6 @@
     .locals 1
 
     .prologue
-    .line 281
     invoke-super {p0}, Landroid/sec/clipboard/data/list/ClipboardDataHtml;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -599,9 +540,7 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 261
     invoke-super {p0, p1, p2}, Landroid/sec/clipboard/data/list/ClipboardDataHtml;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 262
     return-void
 .end method

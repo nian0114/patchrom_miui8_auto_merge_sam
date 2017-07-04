@@ -17,10 +17,8 @@
     .locals 0
 
     .prologue
-    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
     return-void
 .end method
 
@@ -45,7 +43,6 @@
     .end annotation
 
     .prologue
-    .line 287
     new-instance v0, Lcom/android/internal/widget/LockPatternChecker$8;
 
     move-object v1, p0
@@ -60,7 +57,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/internal/widget/LockPatternChecker$8;-><init>(Lcom/android/internal/widget/LockPatternUtils;Ljava/lang/String;IZLcom/android/internal/widget/LockPatternChecker$OnCheckCallback;)V
 
-    .line 305
     .local v0, "task":Landroid/os/AsyncTask;, "Landroid/os/AsyncTask<Ljava/lang/Void;Ljava/lang/Void;Ljava/lang/Boolean;>;"
     const/4 v1, 0x0
 
@@ -68,7 +64,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/AsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 306
     return-object v0
 .end method
 
@@ -92,12 +87,10 @@
     .end annotation
 
     .prologue
-    .line 225
     new-instance v0, Lcom/android/internal/widget/LockPatternChecker$6;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lcom/android/internal/widget/LockPatternChecker$6;-><init>(Lcom/android/internal/widget/LockPatternUtils;Ljava/lang/String;ILcom/android/internal/widget/LockPatternChecker$OnCheckCallback;)V
 
-    .line 243
     .local v0, "task":Landroid/os/AsyncTask;, "Landroid/os/AsyncTask<Ljava/lang/Void;Ljava/lang/Void;Ljava/lang/Boolean;>;"
     const/4 v1, 0x0
 
@@ -105,7 +98,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/AsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 244
     return-object v0
 .end method
 
@@ -129,12 +121,10 @@
     .end annotation
 
     .prologue
-    .line 160
     new-instance v0, Lcom/android/internal/widget/LockPatternChecker$4;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lcom/android/internal/widget/LockPatternChecker$4;-><init>(Lcom/android/internal/widget/LockPatternUtils;Ljava/lang/String;ILcom/android/internal/widget/LockPatternChecker$OnCheckCallback;)V
 
-    .line 178
     .local v0, "task":Landroid/os/AsyncTask;, "Landroid/os/AsyncTask<Ljava/lang/Void;Ljava/lang/Void;Ljava/lang/Boolean;>;"
     const/4 v1, 0x0
 
@@ -142,7 +132,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/AsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 179
     return-object v0
 .end method
 
@@ -167,13 +156,11 @@
     .end annotation
 
     .prologue
-    .line 90
     .local p1, "pattern":Ljava/util/List;, "Ljava/util/List<Lcom/android/internal/widget/LockPatternView$Cell;>;"
     new-instance v0, Lcom/android/internal/widget/LockPatternChecker$2;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lcom/android/internal/widget/LockPatternChecker$2;-><init>(Lcom/android/internal/widget/LockPatternUtils;Ljava/util/List;ILcom/android/internal/widget/LockPatternChecker$OnCheckCallback;)V
 
-    .line 108
     .local v0, "task":Landroid/os/AsyncTask;, "Landroid/os/AsyncTask<Ljava/lang/Void;Ljava/lang/Void;Ljava/lang/Boolean;>;"
     const/4 v1, 0x0
 
@@ -181,7 +168,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/AsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 109
     return-object v0
 .end method
 
@@ -207,7 +193,6 @@
     .end annotation
 
     .prologue
-    .line 196
     new-instance v0, Lcom/android/internal/widget/LockPatternChecker$5;
 
     move-object v1, p0
@@ -222,7 +207,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/internal/widget/LockPatternChecker$5;-><init>(Lcom/android/internal/widget/LockPatternUtils;ILjava/lang/String;ILcom/android/internal/widget/LockPatternChecker$OnCheckCallback;)V
 
-    .line 209
     .local v0, "task":Landroid/os/AsyncTask;, "Landroid/os/AsyncTask<Ljava/lang/Void;Ljava/lang/Void;Ljava/lang/Boolean;>;"
     const/4 v1, 0x0
 
@@ -230,7 +214,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/AsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 210
     return-object v0
 .end method
 
@@ -256,7 +239,6 @@
     .end annotation
 
     .prologue
-    .line 315
     new-instance v1, Lcom/android/internal/widget/LockPatternChecker$9;
 
     move-object v2, p0
@@ -273,7 +255,6 @@
 
     invoke-direct/range {v1 .. v8}, Lcom/android/internal/widget/LockPatternChecker$9;-><init>(Lcom/android/internal/widget/LockPatternUtils;Ljava/lang/String;JIZLcom/android/internal/widget/LockPatternChecker$OnVerifyCallback;)V
 
-    .line 333
     .local v1, "task":Landroid/os/AsyncTask;, "Landroid/os/AsyncTask<Ljava/lang/Void;Ljava/lang/Void;[B>;"
     const/4 v0, 0x0
 
@@ -281,7 +262,6 @@
 
     invoke-virtual {v1, v0}, Landroid/os/AsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 334
     return-object v1
 .end method
 
@@ -306,7 +286,6 @@
     .end annotation
 
     .prologue
-    .line 252
     new-instance v1, Lcom/android/internal/widget/LockPatternChecker$7;
 
     move-object v2, p0
@@ -321,7 +300,6 @@
 
     invoke-direct/range {v1 .. v7}, Lcom/android/internal/widget/LockPatternChecker$7;-><init>(Lcom/android/internal/widget/LockPatternUtils;Ljava/lang/String;JILcom/android/internal/widget/LockPatternChecker$OnVerifyCallback;)V
 
-    .line 270
     .local v1, "task":Landroid/os/AsyncTask;, "Landroid/os/AsyncTask<Ljava/lang/Void;Ljava/lang/Void;[B>;"
     const/4 v0, 0x0
 
@@ -329,7 +307,6 @@
 
     invoke-virtual {v1, v0}, Landroid/os/AsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 271
     return-object v1
 .end method
 
@@ -354,7 +331,6 @@
     .end annotation
 
     .prologue
-    .line 126
     new-instance v1, Lcom/android/internal/widget/LockPatternChecker$3;
 
     move-object v2, p0
@@ -369,7 +345,6 @@
 
     invoke-direct/range {v1 .. v7}, Lcom/android/internal/widget/LockPatternChecker$3;-><init>(Lcom/android/internal/widget/LockPatternUtils;Ljava/lang/String;JILcom/android/internal/widget/LockPatternChecker$OnVerifyCallback;)V
 
-    .line 144
     .local v1, "task":Landroid/os/AsyncTask;, "Landroid/os/AsyncTask<Ljava/lang/Void;Ljava/lang/Void;[B>;"
     const/4 v0, 0x0
 
@@ -377,7 +352,6 @@
 
     invoke-virtual {v1, v0}, Landroid/os/AsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 145
     return-object v1
 .end method
 
@@ -403,7 +377,6 @@
     .end annotation
 
     .prologue
-    .line 56
     .local p1, "pattern":Ljava/util/List;, "Ljava/util/List<Lcom/android/internal/widget/LockPatternView$Cell;>;"
     new-instance v1, Lcom/android/internal/widget/LockPatternChecker$1;
 
@@ -419,7 +392,6 @@
 
     invoke-direct/range {v1 .. v7}, Lcom/android/internal/widget/LockPatternChecker$1;-><init>(Lcom/android/internal/widget/LockPatternUtils;Ljava/util/List;JILcom/android/internal/widget/LockPatternChecker$OnVerifyCallback;)V
 
-    .line 74
     .local v1, "task":Landroid/os/AsyncTask;, "Landroid/os/AsyncTask<Ljava/lang/Void;Ljava/lang/Void;[B>;"
     const/4 v0, 0x0
 
@@ -427,6 +399,5 @@
 
     invoke-virtual {v1, v0}, Landroid/os/AsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 75
     return-object v1
 .end method

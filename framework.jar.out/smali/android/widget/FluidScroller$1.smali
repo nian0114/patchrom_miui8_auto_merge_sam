@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 240
     iput-object p1, p0, Landroid/widget/FluidScroller$1;->this$0:Landroid/widget/FluidScroller;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 243
     iget-object v0, p0, Landroid/widget/FluidScroller$1;->this$0:Landroid/widget/FluidScroller;
 
     const/4 v1, 0x0
@@ -48,6 +46,5 @@
     # invokes: Landroid/widget/FluidScroller;->setState(I)V
     invoke-static {v0, v1}, Landroid/widget/FluidScroller;->access$000(Landroid/widget/FluidScroller;I)V
 
-    .line 244
     return-void
 .end method

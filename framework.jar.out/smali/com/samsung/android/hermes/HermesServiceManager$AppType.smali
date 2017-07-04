@@ -58,7 +58,6 @@
 
     const/4 v3, 0x0
 
-    .line 79
     new-instance v0, Lcom/samsung/android/hermes/HermesServiceManager$AppType;
 
     const-string v1, "contact"
@@ -69,7 +68,7 @@
 
     new-instance v0, Lcom/samsung/android/hermes/HermesServiceManager$AppType;
 
-    const-string/jumbo v1, "pim"
+    const-string v1, "pim"
 
     invoke-direct {v0, v1, v4}, Lcom/samsung/android/hermes/HermesServiceManager$AppType;-><init>(Ljava/lang/String;I)V
 
@@ -93,7 +92,7 @@
 
     new-instance v0, Lcom/samsung/android/hermes/HermesServiceManager$AppType;
 
-    const-string/jumbo v1, "map"
+    const-string v1, "map"
 
     invoke-direct {v0, v1, v7}, Lcom/samsung/android/hermes/HermesServiceManager$AppType;-><init>(Ljava/lang/String;I)V
 
@@ -101,7 +100,7 @@
 
     new-instance v0, Lcom/samsung/android/hermes/HermesServiceManager$AppType;
 
-    const-string/jumbo v1, "news"
+    const-string v1, "news"
 
     const/4 v2, 0x5
 
@@ -111,7 +110,7 @@
 
     new-instance v0, Lcom/samsung/android/hermes/HermesServiceManager$AppType;
 
-    const-string/jumbo v1, "recommand_tag"
+    const-string v1, "recommand_tag"
 
     const/4 v2, 0x6
 
@@ -121,7 +120,7 @@
 
     new-instance v0, Lcom/samsung/android/hermes/HermesServiceManager$AppType;
 
-    const-string/jumbo v1, "recommand_text"
+    const-string v1, "recommand_text"
 
     const/4 v2, 0x7
 
@@ -129,7 +128,6 @@
 
     sput-object v0, Lcom/samsung/android/hermes/HermesServiceManager$AppType;->recommand_text:Lcom/samsung/android/hermes/HermesServiceManager$AppType;
 
-    .line 78
     const/16 v0, 0x8
 
     new-array v0, v0, [Lcom/samsung/android/hermes/HermesServiceManager$AppType;
@@ -186,7 +184,6 @@
     .end annotation
 
     .prologue
-    .line 78
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -197,7 +194,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 78
     const-class v0, Lcom/samsung/android/hermes/HermesServiceManager$AppType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -213,7 +209,6 @@
     .locals 1
 
     .prologue
-    .line 78
     sget-object v0, Lcom/samsung/android/hermes/HermesServiceManager$AppType;->$VALUES:[Lcom/samsung/android/hermes/HermesServiceManager$AppType;
 
     invoke-virtual {v0}, [Lcom/samsung/android/hermes/HermesServiceManager$AppType;->clone()Ljava/lang/Object;

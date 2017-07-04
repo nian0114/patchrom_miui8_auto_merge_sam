@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1251
     iput-object p1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$27;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,10 +45,8 @@
 
     const/4 v4, 0x1
 
-    .line 1255
     const/4 v2, 0x1
 
-    .line 1256
     .local v2, "keepGoing":Z
     iget-object v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$27;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
@@ -67,7 +64,6 @@
 
     sub-int v0, v3, v6
 
-    .line 1257
     .local v0, "deltaX":I
     iget-object v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$27;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
@@ -85,13 +81,11 @@
 
     sub-int v1, v3, v6
 
-    .line 1259
     .local v1, "deltaY":I
     if-nez v0, :cond_0
 
     if-nez v1, :cond_0
 
-    .line 1260
     iget-object v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$27;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     # getter for: Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mTracking:Z
@@ -101,16 +95,13 @@
 
     if-nez v3, :cond_0
 
-    .line 1261
     iget-object v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$27;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     # invokes: Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->setEnableVSync(Z)V
     invoke-static {v3, v7}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->access$5500(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;Z)V
 
-    .line 1262
     const/4 v2, 0x0
 
-    .line 1263
     iget-object v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$27;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     # getter for: Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mNeedSaveCenterPosition:Z
@@ -120,19 +111,16 @@
 
     if-eqz v3, :cond_0
 
-    .line 1264
     iget-object v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$27;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     # invokes: Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->saveCenterPosition()V
     invoke-static {v3}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->access$5700(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;)V
 
-    .line 1265
     iget-object v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$27;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     # setter for: Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mNeedSaveCenterPosition:Z
     invoke-static {v3, v7}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->access$5602(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;Z)Z
 
-    .line 1271
     :cond_0
     if-eqz v0, :cond_1
 
@@ -165,7 +153,6 @@
 
     add-int/2addr v0, v3
 
-    .line 1272
     :cond_1
     if-eqz v1, :cond_3
 
@@ -198,7 +185,6 @@
 
     add-int/2addr v1, v3
 
-    .line 1274
     :cond_3
     iget-object v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$27;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
@@ -214,7 +200,6 @@
     # += operator for: Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mCenterX:I
     invoke-static {v3, v5}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->access$5212(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;I)I
 
-    .line 1275
     iget-object v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$27;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     iget-object v5, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$27;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -229,12 +214,10 @@
     # += operator for: Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mCenterY:I
     invoke-static {v3, v5}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->access$5412(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;I)I
 
-    .line 1277
     iget-object v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$27;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     invoke-virtual {v3}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->invalidate()V
 
-    .line 1279
     iget-object v3, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$27;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     # getter for: Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mChoreographer:Landroid/view/Choreographer;
@@ -264,13 +247,11 @@
 
     invoke-virtual {v3, v4, v5, v6}, Landroid/view/Choreographer;->postCallback(ILjava/lang/Runnable;Ljava/lang/Object;)V
 
-    .line 1280
     :cond_4
     return-void
 
     :cond_5
     move v3, v5
 
-    .line 1271
     goto :goto_0
 .end method

@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 156
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,7 +33,6 @@
     .locals 4
 
     .prologue
-    .line 159
     # getter for: Lcom/samsung/android/privatemode/PrivateModeManager;->mPrivateClient:Lcom/samsung/android/privatemode/IPrivateModeClient;
     invoke-static {}, Lcom/samsung/android/privatemode/PrivateModeManager;->access$000()Lcom/samsung/android/privatemode/IPrivateModeClient;
 
@@ -42,7 +40,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 161
     :try_start_0
     const-string v1, "PPS_PrivateModeManager"
 
@@ -71,14 +68,12 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 162
     const-string v1, "PPS_PrivateModeManager"
 
     const-string v2, "getInstance, onStateChange : PREPARED "
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 163
     # getter for: Lcom/samsung/android/privatemode/PrivateModeManager;->mPrivateClient:Lcom/samsung/android/privatemode/IPrivateModeClient;
     invoke-static {}, Lcom/samsung/android/privatemode/PrivateModeManager;->access$000()Lcom/samsung/android/privatemode/IPrivateModeClient;
 
@@ -92,16 +87,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 168
     :cond_0
     :goto_0
     return-void
 
-    .line 164
     :catch_0
     move-exception v0
 
-    .line 165
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 

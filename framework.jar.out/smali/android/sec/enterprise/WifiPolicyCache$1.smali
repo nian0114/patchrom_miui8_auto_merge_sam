@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 130
     iput-object p1, p0, Landroid/sec/enterprise/WifiPolicyCache$1;->this$0:Landroid/sec/enterprise/WifiPolicyCache;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 133
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 134
     .local v0, "action":Ljava/lang/String;
     const-string v4, "edm.intent.action.internal.WIFI_STATE_CHANGED"
 
@@ -54,23 +51,19 @@
 
     if-eqz v4, :cond_0
 
-    .line 135
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v1
 
-    .line 136
     .local v1, "extras":Landroid/os/Bundle;
     if-eqz v1, :cond_1
 
-    .line 137
     const-string v4, "android.app.enterprise.extra.WIFI_TYPE_CHANGED"
 
     invoke-virtual {v1, v4}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 138
     .local v2, "type":Ljava/lang/String;
     const-string v4, "android.app.enterprise.extra.EXTRA_USER_ID"
 
@@ -78,14 +71,12 @@
 
     move-result v3
 
-    .line 139
     .local v3, "userId":I
     iget-object v4, p0, Landroid/sec/enterprise/WifiPolicyCache$1;->this$0:Landroid/sec/enterprise/WifiPolicyCache;
 
     # invokes: Landroid/sec/enterprise/WifiPolicyCache;->readVariables(Ljava/lang/String;I)V
     invoke-static {v4, v2, v3}, Landroid/sec/enterprise/WifiPolicyCache;->access$000(Landroid/sec/enterprise/WifiPolicyCache;Ljava/lang/String;I)V
 
-    .line 144
     .end local v1    # "extras":Landroid/os/Bundle;
     .end local v2    # "type":Ljava/lang/String;
     .end local v3    # "userId":I
@@ -93,7 +84,6 @@
     :goto_0
     return-void
 
-    .line 141
     .restart local v1    # "extras":Landroid/os/Bundle;
     :cond_1
     iget-object v4, p0, Landroid/sec/enterprise/WifiPolicyCache$1;->this$0:Landroid/sec/enterprise/WifiPolicyCache;

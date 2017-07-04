@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1047
     iput-object p1, p0, Lcom/android/server/FMRadioService$17;->this$0:Lcom/android/server/FMRadioService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -45,19 +44,16 @@
 
     const/4 v3, 0x1
 
-    .line 1049
-    const-string/jumbo v1, "mEmergencyReceiver onReceive"
+    const-string v1, "mEmergencyReceiver onReceive"
 
     invoke-static {v1}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
-    .line 1050
-    const-string/jumbo v1, "reason"
+    const-string v1, "reason"
 
     invoke-virtual {p2, v1, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 1051
     .local v0, "reason":I
     iget-object v1, p0, Lcom/android/server/FMRadioService$17;->this$0:Lcom/android/server/FMRadioService;
 
@@ -70,23 +66,19 @@
 
     if-ne v0, v4, :cond_1
 
-    .line 1052
-    const-string/jumbo v1, "mReceiver: EMERGENCY_STATE_CHANGED - fmradio off"
+    const-string v1, "mReceiver: EMERGENCY_STATE_CHANGED - fmradio off"
 
     invoke-static {v1}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
-    .line 1053
     iget-object v1, p0, Lcom/android/server/FMRadioService$17;->this$0:Lcom/android/server/FMRadioService;
 
     # invokes: Lcom/android/server/FMRadioService;->stopInternetStreaming()V
     invoke-static {v1}, Lcom/android/server/FMRadioService;->access$900(Lcom/android/server/FMRadioService;)V
 
-    .line 1054
     iget-object v1, p0, Lcom/android/server/FMRadioService$17;->this$0:Lcom/android/server/FMRadioService;
 
     invoke-virtual {v1}, Lcom/android/server/FMRadioService;->cancelSeek()V
 
-    .line 1055
     iget-object v1, p0, Lcom/android/server/FMRadioService$17;->this$0:Lcom/android/server/FMRadioService;
 
     const/4 v2, 0x4
@@ -94,12 +86,10 @@
     # invokes: Lcom/android/server/FMRadioService;->offInternal(ZIZ)Z
     invoke-static {v1, v3, v2, v3}, Lcom/android/server/FMRadioService;->access$1000(Lcom/android/server/FMRadioService;ZIZ)Z
 
-    .line 1063
     :cond_0
     :goto_0
     return-void
 
-    .line 1057
     :cond_1
     iget-object v1, p0, Lcom/android/server/FMRadioService$17;->this$0:Lcom/android/server/FMRadioService;
 
@@ -112,23 +102,19 @@
 
     if-ne v0, v4, :cond_0
 
-    .line 1058
     iget-object v1, p0, Lcom/android/server/FMRadioService$17;->this$0:Lcom/android/server/FMRadioService;
 
     # setter for: Lcom/android/server/FMRadioService;->mIsForcestop:Z
     invoke-static {v1, v3}, Lcom/android/server/FMRadioService;->access$2602(Lcom/android/server/FMRadioService;Z)Z
 
-    .line 1059
     iget-object v1, p0, Lcom/android/server/FMRadioService$17;->this$0:Lcom/android/server/FMRadioService;
 
     iput-boolean v2, v1, Lcom/android/server/FMRadioService;->mIsAudioFocusAlive:Z
 
-    .line 1060
     const-string v1, "force stop : remove audiofocus"
 
     invoke-static {v1}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
-    .line 1061
     iget-object v1, p0, Lcom/android/server/FMRadioService$17;->this$0:Lcom/android/server/FMRadioService;
 
     # getter for: Lcom/android/server/FMRadioService;->mAudioManager:Landroid/media/AudioManager;

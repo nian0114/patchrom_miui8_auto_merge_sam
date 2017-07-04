@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 716
     invoke-direct {p0}, Landroid/app/SystemServiceRegistry$CachedServiceFetcher;-><init>()V
 
     return-void
@@ -41,7 +40,6 @@
     .param p1, "ctx"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 719
     # invokes: Landroid/app/SystemServiceRegistry;->getVzwLocationManager(Landroid/app/ContextImpl;)Ljava/lang/Object;
     invoke-static {p1}, Landroid/app/SystemServiceRegistry;->access$000(Landroid/app/ContextImpl;)Ljava/lang/Object;
 

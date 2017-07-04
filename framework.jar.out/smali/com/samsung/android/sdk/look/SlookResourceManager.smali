@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,10 +36,8 @@
     .param p0, "id"    # I
 
     .prologue
-    .line 93
     packed-switch p0, :pswitch_data_0
 
-    .line 109
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -71,11 +68,9 @@
 
     throw v0
 
-    .line 97
     :pswitch_0
     const v0, 0x10800d5
 
-    .line 103
     :goto_0
     return v0
 
@@ -84,7 +79,6 @@
 
     goto :goto_0
 
-    .line 93
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -99,10 +93,8 @@
     .prologue
     const/16 v0, 0xf
 
-    .line 129
     packed-switch p0, :pswitch_data_0
 
-    .line 151
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -133,11 +125,9 @@
 
     throw v0
 
-    .line 145
     :pswitch_0
     return v0
 
-    .line 129
     nop
 
     :pswitch_data_0
@@ -155,16 +145,13 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 169
     packed-switch p1, :pswitch_data_0
 
-    .line 181
     const/4 v0, 0x0
 
     :goto_0
     return-object v0
 
-    .line 173
     :pswitch_0
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -178,7 +165,6 @@
 
     goto :goto_0
 
-    .line 177
     :pswitch_1
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -192,7 +178,6 @@
 
     goto :goto_0
 
-    .line 169
     nop
 
     :pswitch_data_0

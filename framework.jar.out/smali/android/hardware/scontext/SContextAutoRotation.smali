@@ -25,7 +25,6 @@
     .locals 1
 
     .prologue
-    .line 157
     new-instance v0, Landroid/hardware/scontext/SContextAutoRotation$1;
 
     invoke-direct {v0}, Landroid/hardware/scontext/SContextAutoRotation$1;-><init>()V
@@ -39,17 +38,14 @@
     .locals 1
 
     .prologue
-    .line 99
     invoke-direct {p0}, Landroid/hardware/scontext/SContextEventContext;-><init>()V
 
-    .line 100
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/hardware/scontext/SContextAutoRotation;->mContext:Landroid/os/Bundle;
 
-    .line 101
     return-void
 .end method
 
@@ -58,13 +54,10 @@
     .param p1, "src"    # Landroid/os/Parcel;
 
     .prologue
-    .line 106
     invoke-direct {p0}, Landroid/hardware/scontext/SContextEventContext;-><init>()V
 
-    .line 107
     invoke-direct {p0, p1}, Landroid/hardware/scontext/SContextAutoRotation;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 108
     return-void
 .end method
 
@@ -73,14 +66,12 @@
     .param p1, "src"    # Landroid/os/Parcel;
 
     .prologue
-    .line 150
     invoke-virtual {p1}, Landroid/os/Parcel;->readBundle()Landroid/os/Bundle;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/hardware/scontext/SContextAutoRotation;->mContext:Landroid/os/Bundle;
 
-    .line 151
     return-void
 .end method
 
@@ -90,7 +81,6 @@
     .locals 1
 
     .prologue
-    .line 91
     invoke-super {p0}, Landroid/hardware/scontext/SContextEventContext;->describeContents()I
 
     move-result v0
@@ -102,7 +92,6 @@
     .locals 2
 
     .prologue
-    .line 116
     iget-object v0, p0, Landroid/hardware/scontext/SContextAutoRotation;->mContext:Landroid/os/Bundle;
 
     const-string v1, "Angle"
@@ -119,10 +108,8 @@
     .param p1, "context"    # Landroid/os/Bundle;
 
     .prologue
-    .line 126
     iput-object p1, p0, Landroid/hardware/scontext/SContextAutoRotation;->mContext:Landroid/os/Bundle;
 
-    .line 127
     return-void
 .end method
 
@@ -132,11 +119,9 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 140
     iget-object v0, p0, Landroid/hardware/scontext/SContextAutoRotation;->mContext:Landroid/os/Bundle;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
 
-    .line 141
     return-void
 .end method

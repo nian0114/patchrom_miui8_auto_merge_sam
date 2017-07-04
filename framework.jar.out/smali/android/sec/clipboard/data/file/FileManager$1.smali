@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 793
     iput-object p1, p0, Landroid/sec/clipboard/data/file/FileManager$1;->this$0:Landroid/sec/clipboard/data/file/FileManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 6
 
     .prologue
-    .line 796
     iget-object v3, p0, Landroid/sec/clipboard/data/file/FileManager$1;->this$0:Landroid/sec/clipboard/data/file/FileManager;
 
     # getter for: Landroid/sec/clipboard/data/file/FileManager;->mDeleteFileList:Ljava/util/ArrayList;
@@ -52,11 +50,9 @@
 
     move-result v2
 
-    .line 797
     .local v2, "size":I
     const/4 v0, 0x0
 
-    .line 798
     .local v0, "f":Ljava/io/File;
     const/4 v1, 0x0
 
@@ -64,7 +60,6 @@
     :goto_0
     if-ge v1, v2, :cond_2
 
-    .line 799
     iget-object v3, p0, Landroid/sec/clipboard/data/file/FileManager$1;->this$0:Landroid/sec/clipboard/data/file/FileManager;
 
     # getter for: Landroid/sec/clipboard/data/file/FileManager;->mDeleteFileList:Ljava/util/ArrayList;
@@ -79,11 +74,9 @@
     .end local v0    # "f":Ljava/io/File;
     check-cast v0, Ljava/io/File;
 
-    .line 800
     .restart local v0    # "f":Ljava/io/File;
     if-eqz v0, :cond_0
 
-    .line 801
     iget-object v3, p0, Landroid/sec/clipboard/data/file/FileManager$1;->this$0:Landroid/sec/clipboard/data/file/FileManager;
 
     # invokes: Landroid/sec/clipboard/data/file/FileManager;->deleteDirectoryContent(Ljava/io/File;)Z
@@ -93,14 +86,13 @@
 
     if-eqz v3, :cond_1
 
-    .line 802
     const-string v3, "Clipboard.FileManager"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "successed remove in clearDeleteList : "
+    const-string v5, "successed remove in clearDeleteList : "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -116,7 +108,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 803
     iget-object v3, p0, Landroid/sec/clipboard/data/file/FileManager$1;->this$0:Landroid/sec/clipboard/data/file/FileManager;
 
     # getter for: Landroid/sec/clipboard/data/file/FileManager;->mDeleteFileList:Ljava/util/ArrayList;
@@ -126,20 +117,16 @@
 
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 804
     add-int/lit8 v1, v1, -0x1
 
-    .line 805
     add-int/lit8 v2, v2, -0x1
 
-    .line 798
     :cond_0
     :goto_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 807
     :cond_1
     const-string v3, "Clipboard.FileManager"
 
@@ -165,7 +152,6 @@
 
     goto :goto_1
 
-    .line 811
     :cond_2
     const-string v3, "Clipboard.FileManager"
 
@@ -173,6 +159,5 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 812
     return-void
 .end method

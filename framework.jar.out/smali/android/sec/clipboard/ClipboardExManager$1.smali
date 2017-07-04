@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1235
     iput-object p1, p0, Landroid/sec/clipboard/ClipboardExManager$1;->this$0:Landroid/sec/clipboard/ClipboardExManager;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -40,7 +39,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 1238
     iget-object v1, p0, Landroid/sec/clipboard/ClipboardExManager$1;->this$0:Landroid/sec/clipboard/ClipboardExManager;
 
     # getter for: Landroid/sec/clipboard/ClipboardExManager;->mContext:Landroid/content/Context;
@@ -56,19 +54,16 @@
 
     check-cast v0, Landroid/view/accessibility/AccessibilityManager;
 
-    .line 1239
     .local v0, "am":Landroid/view/accessibility/AccessibilityManager;
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 1277
     :cond_0
     :goto_0
     :pswitch_0
     return-void
 
-    .line 1241
     :pswitch_1
     iget-object v1, p0, Landroid/sec/clipboard/ClipboardExManager$1;->this$0:Landroid/sec/clipboard/ClipboardExManager;
 
@@ -79,14 +74,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 1242
     invoke-virtual {v0}, Landroid/view/accessibility/AccessibilityManager;->isTwoFingerGestureRecognitionEnabled()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 1243
     iget-object v1, p0, Landroid/sec/clipboard/ClipboardExManager$1;->this$0:Landroid/sec/clipboard/ClipboardExManager;
 
     # getter for: Landroid/sec/clipboard/ClipboardExManager;->mIsMaximumSize:Z
@@ -96,7 +89,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 1244
     iget-object v1, p0, Landroid/sec/clipboard/ClipboardExManager$1;->this$0:Landroid/sec/clipboard/ClipboardExManager;
 
     # getter for: Landroid/sec/clipboard/ClipboardExManager;->mContext:Landroid/content/Context;
@@ -112,29 +104,25 @@
 
     invoke-virtual {v1}, Landroid/widget/Toast;->show()V
 
-    .line 1245
     iget-object v1, p0, Landroid/sec/clipboard/ClipboardExManager$1;->this$0:Landroid/sec/clipboard/ClipboardExManager;
 
     # setter for: Landroid/sec/clipboard/ClipboardExManager;->mIsMaximumSize:Z
     invoke-static {v1, v5}, Landroid/sec/clipboard/ClipboardExManager;->access$302(Landroid/sec/clipboard/ClipboardExManager;Z)Z
 
-    .line 1251
     :cond_1
     :goto_1
     sget-boolean v1, Landroid/sec/clipboard/data/ClipboardConstants;->DEBUG:Z
 
     if-eqz v1, :cond_0
 
-    .line 1252
     const-string v1, "ClipboardExManager"
 
-    const-string/jumbo v2, "success set data "
+    const-string v2, "success set data "
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 1247
     :cond_2
     iget-object v1, p0, Landroid/sec/clipboard/ClipboardExManager$1;->this$0:Landroid/sec/clipboard/ClipboardExManager;
 
@@ -153,7 +141,6 @@
 
     goto :goto_1
 
-    .line 1257
     :pswitch_2
     iget-object v1, p0, Landroid/sec/clipboard/ClipboardExManager$1;->this$0:Landroid/sec/clipboard/ClipboardExManager;
 
@@ -164,7 +151,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1258
     iget-object v1, p0, Landroid/sec/clipboard/ClipboardExManager$1;->this$0:Landroid/sec/clipboard/ClipboardExManager;
 
     iget-object v2, p0, Landroid/sec/clipboard/ClipboardExManager$1;->this$0:Landroid/sec/clipboard/ClipboardExManager;
@@ -180,14 +166,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 1262
     invoke-virtual {v0}, Landroid/view/accessibility/AccessibilityManager;->isTwoFingerGestureRecognitionEnabled()Z
 
     move-result v1
 
     if-nez v1, :cond_3
 
-    .line 1263
     iget-object v1, p0, Landroid/sec/clipboard/ClipboardExManager$1;->this$0:Landroid/sec/clipboard/ClipboardExManager;
 
     # getter for: Landroid/sec/clipboard/ClipboardExManager;->mContext:Landroid/content/Context;
@@ -203,13 +187,11 @@
 
     invoke-virtual {v1}, Landroid/widget/Toast;->show()V
 
-    .line 1266
     :cond_3
     sget-boolean v1, Landroid/sec/clipboard/data/ClipboardConstants;->DEBUG:Z
 
     if-eqz v1, :cond_0
 
-    .line 1267
     const-string v1, "ClipboardExManager"
 
     const-string v2, "Fail set data "
@@ -218,7 +200,6 @@
 
     goto/16 :goto_0
 
-    .line 1274
     :pswitch_3
     iget-object v1, p0, Landroid/sec/clipboard/ClipboardExManager$1;->this$0:Landroid/sec/clipboard/ClipboardExManager;
 
@@ -264,7 +245,6 @@
 
     goto/16 :goto_0
 
-    .line 1239
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1

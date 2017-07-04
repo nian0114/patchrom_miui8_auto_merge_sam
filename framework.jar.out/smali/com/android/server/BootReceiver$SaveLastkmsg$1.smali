@@ -36,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 167
     iput-object p1, p0, Lcom/android/server/BootReceiver$SaveLastkmsg$1;->this$0:Lcom/android/server/BootReceiver$SaveLastkmsg;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,7 +51,6 @@
     .param p2, "o2"    # Ljava/io/File;
 
     .prologue
-    .line 170
     invoke-virtual {p1}, Ljava/io/File;->lastModified()J
 
     move-result-wide v0
@@ -82,7 +80,6 @@
     .param p2, "x1"    # Ljava/lang/Object;
 
     .prologue
-    .line 167
     check-cast p1, Ljava/io/File;
 
     .end local p1    # "x0":Ljava/lang/Object;

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1429
     iput-object p1, p0, Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarMainPanel$2;->this$0:Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarMainPanel;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 1432
     iget-object v0, p0, Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarMainPanel$2;->this$0:Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarMainPanel;
 
     # getter for: Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarMainPanel;->isClickedOption:Z
@@ -51,7 +49,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1433
     iget-object v0, p0, Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarMainPanel$2;->this$0:Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarMainPanel;
 
     const/4 v1, 0x0
@@ -59,7 +56,6 @@
     # setter for: Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarMainPanel;->isClickedOption:Z
     invoke-static {v0, v1}, Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarMainPanel;->access$2302(Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarMainPanel;Z)Z
 
-    .line 1434
     iget-object v0, p0, Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarMainPanel$2;->this$0:Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarMainPanel;
 
     # getter for: Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarMainPanel;->mOpenOverflow:Ljava/lang/Runnable;
@@ -69,7 +65,6 @@
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    .line 1436
     :cond_0
     return-void
 .end method

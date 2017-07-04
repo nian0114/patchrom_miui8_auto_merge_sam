@@ -26,32 +26,24 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 10
     sput-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingGlobalLog:Z
 
-    .line 12
     sput-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingSecVLog:Z
 
-    .line 13
     sput-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingSecDLog:Z
 
-    .line 14
     sput-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingSecILog:Z
 
-    .line 15
     sput-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingSecWLog:Z
 
-    .line 16
     sput-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingSecELog:Z
 
-    .line 18
     sput-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingSecWtfLog:Z
 
-    .line 24
     :try_start_0
     const-string v0, "1"
 
-    const-string/jumbo v1, "persist.log.seclevel"
+    const-string v1, "persist.log.seclevel"
 
     const-string v2, "0"
 
@@ -65,43 +57,35 @@
 
     sput-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingGlobalLog:Z
 
-    .line 28
     sget-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingGlobalLog:Z
 
     sput-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingSecVLog:Z
 
-    .line 29
     sget-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingGlobalLog:Z
 
     sput-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingSecDLog:Z
 
-    .line 30
     sget-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingGlobalLog:Z
 
     sput-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingSecILog:Z
 
-    .line 31
     sget-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingGlobalLog:Z
 
     sput-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingSecWLog:Z
 
-    .line 32
     sget-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingGlobalLog:Z
 
     sput-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingSecELog:Z
 
-    .line 34
     sget-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingGlobalLog:Z
 
     sput-boolean v0, Landroid/util/secutil/LogSwitcher;->isShowingSecWtfLog:Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 38
     :goto_0
     return-void
 
-    .line 35
     :catch_0
     move-exception v0
 
@@ -112,7 +96,6 @@
     .locals 0
 
     .prologue
-    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

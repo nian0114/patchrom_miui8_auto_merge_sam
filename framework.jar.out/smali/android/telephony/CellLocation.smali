@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -18,7 +17,6 @@
     .locals 1
 
     .prologue
-    .line 115
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -29,13 +27,11 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 121
     const/4 v0, 0x0
 
     :goto_0
     return-object v0
 
-    .line 117
     :pswitch_0
     new-instance v0, Landroid/telephony/cdma/CdmaCellLocation;
 
@@ -43,7 +39,6 @@
 
     goto :goto_0
 
-    .line 119
     :pswitch_1
     new-instance v0, Landroid/telephony/gsm/GsmCellLocation;
 
@@ -51,7 +46,6 @@
 
     goto :goto_0
 
-    .line 115
     nop
 
     :pswitch_data_0
@@ -70,20 +64,17 @@
 
     const/4 v6, 0x0
 
-    .line 70
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getDefaultDataSubId()I
 
     move-result v1
 
-    .line 73
     .local v1, "subId":I
-    const-string/jumbo v2, "ro.csc.sales_code"
+    const-string v2, "ro.csc.sales_code"
 
     invoke-static {v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 74
     .local v0, "salesCode":Ljava/lang/String;
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
@@ -103,7 +94,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 76
     const-string v2, "READY"
 
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -152,14 +142,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 78
     invoke-static {v7}, Lcom/samsung/android/telephony/MultiSimManager;->getSubscriptionId(I)[I
 
     move-result-object v2
 
     aget v1, v2, v6
 
-    .line 86
     :cond_0
     :goto_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -172,13 +160,11 @@
 
     packed-switch v2, :pswitch_data_0
 
-    .line 93
     const/4 v2, 0x0
 
     :goto_1
     return-object v2
 
-    .line 79
     :cond_1
     const-string v2, "ABSENT"
 
@@ -212,7 +198,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 81
     invoke-static {v7}, Lcom/samsung/android/telephony/MultiSimManager;->getSubscriptionId(I)[I
 
     move-result-object v2
@@ -221,7 +206,6 @@
 
     goto :goto_0
 
-    .line 89
     :pswitch_0
     new-instance v2, Landroid/telephony/cdma/CdmaCellLocation;
 
@@ -229,7 +213,6 @@
 
     goto :goto_1
 
-    .line 91
     :pswitch_1
     new-instance v2, Landroid/telephony/gsm/GsmCellLocation;
 
@@ -237,7 +220,6 @@
 
     goto :goto_1
 
-    .line 86
     nop
 
     :pswitch_data_0
@@ -251,9 +233,8 @@
     .locals 2
 
     .prologue
-    .line 47
     :try_start_0
-    const-string/jumbo v1, "phone"
+    const-string v1, "phone"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -263,21 +244,17 @@
 
     move-result-object v0
 
-    .line 48
     .local v0, "phone":Lcom/android/internal/telephony/ITelephony;
     if-eqz v0, :cond_0
 
-    .line 49
     invoke-interface {v0}, Lcom/android/internal/telephony/ITelephony;->updateServiceLocation()V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 54
     :cond_0
     :goto_0
     return-void
 
-    .line 51
     :catch_0
     move-exception v1
 

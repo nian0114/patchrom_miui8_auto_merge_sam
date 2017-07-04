@@ -32,7 +32,6 @@
     .locals 1
 
     .prologue
-    .line 59
     new-instance v0, Lcom/samsung/android/smartclip/SmartClipDataExtractionResponse$1;
 
     invoke-direct {v0}, Lcom/samsung/android/smartclip/SmartClipDataExtractionResponse$1;-><init>()V
@@ -51,30 +50,22 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 30
     iput v0, p0, Lcom/samsung/android/smartclip/SmartClipDataExtractionResponse;->mRequestId:I
 
-    .line 31
     iput v0, p0, Lcom/samsung/android/smartclip/SmartClipDataExtractionResponse;->mExtractionMode:I
 
-    .line 32
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/samsung/android/smartclip/SmartClipDataExtractionResponse;->mRepository:Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;
 
-    .line 35
     iput p1, p0, Lcom/samsung/android/smartclip/SmartClipDataExtractionResponse;->mRequestId:I
 
-    .line 36
     iput p2, p0, Lcom/samsung/android/smartclip/SmartClipDataExtractionResponse;->mExtractionMode:I
 
-    .line 37
     iput-object p3, p0, Lcom/samsung/android/smartclip/SmartClipDataExtractionResponse;->mRepository:Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;
 
-    .line 38
     return-void
 .end method
 
@@ -84,7 +75,6 @@
     .locals 1
 
     .prologue
-    .line 44
     const/4 v0, 0x0
 
     return v0
@@ -95,21 +85,18 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 54
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/smartclip/SmartClipDataExtractionResponse;->mRequestId:I
 
-    .line 55
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/smartclip/SmartClipDataExtractionResponse;->mExtractionMode:I
 
-    .line 56
     const-class v0, Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -124,7 +111,6 @@
 
     iput-object v0, p0, Lcom/samsung/android/smartclip/SmartClipDataExtractionResponse;->mRepository:Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;
 
-    .line 57
     return-void
 .end method
 
@@ -134,21 +120,17 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 48
     iget v0, p0, Lcom/samsung/android/smartclip/SmartClipDataExtractionResponse;->mRequestId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 49
     iget v0, p0, Lcom/samsung/android/smartclip/SmartClipDataExtractionResponse;->mExtractionMode:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 50
     iget-object v0, p0, Lcom/samsung/android/smartclip/SmartClipDataExtractionResponse;->mRepository:Lcom/samsung/android/smartclip/SmartClipDataRepositoryImpl;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 51
     return-void
 .end method

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 2885
     iput-object p1, p0, Lcom/android/internal/app/ResolverActivity$ResolverPageChangeListener;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcom/android/internal/app/ResolverActivity$1;
 
     .prologue
-    .line 2885
     invoke-direct {p0, p1}, Lcom/android/internal/app/ResolverActivity$ResolverPageChangeListener;-><init>(Lcom/android/internal/app/ResolverActivity;)V
 
     return-void
@@ -53,7 +51,6 @@
     .param p1, "arg0"    # I
 
     .prologue
-    .line 2890
     return-void
 .end method
 
@@ -64,7 +61,6 @@
     .param p3, "arg2"    # I
 
     .prologue
-    .line 2895
     return-void
 .end method
 
@@ -73,13 +69,11 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 2902
     iget-object v2, p0, Lcom/android/internal/app/ResolverActivity$ResolverPageChangeListener;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     # setter for: Lcom/android/internal/app/ResolverActivity;->mCurrentPageIdx:I
     invoke-static {v2, p1}, Lcom/android/internal/app/ResolverActivity;->access$2802(Lcom/android/internal/app/ResolverActivity;I)I
 
-    .line 2903
     iget-object v2, p0, Lcom/android/internal/app/ResolverActivity$ResolverPageChangeListener;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     # getter for: Lcom/android/internal/app/ResolverActivity;->mViewPagerNavi:Landroid/widget/LinearLayout;
@@ -100,13 +94,11 @@
 
     check-cast v1, Landroid/widget/ImageView;
 
-    .line 2904
     .local v1, "prevIcon":Landroid/widget/ImageView;
     const v2, 0x10809ca
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 2906
     iget-object v2, p0, Lcom/android/internal/app/ResolverActivity$ResolverPageChangeListener;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     # getter for: Lcom/android/internal/app/ResolverActivity;->mViewPagerNavi:Landroid/widget/LinearLayout;
@@ -120,18 +112,15 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    .line 2907
     .local v0, "curIcon":Landroid/widget/ImageView;
     const v2, 0x10809c9
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 2909
     iget-object v2, p0, Lcom/android/internal/app/ResolverActivity$ResolverPageChangeListener;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     # setter for: Lcom/android/internal/app/ResolverActivity;->mViewPagerNaviPrevPage:I
     invoke-static {v2, p1}, Lcom/android/internal/app/ResolverActivity;->access$2902(Lcom/android/internal/app/ResolverActivity;I)I
 
-    .line 2910
     return-void
 .end method

@@ -30,14 +30,12 @@
     .locals 1
 
     .prologue
-    .line 4104
     iput-object p1, p0, Landroid/widget/ListView$1;->this$0:Landroid/widget/ListView;
 
     iput-object p2, p0, Landroid/widget/ListView$1;->val$root:Landroid/view/View;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4105
     iget-object v0, p0, Landroid/widget/ListView$1;->val$root:Landroid/view/View;
 
     iput-object v0, p0, Landroid/widget/ListView$1;->mView:Landroid/view/View;
@@ -51,7 +49,6 @@
     .locals 6
 
     .prologue
-    .line 4108
     iget-object v5, p0, Landroid/widget/ListView$1;->mView:Landroid/view/View;
 
     invoke-virtual {v5}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
@@ -60,29 +57,24 @@
 
     invoke-virtual {v5, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
-    .line 4110
     iget-object v5, p0, Landroid/widget/ListView$1;->mView:Landroid/view/View;
 
     instance-of v5, v5, Landroid/view/ViewGroup;
 
     if-eqz v5, :cond_2
 
-    .line 4111
     iget-object v4, p0, Landroid/widget/ListView$1;->mView:Landroid/view/View;
 
     check-cast v4, Landroid/view/ViewGroup;
 
-    .line 4112
     .local v4, "vg":Landroid/view/ViewGroup;
     invoke-virtual {v4}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v1
 
-    .line 4114
     .local v1, "cnt":I
     const/4 v2, 0x0
 
-    .line 4115
     .local v2, "firstTextViewFound":Z
     const/4 v3, 0x0
 
@@ -90,31 +82,25 @@
     :goto_0
     if-ge v3, v1, :cond_2
 
-    .line 4116
     invoke-virtual {v4, v3}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 4117
     .local v0, "child":Landroid/view/View;
     instance-of v5, v0, Landroid/widget/TextView;
 
     if-eqz v5, :cond_1
 
-    .line 4119
     if-eqz v2, :cond_0
 
-    .line 4115
     :goto_1
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 4120
     :cond_0
     const/4 v2, 0x1
 
-    .line 4122
     :cond_1
     iget-object v5, p0, Landroid/widget/ListView$1;->this$0:Landroid/widget/ListView;
 
@@ -123,7 +109,6 @@
 
     goto :goto_1
 
-    .line 4125
     .end local v0    # "child":Landroid/view/View;
     .end local v1    # "cnt":I
     .end local v2    # "firstTextViewFound":Z

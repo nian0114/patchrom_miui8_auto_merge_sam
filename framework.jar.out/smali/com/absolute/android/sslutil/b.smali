@@ -15,12 +15,10 @@
     .locals 3
 
     .prologue
-    .line 99
     iput-object p1, p0, Lcom/absolute/android/sslutil/b;->a:Lcom/absolute/android/sslutil/SslUtil;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 100
     invoke-static {}, Lcom/absolute/android/logutil/LogUtil;->get()Lcom/absolute/android/logutil/LogUtil;
 
     move-result-object v0
@@ -31,7 +29,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/absolute/android/logutil/LogUtil;->logMessage(ILjava/lang/String;)V
 
-    .line 102
     return-void
 .end method
 
@@ -41,7 +38,6 @@
     .locals 0
 
     .prologue
-    .line 105
     return-void
 .end method
 
@@ -49,7 +45,6 @@
     .locals 0
 
     .prologue
-    .line 108
     return-void
 .end method
 
@@ -57,7 +52,6 @@
     .locals 1
 
     .prologue
-    .line 111
     const/4 v0, 0x0
 
     new-array v0, v0, [Ljava/security/cert/X509Certificate;

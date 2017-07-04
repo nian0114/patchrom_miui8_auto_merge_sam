@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 752
     iput-object p1, p0, Landroid/os/CustomFrequencyManager$PCIePSMDisableRequest$1;->this$1:Landroid/os/CustomFrequencyManager$PCIePSMDisableRequest;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,11 +39,9 @@
     .locals 1
 
     .prologue
-    .line 754
     iget-object v0, p0, Landroid/os/CustomFrequencyManager$PCIePSMDisableRequest$1;->this$1:Landroid/os/CustomFrequencyManager$PCIePSMDisableRequest;
 
     invoke-virtual {v0}, Landroid/os/CustomFrequencyManager$PCIePSMDisableRequest;->cancelFrequencyRequest()V
 
-    .line 755
     return-void
 .end method

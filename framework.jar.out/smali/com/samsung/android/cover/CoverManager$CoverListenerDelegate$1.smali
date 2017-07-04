@@ -26,7 +26,6 @@
     .param p2, "x0"    # Landroid/os/Looper;
 
     .prologue
-    .line 567
     iput-object p1, p0, Lcom/samsung/android/cover/CoverManager$CoverListenerDelegate$1;->this$1:Lcom/samsung/android/cover/CoverManager$CoverListenerDelegate;
 
     iput-object p3, p0, Lcom/samsung/android/cover/CoverManager$CoverListenerDelegate$1;->val$this$0:Lcom/samsung/android/cover/CoverManager;
@@ -43,7 +42,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 570
     iget-object v1, p0, Lcom/samsung/android/cover/CoverManager$CoverListenerDelegate$1;->this$1:Lcom/samsung/android/cover/CoverManager$CoverListenerDelegate;
 
     # getter for: Lcom/samsung/android/cover/CoverManager$CoverListenerDelegate;->mListener:Lcom/samsung/android/cover/CoverManager$StateListener;
@@ -53,16 +51,13 @@
 
     if-eqz v1, :cond_0
 
-    .line 571
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/samsung/android/cover/CoverState;
 
-    .line 572
     .local v0, "coverState":Lcom/samsung/android/cover/CoverState;
     if-eqz v0, :cond_1
 
-    .line 573
     iget-object v1, p0, Lcom/samsung/android/cover/CoverManager$CoverListenerDelegate$1;->this$1:Lcom/samsung/android/cover/CoverManager$CoverListenerDelegate;
 
     # getter for: Lcom/samsung/android/cover/CoverManager$CoverListenerDelegate;->mListener:Lcom/samsung/android/cover/CoverManager$StateListener;
@@ -72,13 +67,11 @@
 
     invoke-virtual {v1, v0}, Lcom/samsung/android/cover/CoverManager$StateListener;->onCoverStateChanged(Lcom/samsung/android/cover/CoverState;)V
 
-    .line 578
     .end local v0    # "coverState":Lcom/samsung/android/cover/CoverState;
     :cond_0
     :goto_0
     return-void
 
-    .line 575
     .restart local v0    # "coverState":Lcom/samsung/android/cover/CoverState;
     :cond_1
     const-string v1, "CoverManager"

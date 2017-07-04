@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 2719
     iput-object p1, p0, Landroid/widget/Editor$PositionListener$1;->this$1:Landroid/widget/Editor$PositionListener;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -40,12 +39,10 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 2721
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Landroid/widget/Editor$TextViewPositionListener;
 
-    .line 2722
     .local v1, "positionListener":Landroid/widget/Editor$TextViewPositionListener;
     iget-object v0, p0, Landroid/widget/Editor$PositionListener$1;->this$1:Landroid/widget/Editor$PositionListener;
 
@@ -68,6 +65,5 @@
     # invokes: Landroid/widget/Editor$PositionListener;->updatePositionWithDelay(Landroid/widget/Editor$TextViewPositionListener;IIZZ)V
     invoke-static/range {v0 .. v5}, Landroid/widget/Editor$PositionListener;->access$1500(Landroid/widget/Editor$PositionListener;Landroid/widget/Editor$TextViewPositionListener;IIZZ)V
 
-    .line 2723
     return-void
 .end method

@@ -42,33 +42,24 @@
 
     const/4 v0, 0x0
 
-    .line 748
     iput-object p1, p0, Lcom/samsung/android/share/SShareSimpleSharing$DisplayDeviceInfo;->this$0:Lcom/samsung/android/share/SShareSimpleSharing;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 745
     iput v0, p0, Lcom/samsung/android/share/SShareSimpleSharing$DisplayDeviceInfo;->netType:I
 
-    .line 746
     iput v0, p0, Lcom/samsung/android/share/SShareSimpleSharing$DisplayDeviceInfo;->devType:I
 
-    .line 749
     iput-object p2, p0, Lcom/samsung/android/share/SShareSimpleSharing$DisplayDeviceInfo;->displayLabel:Ljava/lang/CharSequence;
 
-    .line 750
     iput-object p2, p0, Lcom/samsung/android/share/SShareSimpleSharing$DisplayDeviceInfo;->deviceName:Ljava/lang/CharSequence;
 
-    .line 751
     iput-object v1, p0, Lcom/samsung/android/share/SShareSimpleSharing$DisplayDeviceInfo;->deviceId:Ljava/lang/CharSequence;
 
-    .line 752
     iput-object v1, p0, Lcom/samsung/android/share/SShareSimpleSharing$DisplayDeviceInfo;->number:Ljava/lang/CharSequence;
 
-    .line 753
     iput v0, p0, Lcom/samsung/android/share/SShareSimpleSharing$DisplayDeviceInfo;->iconType:I
 
-    .line 754
     return-void
 .end method
 
@@ -85,38 +76,27 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 756
     iput-object p1, p0, Lcom/samsung/android/share/SShareSimpleSharing$DisplayDeviceInfo;->this$0:Lcom/samsung/android/share/SShareSimpleSharing;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 745
     iput v0, p0, Lcom/samsung/android/share/SShareSimpleSharing$DisplayDeviceInfo;->netType:I
 
-    .line 746
     iput v0, p0, Lcom/samsung/android/share/SShareSimpleSharing$DisplayDeviceInfo;->devType:I
 
-    .line 757
     iput-object p3, p0, Lcom/samsung/android/share/SShareSimpleSharing$DisplayDeviceInfo;->displayLabel:Ljava/lang/CharSequence;
 
-    .line 758
     iput-object p2, p0, Lcom/samsung/android/share/SShareSimpleSharing$DisplayDeviceInfo;->deviceName:Ljava/lang/CharSequence;
 
-    .line 759
     iput-object p4, p0, Lcom/samsung/android/share/SShareSimpleSharing$DisplayDeviceInfo;->deviceId:Ljava/lang/CharSequence;
 
-    .line 760
     iput-object p5, p0, Lcom/samsung/android/share/SShareSimpleSharing$DisplayDeviceInfo;->number:Ljava/lang/CharSequence;
 
-    .line 761
     iput p6, p0, Lcom/samsung/android/share/SShareSimpleSharing$DisplayDeviceInfo;->iconType:I
 
-    .line 762
     iput p7, p0, Lcom/samsung/android/share/SShareSimpleSharing$DisplayDeviceInfo;->netType:I
 
-    .line 763
     iput p8, p0, Lcom/samsung/android/share/SShareSimpleSharing$DisplayDeviceInfo;->devType:I
 
-    .line 764
     return-void
 .end method

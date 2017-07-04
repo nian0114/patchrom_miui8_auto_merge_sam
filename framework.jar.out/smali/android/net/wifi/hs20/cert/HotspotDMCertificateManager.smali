@@ -38,15 +38,12 @@
     .locals 2
 
     .prologue
-    .line 50
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
     const/4 v1, 0x0
 
     iput v1, p0, Landroid/net/wifi/hs20/cert/HotspotDMCertificateManager;->mCertID:I
 
-    .line 52
     :try_start_0
     invoke-static {}, Ljava/security/KeyStore;->getDefaultType()Ljava/lang/String;
 
@@ -60,15 +57,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 56
     :goto_0
     return-void
 
-    .line 53
     :catch_0
     move-exception v0
 
-    .line 54
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -80,7 +74,6 @@
     .param p0, "x0"    # Landroid/net/wifi/hs20/cert/HotspotDMCertificateManager;
 
     .prologue
-    .line 25
     iget-object v0, p0, Landroid/net/wifi/hs20/cert/HotspotDMCertificateManager;->ks:Ljava/security/KeyStore;
 
     return-object v0
@@ -92,7 +85,6 @@
     .param p1, "x1"    # Ljava/security/KeyStore;
 
     .prologue
-    .line 25
     iput-object p1, p0, Landroid/net/wifi/hs20/cert/HotspotDMCertificateManager;->ks:Ljava/security/KeyStore;
 
     return-object p1
@@ -103,7 +95,6 @@
     .param p0, "x0"    # Landroid/net/wifi/hs20/cert/HotspotDMCertificateManager;
 
     .prologue
-    .line 25
     iget-object v0, p0, Landroid/net/wifi/hs20/cert/HotspotDMCertificateManager;->keyPass:Ljava/lang/String;
 
     return-object v0
@@ -114,7 +105,6 @@
     .param p0, "x0"    # Landroid/net/wifi/hs20/cert/HotspotDMCertificateManager;
 
     .prologue
-    .line 25
     iget-object v0, p0, Landroid/net/wifi/hs20/cert/HotspotDMCertificateManager;->hs20ValidationParameters:Landroid/net/wifi/hs20/cert/HotspotDMValidationParameters;
 
     return-object v0
@@ -134,7 +124,6 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 154
     const-string v9, "OSU"
 
     invoke-virtual {v9, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -143,11 +132,9 @@
 
     if-eqz v9, :cond_0
 
-    .line 182
     :goto_0
     return-object v8
 
-    .line 156
     :cond_0
     const-string v8, "HotspotDMCertificateManager"
 
@@ -155,7 +142,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 157
     new-instance v0, Ljava/io/File;
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -186,11 +172,9 @@
 
     invoke-direct {v0, v8}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 158
     .local v0, "clientKeyStore":Ljava/io/File;
     const/4 v3, 0x0
 
-    .line 159
     .local v3, "fis":Ljava/io/FileInputStream;
     iget-object v8, p0, Landroid/net/wifi/hs20/cert/HotspotDMCertificateManager;->keyPass:Ljava/lang/String;
 
@@ -198,7 +182,6 @@
 
     move-result-object v7
 
-    .line 160
     .local v7, "password":[C
     invoke-static {}, Ljavax/net/ssl/KeyManagerFactory;->getDefaultAlgorithm()Ljava/lang/String;
 
@@ -208,7 +191,6 @@
 
     move-result-object v5
 
-    .line 163
     .local v5, "keyManagerFactory":Ljavax/net/ssl/KeyManagerFactory;
     :try_start_0
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
@@ -217,14 +199,12 @@
 
     if-eqz v8, :cond_2
 
-    .line 164
     const-string v8, "PKCS12"
 
     invoke-static {v8}, Ljava/security/KeyStore;->getInstance(Ljava/lang/String;)Ljava/security/KeyStore;
 
     move-result-object v6
 
-    .line 165
     .local v6, "keyStore":Ljava/security/KeyStore;
     new-instance v4, Ljava/io/FileInputStream;
 
@@ -233,13 +213,11 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 166
     .end local v3    # "fis":Ljava/io/FileInputStream;
     .local v4, "fis":Ljava/io/FileInputStream;
     :try_start_1
     invoke-virtual {v6, v4, v7}, Ljava/security/KeyStore;->load(Ljava/io/InputStream;[C)V
 
-    .line 167
     invoke-virtual {v5, v6, v7}, Ljavax/net/ssl/KeyManagerFactory;->init(Ljava/security/KeyStore;[C)V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_4
@@ -247,20 +225,17 @@
 
     move-object v3, v4
 
-    .line 175
     .end local v4    # "fis":Ljava/io/FileInputStream;
     .end local v6    # "keyStore":Ljava/security/KeyStore;
     .restart local v3    # "fis":Ljava/io/FileInputStream;
     :goto_1
     if-eqz v3, :cond_1
 
-    .line 176
     :try_start_2
     invoke-virtual {v3}, Ljava/io/FileInputStream;->close()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 182
     :cond_1
     :goto_2
     invoke-virtual {v5}, Ljavax/net/ssl/KeyManagerFactory;->getKeyManagers()[Ljavax/net/ssl/KeyManager;
@@ -269,7 +244,6 @@
 
     goto :goto_0
 
-    .line 169
     :cond_2
     const/4 v8, 0x0
 
@@ -283,29 +257,24 @@
 
     goto :goto_1
 
-    .line 170
     :catch_0
     move-exception v1
 
-    .line 171
     .local v1, "e":Ljava/io/IOException;
     :goto_3
     :try_start_4
     const-string v8, "HotspotDMCertificateManager"
 
-    const-string/jumbo v9, "got an exception "
+    const-string v9, "got an exception "
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 172
     invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 175
     if-eqz v3, :cond_1
 
-    .line 176
     :try_start_5
     invoke-virtual {v3}, Ljava/io/FileInputStream;->close()V
     :try_end_5
@@ -313,59 +282,48 @@
 
     goto :goto_2
 
-    .line 178
     :catch_1
     move-exception v2
 
-    .line 179
     .local v2, "ex":Ljava/io/IOException;
     invoke-virtual {v2}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_2
 
-    .line 178
     .end local v1    # "e":Ljava/io/IOException;
     .end local v2    # "ex":Ljava/io/IOException;
     :catch_2
     move-exception v2
 
-    .line 179
     .restart local v2    # "ex":Ljava/io/IOException;
     invoke-virtual {v2}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_2
 
-    .line 174
     .end local v2    # "ex":Ljava/io/IOException;
     :catchall_0
     move-exception v8
 
-    .line 175
     :goto_4
     if-eqz v3, :cond_3
 
-    .line 176
     :try_start_6
     invoke-virtual {v3}, Ljava/io/FileInputStream;->close()V
     :try_end_6
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_3
 
-    .line 180
     :cond_3
     :goto_5
     throw v8
 
-    .line 178
     :catch_3
     move-exception v2
 
-    .line 179
     .restart local v2    # "ex":Ljava/io/IOException;
     invoke-virtual {v2}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_5
 
-    .line 174
     .end local v2    # "ex":Ljava/io/IOException;
     .end local v3    # "fis":Ljava/io/FileInputStream;
     .restart local v4    # "fis":Ljava/io/FileInputStream;
@@ -379,7 +337,6 @@
     .restart local v3    # "fis":Ljava/io/FileInputStream;
     goto :goto_4
 
-    .line 170
     .end local v3    # "fis":Ljava/io/FileInputStream;
     .restart local v4    # "fis":Ljava/io/FileInputStream;
     :catch_4
@@ -396,14 +353,12 @@
     .locals 3
 
     .prologue
-    .line 198
     const-string v0, "HotspotDMCertificateManager"
 
     const-string v1, "fetchTrustManagerFactory"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 199
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljavax/net/ssl/TrustManager;
@@ -424,10 +379,8 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 194
     iput p1, p0, Landroid/net/wifi/hs20/cert/HotspotDMCertificateManager;->mCertID:I
 
-    .line 195
     return-void
 .end method
 
@@ -436,10 +389,8 @@
     .param p1, "keypass"    # Ljava/lang/String;
 
     .prologue
-    .line 75
     iput-object p1, p0, Landroid/net/wifi/hs20/cert/HotspotDMCertificateManager;->keyPass:Ljava/lang/String;
 
-    .line 76
     return-void
 .end method
 
@@ -448,9 +399,7 @@
     .param p1, "parameters"    # Landroid/net/wifi/hs20/cert/HotspotDMValidationParameters;
 
     .prologue
-    .line 64
     iput-object p1, p0, Landroid/net/wifi/hs20/cert/HotspotDMCertificateManager;->hs20ValidationParameters:Landroid/net/wifi/hs20/cert/HotspotDMValidationParameters;
 
-    .line 65
     return-void
 .end method

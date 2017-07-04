@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 325
     invoke-static {}, Landroid/widget/SeekBarFluidPath$SVGCommand;->values()[Landroid/widget/SeekBarFluidPath$SVGCommand;
 
     move-result-object v0

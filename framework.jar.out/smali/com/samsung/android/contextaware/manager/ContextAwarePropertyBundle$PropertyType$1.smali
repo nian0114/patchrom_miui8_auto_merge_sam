@@ -19,7 +19,6 @@
     .locals 1
 
     .prologue
-    .line 109
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/samsung/android/contextaware/manager/ContextAwarePropertyBundle$PropertyType;-><init>(Ljava/lang/String;ILcom/samsung/android/contextaware/manager/ContextAwarePropertyBundle$1;)V
@@ -40,7 +39,6 @@
     .end annotation
 
     .prologue
-    .line 120
     # getter for: Lcom/samsung/android/contextaware/manager/ContextAwarePropertyBundle;->booleanVal:[Z
     invoke-static {}, Lcom/samsung/android/contextaware/manager/ContextAwarePropertyBundle;->access$100()[Z
 
@@ -60,13 +58,11 @@
     .end annotation
 
     .prologue
-    .line 112
     .local p1, "value":Ljava/lang/Object;, "TT;"
     instance-of v0, p1, Ljava/lang/Boolean;
 
     if-eqz v0, :cond_0
 
-    .line 113
     # getter for: Lcom/samsung/android/contextaware/manager/ContextAwarePropertyBundle;->booleanVal:[Z
     invoke-static {}, Lcom/samsung/android/contextaware/manager/ContextAwarePropertyBundle;->access$100()[Z
 
@@ -83,7 +79,6 @@
 
     aput-boolean v2, v0, v1
 
-    .line 115
     :cond_0
     return-void
 .end method

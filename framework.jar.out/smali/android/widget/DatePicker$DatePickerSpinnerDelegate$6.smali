@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1553
     iput-object p1, p0, Landroid/widget/DatePicker$DatePickerSpinnerDelegate$6;->this$0:Landroid/widget/DatePicker$DatePickerSpinnerDelegate;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,12 +42,10 @@
     .param p3, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 1555
     const/16 v0, 0x270f
 
     if-ne p2, v0, :cond_0
 
-    .line 1556
     iget-object v0, p0, Landroid/widget/DatePicker$DatePickerSpinnerDelegate$6;->this$0:Landroid/widget/DatePicker$DatePickerSpinnerDelegate;
 
     const-string v1, "EditorAction 9999 arrived"
@@ -56,7 +53,6 @@
     # invokes: Landroid/widget/DatePicker$DatePickerSpinnerDelegate;->twLog(Ljava/lang/String;)V
     invoke-static {v0, v1}, Landroid/widget/DatePicker$DatePickerSpinnerDelegate;->access$2300(Landroid/widget/DatePicker$DatePickerSpinnerDelegate;Ljava/lang/String;)V
 
-    .line 1557
     iget-object v0, p0, Landroid/widget/DatePicker$DatePickerSpinnerDelegate$6;->this$0:Landroid/widget/DatePicker$DatePickerSpinnerDelegate;
 
     const/4 v1, 0x1
@@ -64,7 +60,6 @@
     # setter for: Landroid/widget/DatePicker$DatePickerSpinnerDelegate;->isMonthJan:Z
     invoke-static {v0, v1}, Landroid/widget/DatePicker$DatePickerSpinnerDelegate;->access$2402(Landroid/widget/DatePicker$DatePickerSpinnerDelegate;Z)Z
 
-    .line 1559
     :cond_0
     const/4 v0, 0x0
 

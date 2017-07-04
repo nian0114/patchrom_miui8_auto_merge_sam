@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 157
     iput-object p1, p0, Lcom/samsung/android/contextaware/utilbundle/CaCoverManager$2;->this$0:Lcom/samsung/android/contextaware/utilbundle/CaCoverManager;
 
     invoke-direct {p0}, Lcom/samsung/android/cover/CoverManager$StateListener;-><init>()V
@@ -38,12 +37,11 @@
     .param p1, "state"    # Lcom/samsung/android/cover/CoverState;
 
     .prologue
-    .line 161
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "state:"
+    const-string v1, "state:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -59,10 +57,8 @@
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->info(Ljava/lang/String;)V
 
-    .line 162
     if-eqz p1, :cond_0
 
-    .line 163
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCoverManager$2;->this$0:Lcom/samsung/android/contextaware/utilbundle/CaCoverManager;
 
     invoke-virtual {p1}, Lcom/samsung/android/cover/CoverState;->getSwitchState()Z
@@ -72,7 +68,6 @@
     # setter for: Lcom/samsung/android/contextaware/utilbundle/CaCoverManager;->mCurrentCoverState:Z
     invoke-static {v0, v1}, Lcom/samsung/android/contextaware/utilbundle/CaCoverManager;->access$202(Lcom/samsung/android/contextaware/utilbundle/CaCoverManager;Z)Z
 
-    .line 164
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCoverManager$2;->this$0:Lcom/samsung/android/contextaware/utilbundle/CaCoverManager;
 
     invoke-virtual {p1}, Lcom/samsung/android/cover/CoverState;->getType()I
@@ -82,19 +77,16 @@
     # setter for: Lcom/samsung/android/contextaware/utilbundle/CaCoverManager;->mCurrentCoverType:I
     invoke-static {v0, v1}, Lcom/samsung/android/contextaware/utilbundle/CaCoverManager;->access$302(Lcom/samsung/android/contextaware/utilbundle/CaCoverManager;I)I
 
-    .line 165
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCoverManager$2;->this$0:Lcom/samsung/android/contextaware/utilbundle/CaCoverManager;
 
     # invokes: Lcom/samsung/android/contextaware/utilbundle/CaCoverManager;->notifyObservers(Lcom/samsung/android/cover/CoverState;)V
     invoke-static {v0, p1}, Lcom/samsung/android/contextaware/utilbundle/CaCoverManager;->access$400(Lcom/samsung/android/contextaware/utilbundle/CaCoverManager;Lcom/samsung/android/cover/CoverState;)V
 
-    .line 169
     :goto_0
     return-void
 
-    .line 167
     :cond_0
-    const-string/jumbo v0, "state is null"
+    const-string v0, "state is null"
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 

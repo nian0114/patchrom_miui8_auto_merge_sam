@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 632
     iput-object p1, p0, Landroid/os/CustomFrequencyManager$CPUDisCStateRequest$1;->this$1:Landroid/os/CustomFrequencyManager$CPUDisCStateRequest;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,11 +39,9 @@
     .locals 1
 
     .prologue
-    .line 634
     iget-object v0, p0, Landroid/os/CustomFrequencyManager$CPUDisCStateRequest$1;->this$1:Landroid/os/CustomFrequencyManager$CPUDisCStateRequest;
 
     invoke-virtual {v0}, Landroid/os/CustomFrequencyManager$CPUDisCStateRequest;->cancelFrequencyRequest()V
 
-    .line 635
     return-void
 .end method

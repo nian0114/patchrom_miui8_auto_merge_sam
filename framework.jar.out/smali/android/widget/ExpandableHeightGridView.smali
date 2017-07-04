@@ -19,16 +19,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 34
     invoke-direct {p0, p1}, Landroid/widget/GridView;-><init>(Landroid/content/Context;)V
 
-    .line 29
     iput-boolean v0, p0, Landroid/widget/ExpandableHeightGridView;->expanded:Z
 
-    .line 30
     iput v0, p0, Landroid/widget/ExpandableHeightGridView;->mItemHeight:I
 
-    .line 35
     return-void
 .end method
 
@@ -40,16 +36,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 38
     invoke-direct {p0, p1, p2}, Landroid/widget/GridView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 29
     iput-boolean v0, p0, Landroid/widget/ExpandableHeightGridView;->expanded:Z
 
-    .line 30
     iput v0, p0, Landroid/widget/ExpandableHeightGridView;->mItemHeight:I
 
-    .line 39
     return-void
 .end method
 
@@ -62,16 +54,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 42
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/GridView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 29
     iput-boolean v0, p0, Landroid/widget/ExpandableHeightGridView;->expanded:Z
 
-    .line 30
     iput v0, p0, Landroid/widget/ExpandableHeightGridView;->mItemHeight:I
 
-    .line 43
     return-void
 .end method
 
@@ -81,7 +69,6 @@
     .locals 1
 
     .prologue
-    .line 46
     iget-boolean v0, p0, Landroid/widget/ExpandableHeightGridView;->expanded:Z
 
     return v0
@@ -93,14 +80,12 @@
     .param p2, "heightMeasureSpec"    # I
 
     .prologue
-    .line 51
     invoke-virtual {p0}, Landroid/widget/ExpandableHeightGridView;->isExpanded()Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 54
     const v2, 0xffffff
 
     const/high16 v3, -0x80000000
@@ -109,22 +94,18 @@
 
     move-result v0
 
-    .line 55
     .local v0, "expandSpec":I
     invoke-super {p0, p1, v0}, Landroid/widget/GridView;->onMeasure(II)V
 
-    .line 57
     invoke-virtual {p0}, Landroid/widget/ExpandableHeightGridView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v1
 
-    .line 59
     .local v1, "params":Landroid/view/ViewGroup$LayoutParams;
     iget v2, p0, Landroid/widget/ExpandableHeightGridView;->mItemHeight:I
 
     if-lez v2, :cond_1
 
-    .line 61
     iget v2, p0, Landroid/widget/ExpandableHeightGridView;->mLineNum:I
 
     if-nez v2, :cond_0
@@ -134,7 +115,6 @@
     :goto_0
     iput v2, p0, Landroid/widget/ExpandableHeightGridView;->mLineNum:I
 
-    .line 62
     iget v2, p0, Landroid/widget/ExpandableHeightGridView;->mLineNum:I
 
     iget v3, p0, Landroid/widget/ExpandableHeightGridView;->mItemHeight:I
@@ -143,13 +123,11 @@
 
     iput v2, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 69
     .end local v0    # "expandSpec":I
     .end local v1    # "params":Landroid/view/ViewGroup$LayoutParams;
     :goto_1
     return-void
 
-    .line 61
     .restart local v0    # "expandSpec":I
     .restart local v1    # "params":Landroid/view/ViewGroup$LayoutParams;
     :cond_0
@@ -157,7 +135,6 @@
 
     goto :goto_0
 
-    .line 64
     :cond_1
     invoke-virtual {p0}, Landroid/widget/ExpandableHeightGridView;->getMeasuredHeight()I
 
@@ -167,7 +144,6 @@
 
     goto :goto_1
 
-    .line 67
     .end local v0    # "expandSpec":I
     .end local v1    # "params":Landroid/view/ViewGroup$LayoutParams;
     :cond_2
@@ -181,10 +157,8 @@
     .param p1, "expanded"    # Z
 
     .prologue
-    .line 72
     iput-boolean p1, p0, Landroid/widget/ExpandableHeightGridView;->expanded:Z
 
-    .line 73
     return-void
 .end method
 
@@ -193,9 +167,7 @@
     .param p1, "height"    # I
 
     .prologue
-    .line 76
     iput p1, p0, Landroid/widget/ExpandableHeightGridView;->mItemHeight:I
 
-    .line 77
     return-void
 .end method

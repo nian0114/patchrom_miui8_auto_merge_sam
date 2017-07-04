@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 244
     iput-object p1, p0, Landroid/widget/HorizontalFastScroller$3;->this$0:Landroid/widget/HorizontalFastScroller;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 247
     iget-object v1, p0, Landroid/widget/HorizontalFastScroller$3;->this$0:Landroid/widget/HorizontalFastScroller;
 
     iget-object v0, p0, Landroid/widget/HorizontalFastScroller$3;->this$0:Landroid/widget/HorizontalFastScroller;
@@ -56,10 +54,8 @@
     # setter for: Landroid/widget/HorizontalFastScroller;->mShowingPrimary:Z
     invoke-static {v1, v0}, Landroid/widget/HorizontalFastScroller;->access$702(Landroid/widget/HorizontalFastScroller;Z)Z
 
-    .line 248
     return-void
 
-    .line 247
     :cond_0
     const/4 v0, 0x0
 

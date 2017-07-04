@@ -54,7 +54,6 @@
     .locals 0
 
     .prologue
-    .line 50
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -66,33 +65,27 @@
     .locals 4
 
     .prologue
-    .line 621
     :try_start_0
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager$EDMProxyServiceHelper;->getService()Landroid/sec/enterprise/IEDMProxy;
 
     move-result-object v1
 
-    .line 622
     .local v1, "lService":Landroid/sec/enterprise/IEDMProxy;
     if-eqz v1, :cond_0
 
-    .line 623
     invoke-interface {v1}, Landroid/sec/enterprise/IEDMProxy;->getKeyboardMode()I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v2
 
-    .line 628
     .end local v1    # "lService":Landroid/sec/enterprise/IEDMProxy;
     :goto_0
     return v2
 
-    .line 625
     :catch_0
     move-exception v0
 
-    .line 626
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManager"
 
@@ -100,7 +93,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 628
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     const/4 v2, 0x0
@@ -112,33 +104,27 @@
     .locals 4
 
     .prologue
-    .line 242
     :try_start_0
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager$EDMProxyServiceHelper;->getService()Landroid/sec/enterprise/IEDMProxy;
 
     move-result-object v1
 
-    .line 243
     .local v1, "lService":Landroid/sec/enterprise/IEDMProxy;
     if-eqz v1, :cond_0
 
-    .line 244
     invoke-interface {v1}, Landroid/sec/enterprise/IEDMProxy;->getSealedHideNotificationMessages()I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v2
 
-    .line 249
     .end local v1    # "lService":Landroid/sec/enterprise/IEDMProxy;
     :goto_0
     return v2
 
-    .line 246
     :catch_0
     move-exception v0
 
-    .line 247
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManager"
 
@@ -146,7 +132,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 249
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     const/4 v2, 0x0
@@ -158,17 +143,14 @@
     .locals 4
 
     .prologue
-    .line 214
     :try_start_0
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager$EDMProxyServiceHelper;->getService()Landroid/sec/enterprise/IEDMProxy;
 
     move-result-object v1
 
-    .line 215
     .local v1, "lService":Landroid/sec/enterprise/IEDMProxy;
     if-eqz v1, :cond_0
 
-    .line 216
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager$EDMProxyServiceHelper;->getService()Landroid/sec/enterprise/IEDMProxy;
 
     move-result-object v2
@@ -179,16 +161,13 @@
 
     move-result v2
 
-    .line 221
     .end local v1    # "lService":Landroid/sec/enterprise/IEDMProxy;
     :goto_0
     return v2
 
-    .line 218
     :catch_0
     move-exception v0
 
-    .line 219
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManager"
 
@@ -196,7 +175,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 221
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     const/4 v2, 0x1
@@ -208,17 +186,14 @@
     .locals 4
 
     .prologue
-    .line 186
     :try_start_0
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager$EDMProxyServiceHelper;->getService()Landroid/sec/enterprise/IEDMProxy;
 
     move-result-object v1
 
-    .line 187
     .local v1, "lService":Landroid/sec/enterprise/IEDMProxy;
     if-eqz v1, :cond_0
 
-    .line 188
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager$EDMProxyServiceHelper;->getService()Landroid/sec/enterprise/IEDMProxy;
 
     move-result-object v2
@@ -229,16 +204,13 @@
 
     move-result v2
 
-    .line 193
     .end local v1    # "lService":Landroid/sec/enterprise/IEDMProxy;
     :goto_0
     return v2
 
-    .line 190
     :catch_0
     move-exception v0
 
-    .line 191
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManager"
 
@@ -246,7 +218,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 193
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     const/4 v2, 0x0
@@ -258,33 +229,27 @@
     .locals 4
 
     .prologue
-    .line 357
     :try_start_0
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager$EDMProxyServiceHelper;->getService()Landroid/sec/enterprise/IEDMProxy;
 
     move-result-object v1
 
-    .line 358
     .local v1, "lService":Landroid/sec/enterprise/IEDMProxy;
     if-eqz v1, :cond_0
 
-    .line 359
     invoke-interface {v1}, Landroid/sec/enterprise/IEDMProxy;->getSensorDisabled()I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v2
 
-    .line 364
     .end local v1    # "lService":Landroid/sec/enterprise/IEDMProxy;
     :goto_0
     return v2
 
-    .line 361
     :catch_0
     move-exception v0
 
-    .line 362
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManager"
 
@@ -292,7 +257,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 364
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     const/4 v2, 0x0
@@ -304,33 +268,27 @@
     .locals 4
 
     .prologue
-    .line 299
     :try_start_0
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager$EDMProxyServiceHelper;->getService()Landroid/sec/enterprise/IEDMProxy;
 
     move-result-object v1
 
-    .line 300
     .local v1, "lService":Landroid/sec/enterprise/IEDMProxy;
     if-eqz v1, :cond_0
 
-    .line 301
     invoke-interface {v1}, Landroid/sec/enterprise/IEDMProxy;->getToastEnabledState()Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v2
 
-    .line 306
     .end local v1    # "lService":Landroid/sec/enterprise/IEDMProxy;
     :goto_0
     return v2
 
-    .line 303
     :catch_0
     move-exception v0
 
-    .line 304
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManager"
 
@@ -338,7 +296,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 306
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     const/4 v2, 0x1
@@ -350,33 +307,27 @@
     .locals 4
 
     .prologue
-    .line 544
     :try_start_0
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager$EDMProxyServiceHelper;->getService()Landroid/sec/enterprise/IEDMProxy;
 
     move-result-object v1
 
-    .line 545
     .local v1, "lService":Landroid/sec/enterprise/IEDMProxy;
     if-eqz v1, :cond_0
 
-    .line 546
     invoke-interface {v1}, Landroid/sec/enterprise/IEDMProxy;->getToastGravity()I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v2
 
-    .line 551
     .end local v1    # "lService":Landroid/sec/enterprise/IEDMProxy;
     :goto_0
     return v2
 
-    .line 548
     :catch_0
     move-exception v0
 
-    .line 549
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManager"
 
@@ -384,7 +335,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 551
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     const/4 v2, 0x0
@@ -396,33 +346,27 @@
     .locals 4
 
     .prologue
-    .line 517
     :try_start_0
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager$EDMProxyServiceHelper;->getService()Landroid/sec/enterprise/IEDMProxy;
 
     move-result-object v1
 
-    .line 518
     .local v1, "lService":Landroid/sec/enterprise/IEDMProxy;
     if-eqz v1, :cond_0
 
-    .line 519
     invoke-interface {v1}, Landroid/sec/enterprise/IEDMProxy;->getToastGravityEnabledState()Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v2
 
-    .line 524
     .end local v1    # "lService":Landroid/sec/enterprise/IEDMProxy;
     :goto_0
     return v2
 
-    .line 521
     :catch_0
     move-exception v0
 
-    .line 522
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManager"
 
@@ -430,7 +374,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 524
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     const/4 v2, 0x0
@@ -442,33 +385,27 @@
     .locals 4
 
     .prologue
-    .line 569
     :try_start_0
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager$EDMProxyServiceHelper;->getService()Landroid/sec/enterprise/IEDMProxy;
 
     move-result-object v1
 
-    .line 570
     .local v1, "lService":Landroid/sec/enterprise/IEDMProxy;
     if-eqz v1, :cond_0
 
-    .line 571
     invoke-interface {v1}, Landroid/sec/enterprise/IEDMProxy;->getToastGravityXOffset()I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v2
 
-    .line 576
     .end local v1    # "lService":Landroid/sec/enterprise/IEDMProxy;
     :goto_0
     return v2
 
-    .line 573
     :catch_0
     move-exception v0
 
-    .line 574
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManager"
 
@@ -476,7 +413,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 576
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     const/4 v2, 0x0
@@ -488,33 +424,27 @@
     .locals 4
 
     .prologue
-    .line 594
     :try_start_0
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager$EDMProxyServiceHelper;->getService()Landroid/sec/enterprise/IEDMProxy;
 
     move-result-object v1
 
-    .line 595
     .local v1, "lService":Landroid/sec/enterprise/IEDMProxy;
     if-eqz v1, :cond_0
 
-    .line 596
     invoke-interface {v1}, Landroid/sec/enterprise/IEDMProxy;->getToastGravityYOffset()I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v2
 
-    .line 601
     .end local v1    # "lService":Landroid/sec/enterprise/IEDMProxy;
     :goto_0
     return v2
 
-    .line 598
     :catch_0
     move-exception v0
 
-    .line 599
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManager"
 
@@ -522,7 +452,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 601
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     const/4 v2, 0x0
@@ -534,33 +463,27 @@
     .locals 4
 
     .prologue
-    .line 327
     :try_start_0
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager$EDMProxyServiceHelper;->getService()Landroid/sec/enterprise/IEDMProxy;
 
     move-result-object v1
 
-    .line 328
     .local v1, "lService":Landroid/sec/enterprise/IEDMProxy;
     if-eqz v1, :cond_0
 
-    .line 329
     invoke-interface {v1}, Landroid/sec/enterprise/IEDMProxy;->getToastShowPackageNameState()Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v2
 
-    .line 334
     .end local v1    # "lService":Landroid/sec/enterprise/IEDMProxy;
     :goto_0
     return v2
 
-    .line 331
     :catch_0
     move-exception v0
 
-    .line 332
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManager"
 
@@ -568,7 +491,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 334
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     const/4 v2, 0x0
@@ -580,33 +502,27 @@
     .locals 4
 
     .prologue
-    .line 412
     :try_start_0
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager$EDMProxyServiceHelper;->getService()Landroid/sec/enterprise/IEDMProxy;
 
     move-result-object v1
 
-    .line 413
     .local v1, "lService":Landroid/sec/enterprise/IEDMProxy;
     if-eqz v1, :cond_0
 
-    .line 414
     invoke-interface {v1}, Landroid/sec/enterprise/IEDMProxy;->getVolumeButtonRotationState()Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v2
 
-    .line 419
     .end local v1    # "lService":Landroid/sec/enterprise/IEDMProxy;
     :goto_0
     return v2
 
-    .line 416
     :catch_0
     move-exception v0
 
-    .line 417
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManager"
 
@@ -614,7 +530,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 419
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     const/4 v2, 0x0
@@ -626,33 +541,27 @@
     .locals 4
 
     .prologue
-    .line 271
     :try_start_0
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager$EDMProxyServiceHelper;->getService()Landroid/sec/enterprise/IEDMProxy;
 
     move-result-object v1
 
-    .line 272
     .local v1, "lService":Landroid/sec/enterprise/IEDMProxy;
     if-eqz v1, :cond_0
 
-    .line 273
     invoke-interface {v1}, Landroid/sec/enterprise/IEDMProxy;->getVolumeControlStream()I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v2
 
-    .line 278
     .end local v1    # "lService":Landroid/sec/enterprise/IEDMProxy;
     :goto_0
     return v2
 
-    .line 275
     :catch_0
     move-exception v0
 
-    .line 276
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManager"
 
@@ -660,7 +569,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 278
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     const/4 v2, 0x0
@@ -672,33 +580,27 @@
     .locals 4
 
     .prologue
-    .line 385
     :try_start_0
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager$EDMProxyServiceHelper;->getService()Landroid/sec/enterprise/IEDMProxy;
 
     move-result-object v1
 
-    .line 386
     .local v1, "lService":Landroid/sec/enterprise/IEDMProxy;
     if-eqz v1, :cond_0
 
-    .line 387
     invoke-interface {v1}, Landroid/sec/enterprise/IEDMProxy;->getVolumePanelEnabledState()Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v2
 
-    .line 392
     .end local v1    # "lService":Landroid/sec/enterprise/IEDMProxy;
     :goto_0
     return v2
 
-    .line 389
     :catch_0
     move-exception v0
 
-    .line 390
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManager"
 
@@ -706,7 +608,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 392
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     const/4 v2, 0x1
@@ -718,33 +619,27 @@
     .locals 4
 
     .prologue
-    .line 489
     :try_start_0
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager$EDMProxyServiceHelper;->getService()Landroid/sec/enterprise/IEDMProxy;
 
     move-result-object v1
 
-    .line 490
     .local v1, "lService":Landroid/sec/enterprise/IEDMProxy;
     if-eqz v1, :cond_0
 
-    .line 491
     invoke-interface {v1}, Landroid/sec/enterprise/IEDMProxy;->getWifiAutoSwitchDelay()I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v2
 
-    .line 496
     .end local v1    # "lService":Landroid/sec/enterprise/IEDMProxy;
     :goto_0
     return v2
 
-    .line 493
     :catch_0
     move-exception v0
 
-    .line 494
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManager"
 
@@ -752,7 +647,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 496
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     const/16 v2, 0x14
@@ -764,33 +658,27 @@
     .locals 4
 
     .prologue
-    .line 439
     :try_start_0
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager$EDMProxyServiceHelper;->getService()Landroid/sec/enterprise/IEDMProxy;
 
     move-result-object v1
 
-    .line 440
     .local v1, "lService":Landroid/sec/enterprise/IEDMProxy;
     if-eqz v1, :cond_0
 
-    .line 441
     invoke-interface {v1}, Landroid/sec/enterprise/IEDMProxy;->getWifiAutoSwitchState()Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v2
 
-    .line 446
     .end local v1    # "lService":Landroid/sec/enterprise/IEDMProxy;
     :goto_0
     return v2
 
-    .line 443
     :catch_0
     move-exception v0
 
-    .line 444
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManager"
 
@@ -798,7 +686,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 446
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     const/4 v2, 0x0
@@ -810,33 +697,27 @@
     .locals 4
 
     .prologue
-    .line 464
     :try_start_0
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager$EDMProxyServiceHelper;->getService()Landroid/sec/enterprise/IEDMProxy;
 
     move-result-object v1
 
-    .line 465
     .local v1, "lService":Landroid/sec/enterprise/IEDMProxy;
     if-eqz v1, :cond_0
 
-    .line 466
     invoke-interface {v1}, Landroid/sec/enterprise/IEDMProxy;->getWifiAutoSwitchThreshold()I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v2
 
-    .line 471
     .end local v1    # "lService":Landroid/sec/enterprise/IEDMProxy;
     :goto_0
     return v2
 
-    .line 468
     :catch_0
     move-exception v0
 
-    .line 469
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManager"
 
@@ -844,7 +725,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 471
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     const/16 v2, -0xc8
@@ -856,33 +736,27 @@
     .locals 4
 
     .prologue
-    .line 637
     :try_start_0
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager$EDMProxyServiceHelper;->getService()Landroid/sec/enterprise/IEDMProxy;
 
     move-result-object v1
 
-    .line 638
     .local v1, "lService":Landroid/sec/enterprise/IEDMProxy;
     if-eqz v1, :cond_0
 
-    .line 639
     invoke-interface {v1}, Landroid/sec/enterprise/IEDMProxy;->getWifiState()Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v2
 
-    .line 644
     .end local v1    # "lService":Landroid/sec/enterprise/IEDMProxy;
     :goto_0
     return v2
 
-    .line 641
     :catch_0
     move-exception v0
 
-    .line 642
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManager"
 
@@ -890,7 +764,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 644
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     const/4 v2, 0x0

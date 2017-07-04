@@ -86,7 +86,6 @@
 
     const/4 v3, 0x0
 
-    .line 72
     new-instance v0, Lcom/samsung/android/hermes/HermesServiceManager$AnalyzerResultType;
 
     const-string v1, "Unknown"
@@ -187,7 +186,6 @@
 
     sput-object v0, Lcom/samsung/android/hermes/HermesServiceManager$AnalyzerResultType;->Hotkeyword:Lcom/samsung/android/hermes/HermesServiceManager$AnalyzerResultType;
 
-    .line 74
     new-instance v0, Lcom/samsung/android/hermes/HermesServiceManager$AnalyzerResultType;
 
     const-string v1, "NonLikableTypeDivider"
@@ -288,7 +286,6 @@
 
     sput-object v0, Lcom/samsung/android/hermes/HermesServiceManager$AnalyzerResultType;->Original:Lcom/samsung/android/hermes/HermesServiceManager$AnalyzerResultType;
 
-    .line 75
     new-instance v0, Lcom/samsung/android/hermes/HermesServiceManager$AnalyzerResultType;
 
     const-string v1, "Date_Time"
@@ -299,7 +296,6 @@
 
     sput-object v0, Lcom/samsung/android/hermes/HermesServiceManager$AnalyzerResultType;->Date_Time:Lcom/samsung/android/hermes/HermesServiceManager$AnalyzerResultType;
 
-    .line 71
     const/16 v0, 0x16
 
     new-array v0, v0, [Lcom/samsung/android/hermes/HermesServiceManager$AnalyzerResultType;
@@ -440,7 +436,6 @@
     .end annotation
 
     .prologue
-    .line 71
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -451,7 +446,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 71
     const-class v0, Lcom/samsung/android/hermes/HermesServiceManager$AnalyzerResultType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -467,7 +461,6 @@
     .locals 1
 
     .prologue
-    .line 71
     sget-object v0, Lcom/samsung/android/hermes/HermesServiceManager$AnalyzerResultType;->$VALUES:[Lcom/samsung/android/hermes/HermesServiceManager$AnalyzerResultType;
 
     invoke-virtual {v0}, [Lcom/samsung/android/hermes/HermesServiceManager$AnalyzerResultType;->clone()Ljava/lang/Object;

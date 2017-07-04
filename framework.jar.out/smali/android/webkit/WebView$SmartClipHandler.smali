@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 2667
     iput-object p1, p0, Landroid/webkit/WebView$SmartClipHandler;->this$0:Landroid/webkit/WebView;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,14 +37,12 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 2670
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 2671
     .local v0, "bundle":Landroid/os/Bundle;
-    const-string/jumbo v4, "rect"
+    const-string v4, "rect"
 
     invoke-virtual {v0, v4}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
@@ -53,7 +50,6 @@
 
     check-cast v1, Landroid/graphics/Rect;
 
-    .line 2672
     .local v1, "clipRect":Landroid/graphics/Rect;
     const-string v4, "html"
 
@@ -61,20 +57,17 @@
 
     move-result-object v3
 
-    .line 2673
     .local v3, "innerHTML":Ljava/lang/String;
-    const-string/jumbo v4, "text"
+    const-string v4, "text"
 
     invoke-virtual {v0, v4}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 2674
     .local v2, "contentText":Ljava/lang/String;
     iget-object v4, p0, Landroid/webkit/WebView$SmartClipHandler;->this$0:Landroid/webkit/WebView;
 
     invoke-virtual {v4, v2, v3, v1}, Landroid/webkit/WebView;->sendResultOfSmartClip(Ljava/lang/String;Ljava/lang/String;Landroid/graphics/Rect;)V
 
-    .line 2675
     return-void
 .end method

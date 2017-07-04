@@ -26,12 +26,10 @@
     .locals 0
 
     .prologue
-    .line 532
     iput-object p1, p0, Landroid/media/audiofx/SoundAlive$BaseParameterListener;->this$0:Landroid/media/audiofx/SoundAlive;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 534
     return-void
 .end method
 
@@ -41,7 +39,6 @@
     .param p2, "x1"    # Landroid/media/audiofx/SoundAlive$1;
 
     .prologue
-    .line 531
     invoke-direct {p0, p1}, Landroid/media/audiofx/SoundAlive$BaseParameterListener;-><init>(Landroid/media/audiofx/SoundAlive;)V
 
     return-void
@@ -63,10 +60,8 @@
 
     const/4 v6, 0x0
 
-    .line 536
     const/4 v0, 0x0
 
-    .line 538
     .local v0, "l":Landroid/media/audiofx/SoundAlive$OnParameterChangeListener;
     iget-object v1, p0, Landroid/media/audiofx/SoundAlive$BaseParameterListener;->this$0:Landroid/media/audiofx/SoundAlive;
 
@@ -77,7 +72,6 @@
 
     monitor-enter v2
 
-    .line 539
     :try_start_0
     iget-object v1, p0, Landroid/media/audiofx/SoundAlive$BaseParameterListener;->this$0:Landroid/media/audiofx/SoundAlive;
 
@@ -88,7 +82,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 540
     iget-object v1, p0, Landroid/media/audiofx/SoundAlive$BaseParameterListener;->this$0:Landroid/media/audiofx/SoundAlive;
 
     # getter for: Landroid/media/audiofx/SoundAlive;->mParamListener:Landroid/media/audiofx/SoundAlive$OnParameterChangeListener;
@@ -96,50 +89,40 @@
 
     move-result-object v0
 
-    .line 542
     :cond_0
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 543
     if-eqz v0, :cond_3
 
-    .line 544
     const/4 v3, -0x1
 
-    .line 545
     .local v3, "p1":I
     const/4 v4, -0x1
 
-    .line 546
     .local v4, "p2":I
     const/4 v5, -0x1
 
-    .line 548
     .local v5, "v":I
     array-length v1, p3
 
     if-lt v1, v7, :cond_1
 
-    .line 549
     invoke-static {p3, v6}, Landroid/media/audiofx/AudioEffect;->byteArrayToInt([BI)I
 
     move-result v3
 
-    .line 550
     array-length v1, p3
 
     const/16 v2, 0x8
 
     if-lt v1, v2, :cond_1
 
-    .line 551
     invoke-static {p3, v7}, Landroid/media/audiofx/AudioEffect;->byteArrayToInt([BI)I
 
     move-result v4
 
-    .line 554
     :cond_1
     array-length v1, p4
 
@@ -147,33 +130,28 @@
 
     if-ne v1, v2, :cond_4
 
-    .line 555
     invoke-static {p4, v6}, Landroid/media/audiofx/AudioEffect;->byteArrayToShort([BI)S
 
     move-result v5
 
-    .line 560
     :cond_2
     :goto_0
     if-eq v3, v8, :cond_3
 
     if-eq v5, v8, :cond_3
 
-    .line 561
     iget-object v1, p0, Landroid/media/audiofx/SoundAlive$BaseParameterListener;->this$0:Landroid/media/audiofx/SoundAlive;
 
     move v2, p2
 
     invoke-interface/range {v0 .. v5}, Landroid/media/audiofx/SoundAlive$OnParameterChangeListener;->onParameterChange(Landroid/media/audiofx/SoundAlive;IIII)V
 
-    .line 564
     .end local v3    # "p1":I
     .end local v4    # "p2":I
     .end local v5    # "v":I
     :cond_3
     return-void
 
-    .line 542
     :catchall_0
     move-exception v1
 
@@ -184,7 +162,6 @@
 
     throw v1
 
-    .line 556
     .restart local v3    # "p1":I
     .restart local v4    # "p2":I
     .restart local v5    # "v":I
@@ -193,7 +170,6 @@
 
     if-ne v1, v7, :cond_2
 
-    .line 557
     invoke-static {p4, v6}, Landroid/media/audiofx/AudioEffect;->byteArrayToInt([BI)I
 
     move-result v5

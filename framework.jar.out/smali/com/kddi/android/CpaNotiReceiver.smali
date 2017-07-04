@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 26
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -22,6 +21,5 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 29
     return-void
 .end method

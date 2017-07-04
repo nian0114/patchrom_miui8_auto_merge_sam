@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 653
     iput-object p1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$10;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 656
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 657
     .local v0, "action":Ljava/lang/String;
     const-string v1, "android.intent.action.USER_SWITCHED"
 
@@ -54,14 +51,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 658
     const-string v1, "toolbox"
 
     const-string v2, "android.intent.action.USER_SWITCHED"
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 659
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$10;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     iget-object v2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$10;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -74,23 +69,19 @@
     # setter for: Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mValidUser:Z
     invoke-static {v1, v2}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->access$2702(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;Z)Z
 
-    .line 660
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$10;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     # invokes: Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->loadCenterPosition()V
     invoke-static {v1}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->access$2900(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;)V
 
-    .line 661
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$10;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     invoke-virtual {v1}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->reset()V
 
-    .line 667
     :cond_0
     :goto_0
     return-void
 
-    .line 663
     :cond_1
     const-string v1, "android.intent.action.SCREEN_OFF"
 
@@ -100,7 +91,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 664
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$10;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     iget-object v2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$10;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -112,7 +102,6 @@
 
     invoke-virtual {v1, v2}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->post(Ljava/lang/Runnable;)Z
 
-    .line 665
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$10;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     iget-object v2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$10;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;

@@ -27,16 +27,12 @@
     .param p3, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 1176
     iput-object p1, p0, Landroid/media/audiofx/AudioEffect$NativeEventHandler;->this$0:Landroid/media/audiofx/AudioEffect;
 
-    .line 1177
     invoke-direct {p0, p3}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 1178
     iput-object p2, p0, Landroid/media/audiofx/AudioEffect$NativeEventHandler;->mAudioEffect:Landroid/media/audiofx/AudioEffect;
 
-    .line 1179
     return-void
 .end method
 
@@ -47,30 +43,26 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 1183
     iget-object v11, p0, Landroid/media/audiofx/AudioEffect$NativeEventHandler;->mAudioEffect:Landroid/media/audiofx/AudioEffect;
 
     if-nez v11, :cond_1
 
-    .line 1247
     :cond_0
     :goto_0
     return-void
 
-    .line 1186
     :cond_1
     iget v11, p1, Landroid/os/Message;->what:I
 
     packed-switch v11, :pswitch_data_0
 
-    .line 1244
     const-string v11, "AudioEffect-JAVA"
 
     new-instance v12, Ljava/lang/StringBuilder;
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v13, "handleMessage() Unknown event type: "
+    const-string v13, "handleMessage() Unknown event type: "
 
     invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -90,11 +82,9 @@
 
     goto :goto_0
 
-    .line 1188
     :pswitch_0
     const/4 v1, 0x0
 
-    .line 1189
     .local v1, "enableStatusChangeListener":Landroid/media/audiofx/AudioEffect$OnEnableStatusChangeListener;
     iget-object v11, p0, Landroid/media/audiofx/AudioEffect$NativeEventHandler;->this$0:Landroid/media/audiofx/AudioEffect;
 
@@ -102,7 +92,6 @@
 
     monitor-enter v12
 
-    .line 1190
     :try_start_0
     iget-object v11, p0, Landroid/media/audiofx/AudioEffect$NativeEventHandler;->mAudioEffect:Landroid/media/audiofx/AudioEffect;
 
@@ -111,15 +100,12 @@
 
     move-result-object v1
 
-    .line 1191
     monitor-exit v12
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1192
     if-eqz v1, :cond_0
 
-    .line 1193
     iget-object v12, p0, Landroid/media/audiofx/AudioEffect$NativeEventHandler;->mAudioEffect:Landroid/media/audiofx/AudioEffect;
 
     iget v11, p1, Landroid/os/Message;->arg1:I
@@ -133,7 +119,6 @@
 
     goto :goto_0
 
-    .line 1191
     :catchall_0
     move-exception v11
 
@@ -144,18 +129,15 @@
 
     throw v11
 
-    .line 1193
     :cond_2
     const/4 v11, 0x0
 
     goto :goto_1
 
-    .line 1198
     .end local v1    # "enableStatusChangeListener":Landroid/media/audiofx/AudioEffect$OnEnableStatusChangeListener;
     :pswitch_1
     const/4 v0, 0x0
 
-    .line 1199
     .local v0, "controlStatusChangeListener":Landroid/media/audiofx/AudioEffect$OnControlStatusChangeListener;
     iget-object v11, p0, Landroid/media/audiofx/AudioEffect$NativeEventHandler;->this$0:Landroid/media/audiofx/AudioEffect;
 
@@ -163,7 +145,6 @@
 
     monitor-enter v12
 
-    .line 1200
     :try_start_2
     iget-object v11, p0, Landroid/media/audiofx/AudioEffect$NativeEventHandler;->mAudioEffect:Landroid/media/audiofx/AudioEffect;
 
@@ -172,15 +153,12 @@
 
     move-result-object v0
 
-    .line 1201
     monitor-exit v12
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 1202
     if-eqz v0, :cond_0
 
-    .line 1203
     iget-object v12, p0, Landroid/media/audiofx/AudioEffect$NativeEventHandler;->mAudioEffect:Landroid/media/audiofx/AudioEffect;
 
     iget v11, p1, Landroid/os/Message;->arg1:I
@@ -194,7 +172,6 @@
 
     goto :goto_0
 
-    .line 1201
     :catchall_1
     move-exception v11
 
@@ -205,18 +182,15 @@
 
     throw v11
 
-    .line 1203
     :cond_3
     const/4 v11, 0x0
 
     goto :goto_2
 
-    .line 1208
     .end local v0    # "controlStatusChangeListener":Landroid/media/audiofx/AudioEffect$OnControlStatusChangeListener;
     :pswitch_2
     const/4 v5, 0x0
 
-    .line 1209
     .local v5, "parameterChangeListener":Landroid/media/audiofx/AudioEffect$OnParameterChangeListener;
     iget-object v11, p0, Landroid/media/audiofx/AudioEffect$NativeEventHandler;->this$0:Landroid/media/audiofx/AudioEffect;
 
@@ -224,7 +198,6 @@
 
     monitor-enter v12
 
-    .line 1210
     :try_start_4
     iget-object v11, p0, Landroid/media/audiofx/AudioEffect$NativeEventHandler;->mAudioEffect:Landroid/media/audiofx/AudioEffect;
 
@@ -233,18 +206,14 @@
 
     move-result-object v5
 
-    .line 1211
     monitor-exit v12
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
-    .line 1212
     if-eqz v5, :cond_0
 
-    .line 1215
     iget v8, p1, Landroid/os/Message;->arg1:I
 
-    .line 1216
     .local v8, "vOffset":I
     iget-object v11, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -254,7 +223,6 @@
 
     check-cast v3, [B
 
-    .line 1219
     .local v3, "p":[B
     const/4 v11, 0x0
 
@@ -262,7 +230,6 @@
 
     move-result v7
 
-    .line 1220
     .local v7, "status":I
     const/4 v11, 0x4
 
@@ -270,7 +237,6 @@
 
     move-result v6
 
-    .line 1221
     .local v6, "psize":I
     const/16 v11, 0x8
 
@@ -278,15 +244,12 @@
 
     move-result v10
 
-    .line 1222
     .local v10, "vsize":I
     new-array v4, v6, [B
 
-    .line 1223
     .local v4, "param":[B
     new-array v9, v10, [B
 
-    .line 1224
     .local v9, "value":[B
     const/16 v11, 0xc
 
@@ -294,19 +257,16 @@
 
     invoke-static {v3, v11, v4, v12, v6}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 1225
     const/4 v11, 0x0
 
     invoke-static {v3, v8, v9, v11, v10}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 1227
     iget-object v11, p0, Landroid/media/audiofx/AudioEffect$NativeEventHandler;->mAudioEffect:Landroid/media/audiofx/AudioEffect;
 
     invoke-interface {v5, v11, v7, v4, v9}, Landroid/media/audiofx/AudioEffect$OnParameterChangeListener;->onParameterChange(Landroid/media/audiofx/AudioEffect;I[B[B)V
 
     goto/16 :goto_0
 
-    .line 1211
     .end local v3    # "p":[B
     .end local v4    # "param":[B
     .end local v6    # "psize":I
@@ -324,12 +284,10 @@
 
     throw v11
 
-    .line 1233
     .end local v5    # "parameterChangeListener":Landroid/media/audiofx/AudioEffect$OnParameterChangeListener;
     :pswitch_3
     const/4 v2, 0x0
 
-    .line 1234
     .local v2, "errorListener":Landroid/media/audiofx/AudioEffect$OnErrorListener;
     iget-object v11, p0, Landroid/media/audiofx/AudioEffect$NativeEventHandler;->this$0:Landroid/media/audiofx/AudioEffect;
 
@@ -337,7 +295,6 @@
 
     monitor-enter v12
 
-    .line 1235
     :try_start_6
     iget-object v11, p0, Landroid/media/audiofx/AudioEffect$NativeEventHandler;->mAudioEffect:Landroid/media/audiofx/AudioEffect;
 
@@ -346,27 +303,22 @@
 
     move-result-object v2
 
-    .line 1236
     monitor-exit v12
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_3
 
-    .line 1237
     if-eqz v2, :cond_0
 
-    .line 1238
     const-string v11, "AudioEffect-JAVA"
 
     const-string v12, "NATIVE_EVENT_ERROR"
 
     invoke-static {v11, v12}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1239
     invoke-interface {v2}, Landroid/media/audiofx/AudioEffect$OnErrorListener;->onError()V
 
     goto/16 :goto_0
 
-    .line 1236
     :catchall_3
     move-exception v11
 
@@ -377,7 +329,6 @@
 
     throw v11
 
-    .line 1186
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1

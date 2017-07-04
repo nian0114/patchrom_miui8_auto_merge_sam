@@ -29,13 +29,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 164
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 165
     iput-object p1, p0, Lcom/samsung/android/service/DeviceRootKeyService/DeviceRootKeyServiceManager;->mContext:Landroid/content/Context;
 
-    .line 166
     const-string v0, "DeviceRootKeyService"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -48,7 +45,6 @@
 
     iput-object v0, p0, Lcom/samsung/android/service/DeviceRootKeyService/DeviceRootKeyServiceManager;->mService:Lcom/samsung/android/service/DeviceRootKeyService/IDeviceRootKeyService;
 
-    .line 167
     const-string v0, "DeviceRootKeyServiceManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -77,7 +73,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 168
     return-void
 .end method
 
@@ -92,14 +87,12 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 258
     const-string v3, "DeviceRootKeyServiceManager"
 
     const-string v4, "createServiceKeySession() is called."
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 262
     :try_start_0
     iget-object v3, p0, Lcom/samsung/android/service/DeviceRootKeyService/DeviceRootKeyServiceManager;->mService:Lcom/samsung/android/service/DeviceRootKeyService/IDeviceRootKeyService;
 
@@ -110,15 +103,12 @@
 
     move-result-object v2
 
-    .line 273
     :goto_0
     return-object v2
 
-    .line 264
     :catch_0
     move-exception v1
 
-    .line 266
     .local v1, "npe":Ljava/lang/NullPointerException;
     const-string v3, "DeviceRootKeyServiceManager"
 
@@ -126,17 +116,14 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 267
     invoke-virtual {v1}, Ljava/lang/NullPointerException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 270
     .end local v1    # "npe":Ljava/lang/NullPointerException;
     :catch_1
     move-exception v0
 
-    .line 272
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -150,14 +137,12 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 226
     const-string v3, "DeviceRootKeyServiceManager"
 
     const-string v4, "getDeviceRootKeyUID() is called."
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 230
     :try_start_0
     iget-object v3, p0, Lcom/samsung/android/service/DeviceRootKeyService/DeviceRootKeyServiceManager;->mService:Lcom/samsung/android/service/DeviceRootKeyService/IDeviceRootKeyService;
 
@@ -168,15 +153,12 @@
 
     move-result-object v2
 
-    .line 241
     :goto_0
     return-object v2
 
-    .line 232
     :catch_0
     move-exception v1
 
-    .line 234
     .local v1, "npe":Ljava/lang/NullPointerException;
     const-string v3, "DeviceRootKeyServiceManager"
 
@@ -184,17 +166,14 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 235
     invoke-virtual {v1}, Ljava/lang/NullPointerException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 238
     .end local v1    # "npe":Ljava/lang/NullPointerException;
     :catch_1
     move-exception v0
 
-    .line 240
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -205,15 +184,12 @@
     .locals 1
 
     .prologue
-    .line 178
     iget-object v0, p0, Lcom/samsung/android/service/DeviceRootKeyService/DeviceRootKeyServiceManager;->mService:Lcom/samsung/android/service/DeviceRootKeyService/IDeviceRootKeyService;
 
     if-eqz v0, :cond_0
 
-    .line 179
     const/4 v0, 0x1
 
-    .line 181
     :goto_0
     return v0
 
@@ -230,14 +206,12 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 196
     const-string v3, "DeviceRootKeyServiceManager"
 
     const-string v4, "isExistDeviceRootKey() is called."
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 200
     :try_start_0
     iget-object v3, p0, Lcom/samsung/android/service/DeviceRootKeyService/DeviceRootKeyServiceManager;->mService:Lcom/samsung/android/service/DeviceRootKeyService/IDeviceRootKeyService;
 
@@ -248,15 +222,12 @@
 
     move-result v2
 
-    .line 211
     :goto_0
     return v2
 
-    .line 202
     :catch_0
     move-exception v1
 
-    .line 204
     .local v1, "npe":Ljava/lang/NullPointerException;
     const-string v3, "DeviceRootKeyServiceManager"
 
@@ -264,17 +235,14 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 205
     invoke-virtual {v1}, Ljava/lang/NullPointerException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 208
     .end local v1    # "npe":Ljava/lang/NullPointerException;
     :catch_1
     move-exception v0
 
-    .line 210
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -287,14 +255,12 @@
     .prologue
     const/16 v2, -0x2710
 
-    .line 289
     const-string v3, "DeviceRootKeyServiceManager"
 
-    const-string/jumbo v4, "releaseServiceKeySession() is called."
+    const-string v4, "releaseServiceKeySession() is called."
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 293
     :try_start_0
     iget-object v3, p0, Lcom/samsung/android/service/DeviceRootKeyService/DeviceRootKeyServiceManager;->mService:Lcom/samsung/android/service/DeviceRootKeyService/IDeviceRootKeyService;
 
@@ -305,15 +271,12 @@
 
     move-result v2
 
-    .line 304
     :goto_0
     return v2
 
-    .line 295
     :catch_0
     move-exception v1
 
-    .line 297
     .local v1, "npe":Ljava/lang/NullPointerException;
     const-string v3, "DeviceRootKeyServiceManager"
 
@@ -321,17 +284,14 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 298
     invoke-virtual {v1}, Ljava/lang/NullPointerException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 301
     .end local v1    # "npe":Ljava/lang/NullPointerException;
     :catch_1
     move-exception v0
 
-    .line 303
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -345,14 +305,12 @@
     .prologue
     const/16 v2, -0x2710
 
-    .line 319
     const-string v3, "DeviceRootKeyServiceManager"
 
-    const-string/jumbo v4, "setDeviceRootKey() is called."
+    const-string v4, "setDeviceRootKey() is called."
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 323
     :try_start_0
     iget-object v3, p0, Lcom/samsung/android/service/DeviceRootKeyService/DeviceRootKeyServiceManager;->mService:Lcom/samsung/android/service/DeviceRootKeyService/IDeviceRootKeyService;
 
@@ -363,15 +321,12 @@
 
     move-result v2
 
-    .line 334
     :goto_0
     return v2
 
-    .line 325
     :catch_0
     move-exception v1
 
-    .line 327
     .local v1, "npe":Ljava/lang/NullPointerException;
     const-string v3, "DeviceRootKeyServiceManager"
 
@@ -379,17 +334,14 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 328
     invoke-virtual {v1}, Ljava/lang/NullPointerException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 331
     .end local v1    # "npe":Ljava/lang/NullPointerException;
     :catch_1
     move-exception v0
 
-    .line 333
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 

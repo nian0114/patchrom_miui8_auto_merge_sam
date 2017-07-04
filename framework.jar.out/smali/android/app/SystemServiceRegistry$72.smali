@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 903
     invoke-direct {p0}, Landroid/app/SystemServiceRegistry$CachedServiceFetcher;-><init>()V
 
     return-void
@@ -41,20 +40,17 @@
     .param p1, "ctx"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 906
-    const-string/jumbo v2, "usagestats"
+    const-string v2, "usagestats"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 907
     .local v0, "iBinder":Landroid/os/IBinder;
     invoke-static {v0}, Landroid/app/usage/IUsageStatsManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/app/usage/IUsageStatsManager;
 
     move-result-object v1
 
-    .line 908
     .local v1, "service":Landroid/app/usage/IUsageStatsManager;
     new-instance v2, Landroid/app/usage/UsageStatsManager;
 
@@ -72,7 +68,6 @@
     .param p1, "x0"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 903
     invoke-virtual {p0, p1}, Landroid/app/SystemServiceRegistry$72;->createService(Landroid/app/ContextImpl;)Landroid/app/usage/UsageStatsManager;
 
     move-result-object v0

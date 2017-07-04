@@ -27,7 +27,6 @@
     .locals 1
 
     .prologue
-    .line 220
     new-instance v0, Landroid/hardware/scontext/SContextActivityBatch$1;
 
     invoke-direct {v0}, Landroid/hardware/scontext/SContextActivityBatch$1;-><init>()V
@@ -41,22 +40,18 @@
     .locals 1
 
     .prologue
-    .line 99
     invoke-direct {p0}, Landroid/hardware/scontext/SContextEventContext;-><init>()V
 
-    .line 100
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/hardware/scontext/SContextActivityBatch;->mContext:Landroid/os/Bundle;
 
-    .line 101
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/hardware/scontext/SContextActivityBatch;->mMode:I
 
-    .line 102
     return-void
 .end method
 
@@ -65,13 +60,10 @@
     .param p1, "src"    # Landroid/os/Parcel;
 
     .prologue
-    .line 107
     invoke-direct {p0}, Landroid/hardware/scontext/SContextEventContext;-><init>()V
 
-    .line 108
     invoke-direct {p0, p1}, Landroid/hardware/scontext/SContextActivityBatch;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 109
     return-void
 .end method
 
@@ -80,21 +72,18 @@
     .param p1, "src"    # Landroid/os/Parcel;
 
     .prologue
-    .line 211
     invoke-virtual {p1}, Landroid/os/Parcel;->readBundle()Landroid/os/Bundle;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/hardware/scontext/SContextActivityBatch;->mContext:Landroid/os/Bundle;
 
-    .line 212
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/hardware/scontext/SContextActivityBatch;->mMode:I
 
-    .line 213
     return-void
 .end method
 
@@ -104,7 +93,6 @@
     .locals 1
 
     .prologue
-    .line 89
     invoke-super {p0}, Landroid/hardware/scontext/SContextEventContext;->describeContents()I
 
     move-result v0
@@ -116,7 +104,6 @@
     .locals 2
 
     .prologue
-    .line 166
     iget-object v0, p0, Landroid/hardware/scontext/SContextActivityBatch;->mContext:Landroid/os/Bundle;
 
     const-string v1, "Accuracy"
@@ -132,7 +119,6 @@
     .locals 1
 
     .prologue
-    .line 175
     iget v0, p0, Landroid/hardware/scontext/SContextActivityBatch;->mMode:I
 
     return v0
@@ -142,7 +128,6 @@
     .locals 2
 
     .prologue
-    .line 154
     iget-object v0, p0, Landroid/hardware/scontext/SContextActivityBatch;->mContext:Landroid/os/Bundle;
 
     const-string v1, "MostActivity"
@@ -158,7 +143,6 @@
     .locals 2
 
     .prologue
-    .line 145
     iget-object v0, p0, Landroid/hardware/scontext/SContextActivityBatch;->mContext:Landroid/os/Bundle;
 
     const-string v1, "ActivityType"
@@ -174,16 +158,13 @@
     .locals 8
 
     .prologue
-    .line 117
     const/4 v3, 0x0
 
-    .line 118
     .local v3, "timestamp":[J
     iget v4, p0, Landroid/hardware/scontext/SContextActivityBatch;->mMode:I
 
     if-nez v4, :cond_1
 
-    .line 119
     iget-object v4, p0, Landroid/hardware/scontext/SContextActivityBatch;->mContext:Landroid/os/Bundle;
 
     const-string v5, "Count"
@@ -192,7 +173,6 @@
 
     move-result v2
 
-    .line 120
     .local v2, "size":I
     iget-object v4, p0, Landroid/hardware/scontext/SContextActivityBatch;->mContext:Landroid/os/Bundle;
 
@@ -202,21 +182,17 @@
 
     move-result-object v0
 
-    .line 121
     .local v0, "duration":[J
     new-array v3, v2, [J
 
-    .line 122
     const/4 v1, 0x0
 
     .local v1, "i":I
     :goto_0
     if-ge v1, v2, :cond_2
 
-    .line 123
     if-nez v1, :cond_0
 
-    .line 124
     iget-object v4, p0, Landroid/hardware/scontext/SContextActivityBatch;->mContext:Landroid/os/Bundle;
 
     const-string v5, "TimeStamp"
@@ -227,13 +203,11 @@
 
     aput-wide v4, v3, v1
 
-    .line 122
     :goto_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 126
     :cond_0
     add-int/lit8 v4, v1, -0x1
 
@@ -249,7 +223,6 @@
 
     goto :goto_1
 
-    .line 129
     .end local v0    # "duration":[J
     .end local v1    # "i":I
     .end local v2    # "size":I
@@ -260,7 +233,6 @@
 
     if-ne v4, v5, :cond_2
 
-    .line 130
     iget-object v4, p0, Landroid/hardware/scontext/SContextActivityBatch;->mContext:Landroid/os/Bundle;
 
     const-string v5, "TimeStampArray"
@@ -269,7 +241,6 @@
 
     move-result-object v3
 
-    .line 132
     :cond_2
     return-object v3
 .end method
@@ -279,10 +250,8 @@
     .param p1, "context"    # Landroid/os/Bundle;
 
     .prologue
-    .line 185
     iput-object p1, p0, Landroid/hardware/scontext/SContextActivityBatch;->mContext:Landroid/os/Bundle;
 
-    .line 186
     iget-object v0, p0, Landroid/hardware/scontext/SContextActivityBatch;->mContext:Landroid/os/Bundle;
 
     const-string v1, "Mode"
@@ -293,7 +262,6 @@
 
     iput v0, p0, Landroid/hardware/scontext/SContextActivityBatch;->mMode:I
 
-    .line 187
     return-void
 .end method
 
@@ -303,16 +271,13 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 200
     iget-object v0, p0, Landroid/hardware/scontext/SContextActivityBatch;->mContext:Landroid/os/Bundle;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
 
-    .line 201
     iget v0, p0, Landroid/hardware/scontext/SContextActivityBatch;->mMode:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 202
     return-void
 .end method

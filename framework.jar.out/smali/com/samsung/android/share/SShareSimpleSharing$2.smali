@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 148
     iput-object p1, p0, Lcom/samsung/android/share/SShareSimpleSharing$2;->this$0:Lcom/samsung/android/share/SShareSimpleSharing;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,7 +40,6 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 150
     const-string v4, "com.samsung.android.coreapps.rshare.responserecentgroupcontacts"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -54,13 +52,11 @@
 
     if-eqz v4, :cond_3
 
-    .line 153
     iget-object v4, p0, Lcom/samsung/android/share/SShareSimpleSharing$2;->this$0:Lcom/samsung/android/share/SShareSimpleSharing;
 
     # setter for: Lcom/samsung/android/share/SShareSimpleSharing;->mRecentContactsListCount:I
     invoke-static {v4, v8}, Lcom/samsung/android/share/SShareSimpleSharing;->access$102(Lcom/samsung/android/share/SShareSimpleSharing;I)I
 
-    .line 154
     iget-object v4, p0, Lcom/samsung/android/share/SShareSimpleSharing$2;->this$0:Lcom/samsung/android/share/SShareSimpleSharing;
 
     # getter for: Lcom/samsung/android/share/SShareSimpleSharing;->mRecentContactsListThumb:Ljava/util/List;
@@ -83,7 +79,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 155
     iget-object v4, p0, Lcom/samsung/android/share/SShareSimpleSharing$2;->this$0:Lcom/samsung/android/share/SShareSimpleSharing;
 
     # getter for: Lcom/samsung/android/share/SShareSimpleSharing;->mRecentContactsListThumb:Ljava/util/List;
@@ -93,7 +88,6 @@
 
     invoke-interface {v4}, Ljava/util/List;->clear()V
 
-    .line 157
     :cond_0
     iget-object v4, p0, Lcom/samsung/android/share/SShareSimpleSharing$2;->this$0:Lcom/samsung/android/share/SShareSimpleSharing;
 
@@ -117,7 +111,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 158
     iget-object v4, p0, Lcom/samsung/android/share/SShareSimpleSharing$2;->this$0:Lcom/samsung/android/share/SShareSimpleSharing;
 
     # getter for: Lcom/samsung/android/share/SShareSimpleSharing;->mRecentContactsListName:Ljava/util/ArrayList;
@@ -127,7 +120,6 @@
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->clear()V
 
-    .line 160
     :cond_1
     const/4 v0, 0x0
 
@@ -140,12 +132,11 @@
 
     if-ge v0, v4, :cond_2
 
-    .line 161
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "recentgroupdataids"
+    const-string v5, "recentgroupdataids"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -165,7 +156,6 @@
 
     if-nez v4, :cond_4
 
-    .line 194
     :cond_2
     iget-object v4, p0, Lcom/samsung/android/share/SShareSimpleSharing$2;->this$0:Lcom/samsung/android/share/SShareSimpleSharing;
 
@@ -175,19 +165,17 @@
 
     invoke-virtual {v4, v5}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 196
     .end local v0    # "i":I
     :cond_3
     return-void
 
-    .line 165
     .restart local v0    # "i":I
     :cond_4
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "recentgroupnamelist"
+    const-string v5, "recentgroupnamelist"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -205,14 +193,11 @@
 
     move-result-object v2
 
-    .line 166
     .local v2, "tmpGroupName":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     if-eqz v2, :cond_8
 
-    .line 167
     const-string v3, ""
 
-    .line 169
     .local v3, "tmpName":Ljava/lang/String;
     const/4 v1, 0x0
 
@@ -224,7 +209,6 @@
 
     if-ge v1, v4, :cond_6
 
-    .line 170
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -247,7 +231,6 @@
 
     move-result-object v3
 
-    .line 172
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v4
@@ -256,7 +239,6 @@
 
     if-eq v1, v4, :cond_5
 
-    .line 173
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -275,13 +257,11 @@
 
     move-result-object v3
 
-    .line 169
     :cond_5
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 176
     :cond_6
     iget-object v4, p0, Lcom/samsung/android/share/SShareSimpleSharing$2;->this$0:Lcom/samsung/android/share/SShareSimpleSharing;
 
@@ -292,7 +272,6 @@
 
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 181
     .end local v1    # "j":I
     .end local v3    # "tmpName":Ljava/lang/String;
     :goto_2
@@ -307,7 +286,7 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "recentgroupdataids"
+    const-string v6, "recentgroupdataids"
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -327,7 +306,6 @@
 
     aput-object v5, v4, v0
 
-    .line 182
     iget-object v4, p0, Lcom/samsung/android/share/SShareSimpleSharing$2;->this$0:Lcom/samsung/android/share/SShareSimpleSharing;
 
     # getter for: Lcom/samsung/android/share/SShareSimpleSharing;->mRecentContactsId:[J
@@ -339,7 +317,7 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "recentgroupcontactids"
+    const-string v6, "recentgroupcontactids"
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -361,7 +339,6 @@
 
     aput-wide v6, v4, v0
 
-    .line 183
     iget-object v4, p0, Lcom/samsung/android/share/SShareSimpleSharing$2;->this$0:Lcom/samsung/android/share/SShareSimpleSharing;
 
     # getter for: Lcom/samsung/android/share/SShareSimpleSharing;->mRecentContactsItemContactsCountInGroup:[I
@@ -373,7 +350,7 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "recentgroupcount"
+    const-string v6, "recentgroupcount"
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -393,7 +370,6 @@
 
     aput v5, v4, v0
 
-    .line 185
     iget-object v4, p0, Lcom/samsung/android/share/SShareSimpleSharing$2;->this$0:Lcom/samsung/android/share/SShareSimpleSharing;
 
     # getter for: Lcom/samsung/android/share/SShareSimpleSharing;->mRecentContactsListThumb:Ljava/util/List;
@@ -405,7 +381,7 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "recentgroupthumbnail"
+    const-string v6, "recentgroupthumbnail"
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -425,7 +401,6 @@
 
     invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 186
     iget-object v4, p0, Lcom/samsung/android/share/SShareSimpleSharing$2;->this$0:Lcom/samsung/android/share/SShareSimpleSharing;
 
     # getter for: Lcom/samsung/android/share/SShareSimpleSharing;->mRecentContactsListThumb:Ljava/util/List;
@@ -439,19 +414,16 @@
 
     if-eqz v4, :cond_7
 
-    .line 191
     :cond_7
     iget-object v4, p0, Lcom/samsung/android/share/SShareSimpleSharing$2;->this$0:Lcom/samsung/android/share/SShareSimpleSharing;
 
     # operator++ for: Lcom/samsung/android/share/SShareSimpleSharing;->mRecentContactsListCount:I
     invoke-static {v4}, Lcom/samsung/android/share/SShareSimpleSharing;->access$108(Lcom/samsung/android/share/SShareSimpleSharing;)I
 
-    .line 160
     add-int/lit8 v0, v0, 0x1
 
     goto/16 :goto_0
 
-    .line 178
     :cond_8
     iget-object v4, p0, Lcom/samsung/android/share/SShareSimpleSharing$2;->this$0:Lcom/samsung/android/share/SShareSimpleSharing;
 
@@ -460,7 +432,6 @@
     # setter for: Lcom/samsung/android/share/SShareSimpleSharing;->mGroupNameOldConcept:Z
     invoke-static {v4, v5}, Lcom/samsung/android/share/SShareSimpleSharing;->access$502(Lcom/samsung/android/share/SShareSimpleSharing;Z)Z
 
-    .line 179
     iget-object v4, p0, Lcom/samsung/android/share/SShareSimpleSharing$2;->this$0:Lcom/samsung/android/share/SShareSimpleSharing;
 
     # getter for: Lcom/samsung/android/share/SShareSimpleSharing;->mRecentContactsListName:Ljava/util/ArrayList;
@@ -472,7 +443,7 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "recentgroupnames"
+    const-string v6, "recentgroupnames"
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1549
     iput-object p1, p0, Landroid/widget/Toolbar$6;->this$0:Landroid/widget/Toolbar;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 1559
     iget-object v0, p0, Landroid/widget/Toolbar$6;->this$0:Landroid/widget/Toolbar;
 
     # getter for: Landroid/widget/Toolbar;->mTriangleToLeft:Landroid/view/View;
@@ -48,7 +46,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1560
     iget-object v0, p0, Landroid/widget/Toolbar$6;->this$0:Landroid/widget/Toolbar;
 
     # getter for: Landroid/widget/Toolbar;->mTriangleToLeft:Landroid/view/View;
@@ -60,7 +57,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setAlpha(F)V
 
-    .line 1562
     :cond_0
     return-void
 .end method
@@ -70,7 +66,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 1552
     iget-object v0, p0, Landroid/widget/Toolbar$6;->this$0:Landroid/widget/Toolbar;
 
     # getter for: Landroid/widget/Toolbar;->mTriangleToLeft:Landroid/view/View;
@@ -80,7 +75,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1553
     iget-object v0, p0, Landroid/widget/Toolbar$6;->this$0:Landroid/widget/Toolbar;
 
     # getter for: Landroid/widget/Toolbar;->mTriangleToLeft:Landroid/view/View;
@@ -92,7 +86,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setAlpha(F)V
 
-    .line 1555
     :cond_0
     return-void
 .end method

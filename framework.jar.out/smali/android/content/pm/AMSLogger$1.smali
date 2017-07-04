@@ -27,7 +27,6 @@
     .param p3, "x1"    # I
 
     .prologue
-    .line 235
     iput-object p1, p0, Landroid/content/pm/AMSLogger$1;->this$0:Landroid/content/pm/AMSLogger;
 
     iput-object p4, p0, Landroid/content/pm/AMSLogger$1;->val$traceFile:Ljava/lang/String;
@@ -45,7 +44,6 @@
     .param p2, "path"    # Ljava/lang/String;
 
     .prologue
-    .line 237
     monitor-enter p0
 
     :try_start_0
@@ -76,17 +74,14 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 238
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 239
     monitor-exit p0
 
     return-void
 
-    .line 237
     :catchall_0
     move-exception v0
 

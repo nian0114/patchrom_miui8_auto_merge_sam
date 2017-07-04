@@ -14,7 +14,6 @@
     .locals 0
 
     .prologue
-    .line 31
     invoke-direct {p0}, Landroid/view/IWindow$Stub;-><init>()V
 
     return-void
@@ -27,7 +26,6 @@
     .param p1, "reason"    # Ljava/lang/String;
 
     .prologue
-    .line 79
     return-void
 .end method
 
@@ -36,7 +34,6 @@
     .param p1, "visible"    # Z
 
     .prologue
-    .line 63
     return-void
 .end method
 
@@ -45,7 +42,6 @@
     .param p1, "displayId"    # I
 
     .prologue
-    .line 58
     return-void
 .end method
 
@@ -54,7 +50,6 @@
     .param p1, "isOpen"    # Z
 
     .prologue
-    .line 136
     return-void
 .end method
 
@@ -63,7 +58,6 @@
     .param p1, "event"    # Landroid/view/DragEvent;
 
     .prologue
-    .line 93
     return-void
 .end method
 
@@ -71,7 +65,6 @@
     .locals 0
 
     .prologue
-    .line 67
     return-void
 .end method
 
@@ -80,7 +73,6 @@
     .param p1, "state"    # I
 
     .prologue
-    .line 154
     return-void
 .end method
 
@@ -89,7 +81,6 @@
     .param p1, "request"    # Lcom/samsung/android/smartclip/SmartClipRemoteRequestInfo;
 
     .prologue
-    .line 127
     return-void
 .end method
 
@@ -101,10 +92,8 @@
     .param p4, "localChanges"    # I
 
     .prologue
-    .line 98
     iput p1, p0, Lcom/android/internal/view/BaseIWindow;->mSeq:I
 
-    .line 99
     return-void
 .end method
 
@@ -118,10 +107,8 @@
     .param p6, "sync"    # Z
 
     .prologue
-    .line 104
     if-eqz p6, :cond_0
 
-    .line 106
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/view/BaseIWindow;->mSession:Landroid/view/IWindowSession;
 
@@ -135,12 +122,10 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 110
     :cond_0
     :goto_0
     return-void
 
-    .line 107
     :catch_0
     move-exception v0
 
@@ -156,10 +141,8 @@
     .param p5, "sync"    # Z
 
     .prologue
-    .line 83
     if-eqz p5, :cond_0
 
-    .line 85
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/view/BaseIWindow;->mSession:Landroid/view/IWindowSession;
 
@@ -171,12 +154,10 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 89
     :cond_0
     :goto_0
     return-void
 
-    .line 86
     :catch_0
     move-exception v0
 
@@ -187,7 +168,6 @@
     .locals 0
 
     .prologue
-    .line 122
     return-void
 .end method
 
@@ -198,7 +178,6 @@
     .param p3, "out"    # Landroid/os/ParcelFileDescriptor;
 
     .prologue
-    .line 75
     return-void
 .end method
 
@@ -208,7 +187,6 @@
     .param p2, "newY"    # I
 
     .prologue
-    .line 53
     return-void
 .end method
 
@@ -217,7 +195,6 @@
     .param p1, "remainingFrameCount"    # I
 
     .prologue
-    .line 114
     return-void
 .end method
 
@@ -225,7 +202,6 @@
     .locals 0
 
     .prologue
-    .line 118
     return-void
 .end method
 
@@ -233,7 +209,6 @@
     .locals 0
 
     .prologue
-    .line 145
     return-void
 .end method
 
@@ -250,10 +225,8 @@
     .param p9, "cocktailBarFrame"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 43
     if-eqz p7, :cond_0
 
-    .line 45
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/view/BaseIWindow;->mSession:Landroid/view/IWindowSession;
 
@@ -261,12 +234,10 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 49
     :cond_0
     :goto_0
     return-void
 
-    .line 46
     :catch_0
     move-exception v0
 
@@ -278,10 +249,8 @@
     .param p1, "session"    # Landroid/view/IWindowSession;
 
     .prologue
-    .line 36
     iput-object p1, p0, Lcom/android/internal/view/BaseIWindow;->mSession:Landroid/view/IWindowSession;
 
-    .line 37
     return-void
 .end method
 
@@ -292,6 +261,5 @@
     .param p3, "focusedAppChanged"    # Z
 
     .prologue
-    .line 71
     return-void
 .end method

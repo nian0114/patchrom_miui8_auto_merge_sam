@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 361
     iput-object p1, p0, Lcom/samsung/cpp/CPPositioningService$1;->this$0:Lcom/samsung/cpp/CPPositioningService;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,29 +37,24 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 366
     iget v4, p1, Landroid/os/Message;->what:I
 
     packed-switch v4, :pswitch_data_0
 
-    .line 420
     const-string v4, "CPPositioningService"
 
     const-string v5, "Invalid Message"
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 423
     :goto_0
     return-void
 
-    .line 368
     :pswitch_0
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Lcom/samsung/cpp/ICPPLocationListener;
 
-    .line 369
     .local v1, "tempCppLocListener":Lcom/samsung/cpp/ICPPLocationListener;
     const-string v4, "CPPositioningService"
 
@@ -68,7 +62,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 370
     const-string v4, "CPPositioningService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -119,7 +112,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 374
     iget-object v4, p0, Lcom/samsung/cpp/CPPositioningService$1;->this$0:Lcom/samsung/cpp/CPPositioningService;
 
     # getter for: Lcom/samsung/cpp/CPPositioningService;->mAndroidLocProvider:Lcom/samsung/cpp/CPPAndroidLocProvider;
@@ -137,14 +129,12 @@
 
     goto :goto_0
 
-    .line 379
     .end local v1    # "tempCppLocListener":Lcom/samsung/cpp/ICPPLocationListener;
     :pswitch_1
     iget-object v3, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v3, Lcom/samsung/cpp/ICPPLocationListener;
 
-    .line 380
     .local v3, "tempStopCppLocListener":Lcom/samsung/cpp/ICPPLocationListener;
     const-string v4, "CPPositioningService"
 
@@ -152,7 +142,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 381
     const-string v4, "CPPositioningService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -175,7 +164,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 383
     iget-object v4, p0, Lcom/samsung/cpp/CPPositioningService$1;->this$0:Lcom/samsung/cpp/CPPositioningService;
 
     # getter for: Lcom/samsung/cpp/CPPositioningService;->mAndroidLocProvider:Lcom/samsung/cpp/CPPAndroidLocProvider;
@@ -187,14 +175,12 @@
 
     goto :goto_0
 
-    .line 387
     .end local v3    # "tempStopCppLocListener":Lcom/samsung/cpp/ICPPLocationListener;
     :pswitch_2
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/samsung/cpp/CPPositioningService$RequestLocationInput;
 
-    .line 388
     .local v0, "input":Lcom/samsung/cpp/CPPositioningService$RequestLocationInput;
     const-string v4, "CPPositioningService"
 
@@ -202,7 +188,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 389
     iget-object v4, p0, Lcom/samsung/cpp/CPPositioningService$1;->this$0:Lcom/samsung/cpp/CPPositioningService;
 
     # getter for: Lcom/samsung/cpp/CPPositioningService;->mCpLocationProvider:Lcom/samsung/cpp/CPPProvider;
@@ -214,14 +199,12 @@
 
     goto/16 :goto_0
 
-    .line 393
     .end local v0    # "input":Lcom/samsung/cpp/CPPositioningService$RequestLocationInput;
     :pswitch_3
     iget-object v2, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v2, Lcom/samsung/cpp/ICPPLocationListener;
 
-    .line 394
     .local v2, "tempStopCpLocListener":Lcom/samsung/cpp/ICPPLocationListener;
     const-string v4, "CPPositioningService"
 
@@ -229,7 +212,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 395
     const-string v4, "CPPositioningService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -252,7 +234,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 397
     iget-object v4, p0, Lcom/samsung/cpp/CPPositioningService$1;->this$0:Lcom/samsung/cpp/CPPositioningService;
 
     # getter for: Lcom/samsung/cpp/CPPositioningService;->mCpLocationProvider:Lcom/samsung/cpp/CPPProvider;
@@ -268,7 +249,6 @@
 
     goto/16 :goto_0
 
-    .line 401
     .end local v2    # "tempStopCpLocListener":Lcom/samsung/cpp/ICPPLocationListener;
     :pswitch_4
     const-string v4, "CPPositioningService"
@@ -277,7 +257,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 402
     iget-object v4, p0, Lcom/samsung/cpp/CPPositioningService$1;->this$0:Lcom/samsung/cpp/CPPositioningService;
 
     # getter for: Lcom/samsung/cpp/CPPositioningService;->mCpLocationProvider:Lcom/samsung/cpp/CPPProvider;
@@ -293,7 +272,6 @@
 
     goto/16 :goto_0
 
-    .line 407
     :pswitch_5
     const-string v4, "CPPositioningService"
 
@@ -301,7 +279,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 408
     iget-object v4, p0, Lcom/samsung/cpp/CPPositioningService$1;->this$0:Lcom/samsung/cpp/CPPositioningService;
 
     # getter for: Lcom/samsung/cpp/CPPositioningService;->mCpLocationProvider:Lcom/samsung/cpp/CPPProvider;
@@ -315,7 +292,6 @@
 
     goto/16 :goto_0
 
-    .line 412
     :pswitch_6
     const-string v4, "CPPositioningService"
 
@@ -325,7 +301,6 @@
 
     goto/16 :goto_0
 
-    .line 416
     :pswitch_7
     const-string v4, "CPPositioningService"
 
@@ -335,7 +310,6 @@
 
     goto/16 :goto_0
 
-    .line 366
     nop
 
     :pswitch_data_0

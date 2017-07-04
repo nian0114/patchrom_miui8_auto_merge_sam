@@ -45,7 +45,6 @@
     .locals 0
 
     .prologue
-    .line 153
     iput-object p1, p0, Landroid/sec/enterprise/BluetoothPolicy$BluetoothProfile;->this$0:Landroid/sec/enterprise/BluetoothPolicy;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

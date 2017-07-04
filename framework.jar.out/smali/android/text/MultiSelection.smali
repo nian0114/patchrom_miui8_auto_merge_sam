@@ -36,30 +36,24 @@
 
     const/4 v1, 0x0
 
-    .line 326
     new-instance v0, Landroid/text/MultiSelection$START;
 
     invoke-direct {v0, v2}, Landroid/text/MultiSelection$START;-><init>(Landroid/text/MultiSelection$1;)V
 
     sput-object v0, Landroid/text/MultiSelection;->CURRENT_SELECTION_START:Ljava/lang/Object;
 
-    .line 327
     new-instance v0, Landroid/text/MultiSelection$END;
 
     invoke-direct {v0, v2}, Landroid/text/MultiSelection$END;-><init>(Landroid/text/MultiSelection$1;)V
 
     sput-object v0, Landroid/text/MultiSelection;->CURRENT_SELECTION_END:Ljava/lang/Object;
 
-    .line 329
     sput-boolean v1, Landroid/text/MultiSelection;->mIsSelecting:Z
 
-    .line 330
     sput-boolean v1, Landroid/text/MultiSelection;->mIsTextViewHovered:Z
 
-    .line 331
     sput-boolean v1, Landroid/text/MultiSelection;->mNeedToScroll:Z
 
-    .line 332
     const/4 v0, -0x1
 
     sput v0, Landroid/text/MultiSelection;->mHoveredIcon:I
@@ -71,7 +65,6 @@
     .locals 0
 
     .prologue
-    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -86,35 +79,29 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 170
     if-ltz p1, :cond_0
 
     if-gez p2, :cond_1
 
-    .line 179
     :cond_0
     :goto_0
     return-void
 
-    .line 172
     :cond_1
     new-instance v1, Landroid/text/MultiSelection$START;
 
     invoke-direct {v1, v2}, Landroid/text/MultiSelection$START;-><init>(Landroid/text/MultiSelection$1;)V
 
-    .line 173
     .local v1, "penStart":Landroid/text/MultiSelection$START;
     new-instance v0, Landroid/text/MultiSelection$END;
 
     invoke-direct {v0, v2}, Landroid/text/MultiSelection$END;-><init>(Landroid/text/MultiSelection$1;)V
 
-    .line 175
     .local v0, "penEnd":Landroid/text/MultiSelection$END;
     const/16 v2, 0x222
 
     invoke-interface {p0, v1, p1, p1, v2}, Landroid/text/Spannable;->setSpan(Ljava/lang/Object;III)V
 
-    .line 177
     const/16 v2, 0x22
 
     invoke-interface {p0, v0, p2, p2, v2}, Landroid/text/Spannable;->setSpan(Ljava/lang/Object;III)V
@@ -129,7 +116,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 208
     invoke-interface {p0}, Landroid/text/Spannable;->length()I
 
     move-result v3
@@ -142,7 +128,6 @@
 
     check-cast v2, [Landroid/text/MultiSelection$START;
 
-    .line 209
     .local v2, "spansStarts":[Landroid/text/MultiSelection$START;
     invoke-interface {p0}, Landroid/text/Spannable;->length()I
 
@@ -156,7 +141,6 @@
 
     check-cast v1, [Landroid/text/MultiSelection$END;
 
-    .line 211
     .local v1, "spansEnds":[Landroid/text/MultiSelection$END;
     const/4 v0, 0x0
 
@@ -166,22 +150,18 @@
 
     if-ge v0, v3, :cond_0
 
-    .line 212
     aget-object v3, v2, v0
 
     invoke-interface {p0, v3}, Landroid/text/Spannable;->removeSpan(Ljava/lang/Object;)V
 
-    .line 213
     aget-object v3, v1, v0
 
     invoke-interface {p0, v3}, Landroid/text/Spannable;->removeSpan(Ljava/lang/Object;)V
 
-    .line 211
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 215
     :cond_0
     return-void
 .end method
@@ -190,7 +170,6 @@
     .locals 1
 
     .prologue
-    .line 300
     sget v0, Landroid/text/MultiSelection;->mHoveredIcon:I
 
     return v0
@@ -200,7 +179,6 @@
     .locals 1
 
     .prologue
-    .line 267
     sget-boolean v0, Landroid/text/MultiSelection;->mIsSelecting:Z
 
     return v0
@@ -211,7 +189,6 @@
     .param p0, "text"    # Landroid/text/Spannable;
 
     .prologue
-    .line 250
     const/4 v1, 0x0
 
     invoke-interface {p0}, Landroid/text/Spannable;->length()I
@@ -226,7 +203,6 @@
 
     check-cast v0, [Landroid/text/MultiSelection$START;
 
-    .line 251
     .local v0, "spans":[Landroid/text/MultiSelection$START;
     array-length v1, v0
 
@@ -238,7 +214,6 @@
     .param p0, "text"    # Landroid/text/Spannable;
 
     .prologue
-    .line 236
     const/4 v3, 0x0
 
     invoke-interface {p0}, Landroid/text/Spannable;->length()I
@@ -253,13 +228,11 @@
 
     check-cast v2, [Landroid/text/MultiSelection$END;
 
-    .line 237
     .local v2, "spans":[Landroid/text/MultiSelection$END;
     array-length v3, v2
 
     new-array v0, v3, [I
 
-    .line 239
     .local v0, "ends":[I
     const/4 v1, 0x0
 
@@ -269,7 +242,6 @@
 
     if-ge v1, v3, :cond_0
 
-    .line 240
     aget-object v3, v2, v1
 
     invoke-interface {p0, v3}, Landroid/text/Spannable;->getSpanStart(Ljava/lang/Object;)I
@@ -278,12 +250,10 @@
 
     aput v3, v0, v1
 
-    .line 239
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 242
     :cond_0
     return-object v0
 .end method
@@ -293,7 +263,6 @@
     .param p0, "text"    # Landroid/text/Spannable;
 
     .prologue
-    .line 222
     const/4 v3, 0x0
 
     invoke-interface {p0}, Landroid/text/Spannable;->length()I
@@ -308,13 +277,11 @@
 
     check-cast v1, [Landroid/text/MultiSelection$START;
 
-    .line 223
     .local v1, "spans":[Landroid/text/MultiSelection$START;
     array-length v3, v1
 
     new-array v2, v3, [I
 
-    .line 225
     .local v2, "starts":[I
     const/4 v0, 0x0
 
@@ -324,7 +291,6 @@
 
     if-ge v0, v3, :cond_0
 
-    .line 226
     aget-object v3, v1, v0
 
     invoke-interface {p0, v3}, Landroid/text/Spannable;->getSpanStart(Ljava/lang/Object;)I
@@ -333,12 +299,10 @@
 
     aput v3, v2, v0
 
-    .line 225
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 228
     :cond_0
     return-object v2
 .end method
@@ -348,12 +312,10 @@
     .param p0, "text"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 54
     instance-of v0, p0, Landroid/text/Spanned;
 
     if-eqz v0, :cond_0
 
-    .line 55
     check-cast p0, Landroid/text/Spanned;
 
     .end local p0    # "text":Ljava/lang/CharSequence;
@@ -363,7 +325,6 @@
 
     move-result v0
 
-    .line 57
     :goto_0
     return v0
 
@@ -379,12 +340,10 @@
     .param p0, "text"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 42
     instance-of v0, p0, Landroid/text/Spanned;
 
     if-eqz v0, :cond_0
 
-    .line 43
     check-cast p0, Landroid/text/Spanned;
 
     .end local p0    # "text":Ljava/lang/CharSequence;
@@ -394,7 +353,6 @@
 
     move-result v0
 
-    .line 45
     :goto_0
     return v0
 
@@ -409,7 +367,6 @@
     .locals 1
 
     .prologue
-    .line 316
     sget-boolean v0, Landroid/text/MultiSelection;->mNeedToScroll:Z
 
     return v0
@@ -419,7 +376,6 @@
     .locals 1
 
     .prologue
-    .line 292
     sget-boolean v0, Landroid/text/MultiSelection;->mIsTextViewHovered:Z
 
     return v0
@@ -430,17 +386,14 @@
     .param p0, "text"    # Landroid/text/Spannable;
 
     .prologue
-    .line 152
     sget-object v0, Landroid/text/MultiSelection;->CURRENT_SELECTION_START:Ljava/lang/Object;
 
     invoke-interface {p0, v0}, Landroid/text/Spannable;->removeSpan(Ljava/lang/Object;)V
 
-    .line 153
     sget-object v0, Landroid/text/MultiSelection;->CURRENT_SELECTION_END:Ljava/lang/Object;
 
     invoke-interface {p0, v0}, Landroid/text/Spannable;->removeSpan(Ljava/lang/Object;)V
 
-    .line 154
     return-void
 .end method
 
@@ -455,7 +408,6 @@
 
     const/4 v4, 0x0
 
-    .line 186
     const-class v3, Landroid/text/MultiSelection$START;
 
     invoke-interface {p0, p1, p1, v3}, Landroid/text/Spannable;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
@@ -464,7 +416,6 @@
 
     check-cast v2, [Landroid/text/MultiSelection$START;
 
-    .line 187
     .local v2, "spansStarts":[Landroid/text/MultiSelection$START;
     const-class v3, Landroid/text/MultiSelection$END;
 
@@ -474,43 +425,35 @@
 
     check-cast v1, [Landroid/text/MultiSelection$END;
 
-    .line 188
     .local v1, "spansEnds":[Landroid/text/MultiSelection$END;
     const/4 v0, 0x1
 
-    .line 190
     .local v0, "ret":Z
     array-length v3, v2
 
     if-ne v3, v5, :cond_0
 
-    .line 191
     aget-object v3, v2, v4
 
     invoke-interface {p0, v3}, Landroid/text/Spannable;->removeSpan(Ljava/lang/Object;)V
 
-    .line 195
     :goto_0
     array-length v3, v1
 
     if-ne v3, v5, :cond_1
 
-    .line 196
     aget-object v3, v1, v4
 
     invoke-interface {p0, v3}, Landroid/text/Spannable;->removeSpan(Ljava/lang/Object;)V
 
-    .line 200
     :goto_1
     return v0
 
-    .line 193
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 198
     :cond_1
     const/4 v0, 0x0
 
@@ -522,7 +465,6 @@
     .param p0, "text"    # Landroid/text/Spannable;
 
     .prologue
-    .line 161
     const/4 v0, 0x0
 
     invoke-interface {p0}, Landroid/text/Spannable;->length()I
@@ -531,7 +473,6 @@
 
     invoke-static {p0, v0, v1}, Landroid/text/MultiSelection;->setSelection(Landroid/text/Spannable;II)V
 
-    .line 162
     return-void
 .end method
 
@@ -540,10 +481,8 @@
     .param p0, "bSelecting"    # Z
 
     .prologue
-    .line 259
     sput-boolean p0, Landroid/text/MultiSelection;->mIsSelecting:Z
 
-    .line 260
     return-void
 .end method
 
@@ -552,10 +491,8 @@
     .param p0, "bflag"    # Z
 
     .prologue
-    .line 308
     sput-boolean p0, Landroid/text/MultiSelection;->mNeedToScroll:Z
 
-    .line 309
     return-void
 .end method
 
@@ -566,7 +503,6 @@
     .param p2, "stop"    # I
 
     .prologue
-    .line 75
     move/from16 v0, p1
 
     move/from16 v1, p2
@@ -577,30 +513,25 @@
 
     if-gez p2, :cond_1
 
-    .line 145
     :cond_0
     :goto_0
     return-void
 
-    .line 77
     :cond_1
     invoke-static/range {p0 .. p0}, Landroid/text/MultiSelection;->getSelectionStart(Ljava/lang/CharSequence;)I
 
     move-result v17
 
-    .line 78
     .local v17, "ostart":I
     invoke-static/range {p0 .. p0}, Landroid/text/MultiSelection;->getSelectionEnd(Ljava/lang/CharSequence;)I
 
     move-result v16
 
-    .line 83
     .local v16, "oend":I
     invoke-interface/range {p0 .. p0}, Landroid/text/Spannable;->length()I
 
     move-result v6
 
-    .line 84
     .local v6, "len":I
     if-lez p1, :cond_2
 
@@ -615,11 +546,9 @@
 
     if-ge v0, v6, :cond_b
 
-    .line 85
     :cond_3
     const/4 v15, 0x0
 
-    .line 87
     .local v15, "needCheckPosition":Z
     if-lez p1, :cond_4
 
@@ -627,12 +556,10 @@
 
     if-ge v0, v6, :cond_4
 
-    .line 88
     invoke-interface/range {p0 .. p1}, Landroid/text/Spannable;->charAt(I)C
 
     move-result v18
 
-    .line 89
     .local v18, "startChar":C
     invoke-static/range {v18 .. v18}, Ljava/lang/Character;->isLowSurrogate(C)Z
 
@@ -640,10 +567,8 @@
 
     if-eqz v5, :cond_6
 
-    .line 90
     add-int/lit8 p1, p1, 0x1
 
-    .line 97
     .end local v18    # "startChar":C
     :cond_4
     :goto_1
@@ -653,7 +578,6 @@
 
     if-ge v0, v6, :cond_5
 
-    .line 98
     move-object/from16 v0, p0
 
     move/from16 v1, p2
@@ -662,7 +586,6 @@
 
     move-result v21
 
-    .line 99
     .local v21, "stopChar":C
     invoke-static/range {v21 .. v21}, Ljava/lang/Character;->isLowSurrogate(C)Z
 
@@ -670,23 +593,18 @@
 
     if-eqz v5, :cond_8
 
-    .line 100
     add-int/lit8 p2, p2, 0x1
 
-    .line 109
     .end local v21    # "stopChar":C
     :cond_5
     :goto_2
     if-eqz v15, :cond_b
 
-    .line 110
     new-array v10, v6, [F
 
-    .line 111
     .local v10, "widths":[F
     new-array v4, v6, [C
 
-    .line 112
     .local v4, "chars":[C
     new-instance v3, Landroid/graphics/Paint;
 
@@ -694,7 +612,6 @@
 
     invoke-direct {v3, v5}, Landroid/graphics/Paint;-><init>(I)V
 
-    .line 114
     .local v3, "p":Landroid/graphics/Paint;
     const/4 v5, 0x0
 
@@ -704,7 +621,6 @@
 
     invoke-static {v0, v5, v6, v4, v7}, Landroid/text/TextUtils;->getChars(Ljava/lang/CharSequence;II[CI)V
 
-    .line 115
     const/4 v5, 0x0
 
     const/4 v7, 0x0
@@ -717,7 +633,6 @@
 
     invoke-virtual/range {v3 .. v11}, Landroid/graphics/Paint;->getTextRunAdvances([CIIIIZ[FI)F
 
-    .line 117
     :goto_3
     move/from16 v0, p1
 
@@ -737,12 +652,10 @@
 
     if-eq v5, v7, :cond_a
 
-    .line 118
     add-int/lit8 p1, p1, 0x1
 
     goto :goto_3
 
-    .line 92
     .end local v3    # "p":Landroid/graphics/Paint;
     .end local v4    # "chars":[C
     .end local v10    # "widths":[F
@@ -778,13 +691,11 @@
 
     if-eqz v5, :cond_4
 
-    .line 94
     :cond_7
     const/4 v15, 0x1
 
     goto :goto_1
 
-    .line 102
     .end local v18    # "startChar":C
     .restart local v21    # "stopChar":C
     :cond_8
@@ -820,13 +731,11 @@
 
     if-eqz v5, :cond_5
 
-    .line 105
     :cond_9
     const/4 v15, 0x1
 
     goto :goto_2
 
-    .line 120
     .end local v21    # "stopChar":C
     .restart local v3    # "p":Landroid/graphics/Paint;
     .restart local v4    # "chars":[C
@@ -851,12 +760,10 @@
 
     if-eq v5, v7, :cond_b
 
-    .line 121
     add-int/lit8 p2, p2, 0x1
 
     goto :goto_4
 
-    .line 126
     .end local v3    # "p":Landroid/graphics/Paint;
     .end local v4    # "chars":[C
     .end local v10    # "widths":[F
@@ -874,7 +781,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 127
     :cond_c
     const/4 v5, 0x0
 
@@ -892,7 +798,6 @@
 
     check-cast v19, [Landroid/text/MultiSelection$START;
 
-    .line 128
     .local v19, "startSpans":[Landroid/text/MultiSelection$START;
     const/4 v5, 0x0
 
@@ -910,7 +815,6 @@
 
     check-cast v12, [Landroid/text/MultiSelection$END;
 
-    .line 130
     .local v12, "endSpans":[Landroid/text/MultiSelection$END;
     const/4 v14, 0x0
 
@@ -922,7 +826,6 @@
 
     if-ge v14, v5, :cond_10
 
-    .line 131
     aget-object v5, v19, v14
 
     move-object/from16 v0, p0
@@ -931,7 +834,6 @@
 
     move-result v20
 
-    .line 132
     .local v20, "starts":I
     aget-object v5, v12, v14
 
@@ -941,7 +843,6 @@
 
     move-result v13
 
-    .line 134
     .local v13, "ends":I
     move/from16 v0, v20
 
@@ -964,7 +865,6 @@
 
     if-gt v0, v13, :cond_f
 
-    .line 135
     :cond_e
     aget-object v5, v19, v14
 
@@ -972,20 +872,17 @@
 
     invoke-interface {v0, v5}, Landroid/text/Spannable;->removeSpan(Ljava/lang/Object;)V
 
-    .line 136
     aget-object v5, v12, v14
 
     move-object/from16 v0, p0
 
     invoke-interface {v0, v5}, Landroid/text/Spannable;->removeSpan(Ljava/lang/Object;)V
 
-    .line 130
     :cond_f
     add-int/lit8 v14, v14, 0x1
 
     goto :goto_5
 
-    .line 140
     .end local v13    # "ends":I
     .end local v20    # "starts":I
     :cond_10
@@ -1001,7 +898,6 @@
 
     invoke-interface {v0, v5, v1, v2, v7}, Landroid/text/Spannable;->setSpan(Ljava/lang/Object;III)V
 
-    .line 142
     sget-object v5, Landroid/text/MultiSelection;->CURRENT_SELECTION_END:Ljava/lang/Object;
 
     const/16 v7, 0x22
@@ -1022,12 +918,10 @@
     .param p0, "bSelecting"    # Z
 
     .prologue
-    .line 275
     const/4 v0, -0x1
 
     invoke-static {p0, v0}, Landroid/text/MultiSelection;->setTextViewHovered(ZI)V
 
-    .line 276
     return-void
 .end method
 
@@ -1037,12 +931,9 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 283
     sput-boolean p0, Landroid/text/MultiSelection;->mIsTextViewHovered:Z
 
-    .line 284
     sput p1, Landroid/text/MultiSelection;->mHoveredIcon:I
 
-    .line 285
     return-void
 .end method

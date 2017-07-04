@@ -40,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 27
     new-instance v0, Landroid/spay/PaymentTZServiceCommnInfo$1;
 
     invoke-direct {v0}, Landroid/spay/PaymentTZServiceCommnInfo$1;-><init>()V
@@ -54,17 +53,14 @@
     .locals 1
 
     .prologue
-    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 16
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroid/spay/PaymentTZServiceCommnInfo;->mTAs:Ljava/util/Map;
 
-    .line 24
     return-void
 .end method
 
@@ -73,20 +69,16 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 16
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroid/spay/PaymentTZServiceCommnInfo;->mTAs:Ljava/util/Map;
 
-    .line 40
     invoke-virtual {p0, p1}, Landroid/spay/PaymentTZServiceCommnInfo;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 41
     return-void
 .end method
 
@@ -96,7 +88,6 @@
     .param p2, "x1"    # Landroid/spay/PaymentTZServiceCommnInfo$1;
 
     .prologue
-    .line 14
     invoke-direct {p0, p1}, Landroid/spay/PaymentTZServiceCommnInfo;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -108,7 +99,6 @@
     .locals 1
 
     .prologue
-    .line 66
     const/4 v0, 0x0
 
     return v0
@@ -119,19 +109,16 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 56
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
     iput v2, p0, Landroid/spay/PaymentTZServiceCommnInfo;->mServiceVersion:I
 
-    .line 57
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 58
     .local v0, "count":I
     const/4 v1, 0x0
 
@@ -139,7 +126,6 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 59
     iget-object v2, p0, Landroid/spay/PaymentTZServiceCommnInfo;->mTAs:Ljava/util/Map;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -156,12 +142,10 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 58
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 61
     :cond_0
     return-void
 .end method
@@ -172,12 +156,10 @@
     .param p2, "flag"    # I
 
     .prologue
-    .line 46
     iget v2, p0, Landroid/spay/PaymentTZServiceCommnInfo;->mServiceVersion:I
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 47
     iget-object v2, p0, Landroid/spay/PaymentTZServiceCommnInfo;->mTAs:Ljava/util/Map;
 
     invoke-interface {v2}, Ljava/util/Map;->size()I
@@ -186,7 +168,6 @@
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 48
     iget-object v2, p0, Landroid/spay/PaymentTZServiceCommnInfo;->mTAs:Ljava/util/Map;
 
     invoke-interface {v2}, Ljava/util/Map;->keySet()Ljava/util/Set;
@@ -211,7 +192,6 @@
 
     check-cast v1, Ljava/lang/Integer;
 
-    .line 49
     .local v1, "s":Ljava/lang/Integer;
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
@@ -219,7 +199,6 @@
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 50
     iget-object v2, p0, Landroid/spay/PaymentTZServiceCommnInfo;->mTAs:Ljava/util/Map;
 
     invoke-interface {v2, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -232,7 +211,6 @@
 
     goto :goto_0
 
-    .line 52
     .end local v1    # "s":Ljava/lang/Integer;
     :cond_0
     return-void

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 533
     iput-object p1, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ExerciseRunner$1;->this$0:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ExerciseRunner;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -43,7 +42,6 @@
 
     const/4 v1, 0x1
 
-    .line 538
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v3
@@ -56,7 +54,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 540
     iget-object v3, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ExerciseRunner$1;->this$0:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ExerciseRunner;
 
     # invokes: Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ExerciseRunner;->isGpsEnabled()Z
@@ -64,7 +61,6 @@
 
     move-result v0
 
-    .line 542
     .local v0, "nowGpsEnabled":Z
     iget-object v3, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ExerciseRunner$1;->this$0:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ExerciseRunner;
 
@@ -75,7 +71,6 @@
 
     if-eq v0, v3, :cond_0
 
-    .line 544
     iget-object v3, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ExerciseRunner$1;->this$0:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ExerciseRunner;
 
     const/16 v4, 0x17
@@ -96,13 +91,11 @@
     # invokes: Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ExerciseRunner;->sendPropertyValueToSensorHub(BBB[B)Z
     invoke-static {v3, v4, v5, v6, v7}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ExerciseRunner;->access$300(Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ExerciseRunner;BBB[B)Z
 
-    .line 549
     iget-object v1, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ExerciseRunner$1;->this$0:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ExerciseRunner;
 
     # setter for: Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ExerciseRunner;->mLastGpsEnabled:Z
     invoke-static {v1, v0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ExerciseRunner;->access$202(Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ExerciseRunner;Z)Z
 
-    .line 552
     .end local v0    # "nowGpsEnabled":Z
     :cond_0
     return-void
@@ -111,6 +104,5 @@
     :cond_1
     move v1, v2
 
-    .line 544
     goto :goto_0
 .end method

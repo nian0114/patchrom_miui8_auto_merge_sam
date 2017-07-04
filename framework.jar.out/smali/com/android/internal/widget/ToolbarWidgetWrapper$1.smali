@@ -30,12 +30,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 193
     iput-object p1, p0, Lcom/android/internal/widget/ToolbarWidgetWrapper$1;->this$0:Lcom/android/internal/widget/ToolbarWidgetWrapper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 194
     new-instance v0, Lcom/android/internal/view/menu/ActionMenuItem;
 
     iget-object v1, p0, Lcom/android/internal/widget/ToolbarWidgetWrapper$1;->this$0:Lcom/android/internal/widget/ToolbarWidgetWrapper;
@@ -78,7 +76,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 198
     iget-object v1, p0, Lcom/android/internal/widget/ToolbarWidgetWrapper$1;->this$0:Lcom/android/internal/widget/ToolbarWidgetWrapper;
 
     # getter for: Lcom/android/internal/widget/ToolbarWidgetWrapper;->mWindowCallback:Landroid/view/Window$Callback;
@@ -97,7 +94,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 200
     iget-object v1, p0, Lcom/android/internal/widget/ToolbarWidgetWrapper$1;->this$0:Lcom/android/internal/widget/ToolbarWidgetWrapper;
 
     # getter for: Lcom/android/internal/widget/ToolbarWidgetWrapper;->mIsThemeDeviceDefaultFamily:Z
@@ -107,12 +103,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 201
     invoke-static {}, Landroid/view/inputmethod/InputMethodManager;->peekInstance()Landroid/view/inputmethod/InputMethodManager;
 
     move-result-object v0
 
-    .line 202
     .local v0, "imm":Landroid/view/inputmethod/InputMethodManager;
     if-eqz v0, :cond_0
 
@@ -148,7 +142,6 @@
 
     if-nez v1, :cond_1
 
-    .line 207
     :cond_0
     iget-object v1, p0, Lcom/android/internal/widget/ToolbarWidgetWrapper$1;->this$0:Lcom/android/internal/widget/ToolbarWidgetWrapper;
 
@@ -161,13 +154,11 @@
 
     invoke-interface {v1, v4, v2}, Landroid/view/Window$Callback;->onMenuItemSelected(ILandroid/view/MenuItem;)Z
 
-    .line 215
     .end local v0    # "imm":Landroid/view/inputmethod/InputMethodManager;
     :cond_1
     :goto_0
     return-void
 
-    .line 212
     :cond_2
     iget-object v1, p0, Lcom/android/internal/widget/ToolbarWidgetWrapper$1;->this$0:Lcom/android/internal/widget/ToolbarWidgetWrapper;
 

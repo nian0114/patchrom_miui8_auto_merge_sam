@@ -58,7 +58,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 65
     const-string v0, "MediaSessionHelper"
 
     invoke-static {v0, v1}, Landroid/media/SamsungAudioManager$AudioLog;->isLoggable(Ljava/lang/String;I)Z
@@ -67,14 +66,12 @@
 
     sput-boolean v0, Landroid/media/session/MediaSessionLegacyHelper;->DEBUG:Z
 
-    .line 67
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Landroid/media/session/MediaSessionLegacyHelper;->sLock:Ljava/lang/Object;
 
-    .line 80
     sput-boolean v1, Landroid/media/session/MediaSessionLegacyHelper;->mAudioCoreVolumekeyLoggingEnabled:Z
 
     return-void
@@ -85,10 +82,8 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 88
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 72
     new-instance v0, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -99,18 +94,15 @@
 
     iput-object v0, p0, Landroid/media/session/MediaSessionLegacyHelper;->mHandler:Landroid/os/Handler;
 
-    .line 85
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Landroid/media/session/MediaSessionLegacyHelper;->mSessions:Landroid/util/ArrayMap;
 
-    .line 89
     iput-object p1, p0, Landroid/media/session/MediaSessionLegacyHelper;->mContext:Landroid/content/Context;
 
-    .line 90
-    const-string/jumbo v0, "media_session"
+    const-string v0, "media_session"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -120,8 +112,7 @@
 
     iput-object v0, p0, Landroid/media/session/MediaSessionLegacyHelper;->mSessionManager:Landroid/media/session/MediaSessionManager;
 
-    .line 93
-    const-string/jumbo v0, "power"
+    const-string v0, "power"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -131,8 +122,7 @@
 
     iput-object v0, p0, Landroid/media/session/MediaSessionLegacyHelper;->mPowerManager:Landroid/os/PowerManager;
 
-    .line 94
-    const-string/jumbo v0, "keyguard"
+    const-string v0, "keyguard"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -142,7 +132,6 @@
 
     iput-object v0, p0, Landroid/media/session/MediaSessionLegacyHelper;->mKeyguardManager:Landroid/app/KeyguardManager;
 
-    .line 95
     const-string v0, "cover"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -155,7 +144,6 @@
 
     iput-object v0, p0, Landroid/media/session/MediaSessionLegacyHelper;->mCoverManager:Lcom/samsung/android/cover/ICoverManager;
 
-    .line 96
     invoke-static {}, Lcom/samsung/android/feature/FloatingFeature;->getInstance()Lcom/samsung/android/feature/FloatingFeature;
 
     move-result-object v0
@@ -168,7 +156,6 @@
 
     sput-boolean v0, Landroid/media/session/MediaSessionLegacyHelper;->mAudioCoreVolumekeyLoggingEnabled:Z
 
-    .line 98
     return-void
 .end method
 
@@ -179,7 +166,6 @@
     .param p2, "x2"    # Landroid/content/Intent;
 
     .prologue
-    .line 63
     invoke-static {p0, p1, p2}, Landroid/media/session/MediaSessionLegacyHelper;->sendKeyEvent(Landroid/app/PendingIntent;Landroid/content/Context;Landroid/content/Intent;)V
 
     return-void
@@ -189,7 +175,6 @@
     .locals 1
 
     .prologue
-    .line 63
     sget-boolean v0, Landroid/media/session/MediaSessionLegacyHelper;->DEBUG:Z
 
     return v0
@@ -200,7 +185,6 @@
     .param p0, "x0"    # Landroid/media/session/MediaSessionLegacyHelper;
 
     .prologue
-    .line 63
     iget-object v0, p0, Landroid/media/session/MediaSessionLegacyHelper;->mSessions:Landroid/util/ArrayMap;
 
     return-object v0
@@ -211,18 +195,15 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 101
     sget-object v1, Landroid/media/session/MediaSessionLegacyHelper;->sLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 102
     :try_start_0
     sget-object v0, Landroid/media/session/MediaSessionLegacyHelper;->sInstance:Landroid/media/session/MediaSessionLegacyHelper;
 
     if-nez v0, :cond_0
 
-    .line 103
     new-instance v0, Landroid/media/session/MediaSessionLegacyHelper;
 
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -233,18 +214,15 @@
 
     sput-object v0, Landroid/media/session/MediaSessionLegacyHelper;->sInstance:Landroid/media/session/MediaSessionLegacyHelper;
 
-    .line 105
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 106
     sget-object v0, Landroid/media/session/MediaSessionLegacyHelper;->sInstance:Landroid/media/session/MediaSessionLegacyHelper;
 
     return-object v0
 
-    .line 105
     :catchall_0
     move-exception v0
 
@@ -262,7 +240,6 @@
     .param p2, "createIfMissing"    # Z
 
     .prologue
-    .line 479
     iget-object v2, p0, Landroid/media/session/MediaSessionLegacyHelper;->mSessions:Landroid/util/ArrayMap;
 
     invoke-virtual {v2, p1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -271,13 +248,11 @@
 
     check-cast v0, Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;
 
-    .line 480
     .local v0, "holder":Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 482
     new-instance v1, Landroid/media/session/MediaSession;
 
     iget-object v2, p0, Landroid/media/session/MediaSessionLegacyHelper;->mContext:Landroid/content/Context;
@@ -306,25 +281,21 @@
 
     invoke-direct {v1, v2, v3}, Landroid/media/session/MediaSession;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 483
     .local v1, "session":Landroid/media/session/MediaSession;
     const/4 v2, 0x1
 
     invoke-virtual {v1, v2}, Landroid/media/session/MediaSession;->setActive(Z)V
 
-    .line 484
     new-instance v0, Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;
 
     .end local v0    # "holder":Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;
     invoke-direct {v0, p0, v1, p1}, Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;-><init>(Landroid/media/session/MediaSessionLegacyHelper;Landroid/media/session/MediaSession;Landroid/app/PendingIntent;)V
 
-    .line 485
     .restart local v0    # "holder":Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;
     iget-object v2, p0, Landroid/media/session/MediaSessionLegacyHelper;->mSessions:Landroid/util/ArrayMap;
 
     invoke-virtual {v2, p1, v0}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 487
     .end local v1    # "session":Landroid/media/session/MediaSession;
     :cond_0
     return-object v0
@@ -345,21 +316,18 @@
 
     const/4 v5, -0x1
 
-    .line 111
     if-eq p1, v5, :cond_12
 
     if-eq p2, v5, :cond_12
 
     move v1, v3
 
-    .line 112
     .local v1, "includeArtwork":Z
     :goto_0
     new-instance v2, Landroid/os/Bundle;
 
     invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
 
-    .line 113
     .local v2, "oldMetadata":Landroid/os/Bundle;
     const-string v5, "android.media.metadata.ALBUM"
 
@@ -369,7 +337,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 114
     invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v3
@@ -382,7 +349,6 @@
 
     invoke-virtual {v2, v3, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 117
     :cond_0
     if-eqz v1, :cond_13
 
@@ -394,14 +360,12 @@
 
     if-eqz v3, :cond_13
 
-    .line 118
     const-string v3, "android.media.metadata.ART"
 
     invoke-virtual {p0, v3}, Landroid/media/MediaMetadata;->getBitmap(Ljava/lang/String;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 119
     .local v0, "art":Landroid/graphics/Bitmap;
     invoke-static {v6}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -413,7 +377,6 @@
 
     invoke-virtual {v2, v3, v5}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 127
     .end local v0    # "art":Landroid/graphics/Bitmap;
     :cond_1
     :goto_1
@@ -425,7 +388,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 128
     const/16 v3, 0xd
 
     invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -440,7 +402,6 @@
 
     invoke-virtual {v2, v3, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 131
     :cond_2
     const-string v3, "android.media.metadata.ARTIST"
 
@@ -450,7 +411,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 132
     const/4 v3, 0x2
 
     invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -465,7 +425,6 @@
 
     invoke-virtual {v2, v3, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 135
     :cond_3
     const-string v3, "android.media.metadata.AUTHOR"
 
@@ -475,7 +434,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 136
     const/4 v3, 0x3
 
     invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -490,7 +448,6 @@
 
     invoke-virtual {v2, v3, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 139
     :cond_4
     const-string v3, "android.media.metadata.COMPILATION"
 
@@ -500,7 +457,6 @@
 
     if-eqz v3, :cond_5
 
-    .line 140
     const/16 v3, 0xf
 
     invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -515,7 +471,6 @@
 
     invoke-virtual {v2, v3, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 143
     :cond_5
     const-string v3, "android.media.metadata.COMPOSER"
 
@@ -525,7 +480,6 @@
 
     if-eqz v3, :cond_6
 
-    .line 144
     const/4 v3, 0x4
 
     invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -540,7 +494,6 @@
 
     invoke-virtual {v2, v3, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 147
     :cond_6
     const-string v3, "android.media.metadata.DATE"
 
@@ -550,7 +503,6 @@
 
     if-eqz v3, :cond_7
 
-    .line 148
     const/4 v3, 0x5
 
     invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -565,7 +517,6 @@
 
     invoke-virtual {v2, v3, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 151
     :cond_7
     const-string v3, "android.media.metadata.DISC_NUMBER"
 
@@ -575,7 +526,6 @@
 
     if-eqz v3, :cond_8
 
-    .line 152
     const/16 v3, 0xe
 
     invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -590,7 +540,6 @@
 
     invoke-virtual {v2, v3, v6, v7}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    .line 155
     :cond_8
     const-string v3, "android.media.metadata.DURATION"
 
@@ -600,7 +549,6 @@
 
     if-eqz v3, :cond_9
 
-    .line 156
     const/16 v3, 0x9
 
     invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -615,7 +563,6 @@
 
     invoke-virtual {v2, v3, v6, v7}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    .line 159
     :cond_9
     const-string v3, "android.media.metadata.GENRE"
 
@@ -625,7 +572,6 @@
 
     if-eqz v3, :cond_a
 
-    .line 160
     const/4 v3, 0x6
 
     invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -640,7 +586,6 @@
 
     invoke-virtual {v2, v3, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 163
     :cond_a
     const-string v3, "android.media.metadata.NUM_TRACKS"
 
@@ -650,7 +595,6 @@
 
     if-eqz v3, :cond_b
 
-    .line 164
     const/16 v3, 0xa
 
     invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -665,7 +609,6 @@
 
     invoke-virtual {v2, v3, v6, v7}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    .line 167
     :cond_b
     const-string v3, "android.media.metadata.RATING"
 
@@ -675,7 +618,6 @@
 
     if-eqz v3, :cond_c
 
-    .line 168
     const/16 v3, 0x65
 
     invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -690,7 +632,6 @@
 
     invoke-virtual {v2, v3, v5}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 171
     :cond_c
     const-string v3, "android.media.metadata.USER_RATING"
 
@@ -700,7 +641,6 @@
 
     if-eqz v3, :cond_d
 
-    .line 172
     const v3, 0x10000001
 
     invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -715,7 +655,6 @@
 
     invoke-virtual {v2, v3, v5}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 175
     :cond_d
     const-string v3, "android.media.metadata.TITLE"
 
@@ -725,7 +664,6 @@
 
     if-eqz v3, :cond_e
 
-    .line 176
     const/4 v3, 0x7
 
     invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -740,7 +678,6 @@
 
     invoke-virtual {v2, v3, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 179
     :cond_e
     const-string v3, "android.media.metadata.TRACK_NUMBER"
 
@@ -750,7 +687,6 @@
 
     if-eqz v3, :cond_f
 
-    .line 180
     invoke-static {v4}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v3
@@ -763,7 +699,6 @@
 
     invoke-virtual {v2, v3, v4, v5}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    .line 184
     :cond_f
     const-string v3, "android.media.metadata.WRITER"
 
@@ -773,7 +708,6 @@
 
     if-eqz v3, :cond_10
 
-    .line 185
     const/16 v3, 0xb
 
     invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -788,7 +722,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 188
     :cond_10
     const-string v3, "android.media.metadata.YEAR"
 
@@ -798,7 +731,6 @@
 
     if-eqz v3, :cond_11
 
-    .line 189
     const/16 v3, 0x8
 
     invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -813,7 +745,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 192
     :cond_11
     return-object v2
 
@@ -822,10 +753,8 @@
     :cond_12
     move v1, v4
 
-    .line 111
     goto/16 :goto_0
 
-    .line 121
     .restart local v1    # "includeArtwork":Z
     .restart local v2    # "oldMetadata":Landroid/os/Bundle;
     :cond_13
@@ -839,14 +768,12 @@
 
     if-eqz v3, :cond_1
 
-    .line 123
     const-string v3, "android.media.metadata.ALBUM_ART"
 
     invoke-virtual {p0, v3}, Landroid/media/MediaMetadata;->getBitmap(Ljava/lang/String;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 124
     .restart local v0    # "art":Landroid/graphics/Bitmap;
     invoke-static {v6}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -865,24 +792,19 @@
     .locals 5
 
     .prologue
-    .line 213
     iget-object v3, p0, Landroid/media/session/MediaSessionLegacyHelper;->mCoverManager:Lcom/samsung/android/cover/ICoverManager;
 
     if-nez v3, :cond_1
 
-    .line 214
     const/4 v1, 0x1
 
-    .line 224
     :cond_0
     :goto_0
     return v1
 
-    .line 216
     :cond_1
     const/4 v1, 0x1
 
-    .line 218
     .local v1, "isOpen":Z
     :try_start_0
     iget-object v3, p0, Landroid/media/session/MediaSessionLegacyHelper;->mCoverManager:Lcom/samsung/android/cover/ICoverManager;
@@ -891,11 +813,9 @@
 
     move-result-object v2
 
-    .line 219
     .local v2, "state":Lcom/samsung/android/cover/CoverState;
     if-eqz v2, :cond_0
 
-    .line 220
     invoke-virtual {v2}, Lcom/samsung/android/cover/CoverState;->getSwitchState()Z
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -904,12 +824,10 @@
 
     goto :goto_0
 
-    .line 221
     .end local v2    # "state":Lcom/samsung/android/cover/CoverState;
     :catch_0
     move-exception v0
 
-    .line 222
     .local v0, "e":Landroid/os/RemoteException;
     const-string v3, "MediaSessionHelper"
 
@@ -927,21 +845,17 @@
     .param p2, "maxHeight"    # I
 
     .prologue
-    .line 454
     if-eqz p0, :cond_2
 
-    .line 455
     invoke-virtual/range {p0 .. p0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v9
 
-    .line 456
     .local v9, "width":I
     invoke-virtual/range {p0 .. p0}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v2
 
-    .line 457
     .local v2, "height":I
     move/from16 v0, p1
 
@@ -951,7 +865,6 @@
 
     if-le v2, v0, :cond_2
 
-    .line 458
     :cond_0
     move/from16 v0, p1
 
@@ -973,7 +886,6 @@
 
     move-result v8
 
-    .line 459
     .local v8, "scale":F
     int-to-float v10, v9
 
@@ -983,7 +895,6 @@
 
     move-result v5
 
-    .line 460
     .local v5, "newWidth":I
     int-to-float v10, v2
 
@@ -993,49 +904,40 @@
 
     move-result v4
 
-    .line 461
     .local v4, "newHeight":I
     invoke-virtual/range {p0 .. p0}, Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;
 
     move-result-object v3
 
-    .line 462
     .local v3, "newConfig":Landroid/graphics/Bitmap$Config;
     if-nez v3, :cond_1
 
-    .line 463
     sget-object v3, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
-    .line 465
     :cond_1
     invoke-static {v5, v4, v3}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
     move-result-object v6
 
-    .line 466
     .local v6, "outBitmap":Landroid/graphics/Bitmap;
     new-instance v1, Landroid/graphics/Canvas;
 
     invoke-direct {v1, v6}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 467
     .local v1, "canvas":Landroid/graphics/Canvas;
     new-instance v7, Landroid/graphics/Paint;
 
     invoke-direct {v7}, Landroid/graphics/Paint;-><init>()V
 
-    .line 468
     .local v7, "paint":Landroid/graphics/Paint;
     const/4 v10, 0x1
 
     invoke-virtual {v7, v10}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 469
     const/4 v10, 0x1
 
     invoke-virtual {v7, v10}, Landroid/graphics/Paint;->setFilterBitmap(Z)V
 
-    .line 470
     const/4 v10, 0x0
 
     new-instance v11, Landroid/graphics/RectF;
@@ -1062,10 +964,8 @@
 
     invoke-virtual {v1, v0, v10, v11, v7}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/RectF;Landroid/graphics/Paint;)V
 
-    .line 472
     move-object/from16 p0, v6
 
-    .line 475
     .end local v1    # "canvas":Landroid/graphics/Canvas;
     .end local v2    # "height":I
     .end local v3    # "newConfig":Landroid/graphics/Bitmap$Config;
@@ -1086,7 +986,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 492
     const/4 v1, 0x0
 
     :try_start_0
@@ -1094,15 +993,12 @@
     :try_end_0
     .catch Landroid/app/PendingIntent$CanceledException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 498
     :goto_0
     return-void
 
-    .line 493
     :catch_0
     move-exception v0
 
-    .line 494
     .local v0, "e":Landroid/app/PendingIntent$CanceledException;
     const-string v1, "MediaSessionHelper"
 
@@ -1119,37 +1015,30 @@
     .param p2, "extra"    # Ljava/lang/String;
 
     .prologue
-    .line 420
     new-instance v2, Landroid/content/ContentValues;
 
     invoke-direct {v2}, Landroid/content/ContentValues;-><init>()V
 
-    .line 421
     .local v2, "cv":Landroid/content/ContentValues;
     const-string v0, "android.media.session"
 
-    .line 422
     .local v0, "appId":Ljava/lang/String;
     const-wide/16 v4, 0x3e8
 
-    .line 424
     .local v4, "value":J
     const-string v3, "app_id"
 
     invoke-virtual {v2, v3, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 425
     const-string v3, "feature"
 
     invoke-virtual {v2, v3, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 426
     const-string v3, "extra"
 
     invoke-virtual {v2, v3, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 427
-    const-string/jumbo v3, "value"
+    const-string v3, "value"
 
     invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -1157,38 +1046,31 @@
 
     invoke-virtual {v2, v3, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 429
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 431
     .local v1, "broadcastIntent":Landroid/content/Intent;
     const-string v3, "com.samsung.android.providers.context.log.action.USE_APP_FEATURE_SURVEY"
 
     invoke-virtual {v1, v3}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 432
     const-string v3, "data"
 
     invoke-virtual {v1, v3, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 434
     const-string v3, "com.samsung.android.providers.context"
 
     invoke-virtual {v1, v3}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 436
     iget-object v3, p0, Landroid/media/session/MediaSessionLegacyHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 437
     sget-boolean v3, Landroid/media/session/MediaSessionLegacyHelper;->DEBUG:Z
 
     if-eqz v3, :cond_0
 
-    .line 438
     const-string v3, "MediaSessionHelper"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -1225,7 +1107,7 @@
 
     move-result-object v6
 
-    const-string/jumbo v7, "value="
+    const-string v7, "value="
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1241,7 +1123,6 @@
 
     invoke-static {v3, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 440
     :cond_0
     return-void
 .end method
@@ -1250,27 +1131,21 @@
     .locals 5
 
     .prologue
-    .line 395
     invoke-static {}, Landroid/media/AudioManager;->getActiveStreamType()I
 
     move-result v3
 
-    .line 396
     .local v3, "stream":I
     const/4 v0, 0x0
 
-    .line 397
     .local v0, "extra":Ljava/lang/String;
     const/4 v1, 0x0
 
-    .line 399
     .local v1, "feature":Ljava/lang/String;
     if-nez v3, :cond_1
 
-    .line 400
     const-string v0, "Call volume"
 
-    .line 406
     :goto_0
     iget-object v4, p0, Landroid/media/session/MediaSessionLegacyHelper;->mPowerManager:Landroid/os/PowerManager;
 
@@ -1282,49 +1157,39 @@
 
     const/4 v2, 0x1
 
-    .line 408
     .local v2, "isScreenOff":Z
     :goto_1
     if-eqz v2, :cond_3
 
-    .line 409
     const-string v1, "MPVL"
 
-    .line 416
     :goto_2
     invoke-direct {p0, v1, v0}, Landroid/media/session/MediaSessionLegacyHelper;->sendLogAudioCoreVolumekeyLoggingEnabled(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 417
     .end local v2    # "isScreenOff":Z
     :cond_0
     return-void
 
-    .line 401
     :cond_1
     const/4 v4, 0x3
 
     if-ne v3, v4, :cond_0
 
-    .line 402
     const-string v0, "Music volume"
 
     goto :goto_0
 
-    .line 406
     :cond_2
     const/4 v2, 0x0
 
     goto :goto_1
 
-    .line 410
     .restart local v2    # "isScreenOff":Z
     :cond_3
     if-nez v3, :cond_0
 
-    .line 411
     const-string v1, "UIFW"
 
-    .line 412
     const-string v0, "Media"
 
     goto :goto_2
@@ -1339,22 +1204,18 @@
     .param p3, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 351
     if-nez p1, :cond_1
 
-    .line 352
     const-string v1, "MediaSessionHelper"
 
     const-string v2, "Pending intent was null, can\'t addMediaButtonListener."
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 375
     :cond_0
     :goto_0
     return-void
 
-    .line 355
     :cond_1
     const/4 v1, 0x1
 
@@ -1362,21 +1223,17 @@
 
     move-result-object v0
 
-    .line 356
     .local v0, "holder":Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;
     if-eqz v0, :cond_0
 
-    .line 359
     iget-object v1, v0, Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;->mMediaButtonListener:Landroid/media/session/MediaSessionLegacyHelper$MediaButtonListener;
 
     if-eqz v1, :cond_2
 
-    .line 361
     sget-boolean v1, Landroid/media/session/MediaSessionLegacyHelper;->DEBUG:Z
 
     if-eqz v1, :cond_2
 
-    .line 362
     const-string v1, "MediaSessionHelper"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1399,7 +1256,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 365
     :cond_2
     new-instance v1, Landroid/media/session/MediaSessionLegacyHelper$MediaButtonListener;
 
@@ -1407,34 +1263,28 @@
 
     iput-object v1, v0, Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;->mMediaButtonListener:Landroid/media/session/MediaSessionLegacyHelper$MediaButtonListener;
 
-    .line 368
     iget v1, v0, Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;->mFlags:I
 
     or-int/lit8 v1, v1, 0x1
 
     iput v1, v0, Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;->mFlags:I
 
-    .line 369
     iget-object v1, v0, Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;->mSession:Landroid/media/session/MediaSession;
 
     iget v2, v0, Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;->mFlags:I
 
     invoke-virtual {v1, v2}, Landroid/media/session/MediaSession;->setFlags(I)V
 
-    .line 370
     iget-object v1, v0, Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;->mSession:Landroid/media/session/MediaSession;
 
     invoke-virtual {v1, p1}, Landroid/media/session/MediaSession;->setMediaButtonReceiver(Landroid/app/PendingIntent;)V
 
-    .line 371
     invoke-virtual {v0}, Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;->update()V
 
-    .line 372
     sget-boolean v1, Landroid/media/session/MediaSessionLegacyHelper;->DEBUG:Z
 
     if-eqz v1, :cond_0
 
-    .line 373
     const-string v1, "MediaSessionHelper"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1466,22 +1316,18 @@
     .param p2, "listener"    # Landroid/media/session/MediaSession$Callback;
 
     .prologue
-    .line 307
     if-nez p1, :cond_1
 
-    .line 308
     const-string v1, "MediaSessionHelper"
 
     const-string v2, "Pending intent was null, can\'t add rcc listener."
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 331
     :cond_0
     :goto_0
     return-void
 
-    .line 311
     :cond_1
     const/4 v1, 0x1
 
@@ -1489,26 +1335,21 @@
 
     move-result-object v0
 
-    .line 312
     .local v0, "holder":Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;
     if-eqz v0, :cond_0
 
-    .line 315
     iget-object v1, v0, Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;->mRccListener:Landroid/media/session/MediaSession$Callback;
 
     if-eqz v1, :cond_2
 
-    .line 316
     iget-object v1, v0, Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;->mRccListener:Landroid/media/session/MediaSession$Callback;
 
     if-ne v1, p2, :cond_2
 
-    .line 317
     sget-boolean v1, Landroid/media/session/MediaSessionLegacyHelper;->DEBUG:Z
 
     if-eqz v1, :cond_0
 
-    .line 318
     const-string v1, "MediaSessionHelper"
 
     const-string v2, "addRccListener listener already added."
@@ -1517,33 +1358,27 @@
 
     goto :goto_0
 
-    .line 324
     :cond_2
     iput-object p2, v0, Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;->mRccListener:Landroid/media/session/MediaSession$Callback;
 
-    .line 325
     iget v1, v0, Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;->mFlags:I
 
     or-int/lit8 v1, v1, 0x2
 
     iput v1, v0, Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;->mFlags:I
 
-    .line 326
     iget-object v1, v0, Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;->mSession:Landroid/media/session/MediaSession;
 
     iget v2, v0, Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;->mFlags:I
 
     invoke-virtual {v1, v2}, Landroid/media/session/MediaSession;->setFlags(I)V
 
-    .line 327
     invoke-virtual {v0}, Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;->update()V
 
-    .line 328
     sget-boolean v1, Landroid/media/session/MediaSessionLegacyHelper;->DEBUG:Z
 
     if-eqz v1, :cond_0
 
-    .line 329
     const-string v1, "MediaSessionHelper"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1580,7 +1415,6 @@
     .param p1, "pi"    # Landroid/app/PendingIntent;
 
     .prologue
-    .line 196
     iget-object v1, p0, Landroid/media/session/MediaSessionLegacyHelper;->mSessions:Landroid/util/ArrayMap;
 
     invoke-virtual {v1, p1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1589,7 +1423,6 @@
 
     check-cast v0, Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;
 
-    .line 197
     .local v0, "holder":Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;
     if-nez v0, :cond_0
 
@@ -1608,7 +1441,6 @@
     .locals 1
 
     .prologue
-    .line 303
     iget-object v0, p0, Landroid/media/session/MediaSessionLegacyHelper;->mSessionManager:Landroid/media/session/MediaSessionManager;
 
     invoke-virtual {v0}, Landroid/media/session/MediaSessionManager;->isGlobalPriorityActive()Z
@@ -1623,15 +1455,12 @@
     .param p1, "pi"    # Landroid/app/PendingIntent;
 
     .prologue
-    .line 378
     if-nez p1, :cond_1
 
-    .line 392
     :cond_0
     :goto_0
     return-void
 
-    .line 381
     :cond_1
     const/4 v1, 0x0
 
@@ -1639,7 +1468,6 @@
 
     move-result-object v0
 
-    .line 382
     .local v0, "holder":Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;
     if-eqz v0, :cond_0
 
@@ -1647,41 +1475,35 @@
 
     if-eqz v1, :cond_0
 
-    .line 383
     iget v1, v0, Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;->mFlags:I
 
     and-int/lit8 v1, v1, -0x2
 
     iput v1, v0, Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;->mFlags:I
 
-    .line 384
     iget-object v1, v0, Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;->mSession:Landroid/media/session/MediaSession;
 
     iget v2, v0, Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;->mFlags:I
 
     invoke-virtual {v1, v2}, Landroid/media/session/MediaSession;->setFlags(I)V
 
-    .line 385
     const/4 v1, 0x0
 
     iput-object v1, v0, Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;->mMediaButtonListener:Landroid/media/session/MediaSessionLegacyHelper$MediaButtonListener;
 
-    .line 387
     invoke-virtual {v0}, Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;->update()V
 
-    .line 388
     sget-boolean v1, Landroid/media/session/MediaSessionLegacyHelper;->DEBUG:Z
 
     if-eqz v1, :cond_0
 
-    .line 389
     const-string v1, "MediaSessionHelper"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "removeMediaButtonListener removed "
+    const-string v3, "removeMediaButtonListener removed "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1705,15 +1527,12 @@
     .param p1, "pi"    # Landroid/app/PendingIntent;
 
     .prologue
-    .line 334
     if-nez p1, :cond_1
 
-    .line 347
     :cond_0
     :goto_0
     return-void
 
-    .line 337
     :cond_1
     const/4 v1, 0x0
 
@@ -1721,7 +1540,6 @@
 
     move-result-object v0
 
-    .line 338
     .local v0, "holder":Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;
     if-eqz v0, :cond_0
 
@@ -1729,34 +1547,28 @@
 
     if-eqz v1, :cond_0
 
-    .line 339
     const/4 v1, 0x0
 
     iput-object v1, v0, Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;->mRccListener:Landroid/media/session/MediaSession$Callback;
 
-    .line 340
     iget v1, v0, Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;->mFlags:I
 
     and-int/lit8 v1, v1, -0x3
 
     iput v1, v0, Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;->mFlags:I
 
-    .line 341
     iget-object v1, v0, Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;->mSession:Landroid/media/session/MediaSession;
 
     iget v2, v0, Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;->mFlags:I
 
     invoke-virtual {v1, v2}, Landroid/media/session/MediaSession;->setFlags(I)V
 
-    .line 342
     invoke-virtual {v0}, Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;->update()V
 
-    .line 343
     sget-boolean v1, Landroid/media/session/MediaSessionLegacyHelper;->DEBUG:Z
 
     if-eqz v1, :cond_0
 
-    .line 344
     const-string v1, "MediaSessionHelper"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1795,12 +1607,10 @@
     .param p3, "flags"    # I
 
     .prologue
-    .line 289
     iget-object v0, p0, Landroid/media/session/MediaSessionLegacyHelper;->mSessionManager:Landroid/media/session/MediaSessionManager;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/media/session/MediaSessionManager;->dispatchAdjustVolume(III)V
 
-    .line 291
     sget-boolean v0, Landroid/media/session/MediaSessionLegacyHelper;->mAudioCoreVolumekeyLoggingEnabled:Z
 
     if-eqz v0, :cond_0
@@ -1809,23 +1619,19 @@
 
     if-ne p3, v0, :cond_0
 
-    .line 294
     invoke-direct {p0}, Landroid/media/session/MediaSessionLegacyHelper;->volumeKeyLogging()V
 
-    .line 297
     :cond_0
     sget-boolean v0, Landroid/media/session/MediaSessionLegacyHelper;->DEBUG:Z
 
     if-eqz v0, :cond_1
 
-    .line 298
     const-string v0, "MediaSessionHelper"
 
     const-string v1, "dispatched volume adjustment"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 300
     :cond_1
     return-void
 .end method
@@ -1836,33 +1642,27 @@
     .param p2, "needWakeLock"    # Z
 
     .prologue
-    .line 201
     if-nez p1, :cond_1
 
-    .line 202
     const-string v0, "MediaSessionHelper"
 
     const-string v1, "Tried to send a null key event. Ignoring."
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 209
     :cond_0
     :goto_0
     return-void
 
-    .line 205
     :cond_1
     iget-object v0, p0, Landroid/media/session/MediaSessionLegacyHelper;->mSessionManager:Landroid/media/session/MediaSessionManager;
 
     invoke-virtual {v0, p1, p2}, Landroid/media/session/MediaSessionManager;->dispatchMediaKeyEvent(Landroid/view/KeyEvent;Z)V
 
-    .line 206
     sget-boolean v0, Landroid/media/session/MediaSessionLegacyHelper;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 207
     const-string v0, "MediaSessionHelper"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1900,22 +1700,18 @@
 
     const/4 v5, 0x1
 
-    .line 229
     if-nez p1, :cond_1
 
-    .line 230
     const-string v5, "MediaSessionHelper"
 
     const-string v6, "Tried to send a null key event. Ignoring."
 
     invoke-static {v5, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 286
     :cond_0
     :goto_0
     return-void
 
-    .line 233
     :cond_1
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getAction()I
 
@@ -1925,7 +1721,6 @@
 
     move v1, v5
 
-    .line 234
     .local v1, "down":Z
     :goto_1
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getAction()I
@@ -1936,16 +1731,13 @@
 
     move v4, v5
 
-    .line 235
     .local v4, "up":Z
     :goto_2
     const/4 v0, 0x0
 
-    .line 236
     .local v0, "direction":I
     const/4 v3, 0x0
 
-    .line 238
     .local v3, "isMute":Z
     const-string v5, "MediaSessionHelper"
 
@@ -1979,17 +1771,14 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 239
     sget-boolean v5, Landroid/media/session/MediaSessionLegacyHelper;->mAudioCoreVolumekeyLoggingEnabled:Z
 
     if-eqz v5, :cond_2
 
     if-eqz v4, :cond_2
 
-    .line 240
     invoke-direct {p0}, Landroid/media/session/MediaSessionLegacyHelper;->volumeKeyLogging()V
 
-    .line 243
     :cond_2
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
 
@@ -1997,26 +1786,21 @@
 
     sparse-switch v5, :sswitch_data_0
 
-    .line 254
     :goto_3
     if-nez v1, :cond_3
 
     if-eqz v4, :cond_0
 
-    .line 255
     :cond_3
     const/16 v2, 0x1000
 
-    .line 257
     .local v2, "flags":I
     if-eqz v1, :cond_4
 
-    .line 258
     const/high16 v5, 0x20000000
 
     or-int/2addr v2, v5
 
-    .line 260
     :cond_4
     if-nez p2, :cond_5
 
@@ -2038,21 +1822,16 @@
 
     if-eqz v5, :cond_9
 
-    .line 263
     :cond_5
     or-int/lit16 v2, v2, 0x200
 
-    .line 272
     :goto_4
     if-eqz v0, :cond_b
 
-    .line 274
     if-eqz v4, :cond_6
 
-    .line 275
     const/4 v0, 0x0
 
-    .line 277
     :cond_6
     iget-object v5, p0, Landroid/media/session/MediaSessionLegacyHelper;->mSessionManager:Landroid/media/session/MediaSessionManager;
 
@@ -2068,60 +1847,48 @@
     :cond_7
     move v1, v6
 
-    .line 233
     goto :goto_1
 
     .restart local v1    # "down":Z
     :cond_8
     move v4, v6
 
-    .line 234
     goto :goto_2
 
-    .line 245
     .restart local v0    # "direction":I
     .restart local v3    # "isMute":Z
     .restart local v4    # "up":Z
     :sswitch_0
     const/4 v0, 0x1
 
-    .line 246
     goto :goto_3
 
-    .line 248
     :sswitch_1
     const/4 v0, -0x1
 
-    .line 249
     goto :goto_3
 
-    .line 251
     :sswitch_2
     const/4 v3, 0x1
 
     goto :goto_3
 
-    .line 266
     .restart local v2    # "flags":I
     :cond_9
     if-eqz v4, :cond_a
 
-    .line 267
     or-int/lit8 v2, v2, 0x14
 
     goto :goto_4
 
-    .line 269
     :cond_a
     or-int/lit8 v2, v2, 0x11
 
     goto :goto_4
 
-    .line 279
     :cond_b
     if-eqz v3, :cond_0
 
-    .line 280
     if-eqz v1, :cond_0
 
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getRepeatCount()I
@@ -2130,7 +1897,6 @@
 
     if-nez v5, :cond_0
 
-    .line 281
     iget-object v5, p0, Landroid/media/session/MediaSessionLegacyHelper;->mSessionManager:Landroid/media/session/MediaSessionManager;
 
     const/16 v6, 0x65
@@ -2139,7 +1905,6 @@
 
     goto/16 :goto_0
 
-    .line 243
     nop
 
     :sswitch_data_0

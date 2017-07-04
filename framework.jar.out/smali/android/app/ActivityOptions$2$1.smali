@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 311
     iput-object p1, p0, Landroid/app/ActivityOptions$2$1;->this$1:Landroid/app/ActivityOptions$2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,13 +39,11 @@
     .locals 1
 
     .prologue
-    .line 313
     iget-object v0, p0, Landroid/app/ActivityOptions$2$1;->this$1:Landroid/app/ActivityOptions$2;
 
     iget-object v0, v0, Landroid/app/ActivityOptions$2;->val$finalListener:Landroid/app/ActivityOptions$OnTransitionStartedListener;
 
     invoke-interface {v0}, Landroid/app/ActivityOptions$OnTransitionStartedListener;->onTransitionStarted()V
 
-    .line 314
     return-void
 .end method

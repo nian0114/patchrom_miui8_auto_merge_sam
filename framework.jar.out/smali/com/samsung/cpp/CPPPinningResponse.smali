@@ -21,10 +21,8 @@
     .locals 1
 
     .prologue
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 7
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -49,7 +47,6 @@
     .end annotation
 
     .prologue
-    .line 10
     iget-object v0, p0, Lcom/samsung/cpp/CPPPinningResponse;->data:Ljava/util/List;
 
     return-object v0

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 180
     iput-object p1, p0, Lcom/samsung/android/contextaware/utilbundle/CaPassiveCurrentPositionManager$2;->this$0:Lcom/samsung/android/contextaware/utilbundle/CaPassiveCurrentPositionManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,14 +43,12 @@
     .prologue
     const/4 v4, 0x7
 
-    .line 182
     const-string v2, ","
 
     invoke-virtual {p3, v2}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 184
     .local v1, "str_temp":[Ljava/lang/String;
     const/4 v2, 0x0
 
@@ -65,7 +62,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 185
     aget-object v2, v1, v4
 
     const-string v3, ""
@@ -76,17 +72,14 @@
 
     if-eqz v2, :cond_1
 
-    .line 186
-    const-string/jumbo v2, "satelliteCount null"
+    const-string v2, "satelliteCount null"
 
     invoke-static {v2}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 194
     :cond_0
     :goto_0
     return-void
 
-    .line 190
     :cond_1
     aget-object v2, v1, v4
 
@@ -94,14 +87,12 @@
 
     move-result v0
 
-    .line 191
     .local v0, "satelliteCount":I
     iget-object v2, p0, Lcom/samsung/android/contextaware/utilbundle/CaPassiveCurrentPositionManager$2;->this$0:Lcom/samsung/android/contextaware/utilbundle/CaPassiveCurrentPositionManager;
 
     # setter for: Lcom/samsung/android/contextaware/utilbundle/CaPassiveCurrentPositionManager;->mSatelliteCount:I
     invoke-static {v2, v0}, Lcom/samsung/android/contextaware/utilbundle/CaPassiveCurrentPositionManager;->access$102(Lcom/samsung/android/contextaware/utilbundle/CaPassiveCurrentPositionManager;I)I
 
-    .line 192
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V

@@ -41,13 +41,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 166
     invoke-direct {p0, v1}, Landroid/content/ContextWrapper;-><init>(Landroid/content/Context;)V
 
-    .line 135
     iput-object v1, p0, Landroid/app/backup/BackupAgent;->mHandler:Landroid/os/Handler;
 
-    .line 819
     new-instance v0, Landroid/app/backup/BackupAgent$BackupServiceBinder;
 
     invoke-direct {v0, p0, v1}, Landroid/app/backup/BackupAgent$BackupServiceBinder;-><init>(Landroid/app/backup/BackupAgent;Landroid/app/backup/BackupAgent$1;)V
@@ -58,7 +55,6 @@
 
     iput-object v0, p0, Landroid/app/backup/BackupAgent;->mBinder:Landroid/os/IBinder;
 
-    .line 167
     return-void
 .end method
 
@@ -67,7 +63,6 @@
     .param p0, "x0"    # Landroid/app/backup/BackupAgent;
 
     .prologue
-    .line 113
     invoke-direct {p0}, Landroid/app/backup/BackupAgent;->waitForSharedPrefs()V
 
     return-void
@@ -81,7 +76,6 @@
     .param p3, "x3"    # Landroid/util/ArraySet;
 
     .prologue
-    .line 113
     invoke-direct {p0, p1, p2, p3}, Landroid/app/backup/BackupAgent;->getDirectorySizeEx(Ljava/lang/String;Landroid/util/ArraySet;Landroid/util/ArraySet;)J
 
     move-result-wide v0
@@ -126,7 +120,6 @@
     .end annotation
 
     .prologue
-    .line 394
     .local p3, "includeMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/Set<Ljava/lang/String;>;>;"
     .local p4, "filterSet":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Ljava/lang/String;>;"
     .local p5, "traversalExcludeSet":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Ljava/lang/String;>;"
@@ -138,7 +131,6 @@
 
     if-nez v0, :cond_2
 
-    .line 396
     :cond_0
     invoke-static {p0}, Landroid/app/backup/FullBackup;->getBackupScheme(Landroid/content/Context;)Landroid/app/backup/FullBackup$BackupScheme;
 
@@ -162,11 +154,9 @@
 
     invoke-virtual/range {v0 .. v6}, Landroid/app/backup/BackupAgent;->fullBackupFileTree(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/util/ArraySet;Landroid/util/ArraySet;Landroid/app/backup/FullBackupDataOutput;)V
 
-    .line 407
     :cond_1
     return-void
 
-    .line 399
     :cond_2
     invoke-interface {p3, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -174,7 +164,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 402
     invoke-interface {p3, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -212,7 +201,6 @@
 
     move-object v6, p6
 
-    .line 403
     invoke-virtual/range {v0 .. v6}, Landroid/app/backup/BackupAgent;->fullBackupFileTree(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/util/ArraySet;Landroid/util/ArraySet;Landroid/app/backup/FullBackupDataOutput;)V
 
     goto :goto_0
@@ -237,7 +225,6 @@
     .end annotation
 
     .prologue
-    .line 585
     .local p2, "manifestExcludes":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Ljava/lang/String;>;"
     .local p3, "systemExcludes":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Ljava/lang/String;>;"
     new-instance v12, Ljava/io/File;
@@ -246,11 +233,9 @@
 
     invoke-direct {v12, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 586
     .local v12, "rootFile":Ljava/io/File;
     const-wide/16 v4, 0x0
 
-    .line 587
     .local v4, "directorySize":J
     invoke-virtual {v12}, Ljava/io/File;->exists()Z
 
@@ -258,16 +243,13 @@
 
     if-eqz v15, :cond_4
 
-    .line 588
     new-instance v13, Ljava/util/LinkedList;
 
     invoke-direct {v13}, Ljava/util/LinkedList;-><init>()V
 
-    .line 589
     .local v13, "scanQueue":Ljava/util/LinkedList;, "Ljava/util/LinkedList<Ljava/io/File;>;"
     invoke-virtual {v13, v12}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
-    .line 591
     :cond_0
     :goto_0
     invoke-virtual {v13}, Ljava/util/LinkedList;->size()I
@@ -276,7 +258,6 @@
 
     if-lez v15, :cond_4
 
-    .line 592
     const/4 v15, 0x0
 
     invoke-virtual {v13, v15}, Ljava/util/LinkedList;->remove(I)Ljava/lang/Object;
@@ -285,14 +266,12 @@
 
     check-cast v8, Ljava/io/File;
 
-    .line 595
     .local v8, "file":Ljava/io/File;
     :try_start_0
     invoke-virtual {v8}, Ljava/io/File;->getCanonicalPath()Ljava/lang/String;
 
     move-result-object v9
 
-    .line 597
     .local v9, "filePath":Ljava/lang/String;
     if-eqz p2, :cond_1
 
@@ -304,7 +283,6 @@
 
     if-nez v15, :cond_0
 
-    .line 601
     :cond_1
     if-eqz p3, :cond_2
 
@@ -316,13 +294,11 @@
 
     if-nez v15, :cond_0
 
-    .line 606
     :cond_2
     invoke-static {v9}, Landroid/system/Os;->lstat(Ljava/lang/String;)Landroid/system/StructStat;
 
     move-result-object v14
 
-    .line 607
     .local v14, "stat":Landroid/system/StructStat;
     iget v15, v14, Landroid/system/StructStat;->st_mode:I
 
@@ -332,7 +308,6 @@
 
     if-nez v15, :cond_0
 
-    .line 610
     iget v15, v14, Landroid/system/StructStat;->st_mode:I
 
     invoke-static {v15}, Landroid/system/OsConstants;->S_ISDIR(I)Z
@@ -341,16 +316,13 @@
 
     if-eqz v15, :cond_3
 
-    .line 611
     invoke-virtual {v8}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object v3
 
-    .line 612
     .local v3, "contents":[Ljava/io/File;
     if-eqz v3, :cond_0
 
-    .line 613
     move-object v2, v3
 
     .local v2, "arr$":[Ljava/io/File;
@@ -365,18 +337,15 @@
 
     aget-object v7, v2, v10
 
-    .line 614
     .local v7, "entry":Ljava/io/File;
     const/4 v15, 0x0
 
     invoke-virtual {v13, v15, v7}, Ljava/util/LinkedList;->add(ILjava/lang/Object;)V
 
-    .line 613
     add-int/lit8 v10, v10, 0x1
 
     goto :goto_1
 
-    .line 618
     .end local v2    # "arr$":[Ljava/io/File;
     .end local v3    # "contents":[Ljava/io/File;
     .end local v7    # "entry":Ljava/io/File;
@@ -394,26 +363,21 @@
 
     goto :goto_0
 
-    .line 620
     .end local v9    # "filePath":Ljava/lang/String;
     .end local v14    # "stat":Landroid/system/StructStat;
     :catch_0
     move-exception v6
 
-    .line 622
     .local v6, "e":Ljava/io/IOException;
     goto :goto_0
 
-    .line 623
     .end local v6    # "e":Ljava/io/IOException;
     :catch_1
     move-exception v6
 
-    .line 625
     .local v6, "e":Landroid/system/ErrnoException;
     goto :goto_0
 
-    .line 630
     .end local v6    # "e":Landroid/system/ErrnoException;
     .end local v8    # "file":Ljava/io/File;
     .end local v13    # "scanQueue":Ljava/util/LinkedList;, "Ljava/util/LinkedList<Ljava/io/File;>;"
@@ -435,12 +399,10 @@
 
     const/4 v8, 0x0
 
-    .line 670
     invoke-static {p0}, Landroid/app/backup/FullBackup;->getBackupScheme(Landroid/content/Context;)Landroid/app/backup/FullBackup$BackupScheme;
 
     move-result-object v0
 
-    .line 671
     .local v0, "bs":Landroid/app/backup/FullBackup$BackupScheme;
     invoke-virtual {v0}, Landroid/app/backup/FullBackup$BackupScheme;->isFullBackupContentEnabled()Z
 
@@ -448,7 +410,6 @@
 
     if-nez v9, :cond_1
 
-    .line 672
     const-string v9, "BackupXmlParserLogging"
 
     invoke-static {v9, v10}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
@@ -457,14 +418,13 @@
 
     if-eqz v9, :cond_0
 
-    .line 673
     const-string v9, "BackupXmlParserLogging"
 
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v11, "onRestoreFile \""
+    const-string v11, "onRestoreFile \""
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -498,40 +458,33 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 726
     :cond_0
     :goto_0
     return v8
 
-    .line 680
     :cond_1
     const/4 v7, 0x0
 
-    .line 681
     .local v7, "includes":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/Set<Ljava/lang/String;>;>;"
     const/4 v4, 0x0
 
-    .line 682
     .local v4, "excludes":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Ljava/lang/String;>;"
     invoke-virtual {p1}, Ljava/io/File;->getCanonicalPath()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 684
     .local v1, "destinationCanonicalPath":Ljava/lang/String;
     :try_start_0
     invoke-virtual {v0}, Landroid/app/backup/FullBackup$BackupScheme;->maybeParseAndGetCanonicalIncludePaths()Ljava/util/Map;
 
     move-result-object v7
 
-    .line 685
     invoke-virtual {v0}, Landroid/app/backup/FullBackup$BackupScheme;->maybeParseAndGetCanonicalExcludePaths()Landroid/util/ArraySet;
     :try_end_0
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v4
 
-    .line 696
     if-eqz v4, :cond_2
 
     invoke-direct {p0, p1, v4}, Landroid/app/backup/BackupAgent;->isFileSpecifiedInPathList(Ljava/io/File;Ljava/util/Collection;)Z
@@ -540,7 +493,6 @@
 
     if-eqz v9, :cond_2
 
-    .line 698
     const-string v9, "BackupXmlParserLogging"
 
     invoke-static {v9, v10}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
@@ -549,14 +501,13 @@
 
     if-eqz v9, :cond_0
 
-    .line 699
     const-string v9, "BackupXmlParserLogging"
 
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v11, "onRestoreFile: \""
+    const-string v11, "onRestoreFile: \""
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -586,11 +537,9 @@
 
     goto :goto_0
 
-    .line 686
     :catch_0
     move-exception v3
 
-    .line 687
     .local v3, "e":Lorg/xmlpull/v1/XmlPullParserException;
     const-string v9, "BackupXmlParserLogging"
 
@@ -600,14 +549,13 @@
 
     if-eqz v9, :cond_0
 
-    .line 688
     const-string v9, "BackupXmlParserLogging"
 
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v11, "onRestoreFile \""
+    const-string v11, "onRestoreFile \""
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -637,7 +585,6 @@
 
     goto :goto_0
 
-    .line 706
     .end local v3    # "e":Lorg/xmlpull/v1/XmlPullParserException;
     :cond_2
     if-eqz v7, :cond_5
@@ -648,10 +595,8 @@
 
     if-nez v9, :cond_5
 
-    .line 709
     const/4 v5, 0x0
 
-    .line 710
     .local v5, "explicitlyIncluded":Z
     invoke-interface {v7}, Ljava/util/Map;->values()Ljava/util/Collection;
 
@@ -675,7 +620,6 @@
 
     check-cast v2, Ljava/util/Set;
 
-    .line 711
     .local v2, "domainIncludes":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     invoke-direct {p0, p1, v2}, Landroid/app/backup/BackupAgent;->isFileSpecifiedInPathList(Ljava/io/File;Ljava/util/Collection;)Z
 
@@ -683,15 +627,12 @@
 
     or-int/2addr v5, v9
 
-    .line 712
     if-eqz v5, :cond_3
 
-    .line 716
     .end local v2    # "domainIncludes":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     :cond_4
     if-nez v5, :cond_5
 
-    .line 717
     const-string v9, "BackupXmlParserLogging"
 
     invoke-static {v9, v10}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
@@ -700,14 +641,13 @@
 
     if-eqz v9, :cond_0
 
-    .line 718
     const-string v9, "BackupXmlParserLogging"
 
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v11, "onRestoreFile: Trying to restore \""
+    const-string v11, "onRestoreFile: Trying to restore \""
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -737,7 +677,6 @@
 
     goto/16 :goto_0
 
-    .line 726
     .end local v5    # "explicitlyIncluded":Z
     .end local v6    # "i$":Ljava/util/Iterator;
     :cond_5
@@ -767,7 +706,6 @@
     .end annotation
 
     .prologue
-    .line 735
     .local p2, "canonicalPathList":Ljava/util/Collection;, "Ljava/util/Collection<Ljava/lang/String;>;"
     invoke-interface {p2}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
@@ -787,13 +725,11 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 736
     .local v0, "canonicalPath":Ljava/lang/String;
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 737
     .local v1, "fileFromList":Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->isDirectory()Z
 
@@ -801,25 +737,21 @@
 
     if-eqz v3, :cond_2
 
-    .line 738
     invoke-virtual {p1}, Ljava/io/File;->isDirectory()Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 740
     invoke-virtual {p1, v1}, Ljava/io/File;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
-    .line 752
     .end local v0    # "canonicalPath":Ljava/lang/String;
     .end local v1    # "fileFromList":Ljava/io/File;
     :goto_0
     return v3
 
-    .line 743
     .restart local v0    # "canonicalPath":Ljava/lang/String;
     .restart local v1    # "fileFromList":Ljava/io/File;
     :cond_1
@@ -833,7 +765,6 @@
 
     goto :goto_0
 
-    .line 746
     :cond_2
     invoke-virtual {p1, v1}, Ljava/io/File;->equals(Ljava/lang/Object;)Z
 
@@ -841,12 +772,10 @@
 
     if-eqz v3, :cond_0
 
-    .line 748
     const/4 v3, 0x1
 
     goto :goto_0
 
-    .line 752
     .end local v0    # "canonicalPath":Ljava/lang/String;
     .end local v1    # "fileFromList":Ljava/io/File;
     :cond_3
@@ -859,22 +788,18 @@
     .locals 3
 
     .prologue
-    .line 156
     invoke-virtual {p0}, Landroid/app/backup/BackupAgent;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
 
-    .line 157
     .local v0, "h":Landroid/os/Handler;
     new-instance v1, Landroid/app/backup/BackupAgent$SharedPrefsSynchronizer;
 
     invoke-direct {v1, p0}, Landroid/app/backup/BackupAgent$SharedPrefsSynchronizer;-><init>(Landroid/app/backup/BackupAgent;)V
 
-    .line 158
     .local v1, "s":Landroid/app/backup/BackupAgent$SharedPrefsSynchronizer;
     invoke-virtual {v0, v1}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
 
-    .line 160
     :try_start_0
     iget-object v2, v1, Landroid/app/backup/BackupAgent$SharedPrefsSynchronizer;->mLatch:Ljava/util/concurrent/CountDownLatch;
 
@@ -882,11 +807,9 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 162
     :goto_0
     return-void
 
-    .line 161
     :catch_0
     move-exception v2
 
@@ -900,10 +823,8 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 823
     invoke-virtual {p0, p1}, Landroid/app/backup/BackupAgent;->attachBaseContext(Landroid/content/Context;)V
 
-    .line 824
     return-void
 .end method
 
@@ -913,16 +834,13 @@
     .param p2, "output"    # Landroid/app/backup/FullBackupDataOutput;
 
     .prologue
-    .line 433
     const/4 v12, 0x0
 
-    .line 436
     .local v12, "efDir":Ljava/lang/String;
     invoke-virtual/range {p0 .. p0}, Landroid/app/backup/BackupAgent;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v7
 
-    .line 439
     .local v7, "appInfo":Landroid/content/pm/ApplicationInfo;
     :try_start_0
     new-instance v1, Ljava/io/File;
@@ -935,7 +853,6 @@
 
     move-result-object v16
 
-    .line 440
     .local v16, "mainDir":Ljava/lang/String;
     invoke-virtual/range {p0 .. p0}, Landroid/app/backup/BackupAgent;->getFilesDir()Ljava/io/File;
 
@@ -945,7 +862,6 @@
 
     move-result-object v14
 
-    .line 441
     .local v14, "filesDir":Ljava/lang/String;
     invoke-virtual/range {p0 .. p0}, Landroid/app/backup/BackupAgent;->getNoBackupFilesDir()Ljava/io/File;
 
@@ -955,7 +871,6 @@
 
     move-result-object v17
 
-    .line 442
     .local v17, "nbFilesDir":Ljava/lang/String;
     const-string v1, "foo"
 
@@ -973,7 +888,6 @@
 
     move-result-object v10
 
-    .line 443
     .local v10, "dbDir":Ljava/lang/String;
     const-string v1, "foo"
 
@@ -991,7 +905,6 @@
 
     move-result-object v18
 
-    .line 444
     .local v18, "spDir":Ljava/lang/String;
     invoke-virtual/range {p0 .. p0}, Landroid/app/backup/BackupAgent;->getCacheDir()Ljava/io/File;
 
@@ -1001,7 +914,6 @@
 
     move-result-object v8
 
-    .line 445
     .local v8, "cacheDir":Ljava/lang/String;
     invoke-virtual/range {p0 .. p0}, Landroid/app/backup/BackupAgent;->getCodeCacheDir()Ljava/io/File;
 
@@ -1011,7 +923,6 @@
 
     move-result-object v9
 
-    .line 446
     .local v9, "codeCacheDir":Ljava/lang/String;
     iget-object v1, v7, Landroid/content/pm/ApplicationInfo;->nativeLibraryDir:Ljava/lang/String;
 
@@ -1019,7 +930,6 @@
 
     const/4 v15, 0x0
 
-    .line 451
     .local v15, "libDir":Ljava/lang/String;
     :goto_0
     invoke-static {}, Landroid/os/Process;->myUid()I
@@ -1030,7 +940,6 @@
 
     if-eq v1, v3, :cond_0
 
-    .line 452
     const/4 v1, 0x0
 
     move-object/from16 v0, p0
@@ -1039,16 +948,13 @@
 
     move-result-object v13
 
-    .line 453
     .local v13, "efLocation":Ljava/io/File;
     if-eqz v13, :cond_0
 
-    .line 454
     invoke-virtual {v13}, Ljava/io/File;->getCanonicalPath()Ljava/lang/String;
 
     move-result-object v12
 
-    .line 461
     .end local v13    # "efLocation":Ljava/io/File;
     :cond_0
     invoke-virtual/range {p1 .. p1}, Ljava/io/File;->getCanonicalPath()Ljava/lang/String;
@@ -1057,7 +963,6 @@
 
     move-result-object v5
 
-    .line 467
     .local v5, "filePath":Ljava/lang/String;
     invoke-virtual {v5, v8}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -1085,15 +990,13 @@
 
     if-eqz v1, :cond_3
 
-    .line 471
     :cond_1
     const-string v1, "BackupAgent"
 
-    const-string/jumbo v3, "lib, cache, code_cache, and no_backup files are not backed up"
+    const-string v3, "lib, cache, code_cache, and no_backup files are not backed up"
 
     invoke-static {v1, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 504
     .end local v5    # "filePath":Ljava/lang/String;
     .end local v8    # "cacheDir":Ljava/lang/String;
     .end local v9    # "codeCacheDir":Ljava/lang/String;
@@ -1106,7 +1009,6 @@
     :goto_1
     return-void
 
-    .line 446
     .restart local v8    # "cacheDir":Ljava/lang/String;
     .restart local v9    # "codeCacheDir":Ljava/lang/String;
     .restart local v10    # "dbDir":Ljava/lang/String;
@@ -1130,7 +1032,6 @@
 
     goto :goto_0
 
-    .line 462
     .end local v8    # "cacheDir":Ljava/lang/String;
     .end local v9    # "codeCacheDir":Ljava/lang/String;
     .end local v10    # "dbDir":Ljava/lang/String;
@@ -1141,7 +1042,6 @@
     :catch_0
     move-exception v11
 
-    .line 463
     .local v11, "e":Ljava/io/IOException;
     const-string v1, "BackupAgent"
 
@@ -1151,7 +1051,6 @@
 
     goto :goto_1
 
-    .line 476
     .end local v11    # "e":Ljava/io/IOException;
     .restart local v5    # "filePath":Ljava/lang/String;
     .restart local v8    # "cacheDir":Ljava/lang/String;
@@ -1165,7 +1064,6 @@
     :cond_3
     const/4 v4, 0x0
 
-    .line 477
     .local v4, "rootpath":Ljava/lang/String;
     invoke-virtual {v5, v10}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -1173,14 +1071,11 @@
 
     if-eqz v1, :cond_4
 
-    .line 478
     const-string v2, "db"
 
-    .line 479
     .local v2, "domain":Ljava/lang/String;
     move-object v4, v10
 
-    .line 503
     :goto_2
     invoke-virtual/range {p0 .. p0}, Landroid/app/backup/BackupAgent;->getPackageName()Ljava/lang/String;
 
@@ -1194,7 +1089,6 @@
 
     goto :goto_1
 
-    .line 480
     .end local v2    # "domain":Ljava/lang/String;
     :cond_4
     move-object/from16 v0, v18
@@ -1205,16 +1099,13 @@
 
     if-eqz v1, :cond_5
 
-    .line 481
-    const-string/jumbo v2, "sp"
+    const-string v2, "sp"
 
-    .line 482
     .restart local v2    # "domain":Ljava/lang/String;
     move-object/from16 v4, v18
 
     goto :goto_2
 
-    .line 483
     .end local v2    # "domain":Ljava/lang/String;
     :cond_5
     invoke-virtual {v5, v14}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -1223,16 +1114,13 @@
 
     if-eqz v1, :cond_6
 
-    .line 484
     const-string v2, "f"
 
-    .line 485
     .restart local v2    # "domain":Ljava/lang/String;
     move-object v4, v14
 
     goto :goto_2
 
-    .line 486
     .end local v2    # "domain":Ljava/lang/String;
     :cond_6
     move-object/from16 v0, v16
@@ -1243,16 +1131,13 @@
 
     if-eqz v1, :cond_7
 
-    .line 487
-    const-string/jumbo v2, "r"
+    const-string v2, "r"
 
-    .line 488
     .restart local v2    # "domain":Ljava/lang/String;
     move-object/from16 v4, v16
 
     goto :goto_2
 
-    .line 489
     .end local v2    # "domain":Ljava/lang/String;
     :cond_7
     if-eqz v12, :cond_8
@@ -1263,16 +1148,13 @@
 
     if-eqz v1, :cond_8
 
-    .line 490
     const-string v2, "ef"
 
-    .line 491
     .restart local v2    # "domain":Ljava/lang/String;
     move-object v4, v12
 
     goto :goto_2
 
-    .line 493
     .end local v2    # "domain":Ljava/lang/String;
     :cond_8
     const-string v1, "BackupAgent"
@@ -1332,7 +1214,6 @@
     .end annotation
 
     .prologue
-    .line 520
     .local p4, "manifestExcludes":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Ljava/lang/String;>;"
     .local p5, "systemExcludes":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Ljava/lang/String;>;"
     invoke-static/range {p0 .. p0}, Landroid/app/backup/FullBackup;->getBackupScheme(Landroid/content/Context;)Landroid/app/backup/FullBackup$BackupScheme;
@@ -1345,15 +1226,12 @@
 
     move-result-object v4
 
-    .line 521
     .local v4, "domainPath":Ljava/lang/String;
     if-nez v4, :cond_1
 
-    .line 576
     :cond_0
     return-void
 
-    .line 526
     :cond_1
     new-instance v14, Ljava/io/File;
 
@@ -1361,7 +1239,6 @@
 
     invoke-direct {v14, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 527
     .local v14, "rootFile":Ljava/io/File;
     invoke-virtual {v14}, Ljava/io/File;->exists()Z
 
@@ -1369,16 +1246,13 @@
 
     if-eqz v1, :cond_0
 
-    .line 528
     new-instance v15, Ljava/util/LinkedList;
 
     invoke-direct {v15}, Ljava/util/LinkedList;-><init>()V
 
-    .line 529
     .local v15, "scanQueue":Ljava/util/LinkedList;, "Ljava/util/LinkedList<Ljava/io/File;>;"
     invoke-virtual {v15, v14}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
-    .line 531
     :cond_2
     :goto_0
     invoke-virtual {v15}, Ljava/util/LinkedList;->size()I
@@ -1387,7 +1261,6 @@
 
     if-lez v1, :cond_0
 
-    .line 532
     const/4 v1, 0x0
 
     invoke-virtual {v15, v1}, Ljava/util/LinkedList;->remove(I)Ljava/lang/Object;
@@ -1396,14 +1269,12 @@
 
     check-cast v11, Ljava/io/File;
 
-    .line 535
     .local v11, "file":Ljava/io/File;
     :try_start_0
     invoke-virtual {v11}, Ljava/io/File;->getCanonicalPath()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 538
     .local v5, "filePath":Ljava/lang/String;
     if-eqz p4, :cond_3
 
@@ -1415,7 +1286,6 @@
 
     if-nez v1, :cond_2
 
-    .line 541
     :cond_3
     if-eqz p5, :cond_4
 
@@ -1427,13 +1297,11 @@
 
     if-nez v1, :cond_2
 
-    .line 546
     :cond_4
     invoke-static {v5}, Landroid/system/Os;->lstat(Ljava/lang/String;)Landroid/system/StructStat;
 
     move-result-object v16
 
-    .line 547
     .local v16, "stat":Landroid/system/StructStat;
     move-object/from16 v0, v16
 
@@ -1445,7 +1313,6 @@
 
     if-nez v1, :cond_2
 
-    .line 550
     move-object/from16 v0, v16
 
     iget v1, v0, Landroid/system/StructStat;->st_mode:I
@@ -1456,16 +1323,13 @@
 
     if-eqz v1, :cond_5
 
-    .line 551
     invoke-virtual {v11}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object v8
 
-    .line 552
     .local v8, "contents":[Ljava/io/File;
     if-eqz v8, :cond_5
 
-    .line 553
     move-object v7, v8
 
     .local v7, "arr$":[Ljava/io/File;
@@ -1480,7 +1344,6 @@
 
     aget-object v10, v7, v12
 
-    .line 554
     .local v10, "entry":Ljava/io/File;
     const/4 v1, 0x0
 
@@ -1489,12 +1352,10 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Landroid/system/ErrnoException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 553
     add-int/lit8 v12, v12, 0x1
 
     goto :goto_1
 
-    .line 558
     .end local v5    # "filePath":Ljava/lang/String;
     .end local v7    # "arr$":[Ljava/io/File;
     .end local v8    # "contents":[Ljava/io/File;
@@ -1505,7 +1366,6 @@
     :catch_0
     move-exception v9
 
-    .line 560
     .local v9, "e":Ljava/io/IOException;
     const-string v1, "BackupXmlParserLogging"
 
@@ -1517,7 +1377,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 561
     const-string v1, "BackupXmlParserLogging"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1542,12 +1401,10 @@
 
     goto :goto_0
 
-    .line 564
     .end local v9    # "e":Ljava/io/IOException;
     :catch_1
     move-exception v9
 
-    .line 566
     .local v9, "e":Landroid/system/ErrnoException;
     const-string v1, "BackupXmlParserLogging"
 
@@ -1559,7 +1416,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 567
     const-string v1, "BackupXmlParserLogging"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1594,7 +1450,6 @@
 
     goto/16 :goto_0
 
-    .line 573
     .end local v9    # "e":Landroid/system/ErrnoException;
     .restart local v5    # "filePath":Ljava/lang/String;
     .restart local v16    # "stat":Landroid/system/StructStat;
@@ -1616,12 +1471,10 @@
     .locals 2
 
     .prologue
-    .line 138
     iget-object v0, p0, Landroid/app/backup/BackupAgent;->mHandler:Landroid/os/Handler;
 
     if-nez v0, :cond_0
 
-    .line 139
     new-instance v0, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -1632,7 +1485,6 @@
 
     iput-object v0, p0, Landroid/app/backup/BackupAgent;->mHandler:Landroid/os/Handler;
 
-    .line 141
     :cond_0
     iget-object v0, p0, Landroid/app/backup/BackupAgent;->mHandler:Landroid/os/Handler;
 
@@ -1651,7 +1503,6 @@
     .locals 1
 
     .prologue
-    .line 816
     iget-object v0, p0, Landroid/app/backup/BackupAgent;->mBinder:Landroid/os/IBinder;
 
     return-object v0
@@ -1661,7 +1512,6 @@
     .locals 0
 
     .prologue
-    .line 176
     return-void
 .end method
 
@@ -1669,7 +1519,6 @@
     .locals 0
 
     .prologue
-    .line 185
     return-void
 .end method
 
@@ -1683,12 +1532,10 @@
     .end annotation
 
     .prologue
-    .line 289
     invoke-static/range {p0 .. p0}, Landroid/app/backup/FullBackup;->getBackupScheme(Landroid/content/Context;)Landroid/app/backup/FullBackup$BackupScheme;
 
     move-result-object v9
 
-    .line 290
     .local v9, "backupScheme":Landroid/app/backup/FullBackup$BackupScheme;
     invoke-virtual {v9}, Landroid/app/backup/FullBackup$BackupScheme;->isFullBackupContentEnabled()Z
 
@@ -1696,19 +1543,16 @@
 
     if-nez v1, :cond_1
 
-    .line 381
     :cond_0
     :goto_0
     return-void
 
-    .line 297
     :cond_1
     :try_start_0
     invoke-virtual {v9}, Landroid/app/backup/FullBackup$BackupScheme;->maybeParseAndGetCanonicalIncludePaths()Ljava/util/Map;
 
     move-result-object v4
 
-    .line 298
     .local v4, "manifestIncludeMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/Set<Ljava/lang/String;>;>;"
     invoke-virtual {v9}, Landroid/app/backup/FullBackup$BackupScheme;->maybeParseAndGetCanonicalExcludePaths()Landroid/util/ArraySet;
     :try_end_0
@@ -1717,19 +1561,16 @@
 
     move-result-object v5
 
-    .line 308
     .local v5, "manifestExcludeSet":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Ljava/lang/String;>;"
     invoke-virtual/range {p0 .. p0}, Landroid/app/backup/BackupAgent;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 309
     .local v2, "packageName":Ljava/lang/String;
     invoke-virtual/range {p0 .. p0}, Landroid/app/backup/BackupAgent;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v8
 
-    .line 311
     .local v8, "appInfo":Landroid/content/pm/ApplicationInfo;
     new-instance v1, Ljava/io/File;
 
@@ -1741,7 +1582,6 @@
 
     move-result-object v18
 
-    .line 312
     .local v18, "rootDir":Ljava/lang/String;
     invoke-virtual/range {p0 .. p0}, Landroid/app/backup/BackupAgent;->getFilesDir()Ljava/io/File;
 
@@ -1751,7 +1591,6 @@
 
     move-result-object v15
 
-    .line 313
     .local v15, "filesDir":Ljava/lang/String;
     invoke-virtual/range {p0 .. p0}, Landroid/app/backup/BackupAgent;->getNoBackupFilesDir()Ljava/io/File;
 
@@ -1761,7 +1600,6 @@
 
     move-result-object v17
 
-    .line 314
     .local v17, "nobackupDir":Ljava/lang/String;
     const-string v1, "foo"
 
@@ -1779,7 +1617,6 @@
 
     move-result-object v12
 
-    .line 315
     .local v12, "databaseDir":Ljava/lang/String;
     const-string v1, "foo"
 
@@ -1797,7 +1634,6 @@
 
     move-result-object v19
 
-    .line 316
     .local v19, "sharedPrefsDir":Ljava/lang/String;
     invoke-virtual/range {p0 .. p0}, Landroid/app/backup/BackupAgent;->getCacheDir()Ljava/io/File;
 
@@ -1807,7 +1643,6 @@
 
     move-result-object v10
 
-    .line 317
     .local v10, "cacheDir":Ljava/lang/String;
     invoke-virtual/range {p0 .. p0}, Landroid/app/backup/BackupAgent;->getCodeCacheDir()Ljava/io/File;
 
@@ -1817,7 +1652,6 @@
 
     move-result-object v11
 
-    .line 318
     .local v11, "codeCacheDir":Ljava/lang/String;
     iget-object v1, v8, Landroid/content/pm/ApplicationInfo;->nativeLibraryDir:Ljava/lang/String;
 
@@ -1833,47 +1667,37 @@
 
     move-result-object v16
 
-    .line 325
     .local v16, "libDir":Ljava/lang/String;
     :goto_1
     new-instance v6, Landroid/util/ArraySet;
 
     invoke-direct {v6}, Landroid/util/ArraySet;-><init>()V
 
-    .line 328
     .local v6, "traversalExcludeSet":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Ljava/lang/String;>;"
     invoke-virtual {v6, v10}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 329
     invoke-virtual {v6, v11}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 330
     move-object/from16 v0, v17
 
     invoke-virtual {v6, v0}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 331
     if-eqz v16, :cond_2
 
-    .line 332
     move-object/from16 v0, v16
 
     invoke-virtual {v6, v0}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 335
     :cond_2
     invoke-virtual {v6, v12}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 336
     move-object/from16 v0, v19
 
     invoke-virtual {v6, v0}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 337
     invoke-virtual {v6, v15}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 340
-    const-string/jumbo v3, "r"
+    const-string v3, "r"
 
     move-object/from16 v1, p0
 
@@ -1881,15 +1705,12 @@
 
     invoke-direct/range {v1 .. v7}, Landroid/app/backup/BackupAgent;->applyXmlFiltersAndDoFullBackupForDomain(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Landroid/util/ArraySet;Landroid/util/ArraySet;Landroid/app/backup/FullBackupDataOutput;)V
 
-    .line 343
     move-object/from16 v0, v18
 
     invoke-virtual {v6, v0}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 346
     invoke-virtual {v6, v15}, Landroid/util/ArraySet;->remove(Ljava/lang/Object;)Z
 
-    .line 347
     const-string v3, "f"
 
     move-object/from16 v1, p0
@@ -1898,13 +1719,10 @@
 
     invoke-direct/range {v1 .. v7}, Landroid/app/backup/BackupAgent;->applyXmlFiltersAndDoFullBackupForDomain(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Landroid/util/ArraySet;Landroid/util/ArraySet;Landroid/app/backup/FullBackupDataOutput;)V
 
-    .line 350
     invoke-virtual {v6, v15}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 353
     invoke-virtual {v6, v12}, Landroid/util/ArraySet;->remove(Ljava/lang/Object;)Z
 
-    .line 354
     const-string v3, "db"
 
     move-object/from16 v1, p0
@@ -1913,16 +1731,13 @@
 
     invoke-direct/range {v1 .. v7}, Landroid/app/backup/BackupAgent;->applyXmlFiltersAndDoFullBackupForDomain(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Landroid/util/ArraySet;Landroid/util/ArraySet;Landroid/app/backup/FullBackupDataOutput;)V
 
-    .line 357
     invoke-virtual {v6, v12}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 360
     move-object/from16 v0, v19
 
     invoke-virtual {v6, v0}, Landroid/util/ArraySet;->remove(Ljava/lang/Object;)Z
 
-    .line 361
-    const-string/jumbo v3, "sp"
+    const-string v3, "sp"
 
     move-object/from16 v1, p0
 
@@ -1930,12 +1745,10 @@
 
     invoke-direct/range {v1 .. v7}, Landroid/app/backup/BackupAgent;->applyXmlFiltersAndDoFullBackupForDomain(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Landroid/util/ArraySet;Landroid/util/ArraySet;Landroid/app/backup/FullBackupDataOutput;)V
 
-    .line 364
     move-object/from16 v0, v19
 
     invoke-virtual {v6, v0}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 373
     invoke-static {}, Landroid/os/Process;->myUid()I
 
     move-result v1
@@ -1944,7 +1757,6 @@
 
     if-eq v1, v3, :cond_0
 
-    .line 374
     const/4 v1, 0x0
 
     move-object/from16 v0, p0
@@ -1953,11 +1765,9 @@
 
     move-result-object v14
 
-    .line 375
     .local v14, "efLocation":Ljava/io/File;
     if-eqz v14, :cond_0
 
-    .line 376
     const-string v3, "ef"
 
     move-object/from16 v1, p0
@@ -1968,7 +1778,6 @@
 
     goto/16 :goto_0
 
-    .line 299
     .end local v2    # "packageName":Ljava/lang/String;
     .end local v4    # "manifestIncludeMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/Set<Ljava/lang/String;>;>;"
     .end local v5    # "manifestExcludeSet":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Ljava/lang/String;>;"
@@ -1986,7 +1795,6 @@
     :catch_0
     move-exception v13
 
-    .line 300
     .local v13, "e":Ljava/lang/Exception;
     :goto_2
     const-string v1, "BackupXmlParserLogging"
@@ -1999,7 +1807,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 301
     const-string v1, "BackupXmlParserLogging"
 
     const-string v3, "Exception trying to parse fullBackupContent xml file! Aborting full backup."
@@ -2008,7 +1815,6 @@
 
     goto/16 :goto_0
 
-    .line 318
     .end local v13    # "e":Ljava/lang/Exception;
     .restart local v2    # "packageName":Ljava/lang/String;
     .restart local v4    # "manifestIncludeMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/Set<Ljava/lang/String;>;>;"
@@ -2026,7 +1832,6 @@
 
     goto/16 :goto_1
 
-    .line 299
     .end local v2    # "packageName":Ljava/lang/String;
     .end local v4    # "manifestIncludeMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/Set<Ljava/lang/String;>;>;"
     .end local v5    # "manifestExcludeSet":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Ljava/lang/String;>;"
@@ -2068,10 +1873,8 @@
     .end annotation
 
     .prologue
-    .line 763
     const/16 v17, 0x0
 
-    .line 769
     .local v17, "basePath":Ljava/lang/String;
     invoke-static/range {p0 .. p0}, Landroid/app/backup/FullBackup;->getBackupScheme(Landroid/content/Context;)Landroid/app/backup/FullBackup$BackupScheme;
 
@@ -2083,7 +1886,6 @@
 
     move-result-object v17
 
-    .line 770
     const-string v2, "ef"
 
     move-object/from16 v0, p5
@@ -2094,14 +1896,11 @@
 
     if-eqz v2, :cond_0
 
-    .line 771
     const-wide/16 p7, -0x1
 
-    .line 775
     :cond_0
     if-eqz v17, :cond_1
 
-    .line 777
     new-instance v6, Ljava/io/File;
 
     move-object/from16 v0, v17
@@ -2110,13 +1909,11 @@
 
     invoke-direct {v6, v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 778
     .local v6, "outFile":Ljava/io/File;
     invoke-virtual {v6}, Ljava/io/File;->getCanonicalPath()Ljava/lang/String;
 
     move-result-object v18
 
-    .line 779
     .local v18, "outPath":Ljava/lang/String;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -2158,16 +1955,13 @@
 
     move-wide/from16 v10, p9
 
-    .line 781
     invoke-virtual/range {v2 .. v11}, Landroid/app/backup/BackupAgent;->onRestoreFile(Landroid/os/ParcelFileDescriptor;JLjava/io/File;IJJ)V
 
-    .line 796
     .end local v6    # "outFile":Ljava/io/File;
     .end local v18    # "outPath":Ljava/lang/String;
     :goto_0
     return-void
 
-    .line 795
     :cond_1
     const/16 v16, 0x0
 
@@ -2201,12 +1995,10 @@
     .end annotation
 
     .prologue
-    .line 664
     invoke-direct {p0, p4}, Landroid/app/backup/BackupAgent;->isFileEligibleForRestore(Ljava/io/File;)Z
 
     move-result v9
 
-    .line 666
     .local v9, "accept":Z
     if-eqz v9, :cond_0
 
@@ -2225,10 +2017,8 @@
 
     invoke-static/range {v0 .. v8}, Landroid/app/backup/FullBackup;->restoreFile(Landroid/os/ParcelFileDescriptor;JIJJLjava/io/File;)V
 
-    .line 667
     return-void
 
-    .line 666
     :cond_0
     const/4 v8, 0x0
 
@@ -2239,6 +2029,5 @@
     .locals 0
 
     .prologue
-    .line 810
     return-void
 .end method

@@ -29,16 +29,12 @@
     .param p5, "voiceName"    # Ljava/lang/String;
 
     .prologue
-    .line 1167
     iput-object p1, p0, Landroid/speech/tts/TextToSpeechService$LoadVoiceItem;->this$0:Landroid/speech/tts/TextToSpeechService;
 
-    .line 1168
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/speech/tts/TextToSpeechService$SpeechItem;-><init>(Landroid/speech/tts/TextToSpeechService;Ljava/lang/Object;II)V
 
-    .line 1169
     iput-object p5, p0, Landroid/speech/tts/TextToSpeechService$LoadVoiceItem;->mVoiceName:Ljava/lang/String;
 
-    .line 1170
     return-void
 .end method
 
@@ -48,7 +44,6 @@
     .locals 1
 
     .prologue
-    .line 1174
     const/4 v0, 0x1
 
     return v0
@@ -58,14 +53,12 @@
     .locals 2
 
     .prologue
-    .line 1179
     iget-object v0, p0, Landroid/speech/tts/TextToSpeechService$LoadVoiceItem;->this$0:Landroid/speech/tts/TextToSpeechService;
 
     iget-object v1, p0, Landroid/speech/tts/TextToSpeechService$LoadVoiceItem;->mVoiceName:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/speech/tts/TextToSpeechService;->onLoadVoice(Ljava/lang/String;)I
 
-    .line 1180
     return-void
 .end method
 
@@ -73,6 +66,5 @@
     .locals 0
 
     .prologue
-    .line 1185
     return-void
 .end method

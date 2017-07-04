@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 127
     iput-object p1, p0, Lcom/samsung/android/contextaware/utilbundle/CaPassiveCurrentPositionManager$1;->this$0:Lcom/samsung/android/contextaware/utilbundle/CaPassiveCurrentPositionManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "location"    # Landroid/location/Location;
 
     .prologue
-    .line 141
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/CaCurrentUtcTimeManager;->getInstance()Lcom/samsung/android/contextaware/utilbundle/CaCurrentUtcTimeManager;
 
     move-result-object v2
@@ -50,37 +48,31 @@
 
     move-result-object v17
 
-    .line 143
     .local v17, "utcTime":[I
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->getLatitude()D
 
     move-result-wide v6
 
-    .line 144
     .local v6, "latitude":D
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->getLongitude()D
 
     move-result-wide v8
 
-    .line 145
     .local v8, "longitude":D
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->getAltitude()D
 
     move-result-wide v10
 
-    .line 146
     .local v10, "altitude":D
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->getSpeed()F
 
     move-result v14
 
-    .line 147
     .local v14, "speed":F
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->getAccuracy()F
 
     move-result v15
 
-    .line 148
     .local v15, "accuracy":F
     move-object/from16 v0, p0
 
@@ -112,17 +104,15 @@
 
     move-result-wide v12
 
-    .line 151
     .local v12, "distance":D
     const/4 v4, 0x1
 
-    .line 153
     .local v4, "type":I
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->getProvider()Ljava/lang/String;
 
     move-result-object v2
 
-    const-string/jumbo v3, "network"
+    const-string v3, "network"
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -130,10 +120,8 @@
 
     if-eqz v2, :cond_2
 
-    .line 155
     const/4 v4, 0x2
 
-    .line 161
     :cond_0
     :goto_0
     move-object/from16 v0, p0
@@ -158,14 +146,12 @@
 
     invoke-virtual/range {v3 .. v16}, Lcom/samsung/android/contextaware/utilbundle/PositionContextBean;->setPosition(I[IDDDDFFI)V
 
-    .line 163
     const/high16 v2, 0x45960000    # 4800.0f
 
     cmpg-float v2, v15, v2
 
     if-gtz v2, :cond_1
 
-    .line 164
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/android/contextaware/utilbundle/CaPassiveCurrentPositionManager$1;->this$0:Lcom/samsung/android/contextaware/utilbundle/CaPassiveCurrentPositionManager;
@@ -181,11 +167,9 @@
 
     invoke-virtual {v2, v3}, Lcom/samsung/android/contextaware/utilbundle/CaPassiveCurrentPositionManager;->notifyPassiveCurrentPositionObserver(Lcom/samsung/android/contextaware/utilbundle/PositionContextBean;)V
 
-    .line 166
     :cond_1
     return-void
 
-    .line 157
     :cond_2
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->getProvider()Ljava/lang/String;
 
@@ -199,7 +183,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 159
     const/4 v4, 0x3
 
     goto :goto_0
@@ -210,12 +193,10 @@
     .param p1, "provider"    # Ljava/lang/String;
 
     .prologue
-    .line 170
     const-string v0, "Location service is disabled"
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->info(Ljava/lang/String;)V
 
-    .line 171
     return-void
 .end method
 
@@ -224,12 +205,10 @@
     .param p1, "provider"    # Ljava/lang/String;
 
     .prologue
-    .line 131
     const-string v0, "Location service is enabled"
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->info(Ljava/lang/String;)V
 
-    .line 132
     return-void
 .end method
 
@@ -240,6 +219,5 @@
     .param p3, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 176
     return-void
 .end method

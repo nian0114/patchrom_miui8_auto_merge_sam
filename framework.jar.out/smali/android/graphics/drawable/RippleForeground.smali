@@ -147,14 +147,12 @@
     .locals 4
 
     .prologue
-    .line 38
     new-instance v0, Landroid/view/animation/LinearInterpolator;
 
     invoke-direct {v0}, Landroid/view/animation/LinearInterpolator;-><init>()V
 
     sput-object v0, Landroid/graphics/drawable/RippleForeground;->LINEAR_INTERPOLATOR:Landroid/animation/TimeInterpolator;
 
-    .line 39
     new-instance v0, Landroid/graphics/drawable/RippleForeground$LogDecelerateInterpolator;
 
     const/high16 v1, 0x43c80000    # 400.0f
@@ -167,28 +165,25 @@
 
     sput-object v0, Landroid/graphics/drawable/RippleForeground;->DECELERATE_INTERPOLATOR:Landroid/animation/TimeInterpolator;
 
-    .line 394
     new-instance v0, Landroid/graphics/drawable/RippleForeground$2;
 
-    const-string/jumbo v1, "tweenRadius"
+    const-string v1, "tweenRadius"
 
     invoke-direct {v0, v1}, Landroid/graphics/drawable/RippleForeground$2;-><init>(Ljava/lang/String;)V
 
     sput-object v0, Landroid/graphics/drawable/RippleForeground;->TWEEN_RADIUS:Landroid/util/FloatProperty;
 
-    .line 411
     new-instance v0, Landroid/graphics/drawable/RippleForeground$3;
 
-    const-string/jumbo v1, "tweenOrigin"
+    const-string v1, "tweenOrigin"
 
     invoke-direct {v0, v1}, Landroid/graphics/drawable/RippleForeground$3;-><init>(Ljava/lang/String;)V
 
     sput-object v0, Landroid/graphics/drawable/RippleForeground;->TWEEN_ORIGIN:Landroid/util/FloatProperty;
 
-    .line 429
     new-instance v0, Landroid/graphics/drawable/RippleForeground$4;
 
-    const-string/jumbo v1, "opacity"
+    const-string v1, "opacity"
 
     invoke-direct {v0, v1}, Landroid/graphics/drawable/RippleForeground$4;-><init>(Ljava/lang/String;)V
 
@@ -209,52 +204,38 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 91
     invoke-direct {p0, p1, p2, p6}, Landroid/graphics/drawable/RippleComponent;-><init>(Landroid/graphics/drawable/RippleDrawable;Landroid/graphics/Rect;Z)V
 
-    .line 69
     iput v1, p0, Landroid/graphics/drawable/RippleForeground;->mTargetX:F
 
-    .line 70
     iput v1, p0, Landroid/graphics/drawable/RippleForeground;->mTargetY:F
 
-    .line 73
     iput v1, p0, Landroid/graphics/drawable/RippleForeground;->mBoundedRadius:F
 
-    .line 76
     const/high16 v0, 0x3f800000    # 1.0f
 
     iput v0, p0, Landroid/graphics/drawable/RippleForeground;->mOpacity:F
 
-    .line 79
     iput v1, p0, Landroid/graphics/drawable/RippleForeground;->mTweenRadius:F
 
-    .line 80
     iput v1, p0, Landroid/graphics/drawable/RippleForeground;->mTweenX:F
 
-    .line 81
     iput v1, p0, Landroid/graphics/drawable/RippleForeground;->mTweenY:F
 
-    .line 357
     new-instance v0, Landroid/graphics/drawable/RippleForeground$1;
 
     invoke-direct {v0, p0}, Landroid/graphics/drawable/RippleForeground$1;-><init>(Landroid/graphics/drawable/RippleForeground;)V
 
     iput-object v0, p0, Landroid/graphics/drawable/RippleForeground;->mAnimationListener:Landroid/animation/AnimatorListenerAdapter;
 
-    .line 93
     iput-boolean p5, p0, Landroid/graphics/drawable/RippleForeground;->mIsBounded:Z
 
-    .line 94
     iput p3, p0, Landroid/graphics/drawable/RippleForeground;->mStartingX:F
 
-    .line 95
     iput p4, p0, Landroid/graphics/drawable/RippleForeground;->mStartingY:F
 
-    .line 97
     if-eqz p5, :cond_0
 
-    .line 98
     const v0, 0x439d8000    # 315.0f
 
     const-wide v2, 0x4075e00000000000L    # 350.0
@@ -275,11 +256,9 @@
 
     iput v0, p0, Landroid/graphics/drawable/RippleForeground;->mBoundedRadius:F
 
-    .line 103
     :goto_0
     return-void
 
-    .line 101
     :cond_0
     iput v1, p0, Landroid/graphics/drawable/RippleForeground;->mBoundedRadius:F
 
@@ -292,7 +271,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 37
     iput-boolean p1, p0, Landroid/graphics/drawable/RippleForeground;->mHasFinishedExit:Z
 
     return p1
@@ -303,7 +281,6 @@
     .param p0, "x0"    # Landroid/graphics/drawable/RippleForeground;
 
     .prologue
-    .line 37
     iget v0, p0, Landroid/graphics/drawable/RippleForeground;->mTweenRadius:F
 
     return v0
@@ -315,7 +292,6 @@
     .param p1, "x1"    # F
 
     .prologue
-    .line 37
     iput p1, p0, Landroid/graphics/drawable/RippleForeground;->mTweenRadius:F
 
     return p1
@@ -326,7 +302,6 @@
     .param p0, "x0"    # Landroid/graphics/drawable/RippleForeground;
 
     .prologue
-    .line 37
     iget v0, p0, Landroid/graphics/drawable/RippleForeground;->mTweenX:F
 
     return v0
@@ -338,7 +313,6 @@
     .param p1, "x1"    # F
 
     .prologue
-    .line 37
     iput p1, p0, Landroid/graphics/drawable/RippleForeground;->mTweenX:F
 
     return p1
@@ -350,7 +324,6 @@
     .param p1, "x1"    # F
 
     .prologue
-    .line 37
     iput p1, p0, Landroid/graphics/drawable/RippleForeground;->mTweenY:F
 
     return p1
@@ -361,7 +334,6 @@
     .param p0, "x0"    # Landroid/graphics/drawable/RippleForeground;
 
     .prologue
-    .line 37
     iget v0, p0, Landroid/graphics/drawable/RippleForeground;->mOpacity:F
 
     return v0
@@ -373,7 +345,6 @@
     .param p1, "x1"    # F
 
     .prologue
-    .line 37
     iput p1, p0, Landroid/graphics/drawable/RippleForeground;->mOpacity:F
 
     return p1
@@ -383,14 +354,12 @@
     .locals 12
 
     .prologue
-    .line 341
     iget-object v7, p0, Landroid/graphics/drawable/RippleForeground;->mBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v7}, Landroid/graphics/Rect;->exactCenterX()F
 
     move-result v2
 
-    .line 342
     .local v2, "cX":F
     iget-object v7, p0, Landroid/graphics/drawable/RippleForeground;->mBounds:Landroid/graphics/Rect;
 
@@ -398,23 +367,19 @@
 
     move-result v3
 
-    .line 343
     .local v3, "cY":F
     iget v7, p0, Landroid/graphics/drawable/RippleForeground;->mStartingX:F
 
     sub-float v4, v7, v2
 
-    .line 344
     .local v4, "dX":F
     iget v7, p0, Landroid/graphics/drawable/RippleForeground;->mStartingY:F
 
     sub-float v5, v7, v3
 
-    .line 345
     .local v5, "dY":F
     iget v6, p0, Landroid/graphics/drawable/RippleForeground;->mTargetRadius:F
 
-    .line 346
     .local v6, "r":F
     mul-float v7, v4, v4
 
@@ -428,7 +393,6 @@
 
     if-lez v7, :cond_0
 
-    .line 348
     float-to-double v8, v5
 
     float-to-double v10, v4
@@ -437,7 +401,6 @@
 
     move-result-wide v0
 
-    .line 349
     .local v0, "angle":D
     invoke-static {v0, v1}, Ljava/lang/Math;->cos(D)D
 
@@ -453,7 +416,6 @@
 
     iput v7, p0, Landroid/graphics/drawable/RippleForeground;->mClampedStartingX:F
 
-    .line 350
     invoke-static {v0, v1}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v8
@@ -468,18 +430,15 @@
 
     iput v7, p0, Landroid/graphics/drawable/RippleForeground;->mClampedStartingY:F
 
-    .line 355
     .end local v0    # "angle":D
     :goto_0
     return-void
 
-    .line 352
     :cond_0
     iget v7, p0, Landroid/graphics/drawable/RippleForeground;->mStartingX:F
 
     iput v7, p0, Landroid/graphics/drawable/RippleForeground;->mClampedStartingX:F
 
-    .line 353
     iget v7, p0, Landroid/graphics/drawable/RippleForeground;->mStartingY:F
 
     iput v7, p0, Landroid/graphics/drawable/RippleForeground;->mClampedStartingY:F
@@ -493,7 +452,6 @@
     .prologue
     const v2, 0x3f333333    # 0.7f
 
-    .line 224
     iget v0, p0, Landroid/graphics/drawable/RippleForeground;->mClampedStartingX:F
 
     iget-object v1, p0, Landroid/graphics/drawable/RippleForeground;->mBounds:Landroid/graphics/Rect;
@@ -508,7 +466,6 @@
 
     iput v0, p0, Landroid/graphics/drawable/RippleForeground;->mTargetX:F
 
-    .line 225
     iget v0, p0, Landroid/graphics/drawable/RippleForeground;->mClampedStartingY:F
 
     iget-object v1, p0, Landroid/graphics/drawable/RippleForeground;->mBounds:Landroid/graphics/Rect;
@@ -523,12 +480,10 @@
 
     iput v0, p0, Landroid/graphics/drawable/RippleForeground;->mTargetY:F
 
-    .line 226
     iget v0, p0, Landroid/graphics/drawable/RippleForeground;->mBoundedRadius:F
 
     iput v0, p0, Landroid/graphics/drawable/RippleForeground;->mTargetRadius:F
 
-    .line 227
     return-void
 .end method
 
@@ -536,7 +491,6 @@
     .locals 3
 
     .prologue
-    .line 213
     const/4 v0, 0x0
 
     iget v1, p0, Landroid/graphics/drawable/RippleForeground;->mTargetRadius:F
@@ -554,7 +508,6 @@
     .locals 3
 
     .prologue
-    .line 199
     iget v0, p0, Landroid/graphics/drawable/RippleForeground;->mClampedStartingX:F
 
     iget-object v1, p0, Landroid/graphics/drawable/RippleForeground;->mBounds:Landroid/graphics/Rect;
@@ -580,7 +533,6 @@
     .locals 3
 
     .prologue
-    .line 203
     iget v0, p0, Landroid/graphics/drawable/RippleForeground;->mClampedStartingY:F
 
     iget-object v1, p0, Landroid/graphics/drawable/RippleForeground;->mBounds:Landroid/graphics/Rect;
@@ -606,7 +558,6 @@
     .locals 2
 
     .prologue
-    .line 217
     const/high16 v0, 0x447a0000    # 1000.0f
 
     iget v1, p0, Landroid/graphics/drawable/RippleForeground;->mOpacity:F
@@ -630,7 +581,6 @@
     .locals 6
 
     .prologue
-    .line 207
     iget v1, p0, Landroid/graphics/drawable/RippleForeground;->mTargetRadius:F
 
     invoke-direct {p0}, Landroid/graphics/drawable/RippleForeground;->getCurrentRadius()F
@@ -639,7 +589,6 @@
 
     sub-float v0, v1, v2
 
-    .line 208
     .local v0, "remainingRadius":F
     const-wide v2, 0x408f400000000000L    # 1000.0
 
@@ -675,40 +624,33 @@
     .param p1, "p"    # Landroid/graphics/Paint;
 
     .prologue
-    .line 286
     invoke-direct {p0}, Landroid/graphics/drawable/RippleForeground;->getRadiusExitDuration()I
 
     move-result v4
 
-    .line 287
     .local v4, "radiusDuration":I
     move v2, v4
 
-    .line 288
     .local v2, "originDuration":I
     invoke-direct {p0}, Landroid/graphics/drawable/RippleForeground;->getOpacityExitDuration()I
 
     move-result v1
 
-    .line 291
     .local v1, "opacityDuration":I
     invoke-direct {p0}, Landroid/graphics/drawable/RippleForeground;->getCurrentX()F
 
     move-result v7
 
-    .line 292
     .local v7, "startX":F
     invoke-direct {p0}, Landroid/graphics/drawable/RippleForeground;->getCurrentY()F
 
     move-result v8
 
-    .line 293
     .local v8, "startY":F
     invoke-direct {p0}, Landroid/graphics/drawable/RippleForeground;->getCurrentRadius()F
 
     move-result v6
 
-    .line 295
     .local v6, "startRadius":F
     invoke-virtual {p1}, Landroid/graphics/Paint;->getAlpha()I
 
@@ -728,35 +670,30 @@
 
     invoke-virtual {p1, v11}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 297
     invoke-static {p1}, Landroid/graphics/CanvasProperty;->createPaint(Landroid/graphics/Paint;)Landroid/graphics/CanvasProperty;
 
     move-result-object v11
 
     iput-object v11, p0, Landroid/graphics/drawable/RippleForeground;->mPropPaint:Landroid/graphics/CanvasProperty;
 
-    .line 298
     invoke-static {v6}, Landroid/graphics/CanvasProperty;->createFloat(F)Landroid/graphics/CanvasProperty;
 
     move-result-object v11
 
     iput-object v11, p0, Landroid/graphics/drawable/RippleForeground;->mPropRadius:Landroid/graphics/CanvasProperty;
 
-    .line 299
     invoke-static {v7}, Landroid/graphics/CanvasProperty;->createFloat(F)Landroid/graphics/CanvasProperty;
 
     move-result-object v11
 
     iput-object v11, p0, Landroid/graphics/drawable/RippleForeground;->mPropX:Landroid/graphics/CanvasProperty;
 
-    .line 300
     invoke-static {v8}, Landroid/graphics/CanvasProperty;->createFloat(F)Landroid/graphics/CanvasProperty;
 
     move-result-object v11
 
     iput-object v11, p0, Landroid/graphics/drawable/RippleForeground;->mPropY:Landroid/graphics/CanvasProperty;
 
-    .line 302
     new-instance v3, Landroid/view/RenderNodeAnimator;
 
     iget-object v11, p0, Landroid/graphics/drawable/RippleForeground;->mPropRadius:Landroid/graphics/CanvasProperty;
@@ -765,18 +702,15 @@
 
     invoke-direct {v3, v11, v12}, Landroid/view/RenderNodeAnimator;-><init>(Landroid/graphics/CanvasProperty;F)V
 
-    .line 303
     .local v3, "radius":Landroid/view/RenderNodeAnimator;
     int-to-long v12, v4
 
     invoke-virtual {v3, v12, v13}, Landroid/view/RenderNodeAnimator;->setDuration(J)Landroid/view/RenderNodeAnimator;
 
-    .line 304
     sget-object v11, Landroid/graphics/drawable/RippleForeground;->DECELERATE_INTERPOLATOR:Landroid/animation/TimeInterpolator;
 
     invoke-virtual {v3, v11}, Landroid/view/RenderNodeAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 306
     new-instance v9, Landroid/view/RenderNodeAnimator;
 
     iget-object v11, p0, Landroid/graphics/drawable/RippleForeground;->mPropX:Landroid/graphics/CanvasProperty;
@@ -785,18 +719,15 @@
 
     invoke-direct {v9, v11, v12}, Landroid/view/RenderNodeAnimator;-><init>(Landroid/graphics/CanvasProperty;F)V
 
-    .line 307
     .local v9, "x":Landroid/view/RenderNodeAnimator;
     int-to-long v12, v2
 
     invoke-virtual {v9, v12, v13}, Landroid/view/RenderNodeAnimator;->setDuration(J)Landroid/view/RenderNodeAnimator;
 
-    .line 308
     sget-object v11, Landroid/graphics/drawable/RippleForeground;->DECELERATE_INTERPOLATOR:Landroid/animation/TimeInterpolator;
 
     invoke-virtual {v9, v11}, Landroid/view/RenderNodeAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 310
     new-instance v10, Landroid/view/RenderNodeAnimator;
 
     iget-object v11, p0, Landroid/graphics/drawable/RippleForeground;->mPropY:Landroid/graphics/CanvasProperty;
@@ -805,18 +736,15 @@
 
     invoke-direct {v10, v11, v12}, Landroid/view/RenderNodeAnimator;-><init>(Landroid/graphics/CanvasProperty;F)V
 
-    .line 311
     .local v10, "y":Landroid/view/RenderNodeAnimator;
     int-to-long v12, v2
 
     invoke-virtual {v10, v12, v13}, Landroid/view/RenderNodeAnimator;->setDuration(J)Landroid/view/RenderNodeAnimator;
 
-    .line 312
     sget-object v11, Landroid/graphics/drawable/RippleForeground;->DECELERATE_INTERPOLATOR:Landroid/animation/TimeInterpolator;
 
     invoke-virtual {v10, v11}, Landroid/view/RenderNodeAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 314
     new-instance v0, Landroid/view/RenderNodeAnimator;
 
     iget-object v11, p0, Landroid/graphics/drawable/RippleForeground;->mPropPaint:Landroid/graphics/CanvasProperty;
@@ -827,41 +755,32 @@
 
     invoke-direct {v0, v11, v12, v13}, Landroid/view/RenderNodeAnimator;-><init>(Landroid/graphics/CanvasProperty;IF)V
 
-    .line 316
     .local v0, "opacity":Landroid/view/RenderNodeAnimator;
     int-to-long v12, v1
 
     invoke-virtual {v0, v12, v13}, Landroid/view/RenderNodeAnimator;->setDuration(J)Landroid/view/RenderNodeAnimator;
 
-    .line 317
     sget-object v11, Landroid/graphics/drawable/RippleForeground;->LINEAR_INTERPOLATOR:Landroid/animation/TimeInterpolator;
 
     invoke-virtual {v0, v11}, Landroid/view/RenderNodeAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 318
     iget-object v11, p0, Landroid/graphics/drawable/RippleForeground;->mAnimationListener:Landroid/animation/AnimatorListenerAdapter;
 
     invoke-virtual {v0, v11}, Landroid/view/RenderNodeAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 320
     new-instance v5, Landroid/graphics/drawable/RippleComponent$RenderNodeAnimatorSet;
 
     invoke-direct {v5}, Landroid/graphics/drawable/RippleComponent$RenderNodeAnimatorSet;-><init>()V
 
-    .line 321
     .local v5, "set":Landroid/graphics/drawable/RippleComponent$RenderNodeAnimatorSet;
     invoke-virtual {v5, v3}, Landroid/graphics/drawable/RippleComponent$RenderNodeAnimatorSet;->add(Landroid/view/RenderNodeAnimator;)V
 
-    .line 322
     invoke-virtual {v5, v0}, Landroid/graphics/drawable/RippleComponent$RenderNodeAnimatorSet;->add(Landroid/view/RenderNodeAnimator;)V
 
-    .line 323
     invoke-virtual {v5, v9}, Landroid/graphics/drawable/RippleComponent$RenderNodeAnimatorSet;->add(Landroid/view/RenderNodeAnimator;)V
 
-    .line 324
     invoke-virtual {v5, v10}, Landroid/graphics/drawable/RippleComponent$RenderNodeAnimatorSet;->add(Landroid/view/RenderNodeAnimator;)V
 
-    .line 326
     return-object v5
 .end method
 
@@ -870,7 +789,6 @@
     .param p1, "fast"    # Z
 
     .prologue
-    .line 172
     const-wide v6, 0x408f400000000000L    # 1000.0
 
     iget v5, p0, Landroid/graphics/drawable/RippleForeground;->mTargetRadius:F
@@ -897,7 +815,6 @@
 
     double-to-int v0, v6
 
-    .line 175
     .local v0, "duration":I
     sget-object v5, Landroid/graphics/drawable/RippleForeground;->TWEEN_RADIUS:Landroid/util/FloatProperty;
 
@@ -915,28 +832,23 @@
 
     move-result-object v4
 
-    .line 176
     .local v4, "tweenRadius":Landroid/animation/ObjectAnimator;
     const/4 v5, 0x1
 
     invoke-virtual {v4, v5}, Landroid/animation/ObjectAnimator;->setAutoCancel(Z)V
 
-    .line 177
     int-to-long v6, v0
 
     invoke-virtual {v4, v6, v7}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 178
     sget-object v5, Landroid/graphics/drawable/RippleForeground;->LINEAR_INTERPOLATOR:Landroid/animation/TimeInterpolator;
 
     invoke-virtual {v4, v5}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 179
     const-wide/16 v6, 0x50
 
     invoke-virtual {v4, v6, v7}, Landroid/animation/ObjectAnimator;->setStartDelay(J)V
 
-    .line 181
     sget-object v5, Landroid/graphics/drawable/RippleForeground;->TWEEN_ORIGIN:Landroid/util/FloatProperty;
 
     const/4 v6, 0x1
@@ -953,28 +865,23 @@
 
     move-result-object v3
 
-    .line 182
     .local v3, "tweenOrigin":Landroid/animation/ObjectAnimator;
     const/4 v5, 0x1
 
     invoke-virtual {v3, v5}, Landroid/animation/ObjectAnimator;->setAutoCancel(Z)V
 
-    .line 183
     int-to-long v6, v0
 
     invoke-virtual {v3, v6, v7}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 184
     sget-object v5, Landroid/graphics/drawable/RippleForeground;->LINEAR_INTERPOLATOR:Landroid/animation/TimeInterpolator;
 
     invoke-virtual {v3, v5}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 185
     const-wide/16 v6, 0x50
 
     invoke-virtual {v3, v6, v7}, Landroid/animation/ObjectAnimator;->setStartDelay(J)V
 
-    .line 187
     sget-object v5, Landroid/graphics/drawable/RippleForeground;->OPACITY:Landroid/util/FloatProperty;
 
     const/4 v6, 0x1
@@ -991,28 +898,23 @@
 
     move-result-object v1
 
-    .line 188
     .local v1, "opacity":Landroid/animation/ObjectAnimator;
     const/4 v5, 0x1
 
     invoke-virtual {v1, v5}, Landroid/animation/ObjectAnimator;->setAutoCancel(Z)V
 
-    .line 189
     const-wide/16 v6, 0x78
 
     invoke-virtual {v1, v6, v7}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 190
     sget-object v5, Landroid/graphics/drawable/RippleForeground;->LINEAR_INTERPOLATOR:Landroid/animation/TimeInterpolator;
 
     invoke-virtual {v1, v5}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 192
     new-instance v2, Landroid/animation/AnimatorSet;
 
     invoke-direct {v2}, Landroid/animation/AnimatorSet;-><init>()V
 
-    .line 193
     .local v2, "set":Landroid/animation/AnimatorSet;
     invoke-virtual {v2, v3}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
 
@@ -1024,7 +926,6 @@
 
     invoke-virtual {v5, v1}, Landroid/animation/AnimatorSet$Builder;->with(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
 
-    .line 195
     return-object v2
 .end method
 
@@ -1038,22 +939,18 @@
 
     const/4 v10, 0x1
 
-    .line 244
     invoke-direct {p0}, Landroid/graphics/drawable/RippleForeground;->getRadiusExitDuration()I
 
     move-result v3
 
-    .line 245
     .local v3, "radiusDuration":I
     move v2, v3
 
-    .line 246
     .local v2, "originDuration":I
     invoke-direct {p0}, Landroid/graphics/drawable/RippleForeground;->getOpacityExitDuration()I
 
     move-result v1
 
-    .line 249
     .local v1, "opacityDuration":I
     sget-object v7, Landroid/graphics/drawable/RippleForeground;->TWEEN_RADIUS:Landroid/util/FloatProperty;
 
@@ -1065,21 +962,17 @@
 
     move-result-object v6
 
-    .line 250
     .local v6, "tweenRadius":Landroid/animation/ObjectAnimator;
     invoke-virtual {v6, v10}, Landroid/animation/ObjectAnimator;->setAutoCancel(Z)V
 
-    .line 251
     int-to-long v8, v3
 
     invoke-virtual {v6, v8, v9}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 252
     sget-object v7, Landroid/graphics/drawable/RippleForeground;->DECELERATE_INTERPOLATOR:Landroid/animation/TimeInterpolator;
 
     invoke-virtual {v6, v7}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 254
     sget-object v7, Landroid/graphics/drawable/RippleForeground;->TWEEN_ORIGIN:Landroid/util/FloatProperty;
 
     new-array v8, v10, [F
@@ -1090,21 +983,17 @@
 
     move-result-object v5
 
-    .line 255
     .local v5, "tweenOrigin":Landroid/animation/ObjectAnimator;
     invoke-virtual {v5, v10}, Landroid/animation/ObjectAnimator;->setAutoCancel(Z)V
 
-    .line 256
     int-to-long v8, v2
 
     invoke-virtual {v5, v8, v9}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 257
     sget-object v7, Landroid/graphics/drawable/RippleForeground;->DECELERATE_INTERPOLATOR:Landroid/animation/TimeInterpolator;
 
     invoke-virtual {v5, v7}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 259
     sget-object v7, Landroid/graphics/drawable/RippleForeground;->OPACITY:Landroid/util/FloatProperty;
 
     new-array v8, v10, [F
@@ -1117,26 +1006,21 @@
 
     move-result-object v0
 
-    .line 260
     .local v0, "opacity":Landroid/animation/ObjectAnimator;
     invoke-virtual {v0, v10}, Landroid/animation/ObjectAnimator;->setAutoCancel(Z)V
 
-    .line 261
     int-to-long v8, v1
 
     invoke-virtual {v0, v8, v9}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 262
     sget-object v7, Landroid/graphics/drawable/RippleForeground;->LINEAR_INTERPOLATOR:Landroid/animation/TimeInterpolator;
 
     invoke-virtual {v0, v7}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 264
     new-instance v4, Landroid/animation/AnimatorSet;
 
     invoke-direct {v4}, Landroid/animation/AnimatorSet;-><init>()V
 
-    .line 265
     .local v4, "set":Landroid/animation/AnimatorSet;
     invoke-virtual {v4, v5}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
 
@@ -1148,12 +1032,10 @@
 
     invoke-virtual {v7, v0}, Landroid/animation/AnimatorSet$Builder;->with(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
 
-    .line 266
     iget-object v7, p0, Landroid/graphics/drawable/RippleForeground;->mAnimationListener:Landroid/animation/AnimatorListenerAdapter;
 
     invoke-virtual {v4, v7}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 268
     return-object v4
 .end method
 
@@ -1162,7 +1044,6 @@
     .param p1, "c"    # Landroid/view/DisplayListCanvas;
 
     .prologue
-    .line 131
     iget-object v0, p0, Landroid/graphics/drawable/RippleForeground;->mPropX:Landroid/graphics/CanvasProperty;
 
     iget-object v1, p0, Landroid/graphics/drawable/RippleForeground;->mPropY:Landroid/graphics/CanvasProperty;
@@ -1173,7 +1054,6 @@
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/view/DisplayListCanvas;->drawCircle(Landroid/graphics/CanvasProperty;Landroid/graphics/CanvasProperty;Landroid/graphics/CanvasProperty;Landroid/graphics/CanvasProperty;)V
 
-    .line 132
     const/4 v0, 0x1
 
     return v0
@@ -1185,16 +1065,13 @@
     .param p2, "p"    # Landroid/graphics/Paint;
 
     .prologue
-    .line 112
     const/4 v1, 0x0
 
-    .line 114
     .local v1, "hasContent":Z
     invoke-virtual {p2}, Landroid/graphics/Paint;->getAlpha()I
 
     move-result v2
 
-    .line 115
     .local v2, "origAlpha":I
     int-to-float v6, v2
 
@@ -1208,13 +1085,11 @@
 
     float-to-int v0, v6
 
-    .line 116
     .local v0, "alpha":I
     invoke-direct {p0}, Landroid/graphics/drawable/RippleForeground;->getCurrentRadius()F
 
     move-result v3
 
-    .line 117
     .local v3, "radius":F
     if-lez v0, :cond_0
 
@@ -1224,31 +1099,24 @@
 
     if-lez v6, :cond_0
 
-    .line 118
     invoke-direct {p0}, Landroid/graphics/drawable/RippleForeground;->getCurrentX()F
 
     move-result v4
 
-    .line 119
     .local v4, "x":F
     invoke-direct {p0}, Landroid/graphics/drawable/RippleForeground;->getCurrentY()F
 
     move-result v5
 
-    .line 120
     .local v5, "y":F
     invoke-virtual {p2, v0}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 121
     invoke-virtual {p1, v4, v5, v3, p2}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 122
     invoke-virtual {p2, v2}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 123
     const/4 v1, 0x1
 
-    .line 126
     .end local v4    # "x":F
     .end local v5    # "y":F
     :cond_0
@@ -1260,18 +1128,15 @@
     .param p1, "bounds"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 139
     iget v3, p0, Landroid/graphics/drawable/RippleForeground;->mTargetX:F
 
     float-to-int v0, v3
 
-    .line 140
     .local v0, "outerX":I
     iget v3, p0, Landroid/graphics/drawable/RippleForeground;->mTargetY:F
 
     float-to-int v1, v3
 
-    .line 141
     .local v1, "outerY":I
     iget v3, p0, Landroid/graphics/drawable/RippleForeground;->mTargetRadius:F
 
@@ -1279,7 +1144,6 @@
 
     add-int/lit8 v2, v3, 0x1
 
-    .line 142
     .local v2, "r":I
     sub-int v3, v0, v2
 
@@ -1291,7 +1155,6 @@
 
     invoke-virtual {p1, v3, v4, v5, v6}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 143
     return-void
 .end method
 
@@ -1299,7 +1162,6 @@
     .locals 1
 
     .prologue
-    .line 160
     iget-boolean v0, p0, Landroid/graphics/drawable/RippleForeground;->mHasFinishedExit:Z
 
     return v0
@@ -1311,21 +1173,16 @@
     .prologue
     const/high16 v1, 0x3f800000    # 1.0f
 
-    .line 331
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/graphics/drawable/RippleForeground;->mOpacity:F
 
-    .line 332
     iput v1, p0, Landroid/graphics/drawable/RippleForeground;->mTweenX:F
 
-    .line 333
     iput v1, p0, Landroid/graphics/drawable/RippleForeground;->mTweenY:F
 
-    .line 334
     iput v1, p0, Landroid/graphics/drawable/RippleForeground;->mTweenRadius:F
 
-    .line 335
     return-void
 .end method
 
@@ -1335,16 +1192,12 @@
     .param p2, "y"    # F
 
     .prologue
-    .line 150
     iput p1, p0, Landroid/graphics/drawable/RippleForeground;->mStartingX:F
 
-    .line 151
     iput p2, p0, Landroid/graphics/drawable/RippleForeground;->mStartingY:F
 
-    .line 153
     invoke-direct {p0}, Landroid/graphics/drawable/RippleForeground;->clampStartingPosition()V
 
-    .line 154
     return-void
 .end method
 
@@ -1353,9 +1206,7 @@
     .param p1, "targetRadius"    # F
 
     .prologue
-    .line 107
     invoke-direct {p0}, Landroid/graphics/drawable/RippleForeground;->clampStartingPosition()V
 
-    .line 108
     return-void
 .end method

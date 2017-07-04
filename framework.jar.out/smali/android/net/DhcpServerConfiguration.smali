@@ -52,7 +52,6 @@
     .locals 1
 
     .prologue
-    .line 141
     new-instance v0, Landroid/net/DhcpServerConfiguration$1;
 
     invoke-direct {v0}, Landroid/net/DhcpServerConfiguration$1;-><init>()V
@@ -70,33 +69,24 @@
 
     const/4 v1, 0x0
 
-    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 48
     iput-object v1, p0, Landroid/net/DhcpServerConfiguration;->localIp:Ljava/lang/String;
 
-    .line 49
     iput-object v1, p0, Landroid/net/DhcpServerConfiguration;->subnetmask:Ljava/lang/String;
 
-    .line 50
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/net/DhcpServerConfiguration;->dhcpEnable:Z
 
-    .line 51
     iput-object v1, p0, Landroid/net/DhcpServerConfiguration;->ipRangeStart:Ljava/lang/String;
 
-    .line 52
     iput-object v1, p0, Landroid/net/DhcpServerConfiguration;->ipRangeEnd:Ljava/lang/String;
 
-    .line 53
     iput v2, p0, Landroid/net/DhcpServerConfiguration;->leaseTime:I
 
-    .line 54
     iput v2, p0, Landroid/net/DhcpServerConfiguration;->maxClient:I
 
-    .line 55
     return-void
 .end method
 
@@ -107,17 +97,13 @@
     .prologue
     const/4 v4, 0x4
 
-    .line 108
     if-nez p0, :cond_0
 
-    .line 109
     const/4 v3, -0x1
 
-    .line 117
     :goto_0
     return v3
 
-    .line 111
     :cond_0
     const-string v3, "\\."
 
@@ -125,11 +111,9 @@
 
     move-result-object v0
 
-    .line 113
     .local v0, "addrArray":[Ljava/lang/String;
     new-array v2, v4, [I
 
-    .line 114
     .local v2, "ipOct":[I
     const/4 v1, 0x0
 
@@ -137,7 +121,6 @@
     :goto_1
     if-ge v1, v4, :cond_1
 
-    .line 115
     aget-object v3, v0, v1
 
     invoke-static {v3}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -146,12 +129,10 @@
 
     aput v3, v2, v1
 
-    .line 114
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 117
     :cond_1
     const/4 v3, 0x0
 
@@ -192,7 +173,6 @@
     .prologue
     const/16 v2, 0x2e
 
-    .line 101
     and-int/lit16 v0, p1, 0xff
 
     invoke-virtual {p0, v0}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
@@ -233,7 +213,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
 
-    .line 105
     return-void
 .end method
 
@@ -243,7 +222,6 @@
     .locals 1
 
     .prologue
-    .line 59
     const/4 v0, 0x0
 
     return v0
@@ -258,15 +236,12 @@
 
     const/4 v2, 0x0
 
-    .line 66
     if-ne p0, p1, :cond_1
 
-    .line 76
     :cond_0
     :goto_0
     return v1
 
-    .line 70
     :cond_1
     instance-of v3, p1, Landroid/net/DhcpServerConfiguration;
 
@@ -274,16 +249,13 @@
 
     move v1, v2
 
-    .line 71
     goto :goto_0
 
     :cond_2
     move-object v0, p1
 
-    .line 74
     check-cast v0, Landroid/net/DhcpServerConfiguration;
 
-    .line 76
     .local v0, "testConfig":Landroid/net/DhcpServerConfiguration;
     iget-object v3, p0, Landroid/net/DhcpServerConfiguration;->localIp:Ljava/lang/String;
 
@@ -401,12 +373,10 @@
     .locals 3
 
     .prologue
-    .line 89
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 90
     .local v0, "sbuf":Ljava/lang/StringBuffer;
     iget-object v1, p0, Landroid/net/DhcpServerConfiguration;->localIp:Ljava/lang/String;
 
@@ -418,7 +388,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 91
     iget-object v1, p0, Landroid/net/DhcpServerConfiguration;->subnetmask:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
@@ -429,7 +398,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 92
     iget-boolean v1, p0, Landroid/net/DhcpServerConfiguration;->dhcpEnable:Z
 
     if-eqz v1, :cond_0
@@ -445,7 +413,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 93
     iget-object v1, p0, Landroid/net/DhcpServerConfiguration;->ipRangeStart:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
@@ -456,7 +423,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 94
     iget-object v1, p0, Landroid/net/DhcpServerConfiguration;->ipRangeEnd:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
@@ -467,7 +433,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 95
     iget v1, p0, Landroid/net/DhcpServerConfiguration;->leaseTime:I
 
     invoke-static {v1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
@@ -478,11 +443,10 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "m "
+    const-string v2, "m "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 96
     iget v1, p0, Landroid/net/DhcpServerConfiguration;->maxClient:I
 
     invoke-static {v1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
@@ -491,14 +455,12 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 97
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v1
 
     return-object v1
 
-    .line 92
     :cond_0
     const/4 v1, 0x0
 
@@ -511,17 +473,14 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 122
     iget-object v0, p0, Landroid/net/DhcpServerConfiguration;->localIp:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 123
     iget-object v0, p0, Landroid/net/DhcpServerConfiguration;->subnetmask:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 124
     const/4 v0, 0x1
 
     new-array v0, v0, [Z
@@ -534,41 +493,35 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeBooleanArray([Z)V
 
-    .line 125
     iget-object v0, p0, Landroid/net/DhcpServerConfiguration;->ipRangeStart:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 126
     iget-object v0, p0, Landroid/net/DhcpServerConfiguration;->ipRangeEnd:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 127
     iget v0, p0, Landroid/net/DhcpServerConfiguration;->leaseTime:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 128
     iget v0, p0, Landroid/net/DhcpServerConfiguration;->maxClient:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 130
     const-string v0, "DhcpServerConfiguration"
 
-    const-string/jumbo v1, "writeToParcel"
+    const-string v1, "writeToParcel"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 131
     const-string v0, "DhcpServerConfiguration"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "localIp  "
+    const-string v2, "localIp  "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -586,14 +539,13 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 132
     const-string v0, "DhcpServerConfiguration"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "subnetmask  "
+    const-string v2, "subnetmask  "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -611,7 +563,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 133
     const-string v0, "DhcpServerConfiguration"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -636,14 +587,13 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 134
     const-string v0, "DhcpServerConfiguration"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "ipRangeStart  "
+    const-string v2, "ipRangeStart  "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -661,14 +611,13 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 135
     const-string v0, "DhcpServerConfiguration"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "ipRangeEnd  "
+    const-string v2, "ipRangeEnd  "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -686,14 +635,13 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 136
     const-string v0, "DhcpServerConfiguration"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "leaseTime  "
+    const-string v2, "leaseTime  "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -711,14 +659,13 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 137
     const-string v0, "DhcpServerConfiguration"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "maxClient  "
+    const-string v2, "maxClient  "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -736,6 +683,5 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 138
     return-void
 .end method

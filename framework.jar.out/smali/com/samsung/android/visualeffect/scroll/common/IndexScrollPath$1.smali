@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 460
     invoke-static {}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->values()[Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     move-result-object v0

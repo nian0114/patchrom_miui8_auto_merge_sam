@@ -31,7 +31,6 @@
     .locals 2
 
     .prologue
-    .line 2002
     new-instance v0, Landroid/net/Uri$Part$EmptyPart;
 
     const/4 v1, 0x0
@@ -40,7 +39,6 @@
 
     sput-object v0, Landroid/net/Uri$Part;->NULL:Landroid/net/Uri$Part;
 
-    .line 2005
     new-instance v0, Landroid/net/Uri$Part$EmptyPart;
 
     const-string v1, ""
@@ -58,10 +56,8 @@
     .param p2, "decoded"    # Ljava/lang/String;
 
     .prologue
-    .line 2008
     invoke-direct {p0, p1, p2}, Landroid/net/Uri$AbstractPart;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2009
     return-void
 .end method
 
@@ -72,7 +68,6 @@
     .param p3, "x2"    # Landroid/net/Uri$1;
 
     .prologue
-    .line 1999
     invoke-direct {p0, p1, p2}, Landroid/net/Uri$Part;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -84,17 +79,13 @@
     .param p1, "decoded"    # Ljava/lang/String;
 
     .prologue
-    .line 2071
     if-nez p0, :cond_0
 
-    .line 2072
     sget-object v0, Landroid/net/Uri$Part;->NULL:Landroid/net/Uri$Part;
 
-    .line 2085
     :goto_0
     return-object v0
 
-    .line 2074
     :cond_0
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -102,21 +93,17 @@
 
     if-nez v0, :cond_1
 
-    .line 2075
     sget-object v0, Landroid/net/Uri$Part;->EMPTY:Landroid/net/Uri$Part;
 
     goto :goto_0
 
-    .line 2078
     :cond_1
     if-nez p1, :cond_2
 
-    .line 2079
     sget-object v0, Landroid/net/Uri$Part;->NULL:Landroid/net/Uri$Part;
 
     goto :goto_0
 
-    .line 2081
     :cond_2
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
@@ -124,12 +111,10 @@
 
     if-nez v0, :cond_3
 
-    .line 2082
     sget-object v0, Landroid/net/Uri$Part;->EMPTY:Landroid/net/Uri$Part;
 
     goto :goto_0
 
-    .line 2085
     :cond_3
     new-instance v0, Landroid/net/Uri$Part;
 
@@ -143,7 +128,6 @@
     .param p0, "decoded"    # Ljava/lang/String;
 
     .prologue
-    .line 2058
     # getter for: Landroid/net/Uri;->NOT_CACHED:Ljava/lang/String;
     invoke-static {}, Landroid/net/Uri;->access$300()Ljava/lang/String;
 
@@ -161,7 +145,6 @@
     .param p0, "encoded"    # Ljava/lang/String;
 
     .prologue
-    .line 2049
     # getter for: Landroid/net/Uri;->NOT_CACHED:Ljava/lang/String;
     invoke-static {}, Landroid/net/Uri;->access$300()Ljava/lang/String;
 
@@ -179,7 +162,6 @@
     .param p0, "part"    # Landroid/net/Uri$Part;
 
     .prologue
-    .line 2040
     if-nez p0, :cond_0
 
     sget-object p0, Landroid/net/Uri$Part;->NULL:Landroid/net/Uri$Part;
@@ -194,16 +176,13 @@
     .param p0, "parcel"    # Landroid/os/Parcel;
 
     .prologue
-    .line 2022
     invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 2023
     .local v0, "representation":I
     packed-switch v0, :pswitch_data_0
 
-    .line 2031
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -228,7 +207,6 @@
 
     throw v1
 
-    .line 2025
     :pswitch_0
     invoke-virtual {p0}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
@@ -242,11 +220,9 @@
 
     move-result-object v1
 
-    .line 2029
     :goto_0
     return-object v1
 
-    .line 2027
     :pswitch_1
     invoke-virtual {p0}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
@@ -258,7 +234,6 @@
 
     goto :goto_0
 
-    .line 2029
     :pswitch_2
     invoke-virtual {p0}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
@@ -270,7 +245,6 @@
 
     goto :goto_0
 
-    .line 2023
     nop
 
     :pswitch_data_0
@@ -287,7 +261,6 @@
     .locals 3
 
     .prologue
-    .line 2017
     iget-object v1, p0, Landroid/net/Uri$Part;->encoded:Ljava/lang/String;
 
     # getter for: Landroid/net/Uri;->NOT_CACHED:Ljava/lang/String;
@@ -299,7 +272,6 @@
 
     const/4 v0, 0x1
 
-    .line 2018
     .local v0, "hasEncoded":Z
     :goto_0
     if-eqz v0, :cond_1
@@ -309,14 +281,12 @@
     :goto_1
     return-object v1
 
-    .line 2017
     .end local v0    # "hasEncoded":Z
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 2018
     .restart local v0    # "hasEncoded":Z
     :cond_1
     iget-object v1, p0, Landroid/net/Uri$Part;->decoded:Ljava/lang/String;
@@ -334,7 +304,6 @@
     .locals 1
 
     .prologue
-    .line 2012
     const/4 v0, 0x0
 
     return v0

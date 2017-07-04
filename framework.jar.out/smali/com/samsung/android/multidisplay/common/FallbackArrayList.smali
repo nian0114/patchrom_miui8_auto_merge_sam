@@ -26,7 +26,6 @@
     .locals 1
 
     .prologue
-    .line 10
     const/4 v0, 0x0
 
     sput v0, Lcom/samsung/android/multidisplay/common/FallbackArrayList;->mFallbackIndex:I
@@ -38,11 +37,9 @@
     .locals 0
 
     .prologue
-    .line 13
     .local p0, "this":Lcom/samsung/android/multidisplay/common/FallbackArrayList;, "Lcom/samsung/android/multidisplay/common/FallbackArrayList<TE;>;"
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 14
     return-void
 .end method
 
@@ -51,11 +48,9 @@
     .param p1, "capacity"    # I
 
     .prologue
-    .line 21
     .local p0, "this":Lcom/samsung/android/multidisplay/common/FallbackArrayList;, "Lcom/samsung/android/multidisplay/common/FallbackArrayList<TE;>;"
     invoke-direct {p0, p1}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 22
     return-void
 .end method
 
@@ -70,12 +65,10 @@
     .end annotation
 
     .prologue
-    .line 17
     .local p0, "this":Lcom/samsung/android/multidisplay/common/FallbackArrayList;, "Lcom/samsung/android/multidisplay/common/FallbackArrayList<TE;>;"
     .local p1, "collection":Ljava/util/Collection;, "Ljava/util/Collection<+TE;>;"
     invoke-direct {p0, p1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 18
     return-void
 .end method
 
@@ -91,7 +84,6 @@
     .end annotation
 
     .prologue
-    .line 28
     .local p0, "this":Lcom/samsung/android/multidisplay/common/FallbackArrayList;, "Lcom/samsung/android/multidisplay/common/FallbackArrayList<TE;>;"
     .local p2, "object":Ljava/lang/Object;, "TE;"
     :try_start_0
@@ -99,15 +91,12 @@
     :try_end_0
     .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 35
     :goto_0
     return-void
 
-    .line 29
     :catch_0
     move-exception v0
 
-    .line 30
     .local v0, "e":Ljava/lang/IndexOutOfBoundsException;
     sget v1, Lcom/samsung/android/multidisplay/common/FallbackArrayList;->mFallbackIndex:I
 
@@ -128,7 +117,6 @@
     .end annotation
 
     .prologue
-    .line 41
     .local p0, "this":Lcom/samsung/android/multidisplay/common/FallbackArrayList;, "Lcom/samsung/android/multidisplay/common/FallbackArrayList<TE;>;"
     .local p2, "collection":Ljava/util/Collection;, "Ljava/util/Collection<+TE;>;"
     :try_start_0
@@ -138,15 +126,12 @@
 
     move-result v1
 
-    .line 43
     :goto_0
     return v1
 
-    .line 42
     :catch_0
     move-exception v0
 
-    .line 43
     .local v0, "e":Ljava/lang/IndexOutOfBoundsException;
     sget v1, Lcom/samsung/android/multidisplay/common/FallbackArrayList;->mFallbackIndex:I
 
@@ -167,7 +152,6 @@
     .end annotation
 
     .prologue
-    .line 54
     .local p0, "this":Lcom/samsung/android/multidisplay/common/FallbackArrayList;, "Lcom/samsung/android/multidisplay/common/FallbackArrayList<TE;>;"
     :try_start_0
     invoke-super {p0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -176,15 +160,12 @@
 
     move-result-object v1
 
-    .line 56
     :goto_0
     return-object v1
 
-    .line 55
     :catch_0
     move-exception v0
 
-    .line 56
     .local v0, "e":Ljava/lang/IndexOutOfBoundsException;
     sget v1, Lcom/samsung/android/multidisplay/common/FallbackArrayList;->mFallbackIndex:I
 
@@ -205,7 +186,6 @@
     .end annotation
 
     .prologue
-    .line 67
     .local p0, "this":Lcom/samsung/android/multidisplay/common/FallbackArrayList;, "Lcom/samsung/android/multidisplay/common/FallbackArrayList<TE;>;"
     :try_start_0
     invoke-super {p0, p1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
@@ -214,15 +194,12 @@
 
     move-result-object v1
 
-    .line 69
     :goto_0
     return-object v1
 
-    .line 68
     :catch_0
     move-exception v0
 
-    .line 69
     .local v0, "e":Ljava/lang/IndexOutOfBoundsException;
     sget v1, Lcom/samsung/android/multidisplay/common/FallbackArrayList;->mFallbackIndex:I
 
@@ -243,7 +220,6 @@
     .end annotation
 
     .prologue
-    .line 80
     .local p0, "this":Lcom/samsung/android/multidisplay/common/FallbackArrayList;, "Lcom/samsung/android/multidisplay/common/FallbackArrayList<TE;>;"
     .local p2, "object":Ljava/lang/Object;, "TE;"
     :try_start_0
@@ -253,15 +229,12 @@
 
     move-result-object v1
 
-    .line 82
     :goto_0
     return-object v1
 
-    .line 81
     :catch_0
     move-exception v0
 
-    .line 82
     .local v0, "e":Ljava/lang/IndexOutOfBoundsException;
     sget v1, Lcom/samsung/android/multidisplay/common/FallbackArrayList;->mFallbackIndex:I
 
@@ -277,10 +250,8 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 90
     .local p0, "this":Lcom/samsung/android/multidisplay/common/FallbackArrayList;, "Lcom/samsung/android/multidisplay/common/FallbackArrayList<TE;>;"
     sput p1, Lcom/samsung/android/multidisplay/common/FallbackArrayList;->mFallbackIndex:I
 
-    .line 91
     return-void
 .end method

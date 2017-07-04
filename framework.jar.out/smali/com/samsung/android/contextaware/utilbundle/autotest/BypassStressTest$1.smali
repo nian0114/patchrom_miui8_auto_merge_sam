@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 50
     iput-object p1, p0, Lcom/samsung/android/contextaware/utilbundle/autotest/BypassStressTest$1;->this$0:Lcom/samsung/android/contextaware/utilbundle/autotest/BypassStressTest;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "accuracy"    # I
 
     .prologue
-    .line 61
     return-void
 .end method
 
@@ -51,6 +49,5 @@
     .param p1, "event"    # Landroid/hardware/SensorEvent;
 
     .prologue
-    .line 72
     return-void
 .end method

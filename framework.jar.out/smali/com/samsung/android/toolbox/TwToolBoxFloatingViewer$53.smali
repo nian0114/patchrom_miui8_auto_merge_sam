@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 2065
     iput-object p1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$53;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 2075
     return-void
 .end method
 
@@ -50,7 +48,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 2070
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$53;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     # getter for: Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mContentResolver:Landroid/content/ContentResolver;
@@ -66,7 +63,6 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 2071
     return-void
 .end method
 
@@ -75,7 +71,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 2073
     return-void
 .end method
 
@@ -84,6 +79,5 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 2067
     return-void
 .end method

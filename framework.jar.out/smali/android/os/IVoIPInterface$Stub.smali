@@ -160,15 +160,12 @@
     .locals 1
 
     .prologue
-    .line 15
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 16
     const-string v0, "android.os.IVoIPInterface"
 
     invoke-virtual {p0, p0, v0}, Landroid/os/IVoIPInterface$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 17
     return-void
 .end method
 
@@ -177,17 +174,13 @@
     .param p0, "obj"    # Landroid/os/IBinder;
 
     .prologue
-    .line 24
     if-nez p0, :cond_0
 
-    .line 25
     const/4 v0, 0x0
 
-    .line 31
     :goto_0
     return-object v0
 
-    .line 27
     :cond_0
     const-string v1, "android.os.IVoIPInterface"
 
@@ -195,7 +188,6 @@
 
     move-result-object v0
 
-    .line 28
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -203,12 +195,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 29
     check-cast v0, Landroid/os/IVoIPInterface;
 
     goto :goto_0
 
-    .line 31
     :cond_1
     new-instance v0, Landroid/os/IVoIPInterface$Stub$Proxy;
 
@@ -224,7 +214,6 @@
     .locals 0
 
     .prologue
-    .line 35
     return-object p0
 .end method
 
@@ -245,10 +234,8 @@
 
     const/4 v9, 0x1
 
-    .line 39
     sparse-switch p1, :sswitch_data_0
 
-    .line 643
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v9
@@ -256,7 +243,6 @@
     :goto_0
     return v9
 
-    .line 43
     :sswitch_0
     const-string v0, "android.os.IVoIPInterface"
 
@@ -264,30 +250,25 @@
 
     goto :goto_0
 
-    .line 48
     :sswitch_1
     const-string v10, "android.os.IVoIPInterface"
 
     invoke-virtual {p2, v10}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 50
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 52
     .local v1, "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 54
     .local v2, "_arg1":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 56
     .local v3, "_arg2":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
@@ -297,17 +278,14 @@
 
     move-result-object v4
 
-    .line 57
     .local v4, "_arg3":Landroid/os/IVoIPCallbackInterface;
     invoke-virtual {p0, v1, v2, v3, v4}, Landroid/os/IVoIPInterface$Stub;->createCallSession(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/os/IVoIPCallbackInterface;)Z
 
     move-result v8
 
-    .line 58
     .local v8, "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 59
     if-eqz v8, :cond_0
 
     move v0, v9
@@ -317,7 +295,6 @@
 
     goto :goto_0
 
-    .line 64
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v2    # "_arg1":Ljava/lang/String;
     .end local v3    # "_arg2":Ljava/lang/String;
@@ -328,22 +305,18 @@
 
     invoke-virtual {p2, v10}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 66
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 67
     .restart local v1    # "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v1}, Landroid/os/IVoIPInterface$Stub;->destroyCallSession(Ljava/lang/String;)Z
 
     move-result v8
 
-    .line 68
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 69
     if-eqz v8, :cond_1
 
     move v0, v9
@@ -353,7 +326,6 @@
 
     goto :goto_0
 
-    .line 74
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v8    # "_result":Z
     :sswitch_3
@@ -361,16 +333,13 @@
 
     invoke-virtual {p2, v10}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 75
     invoke-virtual {p0}, Landroid/os/IVoIPInterface$Stub;->moveVoIPToTop()Z
 
     move-result v8
 
-    .line 76
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 77
     if-eqz v8, :cond_2
 
     move v0, v9
@@ -380,23 +349,19 @@
 
     goto :goto_0
 
-    .line 82
     .end local v8    # "_result":Z
     :sswitch_4
     const-string v10, "android.os.IVoIPInterface"
 
     invoke-virtual {p2, v10}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 83
     invoke-virtual {p0}, Landroid/os/IVoIPInterface$Stub;->answerVoIPCall()Z
 
     move-result v8
 
-    .line 84
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 85
     if-eqz v8, :cond_3
 
     move v0, v9
@@ -406,23 +371,19 @@
 
     goto :goto_0
 
-    .line 90
     .end local v8    # "_result":Z
     :sswitch_5
     const-string v10, "android.os.IVoIPInterface"
 
     invoke-virtual {p2, v10}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 91
     invoke-virtual {p0}, Landroid/os/IVoIPInterface$Stub;->hangupVoIPCall()Z
 
     move-result v8
 
-    .line 92
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 93
     if-eqz v8, :cond_4
 
     move v0, v9
@@ -432,23 +393,19 @@
 
     goto :goto_0
 
-    .line 98
     .end local v8    # "_result":Z
     :sswitch_6
     const-string v10, "android.os.IVoIPInterface"
 
     invoke-virtual {p2, v10}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 99
     invoke-virtual {p0}, Landroid/os/IVoIPInterface$Stub;->holdVoIPCall()Z
 
     move-result v8
 
-    .line 100
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 101
     if-eqz v8, :cond_5
 
     move v0, v9
@@ -458,23 +415,19 @@
 
     goto/16 :goto_0
 
-    .line 106
     .end local v8    # "_result":Z
     :sswitch_7
     const-string v10, "android.os.IVoIPInterface"
 
     invoke-virtual {p2, v10}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 107
     invoke-virtual {p0}, Landroid/os/IVoIPInterface$Stub;->resumeVoIPCall()Z
 
     move-result v8
 
-    .line 108
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 109
     if-eqz v8, :cond_6
 
     move v0, v9
@@ -484,23 +437,19 @@
 
     goto/16 :goto_0
 
-    .line 114
     .end local v8    # "_result":Z
     :sswitch_8
     const-string v10, "android.os.IVoIPInterface"
 
     invoke-virtual {p2, v10}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 115
     invoke-virtual {p0}, Landroid/os/IVoIPInterface$Stub;->muteVoIPCall()Z
 
     move-result v8
 
-    .line 116
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 117
     if-eqz v8, :cond_7
 
     move v0, v9
@@ -510,35 +459,29 @@
 
     goto/16 :goto_0
 
-    .line 122
     .end local v8    # "_result":Z
     :sswitch_9
     const-string v10, "android.os.IVoIPInterface"
 
     invoke-virtual {p2, v10}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 124
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 126
     .restart local v1    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 127
     .local v2, "_arg1":I
     invoke-virtual {p0, v1, v2}, Landroid/os/IVoIPInterface$Stub;->setVoIPCallCount(Ljava/lang/String;I)Z
 
     move-result v8
 
-    .line 128
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 129
     if-eqz v8, :cond_8
 
     move v0, v9
@@ -548,7 +491,6 @@
 
     goto/16 :goto_0
 
-    .line 134
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v2    # "_arg1":I
     .end local v8    # "_result":Z
@@ -557,27 +499,22 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 136
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 137
     .restart local v1    # "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v1}, Landroid/os/IVoIPInterface$Stub;->getVoIPCallCount(Ljava/lang/String;)I
 
     move-result v8
 
-    .line 138
     .local v8, "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 139
     invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 144
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v8    # "_result":I
     :sswitch_b
@@ -585,22 +522,18 @@
 
     invoke-virtual {p2, v10}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 146
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 147
     .restart local v1    # "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v1}, Landroid/os/IVoIPInterface$Stub;->setVoIPIdle(Ljava/lang/String;)Z
 
     move-result v8
 
-    .line 148
     .local v8, "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 149
     if-eqz v8, :cond_9
 
     move v0, v9
@@ -610,7 +543,6 @@
 
     goto/16 :goto_0
 
-    .line 154
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v8    # "_result":Z
     :sswitch_c
@@ -618,28 +550,23 @@
 
     invoke-virtual {p2, v10}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 156
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 158
     .restart local v1    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 159
     .local v2, "_arg1":Ljava/lang/String;
     invoke-virtual {p0, v1, v2}, Landroid/os/IVoIPInterface$Stub;->setVoIPRinging(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v8
 
-    .line 160
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 161
     if-eqz v8, :cond_a
 
     move v0, v9
@@ -649,7 +576,6 @@
 
     goto/16 :goto_0
 
-    .line 166
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v2    # "_arg1":Ljava/lang/String;
     .end local v8    # "_result":Z
@@ -658,28 +584,23 @@
 
     invoke-virtual {p2, v10}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 168
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 170
     .restart local v1    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 171
     .restart local v2    # "_arg1":Ljava/lang/String;
     invoke-virtual {p0, v1, v2}, Landroid/os/IVoIPInterface$Stub;->setVoIPDialing(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v8
 
-    .line 172
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 173
     if-eqz v8, :cond_b
 
     move v0, v9
@@ -689,7 +610,6 @@
 
     goto/16 :goto_0
 
-    .line 178
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v2    # "_arg1":Ljava/lang/String;
     .end local v8    # "_result":Z
@@ -698,28 +618,23 @@
 
     invoke-virtual {p2, v10}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 180
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 182
     .restart local v1    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 183
     .restart local v2    # "_arg1":Ljava/lang/String;
     invoke-virtual {p0, v1, v2}, Landroid/os/IVoIPInterface$Stub;->setVoIPActive(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v8
 
-    .line 184
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 185
     if-eqz v8, :cond_c
 
     move v0, v9
@@ -729,7 +644,6 @@
 
     goto/16 :goto_0
 
-    .line 190
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v2    # "_arg1":Ljava/lang/String;
     .end local v8    # "_result":Z
@@ -738,28 +652,23 @@
 
     invoke-virtual {p2, v10}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 192
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 194
     .restart local v1    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 195
     .restart local v2    # "_arg1":Ljava/lang/String;
     invoke-virtual {p0, v1, v2}, Landroid/os/IVoIPInterface$Stub;->setVoIPHolding(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v8
 
-    .line 196
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 197
     if-eqz v8, :cond_d
 
     move v0, v9
@@ -769,7 +678,6 @@
 
     goto/16 :goto_0
 
-    .line 202
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v2    # "_arg1":Ljava/lang/String;
     .end local v8    # "_result":Z
@@ -778,28 +686,23 @@
 
     invoke-virtual {p2, v10}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 204
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 206
     .restart local v1    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 207
     .restart local v2    # "_arg1":Ljava/lang/String;
     invoke-virtual {p0, v1, v2}, Landroid/os/IVoIPInterface$Stub;->setVoIPAlerting(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v8
 
-    .line 208
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 209
     if-eqz v8, :cond_e
 
     move v0, v9
@@ -809,7 +712,6 @@
 
     goto/16 :goto_0
 
-    .line 214
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v2    # "_arg1":Ljava/lang/String;
     .end local v8    # "_result":Z
@@ -818,28 +720,23 @@
 
     invoke-virtual {p2, v10}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 216
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 218
     .restart local v1    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 219
     .restart local v2    # "_arg1":Ljava/lang/String;
     invoke-virtual {p0, v1, v2}, Landroid/os/IVoIPInterface$Stub;->setVoIPIncoming(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v8
 
-    .line 220
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 221
     if-eqz v8, :cond_f
 
     move v0, v9
@@ -849,7 +746,6 @@
 
     goto/16 :goto_0
 
-    .line 226
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v2    # "_arg1":Ljava/lang/String;
     .end local v8    # "_result":Z
@@ -858,28 +754,23 @@
 
     invoke-virtual {p2, v10}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 228
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 230
     .restart local v1    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 231
     .restart local v2    # "_arg1":Ljava/lang/String;
     invoke-virtual {p0, v1, v2}, Landroid/os/IVoIPInterface$Stub;->setVoIPWaiting(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v8
 
-    .line 232
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 233
     if-eqz v8, :cond_10
 
     move v0, v9
@@ -889,7 +780,6 @@
 
     goto/16 :goto_0
 
-    .line 238
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v2    # "_arg1":Ljava/lang/String;
     .end local v8    # "_result":Z
@@ -898,28 +788,23 @@
 
     invoke-virtual {p2, v10}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 240
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 242
     .restart local v1    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 243
     .restart local v2    # "_arg1":Ljava/lang/String;
     invoke-virtual {p0, v1, v2}, Landroid/os/IVoIPInterface$Stub;->setVoIPDisconnecting(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v8
 
-    .line 244
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 245
     if-eqz v8, :cond_11
 
     move v0, v9
@@ -929,7 +814,6 @@
 
     goto/16 :goto_0
 
-    .line 250
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v2    # "_arg1":Ljava/lang/String;
     .end local v8    # "_result":Z
@@ -938,28 +822,23 @@
 
     invoke-virtual {p2, v10}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 252
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 254
     .restart local v1    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 255
     .restart local v2    # "_arg1":Ljava/lang/String;
     invoke-virtual {p0, v1, v2}, Landroid/os/IVoIPInterface$Stub;->setVoIPDisconnected(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v8
 
-    .line 256
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 257
     if-eqz v8, :cond_12
 
     move v0, v9
@@ -969,7 +848,6 @@
 
     goto/16 :goto_0
 
-    .line 262
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v2    # "_arg1":Ljava/lang/String;
     .end local v8    # "_result":Z
@@ -978,12 +856,10 @@
 
     invoke-virtual {p2, v10}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 264
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 266
     .restart local v1    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -993,18 +869,15 @@
 
     move v2, v9
 
-    .line 267
     .local v2, "_arg1":Z
     :goto_1
     invoke-virtual {p0, v1, v2}, Landroid/os/IVoIPInterface$Stub;->setUseBTInVoIP(Ljava/lang/String;Z)Z
 
     move-result v8
 
-    .line 268
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 269
     if-eqz v8, :cond_13
 
     move v0, v9
@@ -1019,32 +892,26 @@
     :cond_14
     move v2, v0
 
-    .line 266
     goto :goto_1
 
-    .line 274
     .end local v1    # "_arg0":Ljava/lang/String;
     :sswitch_16
     const-string v10, "android.os.IVoIPInterface"
 
     invoke-virtual {p2, v10}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 276
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 277
     .restart local v1    # "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v1}, Landroid/os/IVoIPInterface$Stub;->canUseBTInVoIP(Ljava/lang/String;)Z
 
     move-result v8
 
-    .line 278
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 279
     if-eqz v8, :cond_15
 
     move v0, v9
@@ -1054,7 +921,6 @@
 
     goto/16 :goto_0
 
-    .line 284
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v8    # "_result":Z
     :sswitch_17
@@ -1062,7 +928,6 @@
 
     invoke-virtual {p2, v10}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 286
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v10
@@ -1071,18 +936,15 @@
 
     move v1, v9
 
-    .line 287
     .local v1, "_arg0":Z
     :goto_2
     invoke-virtual {p0, v1}, Landroid/os/IVoIPInterface$Stub;->setBTUserWantsAudioOn(Z)Z
 
     move-result v8
 
-    .line 288
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 289
     if-eqz v8, :cond_16
 
     move v0, v9
@@ -1097,25 +959,20 @@
     :cond_17
     move v1, v0
 
-    .line 286
     goto :goto_2
 
-    .line 294
     :sswitch_18
     const-string v10, "android.os.IVoIPInterface"
 
     invoke-virtual {p2, v10}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 295
     invoke-virtual {p0}, Landroid/os/IVoIPInterface$Stub;->isDualBTConnection()Z
 
     move-result v8
 
-    .line 296
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 297
     if-eqz v8, :cond_18
 
     move v0, v9
@@ -1125,23 +982,19 @@
 
     goto/16 :goto_0
 
-    .line 302
     .end local v8    # "_result":Z
     :sswitch_19
     const-string v10, "android.os.IVoIPInterface"
 
     invoke-virtual {p2, v10}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 303
     invoke-virtual {p0}, Landroid/os/IVoIPInterface$Stub;->setBTUserWantsSwitchAudio()Z
 
     move-result v8
 
-    .line 304
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 305
     if-eqz v8, :cond_19
 
     move v0, v9
@@ -1151,19 +1004,16 @@
 
     goto/16 :goto_0
 
-    .line 310
     .end local v8    # "_result":Z
     :sswitch_1a
     const-string v10, "android.os.IVoIPInterface"
 
     invoke-virtual {p2, v10}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 312
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 314
     .local v1, "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -1173,18 +1023,15 @@
 
     move v2, v9
 
-    .line 315
     .restart local v2    # "_arg1":Z
     :goto_3
     invoke-virtual {p0, v1, v2}, Landroid/os/IVoIPInterface$Stub;->setUseHoldInVoIP(Ljava/lang/String;Z)Z
 
     move-result v8
 
-    .line 316
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 317
     if-eqz v8, :cond_1a
 
     move v0, v9
@@ -1199,26 +1046,21 @@
     :cond_1b
     move v2, v0
 
-    .line 314
     goto :goto_3
 
-    .line 322
     .end local v1    # "_arg0":Ljava/lang/String;
     :sswitch_1b
     const-string v10, "android.os.IVoIPInterface"
 
     invoke-virtual {p2, v10}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 323
     invoke-virtual {p0}, Landroid/os/IVoIPInterface$Stub;->canUseHoldInVoIP()Z
 
     move-result v8
 
-    .line 324
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 325
     if-eqz v8, :cond_1c
 
     move v0, v9
@@ -1228,23 +1070,19 @@
 
     goto/16 :goto_0
 
-    .line 330
     .end local v8    # "_result":Z
     :sswitch_1c
     const-string v10, "android.os.IVoIPInterface"
 
     invoke-virtual {p2, v10}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 331
     invoke-virtual {p0}, Landroid/os/IVoIPInterface$Stub;->isVoIPIdle()Z
 
     move-result v8
 
-    .line 332
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 333
     if-eqz v8, :cond_1d
 
     move v0, v9
@@ -1254,23 +1092,19 @@
 
     goto/16 :goto_0
 
-    .line 338
     .end local v8    # "_result":Z
     :sswitch_1d
     const-string v10, "android.os.IVoIPInterface"
 
     invoke-virtual {p2, v10}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 339
     invoke-virtual {p0}, Landroid/os/IVoIPInterface$Stub;->isVoIPRingOrDialing()Z
 
     move-result v8
 
-    .line 340
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 341
     if-eqz v8, :cond_1e
 
     move v0, v9
@@ -1280,23 +1114,19 @@
 
     goto/16 :goto_0
 
-    .line 346
     .end local v8    # "_result":Z
     :sswitch_1e
     const-string v10, "android.os.IVoIPInterface"
 
     invoke-virtual {p2, v10}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 347
     invoke-virtual {p0}, Landroid/os/IVoIPInterface$Stub;->isVoIPRinging()Z
 
     move-result v8
 
-    .line 348
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 349
     if-eqz v8, :cond_1f
 
     move v0, v9
@@ -1306,23 +1136,19 @@
 
     goto/16 :goto_0
 
-    .line 354
     .end local v8    # "_result":Z
     :sswitch_1f
     const-string v10, "android.os.IVoIPInterface"
 
     invoke-virtual {p2, v10}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 355
     invoke-virtual {p0}, Landroid/os/IVoIPInterface$Stub;->isVoIPDialing()Z
 
     move-result v8
 
-    .line 356
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 357
     if-eqz v8, :cond_20
 
     move v0, v9
@@ -1332,23 +1158,19 @@
 
     goto/16 :goto_0
 
-    .line 362
     .end local v8    # "_result":Z
     :sswitch_20
     const-string v10, "android.os.IVoIPInterface"
 
     invoke-virtual {p2, v10}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 363
     invoke-virtual {p0}, Landroid/os/IVoIPInterface$Stub;->isVoIPActivated()Z
 
     move-result v8
 
-    .line 364
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 365
     if-eqz v8, :cond_21
 
     move v0, v9
@@ -1358,23 +1180,19 @@
 
     goto/16 :goto_0
 
-    .line 370
     .end local v8    # "_result":Z
     :sswitch_21
     const-string v10, "android.os.IVoIPInterface"
 
     invoke-virtual {p2, v10}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 371
     invoke-virtual {p0}, Landroid/os/IVoIPInterface$Stub;->isVoIPHolding()Z
 
     move-result v8
 
-    .line 372
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 373
     if-eqz v8, :cond_22
 
     move v0, v9
@@ -1384,23 +1202,19 @@
 
     goto/16 :goto_0
 
-    .line 378
     .end local v8    # "_result":Z
     :sswitch_22
     const-string v10, "android.os.IVoIPInterface"
 
     invoke-virtual {p2, v10}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 379
     invoke-virtual {p0}, Landroid/os/IVoIPInterface$Stub;->isVoIPAlerting()Z
 
     move-result v8
 
-    .line 380
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 381
     if-eqz v8, :cond_23
 
     move v0, v9
@@ -1410,23 +1224,19 @@
 
     goto/16 :goto_0
 
-    .line 386
     .end local v8    # "_result":Z
     :sswitch_23
     const-string v10, "android.os.IVoIPInterface"
 
     invoke-virtual {p2, v10}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 387
     invoke-virtual {p0}, Landroid/os/IVoIPInterface$Stub;->isVoIPIncoming()Z
 
     move-result v8
 
-    .line 388
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 389
     if-eqz v8, :cond_24
 
     move v0, v9
@@ -1436,23 +1246,19 @@
 
     goto/16 :goto_0
 
-    .line 394
     .end local v8    # "_result":Z
     :sswitch_24
     const-string v10, "android.os.IVoIPInterface"
 
     invoke-virtual {p2, v10}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 395
     invoke-virtual {p0}, Landroid/os/IVoIPInterface$Stub;->isVoIPWaiting()Z
 
     move-result v8
 
-    .line 396
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 397
     if-eqz v8, :cond_25
 
     move v0, v9
@@ -1462,23 +1268,19 @@
 
     goto/16 :goto_0
 
-    .line 402
     .end local v8    # "_result":Z
     :sswitch_25
     const-string v10, "android.os.IVoIPInterface"
 
     invoke-virtual {p2, v10}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 403
     invoke-virtual {p0}, Landroid/os/IVoIPInterface$Stub;->isVoIPDisconnecting()Z
 
     move-result v8
 
-    .line 404
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 405
     if-eqz v8, :cond_26
 
     move v0, v9
@@ -1488,107 +1290,87 @@
 
     goto/16 :goto_0
 
-    .line 410
     .end local v8    # "_result":Z
     :sswitch_26
     const-string v0, "android.os.IVoIPInterface"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 411
     invoke-virtual {p0}, Landroid/os/IVoIPInterface$Stub;->getCurrentVoIPNumber()Ljava/lang/String;
 
     move-result-object v8
 
-    .line 412
     .local v8, "_result":Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 413
     invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 418
     .end local v8    # "_result":Ljava/lang/String;
     :sswitch_27
     const-string v0, "android.os.IVoIPInterface"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 419
     invoke-virtual {p0}, Landroid/os/IVoIPInterface$Stub;->getCurrentRemoteCallNumber()Ljava/lang/String;
 
     move-result-object v8
 
-    .line 420
     .restart local v8    # "_result":Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 421
     invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 426
     .end local v8    # "_result":Ljava/lang/String;
     :sswitch_28
     const-string v0, "android.os.IVoIPInterface"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 427
     invoke-virtual {p0}, Landroid/os/IVoIPInterface$Stub;->getState()I
 
     move-result v8
 
-    .line 428
     .local v8, "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 429
     invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 434
     .end local v8    # "_result":I
     :sswitch_29
     const-string v0, "android.os.IVoIPInterface"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 435
     invoke-virtual {p0}, Landroid/os/IVoIPInterface$Stub;->getActiveCallIndex()I
 
     move-result v8
 
-    .line 436
     .restart local v8    # "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 437
     invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 442
     .end local v8    # "_result":I
     :sswitch_2a
     const-string v10, "android.os.IVoIPInterface"
 
     invoke-virtual {p2, v10}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 443
     invoke-virtual {p0}, Landroid/os/IVoIPInterface$Stub;->isIncoming()Z
 
     move-result v8
 
-    .line 444
     .local v8, "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 445
     if-eqz v8, :cond_27
 
     move v0, v9
@@ -1598,160 +1380,130 @@
 
     goto/16 :goto_0
 
-    .line 450
     .end local v8    # "_result":Z
     :sswitch_2b
     const-string v0, "android.os.IVoIPInterface"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 451
     invoke-virtual {p0}, Landroid/os/IVoIPInterface$Stub;->getActiveFgCallState()I
 
     move-result v8
 
-    .line 452
     .local v8, "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 453
     invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 458
     .end local v8    # "_result":I
     :sswitch_2c
     const-string v0, "android.os.IVoIPInterface"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 459
     invoke-virtual {p0}, Landroid/os/IVoIPInterface$Stub;->getFirstActiveBgCallState()I
 
     move-result v8
 
-    .line 460
     .restart local v8    # "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 461
     invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 466
     .end local v8    # "_result":I
     :sswitch_2d
     const-string v0, "android.os.IVoIPInterface"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 467
     invoke-virtual {p0}, Landroid/os/IVoIPInterface$Stub;->getFirstActiveRingingCallState()I
 
     move-result v8
 
-    .line 468
     .restart local v8    # "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 469
     invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 474
     .end local v8    # "_result":I
     :sswitch_2e
     const-string v0, "android.os.IVoIPInterface"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 476
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 477
     .restart local v1    # "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v1}, Landroid/os/IVoIPInterface$Stub;->callInVoIP(Ljava/lang/String;)V
 
-    .line 478
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 483
     .end local v1    # "_arg0":Ljava/lang/String;
     :sswitch_2f
     const-string v0, "android.os.IVoIPInterface"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 484
     invoke-virtual {p0}, Landroid/os/IVoIPInterface$Stub;->getSessionCount()I
 
     move-result v8
 
-    .line 485
     .restart local v8    # "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 486
     invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 491
     .end local v8    # "_result":I
     :sswitch_30
     const-string v0, "android.os.IVoIPInterface"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 493
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 494
     .restart local v1    # "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v1}, Landroid/os/IVoIPInterface$Stub;->dumpCallSessionInfoDB(Ljava/lang/String;)V
 
-    .line 495
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 500
     .end local v1    # "_arg0":Ljava/lang/String;
     :sswitch_31
     const-string v0, "android.os.IVoIPInterface"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 502
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 504
     .restart local v1    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 505
     .local v2, "_arg1":I
     invoke-virtual {p0, v1, v2}, Landroid/os/IVoIPInterface$Stub;->setEngMode(Ljava/lang/String;I)V
 
-    .line 506
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 511
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v2    # "_arg1":I
     :sswitch_32
@@ -1759,52 +1511,42 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 512
     invoke-virtual {p0}, Landroid/os/IVoIPInterface$Stub;->disableStatusBarforVoIP()V
 
-    .line 513
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 518
     :sswitch_33
     const-string v0, "android.os.IVoIPInterface"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 519
     invoke-virtual {p0}, Landroid/os/IVoIPInterface$Stub;->reenableStatusBarforVoIP()V
 
-    .line 520
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 525
     :sswitch_34
     const-string v0, "android.os.IVoIPInterface"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 527
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 529
     .restart local v1    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 531
     .local v2, "_arg1":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 533
     .restart local v3    # "_arg2":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
 
@@ -1813,15 +1555,12 @@
     .local v4, "_arg3":J
     move-object v0, p0
 
-    .line 534
     invoke-virtual/range {v0 .. v5}, Landroid/os/IVoIPInterface$Stub;->notifyMissedCallforVoIP(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;J)V
 
-    .line 535
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 540
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v2    # "_arg1":Ljava/lang/String;
     .end local v3    # "_arg2":Ljava/lang/String;
@@ -1831,27 +1570,22 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 542
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 544
     .local v1, "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 545
     .restart local v2    # "_arg1":Ljava/lang/String;
     invoke-virtual {p0, v1, v2}, Landroid/os/IVoIPInterface$Stub;->notifyCallStateforVoIP(ILjava/lang/String;)V
 
-    .line 546
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 551
     .end local v1    # "_arg0":I
     .end local v2    # "_arg1":Ljava/lang/String;
     :sswitch_36
@@ -1859,7 +1593,6 @@
 
     invoke-virtual {p2, v10}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 553
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v10
@@ -1868,12 +1601,10 @@
 
     move v1, v9
 
-    .line 554
     .local v1, "_arg0":Z
     :goto_4
     invoke-virtual {p0, v1}, Landroid/os/IVoIPInterface$Stub;->setVoIPInCallAlert(Z)V
 
-    .line 555
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
@@ -1882,25 +1613,20 @@
     :cond_28
     move v1, v0
 
-    .line 553
     goto :goto_4
 
-    .line 560
     :sswitch_37
     const-string v10, "android.os.IVoIPInterface"
 
     invoke-virtual {p2, v10}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 561
     invoke-virtual {p0}, Landroid/os/IVoIPInterface$Stub;->getVoIPInCallAlert()Z
 
     move-result v8
 
-    .line 562
     .local v8, "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 563
     if-eqz v8, :cond_29
 
     move v0, v9
@@ -1910,34 +1636,28 @@
 
     goto/16 :goto_0
 
-    .line 568
     .end local v8    # "_result":Z
     :sswitch_38
     const-string v0, "android.os.IVoIPInterface"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 570
     invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v6
 
-    .line 572
     .local v6, "_arg0":J
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 573
     .restart local v2    # "_arg1":Ljava/lang/String;
     invoke-virtual {p0, v6, v7, v2}, Landroid/os/IVoIPInterface$Stub;->startVoIPCheckBC(JLjava/lang/String;)V
 
-    .line 574
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 579
     .end local v2    # "_arg1":Ljava/lang/String;
     .end local v6    # "_arg0":J
     :sswitch_39
@@ -1945,30 +1665,24 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 580
     invoke-virtual {p0}, Landroid/os/IVoIPInterface$Stub;->resetVoIPCheckBC()V
 
-    .line 581
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 586
     :sswitch_3a
     const-string v10, "android.os.IVoIPInterface"
 
     invoke-virtual {p2, v10}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 587
     invoke-virtual {p0}, Landroid/os/IVoIPInterface$Stub;->existValidCall()Z
 
     move-result v8
 
-    .line 588
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 589
     if-eqz v8, :cond_2a
 
     move v0, v9
@@ -1978,29 +1692,24 @@
 
     goto/16 :goto_0
 
-    .line 594
     .end local v8    # "_result":Z
     :sswitch_3b
     const-string v10, "android.os.IVoIPInterface"
 
     invoke-virtual {p2, v10}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 596
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 597
     .local v1, "_arg0":I
     invoke-virtual {p0, v1}, Landroid/os/IVoIPInterface$Stub;->getCallSessionInfo(I)Z
 
     move-result v8
 
-    .line 598
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 599
     if-eqz v8, :cond_2b
 
     move v0, v9
@@ -2010,7 +1719,6 @@
 
     goto/16 :goto_0
 
-    .line 604
     .end local v1    # "_arg0":I
     .end local v8    # "_result":Z
     :sswitch_3c
@@ -2018,79 +1726,64 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 605
     invoke-virtual {p0}, Landroid/os/IVoIPInterface$Stub;->getIndexForClcc()I
 
     move-result v8
 
-    .line 606
     .local v8, "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 607
     invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 612
     .end local v8    # "_result":I
     :sswitch_3d
     const-string v0, "android.os.IVoIPInterface"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 613
     invoke-virtual {p0}, Landroid/os/IVoIPInterface$Stub;->getDirectionForClcc()I
 
     move-result v8
 
-    .line 614
     .restart local v8    # "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 615
     invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 620
     .end local v8    # "_result":I
     :sswitch_3e
     const-string v0, "android.os.IVoIPInterface"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 621
     invoke-virtual {p0}, Landroid/os/IVoIPInterface$Stub;->getStatusForClcc()I
 
     move-result v8
 
-    .line 622
     .restart local v8    # "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 623
     invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 628
     .end local v8    # "_result":I
     :sswitch_3f
     const-string v10, "android.os.IVoIPInterface"
 
     invoke-virtual {p2, v10}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 629
     invoke-virtual {p0}, Landroid/os/IVoIPInterface$Stub;->getMptyForClcc()Z
 
     move-result v8
 
-    .line 630
     .local v8, "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 631
     if-eqz v8, :cond_2c
 
     move v0, v9
@@ -2100,28 +1793,23 @@
 
     goto/16 :goto_0
 
-    .line 636
     .end local v8    # "_result":Z
     :sswitch_40
     const-string v0, "android.os.IVoIPInterface"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 637
     invoke-virtual {p0}, Landroid/os/IVoIPInterface$Stub;->getNumberForClcc()Ljava/lang/String;
 
     move-result-object v8
 
-    .line 638
     .local v8, "_result":Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 639
     invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 39
     nop
 
     :sswitch_data_0

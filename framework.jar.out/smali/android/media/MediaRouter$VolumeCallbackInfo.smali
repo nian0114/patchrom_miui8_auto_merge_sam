@@ -27,15 +27,11 @@
     .param p2, "route"    # Landroid/media/MediaRouter$RouteInfo;
 
     .prologue
-    .line 2886
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2887
     iput-object p1, p0, Landroid/media/MediaRouter$VolumeCallbackInfo;->vcb:Landroid/media/MediaRouter$VolumeCallback;
 
-    .line 2888
     iput-object p2, p0, Landroid/media/MediaRouter$VolumeCallbackInfo;->route:Landroid/media/MediaRouter$RouteInfo;
 
-    .line 2889
     return-void
 .end method

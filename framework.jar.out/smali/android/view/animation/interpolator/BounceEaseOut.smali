@@ -8,10 +8,8 @@
     .locals 0
 
     .prologue
-    .line 87
     invoke-direct {p0}, Landroid/view/animation/BaseInterpolator;-><init>()V
 
-    .line 88
     return-void
 .end method
 
@@ -21,10 +19,8 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 96
     invoke-direct {p0}, Landroid/view/animation/BaseInterpolator;-><init>()V
 
-    .line 97
     return-void
 .end method
 
@@ -35,7 +31,6 @@
     .prologue
     const/high16 v4, 0x40f20000    # 7.5625f
 
-    .line 104
     float-to-double v0, p1
 
     const-wide v2, 0x3fd745d1745d1746L    # 0.36363636363636365
@@ -44,16 +39,13 @@
 
     if-gez v0, :cond_0
 
-    .line 105
     mul-float v0, v4, p1
 
     mul-float/2addr v0, p1
 
-    .line 111
     :goto_0
     return v0
 
-    .line 106
     :cond_0
     float-to-double v0, p1
 
@@ -63,7 +55,6 @@
 
     if-gez v0, :cond_1
 
-    .line 107
     float-to-double v0, p1
 
     const-wide v2, 0x3fe1745d1745d174L    # 0.5454545454545454
@@ -82,7 +73,6 @@
 
     goto :goto_0
 
-    .line 108
     :cond_1
     float-to-double v0, p1
 
@@ -92,7 +82,6 @@
 
     if-gez v0, :cond_2
 
-    .line 109
     float-to-double v0, p1
 
     const-wide v2, 0x3fea2e8ba2e8ba2fL    # 0.8181818181818182
@@ -111,7 +100,6 @@
 
     goto :goto_0
 
-    .line 111
     :cond_2
     float-to-double v0, p1
 
@@ -139,7 +127,6 @@
     .param p1, "t"    # F
 
     .prologue
-    .line 100
     invoke-direct {p0, p1}, Landroid/view/animation/interpolator/BounceEaseOut;->out(F)F
 
     move-result v0

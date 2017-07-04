@@ -40,43 +40,34 @@
     .prologue
     const/16 v1, 0x17
 
-    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 9
     iput v1, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->pathTotal:I
 
-    .line 10
     const v0, -0x3c120ccd    # -475.9f
 
     iput v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->offsetX:F
 
-    .line 11
     const v0, -0x3c2c199a    # -423.8f
 
     iput v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->offsetY:F
 
-    .line 13
     const v0, 0x3fb47ae1    # 1.41f
 
     iput v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->ratio:F
 
-    .line 16
     new-array v0, v1, [Landroid/graphics/Path;
 
     iput-object v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->path:[Landroid/graphics/Path;
 
-    .line 23
     iget v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->ratio:F
 
     mul-float/2addr v0, p1
 
     iput v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->ratio:F
 
-    .line 24
     invoke-direct {p0}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->setPath()V
 
-    .line 25
     return-void
 .end method
 
@@ -84,16 +75,13 @@
     .locals 11
 
     .prologue
-    .line 29
     const/4 v9, -0x1
 
-    .line 30
     .local v9, "count":I
     new-instance v10, Landroid/graphics/Matrix;
 
     invoke-direct {v10}, Landroid/graphics/Matrix;-><init>()V
 
-    .line 31
     .local v10, "mtrx":Landroid/graphics/Matrix;
     const v0, -0x3c120ccd    # -475.9f
 
@@ -101,22 +89,18 @@
 
     invoke-virtual {v10, v0, v2}, Landroid/graphics/Matrix;->postTranslate(FF)Z
 
-    .line 32
     iget v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->ratio:F
 
     iget v2, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->ratio:F
 
     invoke-virtual {v10, v0, v2}, Landroid/graphics/Matrix;->postScale(FF)Z
 
-    .line 35
     add-int/lit8 v9, v9, 0x1
 
-    .line 36
     new-instance v1, Landroid/graphics/Path;
 
     invoke-direct {v1}, Landroid/graphics/Path;-><init>()V
 
-    .line 37
     .local v1, "seqPath":Landroid/graphics/Path;
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->M:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
@@ -126,7 +110,6 @@
 
     invoke-direct {p0, v1, v0, v2, v3}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FF)V
 
-    .line 38
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v3, 0x0
@@ -145,7 +128,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 39
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v3, 0x0
@@ -164,36 +146,29 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 40
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->V:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v2, 0x440ba666    # 558.6f
 
     invoke-direct {p0, v1, v0, v2}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;F)V
 
-    .line 41
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->z:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     invoke-direct {p0, v1, v0}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;)V
 
-    .line 42
     invoke-virtual {v1, v10}, Landroid/graphics/Path;->transform(Landroid/graphics/Matrix;)V
 
-    .line 43
     iget-object v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->path:[Landroid/graphics/Path;
 
     aput-object v1, v0, v9
 
-    .line 47
     add-int/lit8 v9, v9, 0x1
 
-    .line 48
     new-instance v1, Landroid/graphics/Path;
 
     .end local v1    # "seqPath":Landroid/graphics/Path;
     invoke-direct {v1}, Landroid/graphics/Path;-><init>()V
 
-    .line 49
     .restart local v1    # "seqPath":Landroid/graphics/Path;
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->M:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
@@ -203,7 +178,6 @@
 
     invoke-direct {p0, v1, v0, v2, v3}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FF)V
 
-    .line 50
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v3, 0x0
@@ -222,7 +196,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 51
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v3, 0x0
@@ -241,36 +214,29 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 52
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->V:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v2, 0x4411f333    # 583.8f
 
     invoke-direct {p0, v1, v0, v2}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;F)V
 
-    .line 53
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->z:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     invoke-direct {p0, v1, v0}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;)V
 
-    .line 54
     invoke-virtual {v1, v10}, Landroid/graphics/Path;->transform(Landroid/graphics/Matrix;)V
 
-    .line 55
     iget-object v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->path:[Landroid/graphics/Path;
 
     aput-object v1, v0, v9
 
-    .line 59
     add-int/lit8 v9, v9, 0x1
 
-    .line 60
     new-instance v1, Landroid/graphics/Path;
 
     .end local v1    # "seqPath":Landroid/graphics/Path;
     invoke-direct {v1}, Landroid/graphics/Path;-><init>()V
 
-    .line 61
     .restart local v1    # "seqPath":Landroid/graphics/Path;
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->M:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
@@ -280,7 +246,6 @@
 
     invoke-direct {p0, v1, v0, v2, v3}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FF)V
 
-    .line 62
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v3, 0x0
@@ -299,7 +264,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 63
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v3, 0x0
@@ -318,36 +282,29 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 64
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->V:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v2, 0x44133333    # 588.8f
 
     invoke-direct {p0, v1, v0, v2}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;F)V
 
-    .line 65
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->z:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     invoke-direct {p0, v1, v0}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;)V
 
-    .line 66
     invoke-virtual {v1, v10}, Landroid/graphics/Path;->transform(Landroid/graphics/Matrix;)V
 
-    .line 67
     iget-object v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->path:[Landroid/graphics/Path;
 
     aput-object v1, v0, v9
 
-    .line 71
     add-int/lit8 v9, v9, 0x1
 
-    .line 72
     new-instance v1, Landroid/graphics/Path;
 
     .end local v1    # "seqPath":Landroid/graphics/Path;
     invoke-direct {v1}, Landroid/graphics/Path;-><init>()V
 
-    .line 73
     .restart local v1    # "seqPath":Landroid/graphics/Path;
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->M:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
@@ -357,7 +314,6 @@
 
     invoke-direct {p0, v1, v0, v2, v3}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FF)V
 
-    .line 74
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v3, 0x0
@@ -376,7 +332,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 75
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v3, 0x0
@@ -395,36 +350,29 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 76
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->V:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v2, 0x44151333    # 596.3f
 
     invoke-direct {p0, v1, v0, v2}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;F)V
 
-    .line 77
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->z:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     invoke-direct {p0, v1, v0}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;)V
 
-    .line 78
     invoke-virtual {v1, v10}, Landroid/graphics/Path;->transform(Landroid/graphics/Matrix;)V
 
-    .line 79
     iget-object v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->path:[Landroid/graphics/Path;
 
     aput-object v1, v0, v9
 
-    .line 83
     add-int/lit8 v9, v9, 0x1
 
-    .line 84
     new-instance v1, Landroid/graphics/Path;
 
     .end local v1    # "seqPath":Landroid/graphics/Path;
     invoke-direct {v1}, Landroid/graphics/Path;-><init>()V
 
-    .line 85
     .restart local v1    # "seqPath":Landroid/graphics/Path;
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->M:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
@@ -434,7 +382,6 @@
 
     invoke-direct {p0, v1, v0, v2, v3}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FF)V
 
-    .line 86
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v3, 0x0
@@ -453,7 +400,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 87
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v3, 0x0
@@ -472,36 +418,29 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 88
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->V:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v2, 0x4418d333    # 611.3f
 
     invoke-direct {p0, v1, v0, v2}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;F)V
 
-    .line 89
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->z:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     invoke-direct {p0, v1, v0}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;)V
 
-    .line 90
     invoke-virtual {v1, v10}, Landroid/graphics/Path;->transform(Landroid/graphics/Matrix;)V
 
-    .line 91
     iget-object v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->path:[Landroid/graphics/Path;
 
     aput-object v1, v0, v9
 
-    .line 95
     add-int/lit8 v9, v9, 0x1
 
-    .line 96
     new-instance v1, Landroid/graphics/Path;
 
     .end local v1    # "seqPath":Landroid/graphics/Path;
     invoke-direct {v1}, Landroid/graphics/Path;-><init>()V
 
-    .line 97
     .restart local v1    # "seqPath":Landroid/graphics/Path;
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->M:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
@@ -511,7 +450,6 @@
 
     invoke-direct {p0, v1, v0, v2, v3}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FF)V
 
-    .line 98
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v3, 0x0
@@ -530,7 +468,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 99
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v3, 0x0
@@ -549,36 +486,29 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 100
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->V:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v2, 0x4418d333    # 611.3f
 
     invoke-direct {p0, v1, v0, v2}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;F)V
 
-    .line 101
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->z:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     invoke-direct {p0, v1, v0}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;)V
 
-    .line 102
     invoke-virtual {v1, v10}, Landroid/graphics/Path;->transform(Landroid/graphics/Matrix;)V
 
-    .line 103
     iget-object v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->path:[Landroid/graphics/Path;
 
     aput-object v1, v0, v9
 
-    .line 107
     add-int/lit8 v9, v9, 0x1
 
-    .line 108
     new-instance v1, Landroid/graphics/Path;
 
     .end local v1    # "seqPath":Landroid/graphics/Path;
     invoke-direct {v1}, Landroid/graphics/Path;-><init>()V
 
-    .line 109
     .restart local v1    # "seqPath":Landroid/graphics/Path;
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->M:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
@@ -588,7 +518,6 @@
 
     invoke-direct {p0, v1, v0, v2, v3}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FF)V
 
-    .line 110
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v3, 0x0
@@ -607,7 +536,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 111
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v3, 0x0
@@ -626,36 +554,29 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 112
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->V:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v2, 0x4418d333    # 611.3f
 
     invoke-direct {p0, v1, v0, v2}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;F)V
 
-    .line 113
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->z:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     invoke-direct {p0, v1, v0}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;)V
 
-    .line 114
     invoke-virtual {v1, v10}, Landroid/graphics/Path;->transform(Landroid/graphics/Matrix;)V
 
-    .line 115
     iget-object v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->path:[Landroid/graphics/Path;
 
     aput-object v1, v0, v9
 
-    .line 119
     add-int/lit8 v9, v9, 0x1
 
-    .line 120
     new-instance v1, Landroid/graphics/Path;
 
     .end local v1    # "seqPath":Landroid/graphics/Path;
     invoke-direct {v1}, Landroid/graphics/Path;-><init>()V
 
-    .line 121
     .restart local v1    # "seqPath":Landroid/graphics/Path;
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->M:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
@@ -665,7 +586,6 @@
 
     invoke-direct {p0, v1, v0, v2, v3}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FF)V
 
-    .line 122
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v3, 0x0
@@ -684,7 +604,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 123
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v3, 0x0
@@ -703,36 +622,29 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 124
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->V:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v2, 0x441e799a    # 633.9f
 
     invoke-direct {p0, v1, v0, v2}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;F)V
 
-    .line 125
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->z:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     invoke-direct {p0, v1, v0}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;)V
 
-    .line 126
     invoke-virtual {v1, v10}, Landroid/graphics/Path;->transform(Landroid/graphics/Matrix;)V
 
-    .line 127
     iget-object v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->path:[Landroid/graphics/Path;
 
     aput-object v1, v0, v9
 
-    .line 131
     add-int/lit8 v9, v9, 0x1
 
-    .line 132
     new-instance v1, Landroid/graphics/Path;
 
     .end local v1    # "seqPath":Landroid/graphics/Path;
     invoke-direct {v1}, Landroid/graphics/Path;-><init>()V
 
-    .line 133
     .restart local v1    # "seqPath":Landroid/graphics/Path;
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->M:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
@@ -742,14 +654,12 @@
 
     invoke-direct {p0, v1, v0, v2, v3}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FF)V
 
-    .line 134
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->v:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v2, 0x4313199a    # 147.1f
 
     invoke-direct {p0, v1, v0, v2}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;F)V
 
-    .line 135
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v3, 0x0
@@ -768,7 +678,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 136
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v3, 0x0
@@ -787,7 +696,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 137
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v3, 0x0
@@ -806,7 +714,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 138
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v3, 0x0
@@ -825,7 +732,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 139
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v3, 0x0
@@ -844,43 +750,35 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 140
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->v:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/high16 v2, 0x43130000    # 147.0f
 
     invoke-direct {p0, v1, v0, v2}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;F)V
 
-    .line 141
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->V:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v2, 0x44026ccd    # 521.7f
 
     invoke-direct {p0, v1, v0, v2}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;F)V
 
-    .line 142
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->z:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     invoke-direct {p0, v1, v0}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;)V
 
-    .line 143
     invoke-virtual {v1, v10}, Landroid/graphics/Path;->transform(Landroid/graphics/Matrix;)V
 
-    .line 144
     iget-object v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->path:[Landroid/graphics/Path;
 
     aput-object v1, v0, v9
 
-    .line 148
     add-int/lit8 v9, v9, 0x1
 
-    .line 149
     new-instance v1, Landroid/graphics/Path;
 
     .end local v1    # "seqPath":Landroid/graphics/Path;
     invoke-direct {v1}, Landroid/graphics/Path;-><init>()V
 
-    .line 150
     .restart local v1    # "seqPath":Landroid/graphics/Path;
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->M:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
@@ -890,14 +788,12 @@
 
     invoke-direct {p0, v1, v0, v2, v3}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FF)V
 
-    .line 151
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->v:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v2, 0x4313999a    # 147.6f
 
     invoke-direct {p0, v1, v0, v2}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;F)V
 
-    .line 152
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v3, 0x0
@@ -916,7 +812,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 153
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/high16 v3, -0x3ef00000    # -9.0f
@@ -935,7 +830,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 154
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, -0x3fb33333    # -3.2f
@@ -954,7 +848,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 155
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v3, 0x0
@@ -973,7 +866,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 156
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v3, 0x0
@@ -992,7 +884,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 157
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v3, 0x0
@@ -1011,7 +902,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 158
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v3, 0x0
@@ -1030,7 +920,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 159
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, 0x409ccccd    # 4.9f
@@ -1049,7 +938,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 160
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, 0x40266666    # 2.6f
@@ -1068,7 +956,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 161
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, 0x41dccccd    # 27.6f
@@ -1087,43 +974,35 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 162
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->v:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v2, 0x43138000    # 147.5f
 
     invoke-direct {p0, v1, v0, v2}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;F)V
 
-    .line 163
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->V:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v2, 0x44025333    # 521.3f
 
     invoke-direct {p0, v1, v0, v2}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;F)V
 
-    .line 164
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->z:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     invoke-direct {p0, v1, v0}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;)V
 
-    .line 165
     invoke-virtual {v1, v10}, Landroid/graphics/Path;->transform(Landroid/graphics/Matrix;)V
 
-    .line 166
     iget-object v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->path:[Landroid/graphics/Path;
 
     aput-object v1, v0, v9
 
-    .line 170
     add-int/lit8 v9, v9, 0x1
 
-    .line 171
     new-instance v1, Landroid/graphics/Path;
 
     .end local v1    # "seqPath":Landroid/graphics/Path;
     invoke-direct {v1}, Landroid/graphics/Path;-><init>()V
 
-    .line 172
     .restart local v1    # "seqPath":Landroid/graphics/Path;
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->M:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
@@ -1133,14 +1012,12 @@
 
     invoke-direct {p0, v1, v0, v2, v3}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FF)V
 
-    .line 173
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->v:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v2, 0x4313999a    # 147.6f
 
     invoke-direct {p0, v1, v0, v2}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;F)V
 
-    .line 174
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v3, 0x0
@@ -1159,7 +1036,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 175
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, -0x3edb3333    # -10.3f
@@ -1178,7 +1054,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 176
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, -0x3f933333    # -3.7f
@@ -1197,7 +1072,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 177
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v3, 0x0
@@ -1216,7 +1090,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 178
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v3, 0x0
@@ -1235,7 +1108,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 179
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v3, 0x0
@@ -1254,7 +1126,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 180
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v3, 0x0
@@ -1273,7 +1144,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 181
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, 0x40b33333    # 5.6f
@@ -1292,7 +1162,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 182
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/high16 v3, 0x40400000    # 3.0f
@@ -1311,7 +1180,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 183
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, 0x41fccccd    # 31.6f
@@ -1330,43 +1198,35 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 184
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->v:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v2, 0x43138000    # 147.5f
 
     invoke-direct {p0, v1, v0, v2}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;F)V
 
-    .line 185
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->V:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v2, 0x44025333    # 521.3f
 
     invoke-direct {p0, v1, v0, v2}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;F)V
 
-    .line 186
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->z:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     invoke-direct {p0, v1, v0}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;)V
 
-    .line 187
     invoke-virtual {v1, v10}, Landroid/graphics/Path;->transform(Landroid/graphics/Matrix;)V
 
-    .line 188
     iget-object v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->path:[Landroid/graphics/Path;
 
     aput-object v1, v0, v9
 
-    .line 192
     add-int/lit8 v9, v9, 0x1
 
-    .line 193
     new-instance v1, Landroid/graphics/Path;
 
     .end local v1    # "seqPath":Landroid/graphics/Path;
     invoke-direct {v1}, Landroid/graphics/Path;-><init>()V
 
-    .line 194
     .restart local v1    # "seqPath":Landroid/graphics/Path;
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->M:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
@@ -1376,14 +1236,12 @@
 
     invoke-direct {p0, v1, v0, v2, v3}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FF)V
 
-    .line 195
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->v:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v2, 0x43183333    # 152.2f
 
     invoke-direct {p0, v1, v0, v2}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;F)V
 
-    .line 196
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v3, 0x0
@@ -1402,7 +1260,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 197
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, -0x3e666666    # -19.2f
@@ -1421,7 +1278,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 198
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, -0x3e1a6666    # -28.7f
@@ -1440,7 +1296,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 199
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v3, 0x0
@@ -1459,7 +1314,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 200
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->l:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v2, 0x0
@@ -1468,7 +1322,6 @@
 
     invoke-direct {p0, v1, v0, v2, v3}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FF)V
 
-    .line 201
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v3, 0x0
@@ -1487,7 +1340,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 202
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, 0x3f4ccccd    # 0.8f
@@ -1506,7 +1358,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 203
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, 0x41166666    # 9.4f
@@ -1525,7 +1376,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 204
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, 0x4101999a    # 8.1f
@@ -1544,43 +1394,35 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 205
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->V:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v2, 0x43a58000    # 331.0f
 
     invoke-direct {p0, v1, v0, v2}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;F)V
 
-    .line 206
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->V:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v2, 0x44012666    # 516.6f
 
     invoke-direct {p0, v1, v0, v2}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;F)V
 
-    .line 207
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->z:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     invoke-direct {p0, v1, v0}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;)V
 
-    .line 208
     invoke-virtual {v1, v10}, Landroid/graphics/Path;->transform(Landroid/graphics/Matrix;)V
 
-    .line 209
     iget-object v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->path:[Landroid/graphics/Path;
 
     aput-object v1, v0, v9
 
-    .line 213
     add-int/lit8 v9, v9, 0x1
 
-    .line 214
     new-instance v1, Landroid/graphics/Path;
 
     .end local v1    # "seqPath":Landroid/graphics/Path;
     invoke-direct {v1}, Landroid/graphics/Path;-><init>()V
 
-    .line 215
     .restart local v1    # "seqPath":Landroid/graphics/Path;
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->M:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
@@ -1590,14 +1432,12 @@
 
     invoke-direct {p0, v1, v0, v2, v3}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FF)V
 
-    .line 216
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->v:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v2, 0x43183333    # 152.2f
 
     invoke-direct {p0, v1, v0, v2}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;F)V
 
-    .line 217
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v3, 0x0
@@ -1616,7 +1456,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 218
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, -0x3e4b3333    # -22.6f
@@ -1635,7 +1474,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 219
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, -0x3df93333    # -33.7f
@@ -1654,7 +1492,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 220
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v3, 0x0
@@ -1673,7 +1510,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 221
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->l:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v2, 0x0
@@ -1682,7 +1518,6 @@
 
     invoke-direct {p0, v1, v0, v2, v3}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FF)V
 
-    .line 222
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v3, 0x0
@@ -1701,7 +1536,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 223
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, 0x3f666666    # 0.9f
@@ -1720,7 +1554,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 224
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, 0x4131999a    # 11.1f
@@ -1739,7 +1572,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 225
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, 0x41166666    # 9.4f
@@ -1758,43 +1590,35 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 226
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->V:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v2, 0x43a58000    # 331.0f
 
     invoke-direct {p0, v1, v0, v2}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;F)V
 
-    .line 227
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->V:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v2, 0x44012666    # 516.6f
 
     invoke-direct {p0, v1, v0, v2}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;F)V
 
-    .line 228
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->z:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     invoke-direct {p0, v1, v0}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;)V
 
-    .line 229
     invoke-virtual {v1, v10}, Landroid/graphics/Path;->transform(Landroid/graphics/Matrix;)V
 
-    .line 230
     iget-object v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->path:[Landroid/graphics/Path;
 
     aput-object v1, v0, v9
 
-    .line 234
     add-int/lit8 v9, v9, 0x1
 
-    .line 235
     new-instance v1, Landroid/graphics/Path;
 
     .end local v1    # "seqPath":Landroid/graphics/Path;
     invoke-direct {v1}, Landroid/graphics/Path;-><init>()V
 
-    .line 236
     .restart local v1    # "seqPath":Landroid/graphics/Path;
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->M:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
@@ -1804,14 +1628,12 @@
 
     invoke-direct {p0, v1, v0, v2, v3}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FF)V
 
-    .line 237
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->v:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v2, 0x43326666    # 178.4f
 
     invoke-direct {p0, v1, v0, v2}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;F)V
 
-    .line 238
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v3, 0x0
@@ -1830,7 +1652,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 239
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, -0x3e75999a    # -17.3f
@@ -1849,7 +1670,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 240
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, -0x41b33333    # -0.2f
@@ -1868,7 +1688,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 241
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, -0x40cccccd    # -0.7f
@@ -1887,14 +1706,12 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 242
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->v:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v2, 0x0
 
     invoke-direct {p0, v1, v0, v2}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;F)V
 
-    .line 243
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, -0x3de86666    # -37.9f
@@ -1913,7 +1730,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 244
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->s:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, 0x41d8cccd    # 27.1f
@@ -1928,14 +1744,12 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFF)V
 
-    .line 245
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->v:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v2, 0x0
 
     invoke-direct {p0, v1, v0, v2}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;F)V
 
-    .line 246
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v3, 0x0
@@ -1954,7 +1768,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 247
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, 0x3f666666    # 0.9f
@@ -1973,7 +1786,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 248
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, 0x415e6666    # 13.9f
@@ -1992,7 +1804,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 249
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, 0x40bccccd    # 5.9f
@@ -2011,43 +1822,35 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 250
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->v:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v2, 0x43326666    # 178.4f
 
     invoke-direct {p0, v1, v0, v2}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;F)V
 
-    .line 251
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->V:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v2, 0x43f53333    # 490.4f
 
     invoke-direct {p0, v1, v0, v2}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;F)V
 
-    .line 252
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->z:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     invoke-direct {p0, v1, v0}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;)V
 
-    .line 253
     invoke-virtual {v1, v10}, Landroid/graphics/Path;->transform(Landroid/graphics/Matrix;)V
 
-    .line 254
     iget-object v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->path:[Landroid/graphics/Path;
 
     aput-object v1, v0, v9
 
-    .line 258
     add-int/lit8 v9, v9, 0x1
 
-    .line 259
     new-instance v1, Landroid/graphics/Path;
 
     .end local v1    # "seqPath":Landroid/graphics/Path;
     invoke-direct {v1}, Landroid/graphics/Path;-><init>()V
 
-    .line 260
     .restart local v1    # "seqPath":Landroid/graphics/Path;
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->M:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
@@ -2057,7 +1860,6 @@
 
     invoke-direct {p0, v1, v0, v2, v3}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FF)V
 
-    .line 261
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, -0x3daf3333    # -52.2f
@@ -2076,7 +1878,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 262
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v3, 0x0
@@ -2095,7 +1896,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 263
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, 0x42153333    # 37.3f
@@ -2114,21 +1914,18 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 264
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->v:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/high16 v2, -0x3c8b0000    # -245.0f
 
     invoke-direct {p0, v1, v0, v2}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;F)V
 
-    .line 265
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->v:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/high16 v2, -0x3c8b0000    # -245.0f
 
     invoke-direct {p0, v1, v0, v2}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;F)V
 
-    .line 266
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->C:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, 0x43edf333    # 475.9f
@@ -2147,29 +1944,23 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 267
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->z:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     invoke-direct {p0, v1, v0}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;)V
 
-    .line 268
     invoke-virtual {v1, v10}, Landroid/graphics/Path;->transform(Landroid/graphics/Matrix;)V
 
-    .line 269
     iget-object v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->path:[Landroid/graphics/Path;
 
     aput-object v1, v0, v9
 
-    .line 273
     add-int/lit8 v9, v9, 0x1
 
-    .line 274
     new-instance v1, Landroid/graphics/Path;
 
     .end local v1    # "seqPath":Landroid/graphics/Path;
     invoke-direct {v1}, Landroid/graphics/Path;-><init>()V
 
-    .line 275
     .restart local v1    # "seqPath":Landroid/graphics/Path;
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->M:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
@@ -2179,7 +1970,6 @@
 
     invoke-direct {p0, v1, v0, v2, v3}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FF)V
 
-    .line 276
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/high16 v3, -0x3d900000    # -60.0f
@@ -2198,7 +1988,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 277
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v3, 0x0
@@ -2217,7 +2006,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 278
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, 0x425c6666    # 55.1f
@@ -2236,7 +2024,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 279
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/high16 v3, 0x41100000    # 9.0f
@@ -2255,21 +2042,18 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 280
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->v:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/high16 v2, -0x3c8b0000    # -245.0f
 
     invoke-direct {p0, v1, v0, v2}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;F)V
 
-    .line 281
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->v:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/high16 v2, -0x3c8b0000    # -245.0f
 
     invoke-direct {p0, v1, v0, v2}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;F)V
 
-    .line 282
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->C:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, 0x43edf333    # 475.9f
@@ -2288,29 +2072,23 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 283
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->z:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     invoke-direct {p0, v1, v0}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;)V
 
-    .line 284
     invoke-virtual {v1, v10}, Landroid/graphics/Path;->transform(Landroid/graphics/Matrix;)V
 
-    .line 285
     iget-object v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->path:[Landroid/graphics/Path;
 
     aput-object v1, v0, v9
 
-    .line 289
     add-int/lit8 v9, v9, 0x1
 
-    .line 290
     new-instance v1, Landroid/graphics/Path;
 
     .end local v1    # "seqPath":Landroid/graphics/Path;
     invoke-direct {v1}, Landroid/graphics/Path;-><init>()V
 
-    .line 291
     .restart local v1    # "seqPath":Landroid/graphics/Path;
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->M:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
@@ -2320,7 +2098,6 @@
 
     invoke-direct {p0, v1, v0, v2, v3}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FF)V
 
-    .line 292
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->C:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, 0x43da8000    # 437.0f
@@ -2339,7 +2116,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 293
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, -0x3da6cccd    # -54.3f
@@ -2358,7 +2134,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 294
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v3, 0x0
@@ -2377,7 +2152,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 295
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, 0x4210cccd    # 36.2f
@@ -2396,7 +2170,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 296
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, 0x41133333    # 9.2f
@@ -2415,21 +2188,18 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 297
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->v:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/high16 v2, -0x3c8b0000    # -245.0f
 
     invoke-direct {p0, v1, v0, v2}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;F)V
 
-    .line 298
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->v:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/high16 v2, -0x3c8b0000    # -245.0f
 
     invoke-direct {p0, v1, v0, v2}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;F)V
 
-    .line 299
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->C:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, 0x43edf333    # 475.9f
@@ -2448,29 +2218,23 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 300
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->z:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     invoke-direct {p0, v1, v0}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;)V
 
-    .line 301
     invoke-virtual {v1, v10}, Landroid/graphics/Path;->transform(Landroid/graphics/Matrix;)V
 
-    .line 302
     iget-object v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->path:[Landroid/graphics/Path;
 
     aput-object v1, v0, v9
 
-    .line 306
     add-int/lit8 v9, v9, 0x1
 
-    .line 307
     new-instance v1, Landroid/graphics/Path;
 
     .end local v1    # "seqPath":Landroid/graphics/Path;
     invoke-direct {v1}, Landroid/graphics/Path;-><init>()V
 
-    .line 308
     .restart local v1    # "seqPath":Landroid/graphics/Path;
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->M:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
@@ -2480,7 +2244,6 @@
 
     invoke-direct {p0, v1, v0, v2, v3}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FF)V
 
-    .line 309
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->C:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, 0x43d88ccd    # 433.1f
@@ -2499,7 +2262,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 310
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/high16 v3, -0x40400000    # -1.5f
@@ -2518,7 +2280,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 311
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, -0x3ed1999a    # -10.9f
@@ -2537,7 +2298,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 312
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, -0x3da6cccd    # -54.3f
@@ -2556,7 +2316,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 313
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v3, 0x0
@@ -2575,7 +2334,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 314
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, 0x4164cccd    # 14.3f
@@ -2594,7 +2352,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 315
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, 0x41af3333    # 21.9f
@@ -2613,7 +2370,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 316
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, 0x40733333    # 3.8f
@@ -2632,14 +2388,12 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 317
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->v:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/high16 v2, -0x3c0b0000    # -490.0f
 
     invoke-direct {p0, v1, v0, v2}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;F)V
 
-    .line 318
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->C:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, 0x43edf333    # 475.9f
@@ -2658,29 +2412,23 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 319
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->z:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     invoke-direct {p0, v1, v0}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;)V
 
-    .line 320
     invoke-virtual {v1, v10}, Landroid/graphics/Path;->transform(Landroid/graphics/Matrix;)V
 
-    .line 321
     iget-object v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->path:[Landroid/graphics/Path;
 
     aput-object v1, v0, v9
 
-    .line 325
     add-int/lit8 v9, v9, 0x1
 
-    .line 326
     new-instance v1, Landroid/graphics/Path;
 
     .end local v1    # "seqPath":Landroid/graphics/Path;
     invoke-direct {v1}, Landroid/graphics/Path;-><init>()V
 
-    .line 327
     .restart local v1    # "seqPath":Landroid/graphics/Path;
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->M:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
@@ -2690,7 +2438,6 @@
 
     invoke-direct {p0, v1, v0, v2, v3}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FF)V
 
-    .line 328
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, -0x3f233333    # -6.9f
@@ -2709,7 +2456,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 329
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, -0x3efe6666    # -8.1f
@@ -2728,14 +2474,12 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 330
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->v:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v2, 0x0
 
     invoke-direct {p0, v1, v0, v2}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;F)V
 
-    .line 331
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/high16 v3, -0x3e700000    # -18.0f
@@ -2754,7 +2498,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 332
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, -0x3da6cccd    # -54.3f
@@ -2773,7 +2516,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 333
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v3, 0x0
@@ -2792,7 +2534,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 334
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, 0x41f66666    # 30.8f
@@ -2811,7 +2552,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 335
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, 0x4134cccd    # 11.3f
@@ -2830,7 +2570,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 336
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, 0x40e66666    # 7.2f
@@ -2849,7 +2588,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 337
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/high16 v3, 0x3f000000    # 0.5f
@@ -2868,7 +2606,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 338
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v3, 0x0
@@ -2887,7 +2624,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 339
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->l:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v2, 0x0
@@ -2896,7 +2632,6 @@
 
     invoke-direct {p0, v1, v0, v2, v3}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FF)V
 
-    .line 340
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, 0x42013333    # 32.3f
@@ -2915,14 +2650,12 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 341
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->v:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/high16 v2, -0x3c0b0000    # -490.0f
 
     invoke-direct {p0, v1, v0, v2}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;F)V
 
-    .line 342
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->C:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, 0x43edf333    # 475.9f
@@ -2941,29 +2674,23 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 343
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->z:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     invoke-direct {p0, v1, v0}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;)V
 
-    .line 344
     invoke-virtual {v1, v10}, Landroid/graphics/Path;->transform(Landroid/graphics/Matrix;)V
 
-    .line 345
     iget-object v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->path:[Landroid/graphics/Path;
 
     aput-object v1, v0, v9
 
-    .line 349
     add-int/lit8 v9, v9, 0x1
 
-    .line 350
     new-instance v1, Landroid/graphics/Path;
 
     .end local v1    # "seqPath":Landroid/graphics/Path;
     invoke-direct {v1}, Landroid/graphics/Path;-><init>()V
 
-    .line 351
     .restart local v1    # "seqPath":Landroid/graphics/Path;
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->M:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
@@ -2973,7 +2700,6 @@
 
     invoke-direct {p0, v1, v0, v2, v3}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FF)V
 
-    .line 352
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/high16 v3, -0x3f200000    # -7.0f
@@ -2992,7 +2718,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 353
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, -0x3efe6666    # -8.1f
@@ -3011,14 +2736,12 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 354
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->v:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v2, 0x0
 
     invoke-direct {p0, v1, v0, v2}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;F)V
 
-    .line 355
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/high16 v3, -0x3e700000    # -18.0f
@@ -3037,7 +2760,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 356
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, -0x3da6cccd    # -54.3f
@@ -3056,7 +2778,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 357
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v3, 0x0
@@ -3075,7 +2796,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 358
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, 0x41f66666    # 30.8f
@@ -3094,7 +2814,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 359
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, 0x4134cccd    # 11.3f
@@ -3113,7 +2832,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 360
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, 0x4129999a    # 10.6f
@@ -3132,7 +2850,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 361
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, 0x414e6666    # 12.9f
@@ -3151,14 +2868,12 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 362
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->v:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/high16 v2, -0x3c0b0000    # -490.0f
 
     invoke-direct {p0, v1, v0, v2}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;F)V
 
-    .line 363
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->C:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, 0x43edf333    # 475.9f
@@ -3177,29 +2892,23 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 364
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->z:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     invoke-direct {p0, v1, v0}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;)V
 
-    .line 365
     invoke-virtual {v1, v10}, Landroid/graphics/Path;->transform(Landroid/graphics/Matrix;)V
 
-    .line 366
     iget-object v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->path:[Landroid/graphics/Path;
 
     aput-object v1, v0, v9
 
-    .line 370
     add-int/lit8 v9, v9, 0x1
 
-    .line 371
     new-instance v1, Landroid/graphics/Path;
 
     .end local v1    # "seqPath":Landroid/graphics/Path;
     invoke-direct {v1}, Landroid/graphics/Path;-><init>()V
 
-    .line 372
     .restart local v1    # "seqPath":Landroid/graphics/Path;
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->M:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
@@ -3209,7 +2918,6 @@
 
     invoke-direct {p0, v1, v0, v2, v3}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FF)V
 
-    .line 373
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->L:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v2, 0x43aa3333    # 340.4f
@@ -3218,7 +2926,6 @@
 
     invoke-direct {p0, v1, v0, v2, v3}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FF)V
 
-    .line 374
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, -0x3ece6666    # -11.1f
@@ -3237,7 +2944,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 375
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, -0x3da6cccd    # -54.3f
@@ -3256,7 +2962,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 376
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v3, 0x0
@@ -3275,7 +2980,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 377
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, 0x4235999a    # 45.4f
@@ -3294,7 +2998,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 378
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->l:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v2, 0x0
@@ -3303,7 +3006,6 @@
 
     invoke-direct {p0, v1, v0, v2, v3}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FF)V
 
-    .line 379
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, 0x4039999a    # 2.9f
@@ -3322,7 +3024,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 380
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->C:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, 0x43b1b333    # 355.4f
@@ -3341,12 +3042,10 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 381
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->z:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     invoke-direct {p0, v1, v0}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;)V
 
-    .line 382
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->M:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v2, 0x43c1b333    # 387.4f
@@ -3355,7 +3054,6 @@
 
     invoke-direct {p0, v1, v0, v2, v3}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FF)V
 
-    .line 383
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->L:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v2, 0x43c1b333    # 387.4f
@@ -3364,7 +3062,6 @@
 
     invoke-direct {p0, v1, v0, v2, v3}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FF)V
 
-    .line 384
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->C:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, 0x43c1b333    # 387.4f
@@ -3383,7 +3080,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 385
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, -0x41333333    # -0.4f
@@ -3402,7 +3098,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 386
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, -0x3fe66666    # -2.4f
@@ -3421,7 +3116,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 387
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, 0x40e66666    # 7.2f
@@ -3440,7 +3134,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 388
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, 0x3e4ccccd    # 0.2f
@@ -3459,7 +3152,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 389
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v3, 0x0
@@ -3478,14 +3170,12 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 390
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->v:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v2, 0x0
 
     invoke-direct {p0, v1, v0, v2}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;F)V
 
-    .line 391
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, 0x418e6666    # 17.8f
@@ -3504,14 +3194,12 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 392
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->v:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/high16 v2, -0x3c0b0000    # -490.0f
 
     invoke-direct {p0, v1, v0, v2}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;F)V
 
-    .line 393
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->C:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, 0x43edf333    # 475.9f
@@ -3530,29 +3218,23 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 394
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->z:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     invoke-direct {p0, v1, v0}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;)V
 
-    .line 395
     invoke-virtual {v1, v10}, Landroid/graphics/Path;->transform(Landroid/graphics/Matrix;)V
 
-    .line 396
     iget-object v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->path:[Landroid/graphics/Path;
 
     aput-object v1, v0, v9
 
-    .line 400
     add-int/lit8 v9, v9, 0x1
 
-    .line 401
     new-instance v1, Landroid/graphics/Path;
 
     .end local v1    # "seqPath":Landroid/graphics/Path;
     invoke-direct {v1}, Landroid/graphics/Path;-><init>()V
 
-    .line 402
     .restart local v1    # "seqPath":Landroid/graphics/Path;
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->M:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
@@ -3562,7 +3244,6 @@
 
     invoke-direct {p0, v1, v0, v2, v3}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FF)V
 
-    .line 403
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, 0x4039999a    # 2.9f
@@ -3581,7 +3262,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 404
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, 0x40fccccd    # 7.9f
@@ -3600,14 +3280,12 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 405
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->v:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/high16 v2, -0x3c0b0000    # -490.0f
 
     invoke-direct {p0, v1, v0, v2}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;F)V
 
-    .line 406
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v3, 0x0
@@ -3626,7 +3304,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 407
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->C:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, 0x43bf999a    # 383.2f
@@ -3645,12 +3322,10 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 408
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->z:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     invoke-direct {p0, v1, v0}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;)V
 
-    .line 409
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->M:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v2, 0x436bb333    # 235.7f
@@ -3659,7 +3334,6 @@
 
     invoke-direct {p0, v1, v0, v2, v3}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FF)V
 
-    .line 410
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, -0x3da6cccd    # -54.3f
@@ -3678,7 +3352,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 411
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v3, 0x0
@@ -3697,7 +3370,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 412
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, 0x4248cccd    # 50.2f
@@ -3716,7 +3388,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 413
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/high16 v3, 0x3f000000    # 0.5f
@@ -3735,7 +3406,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 414
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, -0x3f6ccccd    # -4.6f
@@ -3754,7 +3424,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 415
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->C:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/high16 v3, 0x43a30000    # 326.0f
@@ -3773,29 +3442,23 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 416
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->z:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     invoke-direct {p0, v1, v0}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;)V
 
-    .line 417
     invoke-virtual {v1, v10}, Landroid/graphics/Path;->transform(Landroid/graphics/Matrix;)V
 
-    .line 418
     iget-object v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->path:[Landroid/graphics/Path;
 
     aput-object v1, v0, v9
 
-    .line 422
     add-int/lit8 v9, v9, 0x1
 
-    .line 423
     new-instance v1, Landroid/graphics/Path;
 
     .end local v1    # "seqPath":Landroid/graphics/Path;
     invoke-direct {v1}, Landroid/graphics/Path;-><init>()V
 
-    .line 424
     .restart local v1    # "seqPath":Landroid/graphics/Path;
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->M:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
@@ -3805,7 +3468,6 @@
 
     invoke-direct {p0, v1, v0, v2, v3}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FF)V
 
-    .line 425
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/4 v3, 0x0
@@ -3824,14 +3486,12 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 426
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->v:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const/high16 v2, -0x3c0b0000    # -490.0f
 
     invoke-direct {p0, v1, v0, v2}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;F)V
 
-    .line 427
     sget-object v2, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->C:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     const v3, 0x43edf333    # 475.9f
@@ -3850,20 +3510,16 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 428
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->z:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     invoke-direct {p0, v1, v0}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;)V
 
-    .line 429
     invoke-virtual {v1, v10}, Landroid/graphics/Path;->transform(Landroid/graphics/Matrix;)V
 
-    .line 430
     iget-object v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->path:[Landroid/graphics/Path;
 
     aput-object v1, v0, v9
 
-    .line 432
     return-void
 .end method
 
@@ -3875,7 +3531,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 456
     move-object v0, p0
 
     move-object v1, p1
@@ -3894,7 +3549,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 457
     return-void
 .end method
 
@@ -3905,7 +3559,6 @@
     .param p3, "value"    # F
 
     .prologue
-    .line 460
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$1;->$SwitchMap$com$samsung$android$visualeffect$scroll$common$IndexScrollPath$SVGCommand:[I
 
     invoke-virtual {p2}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->ordinal()I
@@ -3916,11 +3569,9 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 474
     :goto_0
     return-void
 
-    .line 463
     :pswitch_0
     const/4 v3, 0x0
 
@@ -3944,7 +3595,6 @@
 
     goto :goto_0
 
-    .line 468
     :pswitch_1
     const/4 v4, 0x0
 
@@ -3968,7 +3618,6 @@
 
     goto :goto_0
 
-    .line 460
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -3988,7 +3637,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 477
     move-object v0, p0
 
     move-object v1, p1
@@ -4007,7 +3655,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 478
     return-void
 .end method
 
@@ -4023,7 +3670,6 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 481
     move-object v0, p0
 
     move-object v1, p1
@@ -4042,7 +3688,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->vectorParsing(Landroid/graphics/Path;Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;FFFFFF)V
 
-    .line 482
     return-void
 .end method
 
@@ -4058,10 +3703,8 @@
     .param p8, "y3"    # F
 
     .prologue
-    .line 486
     const/4 v7, 0x0
 
-    .line 487
     .local v7, "wasCurve":Z
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$1;->$SwitchMap$com$samsung$android$visualeffect$scroll$common$IndexScrollPath$SVGCommand:[I
 
@@ -4073,49 +3716,39 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 598
     :goto_0
     if-nez v7, :cond_0
 
-    .line 599
     iget v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->lastX:F
 
     iput v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->lastX1:F
 
-    .line 600
     iget v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->lastY:F
 
     iput v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->lastY1:F
 
-    .line 602
     :cond_0
     return-void
 
-    .line 490
     :pswitch_0
     move v8, p3
 
-    .line 491
     .local v8, "x":F
     move v9, p4
 
-    .line 492
     .local v9, "y":F
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->m:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     if-ne p2, v0, :cond_1
 
-    .line 493
     invoke-virtual {p1, v8, v9}, Landroid/graphics/Path;->rMoveTo(FF)V
 
-    .line 494
     iget v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->lastX:F
 
     add-float/2addr v0, v8
 
     iput v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->lastX:F
 
-    .line 495
     iget v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->lastY:F
 
     add-float/2addr v0, v9
@@ -4124,71 +3757,57 @@
 
     goto :goto_0
 
-    .line 497
     :cond_1
     invoke-virtual {p1, v8, v9}, Landroid/graphics/Path;->moveTo(FF)V
 
-    .line 498
     iput v8, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->lastX:F
 
-    .line 499
     iput v9, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->lastY:F
 
     goto :goto_0
 
-    .line 505
     .end local v8    # "x":F
     .end local v9    # "y":F
     :pswitch_1
     invoke-virtual {p1}, Landroid/graphics/Path;->close()V
 
-    .line 506
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->lastX1:F
 
-    .line 507
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->lastY1:F
 
-    .line 508
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->lastX:F
 
-    .line 509
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->lastY:F
 
     goto :goto_0
 
-    .line 514
     :pswitch_2
     move v8, p3
 
-    .line 515
     .restart local v8    # "x":F
     move v9, p4
 
-    .line 516
     .restart local v9    # "y":F
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->l:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     if-ne p2, v0, :cond_2
 
-    .line 517
     invoke-virtual {p1, v8, v9}, Landroid/graphics/Path;->rLineTo(FF)V
 
-    .line 518
     iget v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->lastX:F
 
     add-float/2addr v0, v8
 
     iput v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->lastX:F
 
-    .line 519
     iget v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->lastY:F
 
     add-float/2addr v0, v9
@@ -4197,36 +3816,29 @@
 
     goto :goto_0
 
-    .line 521
     :cond_2
     invoke-virtual {p1, v8, v9}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 522
     iput v8, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->lastX:F
 
-    .line 523
     iput v9, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->lastY:F
 
     goto :goto_0
 
-    .line 529
     .end local v8    # "x":F
     .end local v9    # "y":F
     :pswitch_3
     move v8, p3
 
-    .line 530
     .restart local v8    # "x":F
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->h:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     if-ne p2, v0, :cond_3
 
-    .line 531
     const/4 v0, 0x0
 
     invoke-virtual {p1, v8, v0}, Landroid/graphics/Path;->rLineTo(FF)V
 
-    .line 532
     iget v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->lastX:F
 
     add-float/2addr v0, v8
@@ -4235,34 +3847,28 @@
 
     goto :goto_0
 
-    .line 534
     :cond_3
     iget v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->lastY:F
 
     invoke-virtual {p1, v8, v0}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 535
     iput v8, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->lastX:F
 
     goto :goto_0
 
-    .line 541
     .end local v8    # "x":F
     :pswitch_4
     move v9, p4
 
-    .line 542
     .restart local v9    # "y":F
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->v:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     if-ne p2, v0, :cond_4
 
-    .line 543
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0, v9}, Landroid/graphics/Path;->rLineTo(FF)V
 
-    .line 544
     iget v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->lastY:F
 
     add-float/2addr v0, v9
@@ -4271,77 +3877,61 @@
 
     goto :goto_0
 
-    .line 546
     :cond_4
     iget v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->lastX:F
 
     invoke-virtual {p1, v0, v9}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 547
     iput v9, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->lastY:F
 
     goto :goto_0
 
-    .line 553
     .end local v9    # "y":F
     :pswitch_5
     const/4 v7, 0x1
 
-    .line 554
     move v1, p3
 
-    .line 555
     .local v1, "tx1":F
     move v2, p4
 
-    .line 556
     .local v2, "ty1":F
     move/from16 v3, p5
 
-    .line 557
     .local v3, "tx2":F
     move/from16 v4, p6
 
-    .line 558
     .local v4, "ty2":F
     move/from16 v5, p7
 
-    .line 559
     .local v5, "tx":F
     move/from16 v6, p8
 
-    .line 560
     .local v6, "ty":F
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->c:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     if-ne p2, v0, :cond_5
 
-    .line 561
     iget v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->lastX:F
 
     add-float/2addr v1, v0
 
-    .line 562
     iget v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->lastX:F
 
     add-float/2addr v3, v0
 
-    .line 563
     iget v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->lastX:F
 
     add-float/2addr v5, v0
 
-    .line 564
     iget v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->lastY:F
 
     add-float/2addr v2, v0
 
-    .line 565
     iget v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->lastY:F
 
     add-float/2addr v4, v0
 
-    .line 566
     iget v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->lastY:F
 
     add-float/2addr v6, v0
@@ -4349,24 +3939,18 @@
     :cond_5
     move-object v0, p1
 
-    .line 568
     invoke-virtual/range {v0 .. v6}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
 
-    .line 569
     iput v3, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->lastX1:F
 
-    .line 570
     iput v4, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->lastY1:F
 
-    .line 571
     iput v5, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->lastX:F
 
-    .line 572
     iput v6, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->lastY:F
 
     goto/16 :goto_0
 
-    .line 577
     .end local v1    # "tx1":F
     .end local v2    # "ty1":F
     .end local v3    # "tx2":F
@@ -4376,48 +3960,38 @@
     :pswitch_6
     const/4 v7, 0x1
 
-    .line 578
     move v3, p3
 
-    .line 579
     .restart local v3    # "tx2":F
     move v4, p4
 
-    .line 580
     .restart local v4    # "ty2":F
     move/from16 v5, p5
 
-    .line 581
     .restart local v5    # "tx":F
     move/from16 v6, p6
 
-    .line 582
     .restart local v6    # "ty":F
     sget-object v0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;->s:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath$SVGCommand;
 
     if-ne p2, v0, :cond_6
 
-    .line 583
     iget v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->lastX:F
 
     add-float/2addr v3, v0
 
-    .line 584
     iget v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->lastX:F
 
     add-float/2addr v5, v0
 
-    .line 585
     iget v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->lastY:F
 
     add-float/2addr v4, v0
 
-    .line 586
     iget v0, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->lastY:F
 
     add-float/2addr v6, v0
 
-    .line 588
     :cond_6
     const/high16 v0, 0x40000000    # 2.0f
 
@@ -4429,7 +4003,6 @@
 
     sub-float v1, v0, v10
 
-    .line 589
     .restart local v1    # "tx1":F
     const/high16 v0, 0x40000000    # 2.0f
 
@@ -4444,24 +4017,18 @@
     .restart local v2    # "ty1":F
     move-object v0, p1
 
-    .line 590
     invoke-virtual/range {v0 .. v6}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
 
-    .line 591
     iput v3, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->lastX1:F
 
-    .line 592
     iput v4, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->lastY1:F
 
-    .line 593
     iput v5, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->lastX:F
 
-    .line 594
     iput v6, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->lastY:F
 
     goto/16 :goto_0
 
-    .line 487
     nop
 
     :pswitch_data_0
@@ -4489,7 +4056,6 @@
     .locals 2
 
     .prologue
-    .line 440
     const v0, -0x3c8aca7f    # -245.209f
 
     iget v1, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->ratio:F
@@ -4503,7 +4069,6 @@
     .locals 2
 
     .prologue
-    .line 444
     const v0, 0x3c9bc000
 
     iget v1, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->ratio:F
@@ -4517,7 +4082,6 @@
     .locals 2
 
     .prologue
-    .line 448
     const v0, 0x42c47646
 
     iget v1, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->ratio:F
@@ -4532,12 +4096,10 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 435
     iget-object v1, p0, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->path:[Landroid/graphics/Path;
 
     aget-object v0, v1, p1
 
-    .line 436
     .local v0, "tPath":Landroid/graphics/Path;
     return-object v0
 .end method
@@ -4546,7 +4108,6 @@
     .locals 1
 
     .prologue
-    .line 452
     const/16 v0, 0x17
 
     return v0

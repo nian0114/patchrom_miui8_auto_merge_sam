@@ -80,48 +80,38 @@
     .local p4, "collectionList":Ljava/util/concurrent/CopyOnWriteArrayList;, "Ljava/util/concurrent/CopyOnWriteArrayList<Lcom/samsung/android/contextaware/manager/ContextComponent;>;"
     const/4 v3, 0x0
 
-    .line 105
     invoke-direct/range {p0 .. p5}, Lcom/samsung/android/contextaware/aggregator/Aggregator;-><init>(ILandroid/content/Context;Landroid/os/Looper;Ljava/util/concurrent/CopyOnWriteArrayList;Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;)V
 
-    .line 58
     iput-object v3, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->mLPPFusion:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion;
 
-    .line 59
     const/16 v2, 0x14
 
     iput v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->gpsRequestTimer:I
 
-    .line 60
     const/16 v2, 0xa
 
     iput v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->gpsKeepOnTimer:I
 
-    .line 62
     const/16 v2, 0x64
 
     iput v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->gpsRequestApdr:I
 
-    .line 65
     const-string v2, "[Note] \n"
 
     iput-object v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->strConfigEdit:Ljava/lang/String;
 
-    .line 66
     const-string v2, ""
 
     iput-object v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->strConfigText:Ljava/lang/String;
 
-    .line 72
     new-instance v2, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator$LPPFusionListener;
 
     invoke-direct {v2, p0, v3}, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator$LPPFusionListener;-><init>(Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator$1;)V
 
     iput-object v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->LPPLnr:Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator$LPPFusionListener;
 
-    .line 83
     iput-object v3, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->mApdrRunner:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner;
 
-    .line 419
     const/16 v2, 0x24
 
     new-array v2, v2, [I
@@ -130,12 +120,10 @@
 
     iput-object v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->mStatus:[I
 
-    .line 433
     const/4 v2, 0x0
 
     iput v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->count:I
 
-    .line 112
     invoke-virtual {p4}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -154,7 +142,6 @@
 
     check-cast v0, Lcom/samsung/android/contextaware/manager/ContextComponent;
 
-    .line 113
     .local v0, "i":Lcom/samsung/android/contextaware/manager/ContextComponent;
     invoke-virtual {v0}, Lcom/samsung/android/contextaware/manager/ContextComponent;->getContextType()Ljava/lang/String;
 
@@ -172,17 +159,14 @@
 
     if-eqz v2, :cond_0
 
-    .line 115
     check-cast v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner;
 
     .end local v0    # "i":Lcom/samsung/android/contextaware/manager/ContextComponent;
     iput-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->mApdrRunner:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner;
 
-    .line 119
     :cond_1
     return-void
 
-    .line 419
     :array_0
     .array-data 4
         0x1
@@ -229,7 +213,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;
 
     .prologue
-    .line 51
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->mLPPFusion:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion;
 
     return-object v0
@@ -241,7 +224,6 @@
     .param p1, "x1"    # Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion;
 
     .prologue
-    .line 51
     iput-object p1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->mLPPFusion:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion;
 
     return-object p1
@@ -252,7 +234,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;
 
     .prologue
-    .line 51
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->LPPLnr:Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator$LPPFusionListener;
 
     return-object v0
@@ -263,7 +244,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;
 
     .prologue
-    .line 51
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->mApdrRunner:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner;
 
     return-object v0
@@ -275,7 +255,6 @@
     .param p1, "x1"    # Ljava/util/ArrayList;
 
     .prologue
-    .line 51
     invoke-direct {p0, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->notifyPositionContext(Ljava/util/ArrayList;)V
 
     return-void
@@ -288,7 +267,6 @@
     .param p3, "second"    # I
 
     .prologue
-    .line 508
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->mApdrRunner:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner;
@@ -299,7 +277,6 @@
 
     move-result-object v16
 
-    .line 509
     .local v16, "syncT":Landroid/text/format/Time;
     const-string v19, "LppAggregator"
 
@@ -307,7 +284,7 @@
 
     invoke-direct/range {v20 .. v20}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v21, "syncT:"
+    const-string v21, "syncT:"
 
     invoke-virtual/range {v20 .. v21}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -327,7 +304,6 @@
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 510
     new-instance v4, Ljava/text/SimpleDateFormat;
 
     const-string v19, "HH:mm:ss"
@@ -336,7 +312,6 @@
 
     invoke-direct {v4, v0}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
-    .line 511
     .local v4, "format":Ljava/text/SimpleDateFormat;
     new-instance v19, Ljava/lang/StringBuilder;
 
@@ -388,7 +363,6 @@
 
     move-result-object v17
 
-    .line 514
     .local v17, "time1":Ljava/lang/String;
     new-instance v19, Ljava/lang/StringBuilder;
 
@@ -434,15 +408,12 @@
 
     move-result-object v18
 
-    .line 515
     .local v18, "time2":Ljava/lang/String;
     const/4 v15, 0x0
 
-    .line 516
     .local v15, "syncDate":Ljava/util/Date;
     const/4 v5, 0x0
 
-    .line 518
     .local v5, "rxDate":Ljava/util/Date;
     :try_start_0
     move-object/from16 v0, v17
@@ -451,21 +422,19 @@
 
     move-result-object v15
 
-    .line 519
     move-object/from16 v0, v18
 
     invoke-virtual {v4, v0}, Ljava/text/SimpleDateFormat;->parse(Ljava/lang/String;)Ljava/util/Date;
 
     move-result-object v5
 
-    .line 520
     const-string v19, "LppAggregator"
 
     new-instance v20, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v20 .. v20}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v21, "syncDate:"
+    const-string v21, "syncDate:"
 
     invoke-virtual/range {v20 .. v21}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -483,14 +452,13 @@
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 521
     const-string v19, "LppAggregator"
 
     new-instance v20, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v20 .. v20}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v21, "rxDate:"
+    const-string v21, "rxDate:"
 
     invoke-virtual/range {v20 .. v21}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -508,23 +476,19 @@
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 522
     invoke-virtual {v15, v5}, Ljava/util/Date;->after(Ljava/util/Date;)Z
 
     move-result v19
 
     if-eqz v19, :cond_0
 
-    .line 524
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v2
 
-    .line 525
     .local v2, "cal2":Ljava/util/Calendar;
     invoke-virtual {v2, v5}, Ljava/util/Calendar;->setTime(Ljava/util/Date;)V
 
-    .line 526
     const/16 v19, 0x5
 
     const/16 v20, 0x1
@@ -535,24 +499,20 @@
 
     invoke-virtual {v2, v0, v1}, Ljava/util/Calendar;->add(II)V
 
-    .line 527
     invoke-virtual {v2}, Ljava/util/Calendar;->getTime()Ljava/util/Date;
     :try_end_0
     .catch Ljava/text/ParseException; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v5
 
-    .line 535
     .end local v2    # "cal2":Ljava/util/Calendar;
     :cond_0
     :goto_0
     const-wide/16 v12, 0x0
 
-    .line 536
     .local v12, "lapse":J
     if-eqz v5, :cond_1
 
-    .line 538
     invoke-virtual {v5}, Ljava/util/Date;->getTime()J
 
     move-result-wide v20
@@ -563,7 +523,6 @@
 
     sub-long v12, v20, v22
 
-    .line 540
     :cond_1
     const-string v19, "LppAggregator"
 
@@ -589,21 +548,18 @@
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 541
     const-wide/16 v20, 0x0
 
     cmp-long v19, v12, v20
 
     if-gez v19, :cond_2
 
-    .line 543
     const-string v19, "LppAggregator"
 
     const-string v20, "lapse is -ve"
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 546
     :cond_2
     const-wide/32 v20, 0x2932e00
 
@@ -611,14 +567,12 @@
 
     if-lez v19, :cond_3
 
-    .line 547
     const-string v19, "LppAggregator"
 
     const-string v20, "lapse is more than 12 hours"
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 549
     :cond_3
     sget-object v19, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
@@ -628,7 +582,6 @@
 
     move-result-wide v6
 
-    .line 550
     .local v6, "lapHr":J
     sget-object v19, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
@@ -650,7 +603,6 @@
 
     move-result-wide v8
 
-    .line 552
     .local v8, "lapMin":J
     const-wide/16 v20, 0x3c
 
@@ -680,7 +632,6 @@
 
     div-long v10, v20, v22
 
-    .line 556
     .local v10, "lapSec":J
     const-string v19, "LppAggregator"
 
@@ -730,14 +681,12 @@
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 559
     new-instance v14, Landroid/text/format/Time;
 
     move-object/from16 v0, v16
 
     invoke-direct {v14, v0}, Landroid/text/format/Time;-><init>(Landroid/text/format/Time;)V
 
-    .line 560
     .local v14, "rxTime":Landroid/text/format/Time;
     iget v0, v14, Landroid/text/format/Time;->hour:I
 
@@ -761,7 +710,6 @@
 
     iput v0, v14, Landroid/text/format/Time;->hour:I
 
-    .line 561
     iget v0, v14, Landroid/text/format/Time;->minute:I
 
     move/from16 v19, v0
@@ -784,7 +732,6 @@
 
     iput v0, v14, Landroid/text/format/Time;->minute:I
 
-    .line 562
     iget v0, v14, Landroid/text/format/Time;->second:I
 
     move/from16 v19, v0
@@ -807,14 +754,13 @@
 
     iput v0, v14, Landroid/text/format/Time;->second:I
 
-    .line 564
     const-string v19, "LppAggregator"
 
     new-instance v20, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v20 .. v20}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v21, "rxTime:"
+    const-string v21, "rxTime:"
 
     invoke-virtual/range {v20 .. v21}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -832,7 +778,6 @@
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 566
     const/16 v19, 0x0
 
     move/from16 v0, v19
@@ -843,7 +788,6 @@
 
     return-wide v20
 
-    .line 529
     .end local v6    # "lapHr":J
     .end local v8    # "lapMin":J
     .end local v10    # "lapSec":J
@@ -852,15 +796,13 @@
     :catch_0
     move-exception v3
 
-    .line 530
     .local v3, "e":Ljava/text/ParseException;
     const-string v19, "LppAggregator"
 
-    const-string/jumbo v20, "time parse error"
+    const-string v20, "time parse error"
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 531
     invoke-virtual {v3}, Ljava/text/ParseException;->printStackTrace()V
 
     goto/16 :goto_0
@@ -873,7 +815,6 @@
     .param p3, "sec"    # I
 
     .prologue
-    .line 600
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -886,12 +827,10 @@
     .param p1, "count"    # I
 
     .prologue
-    .line 164
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->getContextValueNames()[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 166
     .local v0, "names":[Ljava/lang/String;
     invoke-super {p0}, Lcom/samsung/android/contextaware/aggregator/Aggregator;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
@@ -903,7 +842,6 @@
 
     invoke-virtual {v1, v2, p1}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContext(Ljava/lang/String;I)V
 
-    .line 167
     invoke-super {p0}, Lcom/samsung/android/contextaware/aggregator/Aggregator;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v1
@@ -916,7 +854,6 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContext(Ljava/lang/String;[J)V
 
-    .line 168
     invoke-super {p0}, Lcom/samsung/android/contextaware/aggregator/Aggregator;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v1
@@ -929,7 +866,6 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContext(Ljava/lang/String;[D)V
 
-    .line 169
     invoke-super {p0}, Lcom/samsung/android/contextaware/aggregator/Aggregator;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v1
@@ -942,7 +878,6 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContext(Ljava/lang/String;[D)V
 
-    .line 170
     invoke-super {p0}, Lcom/samsung/android/contextaware/aggregator/Aggregator;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v1
@@ -955,10 +890,8 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContext(Ljava/lang/String;[D)V
 
-    .line 172
     invoke-super {p0}, Lcom/samsung/android/contextaware/aggregator/Aggregator;->notifyObserver()V
 
-    .line 173
     return-void
 .end method
 
@@ -975,51 +908,42 @@
     .end annotation
 
     .prologue
-    .line 466
     .local p1, "listLPPResult":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/location/Location;>;"
     const-string v5, "LppAggregator"
 
-    const-string/jumbo v6, "notifyPositionContext"
+    const-string v6, "notifyPositionContext"
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 468
     new-instance v4, Landroid/text/format/Time;
 
     invoke-direct {v4}, Landroid/text/format/Time;-><init>()V
 
-    .line 471
     .local v4, "tim":Landroid/text/format/Time;
     const/4 v0, 0x0
 
-    .line 473
     .local v0, "cnt":I
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
     move-result v3
 
-    .line 475
     .local v3, "size":I
     new-array v5, v3, [J
 
     iput-object v5, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->timestamp:[J
 
-    .line 476
     new-array v5, v3, [D
 
     iput-object v5, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->latitude:[D
 
-    .line 477
     new-array v5, v3, [D
 
     iput-object v5, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->longitude:[D
 
-    .line 478
     new-array v5, v3, [D
 
     iput-object v5, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->altitude:[D
 
-    .line 480
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -1030,14 +954,12 @@
 
     if-ge v1, v5, :cond_0
 
-    .line 481
     invoke-virtual {p1, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Landroid/location/Location;
 
-    .line 482
     .local v2, "loc":Landroid/location/Location;
     invoke-virtual {v2}, Landroid/location/Location;->getTime()J
 
@@ -1045,12 +967,10 @@
 
     invoke-virtual {v4, v6, v7}, Landroid/text/format/Time;->set(J)V
 
-    .line 483
     const-string v5, "GMT+00:00"
 
     invoke-virtual {v4, v5}, Landroid/text/format/Time;->switchTimezone(Ljava/lang/String;)V
 
-    .line 484
     iget-object v5, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->timestamp:[J
 
     invoke-virtual {v2}, Landroid/location/Location;->getTime()J
@@ -1059,7 +979,6 @@
 
     aput-wide v6, v5, v1
 
-    .line 485
     iget-object v5, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->latitude:[D
 
     invoke-virtual {v2}, Landroid/location/Location;->getLatitude()D
@@ -1068,7 +987,6 @@
 
     aput-wide v6, v5, v1
 
-    .line 486
     iget-object v5, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->longitude:[D
 
     invoke-virtual {v2}, Landroid/location/Location;->getLongitude()D
@@ -1077,7 +995,6 @@
 
     aput-wide v6, v5, v1
 
-    .line 487
     iget-object v5, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->altitude:[D
 
     invoke-virtual {v2}, Landroid/location/Location;->getAltitude()D
@@ -1086,20 +1003,16 @@
 
     aput-wide v6, v5, v1
 
-    .line 488
     add-int/lit8 v0, v0, 0x1
 
-    .line 480
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 491
     .end local v2    # "loc":Landroid/location/Location;
     :cond_0
     invoke-direct {p0, v0}, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->notifyLppContext(I)V
 
-    .line 492
     return-void
 .end method
 
@@ -1107,7 +1020,6 @@
     .locals 4
 
     .prologue
-    .line 382
     new-instance v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator$2;
 
     invoke-super {p0}, Lcom/samsung/android/contextaware/aggregator/Aggregator;->getLooper()Landroid/os/Looper;
@@ -1118,7 +1030,6 @@
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->sendApdr:Landroid/os/Handler;
 
-    .line 416
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->sendApdr:Landroid/os/Handler;
 
     const v1, 0xabaa
@@ -1127,7 +1038,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 417
     return-void
 .end method
 
@@ -1137,13 +1047,10 @@
     .locals 0
 
     .prologue
-    .line 153
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->trace()V
 
-    .line 154
     invoke-super {p0}, Lcom/samsung/android/contextaware/aggregator/Aggregator;->clear()V
 
-    .line 155
     return-void
 .end method
 
@@ -1151,10 +1058,8 @@
     .locals 4
 
     .prologue
-    .line 439
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->trace()V
 
-    .line 443
     new-instance v0, Landroid/os/Handler;
 
     invoke-super {p0}, Lcom/samsung/android/contextaware/aggregator/Aggregator;->getLooper()Landroid/os/Looper;
@@ -1171,7 +1076,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 451
     return-void
 .end method
 
@@ -1179,7 +1083,6 @@
     .locals 0
 
     .prologue
-    .line 456
     return-void
 .end method
 
@@ -1187,10 +1090,8 @@
     .locals 6
 
     .prologue
-    .line 353
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->trace()V
 
-    .line 356
     new-instance v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppConfig;
 
     invoke-super {p0}, Lcom/samsung/android/contextaware/aggregator/Aggregator;->getContext()Landroid/content/Context;
@@ -1205,7 +1106,6 @@
 
     invoke-direct {v0, v1, v2, v3, v4}, Lcom/samsung/android/contextaware/aggregator/lpp/LppConfig;-><init>(Landroid/content/Context;III)V
 
-    .line 359
     .local v0, "config":Lcom/samsung/android/contextaware/aggregator/lpp/LppConfig;
     invoke-super {p0}, Lcom/samsung/android/contextaware/aggregator/Aggregator;->getContext()Landroid/content/Context;
 
@@ -1213,14 +1113,12 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppConfig;->setContext(Landroid/content/Context;)V
 
-    .line 360
     invoke-super {p0}, Lcom/samsung/android/contextaware/aggregator/Aggregator;->getLooper()Landroid/os/Looper;
 
     move-result-object v1
 
     iput-object v1, v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppConfig;->looper:Landroid/os/Looper;
 
-    .line 365
     new-instance v1, Landroid/os/Handler;
 
     invoke-super {p0}, Lcom/samsung/android/contextaware/aggregator/Aggregator;->getLooper()Landroid/os/Looper;
@@ -1237,7 +1135,6 @@
 
     invoke-virtual {v1, v2, v4, v5}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 376
     return-void
 .end method
 
@@ -1245,7 +1142,6 @@
     .locals 1
 
     .prologue
-    .line 182
     sget-object v0, Lcom/samsung/android/contextaware/ContextList$ContextType;->AGGREGATOR_LPP:Lcom/samsung/android/contextaware/ContextList$ContextType;
 
     invoke-virtual {v0}, Lcom/samsung/android/contextaware/ContextList$ContextType;->getCode()Ljava/lang/String;
@@ -1259,7 +1155,6 @@
     .locals 3
 
     .prologue
-    .line 267
     const/4 v0, 0x5
 
     new-array v0, v0, [Ljava/lang/String;
@@ -1301,7 +1196,6 @@
     .locals 0
 
     .prologue
-    .line 193
     return-object p0
 .end method
 
@@ -1309,7 +1203,6 @@
     .locals 0
 
     .prologue
-    .line 203
     return-object p0
 .end method
 
@@ -1317,7 +1210,6 @@
     .locals 0
 
     .prologue
-    .line 130
     return-void
 .end method
 
@@ -1333,17 +1225,14 @@
     .end annotation
 
     .prologue
-    .line 215
     .local p2, "value":Ljava/lang/Object;, "TE;"
     const/4 v1, 0x1
 
-    .line 216
     .local v1, "result":Z
     const/16 v2, 0x20
 
     if-ne p1, v2, :cond_5
 
-    .line 217
     check-cast p2, Lcom/samsung/android/contextaware/manager/ContextAwarePropertyBundle;
 
     .end local p2    # "value":Ljava/lang/Object;, "TE;"
@@ -1357,7 +1246,6 @@
 
     move-result v0
 
-    .line 219
     .local v0, "resolution":I
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1383,7 +1271,6 @@
 
     invoke-static {v2}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->info(Ljava/lang/String;)V
 
-    .line 220
     if-eqz v0, :cond_2
 
     const/4 v2, 0x1
@@ -1394,65 +1281,53 @@
 
     if-eq v0, v2, :cond_2
 
-    .line 224
     iget-object v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->mLPPFusion:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion;
 
     if-eqz v2, :cond_1
 
-    .line 225
     const v2, 0x126bdfd
 
     if-ne v0, v2, :cond_0
 
-    .line 226
     iget-object v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->mLPPFusion:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion;
 
     invoke-virtual {v2}, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion;->sendStatusEnable()V
 
-    .line 228
     :cond_0
     const v2, 0x7b85ae
 
     if-ne v0, v2, :cond_1
 
-    .line 229
     iget-object v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->mLPPFusion:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion;
 
     invoke-virtual {v2}, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion;->sendStatusDisable()V
 
-    .line 233
     :cond_1
     const-string v2, "Invalid value for LPP resolution"
 
     invoke-static {v2}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->warning(Ljava/lang/String;)V
 
-    .line 234
     const/4 v2, 0x0
 
-    .line 256
     .end local v0    # "resolution":I
     :goto_0
     return v2
 
-    .line 245
     .restart local v0    # "resolution":I
     :cond_2
     iget-object v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->mApdrRunner:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner;
 
     if-eqz v2, :cond_3
 
-    .line 246
     iget-object v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->mApdrRunner:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner;
 
     invoke-virtual {v2, v0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner;->setLppResolution(I)V
 
-    .line 249
     :cond_3
     iget-object v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->mLPPFusion:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion;
 
     if-eqz v2, :cond_4
 
-    .line 250
     iget-object v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->mLPPFusion:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion;
 
     invoke-virtual {v2, v0}, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion;->setLppResolution(I)V
@@ -1462,10 +1337,8 @@
     :goto_1
     move v2, v1
 
-    .line 256
     goto :goto_0
 
-    .line 254
     .restart local p2    # "value":Ljava/lang/Object;, "TE;"
     :cond_5
     const/4 v1, 0x0
@@ -1477,7 +1350,6 @@
     .locals 0
 
     .prologue
-    .line 144
     return-void
 .end method
 
@@ -1487,7 +1359,6 @@
     .param p2, "context"    # Landroid/os/Bundle;
 
     .prologue
-    .line 285
     new-instance v20, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v20 .. v20}, Ljava/lang/StringBuilder;-><init>()V
@@ -1512,7 +1383,6 @@
 
     invoke-static/range {v20 .. v20}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->debug(Ljava/lang/String;)V
 
-    .line 287
     sget-object v20, Lcom/samsung/android/contextaware/ContextList$ContextType;->SENSORHUB_RUNNER_APDR:Lcom/samsung/android/contextaware/ContextList$ContextType;
 
     invoke-virtual/range {v20 .. v20}, Lcom/samsung/android/contextaware/ContextList$ContextType;->getCode()Ljava/lang/String;
@@ -1529,7 +1399,6 @@
 
     if-eqz v20, :cond_0
 
-    .line 288
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->mLPPFusion:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion;
@@ -1546,7 +1415,6 @@
 
     if-eqz v20, :cond_0
 
-    .line 290
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->mApdrRunner:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner;
@@ -1557,7 +1425,6 @@
 
     move-result-object v12
 
-    .line 292
     .local v12, "names":[Ljava/lang/String;
     sget-object v20, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner$ContextValIndex;->StayingArea:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner$ContextValIndex;
 
@@ -1575,11 +1442,9 @@
 
     move-result v16
 
-    .line 295
     .local v16, "stayA":I
     if-eqz v16, :cond_1
 
-    .line 296
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppAggregator;->mLPPFusion:Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion;
@@ -1592,14 +1457,12 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppFusion;->notifyStayArea(I)V
 
-    .line 349
     .end local v12    # "names":[Ljava/lang/String;
     .end local v16    # "stayA":I
     :cond_0
     :goto_0
     return-void
 
-    .line 299
     .restart local v12    # "names":[Ljava/lang/String;
     .restart local v16    # "stayA":I
     :cond_1
@@ -1619,7 +1482,6 @@
 
     move-result v4
 
-    .line 301
     .local v4, "dataSize":I
     sget-object v20, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner$ContextValIndex;->Hour:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner$ContextValIndex;
 
@@ -1637,7 +1499,6 @@
 
     move-result v6
 
-    .line 303
     .local v6, "hour":I
     sget-object v20, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner$ContextValIndex;->Minute:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner$ContextValIndex;
 
@@ -1655,7 +1516,6 @@
 
     move-result v11
 
-    .line 305
     .local v11, "minute":I
     sget-object v20, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner$ContextValIndex;->Second:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner$ContextValIndex;
 
@@ -1673,7 +1533,6 @@
 
     move-result v13
 
-    .line 307
     .local v13, "second":I
     sget-object v20, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner$ContextValIndex;->doe:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner$ContextValIndex;
 
@@ -1691,7 +1550,6 @@
 
     move-result v5
 
-    .line 309
     .local v5, "doe":I
     sget-object v20, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner$ContextValIndex;->TimeDifference:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner$ContextValIndex;
 
@@ -1709,7 +1567,6 @@
 
     move-result-object v17
 
-    .line 311
     .local v17, "timeDiff":[J
     sget-object v20, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner$ContextValIndex;->IncrementEast:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner$ContextValIndex;
 
@@ -1727,7 +1584,6 @@
 
     move-result-object v8
 
-    .line 313
     .local v8, "incEast":[I
     sget-object v20, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner$ContextValIndex;->IncrementNorth:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner$ContextValIndex;
 
@@ -1745,7 +1601,6 @@
 
     move-result-object v9
 
-    .line 315
     .local v9, "incNorth":[I
     sget-object v20, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner$ContextValIndex;->ActivityType:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ApdrRunner$ContextValIndex;
 
@@ -1763,11 +1618,9 @@
 
     move-result-object v2
 
-    .line 318
     .local v2, "activityType":[I
     const-wide/16 v14, 0x0
 
-    .line 320
     .local v14, "rxTime":J
     move-object/from16 v0, p0
 
@@ -1775,12 +1628,10 @@
 
     move-result-wide v14
 
-    .line 322
     new-instance v10, Ljava/util/ArrayList;
 
     invoke-direct {v10}, Ljava/util/ArrayList;-><init>()V
 
-    .line 323
     .local v10, "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;>;"
     const/4 v7, 0x0
 
@@ -1788,21 +1639,17 @@
     :goto_1
     if-ge v7, v4, :cond_3
 
-    .line 324
     const-wide/16 v18, 0x0
 
-    .line 325
     .local v18, "sumTimeDiff":J
     const/4 v3, 0x0
 
-    .line 327
     .local v3, "apdr":Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;
     new-instance v3, Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;
 
     .end local v3    # "apdr":Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;
     invoke-direct {v3}, Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;-><init>()V
 
-    .line 328
     .restart local v3    # "apdr":Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;
     const-wide/high16 v20, 0x3ff0000000000000L    # 1.0
 
@@ -1810,7 +1657,6 @@
 
     iput-wide v0, v3, Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;->stepFlag:D
 
-    .line 329
     aget v20, v8, v7
 
     aget v21, v8, v7
@@ -1853,19 +1699,16 @@
 
     iput-wide v0, v3, Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;->stepLength:D
 
-    .line 331
     aget-wide v20, v17, v7
 
     add-long v18, v18, v20
 
-    .line 332
     add-long v20, v14, v18
 
     move-wide/from16 v0, v20
 
     iput-wide v0, v3, Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;->utctime:J
 
-    .line 334
     aget v20, v8, v7
 
     move/from16 v0, v20
@@ -1888,7 +1731,6 @@
 
     iput-wide v0, v3, Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;->apdrHeading:D
 
-    .line 335
     iget-wide v0, v3, Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;->apdrHeading:D
 
     move-wide/from16 v20, v0
@@ -1899,7 +1741,6 @@
 
     if-gez v20, :cond_2
 
-    .line 336
     iget-wide v0, v3, Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;->apdrHeading:D
 
     move-wide/from16 v20, v0
@@ -1912,7 +1753,6 @@
 
     iput-wide v0, v3, Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;->apdrHeading:D
 
-    .line 339
     :cond_2
     iget-object v0, v3, Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;->mag:[D
 
@@ -1926,7 +1766,6 @@
 
     aput-wide v22, v20, v21
 
-    .line 340
     aget v20, v2, v7
 
     and-int/lit8 v20, v20, 0xf
@@ -1935,7 +1774,6 @@
 
     iput v0, v3, Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;->movingStatus:I
 
-    .line 341
     aget v20, v2, v7
 
     move/from16 v0, v20
@@ -1948,15 +1786,12 @@
 
     iput v0, v3, Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;->carryPos:I
 
-    .line 343
     invoke-virtual {v10, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 323
     add-int/lit8 v7, v7, 0x1
 
     goto/16 :goto_1
 
-    .line 345
     .end local v3    # "apdr":Lcom/samsung/android/contextaware/aggregator/lpp/ApdrData;
     .end local v18    # "sumTimeDiff":J
     :cond_3

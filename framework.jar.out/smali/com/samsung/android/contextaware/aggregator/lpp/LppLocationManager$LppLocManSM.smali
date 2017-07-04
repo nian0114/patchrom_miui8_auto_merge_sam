@@ -57,159 +57,130 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 192
     iput-object p1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager;
 
-    .line 194
     invoke-direct {p0, p2}, Lcom/android/internal/util/StateMachine;-><init>(Ljava/lang/String;)V
 
-    .line 181
     iput-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->mAllNM:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$AllNM;
 
-    .line 182
     iput-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->mStatNM:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$StatNM;
 
-    .line 183
     iput-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->mWalkNM:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$WalkNM;
 
-    .line 184
     iput-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->mVehNM:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$VehNM;
 
-    .line 185
     iput-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->mIndoor:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$Indoor;
 
-    .line 186
     iput-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->mOutdoor:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$Outdoor;
 
-    .line 187
     iput-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->mGpsBatch:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$GpsBatch;
 
-    .line 188
     iput-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->mRestricted:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$Restricted;
 
-    .line 190
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->firstTimeGps:Z
 
-    .line 196
     const-string v0, "LppLocationManager"
 
     const-string v1, "Creating State Machine"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 198
     new-instance v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$AllNM;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$AllNM;-><init>(Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;)V
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->mAllNM:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$AllNM;
 
-    .line 200
     new-instance v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$StatNM;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$StatNM;-><init>(Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;)V
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->mStatNM:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$StatNM;
 
-    .line 201
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->mStatNM:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$StatNM;
 
     iget-object v1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->mAllNM:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$AllNM;
 
     invoke-virtual {p0, v0, v1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->addState(Lcom/android/internal/util/State;Lcom/android/internal/util/State;)V
 
-    .line 203
     new-instance v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$WalkNM;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$WalkNM;-><init>(Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;)V
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->mWalkNM:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$WalkNM;
 
-    .line 204
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->mWalkNM:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$WalkNM;
 
     iget-object v1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->mAllNM:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$AllNM;
 
     invoke-virtual {p0, v0, v1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->addState(Lcom/android/internal/util/State;Lcom/android/internal/util/State;)V
 
-    .line 206
     new-instance v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$Indoor;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$Indoor;-><init>(Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;)V
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->mIndoor:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$Indoor;
 
-    .line 207
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->mIndoor:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$Indoor;
 
     iget-object v1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->mAllNM:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$AllNM;
 
     invoke-virtual {p0, v0, v1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->addState(Lcom/android/internal/util/State;Lcom/android/internal/util/State;)V
 
-    .line 209
     new-instance v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$Outdoor;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$Outdoor;-><init>(Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;)V
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->mOutdoor:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$Outdoor;
 
-    .line 210
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->mOutdoor:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$Outdoor;
 
     iget-object v1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->mAllNM:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$AllNM;
 
     invoke-virtual {p0, v0, v1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->addState(Lcom/android/internal/util/State;Lcom/android/internal/util/State;)V
 
-    .line 212
     new-instance v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$VehNM;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$VehNM;-><init>(Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;)V
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->mVehNM:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$VehNM;
 
-    .line 213
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->mVehNM:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$VehNM;
 
     iget-object v1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->mAllNM:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$AllNM;
 
     invoke-virtual {p0, v0, v1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->addState(Lcom/android/internal/util/State;Lcom/android/internal/util/State;)V
 
-    .line 215
     new-instance v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$GpsBatch;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$GpsBatch;-><init>(Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;)V
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->mGpsBatch:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$GpsBatch;
 
-    .line 216
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->mGpsBatch:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$GpsBatch;
 
     iget-object v1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->mAllNM:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$AllNM;
 
     invoke-virtual {p0, v0, v1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->addState(Lcom/android/internal/util/State;Lcom/android/internal/util/State;)V
 
-    .line 218
     new-instance v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$Restricted;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$Restricted;-><init>(Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;)V
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->mRestricted:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$Restricted;
 
-    .line 219
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->mRestricted:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$Restricted;
 
     iget-object v1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->mAllNM:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$AllNM;
 
     invoke-virtual {p0, v0, v1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->addState(Lcom/android/internal/util/State;Lcom/android/internal/util/State;)V
 
-    .line 221
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->mStatNM:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$StatNM;
 
     invoke-virtual {p0, v0}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->setInitialState(Lcom/android/internal/util/State;)V
 
-    .line 222
     return-void
 .end method
 
@@ -219,7 +190,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 179
     invoke-virtual {p0, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->removeMessages(I)V
 
     return-void
@@ -230,7 +200,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;
 
     .prologue
-    .line 179
     iget-boolean v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->firstTimeGps:Z
 
     return v0
@@ -242,7 +211,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 179
     iput-boolean p1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->firstTimeGps:Z
 
     return p1
@@ -253,7 +221,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;
 
     .prologue
-    .line 179
     invoke-direct {p0}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->exit()V
 
     return-void
@@ -265,7 +232,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 179
     invoke-virtual {p0, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->removeMessages(I)V
 
     return-void
@@ -276,7 +242,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;
 
     .prologue
-    .line 179
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->mOutdoor:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$Outdoor;
 
     return-object v0
@@ -288,7 +253,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 179
     invoke-virtual {p0, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -300,7 +264,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 179
     invoke-virtual {p0, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -311,7 +274,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;
 
     .prologue
-    .line 179
     invoke-direct {p0}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->isWifiAvailable()Z
 
     move-result v0
@@ -324,7 +286,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;
 
     .prologue
-    .line 179
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->mIndoor:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$Indoor;
 
     return-object v0
@@ -336,7 +297,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 179
     invoke-virtual {p0, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -347,7 +307,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;
 
     .prologue
-    .line 179
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->mRestricted:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$Restricted;
 
     return-object v0
@@ -359,7 +318,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 179
     invoke-virtual {p0, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -371,7 +329,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 179
     invoke-virtual {p0, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->removeMessages(I)V
 
     return-void
@@ -383,7 +340,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 179
     invoke-virtual {p0, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -395,7 +351,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 179
     invoke-virtual {p0, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->removeMessages(I)V
 
     return-void
@@ -407,7 +362,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 179
     invoke-virtual {p0, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->removeMessages(I)V
 
     return-void
@@ -419,7 +373,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 179
     invoke-virtual {p0, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->removeMessages(I)V
 
     return-void
@@ -430,7 +383,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;
 
     .prologue
-    .line 179
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->mWalkNM:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$WalkNM;
 
     return-object v0
@@ -442,7 +394,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 179
     invoke-virtual {p0, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -454,7 +405,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 179
     invoke-virtual {p0, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -466,7 +416,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 179
     invoke-virtual {p0, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -478,7 +427,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 179
     invoke-virtual {p0, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->removeMessages(I)V
 
     return-void
@@ -490,7 +438,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 179
     invoke-virtual {p0, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->removeMessages(I)V
 
     return-void
@@ -502,7 +449,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 179
     invoke-virtual {p0, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->removeMessages(I)V
 
     return-void
@@ -514,7 +460,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 179
     invoke-virtual {p0, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->removeMessages(I)V
 
     return-void
@@ -526,7 +471,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 179
     invoke-virtual {p0, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -538,7 +482,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 179
     invoke-virtual {p0, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->removeMessages(I)V
 
     return-void
@@ -550,7 +493,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 179
     invoke-virtual {p0, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -561,7 +503,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;
 
     .prologue
-    .line 179
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->mGpsBatch:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$GpsBatch;
 
     return-object v0
@@ -573,7 +514,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 179
     invoke-virtual {p0, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -585,7 +525,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 179
     invoke-virtual {p0, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -597,7 +536,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 179
     invoke-virtual {p0, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->removeMessages(I)V
 
     return-void
@@ -609,7 +547,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 179
     invoke-virtual {p0, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -621,7 +558,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 179
     invoke-virtual {p0, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->removeMessages(I)V
 
     return-void
@@ -633,7 +569,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 179
     invoke-virtual {p0, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -645,7 +580,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 179
     invoke-virtual {p0, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -657,7 +591,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 179
     invoke-virtual {p0, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->removeMessages(I)V
 
     return-void
@@ -668,7 +601,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;
 
     .prologue
-    .line 179
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->mVehNM:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$VehNM;
 
     return-object v0
@@ -680,7 +612,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 179
     invoke-virtual {p0, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -692,7 +623,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 179
     invoke-virtual {p0, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -704,7 +634,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 179
     invoke-virtual {p0, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -716,7 +645,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 179
     invoke-virtual {p0, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->removeMessages(I)V
 
     return-void
@@ -728,7 +656,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 179
     invoke-virtual {p0, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -739,7 +666,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;
 
     .prologue
-    .line 179
     invoke-direct {p0}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->getState()Lcom/android/internal/util/IState;
 
     move-result-object v0
@@ -752,7 +678,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;
 
     .prologue
-    .line 179
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->mStatNM:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$StatNM;
 
     return-object v0
@@ -764,7 +689,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 179
     invoke-virtual {p0, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -774,10 +698,8 @@
     .locals 0
 
     .prologue
-    .line 1333
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->quit()V
 
-    .line 1334
     return-void
 .end method
 
@@ -785,7 +707,6 @@
     .locals 1
 
     .prologue
-    .line 1337
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->getCurrentState()Lcom/android/internal/util/IState;
 
     move-result-object v0
@@ -799,7 +720,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 1324
     iget-object v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager;
 
     # getter for: Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager;->mContext:Landroid/content/Context;
@@ -807,7 +727,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "wifi"
+    const-string v3, "wifi"
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -815,7 +735,6 @@
 
     check-cast v0, Landroid/net/wifi/WifiManager;
 
-    .line 1325
     .local v0, "wifi":Landroid/net/wifi/WifiManager;
     if-eqz v0, :cond_0
 
@@ -825,7 +744,6 @@
 
     if-ne v2, v1, :cond_0
 
-    .line 1329
     :goto_0
     return v1
 

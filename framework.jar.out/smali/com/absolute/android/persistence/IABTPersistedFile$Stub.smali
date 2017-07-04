@@ -46,15 +46,12 @@
     .locals 1
 
     .prologue
-    .line 21
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 22
     const-string v0, "com.absolute.android.persistence.IABTPersistedFile"
 
     invoke-virtual {p0, p0, v0}, Lcom/absolute/android/persistence/IABTPersistedFile$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 23
     return-void
 .end method
 
@@ -63,17 +60,13 @@
     .param p0, "obj"    # Landroid/os/IBinder;
 
     .prologue
-    .line 30
     if-nez p0, :cond_0
 
-    .line 31
     const/4 v0, 0x0
 
-    .line 37
     :goto_0
     return-object v0
 
-    .line 33
     :cond_0
     const-string v1, "com.absolute.android.persistence.IABTPersistedFile"
 
@@ -81,7 +74,6 @@
 
     move-result-object v0
 
-    .line 34
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -89,12 +81,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 35
     check-cast v0, Lcom/absolute/android/persistence/IABTPersistedFile;
 
     goto :goto_0
 
-    .line 37
     :cond_1
     new-instance v0, Lcom/absolute/android/persistence/IABTPersistedFile$Stub$Proxy;
 
@@ -110,7 +100,6 @@
     .locals 0
 
     .prologue
-    .line 41
     return-object p0
 .end method
 
@@ -131,10 +120,8 @@
 
     const/4 v7, 0x1
 
-    .line 45
     sparse-switch p1, :sswitch_data_0
 
-    .line 121
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v7
@@ -142,7 +129,6 @@
     :goto_0
     return v7
 
-    .line 49
     :sswitch_0
     const-string v6, "com.absolute.android.persistence.IABTPersistedFile"
 
@@ -150,22 +136,18 @@
 
     goto :goto_0
 
-    .line 54
     :sswitch_1
     const-string v8, "com.absolute.android.persistence.IABTPersistedFile"
 
     invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 55
     invoke-virtual {p0}, Lcom/absolute/android/persistence/IABTPersistedFile$Stub;->exists()Z
 
     move-result v4
 
-    .line 56
     .local v4, "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 57
     if-eqz v4, :cond_0
 
     move v6, v7
@@ -175,34 +157,28 @@
 
     goto :goto_0
 
-    .line 62
     .end local v4    # "_result":Z
     :sswitch_2
     const-string v6, "com.absolute.android.persistence.IABTPersistedFile"
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 64
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object v0
 
-    .line 65
     .local v0, "_arg0":[B
     invoke-virtual {p0, v0}, Lcom/absolute/android/persistence/IABTPersistedFile$Stub;->write([B)I
 
     move-result v4
 
-    .line 66
     .local v4, "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 67
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_0
 
-    .line 72
     .end local v0    # "_arg0":[B
     .end local v4    # "_result":I
     :sswitch_3
@@ -210,39 +186,32 @@
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 74
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object v0
 
-    .line 76
     .restart local v0    # "_arg0":[B
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 78
     .local v2, "_arg1":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 79
     .local v3, "_arg2":I
     invoke-virtual {p0, v0, v2, v3}, Lcom/absolute/android/persistence/IABTPersistedFile$Stub;->writeWithCount([BII)I
 
     move-result v4
 
-    .line 80
     .restart local v4    # "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 81
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_0
 
-    .line 86
     .end local v0    # "_arg0":[B
     .end local v2    # "_arg1":I
     .end local v3    # "_arg2":I
@@ -252,30 +221,24 @@
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 88
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object v0
 
-    .line 89
     .restart local v0    # "_arg0":[B
     invoke-virtual {p0, v0}, Lcom/absolute/android/persistence/IABTPersistedFile$Stub;->read([B)I
 
     move-result v4
 
-    .line 90
     .restart local v4    # "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 91
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 92
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeByteArray([B)V
 
     goto :goto_0
 
-    .line 97
     .end local v0    # "_arg0":[B
     .end local v4    # "_result":I
     :sswitch_5
@@ -283,27 +246,22 @@
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 99
     invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
-    .line 100
     .local v0, "_arg0":J
     invoke-virtual {p0, v0, v1}, Lcom/absolute/android/persistence/IABTPersistedFile$Stub;->skip(J)J
 
     move-result-wide v4
 
-    .line 101
     .local v4, "_result":J
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 102
     invoke-virtual {p3, v4, v5}, Landroid/os/Parcel;->writeLong(J)V
 
     goto :goto_0
 
-    .line 107
     .end local v0    # "_arg0":J
     .end local v4    # "_result":J
     :sswitch_6
@@ -311,30 +269,24 @@
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 108
     invoke-virtual {p0}, Lcom/absolute/android/persistence/IABTPersistedFile$Stub;->close()V
 
-    .line 109
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
-    .line 114
     :sswitch_7
     const-string v8, "com.absolute.android.persistence.IABTPersistedFile"
 
     invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 115
     invoke-virtual {p0}, Lcom/absolute/android/persistence/IABTPersistedFile$Stub;->delete()Z
 
     move-result v4
 
-    .line 116
     .local v4, "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 117
     if-eqz v4, :cond_1
 
     move v6, v7
@@ -344,7 +296,6 @@
 
     goto/16 :goto_0
 
-    .line 45
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1

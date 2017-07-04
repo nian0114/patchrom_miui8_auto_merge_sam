@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1716
     iput-object p1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$14;->this$1:Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 1727
     return-void
 .end method
 
@@ -50,7 +48,6 @@
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 1723
     return-void
 .end method
 
@@ -59,6 +56,5 @@
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 1719
     return-void
 .end method

@@ -17,25 +17,19 @@
     .param p1, "service"    # Lcom/sec/epdg/IEpdgManager;
 
     .prologue
-    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 12
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/sec/epdg/EpdgManager;->mService:Lcom/sec/epdg/IEpdgManager;
 
-    .line 19
     if-eqz p1, :cond_0
 
-    .line 20
     iput-object p1, p0, Lcom/sec/epdg/EpdgManager;->mService:Lcom/sec/epdg/IEpdgManager;
 
-    .line 23
     :goto_0
     return-void
 
-    .line 22
     :cond_0
     const-string v0, "EPDG_Manager"
 
@@ -53,7 +47,6 @@
     .param p1, "feature"    # Ljava/lang/String;
 
     .prologue
-    .line 43
     :try_start_0
     iget-object v1, p0, Lcom/sec/epdg/EpdgManager;->mService:Lcom/sec/epdg/IEpdgManager;
 
@@ -67,15 +60,12 @@
 
     move-result v1
 
-    .line 45
     :goto_0
     return v1
 
-    .line 44
     :catch_0
     move-exception v0
 
-    .line 45
     .local v0, "e":Landroid/os/RemoteException;
     const/4 v1, -0x1
 
@@ -87,7 +77,6 @@
     .param p1, "feature"    # Ljava/lang/String;
 
     .prologue
-    .line 51
     :try_start_0
     iget-object v1, p0, Lcom/sec/epdg/EpdgManager;->mService:Lcom/sec/epdg/IEpdgManager;
 
@@ -101,15 +90,12 @@
 
     move-result v1
 
-    .line 53
     :goto_0
     return v1
 
-    .line 52
     :catch_0
     move-exception v0
 
-    .line 53
     .local v0, "e":Landroid/os/RemoteException;
     const/4 v1, -0x1
 
@@ -121,7 +107,6 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 59
     :try_start_0
     iget-object v1, p0, Lcom/sec/epdg/EpdgManager;->mService:Lcom/sec/epdg/IEpdgManager;
 
@@ -131,15 +116,12 @@
 
     move-result v1
 
-    .line 61
     :goto_0
     return v1
 
-    .line 60
     :catch_0
     move-exception v0
 
-    .line 61
     .local v0, "e":Landroid/os/RemoteException;
     const/4 v1, -0x1
 
@@ -150,7 +132,6 @@
     .locals 2
 
     .prologue
-    .line 75
     :try_start_0
     iget-object v1, p0, Lcom/sec/epdg/EpdgManager;->mService:Lcom/sec/epdg/IEpdgManager;
 
@@ -160,15 +141,12 @@
 
     move-result v1
 
-    .line 77
     :goto_0
     return v1
 
-    .line 76
     :catch_0
     move-exception v0
 
-    .line 77
     .local v0, "e":Landroid/os/RemoteException;
     const/4 v1, 0x0
 
@@ -181,7 +159,6 @@
     .param p2, "event"    # I
 
     .prologue
-    .line 67
     :try_start_0
     iget-object v1, p0, Lcom/sec/epdg/EpdgManager;->mService:Lcom/sec/epdg/IEpdgManager;
 
@@ -195,15 +172,12 @@
 
     move-result v1
 
-    .line 69
     :goto_0
     return v1
 
-    .line 68
     :catch_0
     move-exception v0
 
-    .line 69
     .local v0, "e":Landroid/os/RemoteException;
     const/4 v1, -0x1
 
@@ -218,7 +192,6 @@
     .param p4, "intent"    # Landroid/app/PendingIntent;
 
     .prologue
-    .line 83
     :try_start_0
     iget-object v0, p0, Lcom/sec/epdg/EpdgManager;->mService:Lcom/sec/epdg/IEpdgManager;
 
@@ -240,15 +213,12 @@
 
     move-result v0
 
-    .line 85
     :goto_0
     return v0
 
-    .line 84
     :catch_0
     move-exception v6
 
-    .line 85
     .local v6, "e":Landroid/os/RemoteException;
     const/4 v0, -0x1
 
@@ -262,7 +232,6 @@
     .param p3, "intent"    # Landroid/app/PendingIntent;
 
     .prologue
-    .line 35
     :try_start_0
     iget-object v1, p0, Lcom/sec/epdg/EpdgManager;->mService:Lcom/sec/epdg/IEpdgManager;
 
@@ -276,15 +245,12 @@
 
     move-result v1
 
-    .line 37
     :goto_0
     return v1
 
-    .line 36
     :catch_0
     move-exception v0
 
-    .line 37
     .local v0, "e":Landroid/os/RemoteException;
     const/4 v1, -0x1
 
@@ -298,7 +264,6 @@
     .param p3, "intent"    # Landroid/app/PendingIntent;
 
     .prologue
-    .line 27
     :try_start_0
     iget-object v1, p0, Lcom/sec/epdg/EpdgManager;->mService:Lcom/sec/epdg/IEpdgManager;
 
@@ -312,15 +277,12 @@
 
     move-result v1
 
-    .line 29
     :goto_0
     return v1
 
-    .line 28
     :catch_0
     move-exception v0
 
-    .line 29
     .local v0, "e":Landroid/os/RemoteException;
     const/4 v1, -0x1
 

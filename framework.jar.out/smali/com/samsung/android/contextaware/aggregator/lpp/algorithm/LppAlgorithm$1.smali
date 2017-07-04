@@ -36,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 208
     iput-object p1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm$1;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/algorithm/LppAlgorithm;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,7 +51,6 @@
     .param p2, "LppLoc2"    # Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
     .prologue
-    .line 212
     iget-wide v0, p1, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->Capturedtime:J
 
     iget-wide v2, p2, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;->Capturedtime:J
@@ -63,7 +61,6 @@
 
     const/4 v0, 0x0
 
-    .line 213
     :goto_0
     return v0
 
@@ -92,7 +89,6 @@
     .param p2, "x1"    # Ljava/lang/Object;
 
     .prologue
-    .line 208
     check-cast p1, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocation;
 
     .end local p1    # "x0":Ljava/lang/Object;

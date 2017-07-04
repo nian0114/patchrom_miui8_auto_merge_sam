@@ -14,10 +14,8 @@
     .locals 0
 
     .prologue
-    .line 108
     invoke-direct {p0}, Landroid/view/animation/BaseInterpolator;-><init>()V
 
-    .line 109
     return-void
 .end method
 
@@ -27,16 +25,12 @@
     .param p2, "period"    # F
 
     .prologue
-    .line 117
     invoke-direct {p0}, Landroid/view/animation/BaseInterpolator;-><init>()V
 
-    .line 118
     iput p1, p0, Landroid/view/animation/interpolator/ElasticEaseOut;->amplitude:F
 
-    .line 119
     iput p2, p0, Landroid/view/animation/interpolator/ElasticEaseOut;->period:F
 
-    .line 120
     return-void
 .end method
 
@@ -46,7 +40,6 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 130
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -57,7 +50,6 @@
 
     invoke-direct {p0, v0, v1, p2}, Landroid/view/animation/interpolator/ElasticEaseOut;-><init>(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;)V
 
-    .line 131
     return-void
 .end method
 
@@ -72,20 +64,16 @@
 
     const/4 v2, 0x0
 
-    .line 134
     invoke-direct {p0}, Landroid/view/animation/BaseInterpolator;-><init>()V
 
-    .line 136
     if-eqz p2, :cond_0
 
-    .line 137
     sget-object v1, Lcom/android/internal/R$styleable;->ElasticEaseOut:[I
 
     invoke-virtual {p2, p3, v1, v2, v2}, Landroid/content/res/Resources$Theme;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    .line 142
     .local v0, "a":Landroid/content/res/TypedArray;
     :goto_0
     invoke-virtual {v0, v2, v3}, Landroid/content/res/TypedArray;->getFloat(IF)F
@@ -94,7 +82,6 @@
 
     iput v1, p0, Landroid/view/animation/interpolator/ElasticEaseOut;->amplitude:F
 
-    .line 143
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1, v3}, Landroid/content/res/TypedArray;->getFloat(IF)F
@@ -103,13 +90,10 @@
 
     iput v1, p0, Landroid/view/animation/interpolator/ElasticEaseOut;->period:F
 
-    .line 145
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 146
     return-void
 
-    .line 139
     .end local v0    # "a":Landroid/content/res/TypedArray;
     :cond_0
     sget-object v1, Lcom/android/internal/R$styleable;->ElasticEaseOut:[I
@@ -135,16 +119,13 @@
 
     const/4 v1, 0x0
 
-    .line 153
     cmpl-float v3, p1, v1
 
     if-nez v3, :cond_0
 
-    .line 169
     :goto_0
     return v1
 
-    .line 156
     :cond_0
     cmpl-float v3, p1, v2
 
@@ -152,19 +133,15 @@
 
     move v1, v2
 
-    .line 157
     goto :goto_0
 
-    .line 159
     :cond_1
     cmpl-float v3, p3, v1
 
     if-nez v3, :cond_2
 
-    .line 160
     const p3, 0x3e99999a    # 0.3f
 
-    .line 163
     :cond_2
     cmpl-float v1, p2, v1
 
@@ -174,16 +151,13 @@
 
     if-gez v1, :cond_4
 
-    .line 164
     :cond_3
     const/high16 p2, 0x3f800000    # 1.0f
 
-    .line 165
     const/high16 v1, 0x40800000    # 4.0f
 
     div-float v0, p3, v1
 
-    .line 169
     .local v0, "s":F
     :goto_1
     float-to-double v2, p2
@@ -226,7 +200,6 @@
 
     goto :goto_0
 
-    .line 167
     .end local v0    # "s":F
     :cond_4
     float-to-double v4, p3
@@ -256,7 +229,6 @@
     .param p1, "t"    # F
 
     .prologue
-    .line 149
     iget v0, p0, Landroid/view/animation/interpolator/ElasticEaseOut;->amplitude:F
 
     iget v1, p0, Landroid/view/animation/interpolator/ElasticEaseOut;->period:F

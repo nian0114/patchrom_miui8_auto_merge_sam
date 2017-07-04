@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 386
     invoke-direct {p0}, Landroid/app/SystemServiceRegistry$StaticServiceFetcher;-><init>()V
 
     return-void
@@ -40,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 389
     new-instance v0, Landroid/os/BatteryManager;
 
     invoke-direct {v0}, Landroid/os/BatteryManager;-><init>()V
@@ -52,7 +50,6 @@
     .locals 1
 
     .prologue
-    .line 386
     invoke-virtual {p0}, Landroid/app/SystemServiceRegistry$17;->createService()Landroid/os/BatteryManager;
 
     move-result-object v0

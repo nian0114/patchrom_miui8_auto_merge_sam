@@ -31,18 +31,15 @@
     .locals 1
 
     .prologue
-    .line 170
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 171
     invoke-static {}, Landroid/view/WindowManagerGlobal;->getWindowManagerService()Landroid/view/IWindowManager;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/app/KeyguardManager;->mWM:Landroid/view/IWindowManager;
 
-    .line 172
-    const-string/jumbo v0, "trust"
+    const-string v0, "trust"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -54,7 +51,6 @@
 
     iput-object v0, p0, Landroid/app/KeyguardManager;->mTrustManager:Landroid/app/trust/ITrustManager;
 
-    .line 174
     return-void
 .end method
 
@@ -63,7 +59,6 @@
     .param p0, "x0"    # Landroid/app/KeyguardManager;
 
     .prologue
-    .line 45
     iget-object v0, p0, Landroid/app/KeyguardManager;->mWM:Landroid/view/IWindowManager;
 
     return-object v0
@@ -77,7 +72,6 @@
     .param p2, "description"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 79
     invoke-virtual {p0}, Landroid/app/KeyguardManager;->isKeyguardSecure()Z
 
     move-result v1
@@ -86,11 +80,9 @@
 
     const/4 v0, 0x0
 
-    .line 85
     :goto_0
     return-object v0
 
-    .line 80
     :cond_0
     new-instance v0, Landroid/content/Intent;
 
@@ -98,18 +90,15 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 81
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "android.app.extra.TITLE"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/CharSequence;)Landroid/content/Intent;
 
-    .line 82
     const-string v1, "android.app.extra.DESCRIPTION"
 
     invoke-virtual {v0, v1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/CharSequence;)Landroid/content/Intent;
 
-    .line 84
     const-string v1, "com.android.settings"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
@@ -124,7 +113,6 @@
     .end annotation
 
     .prologue
-    .line 340
     :try_start_0
     iget-object v0, p0, Landroid/app/KeyguardManager;->mWM:Landroid/view/IWindowManager;
 
@@ -136,11 +124,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 350
     :goto_0
     return-void
 
-    .line 347
     :catch_0
     move-exception v0
 
@@ -151,7 +137,6 @@
     .locals 2
 
     .prologue
-    .line 258
     :try_start_0
     iget-object v1, p0, Landroid/app/KeyguardManager;->mWM:Landroid/view/IWindowManager;
 
@@ -161,15 +146,12 @@
 
     move-result v1
 
-    .line 260
     :goto_0
     return v1
 
-    .line 259
     :catch_0
     move-exception v0
 
-    .line 260
     .local v0, "ex":Landroid/os/RemoteException;
     const/4 v1, 0x0
 
@@ -180,7 +162,6 @@
     .locals 1
 
     .prologue
-    .line 272
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v0
@@ -197,7 +178,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 282
     :try_start_0
     iget-object v1, p0, Landroid/app/KeyguardManager;->mTrustManager:Landroid/app/trust/ITrustManager;
 
@@ -207,15 +187,12 @@
 
     move-result v1
 
-    .line 284
     :goto_0
     return v1
 
-    .line 283
     :catch_0
     move-exception v0
 
-    .line 284
     .local v0, "e":Landroid/os/RemoteException;
     const/4 v1, 0x0
 
@@ -226,7 +203,6 @@
     .locals 1
 
     .prologue
-    .line 297
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v0
@@ -243,7 +219,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 307
     :try_start_0
     iget-object v1, p0, Landroid/app/KeyguardManager;->mTrustManager:Landroid/app/trust/ITrustManager;
 
@@ -253,15 +228,12 @@
 
     move-result v1
 
-    .line 309
     :goto_0
     return v1
 
-    .line 308
     :catch_0
     move-exception v0
 
-    .line 309
     .local v0, "e":Landroid/os/RemoteException;
     const/4 v1, 0x0
 
@@ -272,7 +244,6 @@
     .locals 2
 
     .prologue
-    .line 204
     :try_start_0
     iget-object v1, p0, Landroid/app/KeyguardManager;->mWM:Landroid/view/IWindowManager;
 
@@ -282,15 +253,12 @@
 
     move-result v1
 
-    .line 206
     :goto_0
     return v1
 
-    .line 205
     :catch_0
     move-exception v0
 
-    .line 206
     .local v0, "ex":Landroid/os/RemoteException;
     const/4 v1, 0x0
 
@@ -301,7 +269,6 @@
     .locals 2
 
     .prologue
-    .line 220
     :try_start_0
     iget-object v1, p0, Landroid/app/KeyguardManager;->mWM:Landroid/view/IWindowManager;
 
@@ -311,15 +278,12 @@
 
     move-result v1
 
-    .line 222
     :goto_0
     return v1
 
-    .line 221
     :catch_0
     move-exception v0
 
-    .line 222
     .local v0, "ex":Landroid/os/RemoteException;
     const/4 v1, 0x0
 
@@ -330,7 +294,6 @@
     .locals 2
 
     .prologue
-    .line 231
     :try_start_0
     iget-object v1, p0, Landroid/app/KeyguardManager;->mWM:Landroid/view/IWindowManager;
 
@@ -340,15 +303,12 @@
 
     move-result v1
 
-    .line 233
     :goto_0
     return v1
 
-    .line 232
     :catch_0
     move-exception v0
 
-    .line 233
     .local v0, "ex":Landroid/os/RemoteException;
     const/4 v1, 0x0
 
@@ -359,7 +319,6 @@
     .locals 2
 
     .prologue
-    .line 242
     :try_start_0
     iget-object v1, p0, Landroid/app/KeyguardManager;->mWM:Landroid/view/IWindowManager;
 
@@ -369,15 +328,12 @@
 
     move-result v1
 
-    .line 244
     :goto_0
     return v1
 
-    .line 243
     :catch_0
     move-exception v0
 
-    .line 244
     .local v0, "ex":Landroid/os/RemoteException;
     const/4 v1, 0x0
 
@@ -391,7 +347,6 @@
     .end annotation
 
     .prologue
-    .line 194
     new-instance v0, Landroid/app/KeyguardManager$KeyguardLock;
 
     invoke-direct {v0, p0, p1}, Landroid/app/KeyguardManager$KeyguardLock;-><init>(Landroid/app/KeyguardManager;Ljava/lang/String;)V
@@ -404,7 +359,6 @@
     .param p1, "requestClass"    # Ljava/lang/String;
 
     .prologue
-    .line 371
     :try_start_0
     iget-object v0, p0, Landroid/app/KeyguardManager;->mWM:Landroid/view/IWindowManager;
 
@@ -412,11 +366,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 375
     :goto_0
     return-void
 
-    .line 372
     :catch_0
     move-exception v0
 
@@ -430,7 +382,6 @@
     .param p3, "bigView"    # Landroid/widget/RemoteViews;
 
     .prologue
-    .line 359
     :try_start_0
     iget-object v0, p0, Landroid/app/KeyguardManager;->mWM:Landroid/view/IWindowManager;
 
@@ -438,11 +389,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 363
     :goto_0
     return-void
 
-    .line 360
     :catch_0
     move-exception v0
 
@@ -454,12 +403,10 @@
     .param p1, "p"    # Landroid/app/PendingIntent;
 
     .prologue
-    .line 393
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Landroid/app/KeyguardManager;->setBendedPendingIntent(Landroid/app/PendingIntent;Landroid/content/Intent;)V
 
-    .line 394
     return-void
 .end method
 
@@ -469,7 +416,6 @@
     .param p2, "fillInIntent"    # Landroid/content/Intent;
 
     .prologue
-    .line 401
     :try_start_0
     iget-object v0, p0, Landroid/app/KeyguardManager;->mWM:Landroid/view/IWindowManager;
 
@@ -477,11 +423,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 405
     :goto_0
     return-void
 
-    .line 402
     :catch_0
     move-exception v0
 
@@ -494,7 +438,6 @@
     .param p2, "fillInIntent"    # Landroid/content/Intent;
 
     .prologue
-    .line 412
     :try_start_0
     iget-object v0, p0, Landroid/app/KeyguardManager;->mWM:Landroid/view/IWindowManager;
 
@@ -502,11 +445,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 416
     :goto_0
     return-void
 
-    .line 413
     :catch_0
     move-exception v0
 
@@ -520,7 +461,6 @@
     .param p3, "bigView"    # Landroid/widget/RemoteViews;
 
     .prologue
-    .line 383
     :try_start_0
     iget-object v0, p0, Landroid/app/KeyguardManager;->mWM:Landroid/view/IWindowManager;
 
@@ -528,11 +468,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 387
     :goto_0
     return-void
 
-    .line 384
     :catch_0
     move-exception v0
 

@@ -27,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 2644
     iput-object p1, p0, Lcom/android/internal/app/ResolverActivity$SShareItemClickListener;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -53,11 +52,9 @@
     .end annotation
 
     .prologue
-    .line 2648
     .local p1, "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     if-eqz p1, :cond_0
 
-    .line 2649
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$SShareItemClickListener;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     # getter for: Lcom/android/internal/app/ResolverActivity;->mSimpleSharing:Lcom/samsung/android/share/SShareSimpleSharing;
@@ -71,7 +68,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 2650
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$SShareItemClickListener;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     # getter for: Lcom/android/internal/app/ResolverActivity;->mSimpleSharing:Lcom/samsung/android/share/SShareSimpleSharing;
@@ -81,21 +77,17 @@
 
     invoke-virtual {v0, p3}, Lcom/samsung/android/share/SShareSimpleSharing;->recentHistoryGridItemClick(I)V
 
-    .line 2651
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$SShareItemClickListener;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-virtual {v0}, Lcom/android/internal/app/ResolverActivity;->finish()V
 
-    .line 2656
     :cond_0
     :goto_0
     return-void
 
-    .line 2652
     :cond_1
     if-eqz p1, :cond_0
 
-    .line 2653
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$SShareItemClickListener;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     # getter for: Lcom/android/internal/app/ResolverActivity;->mSimpleSharing:Lcom/samsung/android/share/SShareSimpleSharing;
@@ -124,7 +116,6 @@
     .end annotation
 
     .prologue
-    .line 2661
     .local p1, "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     const/4 v0, 0x1
 

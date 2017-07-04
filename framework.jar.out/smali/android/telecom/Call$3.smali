@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 1224
     iput-object p1, p0, Landroid/telecom/Call$3;->this$0:Landroid/telecom/Call;
 
     iput-object p2, p0, Landroid/telecom/Call$3;->val$callback:Landroid/telecom/Call$Callback;
@@ -52,7 +51,6 @@
     .locals 3
 
     .prologue
-    .line 1227
     iget-object v0, p0, Landroid/telecom/Call$3;->val$callback:Landroid/telecom/Call$Callback;
 
     iget-object v1, p0, Landroid/telecom/Call$3;->val$call:Landroid/telecom/Call;
@@ -61,6 +59,5 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/telecom/Call$Callback;->onChildrenChanged(Landroid/telecom/Call;Ljava/util/List;)V
 
-    .line 1228
     return-void
 .end method

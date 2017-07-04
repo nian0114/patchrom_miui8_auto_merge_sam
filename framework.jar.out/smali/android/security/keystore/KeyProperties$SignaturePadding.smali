@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 460
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,28 +29,23 @@
     .param p0, "paddings"    # [Ljava/lang/String;
 
     .prologue
-    .line 488
     if-eqz p0, :cond_0
 
     array-length v2, p0
 
     if-nez v2, :cond_2
 
-    .line 489
     :cond_0
     sget-object v1, Llibcore/util/EmptyArray;->INT:[I
 
-    .line 495
     :cond_1
     return-object v1
 
-    .line 491
     :cond_2
     array-length v2, p0
 
     new-array v1, v2, [I
 
-    .line 492
     .local v1, "result":[I
     const/4 v0, 0x0
 
@@ -61,7 +55,6 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 493
     aget-object v2, p0, v0
 
     invoke-static {v2}, Landroid/security/keystore/KeyProperties$SignaturePadding;->toKeymaster(Ljava/lang/String;)I
@@ -70,7 +63,6 @@
 
     aput v2, v1, v0
 
-    .line 492
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
@@ -81,10 +73,8 @@
     .param p0, "padding"    # I
 
     .prologue
-    .line 476
     packed-switch p0, :pswitch_data_0
 
-    .line 482
     :pswitch_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -110,11 +100,9 @@
 
     throw v0
 
-    .line 478
     :pswitch_1
     const-string v0, "PKCS1"
 
-    .line 480
     :goto_0
     return-object v0
 
@@ -123,7 +111,6 @@
 
     goto :goto_0
 
-    .line 476
     :pswitch_data_0
     .packed-switch 0x3
         :pswitch_2
@@ -137,7 +124,6 @@
     .param p0, "padding"    # Ljava/lang/String;
 
     .prologue
-    .line 463
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
@@ -156,7 +142,6 @@
     :goto_0
     packed-switch v0, :pswitch_data_0
 
-    .line 469
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -181,7 +166,6 @@
 
     throw v0
 
-    .line 463
     :sswitch_0
     const-string v2, "PKCS1"
 
@@ -208,11 +192,9 @@
 
     goto :goto_0
 
-    .line 465
     :pswitch_0
     const/4 v0, 0x5
 
-    .line 467
     :goto_1
     return v0
 
@@ -221,7 +203,6 @@
 
     goto :goto_1
 
-    .line 463
     :sswitch_data_0
     .sparse-switch
         0x136b0 -> :sswitch_1

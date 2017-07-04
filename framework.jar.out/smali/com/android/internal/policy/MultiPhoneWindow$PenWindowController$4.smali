@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 2873
     iput-object p1, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController$4;->this$1:Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;
 
     iput-object p2, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController$4;->val$context:Landroid/content/Context;
@@ -45,7 +44,6 @@
     .param p1, "dialog"    # Landroid/content/DialogInterface;
 
     .prologue
-    .line 2875
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController$4;->this$1:Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;
 
     iget-object v1, p0, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController$4;->val$context:Landroid/content/Context;
@@ -53,6 +51,5 @@
     # invokes: Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->startDragMode(Landroid/content/Context;)V
     invoke-static {v0, v1}, Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;->access$4600(Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;Landroid/content/Context;)V
 
-    .line 2876
     return-void
 .end method

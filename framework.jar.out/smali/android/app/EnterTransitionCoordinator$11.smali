@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 641
     iput-object p1, p0, Landroid/app/EnterTransitionCoordinator$11;->this$0:Landroid/app/EnterTransitionCoordinator;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,14 +39,11 @@
     .locals 5
 
     .prologue
-    .line 644
     const/4 v1, 0x1
 
-    .line 645
     .local v1, "startEnterTransition":Z
     const/4 v2, 0x0
 
-    .line 646
     .local v2, "startSharedElementTransition":Z
     iget-object v4, p0, Landroid/app/EnterTransitionCoordinator$11;->this$0:Landroid/app/EnterTransitionCoordinator;
 
@@ -55,11 +51,9 @@
 
     move-result-object v0
 
-    .line 647
     .local v0, "decorView":Landroid/view/ViewGroup;
     if-eqz v0, :cond_0
 
-    .line 648
     iget-object v4, p0, Landroid/app/EnterTransitionCoordinator$11;->this$0:Landroid/app/EnterTransitionCoordinator;
 
     # invokes: Landroid/app/EnterTransitionCoordinator;->beginTransition(Landroid/view/ViewGroup;ZZ)Landroid/transition/Transition;
@@ -67,14 +61,12 @@
 
     move-result-object v3
 
-    .line 650
     .local v3, "transition":Landroid/transition/Transition;
     iget-object v4, p0, Landroid/app/EnterTransitionCoordinator$11;->this$0:Landroid/app/EnterTransitionCoordinator;
 
     # invokes: Landroid/app/EnterTransitionCoordinator;->startEnterTransition(Landroid/transition/Transition;)V
     invoke-static {v4, v3}, Landroid/app/EnterTransitionCoordinator;->access$600(Landroid/app/EnterTransitionCoordinator;Landroid/transition/Transition;)V
 
-    .line 652
     .end local v3    # "transition":Landroid/transition/Transition;
     :cond_0
     return-void

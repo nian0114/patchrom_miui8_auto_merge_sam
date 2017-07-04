@@ -16,7 +16,6 @@
     .locals 0
 
     .prologue
-    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,7 +32,6 @@
     .end annotation
 
     .prologue
-    .line 41
     const-string v1, "com.samsung.location"
 
     const/4 v2, 0x3
@@ -42,7 +40,6 @@
 
     move-result-object v0
 
-    .line 43
     .local v0, "apkContext":Landroid/content/Context;
     invoke-virtual {v0}, Landroid/content/Context;->getClassLoader()Ljava/lang/ClassLoader;
 
@@ -65,18 +62,15 @@
     .end annotation
 
     .prologue
-    .line 64
     invoke-static {p0}, Lcom/samsung/location/ISLocationManager$Stub;->asInterface(Landroid/os/IBinder;)Lcom/samsung/location/ISLocationManager;
 
     move-result-object v1
 
-    .line 65
     .local v1, "service":Lcom/samsung/location/ISLocationManager;
     new-instance v0, Lcom/samsung/location/SLocationManager;
 
     invoke-direct {v0, v1}, Lcom/samsung/location/SLocationManager;-><init>(Lcom/samsung/location/ISLocationManager;)V
 
-    .line 67
     .local v0, "sLocationManager":Lcom/samsung/location/SLocationManager;
     return-object v0
 .end method
@@ -95,10 +89,8 @@
 
     const/4 v6, 0x0
 
-    .line 49
     const/4 v2, 0x0
 
-    .line 50
     .local v2, "sLocationService":Landroid/os/IBinder;
     const-string v4, "com.samsung.location.SLocationService"
 
@@ -106,11 +98,9 @@
 
     move-result-object v3
 
-    .line 52
     .local v3, "sLocationServiceClass":Ljava/lang/Class;
     if-eqz v3, :cond_0
 
-    .line 53
     new-array v4, v7, [Ljava/lang/Class;
 
     const-class v5, Landroid/content/Context;
@@ -121,13 +111,11 @@
 
     move-result-object v1
 
-    .line 55
     .local v1, "constructor":Ljava/lang/reflect/Constructor;
     new-array v0, v7, [Ljava/lang/Object;
 
     aput-object p0, v0, v6
 
-    .line 57
     .local v0, "arglist":[Ljava/lang/Object;
     invoke-virtual {v1, v0}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -136,7 +124,6 @@
     .end local v2    # "sLocationService":Landroid/os/IBinder;
     check-cast v2, Landroid/os/IBinder;
 
-    .line 60
     .end local v0    # "arglist":[Ljava/lang/Object;
     .end local v1    # "constructor":Ljava/lang/reflect/Constructor;
     .restart local v2    # "sLocationService":Landroid/os/IBinder;
@@ -157,24 +144,20 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 72
     const-string v3, "com.samsung.location.SLocationService"
 
     invoke-static {p0, v3}, Lcom/samsung/location/SLocationLoader;->getClassFromLib(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 73
     .local v0, "sLocationService":Ljava/lang/Class;
     invoke-static {p1}, Lcom/samsung/location/ISLocationManager$Stub;->asInterface(Landroid/os/IBinder;)Lcom/samsung/location/ISLocationManager;
 
     move-result-object v1
 
-    .line 76
     .local v1, "service":Lcom/samsung/location/ISLocationManager;
     if-eqz v0, :cond_0
 
-    .line 77
     const-string v3, "systemReady"
 
     new-array v4, v5, [Ljava/lang/Class;
@@ -183,13 +166,11 @@
 
     move-result-object v2
 
-    .line 78
     .local v2, "systemReady":Ljava/lang/reflect/Method;
     new-array v3, v5, [Ljava/lang/Object;
 
     invoke-virtual {v2, v1, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 80
     .end local v2    # "systemReady":Ljava/lang/reflect/Method;
     :cond_0
     return-void

@@ -30,22 +30,18 @@
     .param p2, "viewId"    # I
 
     .prologue
-    .line 1734
     iput-object p1, p0, Landroid/widget/RemoteViews$ClearAllTextEffectAction;->this$0:Landroid/widget/RemoteViews;
 
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/widget/RemoteViews$Action;-><init>(Landroid/widget/RemoteViews$1;)V
 
-    .line 1758
     const-string v0, "clearAllTextEffect"
 
     iput-object v0, p0, Landroid/widget/RemoteViews$ClearAllTextEffectAction;->methodName:Ljava/lang/String;
 
-    .line 1735
     iput p2, p0, Landroid/widget/RemoteViews$ClearAllTextEffectAction;->viewId:I
 
-    .line 1736
     return-void
 .end method
 
@@ -54,26 +50,22 @@
     .param p2, "parcel"    # Landroid/os/Parcel;
 
     .prologue
-    .line 1738
     iput-object p1, p0, Landroid/widget/RemoteViews$ClearAllTextEffectAction;->this$0:Landroid/widget/RemoteViews;
 
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/widget/RemoteViews$Action;-><init>(Landroid/widget/RemoteViews$1;)V
 
-    .line 1758
     const-string v0, "clearAllTextEffect"
 
     iput-object v0, p0, Landroid/widget/RemoteViews$ClearAllTextEffectAction;->methodName:Ljava/lang/String;
 
-    .line 1739
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/widget/RemoteViews$ClearAllTextEffectAction;->viewId:I
 
-    .line 1740
     return-void
 .end method
 
@@ -86,7 +78,6 @@
     .param p3, "handler"    # Landroid/widget/RemoteViews$OnClickHandler;
 
     .prologue
-    .line 1749
     iget v1, p0, Landroid/widget/RemoteViews$ClearAllTextEffectAction;->viewId:I
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -95,15 +86,12 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    .line 1750
     .local v0, "target":Landroid/widget/TextView;
     if-nez v0, :cond_0
 
-    .line 1752
     :goto_0
     return-void
 
-    .line 1751
     :cond_0
     invoke-virtual {v0}, Landroid/widget/TextView;->clearAllTextEffect()V
 
@@ -114,7 +102,6 @@
     .locals 1
 
     .prologue
-    .line 1755
     const-string v0, "ClearAllTextEffectAction"
 
     return-object v0
@@ -126,16 +113,13 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 1743
     const/16 v0, 0x15
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1744
     iget v0, p0, Landroid/widget/RemoteViews$ClearAllTextEffectAction;->viewId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1745
     return-void
 .end method

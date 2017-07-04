@@ -64,7 +64,6 @@
 
     const/4 v3, 0x0
 
-    .line 53
     new-instance v0, Landroid/app/im/InjectionConstants$DispatchParentCall;
 
     const-string v1, "ONCREATE"
@@ -73,7 +72,6 @@
 
     sput-object v0, Landroid/app/im/InjectionConstants$DispatchParentCall;->ONCREATE:Landroid/app/im/InjectionConstants$DispatchParentCall;
 
-    .line 54
     new-instance v0, Landroid/app/im/InjectionConstants$DispatchParentCall;
 
     const-string v1, "ONSTART"
@@ -82,7 +80,6 @@
 
     sput-object v0, Landroid/app/im/InjectionConstants$DispatchParentCall;->ONSTART:Landroid/app/im/InjectionConstants$DispatchParentCall;
 
-    .line 55
     new-instance v0, Landroid/app/im/InjectionConstants$DispatchParentCall;
 
     const-string v1, "ONPAUSE"
@@ -91,7 +88,6 @@
 
     sput-object v0, Landroid/app/im/InjectionConstants$DispatchParentCall;->ONPAUSE:Landroid/app/im/InjectionConstants$DispatchParentCall;
 
-    .line 56
     new-instance v0, Landroid/app/im/InjectionConstants$DispatchParentCall;
 
     const-string v1, "ONRESUME"
@@ -100,7 +96,6 @@
 
     sput-object v0, Landroid/app/im/InjectionConstants$DispatchParentCall;->ONRESUME:Landroid/app/im/InjectionConstants$DispatchParentCall;
 
-    .line 57
     new-instance v0, Landroid/app/im/InjectionConstants$DispatchParentCall;
 
     const-string v1, "ONSTOP"
@@ -109,7 +104,6 @@
 
     sput-object v0, Landroid/app/im/InjectionConstants$DispatchParentCall;->ONSTOP:Landroid/app/im/InjectionConstants$DispatchParentCall;
 
-    .line 58
     new-instance v0, Landroid/app/im/InjectionConstants$DispatchParentCall;
 
     const-string v1, "ONDESTROY"
@@ -120,7 +114,6 @@
 
     sput-object v0, Landroid/app/im/InjectionConstants$DispatchParentCall;->ONDESTROY:Landroid/app/im/InjectionConstants$DispatchParentCall;
 
-    .line 59
     new-instance v0, Landroid/app/im/InjectionConstants$DispatchParentCall;
 
     const-string v1, "ONRESTART"
@@ -131,7 +124,6 @@
 
     sput-object v0, Landroid/app/im/InjectionConstants$DispatchParentCall;->ONRESTART:Landroid/app/im/InjectionConstants$DispatchParentCall;
 
-    .line 60
     new-instance v0, Landroid/app/im/InjectionConstants$DispatchParentCall;
 
     const-string v1, "ONSAVEINSTANCESTATE"
@@ -142,7 +134,6 @@
 
     sput-object v0, Landroid/app/im/InjectionConstants$DispatchParentCall;->ONSAVEINSTANCESTATE:Landroid/app/im/InjectionConstants$DispatchParentCall;
 
-    .line 61
     new-instance v0, Landroid/app/im/InjectionConstants$DispatchParentCall;
 
     const-string v1, "ONRESTOREINSTANCESTATE"
@@ -153,7 +144,6 @@
 
     sput-object v0, Landroid/app/im/InjectionConstants$DispatchParentCall;->ONRESTOREINSTANCESTATE:Landroid/app/im/InjectionConstants$DispatchParentCall;
 
-    .line 62
     new-instance v0, Landroid/app/im/InjectionConstants$DispatchParentCall;
 
     const-string v1, "ONCONFIGURATIONCHANGED"
@@ -164,7 +154,6 @@
 
     sput-object v0, Landroid/app/im/InjectionConstants$DispatchParentCall;->ONCONFIGURATIONCHANGED:Landroid/app/im/InjectionConstants$DispatchParentCall;
 
-    .line 63
     new-instance v0, Landroid/app/im/InjectionConstants$DispatchParentCall;
 
     const-string v1, "ONSEARCHREQUESTED"
@@ -175,7 +164,6 @@
 
     sput-object v0, Landroid/app/im/InjectionConstants$DispatchParentCall;->ONSEARCHREQUESTED:Landroid/app/im/InjectionConstants$DispatchParentCall;
 
-    .line 52
     const/16 v0, 0xb
 
     new-array v0, v0, [Landroid/app/im/InjectionConstants$DispatchParentCall;
@@ -250,7 +238,6 @@
     .end annotation
 
     .prologue
-    .line 52
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -261,7 +248,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 52
     const-class v0, Landroid/app/im/InjectionConstants$DispatchParentCall;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -277,7 +263,6 @@
     .locals 1
 
     .prologue
-    .line 52
     sget-object v0, Landroid/app/im/InjectionConstants$DispatchParentCall;->$VALUES:[Landroid/app/im/InjectionConstants$DispatchParentCall;
 
     invoke-virtual {v0}, [Landroid/app/im/InjectionConstants$DispatchParentCall;->clone()Ljava/lang/Object;

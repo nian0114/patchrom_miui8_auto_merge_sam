@@ -32,35 +32,30 @@
     .locals 1
 
     .prologue
-    .line 64
     sget-object v0, Lcom/samsung/android/telephony/GsmAlphabetCode;->mWrappedGsmAlphabet:Lcom/android/internal/telephony/GsmAlphabet;
 
     const/16 v0, 0x1b
 
     sput-byte v0, Lcom/samsung/android/telephony/GsmAlphabetCode;->GSM_EXTENDED_ESCAPE:B
 
-    .line 72
     sget-object v0, Lcom/samsung/android/telephony/GsmAlphabetCode;->mWrappedGsmAlphabet:Lcom/android/internal/telephony/GsmAlphabet;
 
     const/4 v0, 0x1
 
     sput v0, Lcom/samsung/android/telephony/GsmAlphabetCode;->UDH_SEPTET_COST_LENGTH:I
 
-    .line 79
     sget-object v0, Lcom/samsung/android/telephony/GsmAlphabetCode;->mWrappedGsmAlphabet:Lcom/android/internal/telephony/GsmAlphabet;
 
     const/4 v0, 0x4
 
     sput v0, Lcom/samsung/android/telephony/GsmAlphabetCode;->UDH_SEPTET_COST_ONE_SHIFT_TABLE:I
 
-    .line 86
     sget-object v0, Lcom/samsung/android/telephony/GsmAlphabetCode;->mWrappedGsmAlphabet:Lcom/android/internal/telephony/GsmAlphabet;
 
     const/4 v0, 0x7
 
     sput v0, Lcom/samsung/android/telephony/GsmAlphabetCode;->UDH_SEPTET_COST_TWO_SHIFT_TABLES:I
 
-    .line 93
     sget-object v0, Lcom/samsung/android/telephony/GsmAlphabetCode;->mWrappedGsmAlphabet:Lcom/android/internal/telephony/GsmAlphabet;
 
     const/4 v0, 0x6
@@ -74,7 +69,6 @@
     .locals 0
 
     .prologue
-    .line 50
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -85,13 +79,10 @@
     .param p1, "ga"    # Lcom/android/internal/telephony/GsmAlphabet;
 
     .prologue
-    .line 55
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 56
     sput-object p1, Lcom/samsung/android/telephony/GsmAlphabetCode;->mWrappedGsmAlphabet:Lcom/android/internal/telephony/GsmAlphabet;
 
-    .line 57
     return-void
 .end method
 
@@ -102,7 +93,6 @@
     .param p2, "maxEmailLen"    # I
 
     .prologue
-    .line 581
     sget-object v0, Lcom/samsung/android/telephony/GsmAlphabetCode;->mWrappedGsmAlphabet:Lcom/android/internal/telephony/GsmAlphabet;
 
     invoke-static {p0, p1, p2}, Lcom/android/internal/telephony/GsmAlphabet;->CountGsmSeptetsWithEmail(Ljava/lang/CharSequence;ZI)Lcom/android/internal/telephony/GsmAlphabet$TextEncodingDetails;
@@ -119,7 +109,6 @@
     .param p0, "c"    # C
 
     .prologue
-    .line 116
     sget-object v0, Lcom/samsung/android/telephony/GsmAlphabetCode;->mWrappedGsmAlphabet:Lcom/android/internal/telephony/GsmAlphabet;
 
     invoke-static {p0}, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm(C)I
@@ -140,14 +129,12 @@
     .end annotation
 
     .prologue
-    .line 135
     const-string v0, "GsmAlphabetCode"
 
     const-string v1, "GsmAlphabetCode: charToGsm"
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 136
     sget-object v0, Lcom/samsung/android/telephony/GsmAlphabetCode;->mWrappedGsmAlphabet:Lcom/android/internal/telephony/GsmAlphabet;
 
     invoke-static {p0, p1}, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm(CZ)I
@@ -162,7 +149,6 @@
     .param p0, "c"    # C
 
     .prologue
-    .line 149
     sget-object v0, Lcom/samsung/android/telephony/GsmAlphabetCode;->mWrappedGsmAlphabet:Lcom/android/internal/telephony/GsmAlphabet;
 
     invoke-static {p0}, Lcom/android/internal/telephony/GsmAlphabet;->charToGsmExtended(C)I
@@ -177,14 +163,12 @@
     .param p0, "c"    # C
 
     .prologue
-    .line 555
     const-string v0, "GsmAlphabetCode"
 
     const-string v1, "GsmAlphabetCode: convertEachCharacter"
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 556
     sget-object v0, Lcom/samsung/android/telephony/GsmAlphabetCode;->mWrappedGsmAlphabet:Lcom/android/internal/telephony/GsmAlphabet;
 
     invoke-static {p0}, Lcom/android/internal/telephony/GsmAlphabet;->convertEachCharacter(C)C
@@ -199,7 +183,6 @@
     .param p0, "c"    # C
 
     .prologue
-    .line 423
     sget-object v0, Lcom/samsung/android/telephony/GsmAlphabetCode;->mWrappedGsmAlphabet:Lcom/android/internal/telephony/GsmAlphabet;
 
     invoke-static {p0}, Lcom/android/internal/telephony/GsmAlphabet;->countGsmSeptets(C)I
@@ -220,7 +203,6 @@
     .end annotation
 
     .prologue
-    .line 438
     sget-object v0, Lcom/samsung/android/telephony/GsmAlphabetCode;->mWrappedGsmAlphabet:Lcom/android/internal/telephony/GsmAlphabet;
 
     invoke-static {p0, p1}, Lcom/android/internal/telephony/GsmAlphabet;->countGsmSeptets(CZ)I
@@ -236,7 +218,6 @@
     .param p1, "use7bitOnly"    # Z
 
     .prologue
-    .line 486
     sget-object v0, Lcom/samsung/android/telephony/GsmAlphabetCode;->mWrappedGsmAlphabet:Lcom/android/internal/telephony/GsmAlphabet;
 
     invoke-static {p0, p1}, Lcom/android/internal/telephony/GsmAlphabet;->countGsmSeptets(Ljava/lang/CharSequence;Z)Lcom/android/internal/telephony/GsmAlphabet$TextEncodingDetails;
@@ -256,7 +237,6 @@
     .param p3, "languageShiftTable"    # I
 
     .prologue
-    .line 462
     sget-object v0, Lcom/samsung/android/telephony/GsmAlphabetCode;->mWrappedGsmAlphabet:Lcom/android/internal/telephony/GsmAlphabet;
 
     invoke-static {p0, p1, p2, p3}, Lcom/android/internal/telephony/GsmAlphabet;->countGsmSeptetsUsingTables(Ljava/lang/CharSequence;ZII)I
@@ -275,7 +255,6 @@
     .param p4, "langShiftTable"    # I
 
     .prologue
-    .line 506
     sget-object v0, Lcom/samsung/android/telephony/GsmAlphabetCode;->mWrappedGsmAlphabet:Lcom/android/internal/telephony/GsmAlphabet;
 
     invoke-static {p0, p1, p2, p3, p4}, Lcom/android/internal/telephony/GsmAlphabet;->findGsmSeptetLimitIndex(Ljava/lang/String;IIII)I
@@ -289,7 +268,6 @@
     .locals 2
 
     .prologue
-    .line 532
     const-class v1, Lcom/samsung/android/telephony/GsmAlphabetCode;
 
     monitor-enter v1
@@ -319,7 +297,6 @@
     .locals 2
 
     .prologue
-    .line 519
     const-class v1, Lcom/samsung/android/telephony/GsmAlphabetCode;
 
     monitor-enter v1
@@ -352,7 +329,6 @@
     .param p2, "lengthSeptets"    # I
 
     .prologue
-    .line 325
     sget-object v0, Lcom/samsung/android/telephony/GsmAlphabetCode;->mWrappedGsmAlphabet:Lcom/android/internal/telephony/GsmAlphabet;
 
     invoke-static {p0, p1, p2}, Lcom/android/internal/telephony/GsmAlphabet;->gsm7BitPackedToString([BII)Ljava/lang/String;
@@ -370,7 +346,6 @@
     .param p3, "numPaddingBits"    # I
 
     .prologue
-    .line 551
     sget-object v0, Lcom/samsung/android/telephony/GsmAlphabetCode;->mWrappedGsmAlphabet:Lcom/android/internal/telephony/GsmAlphabet;
 
     invoke-static {p0, p1, p2, p3}, Lcom/android/internal/telephony/GsmAlphabet;->gsm7BitPackedToString([BIII)Ljava/lang/String;
@@ -390,7 +365,6 @@
     .param p5, "shiftTable"    # I
 
     .prologue
-    .line 348
     sget-object v0, Lcom/samsung/android/telephony/GsmAlphabetCode;->mWrappedGsmAlphabet:Lcom/android/internal/telephony/GsmAlphabet;
 
     invoke-static/range {p0 .. p5}, Lcom/android/internal/telephony/GsmAlphabet;->gsm7BitPackedToString([BIIIII)Ljava/lang/String;
@@ -407,7 +381,6 @@
     .param p2, "length"    # I
 
     .prologue
-    .line 367
     sget-object v0, Lcom/samsung/android/telephony/GsmAlphabetCode;->mWrappedGsmAlphabet:Lcom/android/internal/telephony/GsmAlphabet;
 
     invoke-static {p0, p1, p2}, Lcom/android/internal/telephony/GsmAlphabet;->gsm8BitUnpackedToString([BII)Ljava/lang/String;
@@ -425,7 +398,6 @@
     .param p3, "characterset"    # Ljava/lang/String;
 
     .prologue
-    .line 383
     sget-object v0, Lcom/samsung/android/telephony/GsmAlphabetCode;->mWrappedGsmAlphabet:Lcom/android/internal/telephony/GsmAlphabet;
 
     invoke-static {p0, p1, p2, p3}, Lcom/android/internal/telephony/GsmAlphabet;->gsm8BitUnpackedToString([BIILjava/lang/String;)Ljava/lang/String;
@@ -440,7 +412,6 @@
     .param p0, "gsmChar"    # I
 
     .prologue
-    .line 186
     sget-object v0, Lcom/samsung/android/telephony/GsmAlphabetCode;->mWrappedGsmAlphabet:Lcom/android/internal/telephony/GsmAlphabet;
 
     invoke-static {p0}, Lcom/android/internal/telephony/GsmAlphabet;->gsmExtendedToChar(I)C
@@ -455,7 +426,6 @@
     .param p0, "gsmChar"    # I
 
     .prologue
-    .line 167
     sget-object v0, Lcom/samsung/android/telephony/GsmAlphabetCode;->mWrappedGsmAlphabet:Lcom/android/internal/telephony/GsmAlphabet;
 
     invoke-static {p0}, Lcom/android/internal/telephony/GsmAlphabet;->gsmToChar(I)C
@@ -470,7 +440,6 @@
     .param p0, "c"    # C
 
     .prologue
-    .line 443
     sget-object v0, Lcom/samsung/android/telephony/GsmAlphabetCode;->mWrappedGsmAlphabet:Lcom/android/internal/telephony/GsmAlphabet;
 
     invoke-static {p0}, Lcom/android/internal/telephony/GsmAlphabet;->isGsmSeptets(C)Z
@@ -490,7 +459,6 @@
     .end annotation
 
     .prologue
-    .line 255
     sget-object v0, Lcom/samsung/android/telephony/GsmAlphabetCode;->mWrappedGsmAlphabet:Lcom/android/internal/telephony/GsmAlphabet;
 
     invoke-static {p0}, Lcom/android/internal/telephony/GsmAlphabet;->stringToGsm7BitPacked(Ljava/lang/String;)[B
@@ -512,7 +480,6 @@
     .end annotation
 
     .prologue
-    .line 280
     sget-object v0, Lcom/samsung/android/telephony/GsmAlphabetCode;->mWrappedGsmAlphabet:Lcom/android/internal/telephony/GsmAlphabet;
 
     invoke-static {p0, p1, p2}, Lcom/android/internal/telephony/GsmAlphabet;->stringToGsm7BitPacked(Ljava/lang/String;II)[B
@@ -536,7 +503,6 @@
     .end annotation
 
     .prologue
-    .line 308
     sget-object v0, Lcom/samsung/android/telephony/GsmAlphabetCode;->mWrappedGsmAlphabet:Lcom/android/internal/telephony/GsmAlphabet;
 
     invoke-static {p0, p1, p2, p3, p4}, Lcom/android/internal/telephony/GsmAlphabet;->stringToGsm7BitPacked(Ljava/lang/String;IZII)[B
@@ -557,7 +523,6 @@
     .end annotation
 
     .prologue
-    .line 205
     sget-object v0, Lcom/samsung/android/telephony/GsmAlphabetCode;->mWrappedGsmAlphabet:Lcom/android/internal/telephony/GsmAlphabet;
 
     invoke-static {p0, p1}, Lcom/android/internal/telephony/GsmAlphabet;->stringToGsm7BitPackedWithHeader(Ljava/lang/String;[B)[B
@@ -580,7 +545,6 @@
     .end annotation
 
     .prologue
-    .line 234
     sget-object v0, Lcom/samsung/android/telephony/GsmAlphabetCode;->mWrappedGsmAlphabet:Lcom/android/internal/telephony/GsmAlphabet;
 
     invoke-static {p0, p1, p2, p3}, Lcom/android/internal/telephony/GsmAlphabet;->stringToGsm7BitPackedWithHeader(Ljava/lang/String;[BII)[B
@@ -595,7 +559,6 @@
     .param p0, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 395
     sget-object v0, Lcom/samsung/android/telephony/GsmAlphabetCode;->mWrappedGsmAlphabet:Lcom/android/internal/telephony/GsmAlphabet;
 
     invoke-static {p0}, Lcom/android/internal/telephony/GsmAlphabet;->stringToGsm8BitPacked(Ljava/lang/String;)[B
@@ -613,11 +576,9 @@
     .param p3, "length"    # I
 
     .prologue
-    .line 411
     sget-object v0, Lcom/samsung/android/telephony/GsmAlphabetCode;->mWrappedGsmAlphabet:Lcom/android/internal/telephony/GsmAlphabet;
 
     invoke-static {p0, p1, p2, p3}, Lcom/android/internal/telephony/GsmAlphabet;->stringToGsm8BitUnpackedField(Ljava/lang/String;[BII)V
 
-    .line 412
     return-void
 .end method

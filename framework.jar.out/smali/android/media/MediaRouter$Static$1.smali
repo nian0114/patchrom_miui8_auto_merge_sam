@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 103
     iput-object p1, p0, Landroid/media/MediaRouter$Static$1;->this$0:Landroid/media/MediaRouter$Static;
 
     invoke-direct {p0}, Landroid/media/IAudioRoutesObserver$Stub;-><init>()V
@@ -38,18 +37,15 @@
     .param p1, "newRoutes"    # Landroid/media/AudioRoutesInfo;
 
     .prologue
-    .line 107
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
-    .line 108
     .local v0, "AudioRoutesChangedTime":J
     sget-object v2, Landroid/media/MediaRouter;->sStatic:Landroid/media/MediaRouter$Static;
 
     iput-wide v0, v2, Landroid/media/MediaRouter$Static;->mLastDispatchAudioRoutesChangedTime:J
 
-    .line 110
     iget-object v2, p0, Landroid/media/MediaRouter$Static$1;->this$0:Landroid/media/MediaRouter$Static;
 
     iget-object v2, v2, Landroid/media/MediaRouter$Static;->mHandler:Landroid/os/Handler;
@@ -60,6 +56,5 @@
 
     invoke-virtual {v2, v3}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 123
     return-void
 .end method

@@ -32,27 +32,22 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 2620
     iput-object p1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
-    .line 2621
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 2618
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;->mLongPressPanelRect:Landroid/graphics/Rect;
 
-    .line 2787
     new-instance v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel$1;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel$1;-><init>(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;)V
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;->mHideTask:Ljava/lang/Runnable;
 
-    .line 2624
     new-instance v0, Landroid/view/WindowManager$LayoutParams;
 
     const/4 v1, -0x1
@@ -80,7 +75,6 @@
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;->mLongPressPanelAttributes:Landroid/view/WindowManager$LayoutParams;
 
-    .line 2633
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;->mLongPressPanelAttributes:Landroid/view/WindowManager$LayoutParams;
 
     iget-object v1, p1, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mWindowAttributes:Landroid/view/WindowManager$LayoutParams;
@@ -89,7 +83,6 @@
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
 
-    .line 2634
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;->mLongPressPanelAttributes:Landroid/view/WindowManager$LayoutParams;
 
     iget-object v1, p1, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mWindowAttributes:Landroid/view/WindowManager$LayoutParams;
@@ -98,7 +91,6 @@
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->gravity:I
 
-    .line 2635
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;->mLongPressPanelAttributes:Landroid/view/WindowManager$LayoutParams;
 
     iget-object v1, p1, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mWindowAttributes:Landroid/view/WindowManager$LayoutParams;
@@ -107,19 +99,16 @@
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->inputFeatures:I
 
-    .line 2636
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;->mLongPressPanelAttributes:Landroid/view/WindowManager$LayoutParams;
 
     const-string v1, "TwToolBoxLongPressPanel"
 
     invoke-virtual {v0, v1}, Landroid/view/WindowManager$LayoutParams;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 2638
     const/16 v0, 0x8
 
     invoke-virtual {p0, v0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;->setVisibility(I)V
 
-    .line 2639
     return-void
 .end method
 
@@ -130,10 +119,8 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 2698
     invoke-super/range {p0 .. p1}, Landroid/widget/FrameLayout;->dispatchDraw(Landroid/graphics/Canvas;)V
 
-    .line 2701
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -145,7 +132,6 @@
 
     move-result v12
 
-    .line 2703
     .local v12, "longPressPanelPosition":I
     move-object/from16 v0, p0
 
@@ -188,7 +174,6 @@
 
     if-eq v12, v0, :cond_6
 
-    .line 2705
     :cond_0
     if-gez v12, :cond_1
 
@@ -206,7 +191,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 2707
     :cond_1
     move-object/from16 v0, p0
 
@@ -223,7 +207,6 @@
 
     iget-object v13, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxCharacter;->bounds:Landroid/graphics/Rect;
 
-    .line 2708
     .local v13, "r":Landroid/graphics/Rect;
     iget v0, v13, Landroid/graphics/Rect;->left:I
 
@@ -249,7 +232,6 @@
 
     add-int v6, v20, v21
 
-    .line 2709
     .local v6, "absoluteMainLeft":I
     iget v0, v13, Landroid/graphics/Rect;->top:I
 
@@ -289,7 +271,6 @@
 
     sub-int v8, v20, v21
 
-    .line 2710
     .local v8, "absoluteMainTop":I
     iget v0, v13, Landroid/graphics/Rect;->right:I
 
@@ -315,7 +296,6 @@
 
     add-int v7, v20, v21
 
-    .line 2711
     .local v7, "absoluteMainRight":I
     iget v0, v13, Landroid/graphics/Rect;->bottom:I
 
@@ -355,7 +335,6 @@
 
     sub-int v5, v20, v21
 
-    .line 2713
     .local v5, "absoluteMainBottom":I
     move-object/from16 v0, p0
 
@@ -381,7 +360,6 @@
 
     invoke-virtual/range {v20 .. v21}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
-    .line 2714
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -399,7 +377,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 2716
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -411,7 +388,6 @@
 
     move-result-object v9
 
-    .line 2717
     .local v9, "editButton":Landroid/graphics/drawable/Drawable;
     move-object/from16 v0, p0
 
@@ -424,11 +400,9 @@
 
     move-result-object v14
 
-    .line 2718
     .local v14, "removeButton":Landroid/graphics/drawable/Drawable;
     const/16 v17, 0x0
 
-    .line 2720
     .local v17, "removeNeedAnimating":Z
     move-object/from16 v0, p0
 
@@ -449,7 +423,6 @@
 
     if-eqz v20, :cond_7
 
-    .line 2721
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -474,7 +447,6 @@
 
     invoke-virtual/range {v20 .. v21}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
-    .line 2722
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -492,7 +464,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 2723
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -504,7 +475,6 @@
 
     move-result-object v9
 
-    .line 2732
     :cond_2
     :goto_0
     move-object/from16 v0, p0
@@ -522,12 +492,10 @@
 
     invoke-virtual {v9, v0}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
-    .line 2733
     move-object/from16 v0, p1
 
     invoke-virtual {v9, v0}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 2734
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -543,12 +511,10 @@
 
     invoke-virtual {v14, v0}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
-    .line 2735
     move-object/from16 v0, p1
 
     invoke-virtual {v14, v0}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 2737
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -562,7 +528,6 @@
 
     if-eqz v20, :cond_8
 
-    .line 2738
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -593,7 +558,6 @@
 
     float-to-int v10, v0
 
-    .line 2739
     .local v10, "lenEditMsg":I
     move-object/from16 v0, p0
 
@@ -625,7 +589,6 @@
 
     float-to-int v11, v0
 
-    .line 2740
     .local v11, "lenRemoveMsg":I
     move-object/from16 v0, p0
 
@@ -732,7 +695,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
-    .line 2741
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -838,13 +800,11 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
-    .line 2749
     .end local v10    # "lenEditMsg":I
     .end local v11    # "lenRemoveMsg":I
     :goto_1
     if-eqz v17, :cond_9
 
-    .line 2750
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -858,7 +818,6 @@
 
     if-nez v20, :cond_3
 
-    .line 2751
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -870,7 +829,6 @@
     # setter for: Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mLongPressPanelRemoveBtnPosition:I
     invoke-static/range {v20 .. v21}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->access$6902(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;I)I
 
-    .line 2752
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -882,7 +840,6 @@
     # setter for: Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mLongPressPanelRemoveBtnAngle:F
     invoke-static/range {v20 .. v21}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->access$7002(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;F)F
 
-    .line 2753
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -894,7 +851,6 @@
     # setter for: Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mLongPressPanelRemoveAnimating:Z
     invoke-static/range {v20 .. v21}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->access$6802(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;Z)Z
 
-    .line 2754
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -908,7 +864,6 @@
 
     invoke-virtual/range {v20 .. v20}, Landroid/animation/AnimatorSet;->start()V
 
-    .line 2757
     :cond_3
     move-object/from16 v0, p0
 
@@ -921,7 +876,6 @@
 
     move-result v16
 
-    .line 2758
     .local v16, "removeButtonPosition":I
     move-object/from16 v0, p0
 
@@ -934,7 +888,6 @@
 
     move-result v15
 
-    .line 2760
     .local v15, "removeButtonAngle":F
     move-object/from16 v0, p0
 
@@ -960,7 +913,6 @@
 
     invoke-virtual/range {v20 .. v21}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 2761
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -985,7 +937,6 @@
 
     invoke-virtual/range {v20 .. v21}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
-    .line 2763
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -1007,7 +958,6 @@
 
     move/from16 v18, v0
 
-    .line 2764
     .local v18, "rotatePivotX":F
     move-object/from16 v0, p0
 
@@ -1030,11 +980,9 @@
 
     move/from16 v19, v0
 
-    .line 2766
     .local v19, "rotatePivotY":F
     if-lez v16, :cond_4
 
-    .line 2767
     const/16 v20, 0x0
 
     move/from16 v0, v16
@@ -1057,7 +1005,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 2768
     move-object/from16 v0, p1
 
     move/from16 v1, v18
@@ -1066,7 +1013,6 @@
 
     invoke-virtual {v0, v15, v1, v2}, Landroid/graphics/Canvas;->rotate(FFF)V
 
-    .line 2770
     :cond_4
     move-object/from16 v0, p0
 
@@ -1085,10 +1031,8 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 2771
     if-lez v16, :cond_5
 
-    .line 2772
     neg-float v0, v15
 
     move/from16 v20, v0
@@ -1103,7 +1047,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/graphics/Canvas;->rotate(FFF)V
 
-    .line 2773
     const/16 v20, 0x0
 
     move/from16 v0, v16
@@ -1120,7 +1063,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 2781
     .end local v15    # "removeButtonAngle":F
     .end local v16    # "removeButtonPosition":I
     .end local v18    # "rotatePivotX":F
@@ -1149,7 +1091,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 2785
     .end local v5    # "absoluteMainBottom":I
     .end local v6    # "absoluteMainLeft":I
     .end local v7    # "absoluteMainRight":I
@@ -1161,7 +1102,6 @@
     :cond_6
     return-void
 
-    .line 2725
     .restart local v5    # "absoluteMainBottom":I
     .restart local v6    # "absoluteMainLeft":I
     .restart local v7    # "absoluteMainRight":I
@@ -1190,7 +1130,6 @@
 
     if-eqz v20, :cond_2
 
-    .line 2726
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -1215,7 +1154,6 @@
 
     invoke-virtual/range {v20 .. v21}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
-    .line 2727
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -1233,7 +1171,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 2728
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -1245,12 +1182,10 @@
 
     move-result-object v14
 
-    .line 2729
     const/16 v17, 0x1
 
     goto/16 :goto_0
 
-    .line 2743
     :cond_8
     move-object/from16 v0, p0
 
@@ -1306,7 +1241,6 @@
 
     invoke-virtual/range {v20 .. v24}, Landroid/graphics/Paint;->getTextBounds(Ljava/lang/String;IILandroid/graphics/Rect;)V
 
-    .line 2744
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -1402,7 +1336,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
-    .line 2745
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -1457,7 +1390,6 @@
 
     invoke-virtual/range {v20 .. v24}, Landroid/graphics/Paint;->getTextBounds(Ljava/lang/String;IILandroid/graphics/Rect;)V
 
-    .line 2746
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -1555,7 +1487,6 @@
 
     goto/16 :goto_1
 
-    .line 2776
     :cond_9
     move-object/from16 v0, p0
 
@@ -1570,7 +1501,6 @@
 
     if-eqz v20, :cond_5
 
-    .line 2777
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -1591,12 +1521,10 @@
     .locals 1
 
     .prologue
-    .line 2799
     iget-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;->mHideTask:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v0}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;->post(Ljava/lang/Runnable;)Z
 
-    .line 2800
     return-void
 .end method
 
@@ -1608,10 +1536,8 @@
     .param p4, "oldh"    # I
 
     .prologue
-    .line 2643
     invoke-super/range {p0 .. p4}, Landroid/widget/FrameLayout;->onSizeChanged(IIII)V
 
-    .line 2645
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -1629,7 +1555,6 @@
 
     move/from16 v16, v0
 
-    .line 2647
     .local v16, "screenWidth":I
     move-object/from16 v0, p0
 
@@ -1657,7 +1582,6 @@
     # setter for: Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mLongPressPanelPosition:I
     invoke-static/range {v18 .. v19}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->access$302(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;I)I
 
-    .line 2648
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -1696,10 +1620,8 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 2650
     div-int/lit8 v9, v16, 0x2
 
-    .line 2651
     .local v9, "halfWidth":I
     move-object/from16 v0, p0
 
@@ -1712,7 +1634,6 @@
 
     move-result v8
 
-    .line 2652
     .local v8, "editBtnWidth":I
     move-object/from16 v0, p0
 
@@ -1725,7 +1646,6 @@
 
     move-result v7
 
-    .line 2653
     .local v7, "editBtnHeight":I
     move-object/from16 v0, p0
 
@@ -1738,7 +1658,6 @@
 
     move-result v6
 
-    .line 2654
     .local v6, "editBgWidth":I
     move-object/from16 v0, p0
 
@@ -1751,7 +1670,6 @@
 
     move-result v5
 
-    .line 2655
     .local v5, "editBgHeight":I
     move-object/from16 v0, p0
 
@@ -1764,7 +1682,6 @@
 
     move-result v14
 
-    .line 2656
     .local v14, "removeBtnWidth":I
     move-object/from16 v0, p0
 
@@ -1777,7 +1694,6 @@
 
     move-result v13
 
-    .line 2657
     .local v13, "removeBtnHeight":I
     move-object/from16 v0, p0
 
@@ -1790,7 +1706,6 @@
 
     move-result v12
 
-    .line 2658
     .local v12, "removeBgWidth":I
     move-object/from16 v0, p0
 
@@ -1803,7 +1718,6 @@
 
     move-result v11
 
-    .line 2663
     .local v11, "removeBgHeight":I
     move-object/from16 v0, p0
 
@@ -1818,18 +1732,15 @@
 
     if-eqz v18, :cond_0
 
-    .line 2664
     div-int/lit8 v18, v6, 0x2
 
     sub-int v10, v9, v18
 
-    .line 2665
     .local v10, "leftCenterX":I
     div-int/lit8 v18, v12, 0x2
 
     add-int v15, v9, v18
 
-    .line 2666
     .local v15, "rightCenterX":I
     move-object/from16 v0, p0
 
@@ -1859,7 +1770,6 @@
 
     div-int/lit8 v17, v18, 0x2
 
-    .line 2668
     .local v17, "topEmptySpace":I
     move-object/from16 v0, p0
 
@@ -1892,7 +1802,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 2669
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -1924,7 +1833,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 2671
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -1996,7 +1904,6 @@
 
     invoke-virtual/range {v18 .. v22}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 2673
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -2068,7 +1975,6 @@
 
     invoke-virtual/range {v18 .. v22}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 2676
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -2093,7 +1999,6 @@
 
     invoke-virtual/range {v18 .. v19}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 2677
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -2118,11 +2023,9 @@
 
     invoke-virtual/range {v18 .. v19}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 2694
     :goto_0
     return-void
 
-    .line 2679
     .end local v10    # "leftCenterX":I
     .end local v15    # "rightCenterX":I
     .end local v17    # "topEmptySpace":I
@@ -2131,13 +2034,11 @@
 
     sub-int v10, v9, v18
 
-    .line 2680
     .restart local v10    # "leftCenterX":I
     div-int/lit8 v18, v9, 0x2
 
     add-int v15, v9, v18
 
-    .line 2681
     .restart local v15    # "rightCenterX":I
     move-object/from16 v0, p0
 
@@ -2150,7 +2051,6 @@
 
     move-result v17
 
-    .line 2683
     .restart local v17    # "topEmptySpace":I
     move-object/from16 v0, p0
 
@@ -2185,7 +2085,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 2685
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -2219,7 +2118,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 2688
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -2281,7 +2179,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v5}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 2689
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -2343,7 +2240,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v11}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 2691
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -2368,7 +2264,6 @@
 
     invoke-virtual/range {v18 .. v19}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 2692
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$TwToolBoxLongPressPanel;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;

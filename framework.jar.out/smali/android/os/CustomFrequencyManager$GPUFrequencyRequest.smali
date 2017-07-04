@@ -29,20 +29,16 @@
     .param p6, "pkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 309
     iput-object p1, p0, Landroid/os/CustomFrequencyManager$GPUFrequencyRequest;->this$0:Landroid/os/CustomFrequencyManager;
 
-    .line 310
     invoke-direct/range {p0 .. p6}, Landroid/os/CustomFrequencyManager$FrequencyRequest;-><init>(Landroid/os/CustomFrequencyManager;IIJLjava/lang/String;)V
 
-    .line 303
     new-instance v0, Landroid/os/CustomFrequencyManager$GPUFrequencyRequest$1;
 
     invoke-direct {v0, p0}, Landroid/os/CustomFrequencyManager$GPUFrequencyRequest$1;-><init>(Landroid/os/CustomFrequencyManager$GPUFrequencyRequest;)V
 
     iput-object v0, p0, Landroid/os/CustomFrequencyManager$GPUFrequencyRequest;->mGPUReleaser:Ljava/lang/Runnable;
 
-    .line 311
     return-void
 .end method
 
@@ -52,12 +48,10 @@
     .locals 6
 
     .prologue
-    .line 334
     iget-object v2, p0, Landroid/os/CustomFrequencyManager$GPUFrequencyRequest;->mToken:Landroid/os/IBinder;
 
     monitor-enter v2
 
-    .line 336
     :try_start_0
     iget-object v1, p0, Landroid/os/CustomFrequencyManager$GPUFrequencyRequest;->this$0:Landroid/os/CustomFrequencyManager;
 
@@ -67,7 +61,6 @@
 
     invoke-virtual {v1, v3}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 337
     iget-object v1, p0, Landroid/os/CustomFrequencyManager$GPUFrequencyRequest;->this$0:Landroid/os/CustomFrequencyManager;
 
     iget-object v1, v1, Landroid/os/CustomFrequencyManager;->mService:Landroid/os/ICustomFrequencyManager;
@@ -80,7 +73,6 @@
 
     invoke-interface {v1, v3, v4, v5}, Landroid/os/ICustomFrequencyManager;->releaseGPU(ILandroid/os/IBinder;Ljava/lang/String;)V
 
-    .line 338
     iget-object v1, p0, Landroid/os/CustomFrequencyManager$GPUFrequencyRequest;->this$0:Landroid/os/CustomFrequencyManager;
 
     const/4 v3, 0x0
@@ -91,26 +83,21 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 342
     :goto_0
     :try_start_1
     monitor-exit v2
 
-    .line 343
     return-void
 
-    .line 339
     :catch_0
     move-exception v0
 
-    .line 340
     .local v0, "e":Ljava/lang/Exception;
     # invokes: Landroid/os/CustomFrequencyManager;->printExceptionTrace(Ljava/lang/Exception;)V
     invoke-static {v0}, Landroid/os/CustomFrequencyManager;->access$100(Ljava/lang/Exception;)V
 
     goto :goto_0
 
-    .line 342
     .end local v0    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v1
@@ -126,7 +113,6 @@
     .locals 8
 
     .prologue
-    .line 314
     const-string v1, "CustomFrequencyManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -164,12 +150,10 @@
     # invokes: Landroid/os/CustomFrequencyManager;->logOnEng(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v1, v2}, Landroid/os/CustomFrequencyManager;->access$000(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 316
     iget-object v2, p0, Landroid/os/CustomFrequencyManager$GPUFrequencyRequest;->mToken:Landroid/os/IBinder;
 
     monitor-enter v2
 
-    .line 317
     :try_start_0
     const-string v1, "CustomFrequencyManager"
 
@@ -210,7 +194,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 320
     :try_start_1
     iget-object v1, p0, Landroid/os/CustomFrequencyManager$GPUFrequencyRequest;->this$0:Landroid/os/CustomFrequencyManager;
 
@@ -226,7 +209,6 @@
 
     invoke-interface {v1, v3, v4, v5, v6}, Landroid/os/ICustomFrequencyManager;->requestGPU(IILandroid/os/IBinder;Ljava/lang/String;)V
 
-    .line 321
     iget-wide v4, p0, Landroid/os/CustomFrequencyManager$GPUFrequencyRequest;->mTimeoutMs:J
 
     const-wide/16 v6, -0x1
@@ -235,7 +217,6 @@
 
     if-nez v1, :cond_0
 
-    .line 322
     iget-object v1, p0, Landroid/os/CustomFrequencyManager$GPUFrequencyRequest;->this$0:Landroid/os/CustomFrequencyManager;
 
     const/4 v3, 0x1
@@ -246,17 +227,14 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 330
     :goto_0
     :try_start_2
     monitor-exit v2
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 331
     return-void
 
-    .line 324
     :cond_0
     :try_start_3
     iget-object v1, p0, Landroid/os/CustomFrequencyManager$GPUFrequencyRequest;->this$0:Landroid/os/CustomFrequencyManager;
@@ -269,7 +247,6 @@
 
     invoke-virtual {v1, v3, v4, v5}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 325
     iget-object v1, p0, Landroid/os/CustomFrequencyManager$GPUFrequencyRequest;->this$0:Landroid/os/CustomFrequencyManager;
 
     const/4 v3, 0x0
@@ -282,11 +259,9 @@
 
     goto :goto_0
 
-    .line 327
     :catch_0
     move-exception v0
 
-    .line 328
     .local v0, "e":Ljava/lang/Exception;
     :try_start_4
     # invokes: Landroid/os/CustomFrequencyManager;->printExceptionTrace(Ljava/lang/Exception;)V
@@ -294,7 +269,6 @@
 
     goto :goto_0
 
-    .line 330
     .end local v0    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v1

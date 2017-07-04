@@ -23,13 +23,10 @@
     .locals 0
 
     .prologue
-    .line 600
     iput-object p1, p0, Landroid/telecom/Connection$VideoProvider$VideoProviderHandler;->this$0:Landroid/telecom/Connection$VideoProvider;
 
-    .line 601
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    .line 602
     return-void
 .end method
 
@@ -38,13 +35,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 604
     iput-object p1, p0, Landroid/telecom/Connection$VideoProvider$VideoProviderHandler;->this$0:Landroid/telecom/Connection$VideoProvider;
 
-    .line 605
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 606
     return-void
 .end method
 
@@ -57,22 +51,18 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 610
     iget v3, p1, Landroid/os/Message;->what:I
 
     packed-switch v3, :pswitch_data_0
 
-    .line 678
     :goto_0
     return-void
 
-    .line 612
     :pswitch_0
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Landroid/os/IBinder;
 
-    .line 613
     .local v1, "binder":Landroid/os/IBinder;
     iget-object v3, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -82,11 +72,9 @@
 
     move-result-object v2
 
-    .line 615
     .local v2, "callback":Lcom/android/internal/telecom/IVideoCallback;
     if-nez v2, :cond_0
 
-    .line 616
     const-string v3, "addVideoProvider - skipped; callback is null."
 
     new-array v4, v4, [Ljava/lang/Object;
@@ -95,7 +83,6 @@
 
     goto :goto_0
 
-    .line 620
     :cond_0
     iget-object v3, p0, Landroid/telecom/Connection$VideoProvider$VideoProviderHandler;->this$0:Landroid/telecom/Connection$VideoProvider;
 
@@ -110,7 +97,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 621
     const-string v3, "addVideoProvider - skipped; already present."
 
     new-array v4, v4, [Ljava/lang/Object;
@@ -119,7 +105,6 @@
 
     goto :goto_0
 
-    .line 624
     :cond_1
     iget-object v3, p0, Landroid/telecom/Connection$VideoProvider$VideoProviderHandler;->this$0:Landroid/telecom/Connection$VideoProvider;
 
@@ -132,7 +117,6 @@
 
     goto :goto_0
 
-    .line 628
     .end local v1    # "binder":Landroid/os/IBinder;
     .end local v2    # "callback":Lcom/android/internal/telecom/IVideoCallback;
     :pswitch_1
@@ -140,7 +124,6 @@
 
     check-cast v1, Landroid/os/IBinder;
 
-    .line 629
     .restart local v1    # "binder":Landroid/os/IBinder;
     iget-object v3, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -150,7 +133,6 @@
 
     move-result-object v2
 
-    .line 631
     .restart local v2    # "callback":Lcom/android/internal/telecom/IVideoCallback;
     iget-object v3, p0, Landroid/telecom/Connection$VideoProvider$VideoProviderHandler;->this$0:Landroid/telecom/Connection$VideoProvider;
 
@@ -165,8 +147,7 @@
 
     if-nez v3, :cond_2
 
-    .line 632
-    const-string/jumbo v3, "removeVideoProvider - skipped; not present."
+    const-string v3, "removeVideoProvider - skipped; not present."
 
     new-array v4, v4, [Ljava/lang/Object;
 
@@ -174,7 +155,6 @@
 
     goto :goto_0
 
-    .line 635
     :cond_2
     iget-object v3, p0, Landroid/telecom/Connection$VideoProvider$VideoProviderHandler;->this$0:Landroid/telecom/Connection$VideoProvider;
 
@@ -187,7 +167,6 @@
 
     goto :goto_0
 
-    .line 639
     .end local v1    # "binder":Landroid/os/IBinder;
     .end local v2    # "callback":Lcom/android/internal/telecom/IVideoCallback;
     :pswitch_2
@@ -201,7 +180,6 @@
 
     goto :goto_0
 
-    .line 642
     :pswitch_3
     iget-object v4, p0, Landroid/telecom/Connection$VideoProvider$VideoProviderHandler;->this$0:Landroid/telecom/Connection$VideoProvider;
 
@@ -213,7 +191,6 @@
 
     goto :goto_0
 
-    .line 645
     :pswitch_4
     iget-object v4, p0, Landroid/telecom/Connection$VideoProvider$VideoProviderHandler;->this$0:Landroid/telecom/Connection$VideoProvider;
 
@@ -225,7 +202,6 @@
 
     goto :goto_0
 
-    .line 648
     :pswitch_5
     iget-object v3, p0, Landroid/telecom/Connection$VideoProvider$VideoProviderHandler;->this$0:Landroid/telecom/Connection$VideoProvider;
 
@@ -235,7 +211,6 @@
 
     goto/16 :goto_0
 
-    .line 651
     :pswitch_6
     iget-object v4, p0, Landroid/telecom/Connection$VideoProvider$VideoProviderHandler;->this$0:Landroid/telecom/Connection$VideoProvider;
 
@@ -251,13 +226,11 @@
 
     goto/16 :goto_0
 
-    .line 654
     :pswitch_7
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/internal/os/SomeArgs;
 
-    .line 656
     .local v0, "args":Lcom/android/internal/os/SomeArgs;
     :try_start_0
     iget-object v5, p0, Landroid/telecom/Connection$VideoProvider$VideoProviderHandler;->this$0:Landroid/telecom/Connection$VideoProvider;
@@ -274,7 +247,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 659
     invoke-virtual {v0}, Lcom/android/internal/os/SomeArgs;->recycle()V
 
     goto/16 :goto_0
@@ -286,7 +258,6 @@
 
     throw v3
 
-    .line 664
     .end local v0    # "args":Lcom/android/internal/os/SomeArgs;
     :pswitch_8
     iget-object v4, p0, Landroid/telecom/Connection$VideoProvider$VideoProviderHandler;->this$0:Landroid/telecom/Connection$VideoProvider;
@@ -299,7 +270,6 @@
 
     goto/16 :goto_0
 
-    .line 667
     :pswitch_9
     iget-object v3, p0, Landroid/telecom/Connection$VideoProvider$VideoProviderHandler;->this$0:Landroid/telecom/Connection$VideoProvider;
 
@@ -307,7 +277,6 @@
 
     goto/16 :goto_0
 
-    .line 670
     :pswitch_a
     iget-object v3, p0, Landroid/telecom/Connection$VideoProvider$VideoProviderHandler;->this$0:Landroid/telecom/Connection$VideoProvider;
 
@@ -315,7 +284,6 @@
 
     goto/16 :goto_0
 
-    .line 673
     :pswitch_b
     iget-object v4, p0, Landroid/telecom/Connection$VideoProvider$VideoProviderHandler;->this$0:Landroid/telecom/Connection$VideoProvider;
 
@@ -327,7 +295,6 @@
 
     goto/16 :goto_0
 
-    .line 610
     nop
 
     :pswitch_data_0

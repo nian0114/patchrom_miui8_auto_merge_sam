@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 741
     iput-object p1, p0, Lcom/android/internal/widget/LockPatternView$5;->this$0:Lcom/android/internal/widget/LockPatternView;
 
     iput-object p2, p0, Lcom/android/internal/widget/LockPatternView$5;->val$cellState:Lcom/android/internal/widget/LockPatternView$CellState;
@@ -44,7 +43,6 @@
     .locals 9
 
     .prologue
-    .line 744
     iget-object v1, p0, Lcom/android/internal/widget/LockPatternView$5;->this$0:Lcom/android/internal/widget/LockPatternView;
 
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternView$5;->this$0:Lcom/android/internal/widget/LockPatternView;
@@ -85,6 +83,5 @@
     # invokes: Lcom/android/internal/widget/LockPatternView;->startRadiusAnimation(FFJLandroid/view/animation/Interpolator;Lcom/android/internal/widget/LockPatternView$CellState;Ljava/lang/Runnable;)V
     invoke-static/range {v1 .. v8}, Lcom/android/internal/widget/LockPatternView;->access$400(Lcom/android/internal/widget/LockPatternView;FFJLandroid/view/animation/Interpolator;Lcom/android/internal/widget/LockPatternView$CellState;Ljava/lang/Runnable;)V
 
-    .line 747
     return-void
 .end method

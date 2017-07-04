@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 38
     iput-object p1, p0, Landroid/net/wifi/hs20/WifiHs20OCSPStaplingProvider$1;->this$0:Landroid/net/wifi/hs20/WifiHs20OCSPStaplingProvider;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,13 +39,11 @@
     .locals 1
 
     .prologue
-    .line 42
     iget-object v0, p0, Landroid/net/wifi/hs20/WifiHs20OCSPStaplingProvider$1;->this$0:Landroid/net/wifi/hs20/WifiHs20OCSPStaplingProvider;
 
     # invokes: Landroid/net/wifi/hs20/WifiHs20OCSPStaplingProvider;->setup()V
     invoke-static {v0}, Landroid/net/wifi/hs20/WifiHs20OCSPStaplingProvider;->access$000(Landroid/net/wifi/hs20/WifiHs20OCSPStaplingProvider;)V
 
-    .line 44
     const/4 v0, 0x0
 
     return-object v0

@@ -24,10 +24,8 @@
     .locals 4
 
     .prologue
-    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 44
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     const/16 v1, 0x8
@@ -44,7 +42,6 @@
 
     iput-object v0, p0, Landroid/telecom/ConnectionServiceAdapter;->mAdapters:Ljava/util/Set;
 
-    .line 48
     return-void
 .end method
 
@@ -57,7 +54,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 51
     iget-object v3, p0, Landroid/telecom/ConnectionServiceAdapter;->mAdapters:Ljava/util/Set;
 
     invoke-interface {v3}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -78,7 +74,6 @@
 
     check-cast v2, Lcom/android/internal/telecom/IConnectionServiceAdapter;
 
-    .line 52
     .local v2, "it":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     invoke-interface {v2}, Lcom/android/internal/telecom/IConnectionServiceAdapter;->asBinder()Landroid/os/IBinder;
 
@@ -90,20 +85,17 @@
 
     if-ne v3, v4, :cond_0
 
-    .line 53
     const-string v3, "Ignoring duplicate adapter addition."
 
     new-array v4, v5, [Ljava/lang/Object;
 
     invoke-static {p0, v3, v4}, Landroid/telecom/Log;->w(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 64
     .end local v2    # "it":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     :cond_1
     :goto_0
     return-void
 
-    .line 57
     :cond_2
     iget-object v3, p0, Landroid/telecom/ConnectionServiceAdapter;->mAdapters:Ljava/util/Set;
 
@@ -113,7 +105,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 59
     :try_start_0
     invoke-interface {p1}, Lcom/android/internal/telecom/IConnectionServiceAdapter;->asBinder()Landroid/os/IBinder;
 
@@ -127,11 +118,9 @@
 
     goto :goto_0
 
-    .line 60
     :catch_0
     move-exception v0
 
-    .line 61
     .local v0, "e":Landroid/os/RemoteException;
     iget-object v3, p0, Landroid/telecom/ConnectionServiceAdapter;->mAdapters:Ljava/util/Set;
 
@@ -146,7 +135,6 @@
     .param p2, "parcelableConference"    # Landroid/telecom/ParcelableConference;
 
     .prologue
-    .line 271
     iget-object v2, p0, Landroid/telecom/ConnectionServiceAdapter;->mAdapters:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -167,7 +155,6 @@
 
     check-cast v0, Lcom/android/internal/telecom/IConnectionServiceAdapter;
 
-    .line 273
     .local v0, "adapter":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     :try_start_0
     invoke-interface {v0, p1, p2}, Lcom/android/internal/telecom/IConnectionServiceAdapter;->addConferenceCall(Ljava/lang/String;Landroid/telecom/ParcelableConference;)V
@@ -176,13 +163,11 @@
 
     goto :goto_0
 
-    .line 274
     :catch_0
     move-exception v2
 
     goto :goto_0
 
-    .line 277
     .end local v0    # "adapter":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     :cond_0
     return-void
@@ -194,7 +179,6 @@
     .param p2, "connection"    # Landroid/telecom/ParcelableConnection;
 
     .prologue
-    .line 391
     const-string v2, "addExistingConnection: %s"
 
     const/4 v3, 0x1
@@ -207,7 +191,6 @@
 
     invoke-static {p0, v2, v3}, Landroid/telecom/Log;->v(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 392
     iget-object v2, p0, Landroid/telecom/ConnectionServiceAdapter;->mAdapters:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -228,7 +211,6 @@
 
     check-cast v0, Lcom/android/internal/telecom/IConnectionServiceAdapter;
 
-    .line 394
     .local v0, "adapter":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     :try_start_0
     invoke-interface {v0, p1, p2}, Lcom/android/internal/telecom/IConnectionServiceAdapter;->addExistingConnection(Ljava/lang/String;Landroid/telecom/ParcelableConnection;)V
@@ -237,13 +219,11 @@
 
     goto :goto_0
 
-    .line 395
     :catch_0
     move-exception v2
 
     goto :goto_0
 
-    .line 398
     .end local v0    # "adapter":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     :cond_0
     return-void
@@ -253,14 +233,12 @@
     .locals 4
 
     .prologue
-    .line 80
     iget-object v2, p0, Landroid/telecom/ConnectionServiceAdapter;->mAdapters:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    .line 81
     .local v1, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Lcom/android/internal/telecom/IConnectionServiceAdapter;>;"
     :cond_0
     :goto_0
@@ -270,14 +248,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 82
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/android/internal/telecom/IConnectionServiceAdapter;
 
-    .line 83
     .local v0, "adapter":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     invoke-interface {v0}, Lcom/android/internal/telecom/IConnectionServiceAdapter;->asBinder()Landroid/os/IBinder;
 
@@ -289,10 +265,8 @@
 
     if-nez v2, :cond_0
 
-    .line 84
     invoke-interface {v1}, Ljava/util/Iterator;->remove()V
 
-    .line 85
     invoke-interface {v0}, Lcom/android/internal/telecom/IConnectionServiceAdapter;->asBinder()Landroid/os/IBinder;
 
     move-result-object v2
@@ -303,7 +277,6 @@
 
     goto :goto_0
 
-    .line 88
     .end local v0    # "adapter":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     :cond_1
     return-void
@@ -316,7 +289,6 @@
     .param p3, "connection"    # Landroid/telecom/ParcelableConnection;
 
     .prologue
-    .line 94
     iget-object v2, p0, Landroid/telecom/ConnectionServiceAdapter;->mAdapters:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -337,7 +309,6 @@
 
     check-cast v0, Lcom/android/internal/telecom/IConnectionServiceAdapter;
 
-    .line 96
     .local v0, "adapter":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     :try_start_0
     invoke-interface {v0, p1, p2, p3}, Lcom/android/internal/telecom/IConnectionServiceAdapter;->handleCreateConnectionComplete(Ljava/lang/String;Landroid/telecom/ConnectionRequest;Landroid/telecom/ParcelableConnection;)V
@@ -346,13 +317,11 @@
 
     goto :goto_0
 
-    .line 97
     :catch_0
     move-exception v2
 
     goto :goto_0
 
-    .line 100
     .end local v0    # "adapter":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     :cond_0
     return-void
@@ -363,7 +332,6 @@
     .param p1, "callId"    # Ljava/lang/String;
 
     .prologue
-    .line 223
     iget-object v2, p0, Landroid/telecom/ConnectionServiceAdapter;->mAdapters:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -384,10 +352,9 @@
 
     check-cast v0, Lcom/android/internal/telecom/IConnectionServiceAdapter;
 
-    .line 225
     .local v0, "adapter":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     :try_start_0
-    const-string/jumbo v2, "merge failed for call %s"
+    const-string v2, "merge failed for call %s"
 
     const/4 v3, 0x1
 
@@ -399,20 +366,17 @@
 
     invoke-static {p0, v2, v3}, Landroid/telecom/Log;->d(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 226
     invoke-interface {v0, p1}, Lcom/android/internal/telecom/IConnectionServiceAdapter;->setConferenceMergeFailed(Ljava/lang/String;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 227
     :catch_0
     move-exception v2
 
     goto :goto_0
 
-    .line 230
     .end local v0    # "adapter":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     :cond_0
     return-void
@@ -424,7 +388,6 @@
     .param p2, "nextChar"    # C
 
     .prologue
-    .line 257
     iget-object v2, p0, Landroid/telecom/ConnectionServiceAdapter;->mAdapters:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -445,7 +408,6 @@
 
     check-cast v0, Lcom/android/internal/telecom/IConnectionServiceAdapter;
 
-    .line 259
     .local v0, "adapter":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     :try_start_0
     invoke-interface {v0, p1, p2}, Lcom/android/internal/telecom/IConnectionServiceAdapter;->onPostDialChar(Ljava/lang/String;C)V
@@ -454,13 +416,11 @@
 
     goto :goto_0
 
-    .line 260
     :catch_0
     move-exception v2
 
     goto :goto_0
 
-    .line 263
     .end local v0    # "adapter":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     :cond_0
     return-void
@@ -472,7 +432,6 @@
     .param p2, "remaining"    # Ljava/lang/String;
 
     .prologue
-    .line 248
     iget-object v2, p0, Landroid/telecom/ConnectionServiceAdapter;->mAdapters:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -493,7 +452,6 @@
 
     check-cast v0, Lcom/android/internal/telecom/IConnectionServiceAdapter;
 
-    .line 250
     .local v0, "adapter":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     :try_start_0
     invoke-interface {v0, p1, p2}, Lcom/android/internal/telecom/IConnectionServiceAdapter;->onPostDialWait(Ljava/lang/String;Ljava/lang/String;)V
@@ -502,13 +460,11 @@
 
     goto :goto_0
 
-    .line 251
     :catch_0
     move-exception v2
 
     goto :goto_0
 
-    .line 254
     .end local v0    # "adapter":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     :cond_0
     return-void
@@ -519,7 +475,6 @@
     .param p1, "callback"    # Lcom/android/internal/telecom/RemoteServiceCallback;
 
     .prologue
-    .line 284
     iget-object v1, p0, Landroid/telecom/ConnectionServiceAdapter;->mAdapters:Ljava/util/Set;
 
     invoke-interface {v1}, Ljava/util/Set;->size()I
@@ -530,7 +485,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 286
     :try_start_0
     iget-object v1, p0, Landroid/telecom/ConnectionServiceAdapter;->mAdapters:Ljava/util/Set;
 
@@ -548,16 +502,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 291
     :cond_0
     :goto_0
     return-void
 
-    .line 287
     :catch_0
     move-exception v0
 
-    .line 288
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "Exception trying to query for remote CSs"
 
@@ -575,10 +526,8 @@
     .param p1, "adapter"    # Lcom/android/internal/telecom/IConnectionServiceAdapter;
 
     .prologue
-    .line 67
     if-eqz p1, :cond_1
 
-    .line 68
     iget-object v2, p0, Landroid/telecom/ConnectionServiceAdapter;->mAdapters:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -599,7 +548,6 @@
 
     check-cast v1, Lcom/android/internal/telecom/IConnectionServiceAdapter;
 
-    .line 69
     .local v1, "it":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     invoke-interface {v1}, Lcom/android/internal/telecom/IConnectionServiceAdapter;->asBinder()Landroid/os/IBinder;
 
@@ -619,7 +567,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 70
     invoke-interface {p1}, Lcom/android/internal/telecom/IConnectionServiceAdapter;->asBinder()Landroid/os/IBinder;
 
     move-result-object v2
@@ -628,7 +575,6 @@
 
     invoke-interface {v2, p0, v3}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 75
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v1    # "it":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     :cond_1
@@ -640,7 +586,6 @@
     .param p1, "callId"    # Ljava/lang/String;
 
     .prologue
-    .line 239
     iget-object v2, p0, Landroid/telecom/ConnectionServiceAdapter;->mAdapters:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -661,7 +606,6 @@
 
     check-cast v0, Lcom/android/internal/telecom/IConnectionServiceAdapter;
 
-    .line 241
     .local v0, "adapter":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     :try_start_0
     invoke-interface {v0, p1}, Lcom/android/internal/telecom/IConnectionServiceAdapter;->removeCall(Ljava/lang/String;)V
@@ -670,13 +614,11 @@
 
     goto :goto_0
 
-    .line 242
     :catch_0
     move-exception v2
 
     goto :goto_0
 
-    .line 245
     .end local v0    # "adapter":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     :cond_0
     return-void
@@ -687,7 +629,6 @@
     .param p1, "callId"    # Ljava/lang/String;
 
     .prologue
-    .line 109
     iget-object v2, p0, Landroid/telecom/ConnectionServiceAdapter;->mAdapters:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -708,7 +649,6 @@
 
     check-cast v0, Lcom/android/internal/telecom/IConnectionServiceAdapter;
 
-    .line 111
     .local v0, "adapter":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     :try_start_0
     invoke-interface {v0, p1}, Lcom/android/internal/telecom/IConnectionServiceAdapter;->setActive(Ljava/lang/String;)V
@@ -717,13 +657,11 @@
 
     goto :goto_0
 
-    .line 112
     :catch_0
     move-exception v2
 
     goto :goto_0
 
-    .line 115
     .end local v0    # "adapter":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     :cond_0
     return-void
@@ -736,7 +674,6 @@
     .param p3, "presentation"    # I
 
     .prologue
-    .line 336
     iget-object v2, p0, Landroid/telecom/ConnectionServiceAdapter;->mAdapters:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -757,7 +694,6 @@
 
     check-cast v0, Lcom/android/internal/telecom/IConnectionServiceAdapter;
 
-    .line 338
     .local v0, "adapter":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     :try_start_0
     invoke-interface {v0, p1, p2, p3}, Lcom/android/internal/telecom/IConnectionServiceAdapter;->setAddress(Ljava/lang/String;Landroid/net/Uri;I)V
@@ -766,13 +702,11 @@
 
     goto :goto_0
 
-    .line 339
     :catch_0
     move-exception v2
 
     goto :goto_0
 
-    .line 342
     .end local v0    # "adapter":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     :cond_0
     return-void
@@ -785,7 +719,6 @@
     .param p3, "presentation"    # I
 
     .prologue
-    .line 345
     iget-object v2, p0, Landroid/telecom/ConnectionServiceAdapter;->mAdapters:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -806,7 +739,6 @@
 
     check-cast v0, Lcom/android/internal/telecom/IConnectionServiceAdapter;
 
-    .line 347
     .local v0, "adapter":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     :try_start_0
     invoke-interface {v0, p1, p2, p3}, Lcom/android/internal/telecom/IConnectionServiceAdapter;->setCallerDisplayName(Ljava/lang/String;Ljava/lang/String;I)V
@@ -815,13 +747,11 @@
 
     goto :goto_0
 
-    .line 348
     :catch_0
     move-exception v2
 
     goto :goto_0
 
-    .line 351
     .end local v0    # "adapter":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     :cond_0
     return-void
@@ -842,9 +772,8 @@
     .end annotation
 
     .prologue
-    .line 375
     .local p2, "conferenceableCallIds":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
-    const-string/jumbo v2, "setConferenceableConnections: %s, %s"
+    const-string v2, "setConferenceableConnections: %s, %s"
 
     const/4 v3, 0x2
 
@@ -860,7 +789,6 @@
 
     invoke-static {p0, v2, v3}, Landroid/telecom/Log;->v(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 376
     iget-object v2, p0, Landroid/telecom/ConnectionServiceAdapter;->mAdapters:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -881,7 +809,6 @@
 
     check-cast v0, Lcom/android/internal/telecom/IConnectionServiceAdapter;
 
-    .line 378
     .local v0, "adapter":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     :try_start_0
     invoke-interface {v0, p1, p2}, Lcom/android/internal/telecom/IConnectionServiceAdapter;->setConferenceableConnections(Ljava/lang/String;Ljava/util/List;)V
@@ -890,13 +817,11 @@
 
     goto :goto_0
 
-    .line 379
     :catch_0
     move-exception v2
 
     goto :goto_0
 
-    .line 382
     .end local v0    # "adapter":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     :cond_0
     return-void
@@ -908,7 +833,6 @@
     .param p2, "capabilities"    # I
 
     .prologue
-    .line 191
     iget-object v2, p0, Landroid/telecom/ConnectionServiceAdapter;->mAdapters:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -929,7 +853,6 @@
 
     check-cast v0, Lcom/android/internal/telecom/IConnectionServiceAdapter;
 
-    .line 193
     .local v0, "adapter":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     :try_start_0
     invoke-interface {v0, p1, p2}, Lcom/android/internal/telecom/IConnectionServiceAdapter;->setConnectionCapabilities(Ljava/lang/String;I)V
@@ -938,13 +861,11 @@
 
     goto :goto_0
 
-    .line 194
     :catch_0
     move-exception v2
 
     goto :goto_0
 
-    .line 197
     .end local v0    # "adapter":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     :cond_0
     return-void
@@ -955,7 +876,6 @@
     .param p1, "callId"    # Ljava/lang/String;
 
     .prologue
-    .line 137
     iget-object v2, p0, Landroid/telecom/ConnectionServiceAdapter;->mAdapters:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -976,7 +896,6 @@
 
     check-cast v0, Lcom/android/internal/telecom/IConnectionServiceAdapter;
 
-    .line 139
     .local v0, "adapter":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     :try_start_0
     invoke-interface {v0, p1}, Lcom/android/internal/telecom/IConnectionServiceAdapter;->setDialing(Ljava/lang/String;)V
@@ -985,13 +904,11 @@
 
     goto :goto_0
 
-    .line 140
     :catch_0
     move-exception v2
 
     goto :goto_0
 
-    .line 143
     .end local v0    # "adapter":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     :cond_0
     return-void
@@ -1003,7 +920,6 @@
     .param p2, "disconnectCause"    # Landroid/telecom/DisconnectCause;
 
     .prologue
-    .line 153
     iget-object v2, p0, Landroid/telecom/ConnectionServiceAdapter;->mAdapters:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -1024,7 +940,6 @@
 
     check-cast v0, Lcom/android/internal/telecom/IConnectionServiceAdapter;
 
-    .line 155
     .local v0, "adapter":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     :try_start_0
     invoke-interface {v0, p1, p2}, Lcom/android/internal/telecom/IConnectionServiceAdapter;->setDisconnected(Ljava/lang/String;Landroid/telecom/DisconnectCause;)V
@@ -1033,13 +948,11 @@
 
     goto :goto_0
 
-    .line 156
     :catch_0
     move-exception v2
 
     goto :goto_0
 
-    .line 159
     .end local v0    # "adapter":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     :cond_0
     return-void
@@ -1051,8 +964,7 @@
     .param p2, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 407
-    const-string/jumbo v2, "setExtras: %s"
+    const-string v2, "setExtras: %s"
 
     const/4 v3, 0x1
 
@@ -1064,7 +976,6 @@
 
     invoke-static {p0, v2, v3}, Landroid/telecom/Log;->v(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 408
     iget-object v2, p0, Landroid/telecom/ConnectionServiceAdapter;->mAdapters:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -1085,7 +996,6 @@
 
     check-cast v0, Lcom/android/internal/telecom/IConnectionServiceAdapter;
 
-    .line 410
     .local v0, "adapter":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     :try_start_0
     invoke-interface {v0, p1, p2}, Lcom/android/internal/telecom/IConnectionServiceAdapter;->setExtras(Ljava/lang/String;Landroid/os/Bundle;)V
@@ -1094,13 +1004,11 @@
 
     goto :goto_0
 
-    .line 411
     :catch_0
     move-exception v2
 
     goto :goto_0
 
-    .line 414
     .end local v0    # "adapter":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     :cond_0
     return-void
@@ -1112,7 +1020,6 @@
     .param p2, "conferenceCallId"    # Ljava/lang/String;
 
     .prologue
-    .line 208
     iget-object v2, p0, Landroid/telecom/ConnectionServiceAdapter;->mAdapters:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -1133,10 +1040,9 @@
 
     check-cast v0, Lcom/android/internal/telecom/IConnectionServiceAdapter;
 
-    .line 210
     .local v0, "adapter":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     :try_start_0
-    const-string/jumbo v2, "sending connection %s with conference %s"
+    const-string v2, "sending connection %s with conference %s"
 
     const/4 v3, 0x2
 
@@ -1152,20 +1058,17 @@
 
     invoke-static {p0, v2, v3}, Landroid/telecom/Log;->d(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 211
     invoke-interface {v0, p1, p2}, Lcom/android/internal/telecom/IConnectionServiceAdapter;->setIsConferenced(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 212
     :catch_0
     move-exception v2
 
     goto :goto_0
 
-    .line 215
     .end local v0    # "adapter":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     :cond_0
     return-void
@@ -1177,7 +1080,6 @@
     .param p2, "isVoip"    # Z
 
     .prologue
-    .line 318
     iget-object v2, p0, Landroid/telecom/ConnectionServiceAdapter;->mAdapters:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -1198,7 +1100,6 @@
 
     check-cast v0, Lcom/android/internal/telecom/IConnectionServiceAdapter;
 
-    .line 320
     .local v0, "adapter":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     :try_start_0
     invoke-interface {v0, p1, p2}, Lcom/android/internal/telecom/IConnectionServiceAdapter;->setIsVoipAudioMode(Ljava/lang/String;Z)V
@@ -1207,13 +1108,11 @@
 
     goto :goto_0
 
-    .line 321
     :catch_0
     move-exception v2
 
     goto :goto_0
 
-    .line 324
     .end local v0    # "adapter":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     :cond_0
     return-void
@@ -1224,7 +1123,6 @@
     .param p1, "callId"    # Ljava/lang/String;
 
     .prologue
-    .line 167
     iget-object v2, p0, Landroid/telecom/ConnectionServiceAdapter;->mAdapters:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -1245,7 +1143,6 @@
 
     check-cast v0, Lcom/android/internal/telecom/IConnectionServiceAdapter;
 
-    .line 169
     .local v0, "adapter":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     :try_start_0
     invoke-interface {v0, p1}, Lcom/android/internal/telecom/IConnectionServiceAdapter;->setOnHold(Ljava/lang/String;)V
@@ -1254,13 +1151,11 @@
 
     goto :goto_0
 
-    .line 170
     :catch_0
     move-exception v2
 
     goto :goto_0
 
-    .line 173
     .end local v0    # "adapter":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     :cond_0
     return-void
@@ -1272,7 +1167,6 @@
     .param p2, "ringback"    # Z
 
     .prologue
-    .line 182
     iget-object v2, p0, Landroid/telecom/ConnectionServiceAdapter;->mAdapters:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -1293,7 +1187,6 @@
 
     check-cast v0, Lcom/android/internal/telecom/IConnectionServiceAdapter;
 
-    .line 184
     .local v0, "adapter":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     :try_start_0
     invoke-interface {v0, p1, p2}, Lcom/android/internal/telecom/IConnectionServiceAdapter;->setRingbackRequested(Ljava/lang/String;Z)V
@@ -1302,13 +1195,11 @@
 
     goto :goto_0
 
-    .line 185
     :catch_0
     move-exception v2
 
     goto :goto_0
 
-    .line 188
     .end local v0    # "adapter":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     :cond_0
     return-void
@@ -1319,7 +1210,6 @@
     .param p1, "callId"    # Ljava/lang/String;
 
     .prologue
-    .line 123
     iget-object v2, p0, Landroid/telecom/ConnectionServiceAdapter;->mAdapters:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -1340,7 +1230,6 @@
 
     check-cast v0, Lcom/android/internal/telecom/IConnectionServiceAdapter;
 
-    .line 125
     .local v0, "adapter":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     :try_start_0
     invoke-interface {v0, p1}, Lcom/android/internal/telecom/IConnectionServiceAdapter;->setRinging(Ljava/lang/String;)V
@@ -1349,13 +1238,11 @@
 
     goto :goto_0
 
-    .line 126
     :catch_0
     move-exception v2
 
     goto :goto_0
 
-    .line 129
     .end local v0    # "adapter":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     :cond_0
     return-void
@@ -1367,7 +1254,6 @@
     .param p2, "statusHints"    # Landroid/telecom/StatusHints;
 
     .prologue
-    .line 327
     iget-object v2, p0, Landroid/telecom/ConnectionServiceAdapter;->mAdapters:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -1388,7 +1274,6 @@
 
     check-cast v0, Lcom/android/internal/telecom/IConnectionServiceAdapter;
 
-    .line 329
     .local v0, "adapter":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     :try_start_0
     invoke-interface {v0, p1, p2}, Lcom/android/internal/telecom/IConnectionServiceAdapter;->setStatusHints(Ljava/lang/String;Landroid/telecom/StatusHints;)V
@@ -1397,13 +1282,11 @@
 
     goto :goto_0
 
-    .line 330
     :catch_0
     move-exception v2
 
     goto :goto_0
 
-    .line 333
     .end local v0    # "adapter":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     :cond_0
     return-void
@@ -1415,7 +1298,6 @@
     .param p2, "videoProvider"    # Landroid/telecom/Connection$VideoProvider;
 
     .prologue
-    .line 301
     iget-object v2, p0, Landroid/telecom/ConnectionServiceAdapter;->mAdapters:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -1436,7 +1318,6 @@
 
     check-cast v0, Lcom/android/internal/telecom/IConnectionServiceAdapter;
 
-    .line 303
     .local v0, "adapter":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     if-nez p2, :cond_0
 
@@ -1448,13 +1329,11 @@
 
     goto :goto_0
 
-    .line 306
     :catch_0
     move-exception v2
 
     goto :goto_0
 
-    .line 303
     :cond_0
     invoke-virtual {p2}, Landroid/telecom/Connection$VideoProvider;->getInterface()Lcom/android/internal/telecom/IVideoProvider;
     :try_end_0
@@ -1464,7 +1343,6 @@
 
     goto :goto_1
 
-    .line 309
     .end local v0    # "adapter":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     :cond_1
     return-void
@@ -1476,8 +1354,7 @@
     .param p2, "videoState"    # I
 
     .prologue
-    .line 365
-    const-string/jumbo v2, "setVideoState: %d"
+    const-string v2, "setVideoState: %d"
 
     const/4 v3, 0x1
 
@@ -1493,7 +1370,6 @@
 
     invoke-static {p0, v2, v3}, Landroid/telecom/Log;->v(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 366
     iget-object v2, p0, Landroid/telecom/ConnectionServiceAdapter;->mAdapters:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -1514,7 +1390,6 @@
 
     check-cast v0, Lcom/android/internal/telecom/IConnectionServiceAdapter;
 
-    .line 368
     .local v0, "adapter":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     :try_start_0
     invoke-interface {v0, p1, p2}, Lcom/android/internal/telecom/IConnectionServiceAdapter;->setVideoState(Ljava/lang/String;I)V
@@ -1523,13 +1398,11 @@
 
     goto :goto_0
 
-    .line 369
     :catch_0
     move-exception v2
 
     goto :goto_0
 
-    .line 372
     .end local v0    # "adapter":Lcom/android/internal/telecom/IConnectionServiceAdapter;
     :cond_0
     return-void

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 97
     iput-object p1, p0, Lcom/samsung/android/app/CustomBootMsgDialog$2;->this$0:Lcom/samsung/android/app/CustomBootMsgDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 4
 
     .prologue
-    .line 100
     iget-object v0, p0, Lcom/samsung/android/app/CustomBootMsgDialog$2;->this$0:Lcom/samsung/android/app/CustomBootMsgDialog;
 
     # getter for: Lcom/samsung/android/app/CustomBootMsgDialog;->mBigGear:Landroid/view/View;
@@ -54,7 +52,6 @@
 
     invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
-    .line 102
     iget-object v0, p0, Lcom/samsung/android/app/CustomBootMsgDialog$2;->this$0:Lcom/samsung/android/app/CustomBootMsgDialog;
 
     # getter for: Lcom/samsung/android/app/CustomBootMsgDialog;->mHandler:Landroid/os/Handler;
@@ -70,7 +67,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 111
     const/4 v0, 0x0
 
     return v0

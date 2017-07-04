@@ -35,21 +35,16 @@
     .param p4, "rFile"    # Ljava/io/File;
 
     .prologue
-    .line 3049
     iput-object p1, p0, Landroid/app/ActivityThread$mRunnable;->this$0:Landroid/app/ActivityThread;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3050
     iput-object p2, p0, Landroid/app/ActivityThread$mRunnable;->c:Landroid/content/Context;
 
-    .line 3051
     iput-object p3, p0, Landroid/app/ActivityThread$mRunnable;->actname:Ljava/lang/String;
 
-    .line 3052
     iput-object p4, p0, Landroid/app/ActivityThread$mRunnable;->filename:Ljava/io/File;
 
-    .line 3053
     return-void
 .end method
 
@@ -59,12 +54,10 @@
     .locals 4
 
     .prologue
-    .line 3055
     const/16 v0, -0xb
 
     invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
 
-    .line 3056
     iget-object v0, p0, Landroid/app/ActivityThread$mRunnable;->c:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -79,6 +72,5 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/res/Resources;->startRC(Landroid/content/Context;Ljava/lang/String;Ljava/io/File;)V
 
-    .line 3057
     return-void
 .end method

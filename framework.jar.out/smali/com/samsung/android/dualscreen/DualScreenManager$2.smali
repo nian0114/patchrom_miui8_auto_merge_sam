@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 125
     invoke-direct {p0}, Landroid/util/Singleton;-><init>()V
 
     return-void
@@ -40,20 +39,17 @@
     .locals 5
 
     .prologue
-    .line 127
     const-string v2, "dualscreen"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 128
     .local v0, "b":Landroid/os/IBinder;
     sget-boolean v2, Lcom/samsung/android/dualscreen/DualScreenManager;->DEBUG:Z
 
     if-eqz v2, :cond_0
 
-    .line 129
     sget-object v2, Lcom/samsung/android/dualscreen/DualScreenManager;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -76,19 +72,16 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 131
     :cond_0
     invoke-static {v0}, Lcom/samsung/android/multidisplay/dualscreen/IDualScreenManager$Stub;->asInterface(Landroid/os/IBinder;)Lcom/samsung/android/multidisplay/dualscreen/IDualScreenManager;
 
     move-result-object v1
 
-    .line 132
     .local v1, "service":Lcom/samsung/android/multidisplay/dualscreen/IDualScreenManager;
     sget-boolean v2, Lcom/samsung/android/dualscreen/DualScreenManager;->DEBUG:Z
 
     if-eqz v2, :cond_1
 
-    .line 133
     sget-object v2, Lcom/samsung/android/dualscreen/DualScreenManager;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -111,7 +104,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 135
     :cond_1
     return-object v1
 .end method
@@ -120,7 +112,6 @@
     .locals 1
 
     .prologue
-    .line 125
     invoke-virtual {p0}, Lcom/samsung/android/dualscreen/DualScreenManager$2;->create()Lcom/samsung/android/multidisplay/dualscreen/IDualScreenManager;
 
     move-result-object v0

@@ -30,7 +30,6 @@
     .locals 1
 
     .prologue
-    .line 39
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
@@ -48,22 +47,16 @@
     .param p4, "version"    # I
 
     .prologue
-    .line 62
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 63
     invoke-static {p1}, Lcom/samsung/android/contextaware/creator/ContextProviderCreator;->setContext(Landroid/content/Context;)V
 
-    .line 64
     invoke-static {p2}, Lcom/samsung/android/contextaware/creator/ContextProviderCreator;->setLooper(Landroid/os/Looper;)V
 
-    .line 65
     invoke-static {p3}, Lcom/samsung/android/contextaware/creator/ContextProviderCreator;->setAPPowerObservable(Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;)V
 
-    .line 66
     invoke-static {p4}, Lcom/samsung/android/contextaware/creator/ContextProviderCreator;->setVersion(I)V
 
-    .line 67
     return-void
 .end method
 
@@ -73,29 +66,23 @@
     .param p2, "isSubCollection"    # Z
 
     .prologue
-    .line 113
     invoke-virtual {p0, p1}, Lcom/samsung/android/contextaware/creator/ContextProviderCreator;->existContextProvider(Ljava/lang/String;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 114
     const/4 v0, 0x0
 
-    .line 125
     :goto_0
     return-object v0
 
-    .line 117
     :cond_0
     const/4 v0, 0x0
 
-    .line 119
     .local v0, "provider":Lcom/samsung/android/contextaware/manager/ContextComponent;
     if-eqz p2, :cond_1
 
-    .line 120
     invoke-virtual {p0, p1}, Lcom/samsung/android/contextaware/creator/ContextProviderCreator;->getValueOfList(Ljava/lang/String;)Lcom/samsung/android/contextaware/creator/IListObjectCreator;
 
     move-result-object v1
@@ -106,7 +93,6 @@
 
     goto :goto_0
 
-    .line 122
     :cond_1
     invoke-virtual {p0, p1}, Lcom/samsung/android/contextaware/creator/ContextProviderCreator;->getValueOfList(Ljava/lang/String;)Lcom/samsung/android/contextaware/creator/IListObjectCreator;
 
@@ -123,7 +109,6 @@
     .locals 1
 
     .prologue
-    .line 257
     sget-object v0, Lcom/samsung/android/contextaware/creator/ContextProviderCreator;->sAPPowerObservable:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;
 
     return-object v0
@@ -133,7 +118,6 @@
     .locals 1
 
     .prologue
-    .line 218
     sget-object v0, Lcom/samsung/android/contextaware/creator/ContextProviderCreator;->sContext:Landroid/content/Context;
 
     return-object v0
@@ -153,7 +137,6 @@
     .end annotation
 
     .prologue
-    .line 185
     const-class v0, Lcom/samsung/android/contextaware/creator/ContextProviderCreator;
 
     monitor-enter v0
@@ -179,7 +162,6 @@
     .locals 1
 
     .prologue
-    .line 237
     sget-object v0, Lcom/samsung/android/contextaware/creator/ContextProviderCreator;->sLooper:Landroid/os/Looper;
 
     return-object v0
@@ -189,7 +171,6 @@
     .locals 1
 
     .prologue
-    .line 276
     sget v0, Lcom/samsung/android/contextaware/creator/ContextProviderCreator;->sVersion:I
 
     return v0
@@ -202,7 +183,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 287
     invoke-static {}, Lcom/samsung/android/contextaware/manager/ListenerListManager;->getInstance()Lcom/samsung/android/contextaware/manager/ListenerListManager;
 
     move-result-object v1
@@ -213,15 +193,12 @@
 
     if-lt v1, v0, :cond_1
 
-    .line 288
     const/4 v0, 0x0
 
-    .line 293
     :cond_0
     :goto_0
     return v0
 
-    .line 290
     :cond_1
     invoke-static {}, Lcom/samsung/android/contextaware/creator/ContextProviderCreator;->getContextProviderMap()Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -233,7 +210,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 291
     invoke-static {}, Lcom/samsung/android/contextaware/creator/ContextProviderCreator;->getContextProviderMap()Ljava/util/concurrent/ConcurrentHashMap;
 
     move-result-object v1
@@ -248,10 +224,8 @@
     .param p0, "sAPPowerObservable"    # Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;
 
     .prologue
-    .line 248
     sput-object p0, Lcom/samsung/android/contextaware/creator/ContextProviderCreator;->sAPPowerObservable:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;
 
-    .line 249
     return-void
 .end method
 
@@ -260,10 +234,8 @@
     .param p0, "sContext"    # Landroid/content/Context;
 
     .prologue
-    .line 209
     sput-object p0, Lcom/samsung/android/contextaware/creator/ContextProviderCreator;->sContext:Landroid/content/Context;
 
-    .line 210
     return-void
 .end method
 
@@ -272,10 +244,8 @@
     .param p0, "sLooper"    # Landroid/os/Looper;
 
     .prologue
-    .line 228
     sput-object p0, Lcom/samsung/android/contextaware/creator/ContextProviderCreator;->sLooper:Landroid/os/Looper;
 
-    .line 229
     return-void
 .end method
 
@@ -284,10 +254,8 @@
     .param p0, "version"    # I
 
     .prologue
-    .line 267
     sput p0, Lcom/samsung/android/contextaware/creator/ContextProviderCreator;->sVersion:I
 
-    .line 268
     return-void
 .end method
 
@@ -298,7 +266,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 77
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/samsung/android/contextaware/creator/ContextProviderCreator;->create(Ljava/lang/String;Z)Lcom/samsung/android/contextaware/manager/ContextComponent;
@@ -315,25 +282,20 @@
     .param p3, "property"    # [Ljava/lang/Object;
 
     .prologue
-    .line 141
     invoke-virtual {p0, p1}, Lcom/samsung/android/contextaware/creator/ContextProviderCreator;->existContextProvider(Ljava/lang/String;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 142
     const/4 v0, 0x0
 
-    .line 157
     :goto_0
     return-object v0
 
-    .line 145
     :cond_0
     const/4 v0, 0x0
 
-    .line 147
     .local v0, "provider":Lcom/samsung/android/contextaware/manager/ContextComponent;
     if-eqz p3, :cond_1
 
@@ -341,7 +303,6 @@
 
     if-gtz v1, :cond_2
 
-    .line 148
     :cond_1
     invoke-direct {p0, p1, p2}, Lcom/samsung/android/contextaware/creator/ContextProviderCreator;->create(Ljava/lang/String;Z)Lcom/samsung/android/contextaware/manager/ContextComponent;
 
@@ -349,11 +310,9 @@
 
     goto :goto_0
 
-    .line 151
     :cond_2
     if-eqz p2, :cond_3
 
-    .line 152
     invoke-virtual {p0, p1}, Lcom/samsung/android/contextaware/creator/ContextProviderCreator;->getValueOfList(Ljava/lang/String;)Lcom/samsung/android/contextaware/creator/IListObjectCreator;
 
     move-result-object v1
@@ -364,7 +323,6 @@
 
     goto :goto_0
 
-    .line 154
     :cond_3
     invoke-virtual {p0, p1}, Lcom/samsung/android/contextaware/creator/ContextProviderCreator;->getValueOfList(Ljava/lang/String;)Lcom/samsung/android/contextaware/creator/IListObjectCreator;
 
@@ -383,7 +341,6 @@
     .param p2, "property"    # [Ljava/lang/Object;
 
     .prologue
-    .line 90
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0, p2}, Lcom/samsung/android/contextaware/creator/ContextProviderCreator;->create(Ljava/lang/String;Z[Ljava/lang/Object;)Lcom/samsung/android/contextaware/manager/ContextComponent;
@@ -398,25 +355,20 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 168
     const/4 v1, 0x1
 
-    .line 171
     .local v1, "exist":Z
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/samsung/android/contextaware/creator/ContextProviderCreator;->getValueOfList(Ljava/lang/String;)Lcom/samsung/android/contextaware/creator/IListObjectCreator;
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 176
     :goto_0
     return v1
 
-    .line 172
     :catch_0
     move-exception v0
 
-    .line 173
     .local v0, "e":Ljava/lang/IllegalArgumentException;
     const/4 v1, 0x0
 
@@ -431,18 +383,15 @@
     .param p1, "service"    # Ljava/lang/String;
 
     .prologue
-    .line 195
     invoke-virtual {p0, p1}, Lcom/samsung/android/contextaware/creator/ContextProviderCreator;->existContextProvider(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 200
     :goto_0
     return-void
 
-    .line 199
     :cond_0
     invoke-virtual {p0, p1}, Lcom/samsung/android/contextaware/creator/ContextProviderCreator;->getValueOfList(Ljava/lang/String;)Lcom/samsung/android/contextaware/creator/IListObjectCreator;
 

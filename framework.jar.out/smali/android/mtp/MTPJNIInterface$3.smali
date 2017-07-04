@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 1668
     iput-object p1, p0, Landroid/mtp/MTPJNIInterface$3;->this$0:Landroid/mtp/MTPJNIInterface;
 
     iput p2, p0, Landroid/mtp/MTPJNIInterface$3;->val$logLevel:I
@@ -44,21 +43,18 @@
     .locals 6
 
     .prologue
-    .line 1670
     const-string v2, "MTPJNIInterface"
 
-    const-string/jumbo v3, "run dumpstate"
+    const-string v3, "run dumpstate"
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1671
     new-instance v0, Ljava/io/File;
 
     const-string v2, "/storage/emulated/0/DeviceLogFile"
 
     invoke-direct {v0, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1672
     .local v0, "dataLogDirectory":Ljava/io/File;
     iget-object v2, p0, Landroid/mtp/MTPJNIInterface$3;->this$0:Landroid/mtp/MTPJNIInterface;
 
@@ -67,7 +63,6 @@
 
     move-result-object v1
 
-    .line 1674
     .local v1, "sDate":Ljava/lang/String;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -75,16 +70,13 @@
 
     if-nez v2, :cond_0
 
-    .line 1675
     invoke-virtual {v0}, Ljava/io/File;->mkdir()Z
 
-    .line 1677
     :cond_0
     iget v2, p0, Landroid/mtp/MTPJNIInterface$3;->val$logLevel:I
 
     if-nez v2, :cond_2
 
-    .line 1678
     iget-object v2, p0, Landroid/mtp/MTPJNIInterface$3;->this$0:Landroid/mtp/MTPJNIInterface;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -114,7 +106,6 @@
     # invokes: Landroid/mtp/MTPJNIInterface;->DoShellCmd(Ljava/lang/String;)I
     invoke-static {v2, v3}, Landroid/mtp/MTPJNIInterface;->access$200(Landroid/mtp/MTPJNIInterface;Ljava/lang/String;)I
 
-    .line 1679
     new-instance v2, Ljava/io/File;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -173,7 +164,6 @@
 
     invoke-virtual {v2, v3}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
 
-    .line 1680
     iget-object v2, p0, Landroid/mtp/MTPJNIInterface$3;->this$0:Landroid/mtp/MTPJNIInterface;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -202,12 +192,10 @@
 
     invoke-virtual {v2, v3}, Landroid/mtp/MTPJNIInterface;->sendObjectPropChanged(Ljava/lang/String;)V
 
-    .line 1684
     :cond_1
     :goto_0
     return-void
 
-    .line 1681
     :cond_2
     iget v2, p0, Landroid/mtp/MTPJNIInterface$3;->val$logLevel:I
 
@@ -215,14 +203,13 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 1682
     iget-object v2, p0, Landroid/mtp/MTPJNIInterface$3;->this$0:Landroid/mtp/MTPJNIInterface;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "logcat -v threadtime -d -f /storage/emulated/0/DeviceLogFile/logcat_"
+    const-string v4, "logcat -v threadtime -d -f /storage/emulated/0/DeviceLogFile/logcat_"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

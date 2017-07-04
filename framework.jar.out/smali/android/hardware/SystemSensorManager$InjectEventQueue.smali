@@ -26,15 +26,12 @@
     .param p4, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 655
     iput-object p1, p0, Landroid/hardware/SystemSensorManager$InjectEventQueue;->this$0:Landroid/hardware/SystemSensorManager;
 
-    .line 656
     const/4 v0, 0x1
 
     invoke-direct {p0, p2, p3, v0, p4}, Landroid/hardware/SystemSensorManager$BaseEventQueue;-><init>(Landroid/os/Looper;Landroid/hardware/SystemSensorManager;ILjava/lang/String;)V
 
-    .line 657
     return-void
 .end method
 
@@ -45,7 +42,6 @@
     .param p1, "sensor"    # Landroid/hardware/Sensor;
 
     .prologue
-    .line 676
     return-void
 .end method
 
@@ -54,7 +50,6 @@
     .param p1, "handle"    # I
 
     .prologue
-    .line 671
     return-void
 .end method
 
@@ -66,7 +61,6 @@
     .param p4, "timestamp"    # J
 
     .prologue
-    .line 666
     return-void
 .end method
 
@@ -78,7 +72,6 @@
     .param p4, "timestamp"    # J
 
     .prologue
-    .line 660
     invoke-virtual/range {p0 .. p5}, Landroid/hardware/SystemSensorManager$InjectEventQueue;->injectSensorDataBase(I[FIJ)I
 
     move-result v0
@@ -91,6 +84,5 @@
     .param p1, "sensor"    # Landroid/hardware/Sensor;
 
     .prologue
-    .line 681
     return-void
 .end method

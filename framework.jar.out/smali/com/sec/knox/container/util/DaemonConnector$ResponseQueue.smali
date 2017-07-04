@@ -41,20 +41,16 @@
     .param p1, "maxCount"    # I
 
     .prologue
-    .line 539
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 540
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
     iput-object v0, p0, Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue;->mPendingCmds:Ljava/util/LinkedList;
 
-    .line 541
     iput p1, p0, Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue;->mMaxCount:I
 
-    .line 542
     return-void
 .end method
 
@@ -66,16 +62,13 @@
     .param p2, "response"    # Lcom/sec/knox/container/util/DaemonEvent;
 
     .prologue
-    .line 545
     const/4 v0, 0x0
 
-    .line 546
     .local v0, "found":Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue$PendingCmd;
     iget-object v5, p0, Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue;->mPendingCmds:Ljava/util/LinkedList;
 
     monitor-enter v5
 
-    .line 547
     :try_start_0
     iget-object v4, p0, Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue;->mPendingCmds:Ljava/util/LinkedList;
 
@@ -97,7 +90,6 @@
 
     check-cast v3, Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue$PendingCmd;
 
-    .line 548
     .local v3, "pendingCmd":Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue$PendingCmd;
     iget v4, v3, Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue$PendingCmd;->cmdNum:I
     :try_end_0
@@ -105,19 +97,16 @@
 
     if-ne v4, p1, :cond_0
 
-    .line 549
     move-object v0, v3
 
     move-object v1, v0
 
-    .line 553
     .end local v0    # "found":Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue$PendingCmd;
     .end local v3    # "pendingCmd":Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue$PendingCmd;
     .local v1, "found":Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue$PendingCmd;
     :goto_0
     if-nez v1, :cond_3
 
-    .line 556
     :goto_1
     :try_start_1
     iget-object v4, p0, Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue;->mPendingCmds:Ljava/util/LinkedList;
@@ -130,7 +119,6 @@
 
     if-lt v4, v6, :cond_1
 
-    .line 557
     const-string v4, "DaemonConnector.ResponseQueue"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -171,7 +159,6 @@
 
     invoke-static {v4, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 560
     iget-object v4, p0, Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue;->mPendingCmds:Ljava/util/LinkedList;
 
     invoke-virtual {v4}, Ljava/util/LinkedList;->remove()Ljava/lang/Object;
@@ -180,7 +167,6 @@
 
     check-cast v3, Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue$PendingCmd;
 
-    .line 561
     .restart local v3    # "pendingCmd":Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue$PendingCmd;
     const-string v4, "DaemonConnector.ResponseQueue"
 
@@ -228,7 +214,6 @@
 
     goto :goto_1
 
-    .line 573
     .end local v3    # "pendingCmd":Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue$PendingCmd;
     :catchall_0
     move-exception v4
@@ -246,7 +231,6 @@
 
     throw v4
 
-    .line 564
     .end local v0    # "found":Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue$PendingCmd;
     .restart local v1    # "found":Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue$PendingCmd;
     .restart local v2    # "i$":Ljava/util/Iterator;
@@ -260,7 +244,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 565
     .end local v1    # "found":Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue$PendingCmd;
     .restart local v0    # "found":Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue$PendingCmd;
     :try_start_4
@@ -268,7 +251,6 @@
 
     invoke-virtual {v4, v0}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
-    .line 567
     :goto_3
     iget v4, v0, Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue$PendingCmd;->availableResponseCount:I
 
@@ -276,23 +258,19 @@
 
     iput v4, v0, Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue$PendingCmd;->availableResponseCount:I
 
-    .line 571
     iget v4, v0, Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue$PendingCmd;->availableResponseCount:I
 
     if-nez v4, :cond_2
 
-    .line 572
     iget-object v4, p0, Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue;->mPendingCmds:Ljava/util/LinkedList;
 
     invoke-virtual {v4, v0}, Ljava/util/LinkedList;->remove(Ljava/lang/Object;)Z
 
-    .line 573
     :cond_2
     monitor-exit v5
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 575
     :try_start_5
     iget-object v4, v0, Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue$PendingCmd;->responses:Ljava/util/concurrent/BlockingQueue;
 
@@ -300,17 +278,14 @@
     :try_end_5
     .catch Ljava/lang/InterruptedException; {:try_start_5 .. :try_end_5} :catch_0
 
-    .line 578
     :goto_4
     return-void
 
-    .line 576
     :catch_0
     move-exception v4
 
     goto :goto_4
 
-    .line 573
     .end local v2    # "i$":Ljava/util/Iterator;
     :catchall_1
     move-exception v4
@@ -342,17 +317,14 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 615
     const-string v2, "Pending requests:"
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 616
     iget-object v3, p0, Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue;->mPendingCmds:Ljava/util/LinkedList;
 
     monitor-enter v3
 
-    .line 617
     :try_start_0
     iget-object v2, p0, Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue;->mPendingCmds:Ljava/util/LinkedList;
 
@@ -374,7 +346,6 @@
 
     check-cast v1, Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue$PendingCmd;
 
-    .line 618
     .local v1, "pendingCmd":Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue$PendingCmd;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -412,7 +383,6 @@
 
     goto :goto_0
 
-    .line 620
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v1    # "pendingCmd":Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue$PendingCmd;
     :catchall_0
@@ -431,7 +401,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 621
     return-void
 .end method
 
@@ -442,16 +411,13 @@
     .param p3, "origCmd"    # Ljava/lang/String;
 
     .prologue
-    .line 584
     const/4 v2, 0x0
 
-    .line 585
     .local v2, "found":Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue$PendingCmd;
     iget-object v8, p0, Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue;->mPendingCmds:Ljava/util/LinkedList;
 
     monitor-enter v8
 
-    .line 586
     :try_start_0
     iget-object v7, p0, Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue;->mPendingCmds:Ljava/util/LinkedList;
 
@@ -473,7 +439,6 @@
 
     check-cast v5, Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue$PendingCmd;
 
-    .line 587
     .local v5, "pendingCmd":Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue$PendingCmd;
     iget v7, v5, Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue$PendingCmd;->cmdNum:I
     :try_end_0
@@ -481,19 +446,16 @@
 
     if-ne v7, p1, :cond_0
 
-    .line 588
     move-object v2, v5
 
     move-object v3, v2
 
-    .line 592
     .end local v2    # "found":Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue$PendingCmd;
     .end local v5    # "pendingCmd":Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue$PendingCmd;
     .local v3, "found":Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue$PendingCmd;
     :goto_0
     if-nez v3, :cond_3
 
-    .line 593
     :try_start_1
     new-instance v2, Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue$PendingCmd;
 
@@ -501,7 +463,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 594
     .end local v3    # "found":Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue$PendingCmd;
     .restart local v2    # "found":Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue$PendingCmd;
     :try_start_2
@@ -509,7 +470,6 @@
 
     invoke-virtual {v7, v2}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
-    .line 596
     :goto_1
     iget v7, v2, Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue$PendingCmd;->availableResponseCount:I
 
@@ -517,26 +477,21 @@
 
     iput v7, v2, Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue$PendingCmd;->availableResponseCount:I
 
-    .line 600
     iget v7, v2, Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue$PendingCmd;->availableResponseCount:I
 
     if-nez v7, :cond_1
 
-    .line 601
     iget-object v7, p0, Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue;->mPendingCmds:Ljava/util/LinkedList;
 
     invoke-virtual {v7, v2}, Ljava/util/LinkedList;->remove(Ljava/lang/Object;)Z
 
-    .line 602
     :cond_1
     monitor-exit v8
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 603
     const/4 v6, 0x0
 
-    .line 605
     .local v6, "result":Lcom/sec/knox/container/util/DaemonEvent;
     :try_start_3
     iget-object v7, v2, Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue$PendingCmd;->responses:Ljava/util/concurrent/BlockingQueue;
@@ -557,22 +512,18 @@
     :try_end_3
     .catch Ljava/lang/InterruptedException; {:try_start_3 .. :try_end_3} :catch_0
 
-    .line 608
     :goto_2
     if-nez v6, :cond_2
 
-    .line 609
     const-string v7, "DaemonConnector.ResponseQueue"
 
     const-string v8, "Timeout waiting for response"
 
     invoke-static {v7, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 611
     :cond_2
     return-object v6
 
-    .line 602
     .end local v4    # "i$":Ljava/util/Iterator;
     .end local v6    # "result":Lcom/sec/knox/container/util/DaemonEvent;
     :catchall_0
@@ -586,7 +537,6 @@
 
     throw v7
 
-    .line 606
     .restart local v4    # "i$":Ljava/util/Iterator;
     .restart local v6    # "result":Lcom/sec/knox/container/util/DaemonEvent;
     :catch_0
@@ -594,7 +544,6 @@
 
     goto :goto_2
 
-    .line 602
     .end local v2    # "found":Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue$PendingCmd;
     .end local v6    # "result":Lcom/sec/knox/container/util/DaemonEvent;
     .restart local v3    # "found":Lcom/sec/knox/container/util/DaemonConnector$ResponseQueue$PendingCmd;

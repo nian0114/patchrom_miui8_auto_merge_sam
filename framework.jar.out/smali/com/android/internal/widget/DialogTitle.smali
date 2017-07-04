@@ -15,13 +15,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 52
     invoke-direct {p0, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    .line 53
     iput-object p1, p0, Lcom/android/internal/widget/DialogTitle;->mContext:Landroid/content/Context;
 
-    .line 54
     return-void
 .end method
 
@@ -31,13 +28,10 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 47
     invoke-direct {p0, p1, p2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 48
     iput-object p1, p0, Lcom/android/internal/widget/DialogTitle;->mContext:Landroid/content/Context;
 
-    .line 49
     return-void
 .end method
 
@@ -48,13 +42,10 @@
     .param p3, "defStyleAttr"    # I
 
     .prologue
-    .line 42
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 43
     iput-object p1, p0, Lcom/android/internal/widget/DialogTitle;->mContext:Landroid/content/Context;
 
-    .line 44
     return-void
 .end method
 
@@ -66,13 +57,10 @@
     .param p4, "defStyleRes"    # I
 
     .prologue
-    .line 37
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    .line 38
     iput-object p1, p0, Lcom/android/internal/widget/DialogTitle;->mContext:Landroid/content/Context;
 
-    .line 39
     return-void
 .end method
 
@@ -84,21 +72,17 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 58
     invoke-super {p0}, Landroid/widget/TextView;->onFinishInflate()V
 
-    .line 59
     iget-object v2, p0, Lcom/android/internal/widget/DialogTitle;->mContext:Landroid/content/Context;
 
     invoke-static {v2}, Landroid/util/GeneralUtil;->isDeviceDefault(Landroid/content/Context;)Z
 
     move-result v1
 
-    .line 61
     .local v1, "mIsDeviceDefaultTheme":Z
     if-eqz v1, :cond_0
 
-    .line 62
     iget-object v2, p0, Lcom/android/internal/widget/DialogTitle;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -113,11 +97,9 @@
 
     iput v2, p0, Lcom/android/internal/widget/DialogTitle;->textSize:I
 
-    .line 70
     :goto_0
     return-void
 
-    .line 64
     :cond_0
     iget-object v2, p0, Lcom/android/internal/widget/DialogTitle;->mContext:Landroid/content/Context;
 
@@ -133,7 +115,6 @@
 
     move-result-object v0
 
-    .line 67
     .local v0, "a":Landroid/content/res/TypedArray;
     invoke-virtual {v0, v7, v7}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -141,7 +122,6 @@
 
     iput v2, p0, Lcom/android/internal/widget/DialogTitle;->textSize:I
 
-    .line 68
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
     goto :goto_0
@@ -155,55 +135,43 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 74
     invoke-super {p0, p1, p2}, Landroid/widget/TextView;->onMeasure(II)V
 
-    .line 76
     invoke-virtual {p0}, Lcom/android/internal/widget/DialogTitle;->getLayout()Landroid/text/Layout;
 
     move-result-object v3
 
-    .line 77
     .local v3, "layout":Landroid/text/Layout;
     if-eqz v3, :cond_1
 
-    .line 78
     invoke-virtual {v3}, Landroid/text/Layout;->getLineCount()I
 
     move-result v4
 
-    .line 79
     .local v4, "lineCount":I
     if-lez v4, :cond_1
 
-    .line 80
     add-int/lit8 v6, v4, -0x1
 
     invoke-virtual {v3, v6}, Landroid/text/Layout;->getEllipsisCount(I)I
 
     move-result v2
 
-    .line 81
     .local v2, "ellipsisCount":I
     if-lez v2, :cond_1
 
-    .line 82
     invoke-virtual {p0, v8}, Lcom/android/internal/widget/DialogTitle;->setSingleLine(Z)V
 
-    .line 83
     const/4 v6, 0x2
 
     invoke-virtual {p0, v6}, Lcom/android/internal/widget/DialogTitle;->setMaxLines(I)V
 
-    .line 85
     iget v6, p0, Lcom/android/internal/widget/DialogTitle;->textSize:I
 
     if-eqz v6, :cond_0
 
-    .line 87
     const v5, 0x3f99999a    # 1.2f
 
-    .line 88
     .local v5, "maxScale":F
     iget-object v6, p0, Lcom/android/internal/widget/DialogTitle;->mContext:Landroid/content/Context;
 
@@ -217,7 +185,6 @@
 
     iget v1, v6, Landroid/content/res/Configuration;->fontScale:F
 
-    .line 89
     .local v1, "currentFontScale":F
     iget-object v6, p0, Lcom/android/internal/widget/DialogTitle;->mContext:Landroid/content/Context;
 
@@ -231,7 +198,6 @@
 
     if-lez v6, :cond_2
 
-    .line 90
     iget-object v6, p0, Lcom/android/internal/widget/DialogTitle;->mContext:Landroid/content/Context;
 
     invoke-virtual {v6}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -246,13 +212,11 @@
 
     div-float v0, v6, v1
 
-    .line 91
     .local v0, "baseTextSize":F
     mul-float v6, v0, v5
 
     invoke-virtual {p0, v8, v6}, Lcom/android/internal/widget/DialogTitle;->setTextSize(IF)V
 
-    .line 97
     .end local v0    # "baseTextSize":F
     .end local v1    # "currentFontScale":F
     .end local v5    # "maxScale":F
@@ -260,13 +224,11 @@
     :goto_0
     invoke-super {p0, p1, p2}, Landroid/widget/TextView;->onMeasure(II)V
 
-    .line 101
     .end local v2    # "ellipsisCount":I
     .end local v4    # "lineCount":I
     :cond_1
     return-void
 
-    .line 93
     .restart local v1    # "currentFontScale":F
     .restart local v2    # "ellipsisCount":I
     .restart local v4    # "lineCount":I

@@ -23,17 +23,14 @@
     .param p1, "binder"    # Landroid/os/IBinder;
 
     .prologue
-    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 26
     invoke-static {p1}, Lcom/samsung/android/emailksproxy/IEmailKeystoreService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/samsung/android/emailksproxy/IEmailKeystoreService;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/samsung/android/emailksproxy/EmailKeystoreManager;->mRemoteServiceKeystore:Lcom/samsung/android/emailksproxy/IEmailKeystoreService;
 
-    .line 27
     return-void
 .end method
 
@@ -41,7 +38,6 @@
     .locals 2
 
     .prologue
-    .line 58
     new-instance v0, Lcom/samsung/android/emailksproxy/EmailKeystoreManager;
 
     const-string v1, "emailksproxy"
@@ -66,7 +62,6 @@
     .end annotation
 
     .prologue
-    .line 54
     iget-object v0, p0, Lcom/samsung/android/emailksproxy/EmailKeystoreManager;->mRemoteServiceKeystore:Lcom/samsung/android/emailksproxy/IEmailKeystoreService;
 
     invoke-interface {v0}, Lcom/samsung/android/emailksproxy/IEmailKeystoreService;->getKeystoreStatus()I
@@ -87,12 +82,10 @@
     .end annotation
 
     .prologue
-    .line 42
     iget-object v0, p0, Lcom/samsung/android/emailksproxy/EmailKeystoreManager;->mRemoteServiceKeystore:Lcom/samsung/android/emailksproxy/IEmailKeystoreService;
 
     invoke-interface {v0, p1, p2}, Lcom/samsung/android/emailksproxy/IEmailKeystoreService;->grantAccessForAKS(ILjava/lang/String;)V
 
-    .line 43
     return-void
 .end method
 
@@ -106,7 +99,6 @@
     .end annotation
 
     .prologue
-    .line 38
     iget-object v0, p0, Lcom/samsung/android/emailksproxy/EmailKeystoreManager;->mRemoteServiceKeystore:Lcom/samsung/android/emailksproxy/IEmailKeystoreService;
 
     invoke-interface {v0, p1}, Lcom/samsung/android/emailksproxy/IEmailKeystoreService;->installCACert(Lcom/samsung/android/emailksproxy/CertificateAKS;)I
@@ -130,7 +122,6 @@
     .end annotation
 
     .prologue
-    .line 32
     iget-object v0, p0, Lcom/samsung/android/emailksproxy/EmailKeystoreManager;->mRemoteServiceKeystore:Lcom/samsung/android/emailksproxy/IEmailKeystoreService;
 
     move-object v1, p1
@@ -161,7 +152,6 @@
     .end annotation
 
     .prologue
-    .line 35
     iget-object v0, p0, Lcom/samsung/android/emailksproxy/EmailKeystoreManager;->mRemoteServiceKeystore:Lcom/samsung/android/emailksproxy/IEmailKeystoreService;
 
     invoke-interface {v0, p1, p2}, Lcom/samsung/android/emailksproxy/IEmailKeystoreService;->isAliasExists(Ljava/lang/String;Z)I

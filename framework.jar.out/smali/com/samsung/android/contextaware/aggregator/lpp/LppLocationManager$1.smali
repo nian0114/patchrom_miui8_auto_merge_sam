@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 239
     invoke-static {}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$Msg;->values()[Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$Msg;
 
     move-result-object v0

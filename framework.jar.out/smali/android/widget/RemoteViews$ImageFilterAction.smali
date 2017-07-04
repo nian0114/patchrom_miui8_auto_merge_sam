@@ -49,38 +49,28 @@
     .param p9, "arg6"    # F
 
     .prologue
-    .line 3998
     iput-object p1, p0, Landroid/widget/RemoteViews$ImageFilterAction;->this$0:Landroid/widget/RemoteViews;
 
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/widget/RemoteViews$Action;-><init>(Landroid/widget/RemoteViews$1;)V
 
-    .line 3999
     iput p2, p0, Landroid/widget/RemoteViews$ImageFilterAction;->viewId:I
 
-    .line 4000
     iput p3, p0, Landroid/widget/RemoteViews$ImageFilterAction;->type:I
 
-    .line 4001
     iput p4, p0, Landroid/widget/RemoteViews$ImageFilterAction;->arg1:F
 
-    .line 4002
     iput p5, p0, Landroid/widget/RemoteViews$ImageFilterAction;->arg2:F
 
-    .line 4003
     iput p6, p0, Landroid/widget/RemoteViews$ImageFilterAction;->arg3:F
 
-    .line 4004
     iput p7, p0, Landroid/widget/RemoteViews$ImageFilterAction;->arg4:F
 
-    .line 4005
     iput p8, p0, Landroid/widget/RemoteViews$ImageFilterAction;->arg5:F
 
-    .line 4006
     iput p9, p0, Landroid/widget/RemoteViews$ImageFilterAction;->arg6:F
 
-    .line 4007
     return-void
 .end method
 
@@ -89,70 +79,60 @@
     .param p2, "parcel"    # Landroid/os/Parcel;
 
     .prologue
-    .line 4009
     iput-object p1, p0, Landroid/widget/RemoteViews$ImageFilterAction;->this$0:Landroid/widget/RemoteViews;
 
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/widget/RemoteViews$Action;-><init>(Landroid/widget/RemoteViews$1;)V
 
-    .line 4010
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/widget/RemoteViews$ImageFilterAction;->viewId:I
 
-    .line 4011
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/widget/RemoteViews$ImageFilterAction;->type:I
 
-    .line 4012
     invoke-virtual {p2}, Landroid/os/Parcel;->readFloat()F
 
     move-result v0
 
     iput v0, p0, Landroid/widget/RemoteViews$ImageFilterAction;->arg1:F
 
-    .line 4013
     invoke-virtual {p2}, Landroid/os/Parcel;->readFloat()F
 
     move-result v0
 
     iput v0, p0, Landroid/widget/RemoteViews$ImageFilterAction;->arg2:F
 
-    .line 4014
     invoke-virtual {p2}, Landroid/os/Parcel;->readFloat()F
 
     move-result v0
 
     iput v0, p0, Landroid/widget/RemoteViews$ImageFilterAction;->arg3:F
 
-    .line 4015
     invoke-virtual {p2}, Landroid/os/Parcel;->readFloat()F
 
     move-result v0
 
     iput v0, p0, Landroid/widget/RemoteViews$ImageFilterAction;->arg4:F
 
-    .line 4016
     invoke-virtual {p2}, Landroid/os/Parcel;->readFloat()F
 
     move-result v0
 
     iput v0, p0, Landroid/widget/RemoteViews$ImageFilterAction;->arg5:F
 
-    .line 4017
     invoke-virtual {p2}, Landroid/os/Parcel;->readFloat()F
 
     move-result v0
 
     iput v0, p0, Landroid/widget/RemoteViews$ImageFilterAction;->arg6:F
 
-    .line 4018
     return-void
 .end method
 
@@ -170,22 +150,18 @@
     .end annotation
 
     .prologue
-    .line 4037
     iget v2, p0, Landroid/widget/RemoteViews$ImageFilterAction;->viewId:I
 
     invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 4038
     .local v1, "target":Landroid/view/View;
     if-nez v1, :cond_0
 
-    .line 4058
     :goto_0
     return-void
 
-    .line 4040
     :cond_0
     iget v2, p0, Landroid/widget/RemoteViews$ImageFilterAction;->type:I
 
@@ -193,7 +169,6 @@
 
     goto :goto_0
 
-    .line 4045
     :pswitch_0
     const/4 v2, 0x2
 
@@ -201,12 +176,10 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
 
-    .line 4046
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setBackgroundColor(I)V
 
-    .line 4048
     iget v2, p0, Landroid/widget/RemoteViews$ImageFilterAction;->type:I
 
     invoke-static {v2}, Landroid/graphics/ImageFilter;->createImageFilter(I)Landroid/graphics/ImageFilter;
@@ -215,18 +188,15 @@
 
     check-cast v0, Landroid/graphics/ImageFilter$DropShadowFilter;
 
-    .line 4049
     .local v0, "filter":Landroid/graphics/ImageFilter$DropShadowFilter;
     iget v2, p0, Landroid/widget/RemoteViews$ImageFilterAction;->arg1:F
 
     invoke-virtual {v0, v2}, Landroid/graphics/ImageFilter$DropShadowFilter;->setDistance(F)V
 
-    .line 4050
     iget v2, p0, Landroid/widget/RemoteViews$ImageFilterAction;->arg2:F
 
     invoke-virtual {v0, v2}, Landroid/graphics/ImageFilter$DropShadowFilter;->setAngle(F)V
 
-    .line 4051
     iget v2, p0, Landroid/widget/RemoteViews$ImageFilterAction;->arg3:F
 
     iget v3, p0, Landroid/widget/RemoteViews$ImageFilterAction;->arg4:F
@@ -237,12 +207,10 @@
 
     invoke-virtual {v0, v2, v3, v4, v5}, Landroid/graphics/ImageFilter$DropShadowFilter;->setShadowColor(FFFF)V
 
-    .line 4052
     invoke-virtual {v1, v0}, Landroid/view/View;->setImageFilter(Landroid/graphics/ImageFilter;)Z
 
     goto :goto_0
 
-    .line 4040
     nop
 
     :pswitch_data_0
@@ -255,7 +223,6 @@
     .locals 1
 
     .prologue
-    .line 4062
     const-string v0, "ImageFilterAction"
 
     return-object v0
@@ -267,51 +234,41 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 4022
     const/16 v0, 0x1f
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 4023
     iget v0, p0, Landroid/widget/RemoteViews$ImageFilterAction;->viewId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 4024
     iget v0, p0, Landroid/widget/RemoteViews$ImageFilterAction;->type:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 4025
     iget v0, p0, Landroid/widget/RemoteViews$ImageFilterAction;->arg1:F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
 
-    .line 4026
     iget v0, p0, Landroid/widget/RemoteViews$ImageFilterAction;->arg2:F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
 
-    .line 4027
     iget v0, p0, Landroid/widget/RemoteViews$ImageFilterAction;->arg3:F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
 
-    .line 4028
     iget v0, p0, Landroid/widget/RemoteViews$ImageFilterAction;->arg4:F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
 
-    .line 4029
     iget v0, p0, Landroid/widget/RemoteViews$ImageFilterAction;->arg5:F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
 
-    .line 4030
     iget v0, p0, Landroid/widget/RemoteViews$ImageFilterAction;->arg6:F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
 
-    .line 4032
     return-void
 .end method

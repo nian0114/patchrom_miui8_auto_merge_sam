@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1504
     iput-object p1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM$PassGpsBatch;->this$1:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -37,7 +36,6 @@
     .locals 3
 
     .prologue
-    .line 1509
     const-string v0, "LppLocationManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -64,7 +62,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1510
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM$PassGpsBatch;->this$1:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM;
 
     iget-object v0, v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager;
@@ -76,7 +73,6 @@
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 1511
     return-void
 .end method
 
@@ -89,7 +85,6 @@
 
     const/high16 v4, 0x42000000    # 32.0f
 
-    .line 1516
     const-string v0, "LppLocationManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -132,7 +127,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1518
     sget-object v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$1;->$SwitchMap$com$samsung$android$contextaware$aggregator$lpp$LppLocationManager$Msg:[I
 
     sget-object v1, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager;->vals:[Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$Msg;
@@ -149,14 +143,11 @@
 
     sparse-switch v0, :sswitch_data_0
 
-    .line 1542
     const/4 v0, 0x0
 
-    .line 1545
     :goto_0
     return v0
 
-    .line 1521
     :sswitch_0
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM$PassGpsBatch;->this$1:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM;
 
@@ -173,16 +164,13 @@
     :goto_1
     move v0, v9
 
-    .line 1545
     goto :goto_0
 
-    .line 1526
     :sswitch_1
     iget-object v8, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v8, Landroid/location/Location;
 
-    .line 1528
     .local v8, "loc":Landroid/location/Location;
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM$PassGpsBatch;->this$1:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM;
 
@@ -201,7 +189,6 @@
 
     if-gez v0, :cond_1
 
-    .line 1529
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM$PassGpsBatch;->this$1:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM;
 
     iget-object v0, v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager;
@@ -213,7 +200,6 @@
 
     invoke-virtual {v0, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1538
     :cond_0
     :goto_2
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM$PassGpsBatch;->this$1:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM;
@@ -227,7 +213,6 @@
 
     goto :goto_1
 
-    .line 1531
     :cond_1
     invoke-virtual {v8}, Landroid/location/Location;->getAccuracy()F
 
@@ -273,7 +258,6 @@
 
     if-ne v0, v9, :cond_0
 
-    .line 1534
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM$PassGpsBatch;->this$1:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM;
 
     iget-object v0, v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager;
@@ -287,7 +271,6 @@
 
     goto :goto_2
 
-    .line 1518
     nop
 
     :sswitch_data_0

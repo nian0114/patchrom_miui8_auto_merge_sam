@@ -39,26 +39,20 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 24
     const-string v0, ""
 
     iput-object v0, p0, Lcom/kddi/android/internal/pdg/PdgStatusManager$PrivacyData;->packageName:Ljava/lang/String;
 
-    .line 25
     iput v1, p0, Lcom/kddi/android/internal/pdg/PdgStatusManager$PrivacyData;->settingState:I
 
-    .line 26
     iput v1, p0, Lcom/kddi/android/internal/pdg/PdgStatusManager$PrivacyData;->authState:I
 
-    .line 27
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Lcom/kddi/android/internal/pdg/PdgStatusManager$PrivacyData;->accessTime:J
 
-    .line 30
     return-void
 .end method
 
@@ -72,38 +66,28 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 24
     const-string v0, ""
 
     iput-object v0, p0, Lcom/kddi/android/internal/pdg/PdgStatusManager$PrivacyData;->packageName:Ljava/lang/String;
 
-    .line 25
     iput v1, p0, Lcom/kddi/android/internal/pdg/PdgStatusManager$PrivacyData;->settingState:I
 
-    .line 26
     iput v1, p0, Lcom/kddi/android/internal/pdg/PdgStatusManager$PrivacyData;->authState:I
 
-    .line 27
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Lcom/kddi/android/internal/pdg/PdgStatusManager$PrivacyData;->accessTime:J
 
-    .line 33
     iput-object p1, p0, Lcom/kddi/android/internal/pdg/PdgStatusManager$PrivacyData;->packageName:Ljava/lang/String;
 
-    .line 34
     iput p2, p0, Lcom/kddi/android/internal/pdg/PdgStatusManager$PrivacyData;->settingState:I
 
-    .line 35
     iput p3, p0, Lcom/kddi/android/internal/pdg/PdgStatusManager$PrivacyData;->authState:I
 
-    .line 36
     iput-wide p4, p0, Lcom/kddi/android/internal/pdg/PdgStatusManager$PrivacyData;->accessTime:J
 
-    .line 37
     return-void
 .end method
 
@@ -113,7 +97,6 @@
     .locals 2
 
     .prologue
-    .line 45
     iget-wide v0, p0, Lcom/kddi/android/internal/pdg/PdgStatusManager$PrivacyData;->accessTime:J
 
     return-wide v0
@@ -123,7 +106,6 @@
     .locals 1
 
     .prologue
-    .line 43
     iget v0, p0, Lcom/kddi/android/internal/pdg/PdgStatusManager$PrivacyData;->authState:I
 
     return v0
@@ -133,7 +115,6 @@
     .locals 1
 
     .prologue
-    .line 39
     iget-object v0, p0, Lcom/kddi/android/internal/pdg/PdgStatusManager$PrivacyData;->packageName:Ljava/lang/String;
 
     return-object v0
@@ -143,7 +124,6 @@
     .locals 1
 
     .prologue
-    .line 41
     iget v0, p0, Lcom/kddi/android/internal/pdg/PdgStatusManager$PrivacyData;->settingState:I
 
     return v0
@@ -154,10 +134,8 @@
     .param p1, "access"    # J
 
     .prologue
-    .line 56
     iput-wide p1, p0, Lcom/kddi/android/internal/pdg/PdgStatusManager$PrivacyData;->accessTime:J
 
-    .line 57
     return-void
 .end method
 
@@ -166,10 +144,8 @@
     .param p1, "state"    # I
 
     .prologue
-    .line 52
     iput p1, p0, Lcom/kddi/android/internal/pdg/PdgStatusManager$PrivacyData;->authState:I
 
-    .line 53
     return-void
 .end method
 
@@ -178,9 +154,7 @@
     .param p1, "state"    # I
 
     .prologue
-    .line 48
     iput p1, p0, Lcom/kddi/android/internal/pdg/PdgStatusManager$PrivacyData;->settingState:I
 
-    .line 49
     return-void
 .end method

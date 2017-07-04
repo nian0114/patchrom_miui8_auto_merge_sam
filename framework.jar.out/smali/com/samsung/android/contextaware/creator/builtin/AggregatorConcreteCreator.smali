@@ -47,26 +47,21 @@
     .end annotation
 
     .prologue
-    .line 315
     .local p1, "runnerCreator":Ljava/util/concurrent/CopyOnWriteArrayList;, "Ljava/util/concurrent/CopyOnWriteArrayList<Lcom/samsung/android/contextaware/creator/ContextProviderCreator;>;"
     invoke-direct {p0, p2, p3, p4, p5}, Lcom/samsung/android/contextaware/creator/ContextProviderCreator;-><init>(Landroid/content/Context;Landroid/os/Looper;Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;I)V
 
-    .line 316
     new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator;->setRunnerCreator(Ljava/util/concurrent/CopyOnWriteArrayList;)V
 
-    .line 317
     invoke-static {p1}, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator;->setRunnerCreator(Ljava/util/concurrent/CopyOnWriteArrayList;)V
 
-    .line 318
     sget-object v0, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator;->sRunnerCreator:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v0, p0}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 319
     return-void
 .end method
 
@@ -74,7 +69,6 @@
     .locals 1
 
     .prologue
-    .line 39
     invoke-static {}, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator;->getContextProviderMap()Ljava/util/concurrent/ConcurrentHashMap;
 
     move-result-object v0
@@ -86,7 +80,6 @@
     .locals 1
 
     .prologue
-    .line 39
     invoke-static {}, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator;->getContextProviderMap()Ljava/util/concurrent/ConcurrentHashMap;
 
     move-result-object v0
@@ -98,7 +91,6 @@
     .locals 1
 
     .prologue
-    .line 39
     invoke-static {}, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator;->getContextProviderMap()Ljava/util/concurrent/ConcurrentHashMap;
 
     move-result-object v0
@@ -110,7 +102,6 @@
     .locals 1
 
     .prologue
-    .line 39
     invoke-static {}, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator;->getVersion()I
 
     move-result v0
@@ -122,7 +113,6 @@
     .locals 1
 
     .prologue
-    .line 39
     invoke-static {}, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -134,7 +124,6 @@
     .locals 1
 
     .prologue
-    .line 39
     invoke-static {}, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator;->getLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -146,7 +135,6 @@
     .locals 1
 
     .prologue
-    .line 39
     invoke-static {}, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator;->getApPowerObservable()Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;
 
     move-result-object v0
@@ -158,7 +146,6 @@
     .locals 1
 
     .prologue
-    .line 39
     invoke-static {}, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator;->getContextProviderMap()Ljava/util/concurrent/ConcurrentHashMap;
 
     move-result-object v0
@@ -170,7 +157,6 @@
     .locals 1
 
     .prologue
-    .line 39
     invoke-static {}, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator;->getContextProviderMap()Ljava/util/concurrent/ConcurrentHashMap;
 
     move-result-object v0
@@ -182,7 +168,6 @@
     .locals 1
 
     .prologue
-    .line 39
     invoke-static {}, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator;->getContextProviderMap()Ljava/util/concurrent/ConcurrentHashMap;
 
     move-result-object v0
@@ -194,7 +179,6 @@
     .locals 1
 
     .prologue
-    .line 39
     invoke-static {}, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator;->getVersion()I
 
     move-result v0
@@ -206,7 +190,6 @@
     .locals 1
 
     .prologue
-    .line 39
     invoke-static {}, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator;->getVersion()I
 
     move-result v0
@@ -218,7 +201,6 @@
     .locals 1
 
     .prologue
-    .line 39
     invoke-static {}, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator;->getApPowerObservable()Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;
 
     move-result-object v0
@@ -230,7 +212,6 @@
     .locals 1
 
     .prologue
-    .line 39
     invoke-static {}, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator;->getContextProviderMap()Ljava/util/concurrent/ConcurrentHashMap;
 
     move-result-object v0
@@ -242,7 +223,6 @@
     .locals 1
 
     .prologue
-    .line 39
     invoke-static {}, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator;->getContextProviderMap()Ljava/util/concurrent/ConcurrentHashMap;
 
     move-result-object v0
@@ -254,7 +234,6 @@
     .locals 1
 
     .prologue
-    .line 39
     invoke-static {}, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator;->getContextProviderMap()Ljava/util/concurrent/ConcurrentHashMap;
 
     move-result-object v0
@@ -266,7 +245,6 @@
     .locals 1
 
     .prologue
-    .line 39
     invoke-static {}, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator;->getVersion()I
 
     move-result v0
@@ -278,7 +256,6 @@
     .locals 1
 
     .prologue
-    .line 39
     invoke-static {}, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator;->getApPowerObservable()Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;
 
     move-result-object v0
@@ -290,7 +267,6 @@
     .locals 1
 
     .prologue
-    .line 39
     invoke-static {}, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator;->getContextProviderMap()Ljava/util/concurrent/ConcurrentHashMap;
 
     move-result-object v0
@@ -302,7 +278,6 @@
     .locals 1
 
     .prologue
-    .line 39
     invoke-static {}, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator;->getContextProviderMap()Ljava/util/concurrent/ConcurrentHashMap;
 
     move-result-object v0
@@ -314,7 +289,6 @@
     .locals 1
 
     .prologue
-    .line 39
     invoke-static {}, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator;->getRunnerCreator()Ljava/util/concurrent/CopyOnWriteArrayList;
 
     move-result-object v0
@@ -327,7 +301,6 @@
     .param p0, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 39
     invoke-static {p0}, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator;->removeObj(Ljava/lang/String;)Z
 
     move-result v0
@@ -339,7 +312,6 @@
     .locals 1
 
     .prologue
-    .line 39
     invoke-static {}, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator;->getApPowerObservable()Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;
 
     move-result-object v0
@@ -351,7 +323,6 @@
     .locals 1
 
     .prologue
-    .line 39
     invoke-static {}, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator;->getContextProviderMap()Ljava/util/concurrent/ConcurrentHashMap;
 
     move-result-object v0
@@ -363,7 +334,6 @@
     .locals 1
 
     .prologue
-    .line 39
     invoke-static {}, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator;->getContextProviderMap()Ljava/util/concurrent/ConcurrentHashMap;
 
     move-result-object v0
@@ -375,7 +345,6 @@
     .locals 1
 
     .prologue
-    .line 39
     invoke-static {}, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator;->getContextProviderMap()Ljava/util/concurrent/ConcurrentHashMap;
 
     move-result-object v0
@@ -387,7 +356,6 @@
     .locals 1
 
     .prologue
-    .line 39
     invoke-static {}, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator;->getVersion()I
 
     move-result v0
@@ -399,7 +367,6 @@
     .locals 1
 
     .prologue
-    .line 39
     invoke-static {}, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator;->getApPowerObservable()Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;
 
     move-result-object v0
@@ -411,7 +378,6 @@
     .locals 1
 
     .prologue
-    .line 39
     invoke-static {}, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator;->getContextProviderMap()Ljava/util/concurrent/ConcurrentHashMap;
 
     move-result-object v0
@@ -432,7 +398,6 @@
     .end annotation
 
     .prologue
-    .line 362
     sget-object v0, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator;->sRunnerCreator:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     return-object v0
@@ -451,11 +416,9 @@
     .end annotation
 
     .prologue
-    .line 353
     .local p0, "runnerCreator":Ljava/util/concurrent/CopyOnWriteArrayList;, "Ljava/util/concurrent/CopyOnWriteArrayList<Lcom/samsung/android/contextaware/creator/ContextProviderCreator;>;"
     sput-object p0, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator;->sRunnerCreator:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    .line 354
     return-void
 .end method
 
@@ -477,7 +440,6 @@
     .end annotation
 
     .prologue
-    .line 342
     invoke-static {p1}, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator$AggregatorList;->valueOf(Ljava/lang/String;)Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator$AggregatorList;
 
     move-result-object v0
@@ -494,7 +456,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 330
     invoke-static {p1}, Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator$AggregatorList;->valueOf(Ljava/lang/String;)Lcom/samsung/android/contextaware/creator/builtin/AggregatorConcreteCreator$AggregatorList;
 
     move-result-object v0

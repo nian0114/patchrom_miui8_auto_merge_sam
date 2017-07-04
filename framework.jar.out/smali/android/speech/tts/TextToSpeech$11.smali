@@ -36,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 1504
     iput-object p1, p0, Landroid/speech/tts/TextToSpeech$11;->this$0:Landroid/speech/tts/TextToSpeech;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -56,7 +55,6 @@
     .end annotation
 
     .prologue
-    .line 1504
     invoke-virtual {p0, p1}, Landroid/speech/tts/TextToSpeech$11;->run(Landroid/speech/tts/ITextToSpeechService;)Ljava/util/Locale;
 
     move-result-object v0
@@ -74,12 +72,10 @@
     .end annotation
 
     .prologue
-    .line 1507
     invoke-interface {p1}, Landroid/speech/tts/ITextToSpeechService;->getClientDefaultLanguage()[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1509
     .local v0, "defaultLanguage":[Ljava/lang/String;
     new-instance v1, Ljava/util/Locale;
 

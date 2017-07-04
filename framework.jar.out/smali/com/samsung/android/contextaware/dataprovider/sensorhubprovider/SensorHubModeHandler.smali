@@ -11,7 +11,6 @@
     .locals 0
 
     .prologue
-    .line 29
     invoke-direct {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserBean;-><init>()V
 
     return-void
@@ -26,10 +25,8 @@
 
     const/4 v6, 0x1
 
-    .line 89
     const/4 v1, 0x0
 
-    .line 91
     .local v1, "duplicated":I
     invoke-static {}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProtocol$MODE;->values()[Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProtocol$MODE;
 
@@ -47,7 +44,6 @@
 
     aget-object v2, v0, v3
 
-    .line 92
     .local v2, "i":Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProtocol$MODE;
     sget-object v5, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProtocol$MODE;->BATCH_MODE:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProtocol$MODE;
 
@@ -61,13 +57,11 @@
 
     if-ne v5, v8, :cond_0
 
-    .line 91
     :goto_1
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 95
     :cond_0
     iget-byte v5, v2, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProtocol$MODE;->value:B
 
@@ -89,7 +83,6 @@
 
     goto :goto_2
 
-    .line 98
     .end local v2    # "i":Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProtocol$MODE;
     :cond_2
     if-le v1, v6, :cond_3
@@ -112,10 +105,8 @@
     .prologue
     const/4 v2, -0x1
 
-    .line 156
     move v1, p2
 
-    .line 158
     .local v1, "tmpNext":I
     invoke-super {p0, p3}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserBean;->checkParserMap(Ljava/lang/String;)Z
 
@@ -123,29 +114,24 @@
 
     if-nez v3, :cond_1
 
-    .line 169
     :cond_0
     :goto_0
     return v2
 
-    .line 162
     :cond_1
     invoke-super {p0, p3}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserBean;->getParser(Ljava/lang/String;)Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubParser;
 
     move-result-object v0
 
-    .line 163
     .local v0, "parser":Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubParser;
     if-eqz v0, :cond_0
 
-    .line 167
     invoke-interface {v0, p1, p2}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubParser;->parse([BI)I
 
     move-result v1
 
     move v2, v1
 
-    .line 169
     goto :goto_0
 .end method
 
@@ -158,18 +144,14 @@
     .prologue
     const/4 v7, -0x1
 
-    .line 114
     move v6, p3
 
-    .line 115
     .local v6, "tmpNext":I
     move v5, p3
 
-    .line 116
     .local v5, "repeateNext":I
     const/4 v3, 0x0
 
-    .line 118
     .local v3, "key":Ljava/lang/String;
     invoke-static {}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProtocol$MODE;->values()[Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProtocol$MODE;
 
@@ -187,7 +169,6 @@
 
     aget-object v1, v0, v2
 
-    .line 119
     .local v1, "i":Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProtocol$MODE;
     sget-object v8, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProtocol$MODE;->BATCH_MODE:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProtocol$MODE;
 
@@ -201,14 +182,12 @@
 
     if-ne v8, v9, :cond_1
 
-    .line 118
     :cond_0
     :goto_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 122
     :cond_1
     iget-byte v8, v1, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProtocol$MODE;->value:B
 
@@ -218,17 +197,14 @@
 
     if-ne v8, v9, :cond_0
 
-    .line 123
     iget-byte v8, v1, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProtocol$MODE;->value:B
 
     invoke-virtual {p0, v8}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubModeHandler;->getParserKey(I)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 124
     if-nez v3, :cond_3
 
-    .line 125
     sget-object v8, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_NOT_REGISTERED_SERVICE:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     invoke-virtual {v8}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->getCode()I
@@ -243,14 +219,12 @@
 
     move v6, v7
 
-    .line 141
     .end local v1    # "i":Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProtocol$MODE;
     .end local v6    # "tmpNext":I
     :cond_2
     :goto_2
     return v6
 
-    .line 130
     .restart local v1    # "i":Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProtocol$MODE;
     .restart local v6    # "tmpNext":I
     :cond_3
@@ -260,12 +234,10 @@
 
     goto :goto_1
 
-    .line 134
     .end local v1    # "i":Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProtocol$MODE;
     :cond_4
     if-ne v6, v5, :cond_2
 
-    .line 135
     sget-object v8, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_NOT_REGISTERED_SERVICE:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     invoke-virtual {v8}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->getCode()I
@@ -280,7 +252,6 @@
 
     move v6, v7
 
-    .line 138
     goto :goto_2
 .end method
 
@@ -303,10 +274,8 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 180
     const/4 v4, 0x0
 
-    .line 182
     .local v4, "parserKey":Ljava/lang/String;
     invoke-static {}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProtocol$MODE;->values()[Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProtocol$MODE;
 
@@ -324,19 +293,16 @@
 
     aget-object v2, v0, v1
 
-    .line 183
     .local v2, "j":Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProtocol$MODE;
     iget-byte v5, v2, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProtocol$MODE;->value:B
 
     if-eq p1, v5, :cond_1
 
-    .line 182
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 186
     :cond_1
     invoke-virtual {v2}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProtocol$MODE;->toString()Ljava/lang/String;
 
@@ -348,12 +314,10 @@
 
     if-eqz v5, :cond_0
 
-    .line 190
     invoke-virtual {v2}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProtocol$MODE;->toString()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 194
     .end local v2    # "j":Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProtocol$MODE;
     :cond_2
     return-object v4
@@ -363,16 +327,13 @@
     .locals 5
 
     .prologue
-    .line 203
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubModeHandler;->getModeList()Ljava/util/concurrent/CopyOnWriteArrayList;
 
     move-result-object v2
 
-    .line 204
     .local v2, "modeList":Ljava/util/concurrent/CopyOnWriteArrayList;, "Ljava/util/concurrent/CopyOnWriteArrayList<Ljava/lang/String;>;"
     const/4 v3, 0x0
 
-    .line 206
     .local v3, "running":Z
     invoke-virtual {v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
 
@@ -386,14 +347,12 @@
 
     if-eqz v4, :cond_1
 
-    .line 207
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/lang/String;
 
-    .line 208
     .local v1, "mode":Ljava/lang/String;
     invoke-static {}, Lcom/samsung/android/contextaware/manager/ListenerListManager;->getInstance()Lcom/samsung/android/contextaware/manager/ListenerListManager;
 
@@ -405,10 +364,8 @@
 
     if-lez v4, :cond_0
 
-    .line 209
     const/4 v3, 0x1
 
-    .line 213
     .end local v1    # "mode":Ljava/lang/String;
     .end local v3    # "running":Z
     :cond_1
@@ -423,10 +380,8 @@
     .prologue
     const/4 v8, -0x1
 
-    .line 48
     move v6, p2
 
-    .line 50
     .local v6, "tmpNext":I
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserBean;->checkParserMap()Z
 
@@ -434,12 +389,10 @@
 
     if-nez v9, :cond_1
 
-    .line 78
     :cond_0
     :goto_0
     return v8
 
-    .line 54
     :cond_1
     array-length v9, p1
 
@@ -449,14 +402,12 @@
 
     if-ltz v9, :cond_0
 
-    .line 58
     add-int/lit8 v7, v6, 0x1
 
     .end local v6    # "tmpNext":I
     .local v7, "tmpNext":I
     aget-byte v5, p1, v6
 
-    .line 60
     .local v5, "mode":I
     invoke-direct {p0, v5}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubModeHandler;->isDuplicatedMode(I)Z
 
@@ -464,7 +415,6 @@
 
     if-eqz v9, :cond_2
 
-    .line 61
     invoke-direct {p0, v5, p1, v7}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubModeHandler;->parseDuplicatedMode(I[BI)I
 
     move-result v8
@@ -475,13 +425,11 @@
     .restart local v6    # "tmpNext":I
     goto :goto_0
 
-    .line 64
     .end local v6    # "tmpNext":I
     .restart local v7    # "tmpNext":I
     :cond_2
     const/4 v3, 0x0
 
-    .line 65
     .local v3, "key":Ljava/lang/String;
     invoke-static {}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProtocol$MODE;->values()[Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProtocol$MODE;
 
@@ -499,7 +447,6 @@
 
     aget-object v1, v0, v2
 
-    .line 66
     .local v1, "i":Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProtocol$MODE;
     iget-byte v9, v1, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProtocol$MODE;->value:B
 
@@ -509,17 +456,14 @@
 
     if-ne v9, v10, :cond_4
 
-    .line 67
     invoke-virtual {p0, v5}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubModeHandler;->getParserKey(I)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 71
     .end local v1    # "i":Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProtocol$MODE;
     :cond_3
     if-nez v3, :cond_5
 
-    .line 72
     sget-object v9, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_NOT_REGISTERED_SERVICE:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     invoke-virtual {v9}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->getCode()I
@@ -534,12 +478,10 @@
 
     move v6, v7
 
-    .line 75
     .end local v7    # "tmpNext":I
     .restart local v6    # "tmpNext":I
     goto :goto_0
 
-    .line 65
     .end local v6    # "tmpNext":I
     .restart local v1    # "i":Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProtocol$MODE;
     .restart local v7    # "tmpNext":I
@@ -548,7 +490,6 @@
 
     goto :goto_1
 
-    .line 78
     .end local v1    # "i":Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProtocol$MODE;
     :cond_5
     invoke-direct {p0, p1, v7, v3}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubModeHandler;->parse([BILjava/lang/String;)I

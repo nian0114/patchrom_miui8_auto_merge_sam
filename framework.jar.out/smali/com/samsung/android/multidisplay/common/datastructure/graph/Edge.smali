@@ -43,7 +43,6 @@
     .locals 0
 
     .prologue
-    .line 34
     .local p0, "this":Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge<TE;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -64,27 +63,21 @@
     .end annotation
 
     .prologue
-    .line 36
     .local p0, "this":Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge<TE;>;"
     .local p3, "_startVertex":Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;"
     .local p4, "_endVertex":Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 37
     iput-wide p1, p0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;->id:J
 
-    .line 38
     iput-object p3, p0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;->startVertex:Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;
 
-    .line 39
     iput-object p4, p0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;->endVertex:Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;
 
-    .line 40
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;->flag:Z
 
-    .line 41
     return-void
 .end method
 
@@ -94,7 +87,6 @@
     .locals 4
 
     .prologue
-    .line 45
     .local p0, "this":Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge<TE;>;"
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -102,7 +94,6 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 46
     .local v0, "sb":Ljava/lang/StringBuilder;
     const-class v1, Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;
 
@@ -112,12 +103,10 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 47
     const-string v1, " {"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 48
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -140,7 +129,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 49
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -165,7 +153,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 50
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -190,12 +177,10 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 51
     const-string v1, ") } "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 52
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1

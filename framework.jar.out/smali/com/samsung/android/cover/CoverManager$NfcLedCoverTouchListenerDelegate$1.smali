@@ -26,7 +26,6 @@
     .param p2, "x0"    # Landroid/os/Looper;
 
     .prologue
-    .line 924
     iput-object p1, p0, Lcom/samsung/android/cover/CoverManager$NfcLedCoverTouchListenerDelegate$1;->this$1:Lcom/samsung/android/cover/CoverManager$NfcLedCoverTouchListenerDelegate;
 
     iput-object p3, p0, Lcom/samsung/android/cover/CoverManager$NfcLedCoverTouchListenerDelegate$1;->val$this$0:Lcom/samsung/android/cover/CoverManager;
@@ -43,7 +42,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 927
     iget-object v0, p0, Lcom/samsung/android/cover/CoverManager$NfcLedCoverTouchListenerDelegate$1;->this$1:Lcom/samsung/android/cover/CoverManager$NfcLedCoverTouchListenerDelegate;
 
     # getter for: Lcom/samsung/android/cover/CoverManager$NfcLedCoverTouchListenerDelegate;->mListener:Lcom/samsung/android/cover/CoverManager$NfcLedCoverTouchListener;
@@ -53,17 +51,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 928
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 939
     :cond_0
     :goto_0
     return-void
 
-    .line 930
     :pswitch_0
     iget-object v0, p0, Lcom/samsung/android/cover/CoverManager$NfcLedCoverTouchListenerDelegate$1;->this$1:Lcom/samsung/android/cover/CoverManager$NfcLedCoverTouchListenerDelegate;
 
@@ -76,7 +71,6 @@
 
     goto :goto_0
 
-    .line 933
     :pswitch_1
     iget-object v0, p0, Lcom/samsung/android/cover/CoverManager$NfcLedCoverTouchListenerDelegate$1;->this$1:Lcom/samsung/android/cover/CoverManager$NfcLedCoverTouchListenerDelegate;
 
@@ -89,7 +83,6 @@
 
     goto :goto_0
 
-    .line 928
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

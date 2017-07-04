@@ -70,7 +70,6 @@
     .locals 3
 
     .prologue
-    .line 177
     const-string v0, "content://com.sec.smartcard.manager/smartcards"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -79,7 +78,6 @@
 
     sput-object v0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 178
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljava/lang/String;
@@ -92,7 +90,6 @@
 
     sput-object v0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->SMARTCARD_PROJECTION:[Ljava/lang/String;
 
-    .line 183
     const/4 v0, 0x0
 
     sput-object v0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->queue:Ljava/util/concurrent/BlockingQueue;
@@ -108,44 +105,34 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 217
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 95
     iput-object v2, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->mContext:Landroid/content/Context;
 
-    .line 96
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->mServiceConnectionProgress:Z
 
-    .line 185
     new-instance v0, Lcom/sec/smartcard/pinservice/SmartCardPinManager$1;
 
     invoke-direct {v0, p0}, Lcom/sec/smartcard/pinservice/SmartCardPinManager$1;-><init>(Lcom/sec/smartcard/pinservice/SmartCardPinManager;)V
 
     iput-object v0, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->pinServiceConnection:Landroid/content/ServiceConnection;
 
-    .line 218
     const-string v0, "SmartCardPinManager"
 
     const-string v1, "SmartCardPinManager"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 219
     iput-object p1, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->mContext:Landroid/content/Context;
 
-    .line 220
     iput-object v2, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->mSmartCardPin:Lcom/sec/smartcard/pinservice/ISmartCardPinService;
 
-    .line 221
     sput-object v2, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->queue:Ljava/util/concurrent/BlockingQueue;
 
-    .line 222
     invoke-direct {p0, p2}, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->bindSmartCardPinService(Landroid/os/UserHandle;)V
 
-    .line 224
     return-void
 .end method
 
@@ -154,34 +141,28 @@
     .param p1, "smartCardPin"    # Landroid/os/IBinder;
 
     .prologue
-    .line 213
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 95
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->mContext:Landroid/content/Context;
 
-    .line 96
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->mServiceConnectionProgress:Z
 
-    .line 185
     new-instance v0, Lcom/sec/smartcard/pinservice/SmartCardPinManager$1;
 
     invoke-direct {v0, p0}, Lcom/sec/smartcard/pinservice/SmartCardPinManager$1;-><init>(Lcom/sec/smartcard/pinservice/SmartCardPinManager;)V
 
     iput-object v0, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->pinServiceConnection:Landroid/content/ServiceConnection;
 
-    .line 214
     invoke-static {p1}, Lcom/sec/smartcard/pinservice/ISmartCardPinService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/sec/smartcard/pinservice/ISmartCardPinService;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->mSmartCardPin:Lcom/sec/smartcard/pinservice/ISmartCardPinService;
 
-    .line 215
     return-void
 .end method
 
@@ -194,51 +175,39 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 226
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 95
     iput-object v2, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->mContext:Landroid/content/Context;
 
-    .line 96
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->mServiceConnectionProgress:Z
 
-    .line 185
     new-instance v0, Lcom/sec/smartcard/pinservice/SmartCardPinManager$1;
 
     invoke-direct {v0, p0}, Lcom/sec/smartcard/pinservice/SmartCardPinManager$1;-><init>(Lcom/sec/smartcard/pinservice/SmartCardPinManager;)V
 
     iput-object v0, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->pinServiceConnection:Landroid/content/ServiceConnection;
 
-    .line 227
     const-string v0, "SmartCardPinManager"
 
     const-string v1, "SmartCardPinManager Sync"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 228
     iput-object p2, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->mContext:Landroid/content/Context;
 
-    .line 229
     iput-object v2, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->mSmartCardPin:Lcom/sec/smartcard/pinservice/ISmartCardPinService;
 
-    .line 230
     if-nez p3, :cond_0
 
-    .line 231
     sput-object v2, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->queue:Ljava/util/concurrent/BlockingQueue;
 
-    .line 232
     invoke-direct {p0, p1}, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->bindSmartCardPinService(Landroid/os/UserHandle;)V
 
-    .line 237
     :goto_0
     return-void
 
-    .line 235
     :cond_0
     new-instance v0, Ljava/util/concurrent/ArrayBlockingQueue;
 
@@ -257,7 +226,6 @@
     .param p1, "x1"    # Lcom/sec/smartcard/pinservice/ISmartCardPinService;
 
     .prologue
-    .line 88
     iput-object p1, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->mSmartCardPin:Lcom/sec/smartcard/pinservice/ISmartCardPinService;
 
     return-object p1
@@ -269,7 +237,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 88
     iput-boolean p1, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->mServiceConnectionProgress:Z
 
     return p1
@@ -279,7 +246,6 @@
     .locals 1
 
     .prologue
-    .line 88
     sget-object v0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->queue:Ljava/util/concurrent/BlockingQueue;
 
     return-object v0
@@ -291,7 +257,6 @@
     .param p1, "x1"    # [C
 
     .prologue
-    .line 88
     iput-object p1, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->mPin:[C
 
     return-object p1
@@ -303,7 +268,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 88
     iput-boolean p1, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->mIsCallbackCalled:Z
 
     return p1
@@ -316,43 +280,36 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 595
     const-string v1, "SmartCardPinManager"
 
     const-string v2, "bindSmartCardPinService()"
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 597
     iget-object v1, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->mSmartCardPin:Lcom/sec/smartcard/pinservice/ISmartCardPinService;
 
     if-nez v1, :cond_0
 
-    .line 598
     const-string v1, "SmartCardPinManager"
 
     const-string v2, "mSmartCardPin is null"
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 599
     iget-boolean v1, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->mServiceConnectionProgress:Z
 
     if-eqz v1, :cond_1
 
-    .line 600
     const-string v1, "SmartCardPinManager"
 
     const-string v2, "binding to service is progress. new request to bind is ignored"
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 617
     :cond_0
     :goto_0
     return-void
 
-    .line 603
     :cond_1
     new-instance v0, Landroid/content/Intent;
 
@@ -360,7 +317,6 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 604
     .local v0, "intent":Landroid/content/Intent;
     new-instance v1, Landroid/content/ComponentName;
 
@@ -372,17 +328,14 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 605
     const-string v1, "SmartCardPinManager"
 
     const-string v2, "binding to smartcard pin service"
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 606
     if-eqz p1, :cond_2
 
-    .line 607
     const-string v1, "SmartCardPinManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -409,20 +362,17 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 608
     iget-object v1, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->pinServiceConnection:Landroid/content/ServiceConnection;
 
     invoke-virtual {v1, v0, v2, v4, p1}, Landroid/content/Context;->bindServiceAsUser(Landroid/content/Intent;Landroid/content/ServiceConnection;ILandroid/os/UserHandle;)Z
 
-    .line 614
     :goto_1
     iput-boolean v4, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->mServiceConnectionProgress:Z
 
     goto :goto_0
 
-    .line 611
     :cond_2
     iget-object v1, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->mContext:Landroid/content/Context;
 
@@ -440,20 +390,16 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 476
     const/4 v7, 0x0
 
-    .line 478
     .local v7, "ret":Z
     const/4 v6, 0x0
 
-    .line 479
     .local v6, "cursor":Landroid/database/Cursor;
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 480
     .local v0, "cr":Landroid/content/ContentResolver;
     const-string v1, "SmartCardPinManager"
 
@@ -477,7 +423,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 481
     const-string v1, "SmartCardPinManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -500,7 +445,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 483
     sget-object v1, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->CONTENT_URI:Landroid/net/Uri;
 
     sget-object v2, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->SMARTCARD_PROJECTION:[Ljava/lang/String;
@@ -513,7 +457,6 @@
 
     move-result-object v6
 
-    .line 484
     const-string v1, "SmartCardPinManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -536,7 +479,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 485
     const-string v1, "SmartCardPinManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -563,20 +505,16 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 486
     if-eqz v6, :cond_0
 
-    .line 487
     invoke-interface {v6}, Landroid/database/Cursor;->getCount()I
 
     move-result v1
 
     if-lez v1, :cond_0
 
-    .line 488
     const/4 v7, 0x1
 
-    .line 491
     :cond_0
     return v7
 .end method
@@ -585,10 +523,8 @@
     .locals 1
 
     .prologue
-    .line 550
     const/4 v0, 0x0
 
-    .line 551
     .local v0, "ret":Z
     return v0
 .end method
@@ -598,14 +534,11 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 555
     const/4 v3, 0x0
 
-    .line 556
     .local v3, "ret":Z
     if-nez p0, :cond_0
 
-    .line 557
     const-string v5, "SmartCardPinManager"
 
     const-string v6, "context is null returning"
@@ -614,13 +547,11 @@
 
     move v4, v3
 
-    .line 574
     .end local v3    # "ret":Z
     .local v4, "ret":I
     :goto_0
     return v4
 
-    .line 560
     .end local v4    # "ret":I
     .restart local v3    # "ret":Z
     :cond_0
@@ -634,7 +565,6 @@
 
     move-result-object v2
 
-    .line 561
     .local v2, "pkgInfoList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PackageInfo;>;"
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -654,7 +584,6 @@
 
     check-cast v1, Landroid/content/pm/PackageInfo;
 
-    .line 567
     .local v1, "pi":Landroid/content/pm/PackageInfo;
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -670,21 +599,18 @@
 
     if-nez v5, :cond_1
 
-    .line 569
     const-string v5, "SmartCardPinManager"
 
     const-string v6, "isSmartCardAuthenticationInstalled: True"
 
     invoke-static {v5, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 570
     const/4 v3, 0x1
 
     .end local v1    # "pi":Landroid/content/pm/PackageInfo;
     :cond_2
     move v4, v3
 
-    .line 574
     .restart local v4    # "ret":I
     goto :goto_0
 .end method
@@ -698,43 +624,36 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 620
     const-string v2, "SmartCardPinManager"
 
     const-string v3, "bindSmartCardPinService_Sync()"
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 622
     iget-object v2, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->mSmartCardPin:Lcom/sec/smartcard/pinservice/ISmartCardPinService;
 
     if-nez v2, :cond_0
 
-    .line 623
     const-string v2, "SmartCardPinManager"
 
     const-string v3, "mSmartCardPin is null"
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 624
     iget-boolean v2, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->mServiceConnectionProgress:Z
 
     if-eqz v2, :cond_1
 
-    .line 625
     const-string v2, "SmartCardPinManager"
 
     const-string v3, "binding to service is progress. new request to bind is ignored"
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 650
     :cond_0
     :goto_0
     return-void
 
-    .line 629
     :cond_1
     const-string v2, "SmartCardPinManager"
 
@@ -742,14 +661,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 630
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "com.sec.smartcard.pinservice.action.BIND_SMART_CARD_PIN_SERVICE"
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 631
     .local v1, "intent":Landroid/content/Intent;
     new-instance v2, Landroid/content/ComponentName;
 
@@ -761,10 +678,8 @@
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 632
     if-eqz p1, :cond_2
 
-    .line 633
     const-string v2, "SmartCardPinManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -791,18 +706,15 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 634
     iget-object v2, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->mContext:Landroid/content/Context;
 
     iget-object v3, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->pinServiceConnection:Landroid/content/ServiceConnection;
 
     invoke-virtual {v2, v1, v3, v5, p1}, Landroid/content/Context;->bindServiceAsUser(Landroid/content/Intent;Landroid/content/ServiceConnection;ILandroid/os/UserHandle;)Z
 
-    .line 640
     :goto_1
     iput-boolean v5, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->mServiceConnectionProgress:Z
 
-    .line 643
     :try_start_0
     const-string v2, "SmartCardPinManager"
 
@@ -810,7 +722,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 644
     sget-object v2, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->queue:Ljava/util/concurrent/BlockingQueue;
 
     invoke-interface {v2}, Ljava/util/concurrent/BlockingQueue;->take()Ljava/lang/Object;
@@ -819,17 +730,14 @@
 
     goto :goto_0
 
-    .line 645
     :catch_0
     move-exception v0
 
-    .line 646
     .local v0, "ex":Ljava/lang/InterruptedException;
     invoke-virtual {v0}, Ljava/lang/InterruptedException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 637
     .end local v0    # "ex":Ljava/lang/InterruptedException;
     :cond_2
     iget-object v2, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->mContext:Landroid/content/Context;
@@ -851,12 +759,10 @@
     .end annotation
 
     .prologue
-    .line 581
     iget-object v1, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->mSmartCardPin:Lcom/sec/smartcard/pinservice/ISmartCardPinService;
 
     if-eqz v1, :cond_0
 
-    .line 583
     :try_start_0
     iget-object v1, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->mSmartCardPin:Lcom/sec/smartcard/pinservice/ISmartCardPinService;
 
@@ -864,18 +770,14 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 592
     return-void
 
-    .line 584
     :catch_0
     move-exception v0
 
-    .line 585
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 586
     new-instance v1, Ljava/lang/Exception;
 
     invoke-virtual {v0}, Landroid/os/RemoteException;->getMessage()Ljava/lang/String;
@@ -886,7 +788,6 @@
 
     throw v1
 
-    .line 589
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const-string v1, "SmartCardPinManager"
@@ -895,7 +796,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 590
     new-instance v1, Ljava/lang/Exception;
 
     const-string v2, "unable to connect to smartcard pin service"
@@ -910,7 +810,6 @@
     .param p1, "callback"    # Lcom/sec/smartcard/pinservice/SmartCardPinManager$PinCallback;
 
     .prologue
-    .line 292
     :try_start_0
     iget-object v1, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->mSmartCardPin:Lcom/sec/smartcard/pinservice/ISmartCardPinService;
 
@@ -920,15 +819,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 296
     :goto_0
     return-void
 
-    .line 293
     :catch_0
     move-exception v0
 
-    .line 294
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -939,7 +835,6 @@
     .locals 2
 
     .prologue
-    .line 335
     monitor-enter p0
 
     :try_start_0
@@ -947,33 +842,27 @@
 
     invoke-direct {v0}, Landroid/os/ConditionVariable;-><init>()V
 
-    .line 336
     .local v0, "cv":Landroid/os/ConditionVariable;
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->mPin:[C
 
-    .line 337
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->mIsCallbackCalled:Z
 
-    .line 339
     new-instance v1, Lcom/sec/smartcard/pinservice/SmartCardPinManager$2;
 
     invoke-direct {v1, p0, v0}, Lcom/sec/smartcard/pinservice/SmartCardPinManager$2;-><init>(Lcom/sec/smartcard/pinservice/SmartCardPinManager;Landroid/os/ConditionVariable;)V
 
     invoke-virtual {p0, v1}, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->getPin(Lcom/sec/smartcard/pinservice/SmartCardPinManager$PinCallback;)V
 
-    .line 362
     iget-boolean v1, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->mIsCallbackCalled:Z
 
     if-nez v1, :cond_0
 
-    .line 363
     invoke-virtual {v0}, Landroid/os/ConditionVariable;->block()V
 
-    .line 365
     :cond_0
     iget-object v1, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->mPin:[C
     :try_end_0
@@ -983,7 +872,6 @@
 
     return-object v1
 
-    .line 335
     .end local v0    # "cv":Landroid/os/ConditionVariable;
     :catchall_0
     move-exception v1
@@ -997,16 +885,13 @@
     .locals 4
 
     .prologue
-    .line 497
     const/4 v1, 0x0
 
-    .line 499
     .local v1, "ret":Z
     iget-object v2, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->mSmartCardPin:Lcom/sec/smartcard/pinservice/ISmartCardPinService;
 
     if-eqz v2, :cond_0
 
-    .line 501
     :try_start_0
     iget-object v2, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->mSmartCardPin:Lcom/sec/smartcard/pinservice/ISmartCardPinService;
 
@@ -1016,21 +901,17 @@
 
     move-result v1
 
-    .line 509
     :goto_0
     return v1
 
-    .line 502
     :catch_0
     move-exception v0
 
-    .line 503
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 506
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const-string v2, "SmartCardPinManager"
@@ -1046,10 +927,8 @@
     .locals 1
 
     .prologue
-    .line 529
     const/4 v0, 0x1
 
-    .line 530
     .local v0, "ret":Z
     return v0
 .end method
@@ -1058,16 +937,13 @@
     .locals 4
 
     .prologue
-    .line 535
     const/4 v1, 0x0
 
-    .line 536
     .local v1, "ret":Z
     iget-object v2, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->mSmartCardPin:Lcom/sec/smartcard/pinservice/ISmartCardPinService;
 
     if-eqz v2, :cond_0
 
-    .line 538
     :try_start_0
     iget-object v2, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->mSmartCardPin:Lcom/sec/smartcard/pinservice/ISmartCardPinService;
 
@@ -1077,21 +953,17 @@
 
     move-result v1
 
-    .line 545
     :goto_0
     return v1
 
-    .line 539
     :catch_0
     move-exception v0
 
-    .line 540
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 543
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const-string v2, "SmartCardPinManager"
@@ -1114,19 +986,16 @@
     .end annotation
 
     .prologue
-    .line 422
     const-string v1, "SmartCardPinManager"
 
     const-string v2, "registerCard"
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 425
     iget-object v1, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->mSmartCardPin:Lcom/sec/smartcard/pinservice/ISmartCardPinService;
 
     if-eqz v1, :cond_0
 
-    .line 427
     :try_start_0
     iget-object v1, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->mSmartCardPin:Lcom/sec/smartcard/pinservice/ISmartCardPinService;
 
@@ -1134,18 +1003,14 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 436
     return-void
 
-    .line 428
     :catch_0
     move-exception v0
 
-    .line 429
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 430
     new-instance v1, Ljava/lang/Exception;
 
     invoke-virtual {v0}, Landroid/os/RemoteException;->getMessage()Ljava/lang/String;
@@ -1156,7 +1021,6 @@
 
     throw v1
 
-    .line 433
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const-string v1, "SmartCardPinManager"
@@ -1165,7 +1029,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 434
     new-instance v1, Ljava/lang/Exception;
 
     const-string v2, "unable to connect to smartcard pin service"
@@ -1179,12 +1042,10 @@
     .locals 3
 
     .prologue
-    .line 513
     iget-object v1, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->mSmartCardPin:Lcom/sec/smartcard/pinservice/ISmartCardPinService;
 
     if-eqz v1, :cond_0
 
-    .line 515
     :try_start_0
     iget-object v1, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->mSmartCardPin:Lcom/sec/smartcard/pinservice/ISmartCardPinService;
 
@@ -1192,21 +1053,17 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 523
     :goto_0
     return-void
 
-    .line 516
     :catch_0
     move-exception v0
 
-    .line 517
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 520
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const-string v1, "SmartCardPinManager"
@@ -1229,12 +1086,10 @@
     .end annotation
 
     .prologue
-    .line 461
     iget-object v1, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->mSmartCardPin:Lcom/sec/smartcard/pinservice/ISmartCardPinService;
 
     if-eqz v1, :cond_0
 
-    .line 463
     :try_start_0
     iget-object v1, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->mSmartCardPin:Lcom/sec/smartcard/pinservice/ISmartCardPinService;
 
@@ -1242,18 +1097,14 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 472
     return-void
 
-    .line 464
     :catch_0
     move-exception v0
 
-    .line 465
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 466
     new-instance v1, Ljava/lang/Exception;
 
     invoke-virtual {v0}, Landroid/os/RemoteException;->getMessage()Ljava/lang/String;
@@ -1264,7 +1115,6 @@
 
     throw v1
 
-    .line 469
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const-string v1, "SmartCardPinManager"
@@ -1273,7 +1123,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 470
     new-instance v1, Ljava/lang/Exception;
 
     const-string v2, "unable to connect to smartcard pin service"
@@ -1287,40 +1136,34 @@
     .locals 2
 
     .prologue
-    .line 653
     const-string v0, "SmartCardPinManager"
 
     const-string v1, "unbindSmartCardPinService()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 655
     const-string v0, "SmartCardPinManager"
 
     const-string v1, "unbinding to smartcard pin service "
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 656
     iget-object v0, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->mSmartCardPin:Lcom/sec/smartcard/pinservice/ISmartCardPinService;
 
     if-eqz v0, :cond_0
 
-    .line 657
     const-string v0, "SmartCardPinManager"
 
     const-string v1, "mSmartCardPin is not null"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 658
     iget-object v0, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->pinServiceConnection:Landroid/content/ServiceConnection;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
-    .line 660
     :cond_0
     return-void
 .end method
@@ -1336,19 +1179,16 @@
     .end annotation
 
     .prologue
-    .line 440
     const-string v1, "SmartCardPinManager"
 
     const-string v2, "verifyCard"
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 443
     iget-object v1, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->mSmartCardPin:Lcom/sec/smartcard/pinservice/ISmartCardPinService;
 
     if-eqz v1, :cond_0
 
-    .line 445
     :try_start_0
     iget-object v1, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager;->mSmartCardPin:Lcom/sec/smartcard/pinservice/ISmartCardPinService;
 
@@ -1356,18 +1196,14 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 454
     return-void
 
-    .line 446
     :catch_0
     move-exception v0
 
-    .line 447
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 448
     new-instance v1, Ljava/lang/Exception;
 
     invoke-virtual {v0}, Landroid/os/RemoteException;->getMessage()Ljava/lang/String;
@@ -1378,7 +1214,6 @@
 
     throw v1
 
-    .line 451
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const-string v1, "SmartCardPinManager"
@@ -1387,7 +1222,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 452
     new-instance v1, Ljava/lang/Exception;
 
     const-string v2, "unable to connect to smartcard pin service"

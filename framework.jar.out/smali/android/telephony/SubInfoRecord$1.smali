@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 141
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 165
     const/4 v0, 0x0
 
     return-object v0
@@ -56,7 +54,6 @@
     .param p1, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 141
     invoke-virtual {p0, p1}, Landroid/telephony/SubInfoRecord$1;->createFromParcel(Landroid/os/Parcel;)Landroid/telephony/SubInfoRecord;
 
     move-result-object v0
@@ -69,7 +66,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 174
     const/4 v0, 0x0
 
     return-object v0
@@ -80,7 +76,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 141
     invoke-virtual {p0, p1}, Landroid/telephony/SubInfoRecord$1;->newArray(I)[Landroid/telephony/SubInfoRecord;
 
     move-result-object v0

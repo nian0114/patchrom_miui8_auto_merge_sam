@@ -41,16 +41,12 @@
 
     const/4 v0, 0x0
 
-    .line 35
     sput-boolean v1, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->isConsoleLogging:Z
 
-    .line 38
     sput-boolean v0, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->isFileLogging:Z
 
-    .line 41
     sput-boolean v0, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->isGrayBoxTesting:Z
 
-    .line 44
     sget-object v0, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;->TRACE:Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;
 
     invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
@@ -59,7 +55,6 @@
 
     sput v0, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->mLevel:I
 
-    .line 47
     sput-boolean v1, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->isCaller:Z
 
     return-void
@@ -69,10 +64,8 @@
     .locals 0
 
     .prologue
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 60
     return-void
 .end method
 
@@ -80,7 +73,6 @@
     .locals 1
 
     .prologue
-    .line 26
     sget-boolean v0, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->isConsoleLogging:Z
 
     return v0
@@ -90,7 +82,6 @@
     .locals 1
 
     .prologue
-    .line 26
     sget v0, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->mLevel:I
 
     return v0
@@ -100,7 +91,6 @@
     .locals 1
 
     .prologue
-    .line 26
     sget-boolean v0, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->isFileLogging:Z
 
     return v0
@@ -114,7 +104,6 @@
     .param p3, "x3"    # Ljava/lang/String;
 
     .prologue
-    .line 26
     invoke-static {p0, p1, p2, p3}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->getFilePattern(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -126,7 +115,6 @@
     .locals 1
 
     .prologue
-    .line 26
     sget-boolean v0, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->isCaller:Z
 
     return v0
@@ -137,28 +125,23 @@
     .param p0, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 291
     sget-object v1, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;->DEBUG:Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;
 
     invoke-virtual {v1, p0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;->consoleLogging(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 292
     .local v0, "str":Ljava/lang/String;
     sget-object v1, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;->DEBUG:Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;
 
     invoke-virtual {v1, p0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;->fileLogging(Ljava/lang/String;)V
 
-    .line 294
     sget-boolean v1, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->isGrayBoxTesting:Z
 
     if-eqz v1, :cond_0
 
-    .line 295
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->notifyLoggingObserver(Ljava/lang/String;)V
 
-    .line 297
     :cond_0
     return-void
 .end method
@@ -168,28 +151,23 @@
     .param p0, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 336
     sget-object v1, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;->ERROR:Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;
 
     invoke-virtual {v1, p0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;->consoleLogging(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 337
     .local v0, "str":Ljava/lang/String;
     sget-object v1, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;->ERROR:Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;
 
     invoke-virtual {v1, p0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;->fileLogging(Ljava/lang/String;)V
 
-    .line 339
     sget-boolean v1, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->isGrayBoxTesting:Z
 
     if-eqz v1, :cond_0
 
-    .line 340
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->notifyLoggingObserver(Ljava/lang/String;)V
 
-    .line 342
     :cond_0
     return-void
 .end method
@@ -199,7 +177,6 @@
     .param p0, "exMsg"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 351
     sget-object v3, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;->EXCEPTION:Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;
 
     invoke-virtual {p0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
@@ -208,7 +185,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;->consoleLogging(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 352
     sget-object v3, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;->EXCEPTION:Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;
 
     invoke-virtual {p0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
@@ -217,12 +193,10 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;->fileLogging(Ljava/lang/String;)V
 
-    .line 354
     invoke-virtual {p0}, Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;
 
     move-result-object v2
 
-    .line 355
     .local v2, "trace":[Ljava/lang/StackTraceElement;
     const/4 v0, 0x0
 
@@ -232,7 +206,6 @@
 
     if-ge v0, v3, :cond_0
 
-    .line 356
     sget-object v3, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;->EXCEPTION:Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;
 
     aget-object v4, v2, v0
@@ -243,7 +216,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;->consoleLogging(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 357
     sget-object v3, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;->EXCEPTION:Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;
 
     aget-object v4, v2, v0
@@ -254,25 +226,20 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;->fileLogging(Ljava/lang/String;)V
 
-    .line 355
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 360
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
 
     move-result-object v1
 
-    .line 361
     .local v1, "ourCause":Ljava/lang/Throwable;
     if-eqz v1, :cond_1
 
-    .line 362
     invoke-static {v1}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->exception(Ljava/lang/Throwable;)V
 
-    .line 364
     :cond_1
     return-void
 .end method
@@ -285,12 +252,10 @@
     .param p3, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 382
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v5
 
-    .line 383
     .local v5, "utcDate":Ljava/util/Calendar;
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -298,14 +263,12 @@
 
     invoke-virtual {v5, v8, v9}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
-    .line 384
     const/4 v7, 0x1
 
     invoke-virtual {v5, v7}, Ljava/util/Calendar;->get(I)I
 
     move-result v6
 
-    .line 385
     .local v6, "year":I
     const/4 v7, 0x2
 
@@ -315,7 +278,6 @@
 
     add-int/lit8 v3, v7, 0x1
 
-    .line 386
     .local v3, "month":I
     const/4 v7, 0x5
 
@@ -323,7 +285,6 @@
 
     move-result v0
 
-    .line 387
     .local v0, "date":I
     const/16 v7, 0xb
 
@@ -331,7 +292,6 @@
 
     move-result v1
 
-    .line 388
     .local v1, "hour":I
     const/16 v7, 0xc
 
@@ -339,7 +299,6 @@
 
     move-result v2
 
-    .line 389
     .local v2, "min":I
     const/16 v7, 0xd
 
@@ -347,7 +306,6 @@
 
     move-result v4
 
-    .line 391
     .local v4, "sec":I
     const-string v7, "[%4d-%02d-%02d %02d:%02d:%02d] [%s] [%s] %s %s"
 
@@ -430,42 +388,35 @@
     .locals 2
 
     .prologue
-    .line 262
     sget-object v0, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->instance:Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;
 
     if-nez v0, :cond_1
 
-    .line 263
     const-class v1, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;
 
     monitor-enter v1
 
-    .line 264
     :try_start_0
     sget-object v0, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->instance:Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;
 
     if-nez v0, :cond_0
 
-    .line 265
     new-instance v0, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;
 
     invoke-direct {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;-><init>()V
 
     sput-object v0, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->instance:Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;
 
-    .line 267
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 269
     :cond_1
     sget-object v0, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->instance:Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;
 
     return-object v0
 
-    .line 267
     :catchall_0
     move-exception v0
 
@@ -482,28 +433,23 @@
     .param p0, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 306
     sget-object v1, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;->INFO:Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;
 
     invoke-virtual {v1, p0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;->consoleLogging(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 307
     .local v0, "str":Ljava/lang/String;
     sget-object v1, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;->INFO:Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;
 
     invoke-virtual {v1, p0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;->fileLogging(Ljava/lang/String;)V
 
-    .line 309
     sget-boolean v1, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->isGrayBoxTesting:Z
 
     if-eqz v1, :cond_0
 
-    .line 310
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->notifyLoggingObserver(Ljava/lang/String;)V
 
-    .line 312
     :cond_0
     return-void
 .end method
@@ -513,17 +459,14 @@
     .param p0, "log"    # Ljava/lang/String;
 
     .prologue
-    .line 475
     sget-object v0, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->mLoggingObserver:Lcom/samsung/android/contextaware/utilbundle/logger/ILoggingObserver;
 
     if-eqz v0, :cond_0
 
-    .line 476
     sget-object v0, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->mLoggingObserver:Lcom/samsung/android/contextaware/utilbundle/logger/ILoggingObserver;
 
     invoke-interface {v0, p0}, Lcom/samsung/android/contextaware/utilbundle/logger/ILoggingObserver;->updateLogMessage(Ljava/lang/String;)V
 
-    .line 478
     :cond_0
     return-void
 .end method
@@ -533,10 +476,8 @@
     .param p0, "observer"    # Lcom/samsung/android/contextaware/utilbundle/logger/ILoggingObserver;
 
     .prologue
-    .line 455
     sput-object p0, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->mLoggingObserver:Lcom/samsung/android/contextaware/utilbundle/logger/ILoggingObserver;
 
-    .line 456
     return-void
 .end method
 
@@ -545,10 +486,8 @@
     .param p0, "enabled"    # Z
 
     .prologue
-    .line 402
     sput-boolean p0, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->isConsoleLogging:Z
 
-    .line 403
     return-void
 .end method
 
@@ -557,14 +496,11 @@
     .param p0, "enabled"    # Z
 
     .prologue
-    .line 412
     const/4 v0, 0x0
 
-    .line 414
     .local v0, "check":Z
     if-eqz p0, :cond_1
 
-    .line 415
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaFileLogger;->getInstance()Lcom/samsung/android/contextaware/utilbundle/logger/CaFileLogger;
 
     move-result-object v1
@@ -575,18 +511,14 @@
 
     move-result v0
 
-    .line 420
     :goto_0
     if-eqz v0, :cond_0
 
-    .line 421
     sput-boolean p0, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->isFileLogging:Z
 
-    .line 423
     :cond_0
     return-void
 
-    .line 417
     :cond_1
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaFileLogger;->getInstance()Lcom/samsung/android/contextaware/utilbundle/logger/CaFileLogger;
 
@@ -606,10 +538,8 @@
     .param p0, "enabled"    # Z
 
     .prologue
-    .line 432
     sput-boolean p0, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->isGrayBoxTesting:Z
 
-    .line 433
     return-void
 .end method
 
@@ -619,13 +549,10 @@
     .param p1, "enableCaller"    # Z
 
     .prologue
-    .line 444
     sput p0, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->mLevel:I
 
-    .line 445
     sput-boolean p1, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->isCaller:Z
 
-    .line 446
     return-void
 .end method
 
@@ -633,7 +560,6 @@
     .locals 3
 
     .prologue
-    .line 276
     sget-object v1, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;->TRACE:Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;
 
     const-string v2, ""
@@ -642,7 +568,6 @@
 
     move-result-object v0
 
-    .line 277
     .local v0, "str":Ljava/lang/String;
     sget-object v1, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;->TRACE:Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;
 
@@ -650,15 +575,12 @@
 
     invoke-virtual {v1, v2}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;->fileLogging(Ljava/lang/String;)V
 
-    .line 279
     sget-boolean v1, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->isGrayBoxTesting:Z
 
     if-eqz v1, :cond_0
 
-    .line 280
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->notifyLoggingObserver(Ljava/lang/String;)V
 
-    .line 282
     :cond_0
     return-void
 .end method
@@ -668,12 +590,10 @@
     .param p0, "observer"    # Lcom/samsung/android/contextaware/utilbundle/logger/ILoggingObserver;
 
     .prologue
-    .line 465
     const/4 v0, 0x0
 
     sput-object v0, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->mLoggingObserver:Lcom/samsung/android/contextaware/utilbundle/logger/ILoggingObserver;
 
-    .line 466
     return-void
 .end method
 
@@ -682,28 +602,23 @@
     .param p0, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 321
     sget-object v1, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;->WARN:Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;
 
     invoke-virtual {v1, p0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;->consoleLogging(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 322
     .local v0, "str":Ljava/lang/String;
     sget-object v1, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;->WARN:Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;
 
     invoke-virtual {v1, p0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;->fileLogging(Ljava/lang/String;)V
 
-    .line 324
     sget-boolean v1, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->isGrayBoxTesting:Z
 
     if-eqz v1, :cond_0
 
-    .line 325
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->notifyLoggingObserver(Ljava/lang/String;)V
 
-    .line 327
     :cond_0
     return-void
 .end method

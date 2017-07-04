@@ -25,24 +25,18 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 52
     invoke-direct {p0, p1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
-    .line 45
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/app/GlobalActionsFrameLayoutSViewCover;->childcnt:I
 
-    .line 46
     iput-object v1, p0, Landroid/app/GlobalActionsFrameLayoutSViewCover;->childindex:[I
 
-    .line 47
     iput-object v1, p0, Landroid/app/GlobalActionsFrameLayoutSViewCover;->bg:Landroid/widget/LinearLayout;
 
-    .line 48
     iput-object v1, p0, Landroid/app/GlobalActionsFrameLayoutSViewCover;->sv:Landroid/widget/ScrollView;
 
-    .line 53
     return-void
 .end method
 
@@ -54,28 +48,21 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 56
     invoke-direct {p0, p1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
-    .line 45
     const/4 v2, 0x0
 
     iput v2, p0, Landroid/app/GlobalActionsFrameLayoutSViewCover;->childcnt:I
 
-    .line 46
     iput-object v3, p0, Landroid/app/GlobalActionsFrameLayoutSViewCover;->childindex:[I
 
-    .line 47
     iput-object v3, p0, Landroid/app/GlobalActionsFrameLayoutSViewCover;->bg:Landroid/widget/LinearLayout;
 
-    .line 48
     iput-object v3, p0, Landroid/app/GlobalActionsFrameLayoutSViewCover;->sv:Landroid/widget/ScrollView;
 
-    .line 57
     iput-object p1, p0, Landroid/app/GlobalActionsFrameLayoutSViewCover;->mContext:Landroid/content/Context;
 
-    .line 58
-    const-string/jumbo v2, "layout_inflater"
+    const-string v2, "layout_inflater"
 
     invoke-virtual {p1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -83,7 +70,6 @@
 
     check-cast v0, Landroid/view/LayoutInflater;
 
-    .line 59
     .local v0, "inflater":Landroid/view/LayoutInflater;
     const v2, 0x1090067
 
@@ -91,18 +77,15 @@
 
     move-result-object v1
 
-    .line 60
     .local v1, "view":Landroid/view/View;
     iput p2, p0, Landroid/app/GlobalActionsFrameLayoutSViewCover;->childcnt:I
 
-    .line 61
     iget v2, p0, Landroid/app/GlobalActionsFrameLayoutSViewCover;->childcnt:I
 
     new-array v2, v2, [I
 
     iput-object v2, p0, Landroid/app/GlobalActionsFrameLayoutSViewCover;->childindex:[I
 
-    .line 62
     const v2, 0x102039f
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -113,7 +96,6 @@
 
     iput-object v2, p0, Landroid/app/GlobalActionsFrameLayoutSViewCover;->sv:Landroid/widget/ScrollView;
 
-    .line 63
     const v2, 0x10203a0
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -124,10 +106,8 @@
 
     iput-object v2, p0, Landroid/app/GlobalActionsFrameLayoutSViewCover;->bg:Landroid/widget/LinearLayout;
 
-    .line 64
     invoke-virtual {p0, v1}, Landroid/app/GlobalActionsFrameLayoutSViewCover;->addView(Landroid/view/View;)V
 
-    .line 65
     return-void
 .end method
 
@@ -140,28 +120,21 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 68
     invoke-direct {p0, p1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
-    .line 45
     const/4 v2, 0x0
 
     iput v2, p0, Landroid/app/GlobalActionsFrameLayoutSViewCover;->childcnt:I
 
-    .line 46
     iput-object v3, p0, Landroid/app/GlobalActionsFrameLayoutSViewCover;->childindex:[I
 
-    .line 47
     iput-object v3, p0, Landroid/app/GlobalActionsFrameLayoutSViewCover;->bg:Landroid/widget/LinearLayout;
 
-    .line 48
     iput-object v3, p0, Landroid/app/GlobalActionsFrameLayoutSViewCover;->sv:Landroid/widget/ScrollView;
 
-    .line 69
     iput-object p1, p0, Landroid/app/GlobalActionsFrameLayoutSViewCover;->mContext:Landroid/content/Context;
 
-    .line 70
-    const-string/jumbo v2, "layout_inflater"
+    const-string v2, "layout_inflater"
 
     invoke-virtual {p1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -169,7 +142,6 @@
 
     check-cast v0, Landroid/view/LayoutInflater;
 
-    .line 71
     .local v0, "inflater":Landroid/view/LayoutInflater;
     const v2, 0x1090067
 
@@ -177,18 +149,15 @@
 
     move-result-object v1
 
-    .line 72
     .local v1, "view":Landroid/view/View;
     iput p2, p0, Landroid/app/GlobalActionsFrameLayoutSViewCover;->childcnt:I
 
-    .line 73
     iget v2, p0, Landroid/app/GlobalActionsFrameLayoutSViewCover;->childcnt:I
 
     new-array v2, v2, [I
 
     iput-object v2, p0, Landroid/app/GlobalActionsFrameLayoutSViewCover;->childindex:[I
 
-    .line 74
     const v2, 0x102039f
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -199,7 +168,6 @@
 
     iput-object v2, p0, Landroid/app/GlobalActionsFrameLayoutSViewCover;->sv:Landroid/widget/ScrollView;
 
-    .line 75
     const v2, 0x10203a0
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -210,13 +178,10 @@
 
     iput-object v2, p0, Landroid/app/GlobalActionsFrameLayoutSViewCover;->bg:Landroid/widget/LinearLayout;
 
-    .line 76
     iput-object p3, p0, Landroid/app/GlobalActionsFrameLayoutSViewCover;->mHandler:Landroid/os/Handler;
 
-    .line 77
     invoke-virtual {p0, v1}, Landroid/app/GlobalActionsFrameLayoutSViewCover;->addView(Landroid/view/View;)V
 
-    .line 78
     return-void
 .end method
 
@@ -228,24 +193,18 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 81
     invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 45
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/app/GlobalActionsFrameLayoutSViewCover;->childcnt:I
 
-    .line 46
     iput-object v1, p0, Landroid/app/GlobalActionsFrameLayoutSViewCover;->childindex:[I
 
-    .line 47
     iput-object v1, p0, Landroid/app/GlobalActionsFrameLayoutSViewCover;->bg:Landroid/widget/LinearLayout;
 
-    .line 48
     iput-object v1, p0, Landroid/app/GlobalActionsFrameLayoutSViewCover;->sv:Landroid/widget/ScrollView;
 
-    .line 82
     return-void
 .end method
 
@@ -258,24 +217,18 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 85
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 45
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/app/GlobalActionsFrameLayoutSViewCover;->childcnt:I
 
-    .line 46
     iput-object v1, p0, Landroid/app/GlobalActionsFrameLayoutSViewCover;->childindex:[I
 
-    .line 47
     iput-object v1, p0, Landroid/app/GlobalActionsFrameLayoutSViewCover;->bg:Landroid/widget/LinearLayout;
 
-    .line 48
     iput-object v1, p0, Landroid/app/GlobalActionsFrameLayoutSViewCover;->sv:Landroid/widget/ScrollView;
 
-    .line 86
     return-void
 .end method
 
@@ -289,24 +242,18 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 89
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    .line 45
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/app/GlobalActionsFrameLayoutSViewCover;->childcnt:I
 
-    .line 46
     iput-object v1, p0, Landroid/app/GlobalActionsFrameLayoutSViewCover;->childindex:[I
 
-    .line 47
     iput-object v1, p0, Landroid/app/GlobalActionsFrameLayoutSViewCover;->bg:Landroid/widget/LinearLayout;
 
-    .line 48
     iput-object v1, p0, Landroid/app/GlobalActionsFrameLayoutSViewCover;->sv:Landroid/widget/ScrollView;
 
-    .line 90
     return-void
 .end method
 
@@ -316,7 +263,6 @@
     .locals 1
 
     .prologue
-    .line 135
     iget v0, p0, Landroid/app/GlobalActionsFrameLayoutSViewCover;->childcnt:I
 
     return v0
@@ -329,10 +275,8 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 93
     const/4 v3, 0x0
 
-    .line 94
     .local v3, "view":Landroid/view/View;
     const/4 v0, 0x0
 
@@ -346,31 +290,26 @@
 
     if-ge v0, v4, :cond_1
 
-    .line 95
     iget-object v4, p0, Landroid/app/GlobalActionsFrameLayoutSViewCover;->bg:Landroid/widget/LinearLayout;
 
     invoke-virtual {v4, v0}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v3
 
-    .line 96
     invoke-virtual {p1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    .line 94
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 97
     :cond_0
     move-object v2, v3
 
-    .line 98
     .local v2, "tempView":Landroid/view/View;
     const v4, 0x10203af
 
@@ -380,14 +319,11 @@
 
     check-cast v1, Landroid/widget/FrameLayout;
 
-    .line 99
     .local v1, "imageFrameLayout":Landroid/widget/FrameLayout;
     invoke-virtual {v1, v8}, Landroid/widget/FrameLayout;->setClickable(Z)V
 
-    .line 100
     invoke-virtual {v1, v8}, Landroid/widget/FrameLayout;->setFocusable(Z)V
 
-    .line 101
     invoke-virtual {v3}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object v4
@@ -416,7 +352,6 @@
 
     goto :goto_1
 
-    .line 113
     .end local v1    # "imageFrameLayout":Landroid/widget/FrameLayout;
     .end local v2    # "tempView":Landroid/view/View;
     :cond_1
@@ -428,7 +363,6 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 141
     invoke-super {p0, p1}, Landroid/widget/LinearLayout;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
@@ -441,10 +375,8 @@
     .param p1, "selectedView"    # Landroid/view/View;
 
     .prologue
-    .line 116
     const/4 v2, 0x0
 
-    .line 117
     .local v2, "view":Landroid/view/View;
     const/4 v0, 0x0
 
@@ -458,31 +390,26 @@
 
     if-ge v0, v3, :cond_1
 
-    .line 118
     iget-object v3, p0, Landroid/app/GlobalActionsFrameLayoutSViewCover;->bg:Landroid/widget/LinearLayout;
 
     invoke-virtual {v3, v0}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 119
     invoke-virtual {p1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 117
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 120
     :cond_0
     move-object v1, v2
 
-    .line 121
     .local v1, "tempView":Landroid/view/View;
     invoke-virtual {v2}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
@@ -512,7 +439,6 @@
 
     goto :goto_1
 
-    .line 132
     .end local v1    # "tempView":Landroid/view/View;
     :cond_1
     return-void

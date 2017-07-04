@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 101
     invoke-direct {p0}, Lcom/android/internal/telephony/GsmAlphabet$TextEncodingDetails;-><init>()V
 
     return-void

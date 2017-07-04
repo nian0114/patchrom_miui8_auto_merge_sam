@@ -70,15 +70,12 @@
     .locals 1
 
     .prologue
-    .line 20
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 21
     const-string v0, "android.security.IKeyChainService"
 
     invoke-virtual {p0, p0, v0}, Landroid/security/IKeyChainService$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 22
     return-void
 .end method
 
@@ -87,17 +84,13 @@
     .param p0, "obj"    # Landroid/os/IBinder;
 
     .prologue
-    .line 29
     if-nez p0, :cond_0
 
-    .line 30
     const/4 v0, 0x0
 
-    .line 36
     :goto_0
     return-object v0
 
-    .line 32
     :cond_0
     const-string v1, "android.security.IKeyChainService"
 
@@ -105,7 +98,6 @@
 
     move-result-object v0
 
-    .line 33
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -113,12 +105,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 34
     check-cast v0, Landroid/security/IKeyChainService;
 
     goto :goto_0
 
-    .line 36
     :cond_1
     new-instance v0, Landroid/security/IKeyChainService$Stub$Proxy;
 
@@ -134,7 +124,6 @@
     .locals 0
 
     .prologue
-    .line 40
     return-object p0
 .end method
 
@@ -155,10 +144,8 @@
 
     const/4 v6, 0x1
 
-    .line 44
     sparse-switch p1, :sswitch_data_0
 
-    .line 258
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v6
@@ -166,7 +153,6 @@
     :goto_0
     return v6
 
-    .line 48
     :sswitch_0
     const-string v5, "android.security.IKeyChainService"
 
@@ -174,33 +160,27 @@
 
     goto :goto_0
 
-    .line 53
     :sswitch_1
     const-string v5, "android.security.IKeyChainService"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 55
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 56
     .local v0, "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v0}, Landroid/security/IKeyChainService$Stub;->requestPrivateKey(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 57
     .local v3, "_result":Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 58
     invoke-virtual {p3, v3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 63
     .end local v0    # "_arg0":Ljava/lang/String;
     .end local v3    # "_result":Ljava/lang/String;
     :sswitch_2
@@ -208,27 +188,22 @@
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 65
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 66
     .restart local v0    # "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v0}, Landroid/security/IKeyChainService$Stub;->getCertificate(Ljava/lang/String;)[B
 
     move-result-object v3
 
-    .line 67
     .local v3, "_result":[B
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 68
     invoke-virtual {p3, v3}, Landroid/os/Parcel;->writeByteArray([B)V
 
     goto :goto_0
 
-    .line 73
     .end local v0    # "_arg0":Ljava/lang/String;
     .end local v3    # "_result":[B
     :sswitch_3
@@ -236,55 +211,45 @@
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 75
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object v0
 
-    .line 76
     .local v0, "_arg0":[B
     invoke-virtual {p0, v0}, Landroid/security/IKeyChainService$Stub;->installCaCertificate([B)V
 
-    .line 77
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
-    .line 82
     .end local v0    # "_arg0":[B
     :sswitch_4
     const-string v7, "android.security.IKeyChainService"
 
     invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 84
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object v0
 
-    .line 86
     .restart local v0    # "_arg0":[B
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object v1
 
-    .line 88
     .local v1, "_arg1":[B
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 89
     .local v2, "_arg2":Ljava/lang/String;
     invoke-virtual {p0, v0, v1, v2}, Landroid/security/IKeyChainService$Stub;->installKeyPair([B[BLjava/lang/String;)Z
 
     move-result v3
 
-    .line 90
     .local v3, "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 91
     if-eqz v3, :cond_0
 
     move v5, v6
@@ -294,7 +259,6 @@
 
     goto :goto_0
 
-    .line 96
     .end local v0    # "_arg0":[B
     .end local v1    # "_arg1":[B
     .end local v2    # "_arg2":Ljava/lang/String;
@@ -304,22 +268,18 @@
 
     invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 98
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 99
     .local v0, "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v0}, Landroid/security/IKeyChainService$Stub;->deleteCaCertificate(Ljava/lang/String;)Z
 
     move-result v3
 
-    .line 100
     .restart local v3    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 101
     if-eqz v3, :cond_1
 
     move v5, v6
@@ -329,7 +289,6 @@
 
     goto :goto_0
 
-    .line 106
     .end local v0    # "_arg0":Ljava/lang/String;
     .end local v3    # "_result":Z
     :sswitch_6
@@ -337,16 +296,13 @@
 
     invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 107
     invoke-virtual {p0}, Landroid/security/IKeyChainService$Stub;->reset()Z
 
     move-result v3
 
-    .line 108
     .restart local v3    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 109
     if-eqz v3, :cond_2
 
     move v5, v6
@@ -356,95 +312,76 @@
 
     goto/16 :goto_0
 
-    .line 114
     .end local v3    # "_result":Z
     :sswitch_7
     const-string v7, "android.security.IKeyChainService"
 
     invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 115
     invoke-virtual {p0}, Landroid/security/IKeyChainService$Stub;->getUserCaAliases()Landroid/content/pm/ParceledListSlice;
 
     move-result-object v3
 
-    .line 116
     .local v3, "_result":Landroid/content/pm/ParceledListSlice;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 117
     if-eqz v3, :cond_3
 
-    .line 118
     invoke-virtual {p3, v6}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 119
     invoke-virtual {v3, p3, v6}, Landroid/content/pm/ParceledListSlice;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto/16 :goto_0
 
-    .line 122
     :cond_3
     invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 128
     .end local v3    # "_result":Landroid/content/pm/ParceledListSlice;
     :sswitch_8
     const-string v7, "android.security.IKeyChainService"
 
     invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 129
     invoke-virtual {p0}, Landroid/security/IKeyChainService$Stub;->getSystemCaAliases()Landroid/content/pm/ParceledListSlice;
 
     move-result-object v3
 
-    .line 130
     .restart local v3    # "_result":Landroid/content/pm/ParceledListSlice;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 131
     if-eqz v3, :cond_4
 
-    .line 132
     invoke-virtual {p3, v6}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 133
     invoke-virtual {v3, p3, v6}, Landroid/content/pm/ParceledListSlice;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto/16 :goto_0
 
-    .line 136
     :cond_4
     invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 142
     .end local v3    # "_result":Landroid/content/pm/ParceledListSlice;
     :sswitch_9
     const-string v7, "android.security.IKeyChainService"
 
     invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 144
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 145
     .restart local v0    # "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v0}, Landroid/security/IKeyChainService$Stub;->containsCaAlias(Ljava/lang/String;)Z
 
     move-result v3
 
-    .line 146
     .local v3, "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 147
     if-eqz v3, :cond_5
 
     move v5, v6
@@ -454,7 +391,6 @@
 
     goto/16 :goto_0
 
-    .line 152
     .end local v0    # "_arg0":Ljava/lang/String;
     .end local v3    # "_result":Z
     :sswitch_a
@@ -462,12 +398,10 @@
 
     invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 154
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 156
     .restart local v0    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -477,18 +411,15 @@
 
     move v1, v6
 
-    .line 157
     .local v1, "_arg1":Z
     :goto_1
     invoke-virtual {p0, v0, v1}, Landroid/security/IKeyChainService$Stub;->getEncodedCaCertificate(Ljava/lang/String;Z)[B
 
     move-result-object v3
 
-    .line 158
     .local v3, "_result":[B
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 159
     invoke-virtual {p3, v3}, Landroid/os/Parcel;->writeByteArray([B)V
 
     goto/16 :goto_0
@@ -498,22 +429,18 @@
     :cond_6
     move v1, v5
 
-    .line 156
     goto :goto_1
 
-    .line 164
     .end local v0    # "_arg0":Ljava/lang/String;
     :sswitch_b
     const-string v7, "android.security.IKeyChainService"
 
     invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 166
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 168
     .restart local v0    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -523,18 +450,15 @@
 
     move v1, v6
 
-    .line 169
     .restart local v1    # "_arg1":Z
     :goto_2
     invoke-virtual {p0, v0, v1}, Landroid/security/IKeyChainService$Stub;->getCaCertificateChainAliases(Ljava/lang/String;Z)Ljava/util/List;
 
     move-result-object v4
 
-    .line 170
     .local v4, "_result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 171
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeStringList(Ljava/util/List;)V
 
     goto/16 :goto_0
@@ -544,28 +468,23 @@
     :cond_7
     move v1, v5
 
-    .line 168
     goto :goto_2
 
-    .line 176
     .end local v0    # "_arg0":Ljava/lang/String;
     :sswitch_c
     const-string v7, "android.security.IKeyChainService"
 
     invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 178
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 180
     .local v0, "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 182
     .local v1, "_arg1":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -575,12 +494,10 @@
 
     move v2, v6
 
-    .line 183
     .local v2, "_arg2":Z
     :goto_3
     invoke-virtual {p0, v0, v1, v2}, Landroid/security/IKeyChainService$Stub;->setGrant(ILjava/lang/String;Z)V
 
-    .line 184
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
@@ -589,10 +506,8 @@
     :cond_8
     move v2, v5
 
-    .line 182
     goto :goto_3
 
-    .line 189
     .end local v0    # "_arg0":I
     .end local v1    # "_arg1":Ljava/lang/String;
     :sswitch_d
@@ -600,28 +515,23 @@
 
     invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 191
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 193
     .restart local v0    # "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 194
     .restart local v1    # "_arg1":Ljava/lang/String;
     invoke-virtual {p0, v0, v1}, Landroid/security/IKeyChainService$Stub;->hasGrant(ILjava/lang/String;)Z
 
     move-result v3
 
-    .line 195
     .local v3, "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 196
     if-eqz v3, :cond_9
 
     move v5, v6
@@ -631,7 +541,6 @@
 
     goto/16 :goto_0
 
-    .line 201
     .end local v0    # "_arg0":I
     .end local v1    # "_arg1":Ljava/lang/String;
     .end local v3    # "_result":Z
@@ -640,12 +549,10 @@
 
     invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 203
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 205
     .local v0, "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -655,18 +562,15 @@
 
     move v1, v6
 
-    .line 206
     .local v1, "_arg1":Z
     :goto_4
     invoke-virtual {p0, v0, v1}, Landroid/security/IKeyChainService$Stub;->getCertificateFromTrustCredential(Ljava/lang/String;Z)[B
 
     move-result-object v3
 
-    .line 207
     .local v3, "_result":[B
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 208
     invoke-virtual {p3, v3}, Landroid/os/Parcel;->writeByteArray([B)V
 
     goto/16 :goto_0
@@ -676,37 +580,30 @@
     :cond_a
     move v1, v5
 
-    .line 205
     goto :goto_4
 
-    .line 213
     .end local v0    # "_arg0":Ljava/lang/String;
     :sswitch_f
     const-string v5, "android.security.IKeyChainService"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 215
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object v0
 
-    .line 216
     .local v0, "_arg0":[B
     invoke-virtual {p0, v0}, Landroid/security/IKeyChainService$Stub;->getCertificateAlias([B)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 217
     .local v3, "_result":Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 218
     invoke-virtual {p3, v3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 223
     .end local v0    # "_arg0":[B
     .end local v3    # "_result":Ljava/lang/String;
     :sswitch_10
@@ -714,64 +611,52 @@
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 224
     invoke-virtual {p0}, Landroid/security/IKeyChainService$Stub;->allSystemAliases()Ljava/util/List;
 
     move-result-object v4
 
-    .line 225
     .restart local v4    # "_result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 226
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeStringList(Ljava/util/List;)V
 
     goto/16 :goto_0
 
-    .line 231
     .end local v4    # "_result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :sswitch_11
     const-string v5, "android.security.IKeyChainService"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 232
     invoke-virtual {p0}, Landroid/security/IKeyChainService$Stub;->userAliases()Ljava/util/List;
 
     move-result-object v4
 
-    .line 233
     .restart local v4    # "_result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 234
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeStringList(Ljava/util/List;)V
 
     goto/16 :goto_0
 
-    .line 239
     .end local v4    # "_result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :sswitch_12
     const-string v7, "android.security.IKeyChainService"
 
     invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 241
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 242
     .local v0, "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v0}, Landroid/security/IKeyChainService$Stub;->containsAlias(Ljava/lang/String;)Z
 
     move-result v3
 
-    .line 243
     .local v3, "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 244
     if-eqz v3, :cond_b
 
     move v5, v6
@@ -781,7 +666,6 @@
 
     goto/16 :goto_0
 
-    .line 249
     .end local v0    # "_arg0":Ljava/lang/String;
     .end local v3    # "_result":Z
     :sswitch_13
@@ -789,27 +673,22 @@
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 251
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object v0
 
-    .line 252
     .local v0, "_arg0":[B
     invoke-virtual {p0, v0}, Landroid/security/IKeyChainService$Stub;->findIssuer([B)[B
 
     move-result-object v3
 
-    .line 253
     .local v3, "_result":[B
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 254
     invoke-virtual {p3, v3}, Landroid/os/Parcel;->writeByteArray([B)V
 
     goto/16 :goto_0
 
-    .line 44
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1

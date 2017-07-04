@@ -220,7 +220,6 @@
     .locals 1
 
     .prologue
-    .line 722
     const/16 v0, 0x2d
 
     new-array v0, v0, [I
@@ -285,10 +284,8 @@
     .locals 0
 
     .prologue
-    .line 824
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 825
     return-void
 .end method
 
@@ -298,7 +295,6 @@
     .param p1, "sdkLevel"    # I
 
     .prologue
-    .line 788
     iget v1, p0, Landroid/hardware/Sensor;->mType:I
 
     const/16 v2, 0xb
@@ -309,18 +305,14 @@
 
     if-gt p1, v1, :cond_0
 
-    .line 790
     const/4 v1, 0x3
 
-    .line 802
     :goto_0
     return v1
 
-    .line 792
     :cond_0
     iget v0, p0, Landroid/hardware/Sensor;->mType:I
 
-    .line 793
     .local v0, "offset":I
     sget-object v1, Landroid/hardware/Sensor;->sSensorReportingModes:[I
 
@@ -328,12 +320,10 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 800
     const/16 v1, 0x10
 
     goto :goto_0
 
-    .line 802
     :cond_1
     sget-object v1, Landroid/hardware/Sensor;->sSensorReportingModes:[I
 
@@ -349,21 +339,17 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 1013
     iput p1, p0, Landroid/hardware/Sensor;->mType:I
 
-    .line 1014
     iget v1, p0, Landroid/hardware/Sensor;->mType:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 1091
     const/4 v0, 0x0
 
     :goto_0
     return v0
 
-    .line 1016
     :pswitch_0
     const-string v1, "android.sensor.accelerometer"
 
@@ -371,7 +357,6 @@
 
     goto :goto_0
 
-    .line 1019
     :pswitch_1
     const-string v1, "android.sensor.ambient_temperature"
 
@@ -379,7 +364,6 @@
 
     goto :goto_0
 
-    .line 1022
     :pswitch_2
     const-string v1, "android.sensor.game_rotation_vector"
 
@@ -387,7 +371,6 @@
 
     goto :goto_0
 
-    .line 1025
     :pswitch_3
     const-string v1, "android.sensor.geomagnetic_rotation_vector"
 
@@ -395,7 +378,6 @@
 
     goto :goto_0
 
-    .line 1028
     :pswitch_4
     const-string v1, "android.sensor.glance_gesture"
 
@@ -403,7 +385,6 @@
 
     goto :goto_0
 
-    .line 1031
     :pswitch_5
     const-string v1, "android.sensor.gravity"
 
@@ -411,7 +392,6 @@
 
     goto :goto_0
 
-    .line 1034
     :pswitch_6
     const-string v1, "android.sensor.gyroscope"
 
@@ -419,7 +399,6 @@
 
     goto :goto_0
 
-    .line 1037
     :pswitch_7
     const-string v1, "android.sensor.gyroscope_uncalibrated"
 
@@ -427,7 +406,6 @@
 
     goto :goto_0
 
-    .line 1040
     :pswitch_8
     const-string v1, "android.sensor.heart_rate"
 
@@ -435,7 +413,6 @@
 
     goto :goto_0
 
-    .line 1043
     :pswitch_9
     const-string v1, "android.sensor.light"
 
@@ -443,7 +420,6 @@
 
     goto :goto_0
 
-    .line 1046
     :pswitch_a
     const-string v1, "android.sensor.linear_acceleration"
 
@@ -451,7 +427,6 @@
 
     goto :goto_0
 
-    .line 1049
     :pswitch_b
     const-string v1, "android.sensor.magnetic_field"
 
@@ -459,7 +434,6 @@
 
     goto :goto_0
 
-    .line 1052
     :pswitch_c
     const-string v1, "android.sensor.magnetic_field_uncalibrated"
 
@@ -467,7 +441,6 @@
 
     goto :goto_0
 
-    .line 1055
     :pswitch_d
     const-string v1, "android.sensor.pick_up_gesture"
 
@@ -475,7 +448,6 @@
 
     goto :goto_0
 
-    .line 1058
     :pswitch_e
     const-string v1, "android.sensor.pressure"
 
@@ -483,7 +455,6 @@
 
     goto :goto_0
 
-    .line 1061
     :pswitch_f
     const-string v1, "android.sensor.proximity"
 
@@ -491,7 +462,6 @@
 
     goto :goto_0
 
-    .line 1064
     :pswitch_10
     const-string v1, "android.sensor.relative_humidity"
 
@@ -499,7 +469,6 @@
 
     goto :goto_0
 
-    .line 1067
     :pswitch_11
     const-string v1, "android.sensor.rotation_vector"
 
@@ -507,7 +476,6 @@
 
     goto :goto_0
 
-    .line 1070
     :pswitch_12
     const-string v1, "android.sensor.significant_motion"
 
@@ -515,7 +483,6 @@
 
     goto :goto_0
 
-    .line 1073
     :pswitch_13
     const-string v1, "android.sensor.step_counter"
 
@@ -523,7 +490,6 @@
 
     goto :goto_0
 
-    .line 1076
     :pswitch_14
     const-string v1, "android.sensor.step_detector"
 
@@ -531,7 +497,6 @@
 
     goto :goto_0
 
-    .line 1079
     :pswitch_15
     const-string v1, "android.sensor.tilt_detector"
 
@@ -539,7 +504,6 @@
 
     goto :goto_0
 
-    .line 1082
     :pswitch_16
     const-string v1, "android.sensor.wake_gesture"
 
@@ -547,7 +511,6 @@
 
     goto :goto_0
 
-    .line 1085
     :pswitch_17
     const-string v1, "android.sensor.orientation"
 
@@ -555,7 +518,6 @@
 
     goto :goto_0
 
-    .line 1088
     :pswitch_18
     const-string v1, "android.sensor.temperature"
 
@@ -563,7 +525,6 @@
 
     goto :goto_0
 
-    .line 1014
     nop
 
     :pswitch_data_0
@@ -602,7 +563,6 @@
     .locals 1
 
     .prologue
-    .line 900
     iget v0, p0, Landroid/hardware/Sensor;->mFifoMaxEventCount:I
 
     return v0
@@ -612,7 +572,6 @@
     .locals 1
 
     .prologue
-    .line 890
     iget v0, p0, Landroid/hardware/Sensor;->mFifoReservedEventCount:I
 
     return v0
@@ -622,7 +581,6 @@
     .locals 1
 
     .prologue
-    .line 920
     iget v0, p0, Landroid/hardware/Sensor;->mHandle:I
 
     return v0
@@ -632,7 +590,6 @@
     .locals 1
 
     .prologue
-    .line 933
     iget v0, p0, Landroid/hardware/Sensor;->mMaxDelay:I
 
     return v0
@@ -642,7 +599,6 @@
     .locals 1
 
     .prologue
-    .line 859
     iget v0, p0, Landroid/hardware/Sensor;->mMaxRange:F
 
     return v0
@@ -652,7 +608,6 @@
     .locals 1
 
     .prologue
-    .line 882
     iget v0, p0, Landroid/hardware/Sensor;->mMinDelay:I
 
     return v0
@@ -662,7 +617,6 @@
     .locals 1
 
     .prologue
-    .line 831
     iget-object v0, p0, Landroid/hardware/Sensor;->mName:Ljava/lang/String;
 
     return-object v0
@@ -672,7 +626,6 @@
     .locals 1
 
     .prologue
-    .line 873
     iget v0, p0, Landroid/hardware/Sensor;->mPower:F
 
     return v0
@@ -682,7 +635,6 @@
     .locals 1
 
     .prologue
-    .line 782
     iget v0, p0, Landroid/hardware/Sensor;->mFlags:I
 
     and-int/lit8 v0, v0, 0xe
@@ -696,7 +648,6 @@
     .locals 1
 
     .prologue
-    .line 915
     iget-object v0, p0, Landroid/hardware/Sensor;->mRequiredPermission:Ljava/lang/String;
 
     return-object v0
@@ -706,7 +657,6 @@
     .locals 1
 
     .prologue
-    .line 866
     iget v0, p0, Landroid/hardware/Sensor;->mResolution:F
 
     return v0
@@ -716,7 +666,6 @@
     .locals 1
 
     .prologue
-    .line 907
     iget-object v0, p0, Landroid/hardware/Sensor;->mStringType:Ljava/lang/String;
 
     return-object v0
@@ -726,7 +675,6 @@
     .locals 1
 
     .prologue
-    .line 845
     iget v0, p0, Landroid/hardware/Sensor;->mType:I
 
     return v0
@@ -736,7 +684,6 @@
     .locals 1
 
     .prologue
-    .line 838
     iget-object v0, p0, Landroid/hardware/Sensor;->mVendor:Ljava/lang/String;
 
     return-object v0
@@ -746,7 +693,6 @@
     .locals 1
 
     .prologue
-    .line 852
     iget v0, p0, Landroid/hardware/Sensor;->mVersion:I
 
     return v0
@@ -756,7 +702,6 @@
     .locals 1
 
     .prologue
-    .line 988
     iget v0, p0, Landroid/hardware/Sensor;->mFlags:I
 
     and-int/lit8 v0, v0, 0x10
@@ -780,7 +725,6 @@
     .locals 1
 
     .prologue
-    .line 974
     iget v0, p0, Landroid/hardware/Sensor;->mFlags:I
 
     and-int/lit8 v0, v0, 0x1
@@ -804,13 +748,10 @@
     .param p2, "res"    # F
 
     .prologue
-    .line 992
     iput p1, p0, Landroid/hardware/Sensor;->mMaxRange:F
 
-    .line 993
     iput p2, p0, Landroid/hardware/Sensor;->mResolution:F
 
-    .line 994
     return-void
 .end method
 
@@ -818,12 +759,11 @@
     .locals 2
 
     .prologue
-    .line 998
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "{Sensor name=\""
+    const-string v1, "{Sensor name=\""
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -919,7 +859,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

@@ -25,7 +25,6 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 655
     if-eqz p2, :cond_0
 
     invoke-virtual {p2}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
@@ -39,13 +38,10 @@
 
     invoke-direct {p0, v0, v1, v2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
 
-    .line 656
     iput-object p1, p0, Landroid/hardware/display/DisplayManagerGlobal$ExtendedDisplayListenerDelegate;->mListener:Landroid/hardware/display/ExtendedDisplayListener;
 
-    .line 657
     return-void
 
-    .line 655
     :cond_0
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
@@ -60,12 +56,10 @@
     .locals 1
 
     .prologue
-    .line 665
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Landroid/hardware/display/DisplayManagerGlobal$ExtendedDisplayListenerDelegate;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
-    .line 666
     return-void
 .end method
 
@@ -76,16 +70,13 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 670
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 696
     :goto_0
     return-void
 
-    .line 672
     :pswitch_0
     const-string v0, "DisplayManager"
 
@@ -93,7 +84,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "handleMessage EVENT_CONNECTIONSTATUS_CHANGED= "
+    const-string v2, "handleMessage EVENT_CONNECTIONSTATUS_CHANGED= "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -111,7 +102,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 673
     iget-object v0, p0, Landroid/hardware/display/DisplayManagerGlobal$ExtendedDisplayListenerDelegate;->mListener:Landroid/hardware/display/ExtendedDisplayListener;
 
     iget v1, p1, Landroid/os/Message;->arg1:I
@@ -120,7 +110,6 @@
 
     goto :goto_0
 
-    .line 676
     :pswitch_1
     const-string v0, "DisplayManager"
 
@@ -128,7 +117,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "handleMessage EVENT_QOSLEVEL_CHANGED= "
+    const-string v2, "handleMessage EVENT_QOSLEVEL_CHANGED= "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -146,7 +135,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 677
     iget-object v0, p0, Landroid/hardware/display/DisplayManagerGlobal$ExtendedDisplayListenerDelegate;->mListener:Landroid/hardware/display/ExtendedDisplayListener;
 
     iget v1, p1, Landroid/os/Message;->arg1:I
@@ -155,7 +143,6 @@
 
     goto :goto_0
 
-    .line 680
     :pswitch_2
     const-string v0, "DisplayManager"
 
@@ -163,7 +150,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "handleMessage EVENT_BRIDGE_STATUS_CHANGED= "
+    const-string v2, "handleMessage EVENT_BRIDGE_STATUS_CHANGED= "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -181,7 +168,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 681
     iget-object v0, p0, Landroid/hardware/display/DisplayManagerGlobal$ExtendedDisplayListenerDelegate;->mListener:Landroid/hardware/display/ExtendedDisplayListener;
 
     iget v1, p1, Landroid/os/Message;->arg1:I
@@ -190,7 +176,6 @@
 
     goto :goto_0
 
-    .line 685
     :pswitch_3
     const-string v1, "DisplayManager"
 
@@ -198,7 +183,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "handleMessage EVENT_DLNA_CONNECTIONSTATUS_CHANGED= "
+    const-string v3, "handleMessage EVENT_DLNA_CONNECTIONSTATUS_CHANGED= "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -216,7 +201,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 686
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal$ExtendedDisplayListenerDelegate;->mListener:Landroid/hardware/display/ExtendedDisplayListener;
 
     iget v2, p1, Landroid/os/Message;->arg1:I
@@ -233,7 +217,6 @@
 
     goto :goto_1
 
-    .line 691
     :pswitch_4
     const-string v0, "DisplayManager"
 
@@ -241,7 +224,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "handleMessage EVENT_SCREENSHARING_CONNECTIONSTATUS_CHANGED= "
+    const-string v2, "handleMessage EVENT_SCREENSHARING_CONNECTIONSTATUS_CHANGED= "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -259,7 +242,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 692
     iget-object v0, p0, Landroid/hardware/display/DisplayManagerGlobal$ExtendedDisplayListenerDelegate;->mListener:Landroid/hardware/display/ExtendedDisplayListener;
 
     iget v1, p1, Landroid/os/Message;->arg1:I
@@ -268,7 +250,6 @@
 
     goto/16 :goto_0
 
-    .line 670
     :pswitch_data_0
     .packed-switch 0x4
         :pswitch_0
@@ -285,17 +266,14 @@
     .param p2, "event"    # I
 
     .prologue
-    .line 660
     const/4 v1, 0x0
 
     invoke-virtual {p0, p2, p1, v1}, Landroid/hardware/display/DisplayManagerGlobal$ExtendedDisplayListenerDelegate;->obtainMessage(III)Landroid/os/Message;
 
     move-result-object v0
 
-    .line 661
     .local v0, "msg":Landroid/os/Message;
     invoke-virtual {p0, v0}, Landroid/hardware/display/DisplayManagerGlobal$ExtendedDisplayListenerDelegate;->sendMessage(Landroid/os/Message;)Z
 
-    .line 662
     return-void
 .end method

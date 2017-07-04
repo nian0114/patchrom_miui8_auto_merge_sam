@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 604
     iput-object p1, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/internal/PhoneStateMonitorRunner$2;->this$0:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/internal/PhoneStateMonitorRunner;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,31 +38,25 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 609
     if-nez p1, :cond_1
 
-    .line 610
     const-string v0, " context is null"
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 618
     :cond_0
     :goto_0
     return-void
 
-    .line 611
     :cond_1
     if-nez p2, :cond_2
 
-    .line 612
     const-string v0, " intent is null"
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 613
     :cond_2
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -77,14 +70,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 614
     invoke-virtual {p2}, Landroid/content/Intent;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->info(Ljava/lang/String;)V
 
-    .line 616
     iget-object v0, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/internal/PhoneStateMonitorRunner$2;->this$0:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/internal/PhoneStateMonitorRunner;
 
     # invokes: Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/internal/PhoneStateMonitorRunner;->getState()V

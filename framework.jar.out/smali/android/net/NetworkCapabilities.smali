@@ -110,7 +110,6 @@
     .locals 1
 
     .prologue
-    .line 806
     new-instance v0, Landroid/net/NetworkCapabilities$1;
 
     invoke-direct {v0}, Landroid/net/NetworkCapabilities$1;-><init>()V
@@ -124,18 +123,14 @@
     .locals 2
 
     .prologue
-    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 42
     invoke-virtual {p0}, Landroid/net/NetworkCapabilities;->clearAll()V
 
-    .line 43
     const-wide/32 v0, 0xe000
 
     iput-wide v0, p0, Landroid/net/NetworkCapabilities;->mNetworkCapabilities:J
 
-    .line 44
     return-void
 .end method
 
@@ -144,43 +139,34 @@
     .param p1, "nc"    # Landroid/net/NetworkCapabilities;
 
     .prologue
-    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 47
     if-eqz p1, :cond_0
 
-    .line 48
     iget-wide v0, p1, Landroid/net/NetworkCapabilities;->mNetworkCapabilities:J
 
     iput-wide v0, p0, Landroid/net/NetworkCapabilities;->mNetworkCapabilities:J
 
-    .line 49
     iget-wide v0, p1, Landroid/net/NetworkCapabilities;->mTransportTypes:J
 
     iput-wide v0, p0, Landroid/net/NetworkCapabilities;->mTransportTypes:J
 
-    .line 50
     iget v0, p1, Landroid/net/NetworkCapabilities;->mLinkUpBandwidthKbps:I
 
     iput v0, p0, Landroid/net/NetworkCapabilities;->mLinkUpBandwidthKbps:I
 
-    .line 51
     iget v0, p1, Landroid/net/NetworkCapabilities;->mLinkDownBandwidthKbps:I
 
     iput v0, p0, Landroid/net/NetworkCapabilities;->mLinkDownBandwidthKbps:I
 
-    .line 52
     iget-object v0, p1, Landroid/net/NetworkCapabilities;->mNetworkSpecifier:Ljava/lang/String;
 
     iput-object v0, p0, Landroid/net/NetworkCapabilities;->mNetworkSpecifier:Ljava/lang/String;
 
-    .line 53
     iget v0, p1, Landroid/net/NetworkCapabilities;->mSignalStrength:I
 
     iput v0, p0, Landroid/net/NetworkCapabilities;->mSignalStrength:I
 
-    .line 55
     :cond_0
     return-void
 .end method
@@ -191,7 +177,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 37
     iput-wide p1, p0, Landroid/net/NetworkCapabilities;->mNetworkCapabilities:J
 
     return-wide p1
@@ -203,7 +188,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 37
     iput-wide p1, p0, Landroid/net/NetworkCapabilities;->mTransportTypes:J
 
     return-wide p1
@@ -215,7 +199,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 37
     iput p1, p0, Landroid/net/NetworkCapabilities;->mLinkUpBandwidthKbps:I
 
     return p1
@@ -227,7 +210,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 37
     iput p1, p0, Landroid/net/NetworkCapabilities;->mLinkDownBandwidthKbps:I
 
     return p1
@@ -239,7 +221,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 37
     iput-object p1, p0, Landroid/net/NetworkCapabilities;->mNetworkSpecifier:Ljava/lang/String;
 
     return-object p1
@@ -251,7 +232,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 37
     iput p1, p0, Landroid/net/NetworkCapabilities;->mSignalStrength:I
 
     return p1
@@ -262,7 +242,6 @@
     .param p1, "nc"    # Landroid/net/NetworkCapabilities;
 
     .prologue
-    .line 572
     iget v0, p0, Landroid/net/NetworkCapabilities;->mLinkUpBandwidthKbps:I
 
     iget v1, p1, Landroid/net/NetworkCapabilities;->mLinkUpBandwidthKbps:I
@@ -273,7 +252,6 @@
 
     iput v0, p0, Landroid/net/NetworkCapabilities;->mLinkUpBandwidthKbps:I
 
-    .line 574
     iget v0, p0, Landroid/net/NetworkCapabilities;->mLinkDownBandwidthKbps:I
 
     iget v1, p1, Landroid/net/NetworkCapabilities;->mLinkDownBandwidthKbps:I
@@ -284,7 +262,6 @@
 
     iput v0, p0, Landroid/net/NetworkCapabilities;->mLinkDownBandwidthKbps:I
 
-    .line 576
     return-void
 .end method
 
@@ -293,7 +270,6 @@
     .param p1, "nc"    # Landroid/net/NetworkCapabilities;
 
     .prologue
-    .line 335
     iget-wide v0, p0, Landroid/net/NetworkCapabilities;->mNetworkCapabilities:J
 
     iget-wide v2, p1, Landroid/net/NetworkCapabilities;->mNetworkCapabilities:J
@@ -302,7 +278,6 @@
 
     iput-wide v0, p0, Landroid/net/NetworkCapabilities;->mNetworkCapabilities:J
 
-    .line 336
     return-void
 .end method
 
@@ -311,7 +286,6 @@
     .param p1, "nc"    # Landroid/net/NetworkCapabilities;
 
     .prologue
-    .line 693
     iget v0, p0, Landroid/net/NetworkCapabilities;->mSignalStrength:I
 
     iget v1, p1, Landroid/net/NetworkCapabilities;->mSignalStrength:I
@@ -322,7 +296,6 @@
 
     iput v0, p0, Landroid/net/NetworkCapabilities;->mSignalStrength:I
 
-    .line 694
     return-void
 .end method
 
@@ -331,12 +304,10 @@
     .param p1, "nc"    # Landroid/net/NetworkCapabilities;
 
     .prologue
-    .line 623
     invoke-virtual {p1}, Landroid/net/NetworkCapabilities;->getNetworkSpecifier()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 624
     .local v0, "otherSpecifier":Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -344,11 +315,9 @@
 
     if-eqz v1, :cond_0
 
-    .line 629
     :goto_0
     return-void
 
-    .line 625
     :cond_0
     iget-object v1, p0, Landroid/net/NetworkCapabilities;->mNetworkSpecifier:Ljava/lang/String;
 
@@ -358,7 +327,6 @@
 
     if-nez v1, :cond_1
 
-    .line 626
     new-instance v1, Ljava/lang/IllegalStateException;
 
     const-string v2, "Can\'t combine two networkSpecifiers"
@@ -367,7 +335,6 @@
 
     throw v1
 
-    .line 628
     :cond_1
     invoke-virtual {p0, v0}, Landroid/net/NetworkCapabilities;->setNetworkSpecifier(Ljava/lang/String;)V
 
@@ -379,7 +346,6 @@
     .param p1, "nc"    # Landroid/net/NetworkCapabilities;
 
     .prologue
-    .line 494
     iget-wide v0, p0, Landroid/net/NetworkCapabilities;->mTransportTypes:J
 
     iget-wide v2, p1, Landroid/net/NetworkCapabilities;->mTransportTypes:J
@@ -388,7 +354,6 @@
 
     iput-wide v0, p0, Landroid/net/NetworkCapabilities;->mTransportTypes:J
 
-    .line 495
     return-void
 .end method
 
@@ -399,27 +364,22 @@
     .prologue
     const-wide/16 v8, 0x1
 
-    .line 322
     invoke-static {p1, p2}, Ljava/lang/Long;->bitCount(J)I
 
     move-result v4
 
-    .line 323
     .local v4, "size":I
     new-array v3, v4, [I
 
-    .line 324
     .local v3, "result":[I
     const/4 v0, 0x0
 
-    .line 325
     .local v0, "index":I
     const/4 v2, 0x0
 
     .local v2, "resource":I
     move v1, v0
 
-    .line 326
     .end local v0    # "index":I
     .local v1, "index":I
     :goto_0
@@ -429,7 +389,6 @@
 
     if-lez v5, :cond_0
 
-    .line 327
     and-long v6, p1, v8
 
     cmp-long v5, v6, v8
@@ -442,13 +401,11 @@
     .restart local v0    # "index":I
     aput v2, v3, v1
 
-    .line 328
     :goto_1
     const/4 v5, 0x1
 
     shr-long/2addr p1, v5
 
-    .line 329
     add-int/lit8 v2, v2, 0x1
 
     move v1, v0
@@ -457,7 +414,6 @@
     .restart local v1    # "index":I
     goto :goto_0
 
-    .line 331
     :cond_0
     return-object v3
 
@@ -474,7 +430,6 @@
     .param p1, "nc"    # Landroid/net/NetworkCapabilities;
 
     .prologue
-    .line 582
     iget v0, p0, Landroid/net/NetworkCapabilities;->mLinkUpBandwidthKbps:I
 
     iget v1, p1, Landroid/net/NetworkCapabilities;->mLinkUpBandwidthKbps:I
@@ -505,7 +460,6 @@
     .prologue
     const-wide/32 v4, -0x34001
 
-    .line 371
     iget-wide v0, p0, Landroid/net/NetworkCapabilities;->mNetworkCapabilities:J
 
     and-long/2addr v0, v4
@@ -534,7 +488,6 @@
     .param p1, "nc"    # Landroid/net/NetworkCapabilities;
 
     .prologue
-    .line 701
     iget v0, p0, Landroid/net/NetworkCapabilities;->mSignalStrength:I
 
     iget v1, p1, Landroid/net/NetworkCapabilities;->mSignalStrength:I
@@ -557,7 +510,6 @@
     .param p1, "nc"    # Landroid/net/NetworkCapabilities;
 
     .prologue
-    .line 635
     iget-object v0, p0, Landroid/net/NetworkCapabilities;->mNetworkSpecifier:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -566,14 +518,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 636
     iget-object v0, p1, Landroid/net/NetworkCapabilities;->mNetworkSpecifier:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
-    .line 638
     :goto_0
     return v0
 
@@ -594,7 +544,6 @@
     .param p1, "nc"    # Landroid/net/NetworkCapabilities;
 
     .prologue
-    .line 578
     iget v0, p0, Landroid/net/NetworkCapabilities;->mLinkUpBandwidthKbps:I
 
     iget v1, p1, Landroid/net/NetworkCapabilities;->mLinkUpBandwidthKbps:I
@@ -624,19 +573,15 @@
     .param p2, "onlyImmutable"    # Z
 
     .prologue
-    .line 358
     iget-wide v0, p0, Landroid/net/NetworkCapabilities;->mNetworkCapabilities:J
 
-    .line 359
     .local v0, "networkCapabilities":J
     if-eqz p2, :cond_0
 
-    .line 360
     const-wide/32 v2, -0x34001
 
     and-long/2addr v0, v2
 
-    .line 362
     :cond_0
     iget-wide v2, p1, Landroid/net/NetworkCapabilities;->mNetworkCapabilities:J
 
@@ -663,7 +608,6 @@
     .param p2, "onlyImmutable"    # Z
 
     .prologue
-    .line 726
     if-eqz p1, :cond_2
 
     invoke-direct {p0, p1, p2}, Landroid/net/NetworkCapabilities;->satisfiedByNetCapabilities(Landroid/net/NetworkCapabilities;Z)Z
@@ -718,7 +662,6 @@
     .param p1, "nc"    # Landroid/net/NetworkCapabilities;
 
     .prologue
-    .line 697
     iget v0, p0, Landroid/net/NetworkCapabilities;->mSignalStrength:I
 
     iget v1, p1, Landroid/net/NetworkCapabilities;->mSignalStrength:I
@@ -741,7 +684,6 @@
     .param p1, "nc"    # Landroid/net/NetworkCapabilities;
 
     .prologue
-    .line 631
     iget-object v0, p0, Landroid/net/NetworkCapabilities;->mNetworkSpecifier:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -779,7 +721,6 @@
     .prologue
     const-wide/16 v4, 0x0
 
-    .line 497
     iget-wide v0, p0, Landroid/net/NetworkCapabilities;->mTransportTypes:J
 
     cmp-long v0, v0, v4
@@ -815,14 +756,12 @@
     .param p1, "capability"    # I
 
     .prologue
-    .line 275
     if-ltz p1, :cond_0
 
     const/16 v0, 0x15
 
     if-le p1, v0, :cond_1
 
-    .line 276
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -832,7 +771,6 @@
 
     throw v0
 
-    .line 278
     :cond_1
     iget-wide v0, p0, Landroid/net/NetworkCapabilities;->mNetworkCapabilities:J
 
@@ -846,7 +784,6 @@
 
     iput-wide v0, p0, Landroid/net/NetworkCapabilities;->mNetworkCapabilities:J
 
-    .line 279
     return-object p0
 .end method
 
@@ -855,14 +792,12 @@
     .param p1, "transportType"    # I
 
     .prologue
-    .line 445
     if-ltz p1, :cond_0
 
     const/4 v0, 0x4
 
     if-le p1, v0, :cond_1
 
-    .line 446
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -872,7 +807,6 @@
 
     throw v0
 
-    .line 448
     :cond_1
     iget-wide v0, p0, Landroid/net/NetworkCapabilities;->mTransportTypes:J
 
@@ -886,12 +820,10 @@
 
     iput-wide v0, p0, Landroid/net/NetworkCapabilities;->mTransportTypes:J
 
-    .line 449
     iget-object v0, p0, Landroid/net/NetworkCapabilities;->mNetworkSpecifier:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Landroid/net/NetworkCapabilities;->setNetworkSpecifier(Ljava/lang/String;)V
 
-    .line 450
     return-object p0
 .end method
 
@@ -899,31 +831,26 @@
     .locals 2
 
     .prologue
-    .line 63
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Landroid/net/NetworkCapabilities;->mTransportTypes:J
 
     iput-wide v0, p0, Landroid/net/NetworkCapabilities;->mNetworkCapabilities:J
 
-    .line 64
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/net/NetworkCapabilities;->mLinkDownBandwidthKbps:I
 
     iput v0, p0, Landroid/net/NetworkCapabilities;->mLinkUpBandwidthKbps:I
 
-    .line 65
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/net/NetworkCapabilities;->mNetworkSpecifier:Ljava/lang/String;
 
-    .line 66
     const/high16 v0, -0x80000000
 
     iput v0, p0, Landroid/net/NetworkCapabilities;->mSignalStrength:I
 
-    .line 67
     return-void
 .end method
 
@@ -932,22 +859,16 @@
     .param p1, "nc"    # Landroid/net/NetworkCapabilities;
 
     .prologue
-    .line 709
     invoke-direct {p0, p1}, Landroid/net/NetworkCapabilities;->combineNetCapabilities(Landroid/net/NetworkCapabilities;)V
 
-    .line 710
     invoke-direct {p0, p1}, Landroid/net/NetworkCapabilities;->combineTransportTypes(Landroid/net/NetworkCapabilities;)V
 
-    .line 711
     invoke-direct {p0, p1}, Landroid/net/NetworkCapabilities;->combineLinkBandwidths(Landroid/net/NetworkCapabilities;)V
 
-    .line 712
     invoke-direct {p0, p1}, Landroid/net/NetworkCapabilities;->combineSpecifiers(Landroid/net/NetworkCapabilities;)V
 
-    .line 713
     invoke-direct {p0, p1}, Landroid/net/NetworkCapabilities;->combineSignalStrength(Landroid/net/NetworkCapabilities;)V
 
-    .line 714
     return-void
 .end method
 
@@ -955,7 +876,6 @@
     .locals 1
 
     .prologue
-    .line 794
     const/4 v0, 0x0
 
     return v0
@@ -965,7 +885,6 @@
     .locals 4
 
     .prologue
-    .line 346
     const/16 v0, 0x10
 
     invoke-virtual {p0, v0}, Landroid/net/NetworkCapabilities;->hasCapability(I)Z
@@ -976,11 +895,9 @@
 
     const-string v0, "NET_CAPABILITY_VALIDATED"
 
-    .line 354
     :goto_0
     return-object v0
 
-    .line 347
     :cond_0
     const/16 v0, 0x11
 
@@ -994,7 +911,6 @@
 
     goto :goto_0
 
-    .line 349
     :cond_1
     iget-wide v0, p0, Landroid/net/NetworkCapabilities;->mNetworkCapabilities:J
 
@@ -1008,12 +924,11 @@
 
     if-eqz v0, :cond_2
 
-    .line 350
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "unknown non-requestable capabilities "
+    const-string v1, "unknown non-requestable capabilities "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1035,7 +950,6 @@
 
     goto :goto_0
 
-    .line 352
     :cond_2
     iget v0, p0, Landroid/net/NetworkCapabilities;->mLinkUpBandwidthKbps:I
 
@@ -1046,11 +960,10 @@
     if-eqz v0, :cond_4
 
     :cond_3
-    const-string/jumbo v0, "link bandwidth"
+    const-string v0, "link bandwidth"
 
     goto :goto_0
 
-    .line 353
     :cond_4
     invoke-virtual {p0}, Landroid/net/NetworkCapabilities;->hasSignalStrength()Z
 
@@ -1058,11 +971,10 @@
 
     if-eqz v0, :cond_5
 
-    const-string/jumbo v0, "signalStrength"
+    const-string v0, "signalStrength"
 
     goto :goto_0
 
-    .line 354
     :cond_5
     const/4 v0, 0x0
 
@@ -1076,10 +988,8 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 763
     if-nez p1, :cond_1
 
-    .line 764
     :cond_0
     :goto_0
     return v0
@@ -1115,14 +1025,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 771
     if-eqz p1, :cond_0
 
     instance-of v2, p1, Landroid/net/NetworkCapabilities;
 
     if-nez v2, :cond_1
 
-    .line 773
     :cond_0
     :goto_0
     return v1
@@ -1130,10 +1038,8 @@
     :cond_1
     move-object v0, p1
 
-    .line 772
     check-cast v0, Landroid/net/NetworkCapabilities;
 
-    .line 773
     .local v0, "that":Landroid/net/NetworkCapabilities;
     invoke-virtual {p0, v0}, Landroid/net/NetworkCapabilities;->equalsNetCapabilities(Landroid/net/NetworkCapabilities;)Z
 
@@ -1175,7 +1081,6 @@
     .param p1, "nc"    # Landroid/net/NetworkCapabilities;
 
     .prologue
-    .line 367
     iget-wide v0, p1, Landroid/net/NetworkCapabilities;->mNetworkCapabilities:J
 
     iget-wide v2, p0, Landroid/net/NetworkCapabilities;->mNetworkCapabilities:J
@@ -1200,7 +1105,6 @@
     .param p1, "nc"    # Landroid/net/NetworkCapabilities;
 
     .prologue
-    .line 502
     iget-wide v0, p1, Landroid/net/NetworkCapabilities;->mTransportTypes:J
 
     iget-wide v2, p0, Landroid/net/NetworkCapabilities;->mTransportTypes:J
@@ -1224,16 +1128,13 @@
     .locals 3
 
     .prologue
-    .line 900
     const-string v0, ""
 
-    .line 901
     .local v0, "apnType":Ljava/lang/String;
     invoke-virtual {p0}, Landroid/net/NetworkCapabilities;->getCapabilities()[I
 
     move-result-object v1
 
-    .line 903
     .local v1, "types":[I
     const/4 v2, 0x0
 
@@ -1241,66 +1142,55 @@
 
     packed-switch v2, :pswitch_data_0
 
-    .line 916
     :goto_0
     :pswitch_0
     return-object v0
 
-    .line 904
     :pswitch_1
-    const-string/jumbo v0, "ims"
+    const-string v0, "ims"
 
     goto :goto_0
 
-    .line 905
     :pswitch_2
     const-string v0, "fota"
 
     goto :goto_0
 
-    .line 906
     :pswitch_3
     const-string v0, "default"
 
     goto :goto_0
 
-    .line 907
     :pswitch_4
-    const-string/jumbo v0, "supl"
+    const-string v0, "supl"
 
     goto :goto_0
 
-    .line 908
     :pswitch_5
     const-string v0, "dun"
 
     goto :goto_0
 
-    .line 909
     :pswitch_6
-    const-string/jumbo v0, "mms"
+    const-string v0, "mms"
 
     goto :goto_0
 
-    .line 910
     :pswitch_7
     const-string v0, "cbs"
 
     goto :goto_0
 
-    .line 911
     :pswitch_8
-    const-string/jumbo v0, "xcap"
+    const-string v0, "xcap"
 
     goto :goto_0
 
-    .line 912
     :pswitch_9
     const-string v0, "cas"
 
     goto :goto_0
 
-    .line 903
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_6
@@ -1329,7 +1219,6 @@
     .locals 2
 
     .prologue
-    .line 305
     iget-wide v0, p0, Landroid/net/NetworkCapabilities;->mNetworkCapabilities:J
 
     invoke-direct {p0, v0, v1}, Landroid/net/NetworkCapabilities;->enumerateBits(J)[I
@@ -1344,7 +1233,6 @@
     .param p1, "nc"    # Landroid/net/NetworkCapabilities;
 
     .prologue
-    .line 890
     iget-wide v2, p0, Landroid/net/NetworkCapabilities;->mNetworkCapabilities:J
 
     const-wide/16 v4, -0x1
@@ -1355,7 +1243,6 @@
 
     and-long v0, v2, v4
 
-    .line 891
     .local v0, "diffNc":J
     invoke-direct {p0, v0, v1}, Landroid/net/NetworkCapabilities;->enumerateBits(J)[I
 
@@ -1368,7 +1255,6 @@
     .locals 1
 
     .prologue
-    .line 568
     iget v0, p0, Landroid/net/NetworkCapabilities;->mLinkDownBandwidthKbps:I
 
     return v0
@@ -1378,7 +1264,6 @@
     .locals 1
 
     .prologue
-    .line 539
     iget v0, p0, Landroid/net/NetworkCapabilities;->mLinkUpBandwidthKbps:I
 
     return v0
@@ -1388,7 +1273,6 @@
     .locals 1
 
     .prologue
-    .line 619
     iget-object v0, p0, Landroid/net/NetworkCapabilities;->mNetworkSpecifier:Ljava/lang/String;
 
     return-object v0
@@ -1398,7 +1282,6 @@
     .locals 1
 
     .prologue
-    .line 689
     iget v0, p0, Landroid/net/NetworkCapabilities;->mSignalStrength:I
 
     return v0
@@ -1408,7 +1291,6 @@
     .locals 2
 
     .prologue
-    .line 477
     iget-wide v0, p0, Landroid/net/NetworkCapabilities;->mTransportTypes:J
 
     invoke-direct {p0, v0, v1}, Landroid/net/NetworkCapabilities;->enumerateBits(J)[I
@@ -1427,7 +1309,6 @@
 
     const/4 v1, 0x0
 
-    .line 315
     if-ltz p1, :cond_0
 
     const/16 v2, 0x15
@@ -1437,7 +1318,6 @@
     :cond_0
     move v0, v1
 
-    .line 318
     :cond_1
     :goto_0
     return v0
@@ -1466,7 +1346,6 @@
     .locals 2
 
     .prologue
-    .line 679
     iget v0, p0, Landroid/net/NetworkCapabilities;->mSignalStrength:I
 
     const/high16 v1, -0x80000000
@@ -1493,7 +1372,6 @@
 
     const/4 v1, 0x0
 
-    .line 487
     if-ltz p1, :cond_0
 
     const/4 v2, 0x4
@@ -1503,7 +1381,6 @@
     :cond_0
     move v0, v1
 
-    .line 490
     :cond_1
     :goto_0
     return v0
@@ -1536,7 +1413,6 @@
 
     const/16 v4, 0x20
 
-    .line 782
     iget-wide v0, p0, Landroid/net/NetworkCapabilities;->mNetworkCapabilities:J
 
     and-long/2addr v0, v6
@@ -1624,7 +1500,6 @@
     .prologue
     const-wide/16 v4, 0x0
 
-    .line 387
     iget-wide v0, p0, Landroid/net/NetworkCapabilities;->mNetworkCapabilities:J
 
     const-wide/32 v2, -0xe7bd
@@ -1645,12 +1520,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 391
     const/16 v0, 0xd
 
     invoke-virtual {p0, v0}, Landroid/net/NetworkCapabilities;->removeCapability(I)Landroid/net/NetworkCapabilities;
 
-    .line 393
     :cond_0
     return-void
 .end method
@@ -1660,14 +1533,12 @@
     .param p1, "capability"    # I
 
     .prologue
-    .line 290
     if-ltz p1, :cond_0
 
     const/16 v0, 0x15
 
     if-le p1, v0, :cond_1
 
-    .line 291
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -1677,7 +1548,6 @@
 
     throw v0
 
-    .line 293
     :cond_1
     iget-wide v0, p0, Landroid/net/NetworkCapabilities;->mNetworkCapabilities:J
 
@@ -1693,7 +1563,6 @@
 
     iput-wide v0, p0, Landroid/net/NetworkCapabilities;->mNetworkCapabilities:J
 
-    .line 294
     return-object p0
 .end method
 
@@ -1702,14 +1571,12 @@
     .param p1, "transportType"    # I
 
     .prologue
-    .line 461
     if-ltz p1, :cond_0
 
     const/4 v0, 0x4
 
     if-le p1, v0, :cond_1
 
-    .line 462
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -1719,7 +1586,6 @@
 
     throw v0
 
-    .line 464
     :cond_1
     iget-wide v0, p0, Landroid/net/NetworkCapabilities;->mTransportTypes:J
 
@@ -1735,12 +1601,10 @@
 
     iput-wide v0, p0, Landroid/net/NetworkCapabilities;->mTransportTypes:J
 
-    .line 465
     iget-object v0, p0, Landroid/net/NetworkCapabilities;->mNetworkSpecifier:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Landroid/net/NetworkCapabilities;->setNetworkSpecifier(Ljava/lang/String;)V
 
-    .line 466
     return-object p0
 .end method
 
@@ -1749,7 +1613,6 @@
     .param p1, "nc"    # Landroid/net/NetworkCapabilities;
 
     .prologue
-    .line 753
     const/4 v0, 0x1
 
     invoke-direct {p0, p1, v0}, Landroid/net/NetworkCapabilities;->satisfiedByNetworkCapabilities(Landroid/net/NetworkCapabilities;Z)Z
@@ -1764,7 +1627,6 @@
     .param p1, "nc"    # Landroid/net/NetworkCapabilities;
 
     .prologue
-    .line 742
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Landroid/net/NetworkCapabilities;->satisfiedByNetworkCapabilities(Landroid/net/NetworkCapabilities;Z)Z
@@ -1779,10 +1641,8 @@
     .param p1, "downKbps"    # I
 
     .prologue
-    .line 558
     iput p1, p0, Landroid/net/NetworkCapabilities;->mLinkDownBandwidthKbps:I
 
-    .line 559
     return-void
 .end method
 
@@ -1791,10 +1651,8 @@
     .param p1, "upKbps"    # I
 
     .prologue
-    .line 529
     iput p1, p0, Landroid/net/NetworkCapabilities;->mLinkUpBandwidthKbps:I
 
-    .line 530
     return-void
 .end method
 
@@ -1803,7 +1661,6 @@
     .param p1, "networkSpecifier"    # Ljava/lang/String;
 
     .prologue
-    .line 604
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -1820,7 +1677,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 605
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Must have a single transport specified to use setNetworkSpecifier"
@@ -1829,11 +1685,9 @@
 
     throw v0
 
-    .line 608
     :cond_0
     iput-object p1, p0, Landroid/net/NetworkCapabilities;->mNetworkSpecifier:Ljava/lang/String;
 
-    .line 609
     return-void
 .end method
 
@@ -1842,10 +1696,8 @@
     .param p1, "signalStrength"    # I
 
     .prologue
-    .line 670
     iput p1, p0, Landroid/net/NetworkCapabilities;->mSignalStrength:I
 
-    .line 671
     return-void
 .end method
 
@@ -1853,12 +1705,10 @@
     .locals 10
 
     .prologue
-    .line 828
     invoke-virtual {p0}, Landroid/net/NetworkCapabilities;->getTransportTypes()[I
 
     move-result-object v6
 
-    .line 829
     .local v6, "types":[I
     array-length v8, v6
 
@@ -1866,7 +1716,6 @@
 
     const-string v5, " Transports: "
 
-    .line 830
     .local v5, "transports":Ljava/lang/String;
     :goto_0
     const/4 v2, 0x0
@@ -1878,12 +1727,10 @@
 
     if-ge v2, v8, :cond_2
 
-    .line 831
     aget v8, v6, v2
 
     packed-switch v8, :pswitch_data_0
 
-    .line 838
     :goto_2
     add-int/lit8 v2, v2, 0x1
 
@@ -1899,7 +1746,7 @@
 
     move-result-object v8
 
-    const-string/jumbo v9, "|"
+    const-string v9, "|"
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1911,7 +1758,6 @@
 
     goto :goto_1
 
-    .line 829
     .end local v2    # "i":I
     .end local v5    # "transports":Ljava/lang/String;
     :cond_1
@@ -1919,7 +1765,6 @@
 
     goto :goto_0
 
-    .line 832
     .restart local v2    # "i":I
     .restart local v5    # "transports":Ljava/lang/String;
     :pswitch_0
@@ -1943,7 +1788,6 @@
 
     goto :goto_2
 
-    .line 833
     :pswitch_1
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -1965,7 +1809,6 @@
 
     goto :goto_2
 
-    .line 834
     :pswitch_2
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -1987,7 +1830,6 @@
 
     goto :goto_2
 
-    .line 835
     :pswitch_3
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -2009,7 +1851,6 @@
 
     goto :goto_2
 
-    .line 836
     :pswitch_4
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -2031,20 +1872,17 @@
 
     goto :goto_2
 
-    .line 841
     :cond_2
     invoke-virtual {p0}, Landroid/net/NetworkCapabilities;->getCapabilities()[I
 
     move-result-object v6
 
-    .line 842
     array-length v8, v6
 
     if-lez v8, :cond_4
 
     const-string v0, " Capabilities: "
 
-    .line 843
     .local v0, "capabilities":Ljava/lang/String;
     :goto_3
     const/4 v2, 0x0
@@ -2055,12 +1893,10 @@
 
     if-ge v2, v8, :cond_5
 
-    .line 844
     aget v8, v6, v2
 
     packed-switch v8, :pswitch_data_1
 
-    .line 869
     :goto_5
     :pswitch_5
     add-int/lit8 v2, v2, 0x1
@@ -2089,14 +1925,12 @@
 
     goto :goto_4
 
-    .line 842
     .end local v0    # "capabilities":Ljava/lang/String;
     :cond_4
     const-string v0, ""
 
     goto :goto_3
 
-    .line 845
     .restart local v0    # "capabilities":Ljava/lang/String;
     :pswitch_6
     new-instance v8, Ljava/lang/StringBuilder;
@@ -2119,7 +1953,6 @@
 
     goto :goto_5
 
-    .line 846
     :pswitch_7
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -2141,7 +1974,6 @@
 
     goto :goto_5
 
-    .line 847
     :pswitch_8
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -2163,7 +1995,6 @@
 
     goto :goto_5
 
-    .line 848
     :pswitch_9
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -2185,7 +2016,6 @@
 
     goto :goto_5
 
-    .line 849
     :pswitch_a
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -2207,7 +2037,6 @@
 
     goto :goto_5
 
-    .line 850
     :pswitch_b
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -2229,7 +2058,6 @@
 
     goto/16 :goto_5
 
-    .line 851
     :pswitch_c
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -2251,7 +2079,6 @@
 
     goto/16 :goto_5
 
-    .line 852
     :pswitch_d
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -2273,7 +2100,6 @@
 
     goto/16 :goto_5
 
-    .line 853
     :pswitch_e
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -2295,7 +2121,6 @@
 
     goto/16 :goto_5
 
-    .line 854
     :pswitch_f
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -2317,7 +2142,6 @@
 
     goto/16 :goto_5
 
-    .line 855
     :pswitch_10
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -2339,7 +2163,6 @@
 
     goto/16 :goto_5
 
-    .line 856
     :pswitch_11
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -2361,7 +2184,6 @@
 
     goto/16 :goto_5
 
-    .line 857
     :pswitch_12
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -2383,7 +2205,6 @@
 
     goto/16 :goto_5
 
-    .line 858
     :pswitch_13
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -2405,7 +2226,6 @@
 
     goto/16 :goto_5
 
-    .line 859
     :pswitch_14
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -2427,7 +2247,6 @@
 
     goto/16 :goto_5
 
-    .line 860
     :pswitch_15
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -2449,7 +2268,6 @@
 
     goto/16 :goto_5
 
-    .line 861
     :pswitch_16
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -2471,7 +2289,6 @@
 
     goto/16 :goto_5
 
-    .line 862
     :pswitch_17
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -2493,7 +2310,6 @@
 
     goto/16 :goto_5
 
-    .line 863
     :pswitch_18
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -2515,7 +2331,6 @@
 
     goto/16 :goto_5
 
-    .line 865
     :pswitch_19
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -2537,7 +2352,6 @@
 
     goto/16 :goto_5
 
-    .line 867
     :pswitch_1a
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -2559,7 +2373,6 @@
 
     goto/16 :goto_5
 
-    .line 872
     :cond_5
     iget v8, p0, Landroid/net/NetworkCapabilities;->mLinkUpBandwidthKbps:I
 
@@ -2591,7 +2404,6 @@
 
     move-result-object v7
 
-    .line 874
     .local v7, "upBand":Ljava/lang/String;
     :goto_6
     iget v8, p0, Landroid/net/NetworkCapabilities;->mLinkDownBandwidthKbps:I
@@ -2624,7 +2436,6 @@
 
     move-result-object v1
 
-    .line 877
     .local v1, "dnBand":Ljava/lang/String;
     :goto_7
     iget-object v8, p0, Landroid/net/NetworkCapabilities;->mNetworkSpecifier:Ljava/lang/String;
@@ -2633,7 +2444,6 @@
 
     const-string v4, ""
 
-    .line 880
     .local v4, "specifier":Ljava/lang/String;
     :goto_8
     invoke-virtual {p0}, Landroid/net/NetworkCapabilities;->hasSignalStrength()Z
@@ -2662,7 +2472,6 @@
 
     move-result-object v3
 
-    .line 882
     .local v3, "signalStrength":Ljava/lang/String;
     :goto_9
     new-instance v8, Ljava/lang/StringBuilder;
@@ -2711,7 +2520,6 @@
 
     return-object v8
 
-    .line 872
     .end local v1    # "dnBand":Ljava/lang/String;
     .end local v3    # "signalStrength":Ljava/lang/String;
     .end local v4    # "specifier":Ljava/lang/String;
@@ -2721,14 +2529,12 @@
 
     goto :goto_6
 
-    .line 874
     .restart local v7    # "upBand":Ljava/lang/String;
     :cond_7
     const-string v1, ""
 
     goto :goto_7
 
-    .line 877
     .restart local v1    # "dnBand":Ljava/lang/String;
     :cond_8
     new-instance v8, Ljava/lang/StringBuilder;
@@ -2759,14 +2565,12 @@
 
     goto :goto_8
 
-    .line 880
     .restart local v4    # "specifier":Ljava/lang/String;
     :cond_9
     const-string v3, ""
 
     goto :goto_9
 
-    .line 831
     nop
 
     :pswitch_data_0
@@ -2778,7 +2582,6 @@
         :pswitch_4
     .end packed-switch
 
-    .line 844
     :pswitch_data_1
     .packed-switch 0x0
         :pswitch_6
@@ -2812,36 +2615,29 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 798
     iget-wide v0, p0, Landroid/net/NetworkCapabilities;->mNetworkCapabilities:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 799
     iget-wide v0, p0, Landroid/net/NetworkCapabilities;->mTransportTypes:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 800
     iget v0, p0, Landroid/net/NetworkCapabilities;->mLinkUpBandwidthKbps:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 801
     iget v0, p0, Landroid/net/NetworkCapabilities;->mLinkDownBandwidthKbps:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 802
     iget-object v0, p0, Landroid/net/NetworkCapabilities;->mNetworkSpecifier:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 803
     iget v0, p0, Landroid/net/NetworkCapabilities;->mSignalStrength:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 804
     return-void
 .end method

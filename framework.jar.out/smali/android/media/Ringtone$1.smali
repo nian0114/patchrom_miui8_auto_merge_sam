@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 130
     invoke-direct {p0}, Landroid/os/storage/StorageEventListener;-><init>()V
 
     return-void
@@ -34,8 +33,7 @@
     .param p3, "newState"    # Ljava/lang/String;
 
     .prologue
-    .line 132
-    const-string/jumbo v0, "mounted"
+    const-string v0, "mounted"
 
     invoke-virtual {v0, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -43,11 +41,9 @@
 
     if-eqz v0, :cond_0
 
-    .line 133
     # invokes: Landroid/media/Ringtone;->setExtSDCardPath()V
     invoke-static {}, Landroid/media/Ringtone;->access$000()V
 
-    .line 135
     :cond_0
     return-void
 .end method

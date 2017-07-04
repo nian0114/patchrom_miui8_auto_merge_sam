@@ -117,7 +117,6 @@
 
     const/4 v4, 0x0
 
-    .line 28
     new-instance v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     const-string v1, "SUCCESS"
@@ -128,7 +127,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->SUCCESS:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
-    .line 31
     new-instance v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     const-string v1, "ERROR_UNKNOWN"
@@ -139,7 +137,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_UNKNOWN:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
-    .line 34
     new-instance v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     const-string v1, "ERROR_I2C_COMM"
@@ -150,7 +147,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_I2C_COMM:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
-    .line 37
     new-instance v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     const-string v1, "ERROR_NOT_RECEIVE_ACK"
@@ -161,7 +157,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_NOT_RECEIVE_ACK:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
-    .line 40
     new-instance v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     const-string v1, "ERROR_SENSOR_HUB_MANAGER_FAULT"
@@ -172,7 +167,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_SENSOR_HUB_MANAGER_FAULT:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
-    .line 43
     new-instance v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     const-string v1, "ERROR_SENSOR_HUB_MANAGER_NULL_EXEPTION"
@@ -185,7 +179,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_SENSOR_HUB_MANAGER_NULL_EXEPTION:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
-    .line 46
     new-instance v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     const-string v1, "ERROR_LIBRARY_PARSER_NULL_EXEPTION"
@@ -198,7 +191,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_LIBRARY_PARSER_NULL_EXEPTION:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
-    .line 49
     new-instance v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     const-string v1, "ERROR_CMD_PACKET_HEADER_LENGTH"
@@ -211,7 +203,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_CMD_PACKET_HEADER_LENGTH:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
-    .line 53
     new-instance v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     const-string v1, "ERROR_CMD_PACKET_GENERATION_FAIL"
@@ -224,7 +215,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_CMD_PACKET_GENERATION_FAIL:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
-    .line 56
     new-instance v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     const-string v1, "ERROR_EMPTY_PARSER_MAP"
@@ -237,7 +227,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_EMPTY_PARSER_MAP:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
-    .line 59
     new-instance v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     const-string v1, "ERROR_LIBRARY_PARSER_OBJECT"
@@ -250,7 +239,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_LIBRARY_PARSER_OBJECT:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
-    .line 62
     new-instance v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     const-string v1, "ERROR_GET_SENSOR_HUB_EVENT"
@@ -263,7 +251,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_GET_SENSOR_HUB_EVENT:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
-    .line 65
     new-instance v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     const-string v1, "ERROR_NOT_REGISTERED_SERVICE"
@@ -276,7 +263,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_NOT_REGISTERED_SERVICE:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
-    .line 68
     new-instance v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     const-string v1, "ERROR_PACKET_LENGTH_ZERO"
@@ -289,7 +275,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_PACKET_LENGTH_ZERO:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
-    .line 71
     new-instance v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     const-string v1, "ERROR_PACKET_LENGTH_OVERFLOW"
@@ -302,7 +287,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_PACKET_LENGTH_OVERFLOW:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
-    .line 74
     new-instance v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     const-string v1, "ERROR_PACKET_HEADER_LENGTH"
@@ -315,7 +299,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_PACKET_HEADER_LENGTH:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
-    .line 78
     new-instance v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     const-string v1, "ERROR_INSTRUCTION_FIELD_PARSING"
@@ -328,7 +311,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_INSTRUCTION_FIELD_PARSING:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
-    .line 81
     new-instance v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     const-string v1, "ERROR_TYPE_FIELD_PARSING"
@@ -341,7 +323,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_TYPE_FIELD_PARSING:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
-    .line 84
     new-instance v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     const-string v1, "ERROR_DATA_FIELD_PARSING"
@@ -354,7 +335,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_DATA_FIELD_PARSING:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
-    .line 87
     new-instance v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     const-string v1, "ERROR_INSTRUCTION_VALUE"
@@ -367,7 +347,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_INSTRUCTION_VALUE:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
-    .line 90
     new-instance v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     const-string v1, "ERROR_TYPE_VALUE"
@@ -380,7 +359,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_TYPE_VALUE:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
-    .line 93
     new-instance v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     const-string v1, "ERROR_PACKET_LOST"
@@ -393,7 +371,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_PACKET_LOST:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
-    .line 96
     new-instance v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     const-string v1, "ERROR_EMPTY_REQUEST_LIST"
@@ -406,7 +383,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_EMPTY_REQUEST_LIST:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
-    .line 99
     new-instance v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     const-string v1, "ERROR_ENVIRONMENT_SENSOR_COUNT"
@@ -419,7 +395,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_ENVIRONMENT_SENSOR_COUNT:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
-    .line 102
     new-instance v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     const-string v1, "ERROR_STAYING_AREA_COUNT"
@@ -432,7 +407,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_STAYING_AREA_COUNT:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
-    .line 105
     new-instance v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     const-string v1, "ERROR_MOVING_COUNT"
@@ -445,7 +419,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_MOVING_COUNT:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
-    .line 108
     new-instance v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     const-string v1, "ERROR_ENVIRONMENT_LOGGING_STATE"
@@ -458,7 +431,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_ENVIRONMENT_LOGGING_STATE:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
-    .line 111
     new-instance v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     const-string v1, "ERROR_ENVIRONMENT_PACKAGE_SIZE"
@@ -471,7 +443,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_ENVIRONMENT_PACKAGE_SIZE:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
-    .line 114
     new-instance v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     const-string v1, "ERROR_PARSER_NOT_EXIST"
@@ -484,7 +455,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_PARSER_NOT_EXIST:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
-    .line 117
     new-instance v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     const-string v1, "ERROR_TIME_OUT_CHECK_THREAD_NULL_EXCEPTION"
@@ -497,7 +467,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_TIME_OUT_CHECK_THREAD_NULL_EXCEPTION:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
-    .line 121
     new-instance v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     const-string v1, "ERROR_TIME_OUT_CHECK_THREAD_NOT_ALIVE"
@@ -510,7 +479,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_TIME_OUT_CHECK_THREAD_NOT_ALIVE:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
-    .line 125
     new-instance v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     const-string v1, "ERROR_TIME_OUT_CHECK_SERVICE_NULL_EXCEPTION"
@@ -523,7 +491,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_TIME_OUT_CHECK_SERVICE_NULL_EXCEPTION:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
-    .line 129
     new-instance v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     const-string v1, "ERROR_CURRENT_POSITION_NULL_EXCEPTION"
@@ -536,7 +503,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_CURRENT_POSITION_NULL_EXCEPTION:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
-    .line 132
     new-instance v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     const-string v1, "ERROR_BATCH_DATA_COUNT"
@@ -549,7 +515,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_BATCH_DATA_COUNT:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
-    .line 135
     new-instance v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     const-string v1, "ERROR_MODE_FAULT"
@@ -562,7 +527,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_MODE_FAULT:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
-    .line 138
     new-instance v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     const-string v1, "ERROR_LOGGING_PACKAGE_SIZE"
@@ -575,7 +539,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_LOGGING_PACKAGE_SIZE:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
-    .line 141
     new-instance v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     const-string v1, "ERROR_CMD_PACKET_CREATION_FAULT"
@@ -588,7 +551,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_CMD_PACKET_CREATION_FAULT:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
-    .line 144
     new-instance v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     const-string v1, "ERROR_TIME_OUT"
@@ -601,7 +563,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_TIME_OUT:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
-    .line 25
     const/16 v0, 0x26
 
     new-array v0, v0, [Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
@@ -841,13 +802,10 @@
     .end annotation
 
     .prologue
-    .line 155
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 156
     iput-object p3, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->message:Ljava/lang/String;
 
-    .line 157
     return-void
 .end method
 
@@ -856,10 +814,8 @@
     .param p0, "code"    # I
 
     .prologue
-    .line 185
     const-string v4, ""
 
-    .line 187
     .local v4, "msg":Ljava/lang/String;
     invoke-static {}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->values()[Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
@@ -877,7 +833,6 @@
 
     aget-object v1, v0, v2
 
-    .line 188
     .local v1, "i":Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
     invoke-virtual {v1}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ordinal()I
 
@@ -885,10 +840,8 @@
 
     if-ne v5, p0, :cond_2
 
-    .line 189
     iget-object v4, v1, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->message:Ljava/lang/String;
 
-    .line 194
     .end local v1    # "i":Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
     :cond_0
     invoke-virtual {v4}, Ljava/lang/String;->isEmpty()Z
@@ -897,16 +850,13 @@
 
     if-eqz v5, :cond_1
 
-    .line 195
     const-string v5, "Message code is fault"
 
     invoke-static {v5}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 198
     :cond_1
     return-object v4
 
-    .line 187
     .restart local v1    # "i":Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
     :cond_2
     add-int/lit8 v2, v2, 0x1
@@ -919,7 +869,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 25
     const-class v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -935,7 +884,6 @@
     .locals 1
 
     .prologue
-    .line 25
     sget-object v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->$VALUES:[Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     invoke-virtual {v0}, [Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->clone()Ljava/lang/Object;
@@ -953,7 +901,6 @@
     .locals 1
 
     .prologue
-    .line 165
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ordinal()I
 
     move-result v0
@@ -965,7 +912,6 @@
     .locals 1
 
     .prologue
-    .line 174
     iget-object v0, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->message:Ljava/lang/String;
 
     return-object v0
@@ -975,6 +921,5 @@
     .locals 0
 
     .prologue
-    .line 211
     return-void
 .end method

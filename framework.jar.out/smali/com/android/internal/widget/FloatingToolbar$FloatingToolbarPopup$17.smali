@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1002
     iput-object p1, p0, Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarPopup$17;->this$0:Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarPopup;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "animation"    # Landroid/animation/ValueAnimator;
 
     .prologue
-    .line 1005
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object v2
@@ -52,7 +50,6 @@
 
     move-result v1
 
-    .line 1006
     .local v1, "val":F
     const/4 v0, 0x1
 
@@ -73,7 +70,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 1007
     iget-object v2, p0, Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarPopup$17;->this$0:Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarPopup;
 
     # getter for: Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarPopup;->mMainPanel:Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarMainPanel;
@@ -89,12 +85,10 @@
 
     invoke-virtual {v2, v1}, Landroid/view/View;->setAlpha(F)V
 
-    .line 1006
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1009
     :cond_0
     return-void
 .end method

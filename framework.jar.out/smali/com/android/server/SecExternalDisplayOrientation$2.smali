@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 272
     iput-object p1, p0, Lcom/android/server/SecExternalDisplayOrientation$2;->this$0:Lcom/android/server/SecExternalDisplayOrientation;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "displayId"    # I
 
     .prologue
-    .line 276
     iget-object v2, p0, Lcom/android/server/SecExternalDisplayOrientation$2;->this$0:Lcom/android/server/SecExternalDisplayOrientation;
 
     iget-object v2, v2, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
@@ -52,25 +50,20 @@
 
     move-result-object v1
 
-    .line 277
     .local v1, "tempDisplay":Landroid/view/Display;
     if-eqz v1, :cond_1
 
-    .line 278
     new-instance v0, Landroid/graphics/Point;
 
     invoke-direct {v0}, Landroid/graphics/Point;-><init>()V
 
-    .line 279
     .local v0, "mPoint":Landroid/graphics/Point;
     invoke-virtual {v1, v0}, Landroid/view/Display;->getSize(Landroid/graphics/Point;)V
 
-    .line 281
     sget-boolean v2, Lcom/android/server/SecExternalDisplayOrientation;->bIsLogEnabled:Z
 
     if-eqz v2, :cond_0
 
-    .line 282
     const-string v2, "SecExternalDisplayOrientation_Java"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -99,14 +92,13 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 283
     const-string v2, "SecExternalDisplayOrientation_Java"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "name="
+    const-string v4, "name="
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -134,7 +126,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "state= "
+    const-string v4, "state= "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -148,7 +140,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "size = "
+    const-string v4, "size = "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -160,7 +152,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "x"
+    const-string v4, "x"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -186,7 +178,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "type= "
+    const-string v4, "type= "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -210,7 +202,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 287
     :cond_0
     iget-object v2, p0, Lcom/android/server/SecExternalDisplayOrientation$2;->this$0:Lcom/android/server/SecExternalDisplayOrientation;
 
@@ -240,7 +231,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "wfdservice"
+    const-string v3, "wfdservice"
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -248,13 +239,11 @@
 
     if-eqz v2, :cond_1
 
-    .line 289
     iget-object v2, p0, Lcom/android/server/SecExternalDisplayOrientation$2;->this$0:Lcom/android/server/SecExternalDisplayOrientation;
 
     # setter for: Lcom/android/server/SecExternalDisplayOrientation;->mSidesyncDisplayId:I
     invoke-static {v2, p1}, Lcom/android/server/SecExternalDisplayOrientation;->access$202(Lcom/android/server/SecExternalDisplayOrientation;I)I
 
-    .line 290
     const-string v2, "SecExternalDisplayOrientation_Java"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -284,7 +273,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 294
     .end local v0    # "mPoint":Landroid/graphics/Point;
     :cond_1
     return-void
@@ -295,7 +283,6 @@
     .param p1, "displayId"    # I
 
     .prologue
-    .line 314
     iget-object v2, p0, Lcom/android/server/SecExternalDisplayOrientation$2;->this$0:Lcom/android/server/SecExternalDisplayOrientation;
 
     iget-object v2, v2, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
@@ -306,25 +293,20 @@
 
     move-result-object v1
 
-    .line 315
     .local v1, "tempDisplay":Landroid/view/Display;
     if-eqz v1, :cond_0
 
-    .line 316
     new-instance v0, Landroid/graphics/Point;
 
     invoke-direct {v0}, Landroid/graphics/Point;-><init>()V
 
-    .line 317
     .local v0, "mPoint":Landroid/graphics/Point;
     invoke-virtual {v1, v0}, Landroid/view/Display;->getSize(Landroid/graphics/Point;)V
 
-    .line 319
     sget-boolean v2, Lcom/android/server/SecExternalDisplayOrientation;->bIsLogEnabled:Z
 
     if-eqz v2, :cond_0
 
-    .line 320
     const-string v2, "SecExternalDisplayOrientation_Java"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -353,14 +335,13 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 321
     const-string v2, "SecExternalDisplayOrientation_Java"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "name="
+    const-string v4, "name="
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -388,7 +369,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "state= "
+    const-string v4, "state= "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -402,7 +383,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "size = "
+    const-string v4, "size = "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -414,7 +395,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "x"
+    const-string v4, "x"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -446,7 +427,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 325
     .end local v0    # "mPoint":Landroid/graphics/Point;
     :cond_0
     return-void
@@ -457,12 +437,10 @@
     .param p1, "displayId"    # I
 
     .prologue
-    .line 298
     sget-boolean v0, Lcom/android/server/SecExternalDisplayOrientation;->bIsLogEnabled:Z
 
     if-eqz v0, :cond_0
 
-    .line 299
     const-string v0, "SecExternalDisplayOrientation_Java"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -491,7 +469,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 301
     :cond_0
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation$2;->this$0:Lcom/android/server/SecExternalDisplayOrientation;
 
@@ -518,7 +495,6 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 303
     const-string v0, "SecExternalDisplayOrientation_Java"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -548,7 +524,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 306
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation$2;->this$0:Lcom/android/server/SecExternalDisplayOrientation;
 
     iget-object v0, v0, Lcom/android/server/SecExternalDisplayOrientation;->mEDSServiceObj:Lcom/android/server/SecExternalDisplayService;
@@ -561,7 +536,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/SecExternalDisplayService;->SecExternalDisplayBlankDisplay(I)Z
 
-    .line 307
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation$2;->this$0:Lcom/android/server/SecExternalDisplayOrientation;
 
     const/4 v1, -0x1
@@ -569,7 +543,6 @@
     # setter for: Lcom/android/server/SecExternalDisplayOrientation;->mSidesyncDisplayId:I
     invoke-static {v0, v1}, Lcom/android/server/SecExternalDisplayOrientation;->access$202(Lcom/android/server/SecExternalDisplayOrientation;I)I
 
-    .line 309
     :cond_1
     return-void
 .end method

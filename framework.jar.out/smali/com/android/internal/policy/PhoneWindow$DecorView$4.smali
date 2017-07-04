@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 3987
     iput-object p1, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$4;->this$1:Lcom/android/internal/policy/PhoneWindow$DecorView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 3989
     iget-object v0, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$4;->this$1:Lcom/android/internal/policy/PhoneWindow$DecorView;
 
     iget-object v0, v0, Lcom/android/internal/policy/PhoneWindow$DecorView;->this$0:Lcom/android/internal/policy/PhoneWindow;
@@ -55,6 +53,5 @@
 
     invoke-virtual {v0, v3, v1}, Lcom/android/internal/policy/PhoneWindow;->onKeyDownPanel(ILandroid/view/KeyEvent;)Z
 
-    .line 3990
     return-void
 .end method

@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 74
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,16 +44,13 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 76
     new-instance v0, Lcom/samsung/android/hermes/KerykeionPosition;
 
     invoke-direct {v0}, Lcom/samsung/android/hermes/KerykeionPosition;-><init>()V
 
-    .line 77
     .local v0, "data":Lcom/samsung/android/hermes/KerykeionPosition;
     invoke-virtual {v0, p1}, Lcom/samsung/android/hermes/KerykeionPosition;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 78
     return-object v0
 .end method
 
@@ -63,7 +59,6 @@
     .param p1, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 74
     invoke-virtual {p0, p1}, Lcom/samsung/android/hermes/KerykeionPosition$1;->createFromParcel(Landroid/os/Parcel;)Lcom/samsung/android/hermes/KerykeionPosition;
 
     move-result-object v0
@@ -76,7 +71,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 82
     new-array v0, p1, [Lcom/samsung/android/hermes/KerykeionPosition;
 
     return-object v0
@@ -87,7 +81,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 74
     invoke-virtual {p0, p1}, Lcom/samsung/android/hermes/KerykeionPosition$1;->newArray(I)[Lcom/samsung/android/hermes/KerykeionPosition;
 
     move-result-object v0

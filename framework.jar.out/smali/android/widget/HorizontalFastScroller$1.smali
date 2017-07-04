@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 217
     iput-object p1, p0, Landroid/widget/HorizontalFastScroller$1;->this$0:Landroid/widget/HorizontalFastScroller;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 3
 
     .prologue
-    .line 220
     iget-object v1, p0, Landroid/widget/HorizontalFastScroller$1;->this$0:Landroid/widget/HorizontalFastScroller;
 
     # getter for: Landroid/widget/HorizontalFastScroller;->mList:Landroid/widget/AbsHorizontalListView;
@@ -54,13 +52,11 @@
 
     if-eqz v1, :cond_0
 
-    .line 221
     iget-object v1, p0, Landroid/widget/HorizontalFastScroller$1;->this$0:Landroid/widget/HorizontalFastScroller;
 
     # invokes: Landroid/widget/HorizontalFastScroller;->beginDrag()V
     invoke-static {v1}, Landroid/widget/HorizontalFastScroller;->access$100(Landroid/widget/HorizontalFastScroller;)V
 
-    .line 223
     iget-object v1, p0, Landroid/widget/HorizontalFastScroller$1;->this$0:Landroid/widget/HorizontalFastScroller;
 
     iget-object v2, p0, Landroid/widget/HorizontalFastScroller$1;->this$0:Landroid/widget/HorizontalFastScroller;
@@ -75,14 +71,12 @@
 
     move-result v0
 
-    .line 224
     .local v0, "pos":F
     iget-object v1, p0, Landroid/widget/HorizontalFastScroller$1;->this$0:Landroid/widget/HorizontalFastScroller;
 
     # invokes: Landroid/widget/HorizontalFastScroller;->scrollTo(F)V
     invoke-static {v1, v0}, Landroid/widget/HorizontalFastScroller;->access$400(Landroid/widget/HorizontalFastScroller;F)V
 
-    .line 227
     .end local v0    # "pos":F
     :cond_0
     iget-object v1, p0, Landroid/widget/HorizontalFastScroller$1;->this$0:Landroid/widget/HorizontalFastScroller;
@@ -92,6 +86,5 @@
     # setter for: Landroid/widget/HorizontalFastScroller;->mHasPendingDrag:Z
     invoke-static {v1, v2}, Landroid/widget/HorizontalFastScroller;->access$502(Landroid/widget/HorizontalFastScroller;Z)Z
 
-    .line 228
     return-void
 .end method

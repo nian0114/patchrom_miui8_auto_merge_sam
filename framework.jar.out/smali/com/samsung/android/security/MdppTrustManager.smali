@@ -25,18 +25,14 @@
     .param p2, "keyStore"    # Ljava/security/KeyStore;
 
     .prologue
-    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 20
     const/4 v7, 0x0
 
     iput-object v7, p0, Lcom/samsung/android/security/MdppTrustManager;->trustManager:Lcom/android/org/conscrypt/TrustManagerImpl;
 
-    .line 33
     iput-object p1, p0, Lcom/samsung/android/security/MdppTrustManager;->context:Landroid/content/Context;
 
-    .line 35
     :try_start_0
     invoke-static {}, Ljavax/net/ssl/TrustManagerFactory;->getDefaultAlgorithm()Ljava/lang/String;
 
@@ -46,11 +42,9 @@
 
     move-result-object v6
 
-    .line 37
     .local v6, "tmf":Ljavax/net/ssl/TrustManagerFactory;
     invoke-virtual {v6, p2}, Ljavax/net/ssl/TrustManagerFactory;->init(Ljava/security/KeyStore;)V
 
-    .line 38
     invoke-virtual {v6}, Ljavax/net/ssl/TrustManagerFactory;->getTrustManagers()[Ljavax/net/ssl/TrustManager;
 
     move-result-object v0
@@ -67,25 +61,21 @@
 
     aget-object v4, v0, v1
 
-    .line 39
     .local v4, "manager":Ljavax/net/ssl/TrustManager;
     instance-of v7, v4, Lcom/android/org/conscrypt/TrustManagerImpl;
 
     if-eqz v7, :cond_1
 
-    .line 40
     check-cast v4, Lcom/android/org/conscrypt/TrustManagerImpl;
 
     .end local v4    # "manager":Ljavax/net/ssl/TrustManager;
     iput-object v4, p0, Lcom/samsung/android/security/MdppTrustManager;->trustManager:Lcom/android/org/conscrypt/TrustManagerImpl;
 
-    .line 44
     :cond_0
     iget-object v7, p0, Lcom/samsung/android/security/MdppTrustManager;->trustManager:Lcom/android/org/conscrypt/TrustManagerImpl;
 
     if-nez v7, :cond_2
 
-    .line 45
     new-instance v7, Ljava/lang/IllegalArgumentException;
 
     const-string v8, "Can\'t find TrustManagerImpl instance"
@@ -97,7 +87,6 @@
     .catch Ljava/security/KeyStoreException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/security/NoSuchAlgorithmException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 47
     .end local v0    # "arr$":[Ljavax/net/ssl/TrustManager;
     .end local v1    # "i$":I
     .end local v3    # "len$":I
@@ -105,7 +94,6 @@
     :catch_0
     move-exception v2
 
-    .line 48
     .local v2, "kse":Ljava/security/KeyStoreException;
     new-instance v7, Ljava/lang/IllegalArgumentException;
 
@@ -117,7 +105,6 @@
 
     throw v7
 
-    .line 38
     .end local v2    # "kse":Ljava/security/KeyStoreException;
     .restart local v0    # "arr$":[Ljavax/net/ssl/TrustManager;
     .restart local v1    # "i$":I
@@ -129,7 +116,6 @@
 
     goto :goto_0
 
-    .line 49
     .end local v0    # "arr$":[Ljavax/net/ssl/TrustManager;
     .end local v1    # "i$":I
     .end local v3    # "len$":I
@@ -138,7 +124,6 @@
     :catch_1
     move-exception v5
 
-    .line 50
     .local v5, "nsae":Ljava/security/NoSuchAlgorithmException;
     new-instance v7, Ljava/lang/IllegalArgumentException;
 
@@ -150,7 +135,6 @@
 
     throw v7
 
-    .line 52
     .end local v5    # "nsae":Ljava/security/NoSuchAlgorithmException;
     .restart local v0    # "arr$":[Ljavax/net/ssl/TrustManager;
     .restart local v1    # "i$":I
@@ -167,14 +151,12 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 77
     new-instance v0, Landroid/app/Notification$Builder;
 
     iget-object v2, p0, Lcom/samsung/android/security/MdppTrustManager;->context:Landroid/content/Context;
 
     invoke-direct {v0, v2}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 78
     .local v0, "builder":Landroid/app/Notification$Builder;
     const v2, 0x108008a
 
@@ -196,10 +178,9 @@
 
     invoke-virtual {v2, v4}, Landroid/app/Notification$Builder;->setAutoCancel(Z)Landroid/app/Notification$Builder;
 
-    .line 81
     iget-object v2, p0, Lcom/samsung/android/security/MdppTrustManager;->context:Landroid/content/Context;
 
-    const-string/jumbo v3, "notification"
+    const-string v3, "notification"
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -207,7 +188,6 @@
 
     check-cast v1, Landroid/app/NotificationManager;
 
-    .line 83
     .local v1, "mNotifyMgr":Landroid/app/NotificationManager;
     invoke-virtual {v0}, Landroid/app/Notification$Builder;->build()Landroid/app/Notification;
 
@@ -215,7 +195,6 @@
 
     invoke-virtual {v1, v4, v2}, Landroid/app/NotificationManager;->notify(ILandroid/app/Notification;)V
 
-    .line 84
     return-void
 .end method
 
@@ -232,12 +211,10 @@
     .end annotation
 
     .prologue
-    .line 57
     iget-object v0, p0, Lcom/samsung/android/security/MdppTrustManager;->trustManager:Lcom/android/org/conscrypt/TrustManagerImpl;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/org/conscrypt/TrustManagerImpl;->checkClientTrusted([Ljava/security/cert/X509Certificate;Ljava/lang/String;)V
 
-    .line 58
     return-void
 .end method
 
@@ -252,7 +229,6 @@
     .end annotation
 
     .prologue
-    .line 64
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/security/MdppTrustManager;->trustManager:Lcom/android/org/conscrypt/TrustManagerImpl;
 
@@ -260,18 +236,14 @@
     :try_end_0
     .catch Ljava/security/cert/CertificateException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 69
     return-void
 
-    .line 65
     :catch_0
     move-exception v0
 
-    .line 66
     .local v0, "exceprion":Ljava/security/cert/CertificateException;
     invoke-direct {p0, v0}, Lcom/samsung/android/security/MdppTrustManager;->showNotification(Ljava/lang/Exception;)V
 
-    .line 67
     throw v0
 .end method
 
@@ -279,7 +251,6 @@
     .locals 1
 
     .prologue
-    .line 73
     iget-object v0, p0, Lcom/samsung/android/security/MdppTrustManager;->trustManager:Lcom/android/org/conscrypt/TrustManagerImpl;
 
     invoke-virtual {v0}, Lcom/android/org/conscrypt/TrustManagerImpl;->getAcceptedIssuers()[Ljava/security/cert/X509Certificate;

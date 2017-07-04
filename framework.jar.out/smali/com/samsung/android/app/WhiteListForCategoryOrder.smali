@@ -49,7 +49,6 @@
     .locals 1
 
     .prologue
-    .line 29
     invoke-static {}, Landroid/os/Debug;->isProductShip()I
 
     move-result v0
@@ -61,14 +60,12 @@
     :goto_0
     sput-boolean v0, Lcom/samsung/android/app/WhiteListForCategoryOrder;->DEBUG:Z
 
-    .line 33
     const/4 v0, 0x0
 
     sput-object v0, Lcom/samsung/android/app/WhiteListForCategoryOrder;->sInstance:Lcom/samsung/android/app/WhiteListForCategoryOrder;
 
     return-void
 
-    .line 29
     :cond_0
     const/4 v0, 0x0
 
@@ -79,17 +76,14 @@
     .locals 1
 
     .prologue
-    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/app/WhiteListForCategoryOrder;->mSignaturesMap:Landroid/util/SparseArray;
 
-    .line 32
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -103,13 +97,10 @@
     .locals 0
 
     .prologue
-    .line 45
     invoke-direct {p0}, Lcom/samsung/android/app/WhiteListForCategoryOrder;->setupSignaturesMap()V
 
-    .line 46
     invoke-direct {p0}, Lcom/samsung/android/app/WhiteListForCategoryOrder;->setupWhiteList()V
 
-    .line 47
     return-void
 .end method
 
@@ -117,19 +108,16 @@
     .locals 1
 
     .prologue
-    .line 38
     sget-object v0, Lcom/samsung/android/app/WhiteListForCategoryOrder;->sInstance:Lcom/samsung/android/app/WhiteListForCategoryOrder;
 
     if-nez v0, :cond_0
 
-    .line 39
     new-instance v0, Lcom/samsung/android/app/WhiteListForCategoryOrder;
 
     invoke-direct {v0}, Lcom/samsung/android/app/WhiteListForCategoryOrder;-><init>()V
 
     sput-object v0, Lcom/samsung/android/app/WhiteListForCategoryOrder;->sInstance:Lcom/samsung/android/app/WhiteListForCategoryOrder;
 
-    .line 41
     :cond_0
     sget-object v0, Lcom/samsung/android/app/WhiteListForCategoryOrder;->sInstance:Lcom/samsung/android/app/WhiteListForCategoryOrder;
 
@@ -150,12 +138,10 @@
     .end annotation
 
     .prologue
-    .line 126
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 127
     .local v2, "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/content/pm/Signature;>;"
     const/4 v1, 0x0
 
@@ -165,18 +151,15 @@
 
     if-ge v1, v3, :cond_1
 
-    .line 128
     const/4 v3, 0x1
 
     shl-int v0, v3, v1
 
-    .line 129
     .local v0, "flag":I
     and-int v3, p1, v0
 
     if-eqz v3, :cond_0
 
-    .line 130
     iget-object v3, p0, Lcom/samsung/android/app/WhiteListForCategoryOrder;->mSignaturesMap:Landroid/util/SparseArray;
 
     invoke-virtual {v3, v0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -185,13 +168,11 @@
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 127
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 133
     .end local v0    # "flag":I
     :cond_1
     return-object v2
@@ -202,7 +183,6 @@
     .param p1, "signatures"    # [Landroid/content/pm/Signature;
 
     .prologue
-    .line 121
     const/4 v0, 0x7
 
     invoke-direct {p0, p1, v0}, Lcom/samsung/android/app/WhiteListForCategoryOrder;->isMatchedSignature([Landroid/content/pm/Signature;I)Z
@@ -218,18 +198,15 @@
     .param p2, "type"    # I
 
     .prologue
-    .line 137
     invoke-direct {p0, p2}, Lcom/samsung/android/app/WhiteListForCategoryOrder;->getSignatures(I)Ljava/util/ArrayList;
 
     move-result-object v0
 
-    .line 138
     .local v0, "SIGNATURES":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/content/pm/Signature;>;"
     if-eqz p1, :cond_2
 
     if-eqz v0, :cond_2
 
-    .line 139
     move-object v1, p1
 
     .local v1, "arr$":[Landroid/content/pm/Signature;
@@ -248,7 +225,6 @@
 
     aget-object v6, v1, v3
 
-    .line 140
     .local v6, "signature":Landroid/content/pm/Signature;
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -269,7 +245,6 @@
 
     check-cast v5, Landroid/content/pm/Signature;
 
-    .line 141
     .local v5, "s":Landroid/content/pm/Signature;
     if-eqz v5, :cond_0
 
@@ -279,10 +254,8 @@
 
     if-eqz v7, :cond_0
 
-    .line 142
     const/4 v7, 0x1
 
-    .line 147
     .end local v1    # "arr$":[Landroid/content/pm/Signature;
     .end local v2    # "i$":Ljava/util/Iterator;
     .end local v4    # "len$":I
@@ -291,7 +264,6 @@
     :goto_1
     return v7
 
-    .line 139
     .restart local v1    # "arr$":[Landroid/content/pm/Signature;
     .restart local v2    # "i$":Ljava/util/Iterator;
     .restart local v4    # "len$":I
@@ -306,7 +278,6 @@
     .restart local v3    # "i$":I
     goto :goto_0
 
-    .line 147
     .end local v1    # "arr$":[Landroid/content/pm/Signature;
     .end local v3    # "i$":I
     .end local v4    # "len$":I
@@ -321,7 +292,6 @@
     .locals 4
 
     .prologue
-    .line 50
     iget-object v0, p0, Lcom/samsung/android/app/WhiteListForCategoryOrder;->mSignaturesMap:Landroid/util/SparseArray;
 
     const/4 v1, 0x1
@@ -334,7 +304,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 55
     iget-object v0, p0, Lcom/samsung/android/app/WhiteListForCategoryOrder;->mSignaturesMap:Landroid/util/SparseArray;
 
     const/4 v1, 0x2
@@ -347,7 +316,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 60
     iget-object v0, p0, Lcom/samsung/android/app/WhiteListForCategoryOrder;->mSignaturesMap:Landroid/util/SparseArray;
 
     const/4 v1, 0x4
@@ -360,7 +328,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 64
     return-void
 .end method
 
@@ -368,7 +335,6 @@
     .locals 0
 
     .prologue
-    .line 71
     return-void
 .end method
 
@@ -384,17 +350,14 @@
 
     const/4 v6, 0x0
 
-    .line 74
     const/4 v3, 0x0
 
-    .line 77
     .local v3, "signatureMatch":Z
     :try_start_0
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
 
-    .line 78
     .local v1, "packageManager":Landroid/content/pm/PackageManager;
     const/16 v8, 0x40
 
@@ -402,11 +365,9 @@
 
     move-result-object v2
 
-    .line 80
     .local v2, "pkgInfo":Landroid/content/pm/PackageInfo;
     if-nez v2, :cond_1
 
-    .line 81
     sget-boolean v7, Lcom/samsung/android/app/WhiteListForCategoryOrder;->DEBUG:Z
 
     if-eqz v7, :cond_0
@@ -417,14 +378,12 @@
 
     invoke-static {v7, v8}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 117
     .end local v1    # "packageManager":Landroid/content/pm/PackageManager;
     .end local v2    # "pkgInfo":Landroid/content/pm/PackageInfo;
     :cond_0
     :goto_0
     return v6
 
-    .line 85
     .restart local v1    # "packageManager":Landroid/content/pm/PackageManager;
     .restart local v2    # "pkgInfo":Landroid/content/pm/PackageInfo;
     :cond_1
@@ -438,14 +397,11 @@
 
     move v6, v7
 
-    .line 87
     goto :goto_0
 
-    .line 97
     :cond_2
     iget-object v4, v2, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
-    .line 98
     .local v4, "signatures":[Landroid/content/pm/Signature;
     invoke-direct {p0, v4}, Lcom/samsung/android/app/WhiteListForCategoryOrder;->hasSamsungKey([Landroid/content/pm/Signature;)Z
 
@@ -455,10 +411,8 @@
 
     move v6, v7
 
-    .line 100
     goto :goto_0
 
-    .line 103
     :cond_3
     iget-object v7, p0, Lcom/samsung/android/app/WhiteListForCategoryOrder;->mWhiteList:Ljava/util/HashMap;
 
@@ -468,11 +422,9 @@
 
     check-cast v5, Ljava/lang/Integer;
 
-    .line 104
     .local v5, "type":Ljava/lang/Integer;
     if-nez v5, :cond_6
 
-    .line 105
     sget-boolean v7, Lcom/samsung/android/app/WhiteListForCategoryOrder;->DEBUG:Z
 
     if-eqz v7, :cond_0
@@ -487,7 +439,6 @@
 
     goto :goto_0
 
-    .line 112
     .end local v1    # "packageManager":Landroid/content/pm/PackageManager;
     .end local v2    # "pkgInfo":Landroid/content/pm/PackageInfo;
     .end local v4    # "signatures":[Landroid/content/pm/Signature;
@@ -495,7 +446,6 @@
     :catch_0
     move-exception v0
 
-    .line 113
     .local v0, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     sget-boolean v6, Lcom/samsung/android/app/WhiteListForCategoryOrder;->DEBUG:Z
 
@@ -523,7 +473,6 @@
 
     invoke-static {v6, v7}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 114
     :cond_4
     const/4 v3, 0x0
 
@@ -532,10 +481,8 @@
     :goto_1
     move v6, v3
 
-    .line 117
     goto :goto_0
 
-    .line 108
     .restart local v1    # "packageManager":Landroid/content/pm/PackageManager;
     .restart local v2    # "pkgInfo":Landroid/content/pm/PackageInfo;
     .restart local v4    # "signatures":[Landroid/content/pm/Signature;
@@ -550,10 +497,8 @@
 
     move-result v3
 
-    .line 109
     if-nez v3, :cond_5
 
-    .line 110
     sget-boolean v6, Lcom/samsung/android/app/WhiteListForCategoryOrder;->DEBUG:Z
 
     if-eqz v6, :cond_5

@@ -19,10 +19,8 @@
     .locals 0
 
     .prologue
-    .line 1731
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1732
     return-void
 .end method
 
@@ -42,7 +40,6 @@
     .end annotation
 
     .prologue
-    .line 1741
     .local p2, "feedsInfoList":Ljava/util/List;, "Ljava/util/List<Lcom/samsung/android/cocktailbar/FeedsInfo;>;"
     return-void
 .end method

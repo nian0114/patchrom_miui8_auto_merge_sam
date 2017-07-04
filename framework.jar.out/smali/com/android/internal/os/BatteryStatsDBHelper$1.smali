@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 212
     iput-object p1, p0, Lcom/android/internal/os/BatteryStatsDBHelper$1;->this$0:Lcom/android/internal/os/BatteryStatsDBHelper;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 216
     const-string v1, "BatteryStatsDBHelper"
 
     const-string v2, "Sending fake excessive power drain broadcast"
@@ -47,14 +45,12 @@
     # invokes: Lcom/android/internal/os/BatteryStatsDBHelper;->printDebugLog(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v1, v2}, Lcom/android/internal/os/BatteryStatsDBHelper;->access$000(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 217
     new-instance v0, Landroid/content/Intent;
 
-    const-string/jumbo v1, "sec.intent.action.BATTERY_ABUSE"
+    const-string v1, "sec.intent.action.BATTERY_ABUSE"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 218
     .local v0, "i":Landroid/content/Intent;
     # getter for: Lcom/android/internal/os/BatteryStatsDBHelper;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/internal/os/BatteryStatsDBHelper;->access$100()Landroid/content/Context;
@@ -63,6 +59,5 @@
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 219
     return-void
 .end method

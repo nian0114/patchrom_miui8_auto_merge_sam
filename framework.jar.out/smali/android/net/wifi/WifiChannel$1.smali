@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 109
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -49,12 +48,10 @@
 
     const/4 v3, 0x0
 
-    .line 112
     new-instance v0, Landroid/net/wifi/WifiChannel;
 
     invoke-direct {v0}, Landroid/net/wifi/WifiChannel;-><init>()V
 
-    .line 113
     .local v0, "channel":Landroid/net/wifi/WifiChannel;
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -62,14 +59,12 @@
 
     iput v1, v0, Landroid/net/wifi/WifiChannel;->freqMHz:I
 
-    .line 114
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, v0, Landroid/net/wifi/WifiChannel;->channelNum:I
 
-    .line 115
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
@@ -81,21 +76,18 @@
     :goto_0
     iput-boolean v1, v0, Landroid/net/wifi/WifiChannel;->isDFS:Z
 
-    .line 118
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, v0, Landroid/net/wifi/WifiChannel;->frequency:I
 
-    .line 119
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, v0, Landroid/net/wifi/WifiChannel;->channel:I
 
-    .line 120
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
@@ -105,19 +97,16 @@
     :goto_1
     iput-boolean v2, v0, Landroid/net/wifi/WifiChannel;->isNoIbss:Z
 
-    .line 122
     return-object v0
 
     :cond_0
     move v1, v3
 
-    .line 115
     goto :goto_0
 
     :cond_1
     move v2, v3
 
-    .line 120
     goto :goto_1
 .end method
 
@@ -126,7 +115,6 @@
     .param p1, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 109
     invoke-virtual {p0, p1}, Landroid/net/wifi/WifiChannel$1;->createFromParcel(Landroid/os/Parcel;)Landroid/net/wifi/WifiChannel;
 
     move-result-object v0
@@ -139,7 +127,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 127
     new-array v0, p1, [Landroid/net/wifi/WifiChannel;
 
     return-object v0
@@ -150,7 +137,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 109
     invoke-virtual {p0, p1}, Landroid/net/wifi/WifiChannel$1;->newArray(I)[Landroid/net/wifi/WifiChannel;
 
     move-result-object v0

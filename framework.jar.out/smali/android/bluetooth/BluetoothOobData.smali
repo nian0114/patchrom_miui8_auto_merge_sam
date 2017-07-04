@@ -49,7 +49,6 @@
     .locals 1
 
     .prologue
-    .line 220
     new-instance v0, Landroid/bluetooth/BluetoothOobData$1;
 
     invoke-direct {v0}, Landroid/bluetooth/BluetoothOobData$1;-><init>()V
@@ -67,58 +66,46 @@
 
     const/4 v1, 0x0
 
-    .line 55
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 43
     new-array v0, v2, [B
 
     iput-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mHashP192:[B
 
-    .line 44
     new-array v0, v2, [B
 
     iput-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mRandomizerP192:[B
 
-    .line 45
     new-array v0, v2, [B
 
     iput-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mHashP256:[B
 
-    .line 46
     new-array v0, v2, [B
 
     iput-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mRandomizerP256:[B
 
-    .line 56
     iget-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mHashP192:[B
 
     invoke-static {v0, v1}, Ljava/util/Arrays;->fill([BB)V
 
-    .line 57
     iget-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mRandomizerP192:[B
 
     invoke-static {v0, v1}, Ljava/util/Arrays;->fill([BB)V
 
-    .line 58
     iget-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mRandomizerP256:[B
 
     invoke-static {v0, v1}, Ljava/util/Arrays;->fill([BB)V
 
-    .line 59
     iget-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mHashP256:[B
 
     invoke-static {v0, v1}, Ljava/util/Arrays;->fill([BB)V
 
-    .line 60
     iput v1, p0, Landroid/bluetooth/BluetoothOobData;->mValid_P192_P256:I
 
-    .line 61
     const-string v0, ""
 
     iput-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mAddress:Ljava/lang/String;
 
-    .line 63
     return-void
 .end method
 
@@ -131,35 +118,28 @@
 
     const/16 v1, 0x10
 
-    .line 97
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 43
     new-array v0, v1, [B
 
     iput-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mHashP192:[B
 
-    .line 44
     new-array v0, v1, [B
 
     iput-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mRandomizerP192:[B
 
-    .line 45
     new-array v0, v1, [B
 
     iput-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mHashP256:[B
 
-    .line 46
     new-array v0, v1, [B
 
     iput-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mRandomizerP256:[B
 
-    .line 98
     iget-object v0, p1, Landroid/bluetooth/BluetoothOobData;->mHashP192:[B
 
     if-eqz v0, :cond_0
 
-    .line 99
     iget-object v0, p1, Landroid/bluetooth/BluetoothOobData;->mHashP192:[B
 
     invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([BI)[B
@@ -168,13 +148,11 @@
 
     iput-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mHashP192:[B
 
-    .line 102
     :goto_0
     iget-object v0, p1, Landroid/bluetooth/BluetoothOobData;->mRandomizerP192:[B
 
     if-eqz v0, :cond_1
 
-    .line 103
     iget-object v0, p1, Landroid/bluetooth/BluetoothOobData;->mRandomizerP192:[B
 
     invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([BI)[B
@@ -183,13 +161,11 @@
 
     iput-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mRandomizerP192:[B
 
-    .line 106
     :goto_1
     iget-object v0, p1, Landroid/bluetooth/BluetoothOobData;->mHashP256:[B
 
     if-eqz v0, :cond_2
 
-    .line 107
     iget-object v0, p1, Landroid/bluetooth/BluetoothOobData;->mHashP256:[B
 
     invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([BI)[B
@@ -198,13 +174,11 @@
 
     iput-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mHashP256:[B
 
-    .line 110
     :goto_2
     iget-object v0, p1, Landroid/bluetooth/BluetoothOobData;->mRandomizerP256:[B
 
     if-eqz v0, :cond_3
 
-    .line 111
     iget-object v0, p1, Landroid/bluetooth/BluetoothOobData;->mRandomizerP256:[B
 
     invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([BI)[B
@@ -213,21 +187,17 @@
 
     iput-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mRandomizerP256:[B
 
-    .line 114
     :goto_3
     iget v0, p1, Landroid/bluetooth/BluetoothOobData;->mValid_P192_P256:I
 
     iput v0, p0, Landroid/bluetooth/BluetoothOobData;->mValid_P192_P256:I
 
-    .line 115
     iget-object v0, p1, Landroid/bluetooth/BluetoothOobData;->mAddress:Ljava/lang/String;
 
     iput-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mAddress:Ljava/lang/String;
 
-    .line 116
     return-void
 
-    .line 100
     :cond_0
     iget-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mHashP192:[B
 
@@ -235,7 +205,6 @@
 
     goto :goto_0
 
-    .line 104
     :cond_1
     iget-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mRandomizerP192:[B
 
@@ -243,7 +212,6 @@
 
     goto :goto_1
 
-    .line 108
     :cond_2
     iget-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mHashP256:[B
 
@@ -251,7 +219,6 @@
 
     goto :goto_2
 
-    .line 112
     :cond_3
     iget-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mRandomizerP256:[B
 
@@ -267,64 +234,52 @@
     .prologue
     const/16 v1, 0x10
 
-    .line 230
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 43
     new-array v0, v1, [B
 
     iput-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mHashP192:[B
 
-    .line 44
     new-array v0, v1, [B
 
     iput-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mRandomizerP192:[B
 
-    .line 45
     new-array v0, v1, [B
 
     iput-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mHashP256:[B
 
-    .line 46
     new-array v0, v1, [B
 
     iput-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mRandomizerP256:[B
 
-    .line 231
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/bluetooth/BluetoothOobData;->mValid_P192_P256:I
 
-    .line 232
     iget-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mHashP192:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readByteArray([B)V
 
-    .line 233
     iget-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mRandomizerP192:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readByteArray([B)V
 
-    .line 234
     iget-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mHashP256:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readByteArray([B)V
 
-    .line 235
     iget-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mRandomizerP256:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readByteArray([B)V
 
-    .line 236
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mAddress:Ljava/lang/String;
 
-    .line 237
     return-void
 .end method
 
@@ -334,7 +289,6 @@
     .param p2, "x1"    # Landroid/bluetooth/BluetoothOobData$1;
 
     .prologue
-    .line 36
     invoke-direct {p0, p1}, Landroid/bluetooth/BluetoothOobData;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -354,86 +308,68 @@
 
     const/16 v1, 0x10
 
-    .line 72
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 43
     new-array v0, v1, [B
 
     iput-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mHashP192:[B
 
-    .line 44
     new-array v0, v1, [B
 
     iput-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mRandomizerP192:[B
 
-    .line 45
     new-array v0, v1, [B
 
     iput-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mHashP256:[B
 
-    .line 46
     new-array v0, v1, [B
 
     iput-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mRandomizerP256:[B
 
-    .line 73
     iput v2, p0, Landroid/bluetooth/BluetoothOobData;->mValid_P192_P256:I
 
-    .line 74
     if-eqz p1, :cond_0
 
-    .line 75
     invoke-static {p1, v1}, Ljava/util/Arrays;->copyOf([BI)[B
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mHashP192:[B
 
-    .line 78
     :goto_0
     if-eqz p2, :cond_1
 
-    .line 79
     invoke-static {p2, v1}, Ljava/util/Arrays;->copyOf([BI)[B
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mRandomizerP192:[B
 
-    .line 82
     :goto_1
     if-eqz p3, :cond_2
 
-    .line 83
     invoke-static {p3, v1}, Ljava/util/Arrays;->copyOf([BI)[B
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mHashP256:[B
 
-    .line 86
     :goto_2
     if-eqz p4, :cond_3
 
-    .line 87
     invoke-static {p4, v1}, Ljava/util/Arrays;->copyOf([BI)[B
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mRandomizerP256:[B
 
-    .line 90
     :goto_3
     iput p5, p0, Landroid/bluetooth/BluetoothOobData;->mValid_P192_P256:I
 
-    .line 91
     iput-object p6, p0, Landroid/bluetooth/BluetoothOobData;->mAddress:Ljava/lang/String;
 
-    .line 92
     return-void
 
-    .line 76
     :cond_0
     iget-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mHashP192:[B
 
@@ -441,7 +377,6 @@
 
     goto :goto_0
 
-    .line 80
     :cond_1
     iget-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mRandomizerP192:[B
 
@@ -449,7 +384,6 @@
 
     goto :goto_1
 
-    .line 84
     :cond_2
     iget-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mHashP256:[B
 
@@ -457,7 +391,6 @@
 
     goto :goto_2
 
-    .line 88
     :cond_3
     iget-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mRandomizerP256:[B
 
@@ -472,7 +405,6 @@
     .locals 1
 
     .prologue
-    .line 187
     const/4 v0, 0x0
 
     return v0
@@ -482,7 +414,6 @@
     .locals 1
 
     .prologue
-    .line 151
     iget-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mAddress:Ljava/lang/String;
 
     return-object v0
@@ -503,7 +434,6 @@
 
     const/4 v3, 0x0
 
-    .line 190
     const-string v0, "%02X:%02X:%02X:%02X:%02X:%02X:%02X:%02X:%02X:%02X:%02X:%02X:%02X:%02X:%02X:%02X"
 
     const/16 v1, 0x10
@@ -693,7 +623,6 @@
     .locals 1
 
     .prologue
-    .line 181
     iget-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mAddress:Ljava/lang/String;
 
     return-object v0
@@ -703,7 +632,6 @@
     .locals 1
 
     .prologue
-    .line 161
     iget-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mHashP192:[B
 
     return-object v0
@@ -713,7 +641,6 @@
     .locals 1
 
     .prologue
-    .line 166
     iget-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mHashP256:[B
 
     return-object v0
@@ -723,7 +650,6 @@
     .locals 1
 
     .prologue
-    .line 156
     iget-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mRandomizerP192:[B
 
     return-object v0
@@ -733,7 +659,6 @@
     .locals 1
 
     .prologue
-    .line 171
     iget-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mRandomizerP256:[B
 
     return-object v0
@@ -743,12 +668,11 @@
     .locals 2
 
     .prologue
-    .line 199
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "mValid_P192_P256 = "
+    const-string v1, "mValid_P192_P256 = "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -847,7 +771,6 @@
     .locals 1
 
     .prologue
-    .line 176
     iget v0, p0, Landroid/bluetooth/BluetoothOobData;->mValid_P192_P256:I
 
     return v0
@@ -858,10 +781,8 @@
     .param p1, "address"    # Ljava/lang/String;
 
     .prologue
-    .line 145
     iput-object p1, p0, Landroid/bluetooth/BluetoothOobData;->mAddress:Ljava/lang/String;
 
-    .line 146
     return-void
 .end method
 
@@ -870,7 +791,6 @@
     .param p1, "hashP192"    # [B
 
     .prologue
-    .line 120
     const/16 v0, 0x10
 
     invoke-static {p1, v0}, Ljava/util/Arrays;->copyOf([BI)[B
@@ -879,7 +799,6 @@
 
     iput-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mHashP192:[B
 
-    .line 121
     return-void
 .end method
 
@@ -888,7 +807,6 @@
     .param p1, "randomizerP256"    # [B
 
     .prologue
-    .line 130
     const/16 v0, 0x10
 
     invoke-static {p1, v0}, Ljava/util/Arrays;->copyOf([BI)[B
@@ -897,7 +815,6 @@
 
     iput-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mHashP256:[B
 
-    .line 131
     return-void
 .end method
 
@@ -906,7 +823,6 @@
     .param p1, "randomizerP192"    # [B
 
     .prologue
-    .line 125
     const/16 v0, 0x10
 
     invoke-static {p1, v0}, Ljava/util/Arrays;->copyOf([BI)[B
@@ -915,7 +831,6 @@
 
     iput-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mRandomizerP192:[B
 
-    .line 126
     return-void
 .end method
 
@@ -924,7 +839,6 @@
     .param p1, "randomizerP256"    # [B
 
     .prologue
-    .line 135
     const/16 v0, 0x10
 
     invoke-static {p1, v0}, Ljava/util/Arrays;->copyOf([BI)[B
@@ -933,7 +847,6 @@
 
     iput-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mRandomizerP256:[B
 
-    .line 136
     return-void
 .end method
 
@@ -942,10 +855,8 @@
     .param p1, "valid_P192_P256"    # I
 
     .prologue
-    .line 140
     iput p1, p0, Landroid/bluetooth/BluetoothOobData;->mValid_P192_P256:I
 
-    .line 141
     return-void
 .end method
 
@@ -955,36 +866,29 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 211
     iget v0, p0, Landroid/bluetooth/BluetoothOobData;->mValid_P192_P256:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 212
     iget-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mHashP192:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByteArray([B)V
 
-    .line 213
     iget-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mRandomizerP192:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByteArray([B)V
 
-    .line 214
     iget-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mHashP256:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByteArray([B)V
 
-    .line 215
     iget-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mRandomizerP256:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByteArray([B)V
 
-    .line 216
     iget-object v0, p0, Landroid/bluetooth/BluetoothOobData;->mAddress:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 217
     return-void
 .end method

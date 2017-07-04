@@ -52,7 +52,6 @@
 
     const/4 v2, 0x0
 
-    .line 408
     new-instance v0, Landroid/app/wallpaperbackup/Controller$ERR_CODE;
 
     const-string v1, "SUCCESS"
@@ -85,7 +84,6 @@
 
     sput-object v0, Landroid/app/wallpaperbackup/Controller$ERR_CODE;->INVALID_DATA:Landroid/app/wallpaperbackup/Controller$ERR_CODE;
 
-    .line 407
     const/4 v0, 0x4
 
     new-array v0, v0, [Landroid/app/wallpaperbackup/Controller$ERR_CODE;
@@ -121,18 +119,14 @@
     .end annotation
 
     .prologue
-    .line 411
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 409
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/app/wallpaperbackup/Controller$ERR_CODE;->value:I
 
-    .line 412
     iput p3, p0, Landroid/app/wallpaperbackup/Controller$ERR_CODE;->value:I
 
-    .line 413
     return-void
 .end method
 
@@ -141,7 +135,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 407
     const-class v0, Landroid/app/wallpaperbackup/Controller$ERR_CODE;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -157,7 +150,6 @@
     .locals 1
 
     .prologue
-    .line 407
     sget-object v0, Landroid/app/wallpaperbackup/Controller$ERR_CODE;->$VALUES:[Landroid/app/wallpaperbackup/Controller$ERR_CODE;
 
     invoke-virtual {v0}, [Landroid/app/wallpaperbackup/Controller$ERR_CODE;->clone()Ljava/lang/Object;
@@ -175,7 +167,6 @@
     .locals 1
 
     .prologue
-    .line 416
     iget v0, p0, Landroid/app/wallpaperbackup/Controller$ERR_CODE;->value:I
 
     return v0

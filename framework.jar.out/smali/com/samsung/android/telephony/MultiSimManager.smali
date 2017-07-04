@@ -60,88 +60,84 @@
 
     const/4 v2, 0x0
 
-    .line 90
     const/4 v0, 0x5
 
     new-array v0, v0, [Ljava/lang/String;
 
-    const-string/jumbo v1, "select_name_1"
+    const-string v1, "select_name_1"
 
     aput-object v1, v0, v2
 
-    const-string/jumbo v1, "select_name_2"
+    const-string v1, "select_name_2"
 
     aput-object v1, v0, v3
 
-    const-string/jumbo v1, "select_name_3"
+    const-string v1, "select_name_3"
 
     aput-object v1, v0, v4
 
-    const-string/jumbo v1, "select_name_4"
+    const-string v1, "select_name_4"
 
     aput-object v1, v0, v5
 
-    const-string/jumbo v1, "select_name_5"
+    const-string v1, "select_name_5"
 
     aput-object v1, v0, v6
 
     sput-object v0, Lcom/samsung/android/telephony/MultiSimManager;->mSimNameKey:[Ljava/lang/String;
 
-    .line 95
     const/4 v0, 0x5
 
     new-array v0, v0, [Ljava/lang/String;
 
-    const-string/jumbo v1, "select_icon_1"
+    const-string v1, "select_icon_1"
 
     aput-object v1, v0, v2
 
-    const-string/jumbo v1, "select_icon_2"
+    const-string v1, "select_icon_2"
 
     aput-object v1, v0, v3
 
-    const-string/jumbo v1, "select_icon_3"
+    const-string v1, "select_icon_3"
 
     aput-object v1, v0, v4
 
-    const-string/jumbo v1, "select_icon_4"
+    const-string v1, "select_icon_4"
 
     aput-object v1, v0, v5
 
-    const-string/jumbo v1, "select_icon_5"
+    const-string v1, "select_icon_5"
 
     aput-object v1, v0, v6
 
     sput-object v0, Lcom/samsung/android/telephony/MultiSimManager;->mSimIconKey:[Ljava/lang/String;
 
-    .line 100
     const/4 v0, 0x5
 
     new-array v0, v0, [Ljava/lang/String;
 
-    const-string/jumbo v1, "phone1_on"
+    const-string v1, "phone1_on"
 
     aput-object v1, v0, v2
 
-    const-string/jumbo v1, "phone2_on"
+    const-string v1, "phone2_on"
 
     aput-object v1, v0, v3
 
-    const-string/jumbo v1, "phone3_on"
+    const-string v1, "phone3_on"
 
     aput-object v1, v0, v4
 
-    const-string/jumbo v1, "phone4_on"
+    const-string v1, "phone4_on"
 
     aput-object v1, v0, v5
 
-    const-string/jumbo v1, "phone5_on"
+    const-string v1, "phone5_on"
 
     aput-object v1, v0, v6
 
     sput-object v0, Lcom/samsung/android/telephony/MultiSimManager;->mPhoneOnKey:[Ljava/lang/String;
 
-    .line 104
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -152,7 +148,6 @@
 
     sput v0, Lcom/samsung/android/telephony/MultiSimManager;->SIMSLOT_COUNT:I
 
-    .line 109
     new-instance v0, Landroid/telephony/SubscriptionManager;
 
     const/4 v1, 0x0
@@ -168,7 +163,6 @@
     .locals 0
 
     .prologue
-    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -178,7 +172,6 @@
     .locals 1
 
     .prologue
-    .line 1239
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getSubscriptionManager()Landroid/telephony/SubscriptionManager;
 
     move-result-object v0
@@ -195,12 +188,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 847
     invoke-static {p0}, Lcom/samsung/android/telephony/MultiSimManager;->getSubIdUsingProperty(I)I
 
     move-result v0
 
-    .line 849
     .local v0, "subId":I
     :try_start_0
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
@@ -211,11 +202,9 @@
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 852
     :goto_0
     return-void
 
-    .line 850
     :catch_0
     move-exception v1
 
@@ -228,12 +217,10 @@
     .param p1, "simSlot"    # I
 
     .prologue
-    .line 1401
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1, p0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 1403
     .local v1, "str":Ljava/lang/StringBuilder;
     if-ltz p1, :cond_1
 
@@ -241,14 +228,12 @@
 
     if-ge p1, v2, :cond_1
 
-    .line 1404
     if-eqz p1, :cond_0
 
     add-int/lit8 v2, p1, 0x1
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 1415
     :cond_0
     :goto_0
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -257,7 +242,6 @@
 
     return-object v2
 
-    .line 1406
     :cond_1
     const-string v2, "MultiSimManager"
 
@@ -297,7 +281,6 @@
 
     invoke-static {v2, v3}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1408
     :try_start_0
     new-instance v2, Ljava/lang/Exception;
 
@@ -309,11 +292,9 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1410
     :catch_0
     move-exception v0
 
-    .line 1411
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -327,12 +308,10 @@
     .param p2, "number"    # Ljava/lang/String;
 
     .prologue
-    .line 830
     invoke-static {p0}, Lcom/samsung/android/telephony/MultiSimManager;->getSubIdUsingProperty(I)I
 
     move-result v0
 
-    .line 832
     .local v0, "subId":I
     :try_start_0
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
@@ -343,11 +322,9 @@
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 835
     :goto_0
     return-void
 
-    .line 833
     :catch_0
     move-exception v1
 
@@ -360,12 +337,10 @@
     .param p1, "number"    # Ljava/lang/String;
 
     .prologue
-    .line 817
     invoke-static {p0}, Lcom/samsung/android/telephony/MultiSimManager;->getSubIdUsingProperty(I)I
 
     move-result v0
 
-    .line 819
     .local v0, "subId":I
     :try_start_0
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
@@ -376,11 +351,9 @@
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 822
     :goto_0
     return-void
 
-    .line 820
     :catch_0
     move-exception v1
 
@@ -392,12 +365,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 860
     invoke-static {p0}, Lcom/samsung/android/telephony/MultiSimManager;->getSubIdUsingProperty(I)I
 
     move-result v1
 
-    .line 862
     .local v1, "subId":I
     :try_start_0
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
@@ -410,15 +381,12 @@
 
     move-result v2
 
-    .line 864
     :goto_0
     return v2
 
-    .line 863
     :catch_0
     move-exception v0
 
-    .line 864
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 
@@ -429,7 +397,6 @@
     .locals 6
 
     .prologue
-    .line 1550
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getSubscriptionManager()Landroid/telephony/SubscriptionManager;
 
     move-result-object v4
@@ -438,7 +405,6 @@
 
     move-result-object v3
 
-    .line 1551
     .local v3, "subIds":[I
     array-length v4, v3
 
@@ -446,12 +412,10 @@
 
     array-length v1, v3
 
-    .line 1553
     .local v1, "numSubIds":I
     :goto_0
     new-array v2, v1, [J
 
-    .line 1554
     .local v2, "subIdArr":[J
     const/4 v0, 0x0
 
@@ -459,19 +423,16 @@
     :goto_1
     if-ge v0, v1, :cond_1
 
-    .line 1555
     aget v4, v3, v0
 
     int-to-long v4, v4
 
     aput-wide v4, v2, v0
 
-    .line 1554
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 1551
     .end local v0    # "i":I
     .end local v1    # "numSubIds":I
     .end local v2    # "subIdArr":[J
@@ -480,7 +441,6 @@
 
     goto :goto_0
 
-    .line 1557
     .restart local v0    # "i":I
     .restart local v1    # "numSubIds":I
     .restart local v2    # "subIdArr":[J
@@ -492,7 +452,6 @@
     .locals 1
 
     .prologue
-    .line 1115
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getSubscriptionManager()Landroid/telephony/SubscriptionManager;
 
     move-result-object v0
@@ -517,7 +476,6 @@
     .end annotation
 
     .prologue
-    .line 1098
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getSubscriptionManager()Landroid/telephony/SubscriptionManager;
 
     move-result-object v0
@@ -533,7 +491,6 @@
     .locals 1
 
     .prologue
-    .line 1280
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getSubscriptionManager()Landroid/telephony/SubscriptionManager;
 
     move-result-object v0
@@ -549,7 +506,6 @@
     .locals 1
 
     .prologue
-    .line 1107
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getSubscriptionManager()Landroid/telephony/SubscriptionManager;
 
     move-result-object v0
@@ -574,7 +530,6 @@
     .end annotation
 
     .prologue
-    .line 1090
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getSubscriptionManager()Landroid/telephony/SubscriptionManager;
 
     move-result-object v0
@@ -591,12 +546,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 704
     invoke-static {p0}, Lcom/samsung/android/telephony/MultiSimManager;->getSubIdUsingProperty(I)I
 
     move-result v1
 
-    .line 706
     .local v1, "subId":I
     :try_start_0
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
@@ -609,15 +562,12 @@
 
     move-result v2
 
-    .line 708
     :goto_0
     return v2
 
-    .line 707
     :catch_0
     move-exception v0
 
-    .line 708
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 
@@ -629,12 +579,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 315
     invoke-static {p0}, Lcom/samsung/android/telephony/MultiSimManager;->getSubIdUsingProperty(I)I
 
     move-result v1
 
-    .line 317
     .local v1, "subId":I
     :try_start_0
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
@@ -647,15 +595,12 @@
 
     move-result v2
 
-    .line 319
     :goto_0
     return v2
 
-    .line 318
     :catch_0
     move-exception v0
 
-    .line 319
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x1
 
@@ -667,12 +612,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 424
     invoke-static {p0}, Lcom/samsung/android/telephony/MultiSimManager;->getSubIdUsingProperty(I)I
 
     move-result v1
 
-    .line 426
     .local v1, "subId":I
     :try_start_0
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
@@ -685,15 +628,12 @@
 
     move-result v2
 
-    .line 428
     :goto_0
     return v2
 
-    .line 427
     :catch_0
     move-exception v0
 
-    .line 428
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 
@@ -705,12 +645,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 759
     invoke-static {p0}, Lcom/samsung/android/telephony/MultiSimManager;->getSubIdUsingProperty(I)I
 
     move-result v1
 
-    .line 761
     .local v1, "subId":I
     :try_start_0
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
@@ -723,15 +661,12 @@
 
     move-result v2
 
-    .line 763
     :goto_0
     return v2
 
-    .line 762
     :catch_0
     move-exception v0
 
-    .line 763
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 
@@ -743,12 +678,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 801
     invoke-static {p0}, Lcom/samsung/android/telephony/MultiSimManager;->getSubIdUsingProperty(I)I
 
     move-result v1
 
-    .line 803
     .local v1, "subId":I
     :try_start_0
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
@@ -761,15 +694,12 @@
 
     move-result v2
 
-    .line 805
     :goto_0
     return v2
 
-    .line 804
     :catch_0
     move-exception v0
 
-    .line 805
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 
@@ -781,12 +711,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 721
     invoke-static {p0}, Lcom/samsung/android/telephony/MultiSimManager;->getSubIdUsingProperty(I)I
 
     move-result v1
 
-    .line 723
     .local v1, "subId":I
     :try_start_0
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
@@ -799,15 +727,12 @@
 
     move-result v2
 
-    .line 725
     :goto_0
     return v2
 
-    .line 724
     :catch_0
     move-exception v0
 
-    .line 725
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 
@@ -819,7 +744,6 @@
     .param p0, "subId"    # I
 
     .prologue
-    .line 1575
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -836,10 +760,8 @@
     .param p0, "type"    # I
 
     .prologue
-    .line 1220
     packed-switch p0, :pswitch_data_0
 
-    .line 1230
     const-string v0, "MultiSimManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -862,13 +784,11 @@
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1231
     const/4 v0, 0x0
 
     :goto_0
     return v0
 
-    .line 1223
     :pswitch_0
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getDefaultVoicePhoneId()I
 
@@ -876,7 +796,6 @@
 
     goto :goto_0
 
-    .line 1225
     :pswitch_1
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getSubscriptionManager()Landroid/telephony/SubscriptionManager;
 
@@ -888,7 +807,6 @@
 
     goto :goto_0
 
-    .line 1227
     :pswitch_2
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getSubscriptionManager()Landroid/telephony/SubscriptionManager;
 
@@ -900,7 +818,6 @@
 
     goto :goto_0
 
-    .line 1220
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -914,10 +831,8 @@
     .param p0, "type"    # I
 
     .prologue
-    .line 1492
     packed-switch p0, :pswitch_data_0
 
-    .line 1502
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getDefaultSubId()I
 
     move-result v0
@@ -927,7 +842,6 @@
     :goto_0
     return-wide v0
 
-    .line 1495
     :pswitch_0
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getDefaultVoiceSubId()I
 
@@ -937,7 +851,6 @@
 
     goto :goto_0
 
-    .line 1497
     :pswitch_1
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getDefaultSmsSubId()I
 
@@ -947,7 +860,6 @@
 
     goto :goto_0
 
-    .line 1499
     :pswitch_2
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getDefaultDataSubId()I
 
@@ -957,7 +869,6 @@
 
     goto :goto_0
 
-    .line 1492
     nop
 
     :pswitch_data_0
@@ -973,10 +884,8 @@
     .param p0, "type"    # I
 
     .prologue
-    .line 1198
     packed-switch p0, :pswitch_data_0
 
-    .line 1208
     const-string v0, "MultiSimManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -999,13 +908,11 @@
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1209
     const/4 v0, 0x0
 
     :goto_0
     return-object v0
 
-    .line 1201
     :pswitch_0
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getSubscriptionManager()Landroid/telephony/SubscriptionManager;
 
@@ -1017,7 +924,6 @@
 
     goto :goto_0
 
-    .line 1203
     :pswitch_1
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getSubscriptionManager()Landroid/telephony/SubscriptionManager;
 
@@ -1029,7 +935,6 @@
 
     goto :goto_0
 
-    .line 1205
     :pswitch_2
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getSubscriptionManager()Landroid/telephony/SubscriptionManager;
 
@@ -1041,7 +946,6 @@
 
     goto :goto_0
 
-    .line 1198
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -1055,10 +959,8 @@
     .param p0, "type"    # I
 
     .prologue
-    .line 1154
     packed-switch p0, :pswitch_data_0
 
-    .line 1164
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getDefaultSubId()I
 
     move-result v0
@@ -1066,7 +968,6 @@
     :goto_0
     return v0
 
-    .line 1157
     :pswitch_0
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getDefaultVoiceSubId()I
 
@@ -1074,7 +975,6 @@
 
     goto :goto_0
 
-    .line 1159
     :pswitch_1
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getDefaultSmsSubId()I
 
@@ -1082,7 +982,6 @@
 
     goto :goto_0
 
-    .line 1161
     :pswitch_2
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getDefaultDataSubId()I
 
@@ -1090,7 +989,6 @@
 
     goto :goto_0
 
-    .line 1154
     nop
 
     :pswitch_data_0
@@ -1106,7 +1004,6 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 252
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -1123,10 +1020,8 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 165
     const/4 v2, 0x0
 
-    .line 167
     .local v2, "count":I
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getSubscriptionManager()Landroid/telephony/SubscriptionManager;
 
@@ -1136,11 +1031,9 @@
 
     move-result-object v1
 
-    .line 169
     .local v1, "activeSubList":Ljava/util/List;, "Ljava/util/List<Landroid/telephony/SubscriptionInfo;>;"
     if-eqz v1, :cond_1
 
-    .line 170
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -1160,7 +1053,6 @@
 
     check-cast v0, Landroid/telephony/SubscriptionInfo;
 
-    .line 171
     .local v0, "SubscriptionInfo":Landroid/telephony/SubscriptionInfo;
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
 
@@ -1168,7 +1060,7 @@
 
     move-result v5
 
-    const-string/jumbo v6, "ril.ICC_TYPE"
+    const-string v6, "ril.ICC_TYPE"
 
     const-string v7, "0"
 
@@ -1176,7 +1068,6 @@
 
     move-result-object v4
 
-    .line 172
     .local v4, "iccType":Ljava/lang/String;
     const-string v5, "0"
 
@@ -1196,12 +1087,10 @@
 
     if-eqz v5, :cond_0
 
-    .line 173
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 177
     .end local v0    # "SubscriptionInfo":Landroid/telephony/SubscriptionInfo;
     .end local v3    # "i$":Ljava/util/Iterator;
     .end local v4    # "iccType":Ljava/lang/String;
@@ -1212,7 +1101,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "return getEnabledSimCount count = "
+    const-string v7, "return getEnabledSimCount count = "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1228,7 +1117,6 @@
 
     invoke-static {v5, v6}, Landroid/telephony/Rlog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 178
     return v2
 .end method
 
@@ -1237,12 +1125,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 550
     invoke-static {p0}, Lcom/samsung/android/telephony/MultiSimManager;->getSubIdUsingProperty(I)I
 
     move-result v1
 
-    .line 552
     .local v1, "subId":I
     :try_start_0
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
@@ -1255,15 +1141,12 @@
 
     move-result-object v2
 
-    .line 554
     :goto_0
     return-object v2
 
-    .line 553
     :catch_0
     move-exception v0
 
-    .line 554
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 
@@ -1278,7 +1161,6 @@
 
     const/4 v2, 0x0
 
-    .line 1293
     const-string v3, "gsm.facilitylock.state"
 
     const-string v4, "-1"
@@ -1287,7 +1169,6 @@
 
     move-result-object v0
 
-    .line 1295
     .local v0, "prop":Ljava/lang/String;
     invoke-static {v1}, Ljava/lang/Boolean;->toString(Z)Ljava/lang/String;
 
@@ -1299,11 +1180,9 @@
 
     if-eqz v3, :cond_0
 
-    .line 1300
     :goto_0
     return v1
 
-    .line 1297
     :cond_0
     invoke-static {v2}, Ljava/lang/Boolean;->toString(Z)Ljava/lang/String;
 
@@ -1317,10 +1196,8 @@
 
     move v1, v2
 
-    .line 1298
     goto :goto_0
 
-    .line 1300
     :cond_1
     const/4 v1, -0x1
 
@@ -1332,7 +1209,6 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 304
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -1348,7 +1224,6 @@
     .locals 1
 
     .prologue
-    .line 156
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getSubscriptionManager()Landroid/telephony/SubscriptionManager;
 
     move-result-object v0
@@ -1364,10 +1239,8 @@
     .locals 5
 
     .prologue
-    .line 1580
     const/4 v0, 0x0
 
-    .line 1582
     .local v0, "count":I
     const/4 v2, 0x0
 
@@ -1379,8 +1252,7 @@
 
     if-ge v2, v3, :cond_1
 
-    .line 1583
-    const-string/jumbo v3, "ril.ICC_TYPE"
+    const-string v3, "ril.ICC_TYPE"
 
     const-string v4, "0"
 
@@ -1388,7 +1260,6 @@
 
     move-result-object v1
 
-    .line 1584
     .local v1, "iccType":Ljava/lang/String;
     const-string v3, "0"
 
@@ -1398,16 +1269,13 @@
 
     if-nez v3, :cond_0
 
-    .line 1585
     add-int/lit8 v0, v0, 0x1
 
-    .line 1582
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 1589
     .end local v1    # "iccType":Ljava/lang/String;
     :cond_1
     return v0
@@ -1418,12 +1286,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 572
     invoke-static {p0}, Lcom/samsung/android/telephony/MultiSimManager;->getSubIdUsingProperty(I)I
 
     move-result v1
 
-    .line 574
     .local v1, "subId":I
     :try_start_0
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
@@ -1436,15 +1302,12 @@
 
     move-result-object v2
 
-    .line 576
     :goto_0
     return-object v2
 
-    .line 575
     :catch_0
     move-exception v0
 
-    .line 576
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 
@@ -1456,12 +1319,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 286
     invoke-static {p0}, Lcom/samsung/android/telephony/MultiSimManager;->getSubIdUsingProperty(I)I
 
     move-result v1
 
-    .line 288
     .local v1, "subId":I
     :try_start_0
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
@@ -1474,15 +1335,12 @@
 
     move-result-object v2
 
-    .line 290
     :goto_0
     return-object v2
 
-    .line 289
     :catch_0
     move-exception v0
 
-    .line 290
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 
@@ -1494,7 +1352,6 @@
     .param p0, "subId"    # I
 
     .prologue
-    .line 1603
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -1511,12 +1368,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 530
     invoke-static {p0}, Lcom/samsung/android/telephony/MultiSimManager;->getSubIdUsingProperty(I)I
 
     move-result v1
 
-    .line 532
     .local v1, "subId":I
     :try_start_0
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
@@ -1529,15 +1384,12 @@
 
     move-result v2
 
-    .line 534
     :goto_0
     return v2
 
-    .line 533
     :catch_0
     move-exception v0
 
-    .line 534
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, -0x1
 
@@ -1549,7 +1401,6 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 1616
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -1566,12 +1417,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 592
     invoke-static {p0}, Lcom/samsung/android/telephony/MultiSimManager;->getSubIdUsingProperty(I)I
 
     move-result v1
 
-    .line 594
     .local v1, "subId":I
     :try_start_0
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
@@ -1584,15 +1433,12 @@
 
     move-result-object v2
 
-    .line 596
     :goto_0
     return-object v2
 
-    .line 595
     :catch_0
     move-exception v0
 
-    .line 596
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 
@@ -1604,16 +1450,13 @@
     .param p0, "type"    # I
 
     .prologue
-    .line 1046
     packed-switch p0, :pswitch_data_0
 
-    .line 1052
     const/4 v0, 0x0
 
     :goto_0
     return v0
 
-    .line 1048
     :pswitch_0
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
 
@@ -1625,7 +1468,6 @@
 
     goto :goto_0
 
-    .line 1050
     :pswitch_1
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
 
@@ -1637,7 +1479,6 @@
 
     goto :goto_0
 
-    .line 1046
     nop
 
     :pswitch_data_0
@@ -1652,12 +1493,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 390
     invoke-static {p0}, Lcom/samsung/android/telephony/MultiSimManager;->getSubIdUsingProperty(I)I
 
     move-result v1
 
-    .line 392
     .local v1, "subId":I
     :try_start_0
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
@@ -1670,15 +1509,12 @@
 
     move-result-object v2
 
-    .line 394
     :goto_0
     return-object v2
 
-    .line 393
     :catch_0
     move-exception v0
 
-    .line 394
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 
@@ -1690,12 +1526,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 350
     invoke-static {p0}, Lcom/samsung/android/telephony/MultiSimManager;->getSubIdUsingProperty(I)I
 
     move-result v1
 
-    .line 352
     .local v1, "subId":I
     :try_start_0
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
@@ -1708,15 +1542,12 @@
 
     move-result-object v2
 
-    .line 354
     :goto_0
     return-object v2
 
-    .line 353
     :catch_0
     move-exception v0
 
-    .line 354
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 
@@ -1728,12 +1559,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 333
     invoke-static {p0}, Lcom/samsung/android/telephony/MultiSimManager;->getSubIdUsingProperty(I)I
 
     move-result v1
 
-    .line 335
     .local v1, "subId":I
     :try_start_0
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
@@ -1746,15 +1575,12 @@
 
     move-result-object v2
 
-    .line 337
     :goto_0
     return-object v2
 
-    .line 336
     :catch_0
     move-exception v0
 
-    .line 337
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 
@@ -1766,12 +1592,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 407
     invoke-static {p0}, Lcom/samsung/android/telephony/MultiSimManager;->getSubIdUsingProperty(I)I
 
     move-result v1
 
-    .line 409
     .local v1, "subId":I
     :try_start_0
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
@@ -1784,15 +1608,12 @@
 
     move-result v2
 
-    .line 411
     :goto_0
     return v2
 
-    .line 410
     :catch_0
     move-exception v0
 
-    .line 411
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 
@@ -1804,7 +1625,6 @@
     .param p0, "subId"    # I
 
     .prologue
-    .line 1143
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getPhoneId(I)I
 
     move-result v0
@@ -1817,10 +1637,8 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 1483
     long-to-int v0, p0
 
-    .line 1484
     .local v0, "sub":I
     invoke-static {v0}, Lcom/samsung/android/telephony/MultiSimManager;->getPhoneId(I)I
 
@@ -1834,12 +1652,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 775
     invoke-static {p0}, Lcom/samsung/android/telephony/MultiSimManager;->getSubIdUsingProperty(I)I
 
     move-result v1
 
-    .line 777
     .local v1, "subId":I
     :try_start_0
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
@@ -1852,15 +1668,12 @@
 
     move-result v2
 
-    .line 779
     :goto_0
     return v2
 
-    .line 778
     :catch_0
     move-exception v0
 
-    .line 779
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 
@@ -1872,7 +1685,6 @@
     .param p0, "subId"    # I
 
     .prologue
-    .line 790
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -1889,10 +1701,8 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 1457
     long-to-int v0, p0
 
-    .line 1458
     .local v0, "sub":I
     invoke-static {v0}, Lcom/samsung/android/telephony/MultiSimManager;->getServiceStateUsingSubId(I)I
 
@@ -1906,12 +1716,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 512
     invoke-static {p0}, Lcom/samsung/android/telephony/MultiSimManager;->getSubIdUsingProperty(I)I
 
     move-result v1
 
-    .line 514
     .local v1, "subId":I
     :try_start_0
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
@@ -1924,15 +1732,12 @@
 
     move-result-object v2
 
-    .line 516
     :goto_0
     return-object v2
 
-    .line 515
     :catch_0
     move-exception v0
 
-    .line 516
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 
@@ -1945,7 +1750,6 @@
     .param p1, "simSlot"    # I
 
     .prologue
-    .line 1353
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
@@ -1960,7 +1764,6 @@
 
     move-result v0
 
-    .line 1355
     .local v0, "simIcon":I
     const-string v1, "MultiSimManager"
 
@@ -1994,56 +1797,41 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1356
     if-gez v0, :cond_0
 
-    .line 1357
     packed-switch p1, :pswitch_data_0
 
-    .line 1374
     const/4 v0, 0x0
 
-    .line 1379
     :cond_0
     :goto_0
     return v0
 
-    .line 1359
     :pswitch_0
     const/4 v0, 0x0
 
-    .line 1360
     goto :goto_0
 
-    .line 1362
     :pswitch_1
     const/4 v0, 0x1
 
-    .line 1363
     goto :goto_0
 
-    .line 1365
     :pswitch_2
     const/4 v0, 0x2
 
-    .line 1366
     goto :goto_0
 
-    .line 1368
     :pswitch_3
     const/4 v0, 0x3
 
-    .line 1369
     goto :goto_0
 
-    .line 1371
     :pswitch_4
     const/4 v0, 0x4
 
-    .line 1372
     goto :goto_0
 
-    .line 1357
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -2060,7 +1848,6 @@
     .param p1, "simSlot"    # I
 
     .prologue
-    .line 1315
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
@@ -2073,7 +1860,6 @@
 
     move-result-object v0
 
-    .line 1317
     .local v0, "simName":Ljava/lang/String;
     const-string v1, "MultiSimManager"
 
@@ -2107,56 +1893,41 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1318
     if-nez v0, :cond_0
 
-    .line 1319
     packed-switch p1, :pswitch_data_0
 
-    .line 1336
     const-string v0, "SIM 1"
 
-    .line 1341
     :cond_0
     :goto_0
     return-object v0
 
-    .line 1321
     :pswitch_0
     const-string v0, "SIM 1"
 
-    .line 1322
     goto :goto_0
 
-    .line 1324
     :pswitch_1
     const-string v0, "SIM 2"
 
-    .line 1325
     goto :goto_0
 
-    .line 1327
     :pswitch_2
     const-string v0, "SIM 3"
 
-    .line 1328
     goto :goto_0
 
-    .line 1330
     :pswitch_3
     const-string v0, "SIM 4"
 
-    .line 1331
     goto :goto_0
 
-    .line 1333
     :pswitch_4
     const-string v0, "SIM 5"
 
-    .line 1334
     goto :goto_0
 
-    .line 1319
     nop
 
     :pswitch_data_0
@@ -2174,12 +1945,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 480
     invoke-static {p0}, Lcom/samsung/android/telephony/MultiSimManager;->getSubIdUsingProperty(I)I
 
     move-result v1
 
-    .line 482
     .local v1, "subId":I
     :try_start_0
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
@@ -2192,15 +1961,12 @@
 
     move-result-object v2
 
-    .line 484
     :goto_0
     return-object v2
 
-    .line 483
     :catch_0
     move-exception v0
 
-    .line 484
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 
@@ -2212,12 +1978,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 496
     invoke-static {p0}, Lcom/samsung/android/telephony/MultiSimManager;->getSubIdUsingProperty(I)I
 
     move-result v1
 
-    .line 498
     .local v1, "subId":I
     :try_start_0
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
@@ -2230,15 +1994,12 @@
 
     move-result-object v2
 
-    .line 500
     :goto_0
     return-object v2
 
-    .line 499
     :catch_0
     move-exception v0
 
-    .line 500
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 
@@ -2250,12 +2011,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 266
     invoke-static {p0}, Lcom/samsung/android/telephony/MultiSimManager;->getSubIdUsingProperty(I)I
 
     move-result v1
 
-    .line 268
     .local v1, "subId":I
     :try_start_0
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
@@ -2268,15 +2027,12 @@
 
     move-result-object v2
 
-    .line 270
     :goto_0
     return-object v2
 
-    .line 269
     :catch_0
     move-exception v0
 
-    .line 270
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 
@@ -2287,7 +2043,6 @@
     .locals 1
 
     .prologue
-    .line 146
     sget v0, Lcom/samsung/android/telephony/MultiSimManager;->SIMSLOT_COUNT:I
 
     return v0
@@ -2298,7 +2053,6 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 468
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -2315,7 +2069,6 @@
     .param p0, "subId"    # I
 
     .prologue
-    .line 1125
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSlotId(I)I
 
     move-result v0
@@ -2328,10 +2081,8 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 1428
     long-to-int v0, p0
 
-    .line 1429
     .local v0, "sub":I
     invoke-static {v0}, Lcom/samsung/android/telephony/MultiSimManager;->getSlotId(I)I
 
@@ -2345,12 +2096,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 1437
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[I
 
     move-result-object v3
 
-    .line 1438
     .local v3, "subIds":[I
     if-eqz v3, :cond_0
 
@@ -2360,12 +2109,10 @@
 
     array-length v1, v3
 
-    .line 1440
     .local v1, "numSubIds":I
     :goto_0
     new-array v2, v1, [J
 
-    .line 1441
     .local v2, "subIdArr":[J
     const/4 v0, 0x0
 
@@ -2373,19 +2120,16 @@
     :goto_1
     if-ge v0, v1, :cond_1
 
-    .line 1442
     aget v4, v3, v0
 
     int-to-long v4, v4
 
     aput-wide v4, v2, v0
 
-    .line 1441
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 1438
     .end local v0    # "i":I
     .end local v1    # "numSubIds":I
     .end local v2    # "subIdArr":[J
@@ -2394,7 +2138,6 @@
 
     goto :goto_0
 
-    .line 1444
     .restart local v0    # "i":I
     .restart local v1    # "numSubIds":I
     .restart local v2    # "subIdArr":[J
@@ -2407,16 +2150,13 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 1626
     const/4 v1, 0x0
 
-    .line 1627
     .local v1, "propVal":Ljava/lang/String;
     const v3, 0x7fffffff
 
-    .line 1629
     .local v3, "subId":I
-    const-string/jumbo v5, "ril.subinfo"
+    const-string v5, "ril.subinfo"
 
     const-string v6, ""
 
@@ -2424,7 +2164,6 @@
 
     move-result-object v0
 
-    .line 1630
     .local v0, "prop":Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -2434,14 +2173,12 @@
 
     if-lez v5, :cond_0
 
-    .line 1631
     const-string v5, ","
 
     invoke-virtual {v0, v5}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v4
 
-    .line 1632
     .local v4, "values":[Ljava/lang/String;
     if-ltz p0, :cond_0
 
@@ -2457,10 +2194,8 @@
 
     if-nez v5, :cond_0
 
-    .line 1634
     aget-object v1, v4, p0
 
-    .line 1638
     .end local v4    # "values":[Ljava/lang/String;
     :cond_0
     if-eqz v1, :cond_1
@@ -2471,14 +2206,12 @@
 
     if-lez v5, :cond_1
 
-    .line 1639
     const-string v5, ":"
 
     invoke-virtual {v1, v5}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v2
 
-    .line 1640
     .local v2, "retStr":[Ljava/lang/String;
     if-ltz p0, :cond_1
 
@@ -2494,7 +2227,6 @@
 
     if-nez v5, :cond_1
 
-    .line 1642
     const/4 v5, 0x1
 
     aget-object v5, v2, v5
@@ -2503,7 +2235,6 @@
 
     move-result v3
 
-    .line 1645
     .end local v2    # "retStr":[Ljava/lang/String;
     :cond_1
     const-string v5, "MultiSimManager"
@@ -2512,7 +2243,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "return subId: "
+    const-string v7, "return subId: "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2528,7 +2259,6 @@
 
     invoke-static {v5, v6}, Landroid/telephony/Rlog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1646
     return v3
 .end method
 
@@ -2537,7 +2267,6 @@
     .param p0, "subId"    # I
 
     .prologue
-    .line 1062
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getSubscriptionManager()Landroid/telephony/SubscriptionManager;
 
     move-result-object v0
@@ -2554,10 +2283,8 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 1470
     long-to-int v0, p0
 
-    .line 1471
     .local v0, "sub":I
     invoke-static {v0}, Lcom/samsung/android/telephony/MultiSimManager;->getSubInfoForSubscriber(I)Landroid/telephony/SubscriptionInfo;
 
@@ -2571,7 +2298,6 @@
     .param p0, "iccId"    # Ljava/lang/String;
 
     .prologue
-    .line 1071
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getSubscriptionManager()Landroid/telephony/SubscriptionManager;
 
     move-result-object v0
@@ -2588,7 +2314,6 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 1080
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getSubscriptionManager()Landroid/telephony/SubscriptionManager;
 
     move-result-object v0
@@ -2605,12 +2330,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 231
     invoke-static {p0}, Lcom/samsung/android/telephony/MultiSimManager;->getSubIdUsingProperty(I)I
 
     move-result v1
 
-    .line 233
     .local v1, "subId":I
     :try_start_0
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
@@ -2623,15 +2346,12 @@
 
     move-result-object v2
 
-    .line 235
     :goto_0
     return-object v2
 
-    .line 234
     :catch_0
     move-exception v0
 
-    .line 235
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 
@@ -2643,7 +2363,6 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 1134
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubId(I)[I
 
     move-result-object v0
@@ -2655,7 +2374,6 @@
     .locals 1
 
     .prologue
-    .line 128
     invoke-static {}, Landroid/app/ActivityThread;->currentApplication()Landroid/app/Application;
 
     move-result-object v0
@@ -2675,7 +2393,6 @@
     .locals 3
 
     .prologue
-    .line 132
     invoke-static {}, Landroid/app/ActivityThread;->currentApplication()Landroid/app/Application;
 
     move-result-object v2
@@ -2684,9 +2401,8 @@
 
     move-result-object v0
 
-    .line 133
     .local v0, "context":Landroid/content/Context;
-    const-string/jumbo v2, "phone"
+    const-string v2, "phone"
 
     invoke-virtual {v0, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -2694,7 +2410,6 @@
 
     check-cast v1, Landroid/telephony/TelephonyManager;
 
-    .line 135
     .local v1, "telephonyManager":Landroid/telephony/TelephonyManager;
     return-object v1
 .end method
@@ -2706,16 +2421,13 @@
     .param p2, "defaultVal"    # Ljava/lang/String;
 
     .prologue
-    .line 739
     const/4 v1, 0x0
 
-    .line 740
     .local v1, "propVal":Ljava/lang/String;
     invoke-static {p0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 741
     .local v0, "prop":Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -2725,14 +2437,12 @@
 
     if-lez v3, :cond_0
 
-    .line 742
     const-string v3, ","
 
     invoke-virtual {v0, v3}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v2
 
-    .line 743
     .local v2, "values":[Ljava/lang/String;
     if-ltz p1, :cond_0
 
@@ -2748,10 +2458,8 @@
 
     if-nez v3, :cond_0
 
-    .line 745
     aget-object v1, v2, p1
 
-    .line 748
     .end local v2    # "values":[Ljava/lang/String;
     :cond_0
     if-nez v1, :cond_1
@@ -2774,12 +2482,10 @@
     .param p2, "defaultVal"    # Ljava/lang/String;
 
     .prologue
-    .line 1659
     invoke-static {p1}, Lcom/samsung/android/telephony/MultiSimManager;->getPhoneId(I)I
 
     move-result v0
 
-    .line 1660
     .local v0, "phoneId":I
     invoke-static {v0, p0, p2}, Landroid/telephony/TelephonyManager;->getTelephonyProperty(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -2793,12 +2499,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 687
     invoke-static {p0}, Lcom/samsung/android/telephony/MultiSimManager;->getSubIdUsingProperty(I)I
 
     move-result v1
 
-    .line 689
     .local v1, "subId":I
     :try_start_0
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
@@ -2811,15 +2515,12 @@
 
     move-result-object v2
 
-    .line 691
     :goto_0
     return-object v2
 
-    .line 690
     :catch_0
     move-exception v0
 
-    .line 691
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 
@@ -2831,12 +2532,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 613
     invoke-static {p0}, Lcom/samsung/android/telephony/MultiSimManager;->getSubIdUsingProperty(I)I
 
     move-result v1
 
-    .line 615
     .local v1, "subId":I
     :try_start_0
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
@@ -2849,15 +2548,12 @@
 
     move-result-object v2
 
-    .line 617
     :goto_0
     return-object v2
 
-    .line 616
     :catch_0
     move-exception v0
 
-    .line 617
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 
@@ -2869,12 +2565,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 666
     invoke-static {p0}, Lcom/samsung/android/telephony/MultiSimManager;->getSubIdUsingProperty(I)I
 
     move-result v1
 
-    .line 668
     .local v1, "subId":I
     :try_start_0
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
@@ -2887,15 +2581,12 @@
 
     move-result v2
 
-    .line 670
     :goto_0
     return v2
 
-    .line 669
     :catch_0
     move-exception v0
 
-    .line 670
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 
@@ -2907,12 +2598,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 440
     invoke-static {p0}, Lcom/samsung/android/telephony/MultiSimManager;->getSubIdUsingProperty(I)I
 
     move-result v1
 
-    .line 442
     .local v1, "subId":I
     :try_start_0
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
@@ -2925,15 +2614,12 @@
 
     move-result v2
 
-    .line 444
     :goto_0
     return v2
 
-    .line 443
     :catch_0
     move-exception v0
 
-    .line 444
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 
@@ -2946,12 +2632,10 @@
     .param p1, "dialString"    # Ljava/lang/String;
 
     .prologue
-    .line 1006
     invoke-static {p0}, Lcom/samsung/android/telephony/MultiSimManager;->getSubIdUsingProperty(I)I
 
     move-result v1
 
-    .line 1008
     .local v1, "subId":I
     :try_start_0
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
@@ -2964,15 +2648,12 @@
 
     move-result v2
 
-    .line 1010
     :goto_0
     return v2
 
-    .line 1009
     :catch_0
     move-exception v0
 
-    .line 1010
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 
@@ -2984,7 +2665,6 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 457
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -3002,12 +2682,10 @@
     .param p1, "number"    # Ljava/lang/String;
 
     .prologue
-    .line 1031
     invoke-static {p0}, Lcom/samsung/android/telephony/MultiSimManager;->getSubIdUsingProperty(I)I
 
     move-result v1
 
-    .line 1033
     .local v1, "subId":I
     :try_start_0
     invoke-static {v1, p1}, Landroid/telephony/PhoneNumberUtils;->isEmergencyNumber(ILjava/lang/String;)Z
@@ -3016,15 +2694,12 @@
 
     move-result v2
 
-    .line 1035
     :goto_0
     return v2
 
-    .line 1034
     :catch_0
     move-exception v0
 
-    .line 1035
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 
@@ -3039,7 +2714,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 211
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
@@ -3054,23 +2728,19 @@
 
     move-result v0
 
-    .line 212
     .local v0, "simActive":I
     if-ne v0, v1, :cond_0
 
-    .line 216
     :goto_0
     return v1
 
-    .line 215
     :cond_0
     const-string v1, "MultiSimManager"
 
-    const-string/jumbo v2, "return isEnabledSim = false"
+    const-string v2, "return isEnabledSim = false"
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 216
     const/4 v1, 0x0
 
     goto :goto_0
@@ -3081,12 +2751,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 906
     invoke-static {p0}, Lcom/samsung/android/telephony/MultiSimManager;->getSubIdUsingProperty(I)I
 
     move-result v1
 
-    .line 908
     .local v1, "subId":I
     :try_start_0
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
@@ -3099,15 +2767,12 @@
 
     move-result v2
 
-    .line 910
     :goto_0
     return v2
 
-    .line 909
     :catch_0
     move-exception v0
 
-    .line 910
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x1
 
@@ -3119,12 +2784,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 369
     invoke-static {p0}, Lcom/samsung/android/telephony/MultiSimManager;->getSubIdUsingProperty(I)I
 
     move-result v1
 
-    .line 371
     .local v1, "subId":I
     :try_start_0
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
@@ -3137,15 +2800,12 @@
 
     move-result v2
 
-    .line 373
     :goto_0
     return v2
 
-    .line 372
     :catch_0
     move-exception v0
 
-    .line 373
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 
@@ -3156,10 +2816,8 @@
     .locals 5
 
     .prologue
-    .line 188
     const/4 v0, 0x0
 
-    .line 189
     .local v0, "count":I
     const/4 v2, 0x0
 
@@ -3171,8 +2829,7 @@
 
     if-ge v2, v3, :cond_1
 
-    .line 190
-    const-string/jumbo v3, "ril.ICC_TYPE"
+    const-string v3, "ril.ICC_TYPE"
 
     const-string v4, "0"
 
@@ -3180,7 +2837,6 @@
 
     move-result-object v1
 
-    .line 191
     .local v1, "iccType":Ljava/lang/String;
     const-string v3, "0"
 
@@ -3190,16 +2846,13 @@
 
     if-eqz v3, :cond_0
 
-    .line 192
     add-int/lit8 v0, v0, 0x1
 
-    .line 189
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 195
     .end local v1    # "iccType":Ljava/lang/String;
     :cond_1
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getSimSlotCount()I
@@ -3208,22 +2861,18 @@
 
     if-ne v0, v3, :cond_2
 
-    .line 196
     const/4 v3, 0x1
 
-    .line 199
     :goto_1
     return v3
 
-    .line 198
     :cond_2
     const-string v3, "MultiSimManager"
 
-    const-string/jumbo v4, "return isNoSIM = false"
+    const-string v4, "return isNoSIM = false"
 
     invoke-static {v3, v4}, Landroid/telephony/Rlog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 199
     const/4 v3, 0x0
 
     goto :goto_1
@@ -3234,12 +2883,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 875
     invoke-static {p0}, Lcom/samsung/android/telephony/MultiSimManager;->getSubIdUsingProperty(I)I
 
     move-result v1
 
-    .line 877
     .local v1, "subId":I
     :try_start_0
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
@@ -3252,15 +2899,12 @@
 
     move-result v2
 
-    .line 879
     :goto_0
     return v2
 
-    .line 878
     :catch_0
     move-exception v0
 
-    .line 879
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 
@@ -3272,12 +2916,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 920
     invoke-static {p0}, Lcom/samsung/android/telephony/MultiSimManager;->getSubIdUsingProperty(I)I
 
     move-result v1
 
-    .line 922
     .local v1, "subId":I
     :try_start_0
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
@@ -3290,15 +2932,12 @@
 
     move-result v2
 
-    .line 924
     :goto_0
     return v2
 
-    .line 923
     :catch_0
     move-exception v0
 
-    .line 924
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 
@@ -3310,12 +2949,10 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 891
     invoke-static {p0}, Lcom/samsung/android/telephony/MultiSimManager;->getSubIdUsingProperty(I)I
 
     move-result v1
 
-    .line 893
     .local v1, "subId":I
     :try_start_0
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
@@ -3328,15 +2965,12 @@
 
     move-result v2
 
-    .line 895
     :goto_0
     return v2
 
-    .line 894
     :catch_0
     move-exception v0
 
-    .line 895
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 
@@ -3348,7 +2982,6 @@
     .param p0, "subId"    # I
 
     .prologue
-    .line 652
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -3365,7 +2998,6 @@
     .param p0, "phoneId"    # I
 
     .prologue
-    .line 1253
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->isValidPhoneId(I)Z
 
     move-result v0
@@ -3378,7 +3010,6 @@
     .param p0, "subId"    # I
 
     .prologue
-    .line 1246
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->isValidSubscriptionId(I)Z
 
     move-result v0
@@ -3391,10 +3022,8 @@
     .param p0, "subId"    # J
 
     .prologue
-    .line 1526
     long-to-int v0, p0
 
-    .line 1527
     .local v0, "sub":I
     invoke-static {v0}, Lcom/samsung/android/telephony/MultiSimManager;->isValidSubId(I)Z
 
@@ -3409,10 +3038,8 @@
     .param p1, "phoneId"    # I
 
     .prologue
-    .line 1262
     invoke-static {p0, p1}, Landroid/telephony/SubscriptionManager;->putPhoneIdAndSubIdExtra(Landroid/content/Intent;I)V
 
-    .line 1263
     return-void
 .end method
 
@@ -3423,10 +3050,8 @@
     .param p2, "subId"    # I
 
     .prologue
-    .line 1272
     invoke-static {p0, p1, p2}, Landroid/telephony/SubscriptionManager;->putPhoneIdAndSubIdExtra(Landroid/content/Intent;II)V
 
-    .line 1273
     return-void
 .end method
 
@@ -3437,14 +3062,11 @@
     .param p2, "subId"    # J
 
     .prologue
-    .line 1541
     long-to-int v0, p2
 
-    .line 1542
     .local v0, "sub":I
     invoke-static {p0, p1, v0}, Lcom/samsung/android/telephony/MultiSimManager;->putPhoneIdAndSubIdExtra(Landroid/content/Intent;II)V
 
-    .line 1543
     return-void
 .end method
 
@@ -3453,14 +3075,12 @@
     .param p0, "enable"    # Z
 
     .prologue
-    .line 1019
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
 
     invoke-virtual {v0, p0}, Landroid/telephony/TelephonyManager;->setDataEnabled(Z)V
 
-    .line 1020
     return-void
 .end method
 
@@ -3470,10 +3090,8 @@
     .param p1, "subId"    # I
 
     .prologue
-    .line 1174
     packed-switch p0, :pswitch_data_0
 
-    .line 1187
     const-string v0, "MultiSimManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3496,11 +3114,9 @@
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1190
     :goto_0
     return-void
 
-    .line 1177
     :pswitch_0
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getSubscriptionManager()Landroid/telephony/SubscriptionManager;
 
@@ -3510,7 +3126,6 @@
 
     goto :goto_0
 
-    .line 1180
     :pswitch_1
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getSubscriptionManager()Landroid/telephony/SubscriptionManager;
 
@@ -3520,7 +3135,6 @@
 
     goto :goto_0
 
-    .line 1183
     :pswitch_2
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getSubscriptionManager()Landroid/telephony/SubscriptionManager;
 
@@ -3530,7 +3144,6 @@
 
     goto :goto_0
 
-    .line 1174
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -3545,14 +3158,11 @@
     .param p1, "subId"    # J
 
     .prologue
-    .line 1515
     long-to-int v0, p1
 
-    .line 1516
     .local v0, "sub":I
     invoke-static {p0, v0}, Lcom/samsung/android/telephony/MultiSimManager;->setDefaultSubId(II)V
 
-    .line 1517
     return-void
 .end method
 
@@ -3563,17 +3173,14 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 1674
     :try_start_0
     invoke-static {p1, p0, p2}, Landroid/telephony/TelephonyManager;->setTelephonyProperty(ILjava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1677
     :goto_0
     return-void
 
-    .line 1675
     :catch_0
     move-exception v0
 
@@ -3586,12 +3193,10 @@
     .param p1, "pin"    # Ljava/lang/String;
 
     .prologue
-    .line 936
     invoke-static {p0}, Lcom/samsung/android/telephony/MultiSimManager;->getSubIdUsingProperty(I)I
 
     move-result v1
 
-    .line 938
     .local v1, "subId":I
     :try_start_0
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
@@ -3604,15 +3209,12 @@
 
     move-result v2
 
-    .line 940
     :goto_0
     return v2
 
-    .line 939
     :catch_0
     move-exception v0
 
-    .line 940
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 
@@ -3625,12 +3227,10 @@
     .param p1, "pin"    # Ljava/lang/String;
 
     .prologue
-    .line 970
     invoke-static {p0}, Lcom/samsung/android/telephony/MultiSimManager;->getSubIdUsingProperty(I)I
 
     move-result v1
 
-    .line 972
     .local v1, "subId":I
     :try_start_0
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
@@ -3643,15 +3243,12 @@
 
     move-result-object v2
 
-    .line 974
     :goto_0
     return-object v2
 
-    .line 973
     :catch_0
     move-exception v0
 
-    .line 974
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 
@@ -3667,12 +3264,10 @@
     .param p2, "pin"    # Ljava/lang/String;
 
     .prologue
-    .line 953
     invoke-static {p0}, Lcom/samsung/android/telephony/MultiSimManager;->getSubIdUsingProperty(I)I
 
     move-result v1
 
-    .line 955
     .local v1, "subId":I
     :try_start_0
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
@@ -3685,15 +3280,12 @@
 
     move-result v2
 
-    .line 957
     :goto_0
     return v2
 
-    .line 956
     :catch_0
     move-exception v0
 
-    .line 957
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 
@@ -3707,12 +3299,10 @@
     .param p2, "pin"    # Ljava/lang/String;
 
     .prologue
-    .line 989
     invoke-static {p0}, Lcom/samsung/android/telephony/MultiSimManager;->getSubIdUsingProperty(I)I
 
     move-result v1
 
-    .line 991
     .local v1, "subId":I
     :try_start_0
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
@@ -3725,15 +3315,12 @@
 
     move-result-object v2
 
-    .line 993
     :goto_0
     return-object v2
 
-    .line 992
     :catch_0
     move-exception v0
 
-    .line 993
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 
@@ -3749,12 +3336,10 @@
     .param p1, "slotId"    # I
 
     .prologue
-    .line 632
     invoke-static {p1}, Lcom/samsung/android/telephony/MultiSimManager;->getSubIdUsingProperty(I)I
 
     move-result v1
 
-    .line 634
     .local v1, "subId":I
     :try_start_0
     invoke-static {}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyManager()Landroid/telephony/TelephonyManager;
@@ -3767,15 +3352,12 @@
 
     move-result-object v2
 
-    .line 636
     :goto_0
     return-object v2
 
-    .line 635
     :catch_0
     move-exception v0
 
-    .line 636
     .local v0, "ex":Ljava/lang/NullPointerException;
     const/4 v2, 0x0
 

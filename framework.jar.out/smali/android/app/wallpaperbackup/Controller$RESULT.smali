@@ -44,7 +44,6 @@
 
     const/4 v2, 0x0
 
-    .line 392
     new-instance v0, Landroid/app/wallpaperbackup/Controller$RESULT;
 
     const-string v1, "OK"
@@ -53,7 +52,6 @@
 
     sput-object v0, Landroid/app/wallpaperbackup/Controller$RESULT;->OK:Landroid/app/wallpaperbackup/Controller$RESULT;
 
-    .line 393
     new-instance v0, Landroid/app/wallpaperbackup/Controller$RESULT;
 
     const-string v1, "FAIL"
@@ -62,7 +60,6 @@
 
     sput-object v0, Landroid/app/wallpaperbackup/Controller$RESULT;->FAIL:Landroid/app/wallpaperbackup/Controller$RESULT;
 
-    .line 391
     const/4 v0, 0x2
 
     new-array v0, v0, [Landroid/app/wallpaperbackup/Controller$RESULT;
@@ -90,18 +87,14 @@
     .end annotation
 
     .prologue
-    .line 397
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 395
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/app/wallpaperbackup/Controller$RESULT;->value:I
 
-    .line 398
     iput p3, p0, Landroid/app/wallpaperbackup/Controller$RESULT;->value:I
 
-    .line 399
     return-void
 .end method
 
@@ -110,7 +103,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 391
     const-class v0, Landroid/app/wallpaperbackup/Controller$RESULT;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -126,7 +118,6 @@
     .locals 1
 
     .prologue
-    .line 391
     sget-object v0, Landroid/app/wallpaperbackup/Controller$RESULT;->$VALUES:[Landroid/app/wallpaperbackup/Controller$RESULT;
 
     invoke-virtual {v0}, [Landroid/app/wallpaperbackup/Controller$RESULT;->clone()Ljava/lang/Object;
@@ -144,7 +135,6 @@
     .locals 1
 
     .prologue
-    .line 402
     iget v0, p0, Landroid/app/wallpaperbackup/Controller$RESULT;->value:I
 
     return v0

@@ -40,13 +40,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 118
     iput-object p1, p0, Landroid/telecom/VideoCallImpl$MessageHandler;->this$0:Landroid/telecom/VideoCallImpl;
 
-    .line 119
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 120
     return-void
 .end method
 
@@ -57,7 +54,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 124
     iget-object v6, p0, Landroid/telecom/VideoCallImpl$MessageHandler;->this$0:Landroid/telecom/VideoCallImpl;
 
     # getter for: Landroid/telecom/VideoCallImpl;->mCallback:Landroid/telecom/InCallService$VideoCall$Callback;
@@ -67,11 +63,9 @@
 
     if-nez v6, :cond_0
 
-    .line 173
     :goto_0
     return-void
 
-    .line 129
     :cond_0
     iget v6, p1, Landroid/os/Message;->what:I
 
@@ -79,7 +73,6 @@
 
     goto :goto_0
 
-    .line 131
     :pswitch_0
     iget-object v6, p0, Landroid/telecom/VideoCallImpl$MessageHandler;->this$0:Landroid/telecom/VideoCallImpl;
 
@@ -96,13 +89,11 @@
 
     goto :goto_0
 
-    .line 134
     :pswitch_1
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/internal/os/SomeArgs;
 
-    .line 136
     .local v0, "args":Lcom/android/internal/os/SomeArgs;
     :try_start_0
     iget-object v6, v0, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
@@ -113,19 +104,16 @@
 
     move-result v4
 
-    .line 137
     .local v4, "status":I
     iget-object v2, v0, Lcom/android/internal/os/SomeArgs;->arg2:Ljava/lang/Object;
 
     check-cast v2, Landroid/telecom/VideoProfile;
 
-    .line 138
     .local v2, "requestProfile":Landroid/telecom/VideoProfile;
     iget-object v3, v0, Lcom/android/internal/os/SomeArgs;->arg3:Ljava/lang/Object;
 
     check-cast v3, Landroid/telecom/VideoProfile;
 
-    .line 140
     .local v3, "responseProfile":Landroid/telecom/VideoProfile;
     iget-object v6, p0, Landroid/telecom/VideoCallImpl$MessageHandler;->this$0:Landroid/telecom/VideoCallImpl;
 
@@ -138,7 +126,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 143
     invoke-virtual {v0}, Lcom/android/internal/os/SomeArgs;->recycle()V
 
     goto :goto_0
@@ -153,7 +140,6 @@
 
     throw v6
 
-    .line 147
     .end local v0    # "args":Lcom/android/internal/os/SomeArgs;
     :pswitch_2
     iget-object v6, p0, Landroid/telecom/VideoCallImpl$MessageHandler;->this$0:Landroid/telecom/VideoCallImpl;
@@ -175,13 +161,11 @@
 
     goto :goto_0
 
-    .line 150
     :pswitch_3
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/internal/os/SomeArgs;
 
-    .line 152
     .restart local v0    # "args":Lcom/android/internal/os/SomeArgs;
     :try_start_1
     iget-object v6, v0, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
@@ -192,7 +176,6 @@
 
     move-result v5
 
-    .line 153
     .local v5, "width":I
     iget-object v6, v0, Lcom/android/internal/os/SomeArgs;->arg2:Ljava/lang/Object;
 
@@ -202,7 +185,6 @@
 
     move-result v1
 
-    .line 154
     .local v1, "height":I
     iget-object v6, p0, Landroid/telecom/VideoCallImpl$MessageHandler;->this$0:Landroid/telecom/VideoCallImpl;
 
@@ -215,7 +197,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 156
     invoke-virtual {v0}, Lcom/android/internal/os/SomeArgs;->recycle()V
 
     goto :goto_0
@@ -229,7 +210,6 @@
 
     throw v6
 
-    .line 160
     .end local v0    # "args":Lcom/android/internal/os/SomeArgs;
     :pswitch_4
     iget-object v6, p0, Landroid/telecom/VideoCallImpl$MessageHandler;->this$0:Landroid/telecom/VideoCallImpl;
@@ -251,7 +231,6 @@
 
     goto/16 :goto_0
 
-    .line 163
     :pswitch_5
     iget-object v6, p0, Landroid/telecom/VideoCallImpl$MessageHandler;->this$0:Landroid/telecom/VideoCallImpl;
 
@@ -268,7 +247,6 @@
 
     goto/16 :goto_0
 
-    .line 167
     :pswitch_6
     iget-object v6, p0, Landroid/telecom/VideoCallImpl$MessageHandler;->this$0:Landroid/telecom/VideoCallImpl;
 
@@ -277,7 +255,6 @@
     # setter for: Landroid/telecom/VideoCallImpl;->mVideoQuality:I
     invoke-static {v6, v7}, Landroid/telecom/VideoCallImpl;->access$302(Landroid/telecom/VideoCallImpl;I)I
 
-    .line 168
     iget-object v6, p0, Landroid/telecom/VideoCallImpl$MessageHandler;->this$0:Landroid/telecom/VideoCallImpl;
 
     # getter for: Landroid/telecom/VideoCallImpl;->mCallback:Landroid/telecom/InCallService$VideoCall$Callback;
@@ -291,7 +268,6 @@
 
     goto/16 :goto_0
 
-    .line 129
     nop
 
     :pswitch_data_0

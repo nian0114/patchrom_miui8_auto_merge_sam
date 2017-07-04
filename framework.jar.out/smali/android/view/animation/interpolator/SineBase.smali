@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,14 +23,11 @@
 
     const/high16 v11, 0x3f800000    # 1.0f
 
-    .line 6
     div-float v0, p0, v11
 
-    .line 7
     .local v0, "_loc_5":F
     array-length v1, p1
 
-    .line 8
     .local v1, "_loc_6":I
     int-to-float v6, v1
 
@@ -45,18 +41,15 @@
 
     double-to-int v4, v6
 
-    .line 9
     .local v4, "_loc_9":I
     array-length v6, p1
 
     if-lt v4, v6, :cond_0
 
-    .line 10
     array-length v6, p1
 
     add-int/lit8 v4, v6, -0x1
 
-    .line 12
     :cond_0
     int-to-float v6, v4
 
@@ -72,11 +65,9 @@
 
     mul-float v2, v6, v7
 
-    .line 13
     .local v2, "_loc_7":F
     aget-object v3, p1, v4
 
-    .line 14
     .local v3, "_loc_8":[F
     const/4 v6, 0x0
 
@@ -118,7 +109,6 @@
 
     add-float v5, v6, v7
 
-    .line 17
     .local v5, "ret":F
     return v5
 .end method

@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 151
     iput-object p1, p0, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher$3;->this$0:Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;
 
     iput-object p2, p0, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher$3;->val$request:Lcom/samsung/android/smartclip/SmartClipRemoteRequestInfo;
@@ -44,7 +43,6 @@
     .locals 2
 
     .prologue
-    .line 154
     iget-object v0, p0, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher$3;->this$0:Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;
 
     iget-object v1, p0, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher$3;->val$request:Lcom/samsung/android/smartclip/SmartClipRemoteRequestInfo;
@@ -52,6 +50,5 @@
     # invokes: Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->dispatchScrollableViewInfo(Lcom/samsung/android/smartclip/SmartClipRemoteRequestInfo;)V
     invoke-static {v0, v1}, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->access$200(Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;Lcom/samsung/android/smartclip/SmartClipRemoteRequestInfo;)V
 
-    .line 155
     return-void
 .end method

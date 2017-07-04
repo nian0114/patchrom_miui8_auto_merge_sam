@@ -28,12 +28,10 @@
     .locals 1
 
     .prologue
-    .line 162
     iput-object p1, p0, Landroid/sec/clipboard/ClipboardExManager$IClipboardDataPasteEventImpl;->this$0:Landroid/sec/clipboard/ClipboardExManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 164
     new-instance v0, Landroid/sec/clipboard/ClipboardExManager$IClipboardDataPasteEventImpl$1;
 
     invoke-direct {v0, p0}, Landroid/sec/clipboard/ClipboardExManager$IClipboardDataPasteEventImpl$1;-><init>(Landroid/sec/clipboard/ClipboardExManager$IClipboardDataPasteEventImpl;)V
@@ -49,7 +47,6 @@
     .param p2, "x1"    # Landroid/sec/clipboard/ClipboardExManager$1;
 
     .prologue
-    .line 162
     invoke-direct {p0, p1}, Landroid/sec/clipboard/ClipboardExManager$IClipboardDataPasteEventImpl;-><init>(Landroid/sec/clipboard/ClipboardExManager;)V
 
     return-void
@@ -61,7 +58,6 @@
     .locals 1
 
     .prologue
-    .line 172
     iget-object v0, p0, Landroid/sec/clipboard/ClipboardExManager$IClipboardDataPasteEventImpl;->mBinder:Landroid/sec/clipboard/IClipboardDataPasteEvent$Stub;
 
     return-object v0
@@ -72,7 +68,6 @@
     .param p1, "data"    # Landroid/sec/clipboard/data/ClipboardData;
 
     .prologue
-    .line 177
     iget-object v0, p0, Landroid/sec/clipboard/ClipboardExManager$IClipboardDataPasteEventImpl;->this$0:Landroid/sec/clipboard/ClipboardExManager;
 
     # getter for: Landroid/sec/clipboard/ClipboardExManager;->mClipboardEventListener:Landroid/sec/clipboard/ClipboardExManager$ClipboardEventListener;
@@ -82,7 +77,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 178
     iget-object v0, p0, Landroid/sec/clipboard/ClipboardExManager$IClipboardDataPasteEventImpl;->this$0:Landroid/sec/clipboard/ClipboardExManager;
 
     # getter for: Landroid/sec/clipboard/ClipboardExManager;->mClipboardEventListener:Landroid/sec/clipboard/ClipboardExManager$ClipboardEventListener;
@@ -92,11 +86,9 @@
 
     invoke-interface {v0, p1}, Landroid/sec/clipboard/ClipboardExManager$ClipboardEventListener;->onPaste(Landroid/sec/clipboard/data/ClipboardData;)V
 
-    .line 182
     :goto_0
     return-void
 
-    .line 180
     :cond_0
     const-string v0, "ClipboardExManager"
 

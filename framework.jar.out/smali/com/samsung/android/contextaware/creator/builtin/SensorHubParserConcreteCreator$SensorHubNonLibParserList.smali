@@ -48,7 +48,6 @@
 
     const/4 v3, 0x0
 
-    .line 50
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubParserConcreteCreator$SensorHubNonLibParserList$1;
 
     const-string v1, "ORIENTATION"
@@ -63,7 +62,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubParserConcreteCreator$SensorHubNonLibParserList;->ORIENTATION:Lcom/samsung/android/contextaware/creator/builtin/SensorHubParserConcreteCreator$SensorHubNonLibParserList;
 
-    .line 60
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubParserConcreteCreator$SensorHubNonLibParserList$2;
 
     const-string v1, "POWER_RESET"
@@ -78,7 +76,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubParserConcreteCreator$SensorHubNonLibParserList;->POWER_RESET:Lcom/samsung/android/contextaware/creator/builtin/SensorHubParserConcreteCreator$SensorHubNonLibParserList;
 
-    .line 70
     new-instance v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubParserConcreteCreator$SensorHubNonLibParserList$3;
 
     const-string v1, "SENSORHUB_DEBUG_MSG"
@@ -93,7 +90,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubParserConcreteCreator$SensorHubNonLibParserList;->SENSORHUB_DEBUG_MSG:Lcom/samsung/android/contextaware/creator/builtin/SensorHubParserConcreteCreator$SensorHubNonLibParserList;
 
-    .line 47
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/samsung/android/contextaware/creator/builtin/SensorHubParserConcreteCreator$SensorHubNonLibParserList;
@@ -127,13 +123,10 @@
     .end annotation
 
     .prologue
-    .line 90
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 91
     iput-object p3, p0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubParserConcreteCreator$SensorHubNonLibParserList;->name:Ljava/lang/String;
 
-    .line 92
     return-void
 .end method
 
@@ -145,7 +138,6 @@
     .param p4, "x3"    # Lcom/samsung/android/contextaware/creator/builtin/SensorHubParserConcreteCreator$1;
 
     .prologue
-    .line 47
     invoke-direct {p0, p1, p2, p3}, Lcom/samsung/android/contextaware/creator/builtin/SensorHubParserConcreteCreator$SensorHubNonLibParserList;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     return-void
@@ -156,7 +148,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 47
     const-class v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubParserConcreteCreator$SensorHubNonLibParserList;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -172,7 +163,6 @@
     .locals 1
 
     .prologue
-    .line 47
     sget-object v0, Lcom/samsung/android/contextaware/creator/builtin/SensorHubParserConcreteCreator$SensorHubNonLibParserList;->$VALUES:[Lcom/samsung/android/contextaware/creator/builtin/SensorHubParserConcreteCreator$SensorHubNonLibParserList;
 
     invoke-virtual {v0}, [Lcom/samsung/android/contextaware/creator/builtin/SensorHubParserConcreteCreator$SensorHubNonLibParserList;->clone()Ljava/lang/Object;
@@ -195,7 +185,6 @@
     .param p2, "parser"    # Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubParser;
 
     .prologue
-    .line 109
     invoke-static {}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProvider;->getInstance()Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProvider;
 
     move-result-object v1
@@ -204,14 +193,11 @@
 
     move-result-object v0
 
-    .line 111
     .local v0, "libParser":Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/TypeParser;
     if-eqz v0, :cond_0
 
-    .line 112
     invoke-virtual {v0, p1, p2}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/TypeParser;->registerParser(Ljava/lang/String;Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubParser;)V
 
-    .line 114
     :cond_0
     return-void
 .end method

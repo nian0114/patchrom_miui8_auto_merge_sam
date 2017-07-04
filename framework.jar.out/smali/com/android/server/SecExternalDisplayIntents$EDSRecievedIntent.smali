@@ -96,7 +96,6 @@
 
     const/4 v4, 0x1
 
-    .line 96
     new-instance v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
     const-string v1, "EDS_INTENT_HDMI"
@@ -107,7 +106,6 @@
 
     sput-object v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;->EDS_INTENT_HDMI:Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
-    .line 97
     new-instance v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
     const-string v1, "EDS_INTENT_RearCamera"
@@ -116,7 +114,6 @@
 
     sput-object v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;->EDS_INTENT_RearCamera:Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
-    .line 98
     new-instance v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
     const-string v1, "EDS_INTENT_FrontCamera"
@@ -125,7 +122,6 @@
 
     sput-object v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;->EDS_INTENT_FrontCamera:Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
-    .line 99
     new-instance v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
     const-string v1, "EDS_INTENT_CameraStop"
@@ -134,7 +130,6 @@
 
     sput-object v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;->EDS_INTENT_CameraStop:Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
-    .line 100
     new-instance v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
     const-string v1, "EDS_INTENT_RVF"
@@ -143,7 +138,6 @@
 
     sput-object v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;->EDS_INTENT_RVF:Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
-    .line 101
     new-instance v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
     const-string v1, "EDS_INTENT_WFD"
@@ -154,7 +148,6 @@
 
     sput-object v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;->EDS_INTENT_WFD:Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
-    .line 102
     new-instance v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
     const-string v1, "EDS_INTENT_AlarmStart"
@@ -167,7 +160,6 @@
 
     sput-object v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;->EDS_INTENT_AlarmStart:Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
-    .line 103
     new-instance v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
     const-string v1, "EDS_INTENT_AlarmStart2"
@@ -180,7 +172,6 @@
 
     sput-object v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;->EDS_INTENT_AlarmStart2:Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
-    .line 104
     new-instance v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
     const-string v1, "EDS_INTENT_AlarmStart3"
@@ -193,7 +184,6 @@
 
     sput-object v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;->EDS_INTENT_AlarmStart3:Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
-    .line 105
     new-instance v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
     const-string v1, "EDS_INTENT_AlarmStop"
@@ -206,7 +196,6 @@
 
     sput-object v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;->EDS_INTENT_AlarmStop:Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
-    .line 106
     new-instance v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
     const-string v1, "EDS_INTENT_AlarmStop2"
@@ -219,7 +208,6 @@
 
     sput-object v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;->EDS_INTENT_AlarmStop2:Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
-    .line 107
     new-instance v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
     const-string v1, "EDS_INTENT_AlarmStop3"
@@ -232,7 +220,6 @@
 
     sput-object v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;->EDS_INTENT_AlarmStop3:Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
-    .line 108
     new-instance v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
     const-string v1, "EDS_INTENT_SideSync"
@@ -245,7 +232,6 @@
 
     sput-object v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;->EDS_INTENT_SideSync:Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
-    .line 109
     new-instance v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
     const-string v1, "EDS_INTENT_SideSyncDC"
@@ -258,7 +244,6 @@
 
     sput-object v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;->EDS_INTENT_SideSyncDC:Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
-    .line 110
     new-instance v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
     const-string v1, "EDS_INTENT_ScreenRecorder"
@@ -271,7 +256,6 @@
 
     sput-object v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;->EDS_INTENT_ScreenRecorder:Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
-    .line 111
     new-instance v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
     const-string v1, "EDS_INTENT_ScreenRecorder2"
@@ -284,7 +268,6 @@
 
     sput-object v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;->EDS_INTENT_ScreenRecorder2:Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
-    .line 112
     new-instance v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
     const-string v1, "EDS_INTENT_SmartDock"
@@ -297,7 +280,6 @@
 
     sput-object v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;->EDS_INTENT_SmartDock:Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
-    .line 113
     new-instance v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
     const-string v1, "EDS_INTENT_ScreenLocked"
@@ -310,7 +292,6 @@
 
     sput-object v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;->EDS_INTENT_ScreenLocked:Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
-    .line 114
     new-instance v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
     const-string v1, "EDS_INTENT_ScreenUnlocked"
@@ -323,7 +304,6 @@
 
     sput-object v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;->EDS_INTENT_ScreenUnlocked:Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
-    .line 115
     new-instance v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
     const-string v1, "EDS_INTENT_VideoStart"
@@ -336,7 +316,6 @@
 
     sput-object v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;->EDS_INTENT_VideoStart:Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
-    .line 116
     new-instance v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
     const-string v1, "EDS_INTENT_VideoStop"
@@ -349,7 +328,6 @@
 
     sput-object v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;->EDS_INTENT_VideoStop:Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
-    .line 117
     new-instance v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
     const-string v1, "EDS_INTENT_KddiAuShareLinkConnect"
@@ -362,7 +340,6 @@
 
     sput-object v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;->EDS_INTENT_KddiAuShareLinkConnect:Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
-    .line 118
     new-instance v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
     const-string v1, "EDS_INTENT_KddiAuShareLinkDisconnect"
@@ -375,7 +352,6 @@
 
     sput-object v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;->EDS_INTENT_KddiAuShareLinkDisconnect:Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
-    .line 119
     new-instance v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
     const-string v1, "EDS_INTENT_PresentationStart"
@@ -388,7 +364,6 @@
 
     sput-object v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;->EDS_INTENT_PresentationStart:Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
-    .line 120
     new-instance v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
     const-string v1, "EDS_INTENT_PresentationStop"
@@ -401,7 +376,6 @@
 
     sput-object v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;->EDS_INTENT_PresentationStop:Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
-    .line 95
     const/16 v0, 0x19
 
     new-array v0, v0, [Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
@@ -561,10 +535,8 @@
     .end annotation
 
     .prologue
-    .line 123
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 124
     iput p3, p0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;->value:I
 
     return-void
@@ -575,10 +547,8 @@
     .param p0, "value"    # I
 
     .prologue
-    .line 130
     const/4 v3, 0x0
 
-    .line 131
     .local v3, "retStatus":Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
     invoke-static {}, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;->values()[Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
@@ -596,7 +566,6 @@
 
     aget-object v4, v0, v1
 
-    .line 132
     .local v4, "tempVal":Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
     invoke-virtual {v4}, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;->getValue()I
 
@@ -604,15 +573,12 @@
 
     if-ne v5, p0, :cond_1
 
-    .line 133
     move-object v3, v4
 
-    .line 137
     .end local v4    # "tempVal":Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
     :cond_0
     return-object v3
 
-    .line 131
     .restart local v4    # "tempVal":Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
     :cond_1
     add-int/lit8 v1, v1, 0x1
@@ -625,7 +591,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 95
     const-class v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -641,7 +606,6 @@
     .locals 1
 
     .prologue
-    .line 95
     sget-object v0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;->$VALUES:[Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;
 
     invoke-virtual {v0}, [Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;->clone()Ljava/lang/Object;
@@ -659,7 +623,6 @@
     .locals 1
 
     .prologue
-    .line 127
     iget v0, p0, Lcom/android/server/SecExternalDisplayIntents$EDSRecievedIntent;->value:I
 
     return v0

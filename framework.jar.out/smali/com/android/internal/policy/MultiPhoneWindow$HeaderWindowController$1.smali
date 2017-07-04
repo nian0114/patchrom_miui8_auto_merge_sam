@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 3351
     iput-object p1, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$1;->this$1:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 3354
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$1;->this$1:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;
 
     iget-object v0, v0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
@@ -67,7 +65,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 3355
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController$1;->this$1:Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;
 
     const/4 v1, 0x1
@@ -75,15 +72,13 @@
     # invokes: Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->showMenu(Z)V
     invoke-static {v0, v1}, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->access$5700(Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;Z)V
 
-    .line 3359
     :goto_0
     return-void
 
-    .line 3357
     :cond_0
     const-string v0, "MultiPhoneWindow"
 
-    const-string/jumbo v1, "skip showMneu(true) in Runnable, mActivity is abnormal state"
+    const-string v1, "skip showMneu(true) in Runnable, mActivity is abnormal state"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 

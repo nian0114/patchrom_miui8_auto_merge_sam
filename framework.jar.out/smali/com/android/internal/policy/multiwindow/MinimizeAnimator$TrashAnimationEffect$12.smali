@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 1652
     iput-object p1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$12;->this$1:Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;
 
     iput-boolean p2, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$12;->val$openTrash:Z
@@ -45,7 +44,6 @@
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 1665
     # getter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->DEBUG_MINIMIZE_REMOVE_ANIM:Z
     invoke-static {}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->access$4300()Z
 
@@ -53,7 +51,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1666
     const-string v0, "MinimizeAnimator"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -78,7 +75,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1667
     :cond_0
     return-void
 .end method
@@ -88,7 +84,6 @@
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 1661
     return-void
 .end method
 
@@ -97,7 +92,6 @@
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 1655
     # getter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->DEBUG_MINIMIZE_REMOVE_ANIM:Z
     invoke-static {}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->access$4300()Z
 
@@ -105,7 +99,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1656
     const-string v0, "MinimizeAnimator"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -130,7 +123,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1657
     :cond_0
     return-void
 .end method

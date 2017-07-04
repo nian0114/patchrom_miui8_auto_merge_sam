@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 1749
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,7 +31,6 @@
     .param p2, "out"    # Ljava/io/BufferedWriter;
 
     .prologue
-    .line 2333
     :try_start_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -54,7 +52,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 2334
     invoke-static {p1}, Ljava/lang/Float;->toString(F)Ljava/lang/String;
 
     move-result-object v0
@@ -69,30 +66,25 @@
 
     invoke-virtual {p2, v0}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 2335
     const-string v0, ","
 
     invoke-virtual {p2, v0}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 2336
     invoke-static {p1}, Ljava/lang/Float;->toString(F)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p2, v0}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 2337
     const-string v0, " "
 
     invoke-virtual {p2, v0}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2342
     :goto_0
     return-void
 
-    .line 2338
     :catch_0
     move-exception v0
 
@@ -106,7 +98,6 @@
     .param p2, "out"    # Ljava/io/BufferedWriter;
 
     .prologue
-    .line 2319
     :try_start_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -128,7 +119,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 2320
     invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v0
@@ -143,30 +133,25 @@
 
     invoke-virtual {p2, v0}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 2321
     const-string v0, ","
 
     invoke-virtual {p2, v0}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 2322
     invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p2, v0}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 2323
     const-string v0, " "
 
     invoke-virtual {p2, v0}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2328
     :goto_0
     return-void
 
-    .line 2324
     :catch_0
     move-exception v0
 
@@ -180,7 +165,6 @@
     .param p2, "out"    # Ljava/io/BufferedWriter;
 
     .prologue
-    .line 2301
     :try_start_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -202,7 +186,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 2302
     const/16 v0, 0xa
 
     const/4 v1, 0x3
@@ -211,7 +194,6 @@
 
     move-result-object p1
 
-    .line 2303
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -222,26 +204,21 @@
 
     invoke-virtual {p2, v0}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 2304
     const-string v0, ","
 
     invoke-virtual {p2, v0}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 2305
     invoke-virtual {p2, p1}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 2306
     const-string v0, " "
 
     invoke-virtual {p2, v0}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2311
     :goto_0
     return-void
 
-    .line 2307
     :catch_0
     move-exception v0
 
@@ -255,7 +232,6 @@
     .param p2, "out"    # Ljava/io/BufferedWriter;
 
     .prologue
-    .line 2350
     :try_start_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -277,21 +253,17 @@
 
     invoke-virtual {p2, v0}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 2352
     const/4 v0, 0x1
 
     if-ne p1, v0, :cond_0
 
-    .line 2354
     const-string v0, "4,true "
 
     invoke-virtual {p2, v0}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 2364
     :goto_0
     return-void
 
-    .line 2358
     :cond_0
     const-string v0, "5,false "
 
@@ -301,7 +273,6 @@
 
     goto :goto_0
 
-    .line 2360
     :catch_0
     move-exception v0
 
@@ -319,7 +290,6 @@
     .end annotation
 
     .prologue
-    .line 1749
     invoke-static {p0, p1}, Landroid/view/ViewDebug$DumpZ;->dump(Landroid/view/View;Ljava/io/OutputStream;)V
 
     return-void
@@ -336,10 +306,8 @@
     .end annotation
 
     .prologue
-    .line 1754
     const/4 v3, 0x0
 
-    .line 1756
     .local v3, "out":Ljava/io/BufferedWriter;
     :try_start_0
     new-instance v4, Ljava/io/BufferedWriter;
@@ -355,7 +323,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1757
     .end local v3    # "out":Ljava/io/BufferedWriter;
     .local v4, "out":Ljava/io/BufferedWriter;
     :try_start_1
@@ -363,20 +330,17 @@
 
     move-result-object v5
 
-    .line 1758
     .local v5, "view":Landroid/view/View;
     instance-of v6, v5, Landroid/view/ViewGroup;
 
     if-eqz v6, :cond_1
 
-    .line 1759
     move-object v0, v5
 
     check-cast v0, Landroid/view/ViewGroup;
 
     move-object v2, v0
 
-    .line 1760
     .local v2, "group":Landroid/view/ViewGroup;
     invoke-virtual {v2}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
@@ -386,28 +350,23 @@
 
     invoke-static {v6, v2, v4, v7}, Landroid/view/ViewDebug$DumpZ;->dumpViewHierarchyWithProperties(Landroid/content/Context;Landroid/view/ViewGroup;Ljava/io/BufferedWriter;I)V
 
-    .line 1766
     .end local v2    # "group":Landroid/view/ViewGroup;
     :goto_0
     const-string v6, "DONE."
 
     invoke-virtual {v4, v6}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 1767
     invoke-virtual {v4}, Ljava/io/BufferedWriter;->newLine()V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 1771
     if-eqz v4, :cond_3
 
-    .line 1772
     invoke-virtual {v4}, Ljava/io/BufferedWriter;->close()V
 
     move-object v3, v4
 
-    .line 1775
     .end local v4    # "out":Ljava/io/BufferedWriter;
     .end local v5    # "view":Landroid/view/View;
     .restart local v3    # "out":Ljava/io/BufferedWriter;
@@ -415,7 +374,6 @@
     :goto_1
     return-void
 
-    .line 1764
     .end local v3    # "out":Ljava/io/BufferedWriter;
     .restart local v4    # "out":Ljava/io/BufferedWriter;
     .restart local v5    # "view":Landroid/view/View;
@@ -434,14 +392,12 @@
 
     goto :goto_0
 
-    .line 1768
     .end local v5    # "view":Landroid/view/View;
     :catch_0
     move-exception v1
 
     move-object v3, v4
 
-    .line 1769
     .end local v4    # "out":Ljava/io/BufferedWriter;
     .local v1, "e":Ljava/lang/Exception;
     .restart local v3    # "out":Ljava/io/BufferedWriter;
@@ -455,15 +411,12 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 1771
     if-eqz v3, :cond_0
 
-    .line 1772
     invoke-virtual {v3}, Ljava/io/BufferedWriter;->close()V
 
     goto :goto_1
 
-    .line 1771
     .end local v1    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v6
@@ -471,13 +424,11 @@
     :goto_3
     if-eqz v3, :cond_2
 
-    .line 1772
     invoke-virtual {v3}, Ljava/io/BufferedWriter;->close()V
 
     :cond_2
     throw v6
 
-    .line 1771
     .end local v3    # "out":Ljava/io/BufferedWriter;
     .restart local v4    # "out":Ljava/io/BufferedWriter;
     :catchall_1
@@ -489,7 +440,6 @@
     .restart local v3    # "out":Ljava/io/BufferedWriter;
     goto :goto_3
 
-    .line 1768
     :catch_1
     move-exception v1
 
@@ -514,18 +464,15 @@
     .param p3, "level"    # I
 
     .prologue
-    .line 1814
     invoke-static {p0, p1, p2, p3}, Landroid/view/ViewDebug$DumpZ;->dumpViewWithProperties(Landroid/content/Context;Ljava/lang/Object;Ljava/io/BufferedWriter;I)Z
 
     move-result v2
 
     if-nez v2, :cond_1
 
-    .line 1825
     :cond_0
     return-void
 
-    .line 1818
     :cond_1
     invoke-interface {p1}, Landroid/view/IGLViewGroup;->getChildren()Ljava/util/List;
 
@@ -548,13 +495,11 @@
 
     move-result-object v1
 
-    .line 1819
     .local v1, "obj":Ljava/lang/Object;
     instance-of v2, v1, Landroid/view/IGLViewGroup;
 
     if-eqz v2, :cond_3
 
-    .line 1820
     check-cast v1, Landroid/view/IGLViewGroup;
 
     .end local v1    # "obj":Ljava/lang/Object;
@@ -564,14 +509,12 @@
 
     goto :goto_0
 
-    .line 1821
     .restart local v1    # "obj":Ljava/lang/Object;
     :cond_3
     instance-of v2, v1, Landroid/view/IGLView;
 
     if-eqz v2, :cond_2
 
-    .line 1822
     add-int/lit8 v2, p3, 0x1
 
     invoke-static {p0, v1, p2, v2}, Landroid/view/ViewDebug$DumpZ;->dumpViewWithProperties(Landroid/content/Context;Ljava/lang/Object;Ljava/io/BufferedWriter;I)Z
@@ -587,25 +530,21 @@
     .param p3, "level"    # I
 
     .prologue
-    .line 1801
     invoke-static {p0, p1, p2, p3}, Landroid/view/ViewDebug$DumpZ;->dumpViewWithProperties(Landroid/content/Context;Ljava/lang/Object;Ljava/io/BufferedWriter;I)Z
 
     move-result v2
 
     if-nez v2, :cond_1
 
-    .line 1810
     :cond_0
     :goto_0
     return-void
 
-    .line 1805
     :cond_1
     invoke-virtual {p1}, Landroid/opengl/GLSurfaceView;->getRenderer()Landroid/opengl/GLSurfaceView$Renderer;
 
     move-result-object v1
 
-    .line 1806
     .local v1, "renderer":Landroid/opengl/GLSurfaceView$Renderer;
     if-eqz v1, :cond_0
 
@@ -613,7 +552,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 1807
     check-cast v1, Landroid/view/IGLContext;
 
     .end local v1    # "renderer":Landroid/opengl/GLSurfaceView$Renderer;
@@ -621,7 +559,6 @@
 
     move-result-object v0
 
-    .line 1808
     .local v0, "group":Landroid/view/IGLViewGroup;
     add-int/lit8 v2, p3, 0x1
 
@@ -637,25 +574,21 @@
     .param p2, "level"    # I
 
     .prologue
-    .line 2410
     const/4 v1, 0x0
 
     .local v1, "i":I
     :goto_0
     if-ge v1, p2, :cond_0
 
-    .line 2411
     const/16 v2, 0x20
 
     :try_start_0
     invoke-virtual {p1, v2}, Ljava/io/BufferedWriter;->write(I)V
 
-    .line 2410
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 2413
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -667,12 +600,10 @@
 
     invoke-virtual {p1, v2}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 2414
     const/16 v2, 0x40
 
     invoke-virtual {p1, v2}, Ljava/io/BufferedWriter;->write(I)V
 
-    .line 2415
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
     move-result v2
@@ -683,22 +614,18 @@
 
     invoke-virtual {p1, v2}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 2416
     invoke-virtual {p1}, Ljava/io/BufferedWriter;->newLine()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2421
     const/4 v2, 0x1
 
     :goto_1
     return v2
 
-    .line 2417
     :catch_0
     move-exception v0
 
-    .line 2418
     .local v0, "e":Ljava/io/IOException;
     const-string v2, "View"
 
@@ -706,7 +633,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2419
     const/4 v2, 0x0
 
     goto :goto_1
@@ -719,24 +645,20 @@
     .param p2, "level"    # I
 
     .prologue
-    .line 2390
     invoke-static {p0, p1, p2}, Landroid/view/ViewDebug$DumpZ;->dumpView(Ljava/lang/Object;Ljava/io/BufferedWriter;I)Z
 
     move-result v3
 
     if-nez v3, :cond_1
 
-    .line 2403
     :cond_0
     return-void
 
-    .line 2394
     :cond_1
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v0
 
-    .line 2395
     .local v0, "count":I
     const/4 v1, 0x0
 
@@ -744,18 +666,15 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 2396
     invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 2397
     .local v2, "view":Landroid/view/View;
     instance-of v3, v2, Landroid/view/ViewGroup;
 
     if-eqz v3, :cond_2
 
-    .line 2398
     check-cast v2, Landroid/view/ViewGroup;
 
     .end local v2    # "view":Landroid/view/View;
@@ -763,13 +682,11 @@
 
     invoke-static {v2, p1, v3}, Landroid/view/ViewDebug$DumpZ;->dumpViewHierarchy(Landroid/view/ViewGroup;Ljava/io/BufferedWriter;I)V
 
-    .line 2395
     :goto_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 2400
     .restart local v2    # "view":Landroid/view/View;
     :cond_2
     add-int/lit8 v3, p2, 0x1
@@ -787,24 +704,20 @@
     .param p3, "level"    # I
 
     .prologue
-    .line 1782
     invoke-static {p0, p1, p2, p3}, Landroid/view/ViewDebug$DumpZ;->dumpViewWithProperties(Landroid/content/Context;Ljava/lang/Object;Ljava/io/BufferedWriter;I)Z
 
     move-result v3
 
     if-nez v3, :cond_1
 
-    .line 1797
     :cond_0
     return-void
 
-    .line 1786
     :cond_1
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v0
 
-    .line 1787
     .local v0, "count":I
     const/4 v1, 0x0
 
@@ -812,18 +725,15 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 1788
     invoke-virtual {p1, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 1789
     .local v2, "view":Landroid/view/View;
     instance-of v3, v2, Landroid/view/ViewGroup;
 
     if-eqz v3, :cond_2
 
-    .line 1790
     check-cast v2, Landroid/view/ViewGroup;
 
     .end local v2    # "view":Landroid/view/View;
@@ -831,20 +741,17 @@
 
     invoke-static {p0, v2, p2, v3}, Landroid/view/ViewDebug$DumpZ;->dumpViewHierarchyWithProperties(Landroid/content/Context;Landroid/view/ViewGroup;Ljava/io/BufferedWriter;I)V
 
-    .line 1787
     :goto_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 1791
     .restart local v2    # "view":Landroid/view/View;
     :cond_2
     instance-of v3, v2, Landroid/opengl/GLSurfaceView;
 
     if-eqz v3, :cond_3
 
-    .line 1792
     check-cast v2, Landroid/opengl/GLSurfaceView;
 
     .end local v2    # "view":Landroid/view/View;
@@ -854,7 +761,6 @@
 
     goto :goto_1
 
-    .line 1794
     .restart local v2    # "view":Landroid/view/View;
     :cond_3
     add-int/lit8 v3, p3, 0x1
@@ -876,10 +782,8 @@
     .end annotation
 
     .prologue
-    .line 1874
     const-string v16, ""
 
-    .line 1876
     .local v16, "strValue":Ljava/lang/String;
     move-object/from16 v0, p1
 
@@ -891,10 +795,8 @@
 
     move-object/from16 v18, p1
 
-    .line 1878
     check-cast v18, Landroid/view/View;
 
-    .line 1880
     .local v18, "tempView":Landroid/view/View;
     const/16 v19, 0x2
 
@@ -902,13 +804,11 @@
 
     new-array v11, v0, [I
 
-    .line 1881
     .local v11, "location":[I
     move-object/from16 v0, v18
 
     invoke-virtual {v0, v11}, Landroid/view/View;->getLocationOnScreen([I)V
 
-    .line 1884
     invoke-virtual/range {v18 .. v18}, Landroid/view/View;->getId()I
 
     move-result v19
@@ -924,7 +824,6 @@
     .end local v16    # "strValue":Ljava/lang/String;
     check-cast v16, Ljava/lang/String;
 
-    .line 1885
     .restart local v16    # "strValue":Ljava/lang/String;
     const-string v19, "id"
 
@@ -936,8 +835,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/view/ViewDebug$DumpZ;->WriteProperty(Ljava/lang/String;Ljava/lang/String;Ljava/io/BufferedWriter;)V
 
-    .line 1888
-    const-string/jumbo v19, "x"
+    const-string v19, "x"
 
     const/16 v20, 0x0
 
@@ -951,8 +849,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/view/ViewDebug$DumpZ;->WriteProperty(Ljava/lang/String;ILjava/io/BufferedWriter;)V
 
-    .line 1891
-    const-string/jumbo v19, "y"
+    const-string v19, "y"
 
     const/16 v20, 0x1
 
@@ -966,8 +863,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/view/ViewDebug$DumpZ;->WriteProperty(Ljava/lang/String;ILjava/io/BufferedWriter;)V
 
-    .line 1894
-    const-string/jumbo v19, "width"
+    const-string v19, "width"
 
     invoke-virtual/range {v18 .. v18}, Landroid/view/View;->getWidth()I
 
@@ -981,7 +877,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/view/ViewDebug$DumpZ;->WriteProperty(Ljava/lang/String;ILjava/io/BufferedWriter;)V
 
-    .line 1897
     const-string v19, "height"
 
     invoke-virtual/range {v18 .. v18}, Landroid/view/View;->getHeight()I
@@ -996,8 +891,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/view/ViewDebug$DumpZ;->WriteProperty(Ljava/lang/String;ILjava/io/BufferedWriter;)V
 
-    .line 1900
-    const-string/jumbo v19, "scrollx"
+    const-string v19, "scrollx"
 
     invoke-virtual/range {v18 .. v18}, Landroid/view/View;->getScrollX()I
 
@@ -1011,8 +905,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/view/ViewDebug$DumpZ;->WriteProperty(Ljava/lang/String;ILjava/io/BufferedWriter;)V
 
-    .line 1903
-    const-string/jumbo v19, "scrolly"
+    const-string v19, "scrolly"
 
     invoke-virtual/range {v18 .. v18}, Landroid/view/View;->getScrollY()I
 
@@ -1026,7 +919,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/view/ViewDebug$DumpZ;->WriteProperty(Ljava/lang/String;ILjava/io/BufferedWriter;)V
 
-    .line 1906
     const-string v19, "enable"
 
     invoke-virtual/range {v18 .. v18}, Landroid/view/View;->isEnabled()Z
@@ -1041,7 +933,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/view/ViewDebug$DumpZ;->WriteProperty(Ljava/lang/String;ZLjava/io/BufferedWriter;)V
 
-    .line 1908
     const-string v19, "longclickable"
 
     invoke-virtual/range {v18 .. v18}, Landroid/view/View;->isLongClickable()Z
@@ -1056,7 +947,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/view/ViewDebug$DumpZ;->WriteProperty(Ljava/lang/String;ZLjava/io/BufferedWriter;)V
 
-    .line 1910
     const-string v19, "clickable"
 
     invoke-virtual/range {v18 .. v18}, Landroid/view/View;->isClickable()Z
@@ -1071,7 +961,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/view/ViewDebug$DumpZ;->WriteProperty(Ljava/lang/String;ZLjava/io/BufferedWriter;)V
 
-    .line 1912
     invoke-virtual/range {v18 .. v18}, Landroid/view/View;->isFocusable()Z
 
     move-result v19
@@ -1084,7 +973,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 1914
     const-string v19, "hasfocus"
 
     invoke-virtual/range {v18 .. v18}, Landroid/view/View;->hasFocus()Z
@@ -1099,18 +987,15 @@
 
     invoke-static {v0, v1, v2}, Landroid/view/ViewDebug$DumpZ;->WriteProperty(Ljava/lang/String;ZLjava/io/BufferedWriter;)V
 
-    .line 1918
     :cond_0
     invoke-virtual/range {v18 .. v18}, Landroid/view/View;->getContentDescription()Ljava/lang/CharSequence;
 
     move-result-object v3
 
-    .line 1919
     .local v3, "TalkBack_value":Ljava/lang/CharSequence;
     if-eqz v3, :cond_1
 
-    .line 1921
-    const-string/jumbo v19, "talkback"
+    const-string v19, "talkback"
 
     invoke-virtual/range {v18 .. v18}, Landroid/view/View;->getContentDescription()Ljava/lang/CharSequence;
 
@@ -1128,7 +1013,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/view/ViewDebug$DumpZ;->WriteProperty(Ljava/lang/String;Ljava/lang/String;Ljava/io/BufferedWriter;)V
 
-    .line 1925
     :cond_1
     const-string v19, "isselected"
 
@@ -1144,15 +1028,13 @@
 
     invoke-static {v0, v1, v2}, Landroid/view/ViewDebug$DumpZ;->WriteProperty(Ljava/lang/String;ZLjava/io/BufferedWriter;)V
 
-    .line 1928
     invoke-virtual/range {v18 .. v18}, Landroid/view/View;->getVisibility()I
 
     move-result v19
 
     if-nez v19, :cond_8
 
-    .line 1930
-    const-string/jumbo v19, "visibility"
+    const-string v19, "visibility"
 
     const-string v20, "VISIBLE"
 
@@ -1164,7 +1046,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/view/ViewDebug$DumpZ;->WriteProperty(Ljava/lang/String;Ljava/lang/String;Ljava/io/BufferedWriter;)V
 
-    .line 1950
     :cond_2
     :goto_0
     :try_start_0
@@ -1174,7 +1055,6 @@
 
     check-cast v12, Landroid/view/WindowManager$LayoutParams;
 
-    .line 1952
     .local v12, "lp":Landroid/view/WindowManager$LayoutParams;
     iget v0, v12, Landroid/view/WindowManager$LayoutParams;->type:I
 
@@ -1188,7 +1068,6 @@
 
     if-ne v0, v1, :cond_a
 
-    .line 1954
     const-string v19, "layouttype"
 
     const-string v20, "TYPE_BASE_APPLICATION"
@@ -1203,7 +1082,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2090
     .end local v12    # "lp":Landroid/view/WindowManager$LayoutParams;
     :cond_3
     :goto_1
@@ -1214,7 +1092,6 @@
 
     check-cast v15, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 2092
     .local v15, "mp":Landroid/view/ViewGroup$MarginLayoutParams;
     const-string v19, "bottommargin"
 
@@ -1230,7 +1107,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/view/ViewDebug$DumpZ;->WriteProperty(Ljava/lang/String;ILjava/io/BufferedWriter;)V
 
-    .line 2093
     const-string v19, "leftmargin"
 
     iget v0, v15, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
@@ -1245,8 +1121,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/view/ViewDebug$DumpZ;->WriteProperty(Ljava/lang/String;ILjava/io/BufferedWriter;)V
 
-    .line 2094
-    const-string/jumbo v19, "rightmargin"
+    const-string v19, "rightmargin"
 
     iget v0, v15, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
@@ -1260,8 +1135,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/view/ViewDebug$DumpZ;->WriteProperty(Ljava/lang/String;ILjava/io/BufferedWriter;)V
 
-    .line 2095
-    const-string/jumbo v19, "topmargin"
+    const-string v19, "topmargin"
 
     iget v0, v15, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
@@ -1277,10 +1151,9 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_6
 
-    .line 2100
     .end local v15    # "mp":Landroid/view/ViewGroup$MarginLayoutParams;
     :goto_2
-    const-string/jumbo v19, "willnotdraw"
+    const-string v19, "willnotdraw"
 
     invoke-virtual/range {v18 .. v18}, Landroid/view/View;->willNotDraw()Z
 
@@ -1294,7 +1167,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/view/ViewDebug$DumpZ;->WriteProperty(Ljava/lang/String;ZLjava/io/BufferedWriter;)V
 
-    .line 2105
     .end local v3    # "TalkBack_value":Ljava/lang/CharSequence;
     .end local v11    # "location":[I
     .end local v18    # "tempView":Landroid/view/View;
@@ -1304,13 +1176,11 @@
 
     move-result-object v5
 
-    .line 2107
     .local v5, "c":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {v5}, Ljava/lang/Class;->getMethods()[Ljava/lang/reflect/Method;
 
     move-result-object v14
 
-    .line 2109
     .local v14, "methods":[Ljava/lang/reflect/Method;
     move-object v4, v14
 
@@ -1326,7 +1196,6 @@
 
     aget-object v13, v4, v9
 
-    .line 2110
     .local v13, "method":Ljava/lang/reflect/Method;
     const-string v19, "isFillViewport"
 
@@ -1340,7 +1209,6 @@
 
     if-eqz v19, :cond_5
 
-    .line 2111
     const-string v20, "fillviewport"
 
     const/16 v19, 0x0
@@ -1367,7 +1235,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/view/ViewDebug$DumpZ;->WriteProperty(Ljava/lang/String;ZLjava/io/BufferedWriter;)V
 
-    .line 2114
     :cond_5
     const-string v19, "getFirstVisiblePosition"
 
@@ -1381,7 +1248,6 @@
 
     if-eqz v19, :cond_6
 
-    .line 2115
     const-string v20, "firstposition"
 
     const/16 v19, 0x0
@@ -1408,7 +1274,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/view/ViewDebug$DumpZ;->WriteProperty(Ljava/lang/String;ILjava/io/BufferedWriter;)V
 
-    .line 2118
     :cond_6
     const-string v19, "getCount"
 
@@ -1422,7 +1287,6 @@
 
     if-eqz v19, :cond_7
 
-    .line 2119
     const-string v20, "itemcount"
 
     const/16 v19, 0x0
@@ -1451,13 +1315,11 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 2109
     :cond_7
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_3
 
-    .line 1932
     .end local v4    # "arr$":[Ljava/lang/reflect/Method;
     .end local v5    # "c":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     .end local v9    # "i$":I
@@ -1480,8 +1342,7 @@
 
     if-ne v0, v1, :cond_9
 
-    .line 1934
-    const-string/jumbo v19, "visibility"
+    const-string v19, "visibility"
 
     const-string v20, "INVISIBLE"
 
@@ -1495,7 +1356,6 @@
 
     goto/16 :goto_0
 
-    .line 1936
     :cond_9
     invoke-virtual/range {v18 .. v18}, Landroid/view/View;->getVisibility()I
 
@@ -1509,8 +1369,7 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 1938
-    const-string/jumbo v19, "visibility"
+    const-string v19, "visibility"
 
     const-string v20, "GONE"
 
@@ -1524,7 +1383,6 @@
 
     goto/16 :goto_0
 
-    .line 1956
     .restart local v12    # "lp":Landroid/view/WindowManager$LayoutParams;
     :cond_a
     :try_start_3
@@ -1540,7 +1398,6 @@
 
     if-ne v0, v1, :cond_b
 
-    .line 1958
     const-string v19, "layouttype"
 
     const-string v20, "TYPE_APPLICATION"
@@ -1555,14 +1412,12 @@
 
     goto/16 :goto_1
 
-    .line 2085
     .end local v12    # "lp":Landroid/view/WindowManager$LayoutParams;
     :catch_0
     move-exception v19
 
     goto/16 :goto_1
 
-    .line 1960
     .restart local v12    # "lp":Landroid/view/WindowManager$LayoutParams;
     :cond_b
     iget v0, v12, Landroid/view/WindowManager$LayoutParams;->type:I
@@ -1577,7 +1432,6 @@
 
     if-ne v0, v1, :cond_c
 
-    .line 1962
     const-string v19, "layouttype"
 
     const-string v20, "TYPE_APPLICATION_STARTING"
@@ -1592,7 +1446,6 @@
 
     goto/16 :goto_1
 
-    .line 1964
     :cond_c
     iget v0, v12, Landroid/view/WindowManager$LayoutParams;->type:I
 
@@ -1606,7 +1459,6 @@
 
     if-ne v0, v1, :cond_d
 
-    .line 1966
     const-string v19, "layouttype"
 
     const-string v20, "TYPE_APPLICATION_PANEL"
@@ -1621,7 +1473,6 @@
 
     goto/16 :goto_1
 
-    .line 1968
     :cond_d
     iget v0, v12, Landroid/view/WindowManager$LayoutParams;->type:I
 
@@ -1635,7 +1486,6 @@
 
     if-ne v0, v1, :cond_e
 
-    .line 1970
     const-string v19, "layouttype"
 
     const-string v20, "TYPE_APPLICATION_MEDIA"
@@ -1650,7 +1500,6 @@
 
     goto/16 :goto_1
 
-    .line 1972
     :cond_e
     iget v0, v12, Landroid/view/WindowManager$LayoutParams;->type:I
 
@@ -1664,7 +1513,6 @@
 
     if-ne v0, v1, :cond_f
 
-    .line 1974
     const-string v19, "layouttype"
 
     const-string v20, "TYPE_APPLICATION_SUB_PANEL"
@@ -1679,7 +1527,6 @@
 
     goto/16 :goto_1
 
-    .line 1976
     :cond_f
     iget v0, v12, Landroid/view/WindowManager$LayoutParams;->type:I
 
@@ -1693,7 +1540,6 @@
 
     if-ne v0, v1, :cond_10
 
-    .line 1978
     const-string v19, "layouttype"
 
     const-string v20, "TYPE_APPLICATION_ATTACHED_DIALOG"
@@ -1708,7 +1554,6 @@
 
     goto/16 :goto_1
 
-    .line 1980
     :cond_10
     iget v0, v12, Landroid/view/WindowManager$LayoutParams;->type:I
 
@@ -1722,7 +1567,6 @@
 
     if-ne v0, v1, :cond_11
 
-    .line 1982
     const-string v19, "layouttype"
 
     const-string v20, "TYPE_STATUS_BAR"
@@ -1737,7 +1581,6 @@
 
     goto/16 :goto_1
 
-    .line 1984
     :cond_11
     iget v0, v12, Landroid/view/WindowManager$LayoutParams;->type:I
 
@@ -1751,7 +1594,6 @@
 
     if-ne v0, v1, :cond_12
 
-    .line 1986
     const-string v19, "layouttype"
 
     const-string v20, "TYPE_SEARCH_BAR"
@@ -1766,7 +1608,6 @@
 
     goto/16 :goto_1
 
-    .line 1988
     :cond_12
     iget v0, v12, Landroid/view/WindowManager$LayoutParams;->type:I
 
@@ -1780,7 +1621,6 @@
 
     if-ne v0, v1, :cond_13
 
-    .line 1990
     const-string v19, "layouttype"
 
     const-string v20, "TYPE_PHONE"
@@ -1795,7 +1635,6 @@
 
     goto/16 :goto_1
 
-    .line 1992
     :cond_13
     iget v0, v12, Landroid/view/WindowManager$LayoutParams;->type:I
 
@@ -1809,7 +1648,6 @@
 
     if-ne v0, v1, :cond_14
 
-    .line 1994
     const-string v19, "layouttype"
 
     const-string v20, "TYPE_SYSTEM_ALERT"
@@ -1824,7 +1662,6 @@
 
     goto/16 :goto_1
 
-    .line 1996
     :cond_14
     iget v0, v12, Landroid/view/WindowManager$LayoutParams;->type:I
 
@@ -1838,7 +1675,6 @@
 
     if-ne v0, v1, :cond_15
 
-    .line 1998
     const-string v19, "layouttype"
 
     const-string v20, "TYPE_KEYGUARD"
@@ -1853,7 +1689,6 @@
 
     goto/16 :goto_1
 
-    .line 2000
     :cond_15
     iget v0, v12, Landroid/view/WindowManager$LayoutParams;->type:I
 
@@ -1867,7 +1702,6 @@
 
     if-ne v0, v1, :cond_16
 
-    .line 2002
     const-string v19, "layouttype"
 
     const-string v20, "TYPE_TOAST"
@@ -1882,7 +1716,6 @@
 
     goto/16 :goto_1
 
-    .line 2004
     :cond_16
     iget v0, v12, Landroid/view/WindowManager$LayoutParams;->type:I
 
@@ -1896,7 +1729,6 @@
 
     if-ne v0, v1, :cond_17
 
-    .line 2006
     const-string v19, "layouttype"
 
     const-string v20, "TYPE_SYSTEM_OVERLAY"
@@ -1911,7 +1743,6 @@
 
     goto/16 :goto_1
 
-    .line 2008
     :cond_17
     iget v0, v12, Landroid/view/WindowManager$LayoutParams;->type:I
 
@@ -1925,7 +1756,6 @@
 
     if-ne v0, v1, :cond_18
 
-    .line 2010
     const-string v19, "layouttype"
 
     const-string v20, "TYPE_PRIORITY_PHONE"
@@ -1940,7 +1770,6 @@
 
     goto/16 :goto_1
 
-    .line 2012
     :cond_18
     iget v0, v12, Landroid/view/WindowManager$LayoutParams;->type:I
 
@@ -1954,7 +1783,6 @@
 
     if-ne v0, v1, :cond_19
 
-    .line 2014
     const-string v19, "layouttype"
 
     const-string v20, "TYPE_STATUS_BAR_PANEL"
@@ -1969,7 +1797,6 @@
 
     goto/16 :goto_1
 
-    .line 2016
     :cond_19
     iget v0, v12, Landroid/view/WindowManager$LayoutParams;->type:I
 
@@ -1983,7 +1810,6 @@
 
     if-ne v0, v1, :cond_1a
 
-    .line 2018
     const-string v19, "layouttype"
 
     const-string v20, "TYPE_STATUS_BAR_PANEL_USER"
@@ -1998,7 +1824,6 @@
 
     goto/16 :goto_1
 
-    .line 2020
     :cond_1a
     iget v0, v12, Landroid/view/WindowManager$LayoutParams;->type:I
 
@@ -2012,7 +1837,6 @@
 
     if-ne v0, v1, :cond_1b
 
-    .line 2022
     const-string v19, "layouttype"
 
     const-string v20, "TYPE_STATUS_BAR_SUB_PANEL"
@@ -2027,7 +1851,6 @@
 
     goto/16 :goto_1
 
-    .line 2024
     :cond_1b
     iget v0, v12, Landroid/view/WindowManager$LayoutParams;->type:I
 
@@ -2041,7 +1864,6 @@
 
     if-ne v0, v1, :cond_1c
 
-    .line 2026
     const-string v19, "layouttype"
 
     const-string v20, "TYPE_SYSTEM_DIALOG"
@@ -2056,7 +1878,6 @@
 
     goto/16 :goto_1
 
-    .line 2028
     :cond_1c
     iget v0, v12, Landroid/view/WindowManager$LayoutParams;->type:I
 
@@ -2070,7 +1891,6 @@
 
     if-ne v0, v1, :cond_1d
 
-    .line 2030
     const-string v19, "layouttype"
 
     const-string v20, "TYPE_KEYGUARD_DIALOG"
@@ -2085,7 +1905,6 @@
 
     goto/16 :goto_1
 
-    .line 2032
     :cond_1d
     iget v0, v12, Landroid/view/WindowManager$LayoutParams;->type:I
 
@@ -2099,7 +1918,6 @@
 
     if-ne v0, v1, :cond_1e
 
-    .line 2034
     const-string v19, "layouttype"
 
     const-string v20, "TYPE_SYSTEM_ERROR"
@@ -2114,7 +1932,6 @@
 
     goto/16 :goto_1
 
-    .line 2036
     :cond_1e
     iget v0, v12, Landroid/view/WindowManager$LayoutParams;->type:I
 
@@ -2128,7 +1945,6 @@
 
     if-ne v0, v1, :cond_1f
 
-    .line 2038
     const-string v19, "layouttype"
 
     const-string v20, "TYPE_INPUT_METHOD"
@@ -2143,7 +1959,6 @@
 
     goto/16 :goto_1
 
-    .line 2040
     :cond_1f
     iget v0, v12, Landroid/view/WindowManager$LayoutParams;->type:I
 
@@ -2157,7 +1972,6 @@
 
     if-ne v0, v1, :cond_20
 
-    .line 2042
     const-string v19, "layouttype"
 
     const-string v20, "TYPE_INPUT_METHOD_DIALOG"
@@ -2172,7 +1986,6 @@
 
     goto/16 :goto_1
 
-    .line 2044
     :cond_20
     iget v0, v12, Landroid/view/WindowManager$LayoutParams;->type:I
 
@@ -2186,7 +1999,6 @@
 
     if-ne v0, v1, :cond_21
 
-    .line 2046
     const-string v19, "layouttype"
 
     const-string v20, "TYPE_WALLPAPER"
@@ -2201,7 +2013,6 @@
 
     goto/16 :goto_1
 
-    .line 2048
     :cond_21
     iget v0, v12, Landroid/view/WindowManager$LayoutParams;->type:I
 
@@ -2215,7 +2026,6 @@
 
     if-ne v0, v1, :cond_22
 
-    .line 2050
     const-string v19, "layouttype"
 
     const-string v20, "TYPE_STATUS_BAR_PANEL"
@@ -2230,7 +2040,6 @@
 
     goto/16 :goto_1
 
-    .line 2052
     :cond_22
     iget v0, v12, Landroid/view/WindowManager$LayoutParams;->type:I
 
@@ -2244,7 +2053,6 @@
 
     if-ne v0, v1, :cond_23
 
-    .line 2054
     const-string v19, "layouttype"
 
     const-string v20, "TYPE_SECURE_SYSTEM_OVERLAY"
@@ -2259,7 +2067,6 @@
 
     goto/16 :goto_1
 
-    .line 2056
     :cond_23
     iget v0, v12, Landroid/view/WindowManager$LayoutParams;->type:I
 
@@ -2273,7 +2080,6 @@
 
     if-ne v0, v1, :cond_24
 
-    .line 2058
     const-string v19, "layouttype"
 
     const-string v20, "TYPE_DRAG"
@@ -2288,7 +2094,6 @@
 
     goto/16 :goto_1
 
-    .line 2060
     :cond_24
     iget v0, v12, Landroid/view/WindowManager$LayoutParams;->type:I
 
@@ -2302,7 +2107,6 @@
 
     if-ne v0, v1, :cond_25
 
-    .line 2062
     const-string v19, "layouttype"
 
     const-string v20, "TYPE_STATUS_BAR_SUB_PANEL"
@@ -2317,7 +2121,6 @@
 
     goto/16 :goto_1
 
-    .line 2064
     :cond_25
     iget v0, v12, Landroid/view/WindowManager$LayoutParams;->type:I
 
@@ -2331,7 +2134,6 @@
 
     if-ne v0, v1, :cond_26
 
-    .line 2066
     const-string v19, "layouttype"
 
     const-string v20, "TYPE_POINTER"
@@ -2346,7 +2148,6 @@
 
     goto/16 :goto_1
 
-    .line 2068
     :cond_26
     iget v0, v12, Landroid/view/WindowManager$LayoutParams;->type:I
 
@@ -2360,7 +2161,6 @@
 
     if-ne v0, v1, :cond_27
 
-    .line 2070
     const-string v19, "layouttype"
 
     const-string v20, "TYPE_NAVIGATION_BAR"
@@ -2375,7 +2175,6 @@
 
     goto/16 :goto_1
 
-    .line 2072
     :cond_27
     iget v0, v12, Landroid/view/WindowManager$LayoutParams;->type:I
 
@@ -2389,7 +2188,6 @@
 
     if-ne v0, v1, :cond_28
 
-    .line 2074
     const-string v19, "layouttype"
 
     const-string v20, "TYPE_VOLUME_OVERLAY"
@@ -2404,7 +2202,6 @@
 
     goto/16 :goto_1
 
-    .line 2076
     :cond_28
     iget v0, v12, Landroid/view/WindowManager$LayoutParams;->type:I
 
@@ -2418,7 +2215,6 @@
 
     if-ne v0, v1, :cond_29
 
-    .line 2078
     const-string v19, "layouttype"
 
     const-string v20, "TYPE_BOOT_PROGRESS"
@@ -2433,7 +2229,6 @@
 
     goto/16 :goto_1
 
-    .line 2080
     :cond_29
     iget v0, v12, Landroid/view/WindowManager$LayoutParams;->type:I
 
@@ -2447,7 +2242,6 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 2082
     const-string v19, "layouttype"
 
     const-string v20, "TYPE_STATUS_BAR_OVERLAY"
@@ -2464,7 +2258,6 @@
 
     goto/16 :goto_1
 
-    .line 2123
     .end local v3    # "TalkBack_value":Ljava/lang/CharSequence;
     .end local v11    # "location":[I
     .end local v12    # "lp":Landroid/view/WindowManager$LayoutParams;
@@ -2472,7 +2265,6 @@
     :catch_1
     move-exception v19
 
-    .line 2126
     :cond_2a
     move-object/from16 v0, p1
 
@@ -2484,10 +2276,8 @@
 
     move-object/from16 v8, p1
 
-    .line 2128
     check-cast v8, Landroid/view/ViewGroup;
 
-    .line 2129
     .local v8, "group":Landroid/view/ViewGroup;
     const-string v19, "childcount"
 
@@ -2503,7 +2293,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/view/ViewDebug$DumpZ;->WriteProperty(Ljava/lang/String;ILjava/io/BufferedWriter;)V
 
-    .line 2131
     invoke-virtual {v8}, Landroid/view/ViewGroup;->getDescendantFocusability()I
 
     move-result v19
@@ -2516,7 +2305,6 @@
 
     if-ne v0, v1, :cond_3a
 
-    .line 2133
     const-string v19, "focusability"
 
     const-string v20, "FOCUS_BEFORE_DESCENDANTS"
@@ -2529,7 +2317,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/view/ViewDebug$DumpZ;->WriteProperty(Ljava/lang/String;Ljava/lang/String;Ljava/io/BufferedWriter;)V
 
-    .line 2145
     .end local v8    # "group":Landroid/view/ViewGroup;
     :cond_2b
     :goto_4
@@ -2543,12 +2330,10 @@
 
     move-object/from16 v18, p1
 
-    .line 2147
     check-cast v18, Landroid/widget/TextView;
 
-    .line 2148
     .local v18, "tempView":Landroid/widget/TextView;
-    const-string/jumbo v19, "text"
+    const-string v19, "text"
 
     invoke-virtual/range {v18 .. v18}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
@@ -2566,9 +2351,8 @@
 
     invoke-static {v0, v1, v2}, Landroid/view/ViewDebug$DumpZ;->WriteProperty(Ljava/lang/String;Ljava/lang/String;Ljava/io/BufferedWriter;)V
 
-    .line 2151
     :try_start_4
-    const-string/jumbo v19, "stringname"
+    const-string v19, "stringname"
 
     invoke-virtual/range {v18 .. v18}, Landroid/widget/TextView;->getStringName()Ljava/lang/CharSequence;
 
@@ -2588,7 +2372,6 @@
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_5
 
-    .line 2157
     :goto_5
     :try_start_5
     const-string v19, "hint"
@@ -2611,9 +2394,8 @@
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_4
 
-    .line 2162
     :goto_6
-    const-string/jumbo v19, "selectionstart"
+    const-string v19, "selectionstart"
 
     invoke-virtual/range {v18 .. v18}, Landroid/widget/TextView;->getSelectionStart()I
 
@@ -2627,8 +2409,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/view/ViewDebug$DumpZ;->WriteProperty(Ljava/lang/String;ILjava/io/BufferedWriter;)V
 
-    .line 2164
-    const-string/jumbo v19, "selectionend"
+    const-string v19, "selectionend"
 
     invoke-virtual/range {v18 .. v18}, Landroid/widget/TextView;->getSelectionEnd()I
 
@@ -2642,7 +2423,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/view/ViewDebug$DumpZ;->WriteProperty(Ljava/lang/String;ILjava/io/BufferedWriter;)V
 
-    .line 2167
     .end local v18    # "tempView":Landroid/widget/TextView;
     :cond_2c
     move-object/from16 v0, p1
@@ -2655,10 +2435,8 @@
 
     move-object/from16 v6, p1
 
-    .line 2169
     check-cast v6, Landroid/widget/Checkable;
 
-    .line 2170
     .local v6, "checkable":Landroid/widget/Checkable;
     const-string v19, "ischecked"
 
@@ -2674,7 +2452,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/view/ViewDebug$DumpZ;->WriteProperty(Ljava/lang/String;ZLjava/io/BufferedWriter;)V
 
-    .line 2173
     .end local v6    # "checkable":Landroid/widget/Checkable;
     :cond_2d
     move-object/from16 v0, p1
@@ -2687,23 +2464,19 @@
 
     move-object/from16 v7, p1
 
-    .line 2175
     check-cast v7, Landroid/view/IGLView;
 
-    .line 2178
     .local v7, "glview":Landroid/view/IGLView;
     :try_start_6
     invoke-virtual {v7}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v5
 
-    .line 2180
     .restart local v5    # "c":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {v5}, Ljava/lang/Class;->getMethods()[Ljava/lang/reflect/Method;
 
     move-result-object v14
 
-    .line 2182
     .restart local v14    # "methods":[Ljava/lang/reflect/Method;
     move-object v4, v14
 
@@ -2719,7 +2492,6 @@
 
     aget-object v13, v4, v9
 
-    .line 2184
     .restart local v13    # "method":Ljava/lang/reflect/Method;
     const-string v19, "getObjectTag"
 
@@ -2733,7 +2505,6 @@
 
     if-eqz v19, :cond_2e
 
-    .line 2185
     const-string v20, "glTag"
 
     const/16 v19, 0x0
@@ -2756,9 +2527,8 @@
 
     invoke-static {v0, v1, v2}, Landroid/view/ViewDebug$DumpZ;->WriteProperty(Ljava/lang/String;Ljava/lang/String;Ljava/io/BufferedWriter;)V
 
-    .line 2188
     :cond_2e
-    const-string/jumbo v19, "mLeft"
+    const-string v19, "mLeft"
 
     invoke-virtual {v13}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
@@ -2770,7 +2540,6 @@
 
     if-eqz v19, :cond_2f
 
-    .line 2189
     const-string v20, "glleft"
 
     const/16 v19, 0x0
@@ -2797,7 +2566,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/view/ViewDebug$DumpZ;->WriteProperty(Ljava/lang/String;FLjava/io/BufferedWriter;)V
 
-    .line 2192
     :cond_2f
     const-string v19, "mBottom"
 
@@ -2811,7 +2579,6 @@
 
     if-eqz v19, :cond_30
 
-    .line 2193
     const-string v20, "glbottom"
 
     const/16 v19, 0x0
@@ -2838,9 +2605,8 @@
 
     invoke-static {v0, v1, v2}, Landroid/view/ViewDebug$DumpZ;->WriteProperty(Ljava/lang/String;FLjava/io/BufferedWriter;)V
 
-    .line 2196
     :cond_30
-    const-string/jumbo v19, "mRight"
+    const-string v19, "mRight"
 
     invoke-virtual {v13}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
@@ -2852,7 +2618,6 @@
 
     if-eqz v19, :cond_31
 
-    .line 2197
     const-string v20, "glright"
 
     const/16 v19, 0x0
@@ -2879,7 +2644,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/view/ViewDebug$DumpZ;->WriteProperty(Ljava/lang/String;FLjava/io/BufferedWriter;)V
 
-    .line 2200
     :cond_31
     const-string v19, "getOrientation"
 
@@ -2893,7 +2657,6 @@
 
     if-eqz v19, :cond_32
 
-    .line 2201
     const-string v20, "glorientation"
 
     const/16 v19, 0x0
@@ -2920,7 +2683,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/view/ViewDebug$DumpZ;->WriteProperty(Ljava/lang/String;ILjava/io/BufferedWriter;)V
 
-    .line 2204
     :cond_32
     const-string v19, "getText"
 
@@ -2950,7 +2712,6 @@
 
     if-eqz v19, :cond_33
 
-    .line 2205
     const-string v20, "gltext"
 
     const/16 v19, 0x0
@@ -2973,9 +2734,8 @@
 
     invoke-static {v0, v1, v2}, Landroid/view/ViewDebug$DumpZ;->WriteProperty(Ljava/lang/String;Ljava/lang/String;Ljava/io/BufferedWriter;)V
 
-    .line 2208
     :cond_33
-    const-string/jumbo v19, "mText"
+    const-string v19, "mText"
 
     invoke-virtual {v13}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
@@ -3003,7 +2763,6 @@
 
     if-eqz v19, :cond_34
 
-    .line 2209
     const-string v20, "gltext"
 
     const/16 v19, 0x0
@@ -3026,7 +2785,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/view/ViewDebug$DumpZ;->WriteProperty(Ljava/lang/String;Ljava/lang/String;Ljava/io/BufferedWriter;)V
 
-    .line 2212
     :cond_34
     const-string v19, "getStringName"
 
@@ -3040,7 +2798,6 @@
 
     if-eqz v19, :cond_35
 
-    .line 2213
     const/16 v19, 0x0
 
     move-object/from16 v0, p1
@@ -3053,7 +2810,6 @@
 
     check-cast v17, Ljava/lang/CharSequence;
 
-    .line 2214
     .local v17, "tempString":Ljava/lang/CharSequence;
     const-string v19, "glstringname"
 
@@ -3069,10 +2825,9 @@
 
     invoke-static {v0, v1, v2}, Landroid/view/ViewDebug$DumpZ;->WriteProperty(Ljava/lang/String;Ljava/lang/String;Ljava/io/BufferedWriter;)V
 
-    .line 2217
     .end local v17    # "tempString":Ljava/lang/CharSequence;
     :cond_35
-    const-string/jumbo v19, "mStringName"
+    const-string v19, "mStringName"
 
     invoke-virtual {v13}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
@@ -3084,7 +2839,6 @@
 
     if-eqz v19, :cond_36
 
-    .line 2218
     const/16 v19, 0x0
 
     move-object/from16 v0, p1
@@ -3097,7 +2851,6 @@
 
     check-cast v17, Ljava/lang/CharSequence;
 
-    .line 2219
     .restart local v17    # "tempString":Ljava/lang/CharSequence;
     const-string v19, "glstringname"
 
@@ -3113,7 +2866,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/view/ViewDebug$DumpZ;->WriteProperty(Ljava/lang/String;Ljava/lang/String;Ljava/io/BufferedWriter;)V
 
-    .line 2222
     .end local v17    # "tempString":Ljava/lang/CharSequence;
     :cond_36
     const-string v19, "getAlpha"
@@ -3128,7 +2880,6 @@
 
     if-eqz v19, :cond_37
 
-    .line 2223
     const-string v20, "glalpha"
 
     const/16 v19, 0x0
@@ -3155,7 +2906,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/view/ViewDebug$DumpZ;->WriteProperty(Ljava/lang/String;FLjava/io/BufferedWriter;)V
 
-    .line 2226
     :cond_37
     const-string v19, "getVisibility"
 
@@ -3169,7 +2919,6 @@
 
     if-eqz v19, :cond_38
 
-    .line 2227
     const-string v20, "gl_getVisibility"
 
     const/16 v19, 0x0
@@ -3196,7 +2945,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/view/ViewDebug$DumpZ;->WriteProperty(Ljava/lang/String;ILjava/io/BufferedWriter;)V
 
-    .line 2230
     :cond_38
     const-string v19, "isVisible"
 
@@ -3210,7 +2958,6 @@
 
     if-eqz v19, :cond_39
 
-    .line 2231
     const-string v20, "gl_isvisible"
 
     const/16 v19, 0x0
@@ -3239,13 +2986,11 @@
     :try_end_6
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_2
 
-    .line 2182
     :cond_39
     add-int/lit8 v9, v9, 0x1
 
     goto/16 :goto_7
 
-    .line 2135
     .end local v4    # "arr$":[Ljava/lang/reflect/Method;
     .end local v5    # "c":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     .end local v7    # "glview":Landroid/view/IGLView;
@@ -3267,7 +3012,6 @@
 
     if-ne v0, v1, :cond_3b
 
-    .line 2137
     const-string v19, "focusability"
 
     const-string v20, "FOCUS_AFTER_DESCENDANTS"
@@ -3282,7 +3026,6 @@
 
     goto/16 :goto_4
 
-    .line 2139
     :cond_3b
     invoke-virtual {v8}, Landroid/view/ViewGroup;->getDescendantFocusability()I
 
@@ -3296,7 +3039,6 @@
 
     if-ne v0, v1, :cond_2b
 
-    .line 2141
     const-string v19, "focusability"
 
     const-string v20, "FOCUS_BLOCK_DESCENDANTS"
@@ -3311,26 +3053,22 @@
 
     goto/16 :goto_4
 
-    .line 2235
     .end local v8    # "group":Landroid/view/ViewGroup;
     .restart local v7    # "glview":Landroid/view/IGLView;
     :catch_2
     move-exception v19
 
-    .line 2239
     :cond_3c
     :try_start_7
     invoke-virtual {v7}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v5
 
-    .line 2241
     .restart local v5    # "c":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {v5}, Ljava/lang/Class;->getMethods()[Ljava/lang/reflect/Method;
 
     move-result-object v14
 
-    .line 2243
     .restart local v14    # "methods":[Ljava/lang/reflect/Method;
     move-object v4, v14
 
@@ -3346,9 +3084,8 @@
 
     aget-object v13, v4, v9
 
-    .line 2244
     .restart local v13    # "method":Ljava/lang/reflect/Method;
-    const-string/jumbo v19, "mTop"
+    const-string v19, "mTop"
 
     invoke-virtual {v13}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
@@ -3360,7 +3097,6 @@
 
     if-eqz v19, :cond_3d
 
-    .line 2245
     const-string v20, "gltop"
 
     const/16 v19, 0x0
@@ -3389,13 +3125,11 @@
     :try_end_7
     .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_3
 
-    .line 2243
     :cond_3d
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_8
 
-    .line 2249
     .end local v4    # "arr$":[Ljava/lang/reflect/Method;
     .end local v5    # "c":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     .end local v9    # "i$":I
@@ -3405,25 +3139,21 @@
     :catch_3
     move-exception v19
 
-    .line 2293
     .end local v7    # "glview":Landroid/view/IGLView;
     :cond_3e
     return-void
 
-    .line 2159
     .restart local v18    # "tempView":Landroid/widget/TextView;
     :catch_4
     move-exception v19
 
     goto/16 :goto_6
 
-    .line 2153
     :catch_5
     move-exception v19
 
     goto/16 :goto_5
 
-    .line 2097
     .restart local v3    # "TalkBack_value":Ljava/lang/CharSequence;
     .restart local v11    # "location":[I
     .local v18, "tempView":Landroid/view/View;
@@ -3443,20 +3173,17 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 1833
     :try_start_0
     instance-of v6, p1, Landroid/view/View;
 
     if-eqz v6, :cond_0
 
-    .line 1835
     move-object v0, p1
 
     check-cast v0, Landroid/view/View;
 
     move-object v4, v0
 
-    .line 1836
     .local v4, "tempView":Landroid/view/View;
     invoke-virtual {v4}, Landroid/view/View;->getVisibility()I
 
@@ -3464,12 +3191,10 @@
 
     if-eqz v6, :cond_0
 
-    .line 1864
     .end local v4    # "tempView":Landroid/view/View;
     :goto_0
     return v5
 
-    .line 1842
     :cond_0
     const/4 v3, 0x0
 
@@ -3477,17 +3202,14 @@
     :goto_1
     if-ge v3, p3, :cond_1
 
-    .line 1843
     const/16 v6, 0x20
 
     invoke-virtual {p2, v6}, Ljava/io/BufferedWriter;->write(I)V
 
-    .line 1842
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 1846
     :cond_1
     const-string v6, ""
 
@@ -3505,7 +3227,6 @@
 
     if-eqz v6, :cond_2
 
-    .line 1848
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v6
@@ -3520,7 +3241,6 @@
 
     move-result-object v1
 
-    .line 1849
     .local v1, "arr_str":[Ljava/lang/String;
     const-string v6, "class"
 
@@ -3532,7 +3252,6 @@
 
     invoke-static {v6, v7, p2}, Landroid/view/ViewDebug$DumpZ;->WriteProperty(Ljava/lang/String;Ljava/lang/String;Ljava/io/BufferedWriter;)V
 
-    .line 1856
     .end local v1    # "arr_str":[Ljava/lang/String;
     :goto_2
     const-string v6, "hash"
@@ -3547,18 +3266,14 @@
 
     invoke-static {v6, v7, p2}, Landroid/view/ViewDebug$DumpZ;->WriteProperty(Ljava/lang/String;Ljava/lang/String;Ljava/io/BufferedWriter;)V
 
-    .line 1857
     invoke-static {p0, p1, p2}, Landroid/view/ViewDebug$DumpZ;->dumpViewProperties(Landroid/content/Context;Ljava/lang/Object;Ljava/io/BufferedWriter;)V
 
-    .line 1858
     invoke-virtual {p2}, Ljava/io/BufferedWriter;->newLine()V
 
-    .line 1864
     const/4 v5, 0x1
 
     goto :goto_0
 
-    .line 1853
     :cond_2
     const-string v6, "class"
 
@@ -3576,12 +3291,10 @@
 
     goto :goto_2
 
-    .line 1859
     .end local v3    # "i":I
     :catch_0
     move-exception v2
 
-    .line 1860
     .local v2, "e":Ljava/io/IOException;
     const-string v6, "View"
 
@@ -3598,16 +3311,13 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 2371
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    .line 2372
     .local v2, "resources":Landroid/content/res/Resources;
     if-ltz p1, :cond_0
 
-    .line 2374
     :try_start_0
     invoke-virtual {v2, p1}, Landroid/content/res/Resources;->getResourceEntryName(I)Ljava/lang/String;
     :try_end_0
@@ -3615,17 +3325,14 @@
 
     move-result-object v1
 
-    .line 2383
     .local v1, "fieldValue":Ljava/lang/String;
     :goto_0
     return-object v1
 
-    .line 2377
     .end local v1    # "fieldValue":Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 2378
     .local v0, "e":Landroid/content/res/Resources$NotFoundException;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -3649,11 +3356,9 @@
 
     move-result-object v1
 
-    .line 2379
     .restart local v1    # "fieldValue":Ljava/lang/String;
     goto :goto_0
 
-    .line 2381
     .end local v0    # "e":Landroid/content/res/Resources$NotFoundException;
     .end local v1    # "fieldValue":Ljava/lang/String;
     :cond_0

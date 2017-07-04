@@ -29,16 +29,12 @@
     .param p3, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 451
     iput-object p1, p0, Lcom/samsung/android/service/gesture/GestureManager$GestureListenerDelegate;->this$0:Lcom/samsung/android/service/gesture/GestureManager;
 
-    .line 452
     invoke-direct {p0}, Lcom/samsung/android/service/gesture/IGestureCallback$Stub;-><init>()V
 
-    .line 453
     iput-object p2, p0, Lcom/samsung/android/service/gesture/GestureManager$GestureListenerDelegate;->mListener:Lcom/samsung/android/service/gesture/GestureListener;
 
-    .line 455
     if-nez p3, :cond_0
 
     # getter for: Lcom/samsung/android/service/gesture/GestureManager;->mContext:Landroid/content/Context;
@@ -50,7 +46,6 @@
 
     move-result-object v0
 
-    .line 457
     .local v0, "looper":Landroid/os/Looper;
     :goto_0
     new-instance v1, Lcom/samsung/android/service/gesture/GestureManager$GestureListenerDelegate$1;
@@ -59,10 +54,8 @@
 
     iput-object v1, p0, Lcom/samsung/android/service/gesture/GestureManager$GestureListenerDelegate;->mHandler:Landroid/os/Handler;
 
-    .line 470
     return-void
 
-    .line 455
     .end local v0    # "looper":Landroid/os/Looper;
     :cond_0
     invoke-virtual {p3}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
@@ -77,7 +70,6 @@
     .param p0, "x0"    # Lcom/samsung/android/service/gesture/GestureManager$GestureListenerDelegate;
 
     .prologue
-    .line 435
     iget-object v0, p0, Lcom/samsung/android/service/gesture/GestureManager$GestureListenerDelegate;->mListener:Lcom/samsung/android/service/gesture/GestureListener;
 
     return-object v0
@@ -95,26 +87,21 @@
     .end annotation
 
     .prologue
-    .line 491
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v0
 
-    .line 492
     .local v0, "msg":Landroid/os/Message;
     const/4 v1, 0x0
 
     iput v1, v0, Landroid/os/Message;->what:I
 
-    .line 493
     iput-object p1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 494
     iget-object v1, p0, Lcom/samsung/android/service/gesture/GestureManager$GestureListenerDelegate;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 495
     return-void
 .end method
 
@@ -122,7 +109,6 @@
     .locals 1
 
     .prologue
-    .line 478
     iget-object v0, p0, Lcom/samsung/android/service/gesture/GestureManager$GestureListenerDelegate;->mListener:Lcom/samsung/android/service/gesture/GestureListener;
 
     return-object v0
@@ -137,7 +123,6 @@
     .end annotation
 
     .prologue
-    .line 506
     iget-object v0, p0, Lcom/samsung/android/service/gesture/GestureManager$GestureListenerDelegate;->mListener:Lcom/samsung/android/service/gesture/GestureListener;
 
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;

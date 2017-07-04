@@ -86,10 +86,9 @@
     .locals 2
 
     .prologue
-    .line 5835
     sget-object v0, Landroid/provider/ContactsContract$Data;->CONTENT_URI:Landroid/net/Uri;
 
-    const-string/jumbo v1, "phones"
+    const-string v1, "phones"
 
     invoke-static {v0, v1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
@@ -97,10 +96,9 @@
 
     sput-object v0, Landroid/provider/ContactsContract$CommonDataKinds$Phone;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 5849
     sget-object v0, Landroid/provider/ContactsContract$Data;->ENTERPRISE_CONTENT_URI:Landroid/net/Uri;
 
-    const-string/jumbo v1, "phones"
+    const-string v1, "phones"
 
     invoke-static {v0, v1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
@@ -108,7 +106,6 @@
 
     sput-object v0, Landroid/provider/ContactsContract$CommonDataKinds$Phone;->ENTERPRISE_CONTENT_URI:Landroid/net/Uri;
 
-    .line 5858
     sget-object v0, Landroid/provider/ContactsContract$CommonDataKinds$Phone;->CONTENT_URI:Landroid/net/Uri;
 
     const-string v1, "filter"
@@ -126,7 +123,6 @@
     .locals 0
 
     .prologue
-    .line 5819
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -141,7 +137,6 @@
     .end annotation
 
     .prologue
-    .line 5934
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -163,7 +158,6 @@
     .end annotation
 
     .prologue
-    .line 5924
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -182,7 +176,6 @@
     .param p2, "label"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 5975
     if-eqz p1, :cond_0
 
     const/16 v1, 0x13
@@ -196,19 +189,16 @@
 
     if-nez v1, :cond_1
 
-    .line 5979
     .end local p2    # "label":Ljava/lang/CharSequence;
     :goto_0
     return-object p2
 
-    .line 5978
     .restart local p2    # "label":Ljava/lang/CharSequence;
     :cond_1
     invoke-static {p1}, Landroid/provider/ContactsContract$CommonDataKinds$Phone;->getTypeLabelResource(I)I
 
     move-result v0
 
-    .line 5979
     .local v0, "labelRes":I
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -222,142 +212,118 @@
     .param p0, "type"    # I
 
     .prologue
-    .line 5942
     sparse-switch p0, :sswitch_data_0
 
-    .line 5964
     const v0, 0x1040226
 
     :goto_0
     return v0
 
-    .line 5943
     :sswitch_0
     const v0, 0x1040227
 
     goto :goto_0
 
-    .line 5944
     :sswitch_1
     const v0, 0x1040228
 
     goto :goto_0
 
-    .line 5945
     :sswitch_2
     const v0, 0x1040229
 
     goto :goto_0
 
-    .line 5946
     :sswitch_3
     const v0, 0x104022a
 
     goto :goto_0
 
-    .line 5947
     :sswitch_4
     const v0, 0x104022b
 
     goto :goto_0
 
-    .line 5948
     :sswitch_5
     const v0, 0x104022c
 
     goto :goto_0
 
-    .line 5949
     :sswitch_6
     const v0, 0x104022d
 
     goto :goto_0
 
-    .line 5950
     :sswitch_7
     const v0, 0x104022e
 
     goto :goto_0
 
-    .line 5951
     :sswitch_8
     const v0, 0x104022f
 
     goto :goto_0
 
-    .line 5952
     :sswitch_9
     const v0, 0x1040230
 
     goto :goto_0
 
-    .line 5953
     :sswitch_a
     const v0, 0x1040231
 
     goto :goto_0
 
-    .line 5954
     :sswitch_b
     const v0, 0x1040232
 
     goto :goto_0
 
-    .line 5955
     :sswitch_c
     const v0, 0x1040233
 
     goto :goto_0
 
-    .line 5956
     :sswitch_d
     const v0, 0x1040234
 
     goto :goto_0
 
-    .line 5957
     :sswitch_e
     const v0, 0x1040235
 
     goto :goto_0
 
-    .line 5958
     :sswitch_f
     const v0, 0x1040236
 
     goto :goto_0
 
-    .line 5959
     :sswitch_10
     const v0, 0x1040237
 
     goto :goto_0
 
-    .line 5960
     :sswitch_11
     const v0, 0x1040238
 
     goto :goto_0
 
-    .line 5961
     :sswitch_12
     const v0, 0x1040239
 
     goto :goto_0
 
-    .line 5962
     :sswitch_13
     const v0, 0x104023a
 
     goto :goto_0
 
-    .line 5963
     :sswitch_14
     const v0, 0x10407e7
 
     goto :goto_0
 
-    .line 5942
     nop
 
     :sswitch_data_0

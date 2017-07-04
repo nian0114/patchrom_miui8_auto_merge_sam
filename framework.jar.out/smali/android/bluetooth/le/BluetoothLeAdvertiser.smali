@@ -51,27 +51,22 @@
     .param p1, "bluetoothManager"    # Landroid/bluetooth/IBluetoothManager;
 
     .prologue
-    .line 74
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 65
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroid/bluetooth/le/BluetoothLeAdvertiser;->mLeAdvertisers:Ljava/util/Map;
 
-    .line 75
     iput-object p1, p0, Landroid/bluetooth/le/BluetoothLeAdvertiser;->mBluetoothManager:Landroid/bluetooth/IBluetoothManager;
 
-    .line 76
     invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->getDefaultAdapter()Landroid/bluetooth/BluetoothAdapter;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/bluetooth/le/BluetoothLeAdvertiser;->mBluetoothAdapter:Landroid/bluetooth/BluetoothAdapter;
 
-    .line 77
     new-instance v0, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -82,7 +77,6 @@
 
     iput-object v0, p0, Landroid/bluetooth/le/BluetoothLeAdvertiser;->mHandler:Landroid/os/Handler;
 
-    .line 78
     return-void
 .end method
 
@@ -91,7 +85,6 @@
     .param p0, "x0"    # Landroid/bluetooth/le/BluetoothLeAdvertiser;
 
     .prologue
-    .line 50
     iget-object v0, p0, Landroid/bluetooth/le/BluetoothLeAdvertiser;->mLeAdvertisers:Ljava/util/Map;
 
     return-object v0
@@ -104,7 +97,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 50
     invoke-direct {p0, p1, p2}, Landroid/bluetooth/le/BluetoothLeAdvertiser;->postStartFailure(Landroid/bluetooth/le/AdvertiseCallback;I)V
 
     return-void
@@ -117,7 +109,6 @@
     .param p2, "x2"    # Landroid/bluetooth/le/AdvertiseSettings;
 
     .prologue
-    .line 50
     invoke-direct {p0, p1, p2}, Landroid/bluetooth/le/BluetoothLeAdvertiser;->postStartSuccess(Landroid/bluetooth/le/AdvertiseCallback;Landroid/bluetooth/le/AdvertiseSettings;)V
 
     return-void
@@ -128,7 +119,6 @@
     .param p1, "array"    # [B
 
     .prologue
-    .line 272
     if-nez p1, :cond_0
 
     const/4 v0, 0x0
@@ -148,7 +138,6 @@
     .param p2, "error"    # I
 
     .prologue
-    .line 420
     iget-object v0, p0, Landroid/bluetooth/le/BluetoothLeAdvertiser;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Landroid/bluetooth/le/BluetoothLeAdvertiser$1;
@@ -157,7 +146,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 426
     return-void
 .end method
 
@@ -167,7 +155,6 @@
     .param p2, "settings"    # Landroid/bluetooth/le/AdvertiseSettings;
 
     .prologue
-    .line 430
     iget-object v0, p0, Landroid/bluetooth/le/BluetoothLeAdvertiser;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Landroid/bluetooth/le/BluetoothLeAdvertiser$2;
@@ -176,7 +163,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 437
     return-void
 .end method
 
@@ -188,21 +174,17 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 218
     if-nez p1, :cond_1
 
-    .line 268
     :cond_0
     :goto_0
     return v6
 
-    .line 220
     :cond_1
     if-eqz p2, :cond_2
 
     const/4 v6, 0x3
 
-    .line 221
     .local v6, "size":I
     :cond_2
     invoke-virtual {p1}, Landroid/bluetooth/le/AdvertiseData;->getServiceUuids()Ljava/util/List;
@@ -211,18 +193,14 @@
 
     if-eqz v8, :cond_8
 
-    .line 222
     const/4 v3, 0x0
 
-    .line 223
     .local v3, "num16BitUuids":I
     const/4 v4, 0x0
 
-    .line 224
     .local v4, "num32BitUuids":I
     const/4 v2, 0x0
 
-    .line 225
     .local v2, "num128BitUuids":I
     invoke-virtual {p1}, Landroid/bluetooth/le/AdvertiseData;->getServiceUuids()Ljava/util/List;
 
@@ -246,7 +224,6 @@
 
     check-cast v7, Landroid/os/ParcelUuid;
 
-    .line 226
     .local v7, "uuid":Landroid/os/ParcelUuid;
     invoke-static {v7}, Landroid/bluetooth/BluetoothUuid;->is16BitUuid(Landroid/os/ParcelUuid;)Z
 
@@ -254,12 +231,10 @@
 
     if-eqz v8, :cond_3
 
-    .line 227
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 228
     :cond_3
     invoke-static {v7}, Landroid/bluetooth/BluetoothUuid;->is32BitUuid(Landroid/os/ParcelUuid;)Z
 
@@ -267,52 +242,43 @@
 
     if-eqz v8, :cond_4
 
-    .line 229
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_1
 
-    .line 231
     :cond_4
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 235
     .end local v7    # "uuid":Landroid/os/ParcelUuid;
     :cond_5
     if-eqz v3, :cond_6
 
-    .line 236
     mul-int/lit8 v8, v3, 0x2
 
     add-int/lit8 v8, v8, 0x2
 
     add-int/2addr v6, v8
 
-    .line 240
     :cond_6
     if-eqz v4, :cond_7
 
-    .line 241
     mul-int/lit8 v8, v4, 0x4
 
     add-int/lit8 v8, v8, 0x2
 
     add-int/2addr v6, v8
 
-    .line 245
     :cond_7
     if-eqz v2, :cond_8
 
-    .line 246
     mul-int/lit8 v8, v2, 0x10
 
     add-int/lit8 v8, v8, 0x2
 
     add-int/2addr v6, v8
 
-    .line 250
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v2    # "num128BitUuids":I
     .end local v3    # "num16BitUuids":I
@@ -344,7 +310,6 @@
 
     check-cast v7, Landroid/os/ParcelUuid;
 
-    .line 251
     .restart local v7    # "uuid":Landroid/os/ParcelUuid;
     invoke-virtual {p1}, Landroid/bluetooth/le/AdvertiseData;->getServiceData()Ljava/util/Map;
 
@@ -364,10 +329,8 @@
 
     add-int/2addr v6, v8
 
-    .line 253
     goto :goto_2
 
-    .line 254
     .end local v7    # "uuid":Landroid/os/ParcelUuid;
     :cond_9
     const/4 v0, 0x0
@@ -384,7 +347,6 @@
 
     if-ge v0, v8, :cond_a
 
-    .line 255
     invoke-virtual {p1}, Landroid/bluetooth/le/AdvertiseData;->getManufacturerSpecificData()Landroid/util/SparseArray;
 
     move-result-object v8
@@ -403,12 +365,10 @@
 
     add-int/2addr v6, v8
 
-    .line 254
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_3
 
-    .line 258
     :cond_a
     invoke-virtual {p1}, Landroid/bluetooth/le/AdvertiseData;->getIncludeTxPowerLevel()Z
 
@@ -416,10 +376,8 @@
 
     if-eqz v8, :cond_b
 
-    .line 259
     add-int/lit8 v6, v6, 0x3
 
-    .line 261
     :cond_b
     invoke-virtual {p1}, Landroid/bluetooth/le/AdvertiseData;->getIncludeDeviceName()Z
 
@@ -435,7 +393,6 @@
 
     if-eqz v8, :cond_c
 
-    .line 262
     iget-object v8, p0, Landroid/bluetooth/le/BluetoothLeAdvertiser;->mBluetoothAdapter:Landroid/bluetooth/BluetoothAdapter;
 
     invoke-virtual {v8}, Landroid/bluetooth/BluetoothAdapter;->getName()Ljava/lang/String;
@@ -452,7 +409,6 @@
 
     goto/16 :goto_0
 
-    .line 263
     :cond_c
     invoke-virtual {p1}, Landroid/bluetooth/le/AdvertiseData;->getIncludeDeviceName()Z
 
@@ -468,14 +424,12 @@
 
     if-nez v8, :cond_0
 
-    .line 264
     iget-object v8, p0, Landroid/bluetooth/le/BluetoothLeAdvertiser;->mBluetoothAdapter:Landroid/bluetooth/BluetoothAdapter;
 
     invoke-virtual {v8}, Landroid/bluetooth/BluetoothAdapter;->getSettingsName()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 265
     .local v5, "settingName":Ljava/lang/String;
     const-string v8, "BluetoothLeAdvertiser"
 
@@ -499,7 +453,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 266
     iget-object v8, p0, Landroid/bluetooth/le/BluetoothLeAdvertiser;->mBluetoothAdapter:Landroid/bluetooth/BluetoothAdapter;
 
     invoke-virtual {v8}, Landroid/bluetooth/BluetoothAdapter;->getSettingsName()Ljava/lang/String;
@@ -523,12 +476,10 @@
     .locals 1
 
     .prologue
-    .line 213
     iget-object v0, p0, Landroid/bluetooth/le/BluetoothLeAdvertiser;->mLeAdvertisers:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
-    .line 214
     return-void
 .end method
 
@@ -539,12 +490,10 @@
     .param p3, "callback"    # Landroid/bluetooth/le/AdvertiseCallback;
 
     .prologue
-    .line 92
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, p2, v0, p3}, Landroid/bluetooth/le/BluetoothLeAdvertiser;->startAdvertising(Landroid/bluetooth/le/AdvertiseSettings;Landroid/bluetooth/le/AdvertiseData;Landroid/bluetooth/le/AdvertiseData;Landroid/bluetooth/le/AdvertiseCallback;)V
 
-    .line 93
     return-void
 .end method
 
@@ -558,12 +507,10 @@
     .prologue
     const/16 v3, 0x1f
 
-    .line 111
     iget-object v9, p0, Landroid/bluetooth/le/BluetoothLeAdvertiser;->mLeAdvertisers:Ljava/util/Map;
 
     monitor-enter v9
 
-    .line 112
     :try_start_0
     iget-object v1, p0, Landroid/bluetooth/le/BluetoothLeAdvertiser;->mBluetoothAdapter:Landroid/bluetooth/BluetoothAdapter;
 
@@ -590,7 +537,6 @@
 
     if-nez v1, :cond_2
 
-    .line 114
     :cond_1
     const-string v1, "BluetoothLeAdvertiser"
 
@@ -598,18 +544,14 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 115
     monitor-exit v9
 
-    .line 150
     :goto_0
     return-void
 
-    .line 117
     :cond_2
     if-nez p4, :cond_3
 
-    .line 118
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "callback cannot be null"
@@ -618,7 +560,6 @@
 
     throw v1
 
-    .line 149
     :catchall_0
     move-exception v1
 
@@ -628,16 +569,14 @@
 
     throw v1
 
-    .line 120
     :cond_3
     :try_start_1
     const-string v1, "BluetoothLeAdvertiser"
 
-    const-string/jumbo v2, "start advertising"
+    const-string v2, "start advertising"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 121
     iget-object v1, p0, Landroid/bluetooth/le/BluetoothLeAdvertiser;->mBluetoothAdapter:Landroid/bluetooth/BluetoothAdapter;
 
     invoke-virtual {v1}, Landroid/bluetooth/BluetoothAdapter;->isMultipleAdvertisementSupported()Z
@@ -654,23 +593,19 @@
 
     if-nez v1, :cond_4
 
-    .line 123
     const/4 v1, 0x5
 
     invoke-direct {p0, p4, v1}, Landroid/bluetooth/le/BluetoothLeAdvertiser;->postStartFailure(Landroid/bluetooth/le/AdvertiseCallback;I)V
 
-    .line 125
     monitor-exit v9
 
     goto :goto_0
 
-    .line 127
     :cond_4
     invoke-virtual {p1}, Landroid/bluetooth/le/AdvertiseSettings;->isConnectable()Z
 
     move-result v8
 
-    .line 128
     .local v8, "isConnectable":Z
     invoke-direct {p0, p2, v8}, Landroid/bluetooth/le/BluetoothLeAdvertiser;->totalBytes(Landroid/bluetooth/le/AdvertiseData;Z)I
 
@@ -686,18 +621,15 @@
 
     if-le v1, v3, :cond_6
 
-    .line 130
     :cond_5
     const/4 v1, 0x1
 
     invoke-direct {p0, p4, v1}, Landroid/bluetooth/le/BluetoothLeAdvertiser;->postStartFailure(Landroid/bluetooth/le/AdvertiseCallback;I)V
 
-    .line 131
     monitor-exit v9
 
     goto :goto_0
 
-    .line 133
     :cond_6
     iget-object v1, p0, Landroid/bluetooth/le/BluetoothLeAdvertiser;->mLeAdvertisers:Ljava/util/Map;
 
@@ -707,19 +639,16 @@
 
     if-eqz v1, :cond_7
 
-    .line 134
     const/4 v1, 0x3
 
     invoke-direct {p0, p4, v1}, Landroid/bluetooth/le/BluetoothLeAdvertiser;->postStartFailure(Landroid/bluetooth/le/AdvertiseCallback;I)V
 
-    .line 135
     monitor-exit v9
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
-    .line 140
     :cond_7
     :try_start_2
     iget-object v1, p0, Landroid/bluetooth/le/BluetoothLeAdvertiser;->mBluetoothManager:Landroid/bluetooth/IBluetoothManager;
@@ -731,7 +660,6 @@
 
     move-result-object v6
 
-    .line 146
     .local v6, "gatt":Landroid/bluetooth/IBluetoothGatt;
     :try_start_3
     new-instance v0, Landroid/bluetooth/le/BluetoothLeAdvertiser$AdvertiseCallbackWrapper;
@@ -748,22 +676,18 @@
 
     invoke-direct/range {v0 .. v6}, Landroid/bluetooth/le/BluetoothLeAdvertiser$AdvertiseCallbackWrapper;-><init>(Landroid/bluetooth/le/BluetoothLeAdvertiser;Landroid/bluetooth/le/AdvertiseCallback;Landroid/bluetooth/le/AdvertiseData;Landroid/bluetooth/le/AdvertiseData;Landroid/bluetooth/le/AdvertiseSettings;Landroid/bluetooth/IBluetoothGatt;)V
 
-    .line 148
     .local v0, "wrapper":Landroid/bluetooth/le/BluetoothLeAdvertiser$AdvertiseCallbackWrapper;
     invoke-virtual {v0}, Landroid/bluetooth/le/BluetoothLeAdvertiser$AdvertiseCallbackWrapper;->startRegisteration()V
 
-    .line 149
     monitor-exit v9
 
     goto :goto_0
 
-    .line 141
     .end local v0    # "wrapper":Landroid/bluetooth/le/BluetoothLeAdvertiser$AdvertiseCallbackWrapper;
     .end local v6    # "gatt":Landroid/bluetooth/IBluetoothGatt;
     :catch_0
     move-exception v7
 
-    .line 142
     .local v7, "e":Landroid/os/RemoteException;
     const-string v1, "BluetoothLeAdvertiser"
 
@@ -771,12 +695,10 @@
 
     invoke-static {v1, v2, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 143
     const/4 v1, 0x4
 
     invoke-direct {p0, p4, v1}, Landroid/bluetooth/le/BluetoothLeAdvertiser;->postStartFailure(Landroid/bluetooth/le/AdvertiseCallback;I)V
 
-    .line 144
     monitor-exit v9
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
@@ -789,12 +711,10 @@
     .param p1, "callback"    # Landroid/bluetooth/le/AdvertiseCallback;
 
     .prologue
-    .line 161
     iget-object v2, p0, Landroid/bluetooth/le/BluetoothLeAdvertiser;->mLeAdvertisers:Ljava/util/Map;
 
     monitor-enter v2
 
-    .line 162
     :try_start_0
     iget-object v1, p0, Landroid/bluetooth/le/BluetoothLeAdvertiser;->mBluetoothAdapter:Landroid/bluetooth/BluetoothAdapter;
 
@@ -821,7 +741,6 @@
 
     if-nez v1, :cond_2
 
-    .line 164
     :cond_1
     const-string v1, "BluetoothLeAdvertiser"
 
@@ -829,18 +748,14 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 165
     monitor-exit v2
 
-    .line 178
     :goto_0
     return-void
 
-    .line 167
     :cond_2
     if-nez p1, :cond_3
 
-    .line 168
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v3, "callback cannot be null"
@@ -849,7 +764,6 @@
 
     throw v1
 
-    .line 177
     :catchall_0
     move-exception v1
 
@@ -859,16 +773,14 @@
 
     throw v1
 
-    .line 170
     :cond_3
     :try_start_1
     const-string v1, "BluetoothLeAdvertiser"
 
-    const-string/jumbo v3, "stop advertising"
+    const-string v3, "stop advertising"
 
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 171
     iget-object v1, p0, Landroid/bluetooth/le/BluetoothLeAdvertiser;->mLeAdvertisers:Ljava/util/Map;
 
     invoke-interface {v1, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -877,27 +789,22 @@
 
     check-cast v0, Landroid/bluetooth/le/BluetoothLeAdvertiser$AdvertiseCallbackWrapper;
 
-    .line 172
     .local v0, "wrapper":Landroid/bluetooth/le/BluetoothLeAdvertiser$AdvertiseCallbackWrapper;
     if-nez v0, :cond_4
 
-    .line 173
     const-string v1, "BluetoothLeAdvertiser"
 
-    const-string/jumbo v3, "wrapper is null"
+    const-string v3, "wrapper is null"
 
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 174
     monitor-exit v2
 
     goto :goto_0
 
-    .line 176
     :cond_4
     invoke-virtual {v0}, Landroid/bluetooth/le/BluetoothLeAdvertiser$AdvertiseCallbackWrapper;->stopAdvertising()V
 
-    .line 177
     monitor-exit v2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -909,12 +816,10 @@
     .locals 7
 
     .prologue
-    .line 190
     iget-object v4, p0, Landroid/bluetooth/le/BluetoothLeAdvertiser;->mLeAdvertisers:Ljava/util/Map;
 
     monitor-enter v4
 
-    .line 191
     :try_start_0
     const-string v3, "BluetoothLeAdvertiser"
 
@@ -922,7 +827,7 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "stop All Advertising :: standalone boolean value is = "
+    const-string v6, "stop All Advertising :: standalone boolean value is = "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -944,7 +849,6 @@
 
     invoke-static {v3, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 193
     iget-object v3, p0, Landroid/bluetooth/le/BluetoothLeAdvertiser;->mBluetoothAdapter:Landroid/bluetooth/BluetoothAdapter;
 
     invoke-virtual {v3}, Landroid/bluetooth/BluetoothAdapter;->getStandAloneBleMode()Z
@@ -953,7 +857,6 @@
 
     if-nez v3, :cond_1
 
-    .line 194
     iget-object v3, p0, Landroid/bluetooth/le/BluetoothLeAdvertiser;->mLeAdvertisers:Ljava/util/Map;
 
     invoke-interface {v3}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -964,7 +867,6 @@
 
     move-result-object v1
 
-    .line 196
     .local v1, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/util/Map$Entry<Landroid/bluetooth/le/AdvertiseCallback;Landroid/bluetooth/le/BluetoothLeAdvertiser$AdvertiseCallbackWrapper;>;>;"
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -973,14 +875,12 @@
 
     if-eqz v3, :cond_0
 
-    .line 197
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 198
     .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Landroid/bluetooth/le/AdvertiseCallback;Landroid/bluetooth/le/BluetoothLeAdvertiser$AdvertiseCallbackWrapper;>;"
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -988,13 +888,11 @@
 
     check-cast v2, Landroid/bluetooth/le/BluetoothLeAdvertiser$AdvertiseCallbackWrapper;
 
-    .line 199
     .local v2, "wrapper":Landroid/bluetooth/le/BluetoothLeAdvertiser$AdvertiseCallbackWrapper;
     invoke-virtual {v2}, Landroid/bluetooth/le/BluetoothLeAdvertiser$AdvertiseCallbackWrapper;->stopAdvertising()V
 
     goto :goto_0
 
-    .line 204
     .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Landroid/bluetooth/le/AdvertiseCallback;Landroid/bluetooth/le/BluetoothLeAdvertiser$AdvertiseCallbackWrapper;>;"
     .end local v1    # "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/util/Map$Entry<Landroid/bluetooth/le/AdvertiseCallback;Landroid/bluetooth/le/BluetoothLeAdvertiser$AdvertiseCallbackWrapper;>;>;"
     .end local v2    # "wrapper":Landroid/bluetooth/le/BluetoothLeAdvertiser$AdvertiseCallbackWrapper;
@@ -1007,7 +905,6 @@
 
     throw v3
 
-    .line 201
     .restart local v1    # "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/util/Map$Entry<Landroid/bluetooth/le/AdvertiseCallback;Landroid/bluetooth/le/BluetoothLeAdvertiser$AdvertiseCallbackWrapper;>;>;"
     :cond_0
     :try_start_1
@@ -1017,15 +914,12 @@
 
     invoke-static {v3, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 202
     monitor-exit v4
 
-    .line 205
     .end local v1    # "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/util/Map$Entry<Landroid/bluetooth/le/AdvertiseCallback;Landroid/bluetooth/le/BluetoothLeAdvertiser$AdvertiseCallbackWrapper;>;>;"
     :goto_1
     return-void
 
-    .line 204
     :cond_1
     monitor-exit v4
     :try_end_1

@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 245
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 247
     new-instance v0, Landroid/sec/enterprise/email/EnterpriseEmailAccount;
 
     const/4 v1, 0x0
@@ -60,7 +58,6 @@
     .param p1, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 245
     invoke-virtual {p0, p1}, Landroid/sec/enterprise/email/EnterpriseEmailAccount$1;->createFromParcel(Landroid/os/Parcel;)Landroid/sec/enterprise/email/EnterpriseEmailAccount;
 
     move-result-object v0
@@ -73,7 +70,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 251
     new-array v0, p1, [Landroid/sec/enterprise/email/EnterpriseEmailAccount;
 
     return-object v0
@@ -84,7 +80,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 245
     invoke-virtual {p0, p1}, Landroid/sec/enterprise/email/EnterpriseEmailAccount$1;->newArray(I)[Landroid/sec/enterprise/email/EnterpriseEmailAccount;
 
     move-result-object v0

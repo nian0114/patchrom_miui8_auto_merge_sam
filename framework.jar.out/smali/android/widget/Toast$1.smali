@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 328
     iput-object p1, p0, Landroid/widget/Toast$1;->this$0:Landroid/widget/Toast;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 330
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v1
@@ -57,7 +55,6 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 332
     :cond_0
     iget-object v1, p0, Landroid/widget/Toast$1;->this$0:Landroid/widget/Toast;
 
@@ -65,7 +62,6 @@
 
     invoke-virtual {v1}, Landroid/widget/Toast$TN;->hide()V
 
-    .line 334
     :try_start_0
     sget-boolean v1, Landroid/widget/Toast;->localLOGV:Z
 
@@ -93,7 +89,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 335
     :cond_1
     # invokes: Landroid/widget/Toast;->getService()Landroid/app/INotificationManager;
     invoke-static {}, Landroid/widget/Toast;->access$000()Landroid/app/INotificationManager;
@@ -116,18 +111,15 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 342
     :cond_2
     :goto_0
     const/4 v1, 0x1
 
     return v1
 
-    .line 337
     :catch_0
     move-exception v0
 
-    .line 339
     .local v0, "e":Landroid/os/RemoteException;
     sget-boolean v1, Landroid/widget/Toast;->localLOGV:Z
 

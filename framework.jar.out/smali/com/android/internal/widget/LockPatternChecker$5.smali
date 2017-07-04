@@ -44,7 +44,6 @@
     .locals 0
 
     .prologue
-    .line 196
     iput-object p1, p0, Lcom/android/internal/widget/LockPatternChecker$5;->val$utils:Lcom/android/internal/widget/LockPatternUtils;
 
     iput p2, p0, Lcom/android/internal/widget/LockPatternChecker$5;->val$whichlock:I
@@ -67,7 +66,6 @@
     .param p1, "args"    # [Ljava/lang/Void;
 
     .prologue
-    .line 201
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternChecker$5;->val$utils:Lcom/android/internal/widget/LockPatternUtils;
 
     iget v1, p0, Lcom/android/internal/widget/LockPatternChecker$5;->val$whichlock:I
@@ -92,7 +90,6 @@
     .param p1, "x0"    # [Ljava/lang/Object;
 
     .prologue
-    .line 196
     check-cast p1, [Ljava/lang/Void;
 
     .end local p1    # "x0":[Ljava/lang/Object;
@@ -108,7 +105,6 @@
     .param p1, "result"    # Ljava/lang/Boolean;
 
     .prologue
-    .line 206
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternChecker$5;->val$callback:Lcom/android/internal/widget/LockPatternChecker$OnCheckCallback;
 
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
@@ -119,7 +115,6 @@
 
     invoke-interface {v0, v1, v2}, Lcom/android/internal/widget/LockPatternChecker$OnCheckCallback;->onChecked(ZI)V
 
-    .line 207
     return-void
 .end method
 
@@ -128,7 +123,6 @@
     .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
-    .line 196
     check-cast p1, Ljava/lang/Boolean;
 
     .end local p1    # "x0":Ljava/lang/Object;

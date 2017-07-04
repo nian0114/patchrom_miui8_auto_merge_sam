@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 195
     invoke-static {}, Lcom/android/server/SecExternalDisplayOrientation$EDS_CameraStatus;->values()[Lcom/android/server/SecExternalDisplayOrientation$EDS_CameraStatus;
 
     move-result-object v0

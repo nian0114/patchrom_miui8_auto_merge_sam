@@ -118,12 +118,10 @@
     .param p2, "listener"    # Lcom/samsung/android/vr/view/VRTouchPadGestureDetector$OnTouchPadGestureListener;
 
     .prologue
-    .line 211
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;-><init>(Landroid/content/Context;Lcom/samsung/android/vr/view/VRTouchPadGestureDetector$OnTouchPadGestureListener;Landroid/os/Handler;)V
 
-    .line 212
     return-void
 .end method
 
@@ -134,30 +132,23 @@
     .param p3, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 226
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 227
     if-eqz p3, :cond_0
 
-    .line 228
     new-instance v0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector$VRTouchPadGestureHandler;
 
     invoke-direct {v0, p0, p3}, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector$VRTouchPadGestureHandler;-><init>(Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;Landroid/os/Handler;)V
 
     iput-object v0, p0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mHandler:Landroid/os/Handler;
 
-    .line 232
     :goto_0
     iput-object p2, p0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mListener:Lcom/samsung/android/vr/view/VRTouchPadGestureDetector$OnTouchPadGestureListener;
 
-    .line 233
     invoke-direct {p0, p1}, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->init(Landroid/content/Context;)V
 
-    .line 234
     return-void
 
-    .line 230
     :cond_0
     new-instance v0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector$VRTouchPadGestureHandler;
 
@@ -175,10 +166,8 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 196
     invoke-direct {p0, v0, p1, v0}, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;-><init>(Landroid/content/Context;Lcom/samsung/android/vr/view/VRTouchPadGestureDetector$OnTouchPadGestureListener;Landroid/os/Handler;)V
 
-    .line 197
     return-void
 .end method
 
@@ -187,7 +176,6 @@
     .param p0, "x0"    # Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;
 
     .prologue
-    .line 29
     invoke-direct {p0}, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->dispatchLongPress()V
 
     return-void
@@ -198,7 +186,6 @@
     .param p0, "x0"    # Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;
 
     .prologue
-    .line 29
     iget-object v0, p0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mDoubleTapListener:Lcom/samsung/android/vr/view/VRTouchPadGestureDetector$OnTouchPadDoubleTapListener;
 
     return-object v0
@@ -209,7 +196,6 @@
     .param p0, "x0"    # Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;
 
     .prologue
-    .line 29
     iget-boolean v0, p0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mStillDown:Z
 
     return v0
@@ -220,7 +206,6 @@
     .param p0, "x0"    # Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;
 
     .prologue
-    .line 29
     iget-object v0, p0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mCurrentDownEvent:Landroid/view/MotionEvent;
 
     return-object v0
@@ -232,7 +217,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 29
     iput-boolean p1, p0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mDeferConfirmSingleTap:Z
 
     return p1
@@ -244,41 +228,32 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 396
     iget-object v0, p0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 397
     iget-object v0, p0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     invoke-virtual {v0}, Landroid/view/VelocityTracker;->recycle()V
 
-    .line 398
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mVelocityTracker:Landroid/view/VelocityTracker;
 
-    .line 399
     iput-boolean v2, p0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mAlwaysInTapRegion:Z
 
-    .line 400
     iput-boolean v2, p0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mDeferConfirmSingleTap:Z
 
-    .line 401
     iput-boolean v2, p0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mStillDown:Z
 
-    .line 402
     iget-boolean v0, p0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mInLongPress:Z
 
     if-eqz v0, :cond_0
 
-    .line 403
     iput-boolean v2, p0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mInLongPress:Z
 
-    .line 405
     :cond_0
     return-void
 .end method
@@ -289,28 +264,22 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 408
     iget-object v0, p0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 409
     iput-boolean v2, p0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mAlwaysInTapRegion:Z
 
-    .line 410
     iput-boolean v2, p0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mDeferConfirmSingleTap:Z
 
-    .line 411
     iget-boolean v0, p0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mInLongPress:Z
 
     if-eqz v0, :cond_0
 
-    .line 412
     iput-boolean v2, p0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mInLongPress:Z
 
-    .line 414
     :cond_0
     return-void
 .end method
@@ -319,31 +288,26 @@
     .locals 2
 
     .prologue
-    .line 458
     iget-object v0, p0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 459
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mDeferConfirmSingleTap:Z
 
-    .line 460
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mInLongPress:Z
 
-    .line 461
     iget-object v0, p0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mListener:Lcom/samsung/android/vr/view/VRTouchPadGestureDetector$OnTouchPadGestureListener;
 
     iget-object v1, p0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mCurrentDownEvent:Landroid/view/MotionEvent;
 
     invoke-interface {v0, v1}, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector$OnTouchPadGestureListener;->onLongPress(Landroid/view/MotionEvent;)Z
 
-    .line 462
     return-void
 .end method
 
@@ -352,12 +316,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 237
     iget-object v0, p0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mListener:Lcom/samsung/android/vr/view/VRTouchPadGestureDetector$OnTouchPadGestureListener;
 
     if-nez v0, :cond_0
 
-    .line 238
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "OnTouchPadGestureListener must not be null"
@@ -366,43 +328,35 @@
 
     throw v0
 
-    .line 240
     :cond_0
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mIsLongpressEnabled:Z
 
-    .line 241
     const/16 v0, 0x640
 
     iput v0, p0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mTouchXSlopSquare:I
 
-    .line 242
     const/16 v0, 0x190
 
     iput v0, p0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mTouchYSlopSquare:I
 
-    .line 243
     const/16 v0, 0x2710
 
     iput v0, p0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mDoubleTapSlopSquare:I
 
-    .line 244
     const/16 v0, 0x7d0
 
     iput v0, p0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mMinimumFlingVelocity:I
 
-    .line 245
     const/16 v0, 0x1f40
 
     iput v0, p0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mMaximumFlingVelocity:I
 
-    .line 246
     const/16 v0, 0x3e8
 
     iput v0, p0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mVelocityUnits:I
 
-    .line 247
     return-void
 .end method
 
@@ -415,7 +369,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 417
     invoke-virtual {p3}, Landroid/view/MotionEvent;->getEventTime()J
 
     move-result-wide v4
@@ -432,12 +385,10 @@
 
     if-lez v3, :cond_1
 
-    .line 427
     :cond_0
     :goto_0
     return v2
 
-    .line 421
     :cond_1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
@@ -453,7 +404,6 @@
 
     sub-int v0, v3, v4
 
-    .line 422
     .local v0, "deltaX":I
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
@@ -469,7 +419,6 @@
 
     sub-int v1, v3, v4
 
-    .line 423
     .local v1, "deltaY":I
     mul-int v3, v0, v0
 
@@ -483,12 +432,10 @@
 
     const/4 v2, 0x1
 
-    .line 424
     .local v2, "ret":Z
     :cond_2
     if-nez v2, :cond_0
 
-    .line 425
     const-string v3, "VRTouchPadGestureDetector"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -546,14 +493,11 @@
     .param p4, "upPositionY"    # F
 
     .prologue
-    .line 431
     sub-float v1, p3, p1
 
-    .line 432
     .local v1, "deltaX":F
     sub-float v2, p4, p2
 
-    .line 434
     .local v2, "deltaY":F
     const-string v3, "VRTouchPadGestureDetector"
 
@@ -587,7 +531,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 436
     float-to-double v4, v1
 
     float-to-double v6, v2
@@ -602,7 +545,6 @@
 
     double-to-float v0, v4
 
-    .line 437
     .local v0, "angle":F
     const/4 v3, 0x0
 
@@ -610,12 +552,10 @@
 
     if-gez v3, :cond_0
 
-    .line 438
     const/high16 v3, 0x43b40000    # 360.0f
 
     add-float/2addr v0, v3
 
-    .line 440
     :cond_0
     const-string v3, "VRTouchPadGestureDetector"
 
@@ -639,7 +579,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 442
     const/4 v3, 0x0
 
     cmpl-float v3, v0, v3
@@ -665,15 +604,12 @@
 
     if-gez v3, :cond_3
 
-    .line 443
     :cond_2
     const/4 v3, 0x3
 
-    .line 454
     :goto_0
     return v3
 
-    .line 445
     :cond_3
     const/high16 v3, 0x428c0000    # 70.0f
 
@@ -687,12 +623,10 @@
 
     if-gez v3, :cond_4
 
-    .line 446
     const/4 v3, 0x0
 
     goto :goto_0
 
-    .line 448
     :cond_4
     const/high16 v3, 0x42dc0000    # 110.0f
 
@@ -706,12 +640,10 @@
 
     if-gez v3, :cond_5
 
-    .line 449
     const/4 v3, 0x2
 
     goto :goto_0
 
-    .line 451
     :cond_5
     const/high16 v3, 0x437a0000    # 250.0f
 
@@ -725,12 +657,10 @@
 
     if-gez v3, :cond_6
 
-    .line 452
     const/4 v3, 0x1
 
     goto :goto_0
 
-    .line 454
     :cond_6
     const/4 v3, -0x1
 
@@ -744,12 +674,10 @@
     .param p1, "ev"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 261
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v6
 
-    .line 263
     .local v6, "action":I
     move-object/from16 v0, p0
 
@@ -759,7 +687,6 @@
 
     if-nez v30, :cond_0
 
-    .line 264
     invoke-static {}, Landroid/view/VelocityTracker;->obtain()Landroid/view/VelocityTracker;
 
     move-result-object v30
@@ -770,7 +697,6 @@
 
     iput-object v0, v1, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mVelocityTracker:Landroid/view/VelocityTracker;
 
-    .line 266
     :cond_0
     move-object/from16 v0, p0
 
@@ -784,7 +710,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
 
-    .line 268
     and-int/lit16 v0, v6, 0xff
 
     move/from16 v30, v0
@@ -799,7 +724,6 @@
 
     const/16 v20, 0x1
 
-    .line 270
     .local v20, "pointerUp":Z
     :goto_0
     if-eqz v20, :cond_2
@@ -808,7 +732,6 @@
 
     move-result v23
 
-    .line 272
     .local v23, "skipIndex":I
     :goto_1
     const/16 v24, 0x0
@@ -816,13 +739,11 @@
     .local v24, "sumX":F
     const/16 v25, 0x0
 
-    .line 273
     .local v25, "sumY":F
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getPointerCount()I
 
     move-result v7
 
-    .line 274
     .local v7, "count":I
     const/16 v18, 0x0
 
@@ -832,20 +753,17 @@
 
     if-ge v0, v7, :cond_4
 
-    .line 275
     move/from16 v0, v23
 
     move/from16 v1, v18
 
     if-ne v0, v1, :cond_3
 
-    .line 274
     :goto_3
     add-int/lit8 v18, v18, 0x1
 
     goto :goto_2
 
-    .line 268
     .end local v7    # "count":I
     .end local v18    # "i":I
     .end local v20    # "pointerUp":Z
@@ -857,14 +775,12 @@
 
     goto :goto_0
 
-    .line 270
     .restart local v20    # "pointerUp":Z
     :cond_2
     const/16 v23, -0x1
 
     goto :goto_1
 
-    .line 276
     .restart local v7    # "count":I
     .restart local v18    # "i":I
     .restart local v23    # "skipIndex":I
@@ -881,7 +797,6 @@
 
     add-float v24, v24, v30
 
-    .line 277
     move-object/from16 v0, p1
 
     move/from16 v1, v18
@@ -894,13 +809,11 @@
 
     goto :goto_3
 
-    .line 279
     :cond_4
     if-eqz v20, :cond_6
 
     add-int/lit8 v13, v7, -0x1
 
-    .line 280
     .local v13, "div":I
     :goto_4
     int-to-float v0, v13
@@ -909,7 +822,6 @@
 
     div-float v14, v24, v30
 
-    .line 281
     .local v14, "focusX":F
     int-to-float v0, v13
 
@@ -917,11 +829,9 @@
 
     div-float v15, v25, v30
 
-    .line 283
     .local v15, "focusY":F
     const/16 v17, 0x0
 
-    .line 285
     .local v17, "handled":Z
     and-int/lit16 v0, v6, 0xff
 
@@ -929,7 +839,6 @@
 
     packed-switch v30, :pswitch_data_0
 
-    .line 392
     :cond_5
     :goto_5
     :pswitch_0
@@ -942,10 +851,8 @@
     :cond_6
     move v13, v7
 
-    .line 279
     goto :goto_4
 
-    .line 293
     .restart local v13    # "div":I
     .restart local v14    # "focusX":F
     .restart local v15    # "focusY":F
@@ -959,7 +866,6 @@
 
     if-eqz v30, :cond_8
 
-    .line 294
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mHandler:Landroid/os/Handler;
@@ -972,11 +878,9 @@
 
     move-result v16
 
-    .line 295
     .local v16, "hadTapMessage":Z
     if-eqz v16, :cond_7
 
-    .line 296
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mHandler:Landroid/os/Handler;
@@ -987,7 +891,6 @@
 
     invoke-virtual/range {v30 .. v31}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 298
     :cond_7
     move-object/from16 v0, p0
 
@@ -1033,7 +936,6 @@
 
     if-eqz v30, :cond_a
 
-    .line 300
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mDoubleTapListener:Lcom/samsung/android/vr/view/VRTouchPadGestureDetector$OnTouchPadDoubleTapListener;
@@ -1052,7 +954,6 @@
 
     or-int v17, v17, v30
 
-    .line 306
     .end local v16    # "hadTapMessage":Z
     :cond_8
     :goto_6
@@ -1064,7 +965,6 @@
 
     iput v14, v0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mDownFocusX:F
 
-    .line 307
     move-object/from16 v0, p0
 
     iput v15, v0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mLastFocusY:F
@@ -1073,7 +973,6 @@
 
     iput v15, v0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mDownFocusY:F
 
-    .line 308
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mCurrentDownEvent:Landroid/view/MotionEvent;
@@ -1082,7 +981,6 @@
 
     if-eqz v30, :cond_9
 
-    .line 309
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mCurrentDownEvent:Landroid/view/MotionEvent;
@@ -1091,7 +989,6 @@
 
     invoke-virtual/range {v30 .. v30}, Landroid/view/MotionEvent;->recycle()V
 
-    .line 311
     :cond_9
     invoke-static/range {p1 .. p1}, Landroid/view/MotionEvent;->obtain(Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
 
@@ -1103,7 +1000,6 @@
 
     iput-object v0, v1, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mCurrentDownEvent:Landroid/view/MotionEvent;
 
-    .line 312
     const/16 v30, 0x1
 
     move/from16 v0, v30
@@ -1112,7 +1008,6 @@
 
     iput-boolean v0, v1, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mAlwaysInTapRegion:Z
 
-    .line 313
     const/16 v30, 0x1
 
     move/from16 v0, v30
@@ -1121,7 +1016,6 @@
 
     iput-boolean v0, v1, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mStillDown:Z
 
-    .line 314
     const/16 v30, 0x0
 
     move/from16 v0, v30
@@ -1130,7 +1024,6 @@
 
     iput-boolean v0, v1, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mInLongPress:Z
 
-    .line 315
     const/16 v30, 0x0
 
     move/from16 v0, v30
@@ -1139,7 +1032,6 @@
 
     iput-boolean v0, v1, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mDeferConfirmSingleTap:Z
 
-    .line 317
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mIsLongpressEnabled:Z
@@ -1148,7 +1040,6 @@
 
     if-eqz v30, :cond_5
 
-    .line 318
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mHandler:Landroid/os/Handler;
@@ -1159,7 +1050,6 @@
 
     invoke-virtual/range {v30 .. v31}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 319
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mHandler:Landroid/os/Handler;
@@ -1190,7 +1080,6 @@
 
     goto/16 :goto_5
 
-    .line 303
     .restart local v16    # "hadTapMessage":Z
     :cond_a
     move-object/from16 v0, p0
@@ -1207,7 +1096,6 @@
 
     goto/16 :goto_6
 
-    .line 325
     .end local v16    # "hadTapMessage":Z
     :pswitch_2
     move-object/from16 v0, p0
@@ -1218,7 +1106,6 @@
 
     if-nez v30, :cond_5
 
-    .line 328
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mLastFocusX:F
@@ -1227,7 +1114,6 @@
 
     sub-float v21, v30, v14
 
-    .line 329
     .local v21, "scrollX":F
     move-object/from16 v0, p0
 
@@ -1237,7 +1123,6 @@
 
     sub-float v22, v30, v15
 
-    .line 331
     .local v22, "scrollY":F
     move-object/from16 v0, p0
 
@@ -1247,7 +1132,6 @@
 
     if-eqz v30, :cond_5
 
-    .line 332
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mDownFocusX:F
@@ -1260,7 +1144,6 @@
 
     float-to-int v9, v0
 
-    .line 333
     .local v9, "deltaX":I
     move-object/from16 v0, p0
 
@@ -1274,15 +1157,12 @@
 
     float-to-int v10, v0
 
-    .line 334
     .local v10, "deltaY":I
     mul-int v11, v9, v9
 
-    .line 335
     .local v11, "distanceX":I
     mul-int v12, v10, v10
 
-    .line 337
     .local v12, "distanceY":I
     move-object/from16 v0, p0
 
@@ -1304,18 +1184,15 @@
 
     if-le v12, v0, :cond_5
 
-    .line 338
     :cond_b
     move-object/from16 v0, p0
 
     iput v14, v0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mLastFocusX:F
 
-    .line 339
     move-object/from16 v0, p0
 
     iput v15, v0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mLastFocusY:F
 
-    .line 340
     const/16 v30, 0x0
 
     move/from16 v0, v30
@@ -1324,7 +1201,6 @@
 
     iput-boolean v0, v1, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mAlwaysInTapRegion:Z
 
-    .line 341
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mHandler:Landroid/os/Handler;
@@ -1337,7 +1213,6 @@
 
     goto/16 :goto_5
 
-    .line 347
     .end local v9    # "deltaX":I
     .end local v10    # "deltaY":I
     .end local v11    # "distanceX":I
@@ -1349,12 +1224,10 @@
 
     iput v14, v0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mUpFocusX:F
 
-    .line 348
     move-object/from16 v0, p0
 
     iput v15, v0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mUpFocusY:F
 
-    .line 350
     const/16 v30, 0x0
 
     move/from16 v0, v30
@@ -1363,12 +1236,10 @@
 
     iput-boolean v0, v1, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mStillDown:Z
 
-    .line 351
     invoke-static/range {p1 .. p1}, Landroid/view/MotionEvent;->obtain(Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
 
     move-result-object v8
 
-    .line 352
     .local v8, "currentUpEvent":Landroid/view/MotionEvent;
     move-object/from16 v0, p0
 
@@ -1378,7 +1249,6 @@
 
     if-eqz v30, :cond_f
 
-    .line 353
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mHandler:Landroid/os/Handler;
@@ -1389,7 +1259,6 @@
 
     invoke-virtual/range {v30 .. v31}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 354
     const/16 v30, 0x0
 
     move/from16 v0, v30
@@ -1398,7 +1267,6 @@
 
     iput-boolean v0, v1, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mInLongPress:Z
 
-    .line 374
     :cond_c
     :goto_7
     move-object/from16 v0, p0
@@ -1409,7 +1277,6 @@
 
     if-eqz v30, :cond_d
 
-    .line 375
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mPreviousUpEvent:Landroid/view/MotionEvent;
@@ -1418,13 +1285,11 @@
 
     invoke-virtual/range {v30 .. v30}, Landroid/view/MotionEvent;->recycle()V
 
-    .line 377
     :cond_d
     move-object/from16 v0, p0
 
     iput-object v8, v0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mPreviousUpEvent:Landroid/view/MotionEvent;
 
-    .line 379
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mVelocityTracker:Landroid/view/VelocityTracker;
@@ -1433,7 +1298,6 @@
 
     if-eqz v30, :cond_e
 
-    .line 380
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mVelocityTracker:Landroid/view/VelocityTracker;
@@ -1442,7 +1306,6 @@
 
     invoke-virtual/range {v30 .. v30}, Landroid/view/VelocityTracker;->recycle()V
 
-    .line 381
     const/16 v30, 0x0
 
     move-object/from16 v0, v30
@@ -1451,7 +1314,6 @@
 
     iput-object v0, v1, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mVelocityTracker:Landroid/view/VelocityTracker;
 
-    .line 384
     :cond_e
     const/16 v30, 0x0
 
@@ -1461,7 +1323,6 @@
 
     iput-boolean v0, v1, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mDeferConfirmSingleTap:Z
 
-    .line 385
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mHandler:Landroid/os/Handler;
@@ -1474,7 +1335,6 @@
 
     goto/16 :goto_5
 
-    .line 355
     :cond_f
     move-object/from16 v0, p0
 
@@ -1484,7 +1344,6 @@
 
     if-eqz v30, :cond_10
 
-    .line 356
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mListener:Lcom/samsung/android/vr/view/VRTouchPadGestureDetector$OnTouchPadGestureListener;
@@ -1499,7 +1358,6 @@
 
     move-result v17
 
-    .line 357
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mDeferConfirmSingleTap:Z
@@ -1516,7 +1374,6 @@
 
     if-eqz v30, :cond_c
 
-    .line 358
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mDoubleTapListener:Lcom/samsung/android/vr/view/VRTouchPadGestureDetector$OnTouchPadDoubleTapListener;
@@ -1531,7 +1388,6 @@
 
     goto :goto_7
 
-    .line 361
     :cond_10
     move-object/from16 v0, p0
 
@@ -1539,7 +1395,6 @@
 
     move-object/from16 v27, v0
 
-    .line 362
     .local v27, "velocityTracker":Landroid/view/VelocityTracker;
     const/16 v30, 0x0
 
@@ -1551,7 +1406,6 @@
 
     move-result v19
 
-    .line 363
     .local v19, "pointerId":I
     move-object/from16 v0, p0
 
@@ -1579,7 +1433,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/view/VelocityTracker;->computeCurrentVelocity(IF)V
 
-    .line 364
     move-object/from16 v0, v27
 
     move/from16 v1, v19
@@ -1588,7 +1441,6 @@
 
     move-result v28
 
-    .line 365
     .local v28, "velocityX":F
     move-object/from16 v0, v27
 
@@ -1598,7 +1450,6 @@
 
     move-result v29
 
-    .line 366
     .local v29, "velocityY":F
     const-string v30, "VRTouchPadGestureDetector"
 
@@ -1640,7 +1491,6 @@
 
     invoke-static/range {v30 .. v31}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 368
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mDownFocusX:F
@@ -1679,7 +1529,6 @@
 
     move-result v26
 
-    .line 369
     .local v26, "swipeActionType":I
     const/16 v30, -0x1
 
@@ -1689,7 +1538,6 @@
 
     if-eq v0, v1, :cond_11
 
-    .line 370
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mListener:Lcom/samsung/android/vr/view/VRTouchPadGestureDetector$OnTouchPadGestureListener;
@@ -1708,7 +1556,6 @@
 
     invoke-interface {v0, v1, v2, v3, v4}, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector$OnTouchPadGestureListener;->onSwipe(Landroid/view/MotionEvent;IFF)Z
 
-    .line 371
     :cond_11
     move-object/from16 v0, p0
 
@@ -1722,7 +1569,6 @@
 
     goto/16 :goto_7
 
-    .line 389
     .end local v8    # "currentUpEvent":Landroid/view/MotionEvent;
     .end local v19    # "pointerId":I
     .end local v26    # "swipeActionType":I
@@ -1734,7 +1580,6 @@
 
     goto/16 :goto_5
 
-    .line 285
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1
@@ -1752,9 +1597,7 @@
     .param p1, "onDoubleTapListener"    # Lcom/samsung/android/vr/view/VRTouchPadGestureDetector$OnTouchPadDoubleTapListener;
 
     .prologue
-    .line 257
     iput-object p1, p0, Lcom/samsung/android/vr/view/VRTouchPadGestureDetector;->mDoubleTapListener:Lcom/samsung/android/vr/view/VRTouchPadGestureDetector$OnTouchPadDoubleTapListener;
 
-    .line 258
     return-void
 .end method

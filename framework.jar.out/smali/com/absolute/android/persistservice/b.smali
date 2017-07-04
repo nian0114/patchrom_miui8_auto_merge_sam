@@ -15,12 +15,10 @@
     .locals 0
 
     .prologue
-    .line 3837
     iput-object p1, p0, Lcom/absolute/android/persistservice/b;->a:Lcom/absolute/android/persistservice/ABTPersistenceService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3838
     return-void
 .end method
 
@@ -30,7 +28,6 @@
     .locals 1
 
     .prologue
-    .line 3841
     invoke-static {}, Lcom/absolute/android/persistservice/ABTPersistenceService;->c()Ljava/lang/String;
 
     move-result-object v0

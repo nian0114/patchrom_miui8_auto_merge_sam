@@ -26,7 +26,6 @@
     .param p2, "x0"    # Landroid/os/Looper;
 
     .prologue
-    .line 1694
     iput-object p1, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarFeedsListenerDelegate$1;->this$1:Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarFeedsListenerDelegate;
 
     iput-object p3, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarFeedsListenerDelegate$1;->val$this$0:Lcom/samsung/android/cocktailbar/CocktailBarManager;
@@ -43,7 +42,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 1698
     iget-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarFeedsListenerDelegate$1;->this$1:Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarFeedsListenerDelegate;
 
     # getter for: Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarFeedsListenerDelegate;->mListener:Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarFeedsListener;
@@ -53,17 +51,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 1699
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 1705
     :cond_0
     :goto_0
     return-void
 
-    .line 1701
     :pswitch_0
     iget-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarFeedsListenerDelegate$1;->this$1:Lcom/samsung/android/cocktailbar/CocktailBarManager$CocktailBarFeedsListenerDelegate;
 
@@ -82,7 +77,6 @@
 
     goto :goto_0
 
-    .line 1699
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -43,33 +42,27 @@
     .param p0, "userId"    # I
 
     .prologue
-    .line 155
     :try_start_0
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager$EDMProxyServiceHelper;->getService()Landroid/sec/enterprise/IEDMProxy;
 
     move-result-object v0
 
-    .line 156
     .local v0, "lService":Landroid/sec/enterprise/IEDMProxy;
     if-eqz v0, :cond_0
 
-    .line 157
     invoke-interface {v0, p0}, Landroid/sec/enterprise/IEDMProxy;->isAuditLogEnabledAsUser(I)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v1
 
-    .line 162
     .end local v0    # "lService":Landroid/sec/enterprise/IEDMProxy;
     :goto_0
     return v1
 
-    .line 159
     :catch_0
     move-exception v1
 
-    .line 162
     :cond_0
     const/4 v1, 0x0
 
@@ -86,13 +79,11 @@
     .param p5, "logMessage"    # Ljava/lang/String;
 
     .prologue
-    .line 67
     :try_start_0
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager$EDMProxyServiceHelper;->getService()Landroid/sec/enterprise/IEDMProxy;
 
     move-result-object v0
 
-    .line 68
     .local v0, "lService":Landroid/sec/enterprise/IEDMProxy;
     if-eqz v0, :cond_0
 
@@ -108,18 +99,15 @@
 
     move-object v6, p5
 
-    .line 69
     invoke-interface/range {v0 .. v6}, Landroid/sec/enterprise/IEDMProxy;->AuditLogger(IIZILjava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 75
     .end local v0    # "lService":Landroid/sec/enterprise/IEDMProxy;
     :cond_0
     :goto_0
     return-void
 
-    .line 72
     :catch_0
     move-exception v1
 
@@ -137,13 +125,11 @@
     .param p6, "userId"    # I
 
     .prologue
-    .line 112
     :try_start_0
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager$EDMProxyServiceHelper;->getService()Landroid/sec/enterprise/IEDMProxy;
 
     move-result-object v0
 
-    .line 113
     .local v0, "lService":Landroid/sec/enterprise/IEDMProxy;
     if-eqz v0, :cond_0
 
@@ -161,18 +147,15 @@
 
     move v7, p6
 
-    .line 114
     invoke-interface/range {v0 .. v7}, Landroid/sec/enterprise/IEDMProxy;->AuditLoggerAsUser(IIZILjava/lang/String;Ljava/lang/String;I)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 120
     .end local v0    # "lService":Landroid/sec/enterprise/IEDMProxy;
     :cond_0
     :goto_0
     return-void
 
-    .line 117
     :catch_0
     move-exception v1
 
@@ -189,13 +172,11 @@
     .param p5, "logMessage"    # Ljava/lang/String;
 
     .prologue
-    .line 87
     :try_start_0
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager$EDMProxyServiceHelper;->getService()Landroid/sec/enterprise/IEDMProxy;
 
     move-result-object v0
 
-    .line 88
     .local v0, "lService":Landroid/sec/enterprise/IEDMProxy;
     if-eqz v0, :cond_0
 
@@ -211,18 +192,15 @@
 
     move-object v6, p5
 
-    .line 89
     invoke-interface/range {v0 .. v6}, Landroid/sec/enterprise/IEDMProxy;->AuditLogger(IIZILjava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 95
     .end local v0    # "lService":Landroid/sec/enterprise/IEDMProxy;
     :cond_0
     :goto_0
     return-void
 
-    .line 92
     :catch_0
     move-exception v1
 
@@ -239,13 +217,11 @@
     .param p5, "logMessage"    # Ljava/lang/String;
 
     .prologue
-    .line 127
     :try_start_0
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager$EDMProxyServiceHelper;->getService()Landroid/sec/enterprise/IEDMProxy;
 
     move-result-object v0
 
-    .line 128
     .local v0, "lService":Landroid/sec/enterprise/IEDMProxy;
     if-eqz v0, :cond_0
 
@@ -261,18 +237,15 @@
 
     move-object v6, p5
 
-    .line 129
     invoke-interface/range {v0 .. v6}, Landroid/sec/enterprise/IEDMProxy;->AuditLoggerPrivileged(IIZILjava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 135
     .end local v0    # "lService":Landroid/sec/enterprise/IEDMProxy;
     :cond_0
     :goto_0
     return-void
 
-    .line 132
     :catch_0
     move-exception v1
 
@@ -290,13 +263,11 @@
     .param p6, "userId"    # I
 
     .prologue
-    .line 142
     :try_start_0
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager$EDMProxyServiceHelper;->getService()Landroid/sec/enterprise/IEDMProxy;
 
     move-result-object v0
 
-    .line 143
     .local v0, "lService":Landroid/sec/enterprise/IEDMProxy;
     if-eqz v0, :cond_0
 
@@ -314,18 +285,15 @@
 
     move v7, p6
 
-    .line 144
     invoke-interface/range {v0 .. v7}, Landroid/sec/enterprise/IEDMProxy;->AuditLoggerPrivilegedAsUser(IIZILjava/lang/String;Ljava/lang/String;I)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 150
     .end local v0    # "lService":Landroid/sec/enterprise/IEDMProxy;
     :cond_0
     :goto_0
     return-void
 
-    .line 147
     :catch_0
     move-exception v1
 

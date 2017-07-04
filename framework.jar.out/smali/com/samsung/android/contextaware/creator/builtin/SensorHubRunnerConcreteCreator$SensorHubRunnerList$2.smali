@@ -20,7 +20,6 @@
     .param p3, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 144
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, p3, v0}, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList;-><init>(Ljava/lang/String;ILjava/lang/String;Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$1;)V
@@ -34,7 +33,6 @@
     .locals 1
 
     .prologue
-    .line 166
     sget-object v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProtocol$DATA_TYPE;->LIBRARY_DATATYPE_PEDOMETER:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProtocol$DATA_TYPE;
 
     invoke-virtual {v0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProtocol$DATA_TYPE;->toString()Ljava/lang/String;
@@ -48,7 +46,6 @@
     .locals 5
 
     .prologue
-    .line 147
     # invokes: Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator;->getContextProviderMap()Ljava/util/concurrent/ConcurrentHashMap;
     invoke-static {}, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator;->access$700()Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -64,10 +61,8 @@
 
     if-nez v1, :cond_0
 
-    .line 148
     const/4 v0, 0x0
 
-    .line 149
     .local v0, "runner":Lcom/samsung/android/contextaware/manager/ContextComponent;
     # invokes: Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator;->getVersion()I
     invoke-static {}, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator;->access$800()I
@@ -78,7 +73,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 150
     new-instance v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/PedometerOtherVerRunner;
 
     .end local v0    # "runner":Lcom/samsung/android/contextaware/manager/ContextComponent;
@@ -104,7 +98,6 @@
 
     invoke-direct {v0, v1, v2, v3, v4}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/PedometerOtherVerRunner;-><init>(ILandroid/content/Context;Landroid/os/Looper;Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;)V
 
-    .line 157
     .restart local v0    # "runner":Lcom/samsung/android/contextaware/manager/ContextComponent;
     :goto_0
     # invokes: Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator;->getContextProviderMap()Ljava/util/concurrent/ConcurrentHashMap;
@@ -118,7 +111,6 @@
 
     invoke-virtual {v1, v2, v0}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 160
     .end local v0    # "runner":Lcom/samsung/android/contextaware/manager/ContextComponent;
     :cond_0
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$2;->getKey()Ljava/lang/String;
@@ -131,7 +123,6 @@
 
     invoke-virtual {p0, v1, v2}, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator$SensorHubRunnerList$2;->setOptionForLib(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 161
     # invokes: Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator;->getContextProviderMap()Ljava/util/concurrent/ConcurrentHashMap;
     invoke-static {}, Lcom/samsung/android/contextaware/creator/builtin/SensorHubRunnerConcreteCreator;->access$1800()Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -149,7 +140,6 @@
 
     return-object v1
 
-    .line 153
     .restart local v0    # "runner":Lcom/samsung/android/contextaware/manager/ContextComponent;
     :cond_1
     new-instance v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/PedometerRunner;

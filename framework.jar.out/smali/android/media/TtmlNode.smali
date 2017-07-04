@@ -48,43 +48,32 @@
     .param p9, "runId"    # J
 
     .prologue
-    .line 479
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 469
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/media/TtmlNode;->mChildren:Ljava/util/List;
 
-    .line 480
     iput-object p1, p0, Landroid/media/TtmlNode;->mName:Ljava/lang/String;
 
-    .line 481
     iput-object p2, p0, Landroid/media/TtmlNode;->mAttributes:Ljava/lang/String;
 
-    .line 482
     iput-object p3, p0, Landroid/media/TtmlNode;->mText:Ljava/lang/String;
 
-    .line 483
     iput-wide p4, p0, Landroid/media/TtmlNode;->mStartTimeMs:J
 
-    .line 484
     iput-wide p6, p0, Landroid/media/TtmlNode;->mEndTimeMs:J
 
-    .line 485
     iput-object p8, p0, Landroid/media/TtmlNode;->mParent:Landroid/media/TtmlNode;
 
-    .line 486
     iput-wide p9, p0, Landroid/media/TtmlNode;->mRunId:J
 
-    .line 488
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/media/TtmlNode;->mRegionName:Ljava/lang/String;
 
-    .line 489
     return-void
 .end method
 
@@ -96,7 +85,6 @@
     .param p3, "endTimeMs"    # J
 
     .prologue
-    .line 509
     iget-wide v0, p0, Landroid/media/TtmlNode;->mEndTimeMs:J
 
     cmp-long v0, v0, p1
@@ -125,10 +113,8 @@
     .param p1, "extentInfo"    # Ljava/lang/String;
 
     .prologue
-    .line 496
     iput-object p1, p0, Landroid/media/TtmlNode;->mExtentInfo:Ljava/lang/String;
 
-    .line 498
     return-void
 .end method
 
@@ -137,9 +123,7 @@
     .param p1, "originInfo"    # Ljava/lang/String;
 
     .prologue
-    .line 492
     iput-object p1, p0, Landroid/media/TtmlNode;->mOriginInfo:Ljava/lang/String;
 
-    .line 493
     return-void
 .end method

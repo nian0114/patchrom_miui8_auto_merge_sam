@@ -13,13 +13,10 @@
     .param p1, "provider"    # Lcom/samsung/android/contextaware/manager/ContextComponent;
 
     .prologue
-    .line 35
     invoke-direct {p0}, Lcom/samsung/android/contextaware/manager/ContextComponent;-><init>()V
 
-    .line 36
     iput-object p1, p0, Lcom/samsung/android/contextaware/manager/ContextProviderDecorator;->mProvider:Lcom/samsung/android/contextaware/manager/ContextComponent;
 
-    .line 37
     return-void
 .end method
 
@@ -29,7 +26,6 @@
     .locals 1
 
     .prologue
-    .line 68
     iget-object v0, p0, Lcom/samsung/android/contextaware/manager/ContextProviderDecorator;->mProvider:Lcom/samsung/android/contextaware/manager/ContextComponent;
 
     invoke-virtual {v0}, Lcom/samsung/android/contextaware/manager/ContextComponent;->getContextProvider()Lcom/samsung/android/contextaware/manager/ContextProvider;

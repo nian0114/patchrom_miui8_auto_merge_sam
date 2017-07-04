@@ -45,32 +45,26 @@
 
     const/4 v5, 0x0
 
-    .line 1174
     iput-object p1, p0, Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton;->this$0:Landroid/widget/ActionMenuPresenter;
 
-    .line 1175
     const v3, 0x10102f6
 
     invoke-direct {p0, p2, v7, v3}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 1171
     const v3, 0x3f99999a    # 1.2f
 
     iput v3, p0, Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton;->mMaxFontScale:F
 
-    .line 1172
     const/high16 v3, 0x3f800000    # 1.0f
 
     iput v3, p0, Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton;->mCurrentFontScale:F
 
-    .line 1176
     sget-object v3, Lcom/android/internal/R$styleable;->Theme:[I
 
     invoke-virtual {p2, v7, v3, v5, v5}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    .line 1178
     .local v0, "a":Landroid/content/res/TypedArray;
     invoke-virtual {v0, v8, v5}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -78,10 +72,8 @@
 
     invoke-virtual {p0, p2, v3}, Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton;->setTextAppearance(Landroid/content/Context;I)V
 
-    .line 1180
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 1183
     # getter for: Landroid/widget/ActionMenuPresenter;->mIsThemeDeviceDefaultFamily:Z
     invoke-static {p1}, Landroid/widget/ActionMenuPresenter;->access$1100(Landroid/widget/ActionMenuPresenter;)Z
 
@@ -89,7 +81,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 1184
     invoke-virtual {p2}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
     move-result-object v3
@@ -100,16 +91,13 @@
 
     move-result-object v0
 
-    .line 1185
     invoke-virtual {v0, v8, v5}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v1
 
-    .line 1187
     .local v1, "actionMeneTextAppearnceId":I
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 1189
     invoke-virtual {p0}, Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton;->getContext()Landroid/content/Context;
 
     move-result-object v3
@@ -120,19 +108,15 @@
 
     move-result-object v0
 
-    .line 1190
     invoke-virtual {v0, v5}, Landroid/content/res/TypedArray;->peekValue(I)Landroid/util/TypedValue;
 
     move-result-object v2
 
-    .line 1192
     .local v2, "value":Landroid/util/TypedValue;
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 1194
     if-eqz v2, :cond_1
 
-    .line 1195
     iget v3, v2, Landroid/util/TypedValue;->data:I
 
     invoke-static {v3}, Landroid/util/TypedValue;->complexToFloat(I)F
@@ -141,7 +125,6 @@
 
     iput v3, p0, Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton;->mDefaultTextSize:F
 
-    .line 1196
     invoke-virtual {p0}, Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton;->getContext()Landroid/content/Context;
 
     move-result-object v3
@@ -158,7 +141,6 @@
 
     iput v3, p0, Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton;->mCurrentFontScale:F
 
-    .line 1198
     iget v3, p0, Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton;->mCurrentFontScale:F
 
     iget v4, p0, Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton;->mMaxFontScale:F
@@ -167,12 +149,10 @@
 
     if-lez v3, :cond_0
 
-    .line 1199
     iget v3, p0, Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton;->mMaxFontScale:F
 
     iput v3, p0, Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton;->mCurrentFontScale:F
 
-    .line 1201
     :cond_0
     iget v3, p0, Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton;->mDefaultTextSize:F
 
@@ -182,22 +162,17 @@
 
     invoke-virtual {p0, v6, v3}, Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton;->setTextSize(IF)V
 
-    .line 1206
     .end local v1    # "actionMeneTextAppearnceId":I
     .end local v2    # "value":Landroid/util/TypedValue;
     :cond_1
     invoke-virtual {p0, v6}, Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton;->setClickable(Z)V
 
-    .line 1207
     invoke-virtual {p0, v6}, Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton;->setFocusable(Z)V
 
-    .line 1208
     invoke-virtual {p0, v5}, Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton;->setVisibility(I)V
 
-    .line 1209
     invoke-virtual {p0, v6}, Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton;->setEnabled(Z)V
 
-    .line 1210
     invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
@@ -210,14 +185,12 @@
 
     invoke-virtual {p0, v3}, Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1213
     invoke-virtual {p0}, Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v3
 
     iput-object v3, p0, Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton;->mArchivedBackground:Landroid/graphics/drawable/Drawable;
 
-    .line 1214
     invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
@@ -230,10 +203,8 @@
 
     iput-object v3, p0, Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton;->mArchivedShowButtonBackground:Landroid/graphics/drawable/Drawable;
 
-    .line 1215
     invoke-direct {p0}, Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton;->changeButtonBackground()V
 
-    .line 1217
     return-void
 .end method
 
@@ -245,7 +216,6 @@
 
     const/4 v2, 0x0
 
-    .line 1223
     iget-object v3, p0, Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton;->this$0:Landroid/widget/ActionMenuPresenter;
 
     # getter for: Landroid/widget/ActionMenuPresenter;->mIsThemeDeviceDefaultFamily:Z
@@ -255,11 +225,9 @@
 
     if-nez v3, :cond_0
 
-    .line 1240
     :goto_0
     return-void
 
-    .line 1225
     :cond_0
     invoke-virtual {p0}, Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton;->getContext()Landroid/content/Context;
 
@@ -269,7 +237,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "show_button_background"
+    const-string v4, "show_button_background"
 
     invoke-static {v3, v4, v2}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -277,27 +245,22 @@
 
     if-ne v3, v1, :cond_1
 
-    .line 1227
     .local v1, "show":Z
     :goto_1
     invoke-virtual {p0}, Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 1228
     .local v0, "d":Landroid/graphics/drawable/Drawable;
     instance-of v2, v0, Landroid/graphics/drawable/RippleDrawable;
 
     if-eqz v2, :cond_2
 
-    .line 1229
     iput-object v0, p0, Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton;->mArchivedBackground:Landroid/graphics/drawable/Drawable;
 
-    .line 1234
     :goto_2
     if-eqz v1, :cond_3
 
-    .line 1235
     iget-object v2, p0, Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton;->mArchivedShowButtonBackground:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0, v2}, Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton;->setBackground(Landroid/graphics/drawable/Drawable;)V
@@ -309,10 +272,8 @@
     :cond_1
     move v1, v2
 
-    .line 1225
     goto :goto_1
 
-    .line 1231
     .restart local v0    # "d":Landroid/graphics/drawable/Drawable;
     .restart local v1    # "show":Z
     :cond_2
@@ -320,7 +281,6 @@
 
     goto :goto_2
 
-    .line 1237
     :cond_3
     iget-object v2, p0, Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton;->mArchivedBackground:Landroid/graphics/drawable/Drawable;
 
@@ -335,7 +295,6 @@
     .locals 1
 
     .prologue
-    .line 1304
     const/4 v0, 0x0
 
     return v0
@@ -345,7 +304,6 @@
     .locals 1
 
     .prologue
-    .line 1299
     const/4 v0, 0x0
 
     return v0
@@ -356,10 +314,8 @@
     .param p1, "newConfig"    # Landroid/content/res/Configuration;
 
     .prologue
-    .line 1244
     invoke-super {p0, p1}, Landroid/widget/TextView;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 1247
     iget-object v1, p0, Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton;->this$0:Landroid/widget/ActionMenuPresenter;
 
     # getter for: Landroid/widget/ActionMenuPresenter;->mIsThemeDeviceDefaultFamily:Z
@@ -379,12 +335,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 1248
     iget v1, p1, Landroid/content/res/Configuration;->fontScale:F
 
     iput v1, p0, Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton;->mCurrentFontScale:F
 
-    .line 1250
     iget v1, p0, Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton;->mCurrentFontScale:F
 
     iget v2, p0, Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton;->mMaxFontScale:F
@@ -393,12 +347,10 @@
 
     if-lez v1, :cond_0
 
-    .line 1251
     iget v1, p0, Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton;->mMaxFontScale:F
 
     iput v1, p0, Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton;->mCurrentFontScale:F
 
-    .line 1253
     :cond_0
     const/4 v1, 0x1
 
@@ -410,7 +362,6 @@
 
     invoke-virtual {p0, v1, v2}, Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton;->setTextSize(IF)V
 
-    .line 1258
     :cond_1
     invoke-virtual {p0}, Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton;->getContext()Landroid/content/Context;
 
@@ -428,7 +379,6 @@
 
     move-result-object v0
 
-    .line 1260
     .local v0, "a":Landroid/content/res/TypedArray;
     const/16 v1, 0x25
 
@@ -440,10 +390,8 @@
 
     invoke-virtual {p0, v1}, Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton;->setMinimumHeight(I)V
 
-    .line 1261
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 1263
     iget-object v1, p0, Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -458,10 +406,8 @@
 
     invoke-virtual {p0, v1}, Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1266
     invoke-direct {p0}, Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton;->changeButtonBackground()V
 
-    .line 1268
     return-void
 .end method
 
@@ -470,20 +416,16 @@
     .param p1, "info"    # Landroid/view/accessibility/AccessibilityNodeInfo;
 
     .prologue
-    .line 1309
     invoke-super {p0, p1}, Landroid/widget/TextView;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
-    .line 1310
     const-string v0, "android.widget.Button"
 
     invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setClassName(Ljava/lang/CharSequence;)V
 
-    .line 1311
     const/4 v0, 0x1
 
     invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setCanOpenPopup(Z)V
 
-    .line 1312
     return-void
 .end method
 
@@ -493,13 +435,10 @@
     .param p2, "heightMeasureSpec"    # I
 
     .prologue
-    .line 1272
     invoke-super {p0, p1, p2}, Landroid/widget/TextView;->onMeasure(II)V
 
-    .line 1274
     invoke-direct {p0}, Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton;->changeButtonBackground()V
 
-    .line 1276
     return-void
 .end method
 
@@ -509,24 +448,20 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 1280
     invoke-super {p0}, Landroid/widget/TextView;->performClick()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1294
     :goto_0
     return v4
 
-    .line 1284
     :cond_0
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton;->playSoundEffect(I)V
 
-    .line 1285
     iget-object v0, p0, Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton;->this$0:Landroid/widget/ActionMenuPresenter;
 
     # getter for: Landroid/widget/ActionMenuPresenter;->mIsThemeDeviceDefaultFamily:Z
@@ -536,7 +471,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 1286
     iget-object v0, p0, Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton;->this$0:Landroid/widget/ActionMenuPresenter;
 
     # getter for: Landroid/widget/ActionMenuPresenter;->mHandler:Landroid/os/Handler;
@@ -554,7 +488,6 @@
 
     goto :goto_0
 
-    .line 1292
     :cond_1
     iget-object v0, p0, Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton;->this$0:Landroid/widget/ActionMenuPresenter;
 

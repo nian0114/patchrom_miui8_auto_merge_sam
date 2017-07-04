@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 600
     iput-object p1, p0, Landroid/graphics/BitmapFactory$2;->val$valueEntryName:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "filename"    # Ljava/lang/String;
 
     .prologue
-    .line 603
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

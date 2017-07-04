@@ -38,7 +38,6 @@
     .locals 0
 
     .prologue
-    .line 23717
     iput-object p1, p0, Landroid/view/View$MatchLabelForPredicate;->this$0:Landroid/view/View;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,7 +51,6 @@
     .param p2, "x1"    # Landroid/view/View$1;
 
     .prologue
-    .line 23717
     invoke-direct {p0, p1}, Landroid/view/View$MatchLabelForPredicate;-><init>(Landroid/view/View;)V
 
     return-void
@@ -64,7 +62,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 23717
     iput p1, p0, Landroid/view/View$MatchLabelForPredicate;->mLabeledId:I
 
     return p1
@@ -77,7 +74,6 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 23722
     # getter for: Landroid/view/View;->mLabelForId:I
     invoke-static {p1}, Landroid/view/View;->access$3200(Landroid/view/View;)I
 
@@ -103,7 +99,6 @@
     .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
-    .line 23717
     check-cast p1, Landroid/view/View;
 
     .end local p1    # "x0":Ljava/lang/Object;

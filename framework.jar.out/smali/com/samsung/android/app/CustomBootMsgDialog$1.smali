@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 42
     iput-object p1, p0, Lcom/samsung/android/app/CustomBootMsgDialog$1;->this$0:Lcom/samsung/android/app/CustomBootMsgDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +43,6 @@
 
     const/4 v8, 0x0
 
-    .line 45
     iget-object v6, p0, Lcom/samsung/android/app/CustomBootMsgDialog$1;->this$0:Lcom/samsung/android/app/CustomBootMsgDialog;
 
     # getter for: Lcom/samsung/android/app/CustomBootMsgDialog;->mBigGear:Landroid/view/View;
@@ -63,18 +61,15 @@
 
     if-nez v6, :cond_1
 
-    .line 68
     :cond_0
     :goto_0
     return-void
 
-    .line 47
     :cond_1
     invoke-static {}, Landroid/view/animation/AnimationUtils;->currentAnimationTimeMillis()J
 
     move-result-wide v2
 
-    .line 48
     .local v2, "currentTime":J
     iget-object v6, p0, Lcom/samsung/android/app/CustomBootMsgDialog$1;->this$0:Lcom/samsung/android/app/CustomBootMsgDialog;
 
@@ -85,19 +80,16 @@
 
     sub-long v4, v2, v6
 
-    .line 50
     .local v4, "timeGap":J
     iget-object v6, p0, Lcom/samsung/android/app/CustomBootMsgDialog$1;->this$0:Lcom/samsung/android/app/CustomBootMsgDialog;
 
     # setter for: Lcom/samsung/android/app/CustomBootMsgDialog;->mPreviousTime:J
     invoke-static {v6, v2, v3}, Lcom/samsung/android/app/CustomBootMsgDialog;->access$202(Lcom/samsung/android/app/CustomBootMsgDialog;J)J
 
-    .line 52
     cmp-long v6, v4, v2
 
     if-eqz v6, :cond_2
 
-    .line 53
     iget-object v6, p0, Lcom/samsung/android/app/CustomBootMsgDialog$1;->this$0:Lcom/samsung/android/app/CustomBootMsgDialog;
 
     # getter for: Lcom/samsung/android/app/CustomBootMsgDialog;->mBigGear:Landroid/view/View;
@@ -109,7 +101,6 @@
 
     move-result v0
 
-    .line 54
     .local v0, "bigGearRotation":F
     iget-object v6, p0, Lcom/samsung/android/app/CustomBootMsgDialog$1;->this$0:Lcom/samsung/android/app/CustomBootMsgDialog;
 
@@ -122,7 +113,6 @@
 
     move-result v1
 
-    .line 56
     .local v1, "smallGearRotation":F
     const/high16 v6, 0x44610000    # 900.0f
 
@@ -130,7 +120,6 @@
 
     if-ltz v6, :cond_3
 
-    .line 57
     iget-object v6, p0, Lcom/samsung/android/app/CustomBootMsgDialog$1;->this$0:Lcom/samsung/android/app/CustomBootMsgDialog;
 
     # getter for: Lcom/samsung/android/app/CustomBootMsgDialog;->mBigGear:Landroid/view/View;
@@ -140,7 +129,6 @@
 
     invoke-virtual {v6, v8}, Landroid/view/View;->setRotation(F)V
 
-    .line 58
     iget-object v6, p0, Lcom/samsung/android/app/CustomBootMsgDialog$1;->this$0:Lcom/samsung/android/app/CustomBootMsgDialog;
 
     # getter for: Lcom/samsung/android/app/CustomBootMsgDialog;->mSmallGear:Landroid/view/View;
@@ -150,7 +138,6 @@
 
     invoke-virtual {v6, v8}, Landroid/view/View;->setRotation(F)V
 
-    .line 65
     .end local v0    # "bigGearRotation":F
     .end local v1    # "smallGearRotation":F
     :cond_2
@@ -164,7 +151,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 66
     iget-object v6, p0, Lcom/samsung/android/app/CustomBootMsgDialog$1;->this$0:Lcom/samsung/android/app/CustomBootMsgDialog;
 
     # getter for: Lcom/samsung/android/app/CustomBootMsgDialog;->mBigGear:Landroid/view/View;
@@ -176,7 +162,6 @@
 
     goto :goto_0
 
-    .line 60
     .restart local v0    # "bigGearRotation":F
     .restart local v1    # "smallGearRotation":F
     :cond_3
@@ -199,7 +184,6 @@
 
     invoke-virtual {v6, v7}, Landroid/view/View;->setRotation(F)V
 
-    .line 61
     iget-object v6, p0, Lcom/samsung/android/app/CustomBootMsgDialog$1;->this$0:Lcom/samsung/android/app/CustomBootMsgDialog;
 
     # getter for: Lcom/samsung/android/app/CustomBootMsgDialog;->mSmallGear:Landroid/view/View;

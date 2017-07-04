@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 327
     iput-object p1, p0, Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem$1;->this$1:Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 3
 
     .prologue
-    .line 330
     iget-object v0, p0, Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem$1;->this$1:Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;
 
     # invokes: Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;->saveInfoFile()Z
@@ -50,7 +48,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 331
     iget-object v0, p0, Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem$1;->this$1:Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;
 
     # getter for: Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;->fileHelper:Landroid/sec/clipboard/util/FileHelper;
@@ -100,19 +97,16 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 332
     iget-object v0, p0, Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem$1;->this$1:Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;
 
     invoke-virtual {v0}, Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;->gc()V
 
-    .line 334
     :cond_0
     iget-object v0, p0, Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem$1;->this$1:Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;
 
     # invokes: Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;->saveTempInfoFile()Z
     invoke-static {v0}, Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;->access$400(Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;)Z
 
-    .line 335
     iget-object v0, p0, Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem$1;->this$1:Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;
 
     iget-object v0, v0, Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;->this$0:Landroid/sec/clipboard/data/file/FileManager;
@@ -120,7 +114,6 @@
     # invokes: Landroid/sec/clipboard/data/file/FileManager;->updateCategory()V
     invoke-static {v0}, Landroid/sec/clipboard/data/file/FileManager;->access$500(Landroid/sec/clipboard/data/file/FileManager;)V
 
-    .line 337
     :cond_1
     return-void
 .end method

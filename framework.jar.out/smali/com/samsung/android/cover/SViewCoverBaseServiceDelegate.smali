@@ -59,46 +59,38 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 58
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     new-instance v0, Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate$SViewCoverBaseState;
 
     invoke-direct {v0}, Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate$SViewCoverBaseState;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;->mSViewCoverBaseState:Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate$SViewCoverBaseState;
 
-    .line 49
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;->mIsBound:Z
 
-    .line 52
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;->mPendingCommand:Ljava/util/ArrayList;
 
-    .line 64
     new-instance v0, Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate$1;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate$1;-><init>(Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;)V
 
     iput-object v0, p0, Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;->mSViewCoverConnection:Landroid/content/ServiceConnection;
 
-    .line 59
     iput-object p1, p0, Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;->mContext:Landroid/content/Context;
 
-    .line 60
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;->mSViewCoverIntent:Landroid/content/Intent;
 
-    .line 61
     iget-object v0, p0, Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;->mSViewCoverIntent:Landroid/content/Intent;
 
     const-string v1, "com.android.systemui"
@@ -107,7 +99,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 62
     return-void
 .end method
 
@@ -116,7 +107,6 @@
     .param p0, "x0"    # Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;
 
     .prologue
-    .line 36
     iget-object v0, p0, Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;->mSViewCoverBaseState:Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate$SViewCoverBaseState;
 
     return-object v0
@@ -127,7 +117,6 @@
     .param p0, "x0"    # Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;
 
     .prologue
-    .line 36
     iget-object v0, p0, Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;->mPendingCommand:Ljava/util/ArrayList;
 
     return-object v0
@@ -139,23 +128,19 @@
     .locals 2
 
     .prologue
-    .line 159
     const/4 v0, 0x0
 
-    .line 160
     .local v0, "value":Z
     iget-object v1, p0, Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;->mSViewCoverBaseService:Lcom/samsung/android/cover/SViewCoverBaseServiceWrapper;
 
     if-eqz v1, :cond_0
 
-    .line 161
     iget-object v1, p0, Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;->mSViewCoverBaseService:Lcom/samsung/android/cover/SViewCoverBaseServiceWrapper;
 
     invoke-virtual {v1}, Lcom/samsung/android/cover/SViewCoverBaseServiceWrapper;->isCoverViewShowing()Z
 
     move-result v0
 
-    .line 163
     :cond_0
     return v0
 .end method
@@ -166,12 +151,10 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 94
     iget-boolean v0, p0, Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;->mIsBound:Z
 
     if-nez v0, :cond_1
 
-    .line 95
     iget-object v0, p0, Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;->mSViewCoverIntent:Landroid/content/Intent;
@@ -186,27 +169,22 @@
 
     if-nez v0, :cond_0
 
-    .line 97
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;->mIsBound:Z
 
-    .line 99
     const-string v0, "SViewCoverBaseServiceDelegate"
 
     const-string v1, "*** SViewCoverBase : can\'t bind to com.android.systemui.cover.SViewCoverService"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 112
     :goto_0
     return-void
 
-    .line 102
     :cond_0
     iput-boolean v4, p0, Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;->mIsBound:Z
 
-    .line 104
     const-string v0, "SViewCoverBaseServiceDelegate"
 
     const-string v1, "*** SViewCoverBase : started"
@@ -215,7 +193,6 @@
 
     goto :goto_0
 
-    .line 109
     :cond_1
     const-string v0, "SViewCoverBaseServiceDelegate"
 
@@ -231,23 +208,19 @@
     .param p1, "covered"    # Z
 
     .prologue
-    .line 167
     const/4 v0, 0x0
 
-    .line 168
     .local v0, "result":I
     iget-object v1, p0, Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;->mSViewCoverBaseService:Lcom/samsung/android/cover/SViewCoverBaseServiceWrapper;
 
     if-eqz v1, :cond_0
 
-    .line 169
     iget-object v1, p0, Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;->mSViewCoverBaseService:Lcom/samsung/android/cover/SViewCoverBaseServiceWrapper;
 
     invoke-virtual {v1, p1}, Lcom/samsung/android/cover/SViewCoverBaseServiceWrapper;->onCoverAppCovered(Z)I
 
     move-result v0
 
-    .line 171
     :cond_0
     return v0
 .end method
@@ -256,17 +229,14 @@
     .locals 1
 
     .prologue
-    .line 144
     iget-object v0, p0, Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;->mSViewCoverBaseService:Lcom/samsung/android/cover/SViewCoverBaseServiceWrapper;
 
     if-eqz v0, :cond_0
 
-    .line 145
     iget-object v0, p0, Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;->mSViewCoverBaseService:Lcom/samsung/android/cover/SViewCoverBaseServiceWrapper;
 
     invoke-virtual {v0}, Lcom/samsung/android/cover/SViewCoverBaseServiceWrapper;->onSViewCoverHide()V
 
-    .line 147
     :cond_0
     return-void
 .end method
@@ -275,17 +245,14 @@
     .locals 1
 
     .prologue
-    .line 138
     iget-object v0, p0, Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;->mSViewCoverBaseService:Lcom/samsung/android/cover/SViewCoverBaseServiceWrapper;
 
     if-eqz v0, :cond_0
 
-    .line 139
     iget-object v0, p0, Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;->mSViewCoverBaseService:Lcom/samsung/android/cover/SViewCoverBaseServiceWrapper;
 
     invoke-virtual {v0}, Lcom/samsung/android/cover/SViewCoverBaseServiceWrapper;->onSViewCoverShow()V
 
-    .line 141
     :cond_0
     return-void
 .end method
@@ -294,21 +261,17 @@
     .locals 2
 
     .prologue
-    .line 130
     iget-object v0, p0, Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;->mSViewCoverBaseService:Lcom/samsung/android/cover/SViewCoverBaseServiceWrapper;
 
     if-eqz v0, :cond_0
 
-    .line 131
     iget-object v0, p0, Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;->mSViewCoverBaseService:Lcom/samsung/android/cover/SViewCoverBaseServiceWrapper;
 
     invoke-virtual {v0}, Lcom/samsung/android/cover/SViewCoverBaseServiceWrapper;->onSystemReady()V
 
-    .line 135
     :goto_0
     return-void
 
-    .line 133
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;->mSViewCoverBaseState:Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate$SViewCoverBaseState;
 
@@ -323,40 +286,33 @@
     .locals 2
 
     .prologue
-    .line 115
     iget-boolean v0, p0, Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;->mIsBound:Z
 
     if-eqz v0, :cond_0
 
-    .line 116
     iget-object v0, p0, Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;->mSViewCoverConnection:Landroid/content/ServiceConnection;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
-    .line 117
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;->mSViewCoverBaseService:Lcom/samsung/android/cover/SViewCoverBaseServiceWrapper;
 
-    .line 118
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;->mIsBound:Z
 
-    .line 120
     const-string v0, "SViewCoverBaseServiceDelegate"
 
     const-string v1, "*** SViewCoverBase : unbind"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 127
     :goto_0
     return-void
 
-    .line 124
     :cond_0
     const-string v0, "SViewCoverBaseServiceDelegate"
 
@@ -372,28 +328,23 @@
     .param p1, "state"    # Lcom/samsung/android/cover/CoverState;
 
     .prologue
-    .line 150
     iget-object v1, p0, Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;->mSViewCoverBaseService:Lcom/samsung/android/cover/SViewCoverBaseServiceWrapper;
 
     if-eqz v1, :cond_1
 
-    .line 151
     iget-object v1, p0, Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;->mSViewCoverBaseService:Lcom/samsung/android/cover/SViewCoverBaseServiceWrapper;
 
     invoke-virtual {v1, p1}, Lcom/samsung/android/cover/SViewCoverBaseServiceWrapper;->updateCoverState(Lcom/samsung/android/cover/CoverState;)V
 
-    .line 156
     :cond_0
     :goto_0
     return-void
 
-    .line 152
     :cond_1
     iget-boolean v1, p0, Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;->mIsBound:Z
 
     if-eqz v1, :cond_0
 
-    .line 153
     new-instance v0, Landroid/util/Pair;
 
     const/4 v1, 0x1
@@ -404,7 +355,6 @@
 
     invoke-direct {v0, v1, p1}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 154
     .local v0, "command":Landroid/util/Pair;, "Landroid/util/Pair<Ljava/lang/Integer;Ljava/lang/Object;>;"
     iget-object v1, p0, Lcom/samsung/android/cover/SViewCoverBaseServiceDelegate;->mPendingCommand:Ljava/util/ArrayList;
 

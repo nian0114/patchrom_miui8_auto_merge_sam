@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 80
     iput-object p1, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProvider$1;->this$0:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProvider;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,13 +40,11 @@
     .param p1, "event"    # Lcom/samsung/android/sensorhub/SensorHubEvent;
 
     .prologue
-    .line 84
     monitor-enter p0
 
     :try_start_0
     const-string v0, "AP_NONE"
 
-    .line 85
     .local v0, "apStatus":Ljava/lang/String;
     iget-object v2, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProvider$1;->this$0:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProvider;
 
@@ -60,24 +57,21 @@
 
     if-ne v2, v3, :cond_2
 
-    .line 86
     const-string v0, "AP_SLEEP"
 
-    .line 87
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/CaTimeManager;->getInstance()Lcom/samsung/android/contextaware/utilbundle/CaTimeManager;
 
     move-result-object v2
 
     invoke-virtual {v2}, Lcom/samsung/android/contextaware/utilbundle/CaTimeManager;->sendCurTimeToSensorHub()V
 
-    .line 92
     :cond_0
     :goto_0
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "onGetSensorHubData Event [event buffer len :"
+    const-string v3, "onGetSensorHubData Event [event buffer len :"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -109,7 +103,6 @@
 
     invoke-static {v2}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->debug(Ljava/lang/String;)V
 
-    .line 95
     iget-object v2, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProvider$1;->this$0:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProvider;
 
     # getter for: Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProvider;->mLibParser:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/TypeParser;
@@ -119,7 +112,6 @@
 
     if-nez v2, :cond_3
 
-    .line 96
     sget-object v2, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_LIBRARY_PARSER_NULL_EXEPTION:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     invoke-virtual {v2}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->getMessage()Ljava/lang/String;
@@ -130,14 +122,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 117
     :cond_1
     :goto_1
     monitor-exit p0
 
     return-void
 
-    .line 88
     :cond_2
     :try_start_1
     iget-object v2, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProvider$1;->this$0:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProvider;
@@ -151,12 +141,10 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 89
     const-string v0, "AP_WAKEUP"
 
     goto :goto_0
 
-    .line 101
     :cond_3
     iget-object v2, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProvider$1;->this$0:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProvider;
 
@@ -171,7 +159,6 @@
 
     if-nez v2, :cond_4
 
-    .line 102
     sget-object v2, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_EMPTY_PARSER_MAP:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     invoke-virtual {v2}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->getMessage()Ljava/lang/String;
@@ -184,7 +171,6 @@
 
     goto :goto_1
 
-    .line 84
     .end local v0    # "apStatus":Ljava/lang/String;
     :catchall_0
     move-exception v2
@@ -193,7 +179,6 @@
 
     throw v2
 
-    .line 107
     .restart local v0    # "apStatus":Ljava/lang/String;
     :cond_4
     :try_start_2
@@ -201,7 +186,6 @@
 
     if-gtz v2, :cond_5
 
-    .line 108
     sget-object v2, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_GET_SENSOR_HUB_EVENT:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     invoke-virtual {v2}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->getMessage()Ljava/lang/String;
@@ -212,7 +196,6 @@
 
     goto :goto_1
 
-    .line 113
     :cond_5
     iget-object v2, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProvider$1;->this$0:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProvider;
 
@@ -223,7 +206,6 @@
 
     move-result v1
 
-    .line 114
     .local v1, "result":I
     sget-object v2, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->SUCCESS:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
@@ -233,7 +215,6 @@
 
     if-eq v1, v2, :cond_1
 
-    .line 115
     invoke-static {v1}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->getMessage(I)Ljava/lang/String;
 
     move-result-object v2

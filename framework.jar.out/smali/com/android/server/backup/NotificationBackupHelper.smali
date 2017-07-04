@@ -18,7 +18,6 @@
     .locals 2
 
     .prologue
-    .line 29
     const-string v0, "NotifBackupHelper"
 
     const/4 v1, 0x3
@@ -39,18 +38,16 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 38
     new-array v0, v3, [Ljava/lang/String;
 
     const/4 v1, 0x0
 
-    const-string/jumbo v2, "notifications"
+    const-string v2, "notifications"
 
     aput-object v2, v0, v1
 
     invoke-direct {p0, v3, v0}, Landroid/app/backup/BlobBackupHelper;-><init>(I[Ljava/lang/String;)V
 
-    .line 40
     return-void
 .end method
 
@@ -62,12 +59,10 @@
     .param p2, "payload"    # [B
 
     .prologue
-    .line 61
     sget-boolean v2, Lcom/android/server/backup/NotificationBackupHelper;->DEBUG:Z
 
     if-eqz v2, :cond_0
 
-    .line 62
     const-string v2, "NotifBackupHelper"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -90,9 +85,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 65
     :cond_0
-    const-string/jumbo v2, "notifications"
+    const-string v2, "notifications"
 
     invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -100,9 +94,8 @@
 
     if-eqz v2, :cond_1
 
-    .line 67
     :try_start_0
-    const-string/jumbo v2, "notification"
+    const-string v2, "notification"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -112,7 +105,6 @@
 
     move-result-object v1
 
-    .line 69
     .local v1, "nm":Landroid/app/INotificationManager;
     const/4 v2, 0x0
 
@@ -120,17 +112,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 74
     .end local v1    # "nm":Landroid/app/INotificationManager;
     :cond_1
     :goto_0
     return-void
 
-    .line 70
     :catch_0
     move-exception v0
 
-    .line 71
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "NotifBackupHelper"
 
@@ -146,12 +135,10 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 44
     const/4 v1, 0x0
 
-    .line 45
     .local v1, "newPayload":[B
-    const-string/jumbo v3, "notifications"
+    const-string v3, "notifications"
 
     invoke-virtual {v3, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -159,9 +146,8 @@
 
     if-eqz v3, :cond_0
 
-    .line 47
     :try_start_0
-    const-string/jumbo v3, "notification"
+    const-string v3, "notification"
 
     invoke-static {v3}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -171,7 +157,6 @@
 
     move-result-object v2
 
-    .line 49
     .local v2, "nm":Landroid/app/INotificationManager;
     const/4 v3, 0x0
 
@@ -181,17 +166,14 @@
 
     move-result-object v1
 
-    .line 56
     .end local v2    # "nm":Landroid/app/INotificationManager;
     :cond_0
     :goto_0
     return-object v1
 
-    .line 50
     :catch_0
     move-exception v0
 
-    .line 52
     .local v0, "e":Ljava/lang/Exception;
     const-string v3, "NotifBackupHelper"
 
@@ -199,7 +181,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 53
     const/4 v1, 0x0
 
     goto :goto_0

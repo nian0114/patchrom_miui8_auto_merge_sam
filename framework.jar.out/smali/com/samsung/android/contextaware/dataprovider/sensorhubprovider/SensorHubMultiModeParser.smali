@@ -29,10 +29,8 @@
     .locals 1
 
     .prologue
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
@@ -46,42 +44,35 @@
     .locals 2
 
     .prologue
-    .line 42
     sget-object v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubMultiModeParser;->instance:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubMultiModeParser;
 
     if-nez v0, :cond_1
 
-    .line 43
     const-class v1, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubMultiModeParser;
 
     monitor-enter v1
 
-    .line 44
     :try_start_0
     sget-object v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubMultiModeParser;->instance:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubMultiModeParser;
 
     if-nez v0, :cond_0
 
-    .line 45
     new-instance v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubMultiModeParser;
 
     invoke-direct {v0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubMultiModeParser;-><init>()V
 
     sput-object v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubMultiModeParser;->instance:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubMultiModeParser;
 
-    .line 47
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 49
     :cond_1
     sget-object v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubMultiModeParser;->instance:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubMultiModeParser;
 
     return-object v0
 
-    .line 47
     :catchall_0
     move-exception v0
 
@@ -100,7 +91,6 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 90
     iget-object v0, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubMultiModeParser;->mParserMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     if-eqz v0, :cond_0
@@ -135,7 +125,6 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 102
     iget-object v0, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubMultiModeParser;->mParserMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     if-eqz v0, :cond_0
@@ -148,11 +137,9 @@
 
     if-nez v0, :cond_1
 
-    .line 103
     :cond_0
     const/4 v0, 0x0
 
-    .line 105
     :goto_0
     return-object v0
 
@@ -173,7 +160,6 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 117
     invoke-static {}, Lcom/samsung/android/contextaware/MultiModeContextList$MultiModeContextType;->values()[Lcom/samsung/android/contextaware/MultiModeContextList$MultiModeContextType;
 
     move-result-object v0
@@ -190,30 +176,25 @@
 
     aget-object v1, v0, v2
 
-    .line 118
     .local v1, "i":Lcom/samsung/android/contextaware/MultiModeContextList$MultiModeContextType;
     invoke-virtual {v1}, Lcom/samsung/android/contextaware/MultiModeContextList$MultiModeContextType;->getParserHandler()Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubParser;
 
     move-result-object v4
 
-    .line 119
     .local v4, "parser":Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubParser;
     if-eqz v4, :cond_0
 
-    .line 120
     invoke-virtual {v1}, Lcom/samsung/android/contextaware/MultiModeContextList$MultiModeContextType;->getCode()Ljava/lang/String;
 
     move-result-object v5
 
     invoke-virtual {p0, v5, v4}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubMultiModeParser;->registerParser(Ljava/lang/String;Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubParser;)V
 
-    .line 117
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 123
     .end local v1    # "i":Lcom/samsung/android/contextaware/MultiModeContextList$MultiModeContextType;
     .end local v4    # "parser":Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubParser;
     :cond_1
@@ -226,7 +207,6 @@
     .param p2, "parser"    # Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubParser;
 
     .prologue
-    .line 62
     iget-object v0, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubMultiModeParser;->mParserMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     if-eqz v0, :cond_0
@@ -239,12 +219,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 67
     :cond_0
     :goto_0
     return-void
 
-    .line 66
     :cond_1
     iget-object v0, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubMultiModeParser;->mParserMap:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -257,16 +235,13 @@
     .locals 1
 
     .prologue
-    .line 133
     iget-object v0, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubMultiModeParser;->mParserMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     if-nez v0, :cond_0
 
-    .line 137
     :goto_0
     return-void
 
-    .line 136
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubMultiModeParser;->mParserMap:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -280,7 +255,6 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 76
     iget-object v0, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubMultiModeParser;->mParserMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     if-eqz v0, :cond_0
@@ -293,12 +267,10 @@
 
     if-nez v0, :cond_1
 
-    .line 80
     :cond_0
     :goto_0
     return-void
 
-    .line 79
     :cond_1
     iget-object v0, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubMultiModeParser;->mParserMap:Ljava/util/concurrent/ConcurrentHashMap;
 

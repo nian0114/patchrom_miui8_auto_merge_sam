@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 348
     iput-object p1, p0, Lcom/android/server/SecExternalDisplayOrientation$3;->this$0:Lcom/android/server/SecExternalDisplayOrientation;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -39,19 +38,17 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 351
     sget-boolean v0, Lcom/android/server/SecExternalDisplayOrientation;->bIsLogEnabled:Z
 
     if-eqz v0, :cond_0
 
-    .line 352
     const-string v0, "SecExternalDisplayOrientation_Java"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "mSidesyncContentObserver onChange + selfChange="
+    const-string v2, "mSidesyncContentObserver onChange + selfChange="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -67,13 +64,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 353
     :cond_0
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayOrientation$3;->this$0:Lcom/android/server/SecExternalDisplayOrientation;
 
     # invokes: Lcom/android/server/SecExternalDisplayOrientation;->handleBlankDispDuringSidesync()V
     invoke-static {v0}, Lcom/android/server/SecExternalDisplayOrientation;->access$300(Lcom/android/server/SecExternalDisplayOrientation;)V
 
-    .line 354
     return-void
 .end method

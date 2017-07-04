@@ -70,8 +70,7 @@
     .locals 2
 
     .prologue
-    .line 40
-    const-string/jumbo v0, "ro.product_ship"
+    const-string v0, "ro.product_ship"
 
     const-string v1, "false"
 
@@ -85,8 +84,7 @@
 
     sput-boolean v0, Lcom/android/internal/telephony/TelephonyFeatures;->SHIP_BUILD:Z
 
-    .line 41
-    const-string/jumbo v0, "ro.csc.sales_code"
+    const-string v0, "ro.csc.sales_code"
 
     const-string v1, "NONE"
 
@@ -96,8 +94,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/TelephonyFeatures;->SALES_CODE:Ljava/lang/String;
 
-    .line 42
-    const-string/jumbo v0, "ro.product.model"
+    const-string v0, "ro.product.model"
 
     const-string v1, "Unknown"
 
@@ -107,8 +104,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/TelephonyFeatures;->mProductModelName:Ljava/lang/String;
 
-    .line 43
-    const-string/jumbo v0, "persist.radio.multisim.config"
+    const-string v0, "persist.radio.multisim.config"
 
     const-string v1, ""
 
@@ -118,7 +114,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/TelephonyFeatures;->mMultiSimConfig:Ljava/lang/String;
 
-    .line 49
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v0
@@ -131,12 +126,10 @@
 
     sput-object v0, Lcom/android/internal/telephony/TelephonyFeatures;->mConfigNetworkTypeCapability:Ljava/lang/String;
 
-    .line 50
     const-string v0, "EUR"
 
     sput-object v0, Lcom/android/internal/telephony/TelephonyFeatures;->mUsedNetworkType:Ljava/lang/String;
 
-    .line 51
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v0
@@ -149,8 +142,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/TelephonyFeatures;->mConfigVolteRedialPolicy:Ljava/lang/String;
 
-    .line 52
-    const-string/jumbo v0, "persist.radio.enable.stubDebug"
+    const-string v0, "persist.radio.enable.stubDebug"
 
     const/4 v1, 0x0
 
@@ -167,7 +159,6 @@
     .locals 0
 
     .prologue
-    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -182,7 +173,6 @@
 
     const/4 v2, 0x0
 
-    .line 377
     const-string v4, "CHM"
 
     invoke-static {}, Lcom/android/internal/telephony/TelephonyFeatures;->getMainOperatorName()Ljava/lang/String;
@@ -220,7 +210,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 379
     const-string v4, "gsm.sim.operator.numeric"
 
     const-string v5, ""
@@ -229,7 +218,6 @@
 
     move-result-object v1
 
-    .line 381
     .local v1, "simNumeric":Ljava/lang/String;
     const-string v4, "46000"
 
@@ -255,16 +243,14 @@
 
     if-nez v4, :cond_2
 
-    .line 390
     .end local v1    # "simNumeric":Ljava/lang/String;
     :cond_1
     :goto_0
     return v2
 
-    .line 384
     .restart local v1    # "simNumeric":Ljava/lang/String;
     :cond_2
-    const-string/jumbo v4, "ril.ICC_TYPE"
+    const-string v4, "ril.ICC_TYPE"
 
     const-string v5, "0"
 
@@ -276,13 +262,11 @@
 
     move-result v0
 
-    .line 386
     .local v0, "iccType":I
     if-le v0, v3, :cond_1
 
     move v2, v3
 
-    .line 387
     goto :goto_0
 .end method
 
@@ -293,7 +277,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 305
     const-string v3, "gsm.sim.operator.numeric"
 
     const-string v4, ""
@@ -302,7 +285,6 @@
 
     move-result-object v1
 
-    .line 307
     .local v1, "iccOperatorNumeric":Ljava/lang/String;
     const/4 v3, 0x3
 
@@ -310,7 +292,6 @@
 
     move-result-object v0
 
-    .line 309
     .local v0, "countryName":Ljava/lang/String;
     const-string v3, "CHN"
 
@@ -336,12 +317,10 @@
 
     if-eqz v3, :cond_1
 
-    .line 316
     :cond_0
     :goto_0
     return v2
 
-    .line 312
     :cond_1
     const-string v3, "52501"
 
@@ -351,7 +330,6 @@
 
     if-nez v3, :cond_0
 
-    .line 316
     const/4 v2, 0x1
 
     goto :goto_0
@@ -361,7 +339,6 @@
     .locals 2
 
     .prologue
-    .line 334
     invoke-static {}, Lcom/android/internal/telephony/TelephonyFeatures;->isUsaCdmaModel()Z
 
     move-result v0
@@ -378,11 +355,9 @@
 
     if-eqz v0, :cond_1
 
-    .line 335
     :cond_0
     const/4 v0, 0x0
 
-    .line 338
     :goto_0
     return v0
 
@@ -396,7 +371,6 @@
     .locals 1
 
     .prologue
-    .line 158
     const/4 v0, 0x3
 
     invoke-static {v0}, Lcom/android/internal/telephony/TelephonyFeatures;->getNtcValue(I)Ljava/lang/String;
@@ -410,7 +384,6 @@
     .locals 1
 
     .prologue
-    .line 285
     sget-boolean v0, Landroid/os/Build;->IS_DEBUGGABLE:Z
 
     if-eqz v0, :cond_0
@@ -419,10 +392,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 286
     const/4 v0, 0x1
 
-    .line 288
     :goto_0
     return v0
 
@@ -436,7 +407,6 @@
     .locals 1
 
     .prologue
-    .line 150
     const/4 v0, 0x0
 
     invoke-static {v0}, Lcom/android/internal/telephony/TelephonyFeatures;->getNtcValue(I)Ljava/lang/String;
@@ -450,7 +420,6 @@
     .locals 1
 
     .prologue
-    .line 292
     sget-object v0, Lcom/android/internal/telephony/TelephonyFeatures;->mMultiSimConfig:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -459,10 +428,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 293
     const-string v0, ""
 
-    .line 295
     :goto_0
     return-object v0
 
@@ -481,10 +448,8 @@
 
     const/4 v3, 0x0
 
-    .line 164
     packed-switch p0, :pswitch_data_0
 
-    .line 237
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -509,20 +474,17 @@
     :pswitch_0
     move v2, v3
 
-    .line 241
     :cond_1
     :goto_0
     return v2
 
-    .line 166
     :pswitch_1
-    const-string/jumbo v4, "ro.config.combined_signal"
+    const-string v4, "ro.config.combined_signal"
 
     invoke-static {v4, v3}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
 
-    .line 167
     .local v0, "combinedSignal":Z
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
@@ -532,7 +494,6 @@
 
     move-result v1
 
-    .line 169
     .local v1, "isVoiceCapable":Z
     if-nez v0, :cond_1
 
@@ -558,7 +519,6 @@
 
     goto :goto_0
 
-    .line 174
     .end local v0    # "combinedSignal":Z
     .end local v1    # "isVoiceCapable":Z
     :pswitch_2
@@ -576,7 +536,6 @@
 
     goto :goto_0
 
-    .line 179
     :pswitch_3
     const-string v4, "VZW"
 
@@ -592,7 +551,6 @@
 
     goto :goto_0
 
-    .line 184
     :pswitch_4
     const-string v4, "USC"
 
@@ -608,7 +566,6 @@
 
     goto :goto_0
 
-    .line 189
     :pswitch_5
     const-string v4, "SPR"
 
@@ -624,7 +581,6 @@
 
     goto :goto_0
 
-    .line 196
     :pswitch_6
     const-string v4, "SPR"
 
@@ -640,7 +596,6 @@
 
     goto :goto_0
 
-    .line 201
     :pswitch_7
     const-string v4, "SPR"
 
@@ -656,7 +611,6 @@
 
     goto :goto_0
 
-    .line 206
     :pswitch_8
     invoke-static {}, Lcom/android/internal/telephony/TelephonyFeatures;->isUsaCdmaModel()Z
 
@@ -666,7 +620,6 @@
 
     goto :goto_0
 
-    .line 211
     :pswitch_9
     invoke-static {}, Lcom/android/internal/telephony/TelephonyFeatures;->isUsaCdmaModel()Z
 
@@ -676,7 +629,6 @@
 
     goto/16 :goto_0
 
-    .line 216
     :pswitch_a
     const-string v4, "VZW"
 
@@ -692,7 +644,6 @@
 
     goto/16 :goto_0
 
-    .line 221
     :pswitch_b
     const-string v4, "SPR"
 
@@ -720,7 +671,6 @@
 
     goto/16 :goto_0
 
-    .line 228
     :pswitch_c
     invoke-static {}, Lcom/android/internal/telephony/TelephonyFeatures;->isUsaCdmaModel()Z
 
@@ -730,7 +680,6 @@
 
     goto/16 :goto_0
 
-    .line 164
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1
@@ -757,7 +706,6 @@
     .param p0, "ntcType"    # I
 
     .prologue
-    .line 137
     sget-object v1, Lcom/android/internal/telephony/TelephonyFeatures;->mConfigNetworkTypeCapability:Ljava/lang/String;
 
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -766,14 +714,11 @@
 
     if-eqz v1, :cond_0
 
-    .line 138
     const-string v1, "UNKNOWN"
 
-    .line 146
     :goto_0
     return-object v1
 
-    .line 141
     :cond_0
     sget-object v1, Lcom/android/internal/telephony/TelephonyFeatures;->mConfigNetworkTypeCapability:Ljava/lang/String;
 
@@ -783,7 +728,6 @@
 
     move-result-object v0
 
-    .line 142
     .local v0, "ntcValue":[Ljava/lang/String;
     array-length v1, v0
 
@@ -791,12 +735,10 @@
 
     if-eq v1, v2, :cond_1
 
-    .line 143
     const-string v1, "UNKNOWN"
 
     goto :goto_0
 
-    .line 146
     :cond_1
     aget-object v1, v0, p0
 
@@ -807,7 +749,6 @@
     .locals 1
 
     .prologue
-    .line 154
     const/4 v0, 0x1
 
     invoke-static {v0}, Lcom/android/internal/telephony/TelephonyFeatures;->getNtcValue(I)Ljava/lang/String;
@@ -821,7 +762,6 @@
     .locals 1
 
     .prologue
-    .line 278
     sget-object v0, Lcom/android/internal/telephony/TelephonyFeatures;->mUsedNetworkType:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -830,10 +770,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 279
     const-string v0, "UNKNOWN"
 
-    .line 281
     :goto_0
     return-object v0
 
@@ -847,7 +785,6 @@
     .locals 1
 
     .prologue
-    .line 270
     sget-object v0, Lcom/android/internal/telephony/TelephonyFeatures;->mConfigVolteRedialPolicy:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -856,10 +793,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 272
     const-string v0, "UNKNOWN"
 
-    .line 274
     :goto_0
     return-object v0
 
@@ -874,7 +809,6 @@
     .param p0, "Operator"    # [Ljava/lang/String;
 
     .prologue
-    .line 260
     move-object v0, p0
 
     .local v0, "arr$":[Ljava/lang/String;
@@ -889,7 +823,6 @@
 
     aget-object v3, v0, v1
 
-    .line 262
     .local v3, "x":Ljava/lang/String;
     invoke-static {}, Lcom/android/internal/telephony/TelephonyFeatures;->getMainOperatorName()Ljava/lang/String;
 
@@ -901,22 +834,18 @@
 
     if-eqz v4, :cond_0
 
-    .line 263
     const/4 v4, 0x1
 
-    .line 266
     .end local v3    # "x":Ljava/lang/String;
     :goto_1
     return v4
 
-    .line 260
     .restart local v3    # "x":Ljava/lang/String;
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 266
     .end local v3    # "x":Ljava/lang/String;
     :cond_1
     const/4 v4, 0x0
@@ -930,7 +859,6 @@
     .prologue
     const/4 v2, 0x2
 
-    .line 245
     const-string v0, "USA"
 
     const/4 v1, 0x3
@@ -969,11 +897,9 @@
 
     if-eqz v0, :cond_1
 
-    .line 246
     :cond_0
     const/4 v0, 0x1
 
-    .line 248
     :goto_0
     return v0
 
@@ -987,7 +913,6 @@
     .locals 2
 
     .prologue
-    .line 252
     const-string v0, "USA"
 
     const/4 v1, 0x3
@@ -1016,10 +941,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 253
     const/4 v0, 0x1
 
-    .line 255
     :goto_0
     return v0
 
@@ -1034,12 +957,10 @@
     .param p0, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 414
     const-string v0, "TelephonyFeatures"
 
     invoke-static {v0, p0}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 415
     return-void
 .end method
 
@@ -1048,12 +969,10 @@
     .param p0, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 418
     const-string v0, "TelephonyFeatures"
 
     invoke-static {v0, p0}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 419
     return-void
 .end method
 
@@ -1066,7 +985,6 @@
 
     const/4 v1, 0x0
 
-    .line 354
     const/4 v3, 0x4
 
     new-array v3, v3, [Ljava/lang/String;
@@ -1097,14 +1015,12 @@
 
     if-nez v3, :cond_1
 
-    .line 369
     :cond_0
     :goto_0
     return v1
 
-    .line 358
     :cond_1
-    const-string/jumbo v3, "ril.simtype"
+    const-string v3, "ril.simtype"
 
     const-string v4, ""
 
@@ -1112,7 +1028,6 @@
 
     move-result-object v0
 
-    .line 360
     .local v0, "simType":Ljava/lang/String;
     const-string v3, "2"
 
@@ -1179,10 +1094,8 @@
     :cond_4
     move v1, v2
 
-    .line 363
     goto :goto_0
 
-    .line 364
     :cond_5
     const-string v3, "KOO"
 
@@ -1221,7 +1134,6 @@
     :cond_6
     move v1, v2
 
-    .line 366
     goto :goto_0
 .end method
 
@@ -1229,7 +1141,6 @@
     .locals 2
 
     .prologue
-    .line 394
     const-string v0, "SAMSUNG-SM-G891A"
 
     sget-object v1, Lcom/android/internal/telephony/TelephonyFeatures;->mProductModelName:Ljava/lang/String;
@@ -1240,10 +1151,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 395
     const/4 v0, 0x1
 
-    .line 398
     :goto_0
     return v0
 
@@ -1257,18 +1166,14 @@
     .locals 5
 
     .prologue
-    .line 97
     sget-object v0, Lcom/android/internal/telephony/TelephonyFeatures;->mConfigNetworkTypeCapability:Ljava/lang/String;
 
-    .line 98
     .local v0, "oldConfigNetworkTypeCapability":Ljava/lang/String;
     sget-object v2, Lcom/android/internal/telephony/TelephonyFeatures;->mUsedNetworkType:Ljava/lang/String;
 
-    .line 99
     .local v2, "oldUsedNetworkType":Ljava/lang/String;
     sget-object v1, Lcom/android/internal/telephony/TelephonyFeatures;->mConfigVolteRedialPolicy:Ljava/lang/String;
 
-    .line 101
     .local v1, "oldConfigVolteRedialPolicy":Ljava/lang/String;
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
@@ -1282,12 +1187,10 @@
 
     sput-object v3, Lcom/android/internal/telephony/TelephonyFeatures;->mConfigNetworkTypeCapability:Ljava/lang/String;
 
-    .line 102
     const-string v3, "EUR"
 
     sput-object v3, Lcom/android/internal/telephony/TelephonyFeatures;->mUsedNetworkType:Ljava/lang/String;
 
-    .line 103
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v3
@@ -1300,12 +1203,11 @@
 
     sput-object v3, Lcom/android/internal/telephony/TelephonyFeatures;->mConfigVolteRedialPolicy:Ljava/lang/String;
 
-    .line 105
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "reInitialize - ConfigNetworkTypeCapability: "
+    const-string v4, "reInitialize - ConfigNetworkTypeCapability: "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1333,12 +1235,11 @@
 
     invoke-static {v3}, Lcom/android/internal/telephony/TelephonyFeatures;->log(Ljava/lang/String;)V
 
-    .line 106
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "reInitialize - UsedNetworkType: "
+    const-string v4, "reInitialize - UsedNetworkType: "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1366,12 +1267,11 @@
 
     invoke-static {v3}, Lcom/android/internal/telephony/TelephonyFeatures;->log(Ljava/lang/String;)V
 
-    .line 107
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "reInitialize - ConfigVolteRedialPolicy: "
+    const-string v4, "reInitialize - ConfigVolteRedialPolicy: "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1399,7 +1299,6 @@
 
     invoke-static {v3}, Lcom/android/internal/telephony/TelephonyFeatures;->log(Ljava/lang/String;)V
 
-    .line 108
     return-void
 .end method
 
@@ -1408,7 +1307,6 @@
     .param p0, "operator"    # Ljava/lang/String;
 
     .prologue
-    .line 112
     sget-boolean v3, Landroid/os/Build;->IS_DEBUGGABLE:Z
 
     if-eqz v3, :cond_1
@@ -1417,18 +1315,14 @@
 
     if-nez v3, :cond_1
 
-    .line 113
     sget-object v0, Lcom/android/internal/telephony/TelephonyFeatures;->mConfigNetworkTypeCapability:Ljava/lang/String;
 
-    .line 114
     .local v0, "oldConfigNetworkTypeCapability":Ljava/lang/String;
     sget-object v2, Lcom/android/internal/telephony/TelephonyFeatures;->mUsedNetworkType:Ljava/lang/String;
 
-    .line 115
     .local v2, "oldUsedNetworkType":Ljava/lang/String;
     sget-object v1, Lcom/android/internal/telephony/TelephonyFeatures;->mConfigVolteRedialPolicy:Ljava/lang/String;
 
-    .line 116
     .local v1, "oldConfigVolteRedialPolicy":Ljava/lang/String;
     const-string v3, "VZW"
 
@@ -1438,29 +1332,25 @@
 
     if-eqz v3, :cond_2
 
-    .line 117
     const-string v3, "VZW-VZW-GLB-USA"
 
     sput-object v3, Lcom/android/internal/telephony/TelephonyFeatures;->mConfigNetworkTypeCapability:Ljava/lang/String;
 
-    .line 118
     const-string v3, "VZW-CDMA"
 
     sput-object v3, Lcom/android/internal/telephony/TelephonyFeatures;->mUsedNetworkType:Ljava/lang/String;
 
-    .line 119
-    const-string/jumbo v3, "vzwvowifi"
+    const-string v3, "vzwvowifi"
 
     sput-object v3, Lcom/android/internal/telephony/TelephonyFeatures;->mConfigVolteRedialPolicy:Ljava/lang/String;
 
-    .line 125
     :cond_0
     :goto_0
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "reInitilizeForTest - ConfigNetworkTypeCapability: "
+    const-string v4, "reInitilizeForTest - ConfigNetworkTypeCapability: "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1488,12 +1378,11 @@
 
     invoke-static {v3}, Lcom/android/internal/telephony/TelephonyFeatures;->log(Ljava/lang/String;)V
 
-    .line 126
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "reInitilizeForTest - UsedNetworkType: "
+    const-string v4, "reInitilizeForTest - UsedNetworkType: "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1521,12 +1410,11 @@
 
     invoke-static {v3}, Lcom/android/internal/telephony/TelephonyFeatures;->log(Ljava/lang/String;)V
 
-    .line 127
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "reInitilizeForTest - ConfigVolteRedialPolicy: "
+    const-string v4, "reInitilizeForTest - ConfigVolteRedialPolicy: "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1554,14 +1442,12 @@
 
     invoke-static {v3}, Lcom/android/internal/telephony/TelephonyFeatures;->log(Ljava/lang/String;)V
 
-    .line 129
     .end local v0    # "oldConfigNetworkTypeCapability":Ljava/lang/String;
     .end local v1    # "oldConfigVolteRedialPolicy":Ljava/lang/String;
     .end local v2    # "oldUsedNetworkType":Ljava/lang/String;
     :cond_1
     return-void
 
-    .line 120
     .restart local v0    # "oldConfigNetworkTypeCapability":Ljava/lang/String;
     .restart local v1    # "oldConfigVolteRedialPolicy":Ljava/lang/String;
     .restart local v2    # "oldUsedNetworkType":Ljava/lang/String;
@@ -1574,17 +1460,14 @@
 
     if-eqz v3, :cond_0
 
-    .line 121
     const-string v3, "ATT-ATT-GSM-USA"
 
     sput-object v3, Lcom/android/internal/telephony/TelephonyFeatures;->mConfigNetworkTypeCapability:Ljava/lang/String;
 
-    .line 122
     const-string v3, "ATT"
 
     sput-object v3, Lcom/android/internal/telephony/TelephonyFeatures;->mUsedNetworkType:Ljava/lang/String;
 
-    .line 123
     const-string v3, "att"
 
     sput-object v3, Lcom/android/internal/telephony/TelephonyFeatures;->mConfigVolteRedialPolicy:Ljava/lang/String;
@@ -1600,7 +1483,6 @@
 
     const/4 v0, 0x0
 
-    .line 406
     const/4 v2, 0x4
 
     new-array v2, v2, [Ljava/lang/String;
@@ -1631,7 +1513,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 410
     :goto_0
     return v0
 
@@ -1645,7 +1526,6 @@
     .locals 2
 
     .prologue
-    .line 323
     invoke-static {}, Lcom/android/internal/telephony/TelephonyFeatures;->isUsaCdmaModel()Z
 
     move-result v0
@@ -1662,11 +1542,9 @@
 
     if-eqz v0, :cond_1
 
-    .line 324
     :cond_0
     const/4 v0, 0x1
 
-    .line 327
     :goto_0
     return v0
 
@@ -1680,7 +1558,6 @@
     .locals 2
 
     .prologue
-    .line 345
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v0
@@ -1693,10 +1570,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 347
     const/4 v0, 0x0
 
-    .line 350
     :goto_0
     return v0
 

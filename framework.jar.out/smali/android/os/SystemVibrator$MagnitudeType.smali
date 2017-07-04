@@ -48,7 +48,6 @@
 
     const/4 v2, 0x0
 
-    .line 57
     new-instance v0, Landroid/os/SystemVibrator$MagnitudeType;
 
     const-string v1, "TouchMagnitude"
@@ -57,7 +56,6 @@
 
     sput-object v0, Landroid/os/SystemVibrator$MagnitudeType;->TouchMagnitude:Landroid/os/SystemVibrator$MagnitudeType;
 
-    .line 58
     new-instance v0, Landroid/os/SystemVibrator$MagnitudeType;
 
     const-string v1, "NotificationMagnitude"
@@ -66,7 +64,6 @@
 
     sput-object v0, Landroid/os/SystemVibrator$MagnitudeType;->NotificationMagnitude:Landroid/os/SystemVibrator$MagnitudeType;
 
-    .line 59
     new-instance v0, Landroid/os/SystemVibrator$MagnitudeType;
 
     const-string v1, "CallMagnitude"
@@ -75,7 +72,6 @@
 
     sput-object v0, Landroid/os/SystemVibrator$MagnitudeType;->CallMagnitude:Landroid/os/SystemVibrator$MagnitudeType;
 
-    .line 60
     new-instance v0, Landroid/os/SystemVibrator$MagnitudeType;
 
     const-string v1, "MaxMagnitude"
@@ -84,7 +80,6 @@
 
     sput-object v0, Landroid/os/SystemVibrator$MagnitudeType;->MaxMagnitude:Landroid/os/SystemVibrator$MagnitudeType;
 
-    .line 56
     const/4 v0, 0x4
 
     new-array v0, v0, [Landroid/os/SystemVibrator$MagnitudeType;
@@ -119,7 +114,6 @@
     .end annotation
 
     .prologue
-    .line 56
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -130,7 +124,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 56
     const-class v0, Landroid/os/SystemVibrator$MagnitudeType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -146,7 +139,6 @@
     .locals 1
 
     .prologue
-    .line 56
     sget-object v0, Landroid/os/SystemVibrator$MagnitudeType;->$VALUES:[Landroid/os/SystemVibrator$MagnitudeType;
 
     invoke-virtual {v0}, [Landroid/os/SystemVibrator$MagnitudeType;->clone()Ljava/lang/Object;

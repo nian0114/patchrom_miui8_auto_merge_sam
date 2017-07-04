@@ -55,56 +55,45 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 75
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 30
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/os/OEMEncryption;->mSDPolicy:Z
 
-    .line 36
     iput-object v1, p0, Landroid/os/OEMEncryption;->dem:Landroid/dirEncryption/DirEncryptionManager;
 
-    .line 38
     iput-object v1, p0, Landroid/os/OEMEncryption;->m_dem_3lm:Landroid/os/IDeviceManager3LM;
 
-    .line 39
     iput-object v1, p0, Landroid/os/OEMEncryption;->m_InstDirEncSvc:Landroid/os/storage/IDirEncryptService;
 
-    .line 42
     const-string v0, ""
 
     iput-object v0, p0, Landroid/os/OEMEncryption;->EXTERNAL_SD_STATE:Ljava/lang/String;
 
-    .line 46
     new-instance v0, Landroid/os/OEMEncryption$1;
 
     invoke-direct {v0, p0}, Landroid/os/OEMEncryption$1;-><init>(Landroid/os/OEMEncryption;)V
 
     iput-object v0, p0, Landroid/os/OEMEncryption;->handler:Landroid/os/Handler;
 
-    .line 134
     new-instance v0, Landroid/os/OEMEncryption$2;
 
     invoke-direct {v0, p0}, Landroid/os/OEMEncryption$2;-><init>(Landroid/os/OEMEncryption;)V
 
     iput-object v0, p0, Landroid/os/OEMEncryption;->mStorageListener:Landroid/os/storage/StorageEventListener;
 
-    .line 180
     new-instance v0, Landroid/os/OEMEncryption$3;
 
     invoke-direct {v0, p0}, Landroid/os/OEMEncryption$3;-><init>(Landroid/os/OEMEncryption;)V
 
     iput-object v0, p0, Landroid/os/OEMEncryption;->receiver:Landroid/content/BroadcastReceiver;
 
-    .line 76
     iput-object p1, p0, Landroid/os/OEMEncryption;->mContext:Landroid/content/Context;
 
-    .line 77
     iget-object v0, p0, Landroid/os/OEMEncryption;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v1, "storage"
+    const-string v1, "storage"
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -114,10 +103,9 @@
 
     iput-object v0, p0, Landroid/os/OEMEncryption;->mStorageManager:Landroid/os/storage/StorageManager;
 
-    .line 78
     iget-object v0, p0, Landroid/os/OEMEncryption;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v1, "notification"
+    const-string v1, "notification"
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -127,7 +115,6 @@
 
     iput-object v0, p0, Landroid/os/OEMEncryption;->mNotificationManager:Landroid/app/NotificationManager;
 
-    .line 80
     new-instance v0, Landroid/dirEncryption/DirEncryptionManager;
 
     iget-object v1, p0, Landroid/os/OEMEncryption;->mContext:Landroid/content/Context;
@@ -136,7 +123,6 @@
 
     iput-object v0, p0, Landroid/os/OEMEncryption;->dem:Landroid/dirEncryption/DirEncryptionManager;
 
-    .line 82
     const-string v0, "DirEncryptService"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -149,7 +135,6 @@
 
     iput-object v0, p0, Landroid/os/OEMEncryption;->m_InstDirEncSvc:Landroid/os/storage/IDirEncryptService;
 
-    .line 83
     const-string v0, "DeviceManager3LM"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -162,40 +147,34 @@
 
     iput-object v0, p0, Landroid/os/OEMEncryption;->m_dem_3lm:Landroid/os/IDeviceManager3LM;
 
-    .line 84
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
     iput-object v0, p0, Landroid/os/OEMEncryption;->filter:Landroid/content/IntentFilter;
 
-    .line 85
     iget-object v0, p0, Landroid/os/OEMEncryption;->filter:Landroid/content/IntentFilter;
 
     const-string v1, "android.action.3LM_NFC_FRCRESET"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 86
     iget-object v0, p0, Landroid/os/OEMEncryption;->receiver:Landroid/content/BroadcastReceiver;
 
     iget-object v1, p0, Landroid/os/OEMEncryption;->filter:Landroid/content/IntentFilter;
 
     invoke-virtual {p1, v0, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 87
     iget-object v0, p0, Landroid/os/OEMEncryption;->mStorageManager:Landroid/os/storage/StorageManager;
 
     iget-object v1, p0, Landroid/os/OEMEncryption;->mStorageListener:Landroid/os/storage/StorageEventListener;
 
     invoke-virtual {v0, v1}, Landroid/os/storage/StorageManager;->registerListener(Landroid/os/storage/StorageEventListener;)V
 
-    .line 88
-    const-string/jumbo v0, "removed"
+    const-string v0, "removed"
 
     iput-object v0, p0, Landroid/os/OEMEncryption;->EXTERNAL_SD_STATE:Ljava/lang/String;
 
-    .line 89
     return-void
 .end method
 
@@ -204,7 +183,6 @@
     .param p0, "x0"    # Landroid/os/OEMEncryption;
 
     .prologue
-    .line 26
     iget-object v0, p0, Landroid/os/OEMEncryption;->notification:Landroid/app/Notification;
 
     return-object v0
@@ -215,7 +193,6 @@
     .param p0, "x0"    # Landroid/os/OEMEncryption;
 
     .prologue
-    .line 26
     iget-object v0, p0, Landroid/os/OEMEncryption;->mNotificationManager:Landroid/app/NotificationManager;
 
     return-object v0
@@ -226,7 +203,6 @@
     .param p0, "x0"    # Landroid/os/OEMEncryption;
 
     .prologue
-    .line 26
     iget-object v0, p0, Landroid/os/OEMEncryption;->dem:Landroid/dirEncryption/DirEncryptionManager;
 
     return-object v0
@@ -238,7 +214,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 26
     iput-object p1, p0, Landroid/os/OEMEncryption;->EXTERNAL_SD_STATE:Ljava/lang/String;
 
     return-object p1
@@ -249,7 +224,6 @@
     .param p0, "x0"    # Landroid/os/OEMEncryption;
 
     .prologue
-    .line 26
     iget-object v0, p0, Landroid/os/OEMEncryption;->handler:Landroid/os/Handler;
 
     return-object v0
@@ -260,7 +234,6 @@
     .param p0, "x0"    # Landroid/os/OEMEncryption;
 
     .prologue
-    .line 26
     iget-boolean v0, p0, Landroid/os/OEMEncryption;->mSDPolicy:Z
 
     return v0
@@ -271,7 +244,6 @@
     .param p0, "x0"    # Landroid/os/OEMEncryption;
 
     .prologue
-    .line 26
     iget-object v0, p0, Landroid/os/OEMEncryption;->m_dem_3lm:Landroid/os/IDeviceManager3LM;
 
     return-object v0
@@ -282,7 +254,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 69
     const-class v1, Landroid/os/OEMEncryption;
 
     monitor-enter v1
@@ -292,14 +263,12 @@
 
     if-nez v0, :cond_0
 
-    .line 70
     new-instance v0, Landroid/os/OEMEncryption;
 
     invoke-direct {v0, p0}, Landroid/os/OEMEncryption;-><init>(Landroid/content/Context;)V
 
     sput-object v0, Landroid/os/OEMEncryption;->mSelf:Landroid/os/OEMEncryption;
 
-    .line 72
     :cond_0
     sget-object v0, Landroid/os/OEMEncryption;->mSelf:Landroid/os/OEMEncryption;
     :try_end_0
@@ -309,7 +278,6 @@
 
     return-object v0
 
-    .line 69
     :catchall_0
     move-exception v0
 
@@ -326,12 +294,10 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 102
     iget-object v0, p0, Landroid/os/OEMEncryption;->EXTERNAL_SD_STATE:Ljava/lang/String;
 
-    .line 103
     .local v0, "state":Ljava/lang/String;
-    const-string/jumbo v2, "mounted"
+    const-string v2, "mounted"
 
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -339,19 +305,16 @@
 
     if-eqz v2, :cond_0
 
-    .line 104
     invoke-virtual {p0}, Landroid/os/OEMEncryption;->isCurrentSDCardEncrypted()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 109
     :cond_0
     :goto_0
     return v1
 
-    .line 107
     :cond_1
     const/4 v1, 0x0
 
@@ -362,26 +325,22 @@
     .locals 2
 
     .prologue
-    .line 92
     const-string v0, "OEMEncryption"
 
     const-string v1, "clear called"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 93
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/os/OEMEncryption;->mSDPolicy:Z
 
-    .line 94
     iget-object v0, p0, Landroid/os/OEMEncryption;->handler:Landroid/os/Handler;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 95
     return-void
 .end method
 
@@ -389,7 +348,6 @@
     .locals 1
 
     .prologue
-    .line 98
     iget-boolean v0, p0, Landroid/os/OEMEncryption;->mSDPolicy:Z
 
     return v0
@@ -401,10 +359,8 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 118
     const/4 v1, 0x0
 
-    .line 121
     .local v1, "sd_state":Z
     :try_start_0
     iget-object v3, p0, Landroid/os/OEMEncryption;->m_InstDirEncSvc:Landroid/os/storage/IDirEncryptService;
@@ -423,7 +379,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 123
     iget-object v3, p0, Landroid/os/OEMEncryption;->m_InstDirEncSvc:Landroid/os/storage/IDirEncryptService;
 
     invoke-interface {v3}, Landroid/os/storage/IDirEncryptService;->getSDCardEncryptionPrefs()Landroid/dirEncryption/SDCardEncryptionPolicies;
@@ -442,7 +397,6 @@
 
     const/4 v1, 0x0
 
-    .line 128
     :cond_0
     :goto_0
     const-string v2, "OEMEncryption"
@@ -467,20 +421,16 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 129
     return v1
 
     :cond_1
     move v1, v2
 
-    .line 123
     goto :goto_0
 
-    .line 125
     :catch_0
     move-exception v0
 
-    .line 126
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "OEMEncryption"
 
@@ -500,14 +450,13 @@
 
     const/4 v12, 0x0
 
-    .line 214
     const-string v6, "OEMEncryption"
 
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "setSDEncryptionPolicy called with "
+    const-string v8, "setSDEncryptionPolicy called with "
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -523,25 +472,20 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 216
     iput-boolean p1, p0, Landroid/os/OEMEncryption;->mSDPolicy:Z
 
-    .line 219
     if-nez p1, :cond_1
 
-    .line 220
     iget-object v6, p0, Landroid/os/OEMEncryption;->handler:Landroid/os/Handler;
 
     const/4 v7, 0x1
 
     invoke-virtual {v6, v7}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 270
     :cond_0
     :goto_0
     return-void
 
-    .line 225
     :cond_1
     invoke-virtual {p0}, Landroid/os/OEMEncryption;->isCurrentSDCardEncrypted()Z
 
@@ -549,7 +493,6 @@
 
     if-eqz v6, :cond_2
 
-    .line 226
     const-string v6, "OEMEncryption"
 
     const-string v7, "Not showing notification because current SD card is already encrypted"
@@ -558,13 +501,11 @@
 
     goto :goto_0
 
-    .line 230
     :cond_2
     iget-object v5, p0, Landroid/os/OEMEncryption;->EXTERNAL_SD_STATE:Ljava/lang/String;
 
-    .line 231
     .local v5, "state":Ljava/lang/String;
-    const-string/jumbo v6, "unmounted"
+    const-string v6, "unmounted"
 
     invoke-virtual {v6, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -572,7 +513,7 @@
 
     if-nez v6, :cond_3
 
-    const-string/jumbo v6, "removed"
+    const-string v6, "removed"
 
     invoke-virtual {v6, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -588,7 +529,6 @@
 
     if-eqz v6, :cond_4
 
-    .line 233
     :cond_3
     const-string v6, "OEMEncryption"
 
@@ -598,16 +538,13 @@
 
     goto :goto_0
 
-    .line 238
     :cond_4
     iget-object v6, p0, Landroid/os/OEMEncryption;->m_InstDirEncSvc:Landroid/os/storage/IDirEncryptService;
 
     if-eqz v6, :cond_0
 
-    .line 241
     if-eqz p1, :cond_5
 
-    .line 243
     :try_start_0
     iget-object v6, p0, Landroid/os/OEMEncryption;->m_InstDirEncSvc:Landroid/os/storage/IDirEncryptService;
 
@@ -621,7 +558,6 @@
 
     move-result v4
 
-    .line 246
     .local v4, "result":I
     const-string v6, "OEMEncryption"
 
@@ -647,7 +583,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 252
     .end local v4    # "result":I
     :cond_5
     :goto_1
@@ -657,7 +592,6 @@
 
     move-result-object v3
 
-    .line 254
     .local v3, "resources":Landroid/content/res/Resources;
     new-instance v0, Landroid/content/Intent;
 
@@ -665,7 +599,6 @@
 
     invoke-direct {v0, v6}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 256
     .local v0, "encryptIntent":Landroid/content/Intent;
     iget-object v6, p0, Landroid/os/OEMEncryption;->mContext:Landroid/content/Context;
 
@@ -675,7 +608,6 @@
 
     move-result-object v1
 
-    .line 258
     .local v1, "intent":Landroid/app/PendingIntent;
     new-instance v6, Landroid/app/Notification;
 
@@ -693,7 +625,6 @@
 
     iput-object v6, p0, Landroid/os/OEMEncryption;->notification:Landroid/app/Notification;
 
-    .line 263
     iget-object v6, p0, Landroid/os/OEMEncryption;->notification:Landroid/app/Notification;
 
     iget v7, v6, Landroid/app/Notification;->flags:I
@@ -702,7 +633,6 @@
 
     iput v7, v6, Landroid/app/Notification;->flags:I
 
-    .line 265
     iget-object v6, p0, Landroid/os/OEMEncryption;->notification:Landroid/app/Notification;
 
     iget-object v7, p0, Landroid/os/OEMEncryption;->mContext:Landroid/content/Context;
@@ -719,21 +649,18 @@
 
     invoke-virtual {v6, v7, v8, v9, v1}, Landroid/app/Notification;->setLatestEventInfo(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)V
 
-    .line 269
     iget-object v6, p0, Landroid/os/OEMEncryption;->handler:Landroid/os/Handler;
 
     invoke-virtual {v6, v12}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
     goto/16 :goto_0
 
-    .line 247
     .end local v0    # "encryptIntent":Landroid/content/Intent;
     .end local v1    # "intent":Landroid/app/PendingIntent;
     .end local v3    # "resources":Landroid/content/res/Resources;
     :catch_0
     move-exception v2
 
-    .line 248
     .local v2, "re":Landroid/os/RemoteException;
     const-string v6, "OEMEncryption"
 

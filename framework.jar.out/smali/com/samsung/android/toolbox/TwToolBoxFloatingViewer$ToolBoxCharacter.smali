@@ -28,18 +28,14 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 793
     iput-object p1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxCharacter;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
-    .line 794
     invoke-direct {p0, p1, p2}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxMenu;-><init>(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;Ljava/lang/String;)V
 
-    .line 790
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxCharacter;->characterType:I
 
-    .line 795
     # getter for: Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mContext:Landroid/content/Context;
     invoke-static {p1}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->access$3600(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;)Landroid/content/Context;
 
@@ -53,6 +49,5 @@
 
     iput-object v0, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$ToolBoxCharacter;->backgroundOpen:Landroid/graphics/drawable/Drawable;
 
-    .line 796
     return-void
 .end method

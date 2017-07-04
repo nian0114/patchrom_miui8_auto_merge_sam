@@ -34,7 +34,6 @@
     .locals 1
 
     .prologue
-    .line 44
     new-instance v0, Lcom/samsung/android/cepproxyks/CertByte$1;
 
     invoke-direct {v0}, Lcom/samsung/android/cepproxyks/CertByte$1;-><init>()V
@@ -48,10 +47,8 @@
     .locals 0
 
     .prologue
-    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 18
     return-void
 .end method
 
@@ -60,48 +57,40 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 21
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/cepproxyks/CertByte;->certsize:I
 
-    .line 22
     iget v0, p0, Lcom/samsung/android/cepproxyks/CertByte;->certsize:I
 
     new-array v0, v0, [B
 
     iput-object v0, p0, Lcom/samsung/android/cepproxyks/CertByte;->certBytes:[B
 
-    .line 24
     iget-object v0, p0, Lcom/samsung/android/cepproxyks/CertByte;->certBytes:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readByteArray([B)V
 
-    .line 25
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/cepproxyks/CertByte;->caSize:I
 
-    .line 26
     iget v0, p0, Lcom/samsung/android/cepproxyks/CertByte;->caSize:I
 
     new-array v0, v0, [B
 
     iput-object v0, p0, Lcom/samsung/android/cepproxyks/CertByte;->caCertBytes:[B
 
-    .line 28
     iget-object v0, p0, Lcom/samsung/android/cepproxyks/CertByte;->caCertBytes:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readByteArray([B)V
 
-    .line 29
     return-void
 .end method
 
@@ -111,7 +100,6 @@
     .locals 1
 
     .prologue
-    .line 33
     const/4 v0, 0x0
 
     return v0
@@ -123,26 +111,21 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 38
     iget v0, p0, Lcom/samsung/android/cepproxyks/CertByte;->certsize:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 39
     iget-object v0, p0, Lcom/samsung/android/cepproxyks/CertByte;->certBytes:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByteArray([B)V
 
-    .line 40
     iget v0, p0, Lcom/samsung/android/cepproxyks/CertByte;->caSize:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 41
     iget-object v0, p0, Lcom/samsung/android/cepproxyks/CertByte;->caCertBytes:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByteArray([B)V
 
-    .line 42
     return-void
 .end method

@@ -43,14 +43,12 @@
     .locals 1
 
     .prologue
-    .line 1229
     const/4 v0, 0x0
 
     new-array v0, v0, [Landroid/view/Display$ColorTransform;
 
     sput-object v0, Landroid/view/Display$ColorTransform;->EMPTY_ARRAY:[Landroid/view/Display$ColorTransform;
 
-    .line 1293
     new-instance v0, Landroid/view/Display$ColorTransform$1;
 
     invoke-direct {v0}, Landroid/view/Display$ColorTransform$1;-><init>()V
@@ -66,16 +64,12 @@
     .param p2, "colorTransform"    # I
 
     .prologue
-    .line 1234
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1235
     iput p1, p0, Landroid/view/Display$ColorTransform;->mId:I
 
-    .line 1236
     iput p2, p0, Landroid/view/Display$ColorTransform;->mColorTransform:I
 
-    .line 1237
     return-void
 .end method
 
@@ -84,7 +78,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 1283
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -95,7 +88,6 @@
 
     invoke-direct {p0, v0, v1}, Landroid/view/Display$ColorTransform;-><init>(II)V
 
-    .line 1284
     return-void
 .end method
 
@@ -105,7 +97,6 @@
     .param p2, "x1"    # Landroid/view/Display$1;
 
     .prologue
-    .line 1228
     invoke-direct {p0, p1}, Landroid/view/Display$ColorTransform;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -117,7 +108,6 @@
     .locals 1
 
     .prologue
-    .line 1279
     const/4 v0, 0x0
 
     return v0
@@ -132,15 +122,12 @@
 
     const/4 v2, 0x0
 
-    .line 1249
     if-ne p0, p1, :cond_1
 
-    .line 1256
     :cond_0
     :goto_0
     return v1
 
-    .line 1252
     :cond_1
     instance-of v3, p1, Landroid/view/Display$ColorTransform;
 
@@ -148,16 +135,13 @@
 
     move v1, v2
 
-    .line 1253
     goto :goto_0
 
     :cond_2
     move-object v0, p1
 
-    .line 1255
     check-cast v0, Landroid/view/Display$ColorTransform;
 
-    .line 1256
     .local v0, "that":Landroid/view/Display$ColorTransform;
     iget v3, p0, Landroid/view/Display$ColorTransform;->mId:I
 
@@ -181,7 +165,6 @@
     .locals 1
 
     .prologue
-    .line 1244
     iget v0, p0, Landroid/view/Display$ColorTransform;->mColorTransform:I
 
     return v0
@@ -191,7 +174,6 @@
     .locals 1
 
     .prologue
-    .line 1240
     iget v0, p0, Landroid/view/Display$ColorTransform;->mId:I
 
     return v0
@@ -201,23 +183,19 @@
     .locals 3
 
     .prologue
-    .line 1262
     const/4 v0, 0x1
 
-    .line 1263
     .local v0, "hash":I
     iget v1, p0, Landroid/view/Display$ColorTransform;->mId:I
 
     add-int/lit8 v0, v1, 0x11
 
-    .line 1264
     mul-int/lit8 v1, v0, 0x11
 
     iget v2, p0, Landroid/view/Display$ColorTransform;->mColorTransform:I
 
     add-int v0, v1, v2
 
-    .line 1265
     return v0
 .end method
 
@@ -225,10 +203,9 @@
     .locals 2
 
     .prologue
-    .line 1270
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v1, "{"
+    const-string v1, "{"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -256,7 +233,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -275,16 +252,13 @@
     .param p2, "parcelableFlags"    # I
 
     .prologue
-    .line 1288
     iget v0, p0, Landroid/view/Display$ColorTransform;->mId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1289
     iget v0, p0, Landroid/view/Display$ColorTransform;->mColorTransform:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1290
     return-void
 .end method

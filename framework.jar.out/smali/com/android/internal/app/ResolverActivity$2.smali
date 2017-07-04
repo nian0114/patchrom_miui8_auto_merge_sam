@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 431
     iput-object p1, p0, Lcom/android/internal/app/ResolverActivity$2;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,11 +39,9 @@
     .locals 1
 
     .prologue
-    .line 434
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$2;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-virtual {v0}, Lcom/android/internal/app/ResolverActivity;->finish()V
 
-    .line 435
     return-void
 .end method

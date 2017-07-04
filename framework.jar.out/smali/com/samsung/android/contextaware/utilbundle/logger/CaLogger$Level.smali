@@ -54,7 +54,6 @@
 
     const/4 v3, 0x0
 
-    .line 63
     new-instance v0, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level$1;
 
     const-string v1, "TRACE"
@@ -63,7 +62,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;->TRACE:Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;
 
-    .line 90
     new-instance v0, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level$2;
 
     const-string v1, "DEBUG"
@@ -72,7 +70,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;->DEBUG:Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;
 
-    .line 114
     new-instance v0, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level$3;
 
     const-string v1, "INFO"
@@ -81,7 +78,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;->INFO:Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;
 
-    .line 138
     new-instance v0, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level$4;
 
     const-string v1, "WARN"
@@ -90,7 +86,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;->WARN:Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;
 
-    .line 162
     new-instance v0, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level$5;
 
     const-string v1, "ERROR"
@@ -99,7 +94,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;->ERROR:Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;
 
-    .line 186
     new-instance v0, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level$6;
 
     const-string v1, "EXCEPTION"
@@ -110,7 +104,6 @@
 
     sput-object v0, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;->EXCEPTION:Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;
 
-    .line 60
     const/4 v0, 0x6
 
     new-array v0, v0, [Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;
@@ -155,7 +148,6 @@
     .end annotation
 
     .prologue
-    .line 60
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -168,7 +160,6 @@
     .param p3, "x2"    # Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$1;
 
     .prologue
-    .line 60
     invoke-direct {p0, p1, p2}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -179,7 +170,6 @@
     .param p0, "x0"    # Z
 
     .prologue
-    .line 60
     invoke-static {p0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;->getCallerInfo(Z)Ljava/lang/String;
 
     move-result-object v0
@@ -192,7 +182,6 @@
     .param p0, "isHyphen"    # Z
 
     .prologue
-    .line 216
     # getter for: Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->isCaller:Z
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->access$600()Z
 
@@ -200,14 +189,11 @@
 
     if-nez v3, :cond_0
 
-    .line 217
     const-string v3, ""
 
-    .line 235
     :goto_0
     return-object v3
 
-    .line 220
     :cond_0
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
@@ -217,13 +203,11 @@
 
     move-result-object v1
 
-    .line 223
     .local v1, "stackList":[Ljava/lang/StackTraceElement;
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 225
     .local v0, "callerInfo":Ljava/lang/StringBuffer;
     array-length v3, v1
 
@@ -231,7 +215,6 @@
 
     if-lt v3, v4, :cond_1
 
-    .line 226
     const/4 v3, 0x6
 
     aget-object v3, v1, v3
@@ -240,7 +223,6 @@
 
     move-result-object v2
 
-    .line 227
     .local v2, "str":Ljava/lang/String;
     const/16 v3, 0x2e
 
@@ -262,17 +244,14 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 231
     .end local v2    # "str":Ljava/lang/String;
     :cond_1
     if-eqz p0, :cond_2
 
-    .line 232
     const-string v3, " - "
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 235
     :cond_2
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
@@ -286,7 +265,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 60
     const-class v0, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -302,7 +280,6 @@
     .locals 1
 
     .prologue
-    .line 60
     sget-object v0, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;->$VALUES:[Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;
 
     invoke-virtual {v0}, [Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger$Level;->clone()Ljava/lang/Object;

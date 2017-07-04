@@ -59,19 +59,16 @@
     .locals 1
 
     .prologue
-    .line 110
     const/4 v0, 0x0
 
     sput-boolean v0, Landroid/speech/tts/TextToSpeechService;->PAUSE_STATE:Z
 
-    .line 112
     new-instance v0, Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-direct {v0}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
 
     sput-object v0, Landroid/speech/tts/TextToSpeechService;->pauseLock:Ljava/util/concurrent/locks/ReentrantLock;
 
-    .line 114
     sget-object v0, Landroid/speech/tts/TextToSpeechService;->pauseLock:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->newCondition()Ljava/util/concurrent/locks/Condition;
@@ -87,24 +84,20 @@
     .locals 1
 
     .prologue
-    .line 104
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
-    .line 128
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Landroid/speech/tts/TextToSpeechService;->mVoicesInfoLock:Ljava/lang/Object;
 
-    .line 1203
     new-instance v0, Landroid/speech/tts/TextToSpeechService$1;
 
     invoke-direct {v0, p0}, Landroid/speech/tts/TextToSpeechService$1;-><init>(Landroid/speech/tts/TextToSpeechService;)V
 
     iput-object v0, p0, Landroid/speech/tts/TextToSpeechService;->mBinder:Landroid/speech/tts/ITextToSpeechService$Stub;
 
-    .line 1453
     return-void
 .end method
 
@@ -113,7 +106,6 @@
     .param p0, "x0"    # Landroid/speech/tts/TextToSpeechService;
 
     .prologue
-    .line 104
     iget-object v0, p0, Landroid/speech/tts/TextToSpeechService;->mAudioPlaybackHandler:Landroid/speech/tts/AudioPlaybackHandler;
 
     return-object v0
@@ -124,7 +116,6 @@
     .param p0, "x0"    # Landroid/speech/tts/TextToSpeechService;
 
     .prologue
-    .line 104
     iget-object v0, p0, Landroid/speech/tts/TextToSpeechService;->mCallbacks:Landroid/speech/tts/TextToSpeechService$CallbackMap;
 
     return-object v0
@@ -135,7 +126,6 @@
     .param p0, "x0"    # Landroid/speech/tts/TextToSpeechService;
 
     .prologue
-    .line 104
     invoke-direct {p0}, Landroid/speech/tts/TextToSpeechService;->getDefaultSpeechRate()I
 
     move-result v0
@@ -148,7 +138,6 @@
     .param p0, "x0"    # Landroid/speech/tts/TextToSpeechService;
 
     .prologue
-    .line 104
     invoke-direct {p0}, Landroid/speech/tts/TextToSpeechService;->getSettingsLocale()[Ljava/lang/String;
 
     move-result-object v0
@@ -161,7 +150,6 @@
     .param p0, "x0"    # Landroid/speech/tts/TextToSpeechService;
 
     .prologue
-    .line 104
     iget-object v0, p0, Landroid/speech/tts/TextToSpeechService;->mPackageName:Ljava/lang/String;
 
     return-object v0
@@ -172,7 +160,6 @@
     .param p0, "x0"    # Landroid/speech/tts/TextToSpeechService;
 
     .prologue
-    .line 104
     iget-object v0, p0, Landroid/speech/tts/TextToSpeechService;->mSynthHandler:Landroid/speech/tts/TextToSpeechService$SynthHandler;
 
     return-object v0
@@ -182,8 +169,7 @@
     .locals 2
 
     .prologue
-    .line 419
-    const-string/jumbo v0, "tts_default_rate"
+    const-string v0, "tts_default_rate"
 
     const/16 v1, 0x64
 
@@ -199,10 +185,8 @@
     .param p1, "locale"    # Ljava/util/Locale;
 
     .prologue
-    .line 263
     const/4 v0, 0x2
 
-    .line 264
     .local v0, "expectedStatus":I
     invoke-virtual {p1}, Ljava/util/Locale;->getVariant()Ljava/lang/String;
 
@@ -214,7 +198,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 265
     invoke-virtual {p1}, Ljava/util/Locale;->getCountry()Ljava/lang/String;
 
     move-result-object v1
@@ -225,15 +208,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 266
     const/4 v0, 0x0
 
-    .line 271
     :cond_0
     :goto_0
     return v0
 
-    .line 268
     :cond_1
     const/4 v0, 0x1
 
@@ -246,7 +226,6 @@
     .param p2, "defaultValue"    # I
 
     .prologue
-    .line 428
     invoke-virtual {p0}, Landroid/speech/tts/TextToSpeechService;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -262,7 +241,6 @@
     .locals 3
 
     .prologue
-    .line 423
     iget-object v1, p0, Landroid/speech/tts/TextToSpeechService;->mEngineHelper:Landroid/speech/tts/TtsEngines;
 
     iget-object v2, p0, Landroid/speech/tts/TextToSpeechService;->mPackageName:Ljava/lang/String;
@@ -271,7 +249,6 @@
 
     move-result-object v0
 
-    .line 424
     .local v0, "locale":Ljava/util/Locale;
     invoke-static {v0}, Landroid/speech/tts/TtsEngines;->toOldLocaleStringFormat(Ljava/util/Locale;)[Ljava/lang/String;
 
@@ -287,7 +264,6 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1191
     const-string v0, "android.intent.action.TTS_SERVICE"
 
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -300,10 +276,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 1192
     iget-object v0, p0, Landroid/speech/tts/TextToSpeechService;->mBinder:Landroid/speech/tts/ITextToSpeechService$Stub;
 
-    .line 1194
     :goto_0
     return-object v0
 
@@ -317,19 +291,15 @@
     .locals 5
 
     .prologue
-    .line 133
     invoke-super {p0}, Landroid/app/Service;->onCreate()V
 
-    .line 135
     new-instance v1, Landroid/speech/tts/TextToSpeechService$SynthThread;
 
     invoke-direct {v1, p0}, Landroid/speech/tts/TextToSpeechService$SynthThread;-><init>(Landroid/speech/tts/TextToSpeechService;)V
 
-    .line 136
     .local v1, "synthThread":Landroid/speech/tts/TextToSpeechService$SynthThread;
     invoke-virtual {v1}, Landroid/speech/tts/TextToSpeechService$SynthThread;->start()V
 
-    .line 137
     new-instance v2, Landroid/speech/tts/TextToSpeechService$SynthHandler;
 
     invoke-virtual {v1}, Landroid/speech/tts/TextToSpeechService$SynthThread;->getLooper()Landroid/os/Looper;
@@ -340,26 +310,22 @@
 
     iput-object v2, p0, Landroid/speech/tts/TextToSpeechService;->mSynthHandler:Landroid/speech/tts/TextToSpeechService$SynthHandler;
 
-    .line 139
     new-instance v2, Landroid/speech/tts/AudioPlaybackHandler;
 
     invoke-direct {v2}, Landroid/speech/tts/AudioPlaybackHandler;-><init>()V
 
     iput-object v2, p0, Landroid/speech/tts/TextToSpeechService;->mAudioPlaybackHandler:Landroid/speech/tts/AudioPlaybackHandler;
 
-    .line 140
     iget-object v2, p0, Landroid/speech/tts/TextToSpeechService;->mAudioPlaybackHandler:Landroid/speech/tts/AudioPlaybackHandler;
 
     invoke-virtual {v2}, Landroid/speech/tts/AudioPlaybackHandler;->start()V
 
-    .line 142
     new-instance v2, Landroid/speech/tts/TtsEngines;
 
     invoke-direct {v2, p0}, Landroid/speech/tts/TtsEngines;-><init>(Landroid/content/Context;)V
 
     iput-object v2, p0, Landroid/speech/tts/TextToSpeechService;->mEngineHelper:Landroid/speech/tts/TtsEngines;
 
-    .line 144
     new-instance v2, Landroid/speech/tts/TextToSpeechService$CallbackMap;
 
     const/4 v3, 0x0
@@ -368,7 +334,6 @@
 
     iput-object v2, p0, Landroid/speech/tts/TextToSpeechService;->mCallbacks:Landroid/speech/tts/TextToSpeechService$CallbackMap;
 
-    .line 146
     invoke-virtual {p0}, Landroid/speech/tts/TextToSpeechService;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v2
@@ -377,12 +342,10 @@
 
     iput-object v2, p0, Landroid/speech/tts/TextToSpeechService;->mPackageName:Ljava/lang/String;
 
-    .line 148
     invoke-direct {p0}, Landroid/speech/tts/TextToSpeechService;->getSettingsLocale()[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 151
     .local v0, "defaultLocale":[Ljava/lang/String;
     const/4 v2, 0x0
 
@@ -398,7 +361,6 @@
 
     invoke-virtual {p0, v2, v3, v4}, Landroid/speech/tts/TextToSpeechService;->onLoadLanguage(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 152
     return-void
 .end method
 
@@ -406,25 +368,20 @@
     .locals 1
 
     .prologue
-    .line 159
     iget-object v0, p0, Landroid/speech/tts/TextToSpeechService;->mSynthHandler:Landroid/speech/tts/TextToSpeechService$SynthHandler;
 
     invoke-virtual {v0}, Landroid/speech/tts/TextToSpeechService$SynthHandler;->quit()V
 
-    .line 161
     iget-object v0, p0, Landroid/speech/tts/TextToSpeechService;->mAudioPlaybackHandler:Landroid/speech/tts/AudioPlaybackHandler;
 
     invoke-virtual {v0}, Landroid/speech/tts/AudioPlaybackHandler;->quit()V
 
-    .line 163
     iget-object v0, p0, Landroid/speech/tts/TextToSpeechService;->mCallbacks:Landroid/speech/tts/TextToSpeechService$CallbackMap;
 
     invoke-virtual {v0}, Landroid/speech/tts/TextToSpeechService$CallbackMap;->kill()V
 
-    .line 165
     invoke-super {p0}, Landroid/app/Service;->onDestroy()V
 
-    .line 166
     return-void
 .end method
 
@@ -437,47 +394,39 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 330
     invoke-virtual {p0, p1, p2, p3}, Landroid/speech/tts/TextToSpeechService;->onIsLanguageAvailable(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v1
 
-    .line 331
     .local v1, "localeStatus":I
     const/4 v0, 0x0
 
-    .line 332
     .local v0, "iso3Locale":Ljava/util/Locale;
     packed-switch v1, :pswitch_data_0
 
     move-object v3, v4
 
-    .line 350
     :cond_0
     :goto_0
     return-object v3
 
-    .line 334
     :pswitch_0
     new-instance v0, Ljava/util/Locale;
 
     .end local v0    # "iso3Locale":Ljava/util/Locale;
     invoke-direct {v0, p1}, Ljava/util/Locale;-><init>(Ljava/lang/String;)V
 
-    .line 345
     .restart local v0    # "iso3Locale":Ljava/util/Locale;
     :goto_1
     invoke-static {v0}, Landroid/speech/tts/TtsEngines;->normalizeTTSLocale(Ljava/util/Locale;)Ljava/util/Locale;
 
     move-result-object v2
 
-    .line 346
     .local v2, "properLocale":Ljava/util/Locale;
     invoke-virtual {v2}, Ljava/util/Locale;->toLanguageTag()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 347
     .local v3, "voiceName":Ljava/lang/String;
     invoke-virtual {p0, v3}, Landroid/speech/tts/TextToSpeechService;->onIsValidVoiceName(Ljava/lang/String;)I
 
@@ -487,10 +436,8 @@
 
     move-object v3, v4
 
-    .line 350
     goto :goto_0
 
-    .line 337
     .end local v2    # "properLocale":Ljava/util/Locale;
     .end local v3    # "voiceName":Ljava/lang/String;
     :pswitch_1
@@ -499,22 +446,18 @@
     .end local v0    # "iso3Locale":Ljava/util/Locale;
     invoke-direct {v0, p1, p2}, Ljava/util/Locale;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 338
     .restart local v0    # "iso3Locale":Ljava/util/Locale;
     goto :goto_1
 
-    .line 340
     :pswitch_2
     new-instance v0, Ljava/util/Locale;
 
     .end local v0    # "iso3Locale":Ljava/util/Locale;
     invoke-direct {v0, p1, p2, p3}, Ljava/util/Locale;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 341
     .restart local v0    # "iso3Locale":Ljava/util/Locale;
     goto :goto_1
 
-    .line 332
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -543,7 +486,6 @@
     .end annotation
 
     .prologue
-    .line 259
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
@@ -569,12 +511,10 @@
     .prologue
     const/16 v3, 0x12c
 
-    .line 290
     new-instance v13, Ljava/util/ArrayList;
 
     invoke-direct {v13}, Ljava/util/ArrayList;-><init>()V
 
-    .line 291
     .local v13, "voices":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/speech/tts/Voice;>;"
     invoke-static {}, Ljava/util/Locale;->getAvailableLocales()[Ljava/util/Locale;
 
@@ -592,13 +532,11 @@
 
     aget-object v2, v7, v10
 
-    .line 292
     .local v2, "locale":Ljava/util/Locale;
     invoke-direct {p0, v2}, Landroid/speech/tts/TextToSpeechService;->getExpectedLanguageAvailableStatus(Ljava/util/Locale;)I
 
     move-result v9
 
-    .line 294
     .local v9, "expectedStatus":I
     :try_start_0
     invoke-virtual {v2}, Ljava/util/Locale;->getISO3Language()Ljava/lang/String;
@@ -619,26 +557,21 @@
 
     move-result v12
 
-    .line 296
     .local v12, "localeStatus":I
     if-eq v12, v9, :cond_0
 
-    .line 291
     .end local v12    # "localeStatus":I
     :goto_1
     add-int/lit8 v10, v10, 0x1
 
     goto :goto_0
 
-    .line 299
     :catch_0
     move-exception v8
 
-    .line 301
     .local v8, "e":Ljava/util/MissingResourceException;
     goto :goto_1
 
-    .line 303
     .end local v8    # "e":Ljava/util/MissingResourceException;
     .restart local v12    # "localeStatus":I
     :cond_0
@@ -658,7 +591,6 @@
 
     move-result-object v6
 
-    .line 305
     .local v6, "features":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     invoke-virtual {v2}, Ljava/util/Locale;->getISO3Language()Ljava/lang/String;
 
@@ -676,7 +608,6 @@
 
     move-result-object v1
 
-    .line 307
     .local v1, "voiceName":Ljava/lang/String;
     new-instance v0, Landroid/speech/tts/Voice;
 
@@ -690,7 +621,6 @@
 
     goto :goto_1
 
-    .line 310
     .end local v1    # "voiceName":Ljava/lang/String;
     .end local v2    # "locale":Ljava/util/Locale;
     .end local v6    # "features":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
@@ -710,27 +640,22 @@
     .prologue
     const/4 v4, -0x1
 
-    .line 401
     invoke-static {p1}, Ljava/util/Locale;->forLanguageTag(Ljava/lang/String;)Ljava/util/Locale;
 
     move-result-object v2
 
-    .line 402
     .local v2, "locale":Ljava/util/Locale;
     if-nez v2, :cond_1
 
-    .line 414
     :cond_0
     :goto_0
     return v4
 
-    .line 405
     :cond_1
     invoke-direct {p0, v2}, Landroid/speech/tts/TextToSpeechService;->getExpectedLanguageAvailableStatus(Ljava/util/Locale;)I
 
     move-result v1
 
-    .line 407
     .local v1, "expectedStatus":I
     :try_start_0
     invoke-virtual {v2}, Ljava/util/Locale;->getISO3Language()Ljava/lang/String;
@@ -751,21 +676,17 @@
 
     move-result v3
 
-    .line 409
     .local v3, "localeStatus":I
     if-ne v3, v1, :cond_0
 
-    .line 412
     const/4 v4, 0x0
 
     goto :goto_0
 
-    .line 413
     .end local v3    # "localeStatus":I
     :catch_0
     move-exception v0
 
-    .line 414
     .local v0, "e":Ljava/util/MissingResourceException;
     goto :goto_0
 .end method
@@ -780,27 +701,22 @@
     .prologue
     const/4 v4, -0x1
 
-    .line 370
     invoke-static {p1}, Ljava/util/Locale;->forLanguageTag(Ljava/lang/String;)Ljava/util/Locale;
 
     move-result-object v2
 
-    .line 371
     .local v2, "locale":Ljava/util/Locale;
     if-nez v2, :cond_1
 
-    .line 385
     :cond_0
     :goto_0
     return v4
 
-    .line 374
     :cond_1
     invoke-direct {p0, v2}, Landroid/speech/tts/TextToSpeechService;->getExpectedLanguageAvailableStatus(Ljava/util/Locale;)I
 
     move-result v1
 
-    .line 376
     .local v1, "expectedStatus":I
     :try_start_0
     invoke-virtual {v2}, Ljava/util/Locale;->getISO3Language()Ljava/lang/String;
@@ -819,11 +735,9 @@
 
     move-result v3
 
-    .line 378
     .local v3, "localeStatus":I
     if-ne v3, v1, :cond_0
 
-    .line 381
     invoke-virtual {v2}, Ljava/util/Locale;->getISO3Language()Ljava/lang/String;
 
     move-result-object v5
@@ -840,17 +754,14 @@
     :try_end_0
     .catch Ljava/util/MissingResourceException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 383
     const/4 v4, 0x0
 
     goto :goto_0
 
-    .line 384
     .end local v3    # "localeStatus":I
     :catch_0
     move-exception v0
 
-    .line 385
     .local v0, "e":Ljava/util/MissingResourceException;
     goto :goto_0
 .end method

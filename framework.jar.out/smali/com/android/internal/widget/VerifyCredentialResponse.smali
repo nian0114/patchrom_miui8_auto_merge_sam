@@ -48,14 +48,12 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 35
     new-instance v0, Lcom/android/internal/widget/VerifyCredentialResponse;
 
     invoke-direct {v0}, Lcom/android/internal/widget/VerifyCredentialResponse;-><init>()V
 
     sput-object v0, Lcom/android/internal/widget/VerifyCredentialResponse;->OK:Lcom/android/internal/widget/VerifyCredentialResponse;
 
-    .line 36
     new-instance v0, Lcom/android/internal/widget/VerifyCredentialResponse;
 
     const/4 v1, -0x1
@@ -66,14 +64,12 @@
 
     sput-object v0, Lcom/android/internal/widget/VerifyCredentialResponse;->ERROR:Lcom/android/internal/widget/VerifyCredentialResponse;
 
-    .line 39
     new-instance v0, Lcom/android/internal/widget/VerifyCredentialResponse;
 
     invoke-direct {v0, v3}, Lcom/android/internal/widget/VerifyCredentialResponse;-><init>(I)V
 
     sput-object v0, Lcom/android/internal/widget/VerifyCredentialResponse;->SKIP:Lcom/android/internal/widget/VerifyCredentialResponse;
 
-    .line 46
     new-instance v0, Lcom/android/internal/widget/VerifyCredentialResponse$1;
 
     invoke-direct {v0}, Lcom/android/internal/widget/VerifyCredentialResponse$1;-><init>()V
@@ -87,20 +83,16 @@
     .locals 1
 
     .prologue
-    .line 72
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 73
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/internal/widget/VerifyCredentialResponse;->mResponseCode:I
 
-    .line 74
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/widget/VerifyCredentialResponse;->mPayload:[B
 
-    .line 75
     return-void
 .end method
 
@@ -109,23 +101,18 @@
     .param p1, "timeout"    # I
 
     .prologue
-    .line 83
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 84
     iput p1, p0, Lcom/android/internal/widget/VerifyCredentialResponse;->mTimeout:I
 
-    .line 85
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/android/internal/widget/VerifyCredentialResponse;->mResponseCode:I
 
-    .line 86
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/widget/VerifyCredentialResponse;->mPayload:[B
 
-    .line 87
     return-void
 .end method
 
@@ -136,19 +123,14 @@
     .param p3, "payload"    # [B
 
     .prologue
-    .line 89
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 90
     iput p1, p0, Lcom/android/internal/widget/VerifyCredentialResponse;->mResponseCode:I
 
-    .line 91
     iput p2, p0, Lcom/android/internal/widget/VerifyCredentialResponse;->mTimeout:I
 
-    .line 92
     iput-object p3, p0, Lcom/android/internal/widget/VerifyCredentialResponse;->mPayload:[B
 
-    .line 93
     return-void
 .end method
 
@@ -160,7 +142,6 @@
     .param p4, "x3"    # Lcom/android/internal/widget/VerifyCredentialResponse$1;
 
     .prologue
-    .line 26
     invoke-direct {p0, p1, p2, p3}, Lcom/android/internal/widget/VerifyCredentialResponse;-><init>(II[B)V
 
     return-void
@@ -171,18 +152,14 @@
     .param p1, "payload"    # [B
 
     .prologue
-    .line 78
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 79
     iput-object p1, p0, Lcom/android/internal/widget/VerifyCredentialResponse;->mPayload:[B
 
-    .line 80
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/internal/widget/VerifyCredentialResponse;->mResponseCode:I
 
-    .line 81
     return-void
 .end method
 
@@ -192,7 +169,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 26
     invoke-direct {p0, p1}, Lcom/android/internal/widget/VerifyCredentialResponse;->setTimeout(I)V
 
     return-void
@@ -204,7 +180,6 @@
     .param p1, "x1"    # [B
 
     .prologue
-    .line 26
     invoke-direct {p0, p1}, Lcom/android/internal/widget/VerifyCredentialResponse;->setPayload([B)V
 
     return-void
@@ -215,10 +190,8 @@
     .param p1, "payload"    # [B
 
     .prologue
-    .line 130
     iput-object p1, p0, Lcom/android/internal/widget/VerifyCredentialResponse;->mPayload:[B
 
-    .line 131
     return-void
 .end method
 
@@ -227,10 +200,8 @@
     .param p1, "timeout"    # I
 
     .prologue
-    .line 126
     iput p1, p0, Lcom/android/internal/widget/VerifyCredentialResponse;->mTimeout:I
 
-    .line 127
     return-void
 .end method
 
@@ -240,7 +211,6 @@
     .locals 1
 
     .prologue
-    .line 110
     const/4 v0, 0x0
 
     return v0
@@ -250,7 +220,6 @@
     .locals 1
 
     .prologue
-    .line 114
     iget-object v0, p0, Lcom/android/internal/widget/VerifyCredentialResponse;->mPayload:[B
 
     return-object v0
@@ -260,7 +229,6 @@
     .locals 1
 
     .prologue
-    .line 122
     iget v0, p0, Lcom/android/internal/widget/VerifyCredentialResponse;->mResponseCode:I
 
     return v0
@@ -270,7 +238,6 @@
     .locals 1
 
     .prologue
-    .line 118
     iget v0, p0, Lcom/android/internal/widget/VerifyCredentialResponse;->mTimeout:I
 
     return v0
@@ -280,7 +247,6 @@
     .locals 1
 
     .prologue
-    .line 135
     iget v0, p0, Lcom/android/internal/widget/VerifyCredentialResponse;->mResponseCode:I
 
     if-nez v0, :cond_0
@@ -300,38 +266,31 @@
     .locals 2
 
     .prologue
-    .line 139
     const-string v0, "Unknowable"
 
-    .line 140
     .local v0, "ret":Ljava/lang/String;
     iget v1, p0, Lcom/android/internal/widget/VerifyCredentialResponse;->mResponseCode:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 150
     :goto_0
     return-object v0
 
-    .line 142
     :pswitch_0
     const-string v0, "SUCCESS!!!"
 
     goto :goto_0
 
-    .line 144
     :pswitch_1
     const-string v0, "FAILED...."
 
     goto :goto_0
 
-    .line 146
     :pswitch_2
     const-string v0, "SKIPPED..."
 
     goto :goto_0
 
-    .line 140
     nop
 
     :pswitch_data_0
@@ -348,47 +307,39 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 97
     iget v0, p0, Lcom/android/internal/widget/VerifyCredentialResponse;->mResponseCode:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 98
     iget v0, p0, Lcom/android/internal/widget/VerifyCredentialResponse;->mResponseCode:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_1
 
-    .line 99
     iget v0, p0, Lcom/android/internal/widget/VerifyCredentialResponse;->mTimeout:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 106
     :cond_0
     :goto_0
     return-void
 
-    .line 100
     :cond_1
     iget v0, p0, Lcom/android/internal/widget/VerifyCredentialResponse;->mResponseCode:I
 
     if-nez v0, :cond_0
 
-    .line 101
     iget-object v0, p0, Lcom/android/internal/widget/VerifyCredentialResponse;->mPayload:[B
 
     if-eqz v0, :cond_0
 
-    .line 102
     iget-object v0, p0, Lcom/android/internal/widget/VerifyCredentialResponse;->mPayload:[B
 
     array-length v0, v0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 103
     iget-object v0, p0, Lcom/android/internal/widget/VerifyCredentialResponse;->mPayload:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByteArray([B)V

@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,13 +34,11 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 42
     :try_start_0
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 50
     .local v0, "context":Landroid/content/Context;
     invoke-virtual {p2}, Landroid/app/PendingIntent;->getIntentSender()Landroid/content/IntentSender;
 
@@ -62,18 +59,15 @@
     .catch Landroid/content/IntentSender$SendIntentException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 59
     const/4 v1, 0x1
 
     .end local v0    # "context":Landroid/content/Context;
     :goto_0
     return v1
 
-    .line 52
     :catch_0
     move-exception v6
 
-    .line 53
     .local v6, "e":Landroid/content/IntentSender$SendIntentException;
     # getter for: Lcom/samsung/android/cocktailbar/AbsCocktailLoadablePanel;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/samsung/android/cocktailbar/AbsCocktailLoadablePanel;->access$000()Ljava/lang/String;
@@ -86,15 +80,12 @@
 
     move v1, v7
 
-    .line 54
     goto :goto_0
 
-    .line 55
     .end local v6    # "e":Landroid/content/IntentSender$SendIntentException;
     :catch_1
     move-exception v6
 
-    .line 56
     .local v6, "e":Ljava/lang/Exception;
     # getter for: Lcom/samsung/android/cocktailbar/AbsCocktailLoadablePanel;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/samsung/android/cocktailbar/AbsCocktailLoadablePanel;->access$000()Ljava/lang/String;
@@ -107,6 +98,5 @@
 
     move v1, v7
 
-    .line 57
     goto :goto_0
 .end method

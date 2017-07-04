@@ -36,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 1128
     iput-object p1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$GpsBatch$1;->this$2:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM$GpsBatch;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,7 +51,6 @@
     .param p2, "arg1"    # Landroid/location/Location;
 
     .prologue
-    .line 1134
     invoke-virtual {p1}, Landroid/location/Location;->getTime()J
 
     move-result-wide v0
@@ -65,14 +63,11 @@
 
     if-gez v0, :cond_0
 
-    .line 1135
     const/4 v0, -0x1
 
-    .line 1139
     :goto_0
     return v0
 
-    .line 1136
     :cond_0
     invoke-virtual {p1}, Landroid/location/Location;->getTime()J
 
@@ -86,12 +81,10 @@
 
     if-lez v0, :cond_1
 
-    .line 1137
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 1139
     :cond_1
     const/4 v0, 0x0
 
@@ -104,7 +97,6 @@
     .param p2, "x1"    # Ljava/lang/Object;
 
     .prologue
-    .line 1128
     check-cast p1, Landroid/location/Location;
 
     .end local p1    # "x0":Ljava/lang/Object;

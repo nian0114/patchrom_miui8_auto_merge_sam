@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 1563
     iput-object p1, p0, Landroid/widget/AbsHorizontalListView$1;->this$0:Landroid/widget/AbsHorizontalListView;
 
     iput-boolean p2, p0, Landroid/widget/AbsHorizontalListView$1;->val$enabled:Z
@@ -44,7 +43,6 @@
     .locals 2
 
     .prologue
-    .line 1566
     iget-object v0, p0, Landroid/widget/AbsHorizontalListView$1;->this$0:Landroid/widget/AbsHorizontalListView;
 
     iget-boolean v1, p0, Landroid/widget/AbsHorizontalListView$1;->val$enabled:Z
@@ -52,6 +50,5 @@
     # invokes: Landroid/widget/AbsHorizontalListView;->setFastScrollerEnabledUiThread(Z)V
     invoke-static {v0, v1}, Landroid/widget/AbsHorizontalListView;->access$000(Landroid/widget/AbsHorizontalListView;Z)V
 
-    .line 1567
     return-void
 .end method

@@ -36,23 +36,18 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 12794
     iput-object p1, p0, Landroid/widget/TextView$TouchMonitorListener;->this$0:Landroid/widget/TextView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 12795
     iput v0, p0, Landroid/widget/TextView$TouchMonitorListener;->mStartX:F
 
-    .line 12796
     iput v0, p0, Landroid/widget/TextView$TouchMonitorListener;->mStartY:F
 
-    .line 12797
     const/16 v0, 0x3e8
 
     iput v0, p0, Landroid/widget/TextView$TouchMonitorListener;->globalTimeForTouch:I
 
-    .line 12798
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Landroid/widget/TextView$TouchMonitorListener;->mPressTime:J
@@ -66,7 +61,6 @@
     .param p2, "x1"    # Landroid/widget/TextView$1;
 
     .prologue
-    .line 12794
     invoke-direct {p0, p1}, Landroid/widget/TextView$TouchMonitorListener;-><init>(Landroid/widget/TextView;)V
 
     return-void
@@ -79,34 +73,28 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 12802
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
-    .line 12803
     .local v0, "action":I
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
 
     move-result v6
 
-    .line 12804
     .local v6, "rawX":F
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawY()F
 
     move-result v7
 
-    .line 12806
     .local v7, "rawY":F
     packed-switch v0, :pswitch_data_0
 
-    .line 12838
     :cond_0
     :goto_0
     :pswitch_0
     return-void
 
-    .line 12808
     :pswitch_1
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
@@ -116,7 +104,6 @@
 
     sub-long v2, v8, v10
 
-    .line 12809
     .local v2, "elipseTime":J
     iget v8, p0, Landroid/widget/TextView$TouchMonitorListener;->mStartX:F
 
@@ -126,7 +113,6 @@
 
     move-result v4
 
-    .line 12810
     .local v4, "moveX":F
     iget v8, p0, Landroid/widget/TextView$TouchMonitorListener;->mStartY:F
 
@@ -136,7 +122,6 @@
 
     move-result v5
 
-    .line 12811
     .local v5, "moveY":F
     mul-float v8, v4, v4
 
@@ -166,7 +151,6 @@
 
     const/4 v1, 0x1
 
-    .line 12812
     .local v1, "flag":Z
     :goto_1
     invoke-static {}, Landroid/text/MultiSelection;->getIsMultiSelectingText()Z
@@ -183,7 +167,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 12813
     iget-object v8, p0, Landroid/widget/TextView$TouchMonitorListener;->this$0:Landroid/widget/TextView;
 
     # getter for: Landroid/widget/TextView;->mPenSelectionController:Lcom/samsung/android/penselect/PenSelectionController;
@@ -213,21 +196,18 @@
 
     if-nez v8, :cond_0
 
-    .line 12817
     iget-object v8, p0, Landroid/widget/TextView$TouchMonitorListener;->this$0:Landroid/widget/TextView;
 
     invoke-virtual {v8}, Landroid/widget/TextView;->clearAllMultiSelection()Z
 
     goto :goto_0
 
-    .line 12811
     .end local v1    # "flag":Z
     :cond_1
     const/4 v1, 0x0
 
     goto :goto_1
 
-    .line 12820
     .restart local v1    # "flag":Z
     :cond_2
     iget-object v8, p0, Landroid/widget/TextView$TouchMonitorListener;->this$0:Landroid/widget/TextView;
@@ -238,14 +218,12 @@
 
     if-nez v8, :cond_0
 
-    .line 12821
     iget-object v8, p0, Landroid/widget/TextView$TouchMonitorListener;->this$0:Landroid/widget/TextView;
 
     invoke-virtual {v8}, Landroid/widget/TextView;->clearMultiSelection()Z
 
     goto :goto_0
 
-    .line 12827
     .end local v1    # "flag":Z
     .end local v2    # "elipseTime":J
     .end local v4    # "moveX":F
@@ -257,15 +235,12 @@
 
     iput-wide v8, p0, Landroid/widget/TextView$TouchMonitorListener;->mPressTime:J
 
-    .line 12828
     iput v6, p0, Landroid/widget/TextView$TouchMonitorListener;->mStartX:F
 
-    .line 12829
     iput v7, p0, Landroid/widget/TextView$TouchMonitorListener;->mStartY:F
 
     goto :goto_0
 
-    .line 12806
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_2

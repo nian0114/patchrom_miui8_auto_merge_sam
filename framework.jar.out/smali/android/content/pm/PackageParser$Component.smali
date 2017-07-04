@@ -56,37 +56,30 @@
     .end annotation
 
     .prologue
-    .line 4827
     .local p0, "this":Landroid/content/pm/PackageParser$Component;, "Landroid/content/pm/PackageParser$Component<TII;>;"
     .local p1, "clone":Landroid/content/pm/PackageParser$Component;, "Landroid/content/pm/PackageParser$Component<TII;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4828
     iget-object v0, p1, Landroid/content/pm/PackageParser$Component;->owner:Landroid/content/pm/PackageParser$Package;
 
     iput-object v0, p0, Landroid/content/pm/PackageParser$Component;->owner:Landroid/content/pm/PackageParser$Package;
 
-    .line 4829
     iget-object v0, p1, Landroid/content/pm/PackageParser$Component;->intents:Ljava/util/ArrayList;
 
     iput-object v0, p0, Landroid/content/pm/PackageParser$Component;->intents:Ljava/util/ArrayList;
 
-    .line 4830
     iget-object v0, p1, Landroid/content/pm/PackageParser$Component;->className:Ljava/lang/String;
 
     iput-object v0, p0, Landroid/content/pm/PackageParser$Component;->className:Ljava/lang/String;
 
-    .line 4831
     iget-object v0, p1, Landroid/content/pm/PackageParser$Component;->componentName:Landroid/content/ComponentName;
 
     iput-object v0, p0, Landroid/content/pm/PackageParser$Component;->componentName:Landroid/content/ComponentName;
 
-    .line 4832
     iget-object v0, p1, Landroid/content/pm/PackageParser$Component;->componentShortName:Ljava/lang/String;
 
     iput-object v0, p0, Landroid/content/pm/PackageParser$Component;->componentShortName:Ljava/lang/String;
 
-    .line 4833
     return-void
 .end method
 
@@ -98,19 +91,14 @@
     .local p0, "this":Landroid/content/pm/PackageParser$Component;, "Landroid/content/pm/PackageParser$Component<TII;>;"
     const/4 v0, 0x0
 
-    .line 4748
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4749
     iput-object p1, p0, Landroid/content/pm/PackageParser$Component;->owner:Landroid/content/pm/PackageParser$Package;
 
-    .line 4750
     iput-object v0, p0, Landroid/content/pm/PackageParser$Component;->intents:Ljava/util/ArrayList;
 
-    .line 4751
     iput-object v0, p0, Landroid/content/pm/PackageParser$Component;->className:Ljava/lang/String;
 
-    .line 4752
     return-void
 .end method
 
@@ -123,27 +111,22 @@
     .local p0, "this":Landroid/content/pm/PackageParser$Component;, "Landroid/content/pm/PackageParser$Component<TII;>;"
     const/4 v6, 0x0
 
-    .line 4799
     invoke-direct {p0, p1, p2}, Landroid/content/pm/PackageParser$Component;-><init>(Landroid/content/pm/PackageParser$ParsePackageItemArgs;Landroid/content/pm/PackageItemInfo;)V
 
-    .line 4800
     iget-object v0, p1, Landroid/content/pm/PackageParser$ParseComponentArgs;->outError:[Ljava/lang/String;
 
     aget-object v0, v0, v6
 
     if-eqz v0, :cond_0
 
-    .line 4825
     :goto_0
     return-void
 
-    .line 4804
     :cond_0
     iget v0, p1, Landroid/content/pm/PackageParser$ParseComponentArgs;->processRes:I
 
     if-eqz v0, :cond_1
 
-    .line 4806
     iget-object v0, p0, Landroid/content/pm/PackageParser$Component;->owner:Landroid/content/pm/PackageParser$Package;
 
     iget-object v0, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -154,7 +137,6 @@
 
     if-lt v0, v1, :cond_3
 
-    .line 4807
     iget-object v0, p1, Landroid/content/pm/PackageParser$ParseComponentArgs;->sa:Landroid/content/res/TypedArray;
 
     iget v1, p1, Landroid/content/pm/PackageParser$ParseComponentArgs;->processRes:I
@@ -165,7 +147,6 @@
 
     move-result-object v2
 
-    .line 4815
     .local v2, "pname":Ljava/lang/CharSequence;
     :goto_1
     iget-object v0, p0, Landroid/content/pm/PackageParser$Component;->owner:Landroid/content/pm/PackageParser$Package;
@@ -193,14 +174,12 @@
 
     iput-object v0, p2, Landroid/content/pm/ComponentInfo;->processName:Ljava/lang/String;
 
-    .line 4820
     .end local v2    # "pname":Ljava/lang/CharSequence;
     :cond_1
     iget v0, p1, Landroid/content/pm/PackageParser$ParseComponentArgs;->descriptionRes:I
 
     if-eqz v0, :cond_2
 
-    .line 4821
     iget-object v0, p1, Landroid/content/pm/PackageParser$ParseComponentArgs;->sa:Landroid/content/res/TypedArray;
 
     iget v1, p1, Landroid/content/pm/PackageParser$ParseComponentArgs;->descriptionRes:I
@@ -211,7 +190,6 @@
 
     iput v0, p2, Landroid/content/pm/ComponentInfo;->descriptionRes:I
 
-    .line 4824
     :cond_2
     iget-object v0, p1, Landroid/content/pm/PackageParser$ParseComponentArgs;->sa:Landroid/content/res/TypedArray;
 
@@ -227,7 +205,6 @@
 
     goto :goto_0
 
-    .line 4813
     :cond_3
     iget-object v0, p1, Landroid/content/pm/PackageParser$ParseComponentArgs;->sa:Landroid/content/res/TypedArray;
 
@@ -252,22 +229,18 @@
 
     const/4 v8, 0x0
 
-    .line 4754
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4755
     iget-object v5, p1, Landroid/content/pm/PackageParser$ParsePackageItemArgs;->owner:Landroid/content/pm/PackageParser$Package;
 
     iput-object v5, p0, Landroid/content/pm/PackageParser$Component;->owner:Landroid/content/pm/PackageParser$Package;
 
-    .line 4756
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5, v8}, Ljava/util/ArrayList;-><init>(I)V
 
     iput-object v5, p0, Landroid/content/pm/PackageParser$Component;->intents:Ljava/util/ArrayList;
 
-    .line 4757
     iget-object v5, p1, Landroid/content/pm/PackageParser$ParsePackageItemArgs;->sa:Landroid/content/res/TypedArray;
 
     iget v6, p1, Landroid/content/pm/PackageParser$ParsePackageItemArgs;->nameRes:I
@@ -276,14 +249,11 @@
 
     move-result-object v3
 
-    .line 4758
     .local v3, "name":Ljava/lang/String;
     if-nez v3, :cond_0
 
-    .line 4759
     iput-object v7, p0, Landroid/content/pm/PackageParser$Component;->className:Ljava/lang/String;
 
-    .line 4760
     iget-object v5, p1, Landroid/content/pm/PackageParser$ParsePackageItemArgs;->outError:[Ljava/lang/String;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -308,11 +278,9 @@
 
     aput-object v6, v5, v8
 
-    .line 4796
     :goto_0
     return-void
 
-    .line 4764
     :cond_0
     iget-object v5, p0, Landroid/content/pm/PackageParser$Component;->owner:Landroid/content/pm/PackageParser$Package;
 
@@ -329,15 +297,12 @@
 
     iput-object v5, p2, Landroid/content/pm/PackageItemInfo;->name:Ljava/lang/String;
 
-    .line 4766
     iget-object v5, p2, Landroid/content/pm/PackageItemInfo;->name:Ljava/lang/String;
 
     if-nez v5, :cond_1
 
-    .line 4767
     iput-object v7, p0, Landroid/content/pm/PackageParser$Component;->className:Ljava/lang/String;
 
-    .line 4768
     iget-object v5, p1, Landroid/content/pm/PackageParser$ParsePackageItemArgs;->outError:[Ljava/lang/String;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -364,13 +329,11 @@
 
     goto :goto_0
 
-    .line 4772
     :cond_1
     iget-object v5, p2, Landroid/content/pm/PackageItemInfo;->name:Ljava/lang/String;
 
     iput-object v5, p0, Landroid/content/pm/PackageParser$Component;->className:Ljava/lang/String;
 
-    .line 4774
     iget-object v5, p1, Landroid/content/pm/PackageParser$ParsePackageItemArgs;->sa:Landroid/content/res/TypedArray;
 
     iget v6, p1, Landroid/content/pm/PackageParser$ParsePackageItemArgs;->iconRes:I
@@ -379,17 +342,13 @@
 
     move-result v1
 
-    .line 4775
     .local v1, "iconVal":I
     if-eqz v1, :cond_2
 
-    .line 4776
     iput v1, p2, Landroid/content/pm/PackageItemInfo;->icon:I
 
-    .line 4777
     iput-object v7, p2, Landroid/content/pm/PackageItemInfo;->nonLocalizedLabel:Ljava/lang/CharSequence;
 
-    .line 4780
     :cond_2
     iget-object v5, p1, Landroid/content/pm/PackageParser$ParsePackageItemArgs;->sa:Landroid/content/res/TypedArray;
 
@@ -399,14 +358,11 @@
 
     move-result v2
 
-    .line 4781
     .local v2, "logoVal":I
     if-eqz v2, :cond_3
 
-    .line 4782
     iput v2, p2, Landroid/content/pm/PackageItemInfo;->logo:I
 
-    .line 4785
     :cond_3
     iget-object v5, p1, Landroid/content/pm/PackageParser$ParsePackageItemArgs;->sa:Landroid/content/res/TypedArray;
 
@@ -416,14 +372,11 @@
 
     move-result v0
 
-    .line 4786
     .local v0, "bannerVal":I
     if-eqz v0, :cond_4
 
-    .line 4787
     iput v0, p2, Landroid/content/pm/PackageItemInfo;->banner:I
 
-    .line 4790
     :cond_4
     iget-object v5, p1, Landroid/content/pm/PackageParser$ParsePackageItemArgs;->sa:Landroid/content/res/TypedArray;
 
@@ -433,7 +386,6 @@
 
     move-result-object v4
 
-    .line 4791
     .local v4, "v":Landroid/util/TypedValue;
     if-eqz v4, :cond_5
 
@@ -443,14 +395,12 @@
 
     if-nez v5, :cond_5
 
-    .line 4792
     invoke-virtual {v4}, Landroid/util/TypedValue;->coerceToString()Ljava/lang/CharSequence;
 
     move-result-object v5
 
     iput-object v5, p2, Landroid/content/pm/PackageItemInfo;->nonLocalizedLabel:Ljava/lang/CharSequence;
 
-    .line 4795
     :cond_5
     iget-object v5, p0, Landroid/content/pm/PackageParser$Component;->owner:Landroid/content/pm/PackageParser$Package;
 
@@ -468,7 +418,6 @@
     .param p1, "sb"    # Ljava/lang/StringBuilder;
 
     .prologue
-    .line 4847
     .local p0, "this":Landroid/content/pm/PackageParser$Component;, "Landroid/content/pm/PackageParser$Component<TII;>;"
     iget-object v0, p0, Landroid/content/pm/PackageParser$Component;->owner:Landroid/content/pm/PackageParser$Package;
 
@@ -480,7 +429,6 @@
 
     invoke-static {p1, v0, v1}, Landroid/content/ComponentName;->appendShortString(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4848
     return-void
 .end method
 
@@ -488,26 +436,21 @@
     .locals 3
 
     .prologue
-    .line 4836
     .local p0, "this":Landroid/content/pm/PackageParser$Component;, "Landroid/content/pm/PackageParser$Component<TII;>;"
     iget-object v0, p0, Landroid/content/pm/PackageParser$Component;->componentName:Landroid/content/ComponentName;
 
     if-eqz v0, :cond_0
 
-    .line 4837
     iget-object v0, p0, Landroid/content/pm/PackageParser$Component;->componentName:Landroid/content/ComponentName;
 
-    .line 4843
     :goto_0
     return-object v0
 
-    .line 4839
     :cond_0
     iget-object v0, p0, Landroid/content/pm/PackageParser$Component;->className:Ljava/lang/String;
 
     if-eqz v0, :cond_1
 
-    .line 4840
     new-instance v0, Landroid/content/ComponentName;
 
     iget-object v1, p0, Landroid/content/pm/PackageParser$Component;->owner:Landroid/content/pm/PackageParser$Package;
@@ -522,7 +465,6 @@
 
     iput-object v0, p0, Landroid/content/pm/PackageParser$Component;->componentName:Landroid/content/ComponentName;
 
-    .line 4843
     :cond_1
     iget-object v0, p0, Landroid/content/pm/PackageParser$Component;->componentName:Landroid/content/ComponentName;
 
@@ -534,7 +476,6 @@
     .param p1, "pw"    # Ljava/io/PrintWriter;
 
     .prologue
-    .line 4851
     .local p0, "this":Landroid/content/pm/PackageParser$Component;, "Landroid/content/pm/PackageParser$Component<TII;>;"
     iget-object v0, p0, Landroid/content/pm/PackageParser$Component;->owner:Landroid/content/pm/PackageParser$Package;
 
@@ -546,7 +487,6 @@
 
     invoke-static {p1, v0, v1}, Landroid/content/ComponentName;->printShortString(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4852
     return-void
 .end method
 
@@ -558,12 +498,9 @@
     .local p0, "this":Landroid/content/pm/PackageParser$Component;, "Landroid/content/pm/PackageParser$Component<TII;>;"
     const/4 v0, 0x0
 
-    .line 4855
     iput-object v0, p0, Landroid/content/pm/PackageParser$Component;->componentName:Landroid/content/ComponentName;
 
-    .line 4856
     iput-object v0, p0, Landroid/content/pm/PackageParser$Component;->componentShortName:Ljava/lang/String;
 
-    .line 4857
     return-void
 .end method

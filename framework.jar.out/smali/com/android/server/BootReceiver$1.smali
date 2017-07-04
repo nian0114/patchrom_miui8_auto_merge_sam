@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 87
     iput-object p1, p0, Lcom/android/server/BootReceiver$1;->this$0:Lcom/android/server/BootReceiver;
 
     iput-object p2, p0, Lcom/android/server/BootReceiver$1;->val$context:Landroid/content/Context;
@@ -41,7 +40,6 @@
     .locals 4
 
     .prologue
-    .line 91
     :try_start_0
     iget-object v2, p0, Lcom/android/server/BootReceiver$1;->this$0:Lcom/android/server/BootReceiver;
 
@@ -52,14 +50,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 96
     :goto_0
     const/4 v1, 0x0
 
-    .line 98
     .local v1, "onlyCore":Z
     :try_start_1
-    const-string/jumbo v2, "package"
+    const-string v2, "package"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -76,11 +72,9 @@
 
     move-result v1
 
-    .line 102
     :goto_1
     if-nez v1, :cond_0
 
-    .line 103
     :try_start_2
     iget-object v2, p0, Lcom/android/server/BootReceiver$1;->this$0:Lcom/android/server/BootReceiver;
 
@@ -91,17 +85,14 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 109
     :cond_0
     :goto_2
     return-void
 
-    .line 92
     .end local v1    # "onlyCore":Z
     :catch_0
     move-exception v0
 
-    .line 93
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "BootReceiver"
 
@@ -111,13 +102,11 @@
 
     goto :goto_0
 
-    .line 105
     .end local v0    # "e":Ljava/lang/Exception;
     .restart local v1    # "onlyCore":Z
     :catch_1
     move-exception v0
 
-    .line 106
     .restart local v0    # "e":Ljava/lang/Exception;
     const-string v2, "BootReceiver"
 
@@ -127,7 +116,6 @@
 
     goto :goto_2
 
-    .line 100
     .end local v0    # "e":Ljava/lang/Exception;
     :catch_2
     move-exception v2

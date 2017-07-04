@@ -92,35 +92,29 @@
     .locals 2
 
     .prologue
-    .line 94
     const-string v0, ""
 
     sput-object v0, Landroid/sec/clipboard/data/ClipboardDefine;->DEFAULT_PATH:Ljava/lang/String;
 
-    .line 97
     const-string v0, "_thum.jpg"
 
     sput-object v0, Landroid/sec/clipboard/data/ClipboardDefine;->THUMBNAIL_SUFFIX:Ljava/lang/String;
 
-    .line 101
     sget-boolean v0, Landroid/sec/clipboard/data/ClipboardConstants;->DEBUG:Z
 
     sput-boolean v0, Landroid/sec/clipboard/data/ClipboardDefine;->DEBUG:Z
 
-    .line 104
     sget-boolean v0, Landroid/sec/clipboard/data/ClipboardConstants;->INFO_DEBUG:Z
 
     sput-boolean v0, Landroid/sec/clipboard/data/ClipboardDefine;->INFO_DEBUG:Z
 
-    .line 124
     sget-boolean v0, Landroid/sec/clipboard/data/ClipboardConstants;->SUPPORT_KNOX:Z
 
     sput-boolean v0, Landroid/sec/clipboard/data/ClipboardDefine;->SUPPORT_KNOX:Z
 
-    .line 141
     const-string v0, "americano"
 
-    const-string/jumbo v1, "ro.build.scafe"
+    const-string v1, "ro.build.scafe"
 
     invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -139,7 +133,6 @@
     .locals 0
 
     .prologue
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

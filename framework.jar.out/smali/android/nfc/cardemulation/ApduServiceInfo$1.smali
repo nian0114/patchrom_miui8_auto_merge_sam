@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 761
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 764
     sget-object v1, Landroid/content/pm/ResolveInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
     move-object/from16 v0, p1
@@ -56,13 +54,11 @@
 
     check-cast v2, Landroid/content/pm/ResolveInfo;
 
-    .line 765
     .local v2, "info":Landroid/content/pm/ResolveInfo;
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 766
     .local v4, "description":Ljava/lang/String;
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
@@ -72,54 +68,45 @@
 
     const/4 v3, 0x1
 
-    .line 767
     .local v3, "onHost":Z
     :goto_0
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 768
     .local v5, "staticAidGroups":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/nfc/cardemulation/AidGroup;>;"
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v26
 
-    .line 769
     .local v26, "numStaticGroups":I
     if-lez v26, :cond_0
 
-    .line 770
     sget-object v1, Landroid/nfc/cardemulation/AidGroup;->CREATOR:Landroid/os/Parcelable$Creator;
 
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v5, v1}, Landroid/os/Parcel;->readTypedList(Ljava/util/List;Landroid/os/Parcelable$Creator;)V
 
-    .line 772
     :cond_0
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
-    .line 773
     .local v6, "dynamicAidGroups":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/nfc/cardemulation/AidGroup;>;"
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v25
 
-    .line 774
     .local v25, "numDynamicGroups":I
     if-lez v25, :cond_1
 
-    .line 775
     sget-object v1, Landroid/nfc/cardemulation/AidGroup;->CREATOR:Landroid/os/Parcelable$Creator;
 
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v6, v1}, Landroid/os/Parcel;->readTypedList(Ljava/util/List;Landroid/os/Parcelable$Creator;)V
 
-    .line 777
     :cond_1
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
@@ -129,26 +116,22 @@
 
     const/4 v7, 0x1
 
-    .line 778
     .local v7, "requiresUnlock":Z
     :goto_1
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v8
 
-    .line 779
     .local v8, "bannerResource":I
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v9
 
-    .line 780
     .local v9, "uid":I
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v10
 
-    .line 782
     .local v10, "settingsActivityName":Ljava/lang/String;
     sget-object v1, Landroid/nfc/cardemulation/ApduServiceInfo$SecureElementInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -160,13 +143,11 @@
 
     check-cast v23, Landroid/nfc/cardemulation/ApduServiceInfo$SecureElementInfo;
 
-    .line 785
     .local v23, "seInfo":Landroid/nfc/cardemulation/ApduServiceInfo$SecureElementInfo;
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v20
 
-    .line 788
     .local v20, "bannerFileName":Ljava/lang/String;
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
@@ -176,7 +157,6 @@
 
     const/4 v11, 0x1
 
-    .line 790
     .local v11, "isSelected":Z
     :goto_2
     const-string v1, "DCM"
@@ -199,7 +179,6 @@
 
     if-eqz v1, :cond_6
 
-    .line 792
     :cond_2
     new-instance v1, Landroid/nfc/cardemulation/ApduServiceInfo;
 
@@ -207,11 +186,9 @@
 
     move-object v12, v1
 
-    .line 797
     :goto_3
     return-object v12
 
-    .line 766
     .end local v3    # "onHost":Z
     .end local v5    # "staticAidGroups":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/nfc/cardemulation/AidGroup;>;"
     .end local v6    # "dynamicAidGroups":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/nfc/cardemulation/AidGroup;>;"
@@ -229,7 +206,6 @@
 
     goto :goto_0
 
-    .line 777
     .restart local v3    # "onHost":Z
     .restart local v5    # "staticAidGroups":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/nfc/cardemulation/AidGroup;>;"
     .restart local v6    # "dynamicAidGroups":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/nfc/cardemulation/AidGroup;>;"
@@ -240,7 +216,6 @@
 
     goto :goto_1
 
-    .line 788
     .restart local v7    # "requiresUnlock":Z
     .restart local v8    # "bannerResource":I
     .restart local v9    # "uid":I
@@ -252,7 +227,6 @@
 
     goto :goto_2
 
-    .line 797
     .restart local v11    # "isSelected":Z
     :cond_6
     new-instance v12, Landroid/nfc/cardemulation/ApduServiceInfo;
@@ -287,7 +261,6 @@
     .param p1, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 761
     invoke-virtual {p0, p1}, Landroid/nfc/cardemulation/ApduServiceInfo$1;->createFromParcel(Landroid/os/Parcel;)Landroid/nfc/cardemulation/ApduServiceInfo;
 
     move-result-object v0
@@ -300,7 +273,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 804
     new-array v0, p1, [Landroid/nfc/cardemulation/ApduServiceInfo;
 
     return-object v0
@@ -311,7 +283,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 761
     invoke-virtual {p0, p1}, Landroid/nfc/cardemulation/ApduServiceInfo$1;->newArray(I)[Landroid/nfc/cardemulation/ApduServiceInfo;
 
     move-result-object v0

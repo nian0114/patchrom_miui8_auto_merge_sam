@@ -93,41 +93,34 @@
     .param p1, "dm"    # Landroid/hardware/display/IDisplayManager;
 
     .prologue
-    .line 111
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 93
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Landroid/hardware/display/DisplayManagerGlobal;->mLock:Ljava/lang/Object;
 
-    .line 98
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDisplayListeners:Ljava/util/ArrayList;
 
-    .line 102
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/hardware/display/DisplayManagerGlobal;->mExtendedDisplayListeners:Ljava/util/ArrayList;
 
-    .line 106
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDisplayInfoCache:Landroid/util/SparseArray;
 
-    .line 112
     iput-object p1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
 
-    .line 113
     return-void
 .end method
 
@@ -138,7 +131,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 66
     invoke-direct {p0, p1, p2}, Landroid/hardware/display/DisplayManagerGlobal;->handleDisplayEvent(II)V
 
     return-void
@@ -149,14 +141,12 @@
     .param p1, "listener"    # Landroid/hardware/display/DisplayManager$DisplayListener;
 
     .prologue
-    .line 349
     iget-object v2, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDisplayListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
-    .line 350
     .local v1, "numListeners":I
     const/4 v0, 0x0
 
@@ -164,7 +154,6 @@
     :goto_0
     if-ge v0, v1, :cond_1
 
-    .line 351
     iget-object v2, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDisplayListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -177,19 +166,16 @@
 
     if-ne v2, p1, :cond_0
 
-    .line 355
     .end local v0    # "i":I
     :goto_1
     return v0
 
-    .line 350
     .restart local v0    # "i":I
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 355
     :cond_1
     const/4 v0, -0x1
 
@@ -201,19 +187,16 @@
     .param p1, "listener"    # Landroid/hardware/display/ExtendedDisplayListener;
 
     .prologue
-    .line 321
     iget-object v2, p0, Landroid/hardware/display/DisplayManagerGlobal;->mExtendedDisplayListeners:Ljava/util/ArrayList;
 
     if-eqz v2, :cond_1
 
-    .line 322
     iget-object v2, p0, Landroid/hardware/display/DisplayManagerGlobal;->mExtendedDisplayListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
-    .line 323
     .local v1, "numListeners":I
     const/4 v0, 0x0
 
@@ -221,7 +204,6 @@
     :goto_0
     if-ge v0, v1, :cond_1
 
-    .line 324
     iget-object v2, p0, Landroid/hardware/display/DisplayManagerGlobal;->mExtendedDisplayListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -234,13 +216,11 @@
 
     if-ne v2, p1, :cond_0
 
-    .line 329
     .end local v0    # "i":I
     .end local v1    # "numListeners":I
     :goto_1
     return v0
 
-    .line 323
     .restart local v0    # "i":I
     .restart local v1    # "numListeners":I
     :cond_0
@@ -248,7 +228,6 @@
 
     goto :goto_0
 
-    .line 329
     .end local v0    # "i":I
     .end local v1    # "numListeners":I
     :cond_1
@@ -261,29 +240,24 @@
     .locals 4
 
     .prologue
-    .line 122
     const-class v2, Landroid/hardware/display/DisplayManagerGlobal;
 
     monitor-enter v2
 
-    .line 123
     :try_start_0
     sget-object v1, Landroid/hardware/display/DisplayManagerGlobal;->sInstance:Landroid/hardware/display/DisplayManagerGlobal;
 
     if-nez v1, :cond_0
 
-    .line 124
     const-string v1, "display"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 125
     .local v0, "b":Landroid/os/IBinder;
     if-eqz v0, :cond_0
 
-    .line 126
     new-instance v1, Landroid/hardware/display/DisplayManagerGlobal;
 
     invoke-static {v0}, Landroid/hardware/display/IDisplayManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/hardware/display/IDisplayManager;
@@ -294,7 +268,6 @@
 
     sput-object v1, Landroid/hardware/display/DisplayManagerGlobal;->sInstance:Landroid/hardware/display/DisplayManagerGlobal;
 
-    .line 129
     :cond_0
     sget-object v1, Landroid/hardware/display/DisplayManagerGlobal;->sInstance:Landroid/hardware/display/DisplayManagerGlobal;
 
@@ -302,7 +275,6 @@
 
     return-object v1
 
-    .line 130
     :catchall_0
     move-exception v1
 
@@ -319,12 +291,10 @@
     .param p2, "event"    # I
 
     .prologue
-    .line 371
     iget-object v3, p0, Landroid/hardware/display/DisplayManagerGlobal;->mLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 373
     const/4 v2, 0x4
 
     if-eq p2, v2, :cond_0
@@ -345,21 +315,18 @@
 
     if-ne p2, v2, :cond_3
 
-    .line 375
     :cond_0
     :try_start_0
     iget-object v2, p0, Landroid/hardware/display/DisplayManagerGlobal;->mExtendedDisplayListeners:Ljava/util/ArrayList;
 
     if-eqz v2, :cond_1
 
-    .line 376
     iget-object v2, p0, Landroid/hardware/display/DisplayManagerGlobal;->mExtendedDisplayListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
-    .line 377
     .local v1, "numListeners":I
     const/4 v0, 0x0
 
@@ -367,7 +334,6 @@
     :goto_0
     if-ge v0, v1, :cond_2
 
-    .line 378
     iget-object v2, p0, Landroid/hardware/display/DisplayManagerGlobal;->mExtendedDisplayListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -378,12 +344,10 @@
 
     invoke-virtual {v2, p1, p2}, Landroid/hardware/display/DisplayManagerGlobal$ExtendedDisplayListenerDelegate;->sendExtendedDisplayEvent(II)V
 
-    .line 377
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 381
     .end local v0    # "i":I
     .end local v1    # "numListeners":I
     :cond_1
@@ -393,15 +357,12 @@
 
     invoke-static {v2, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 383
     :cond_2
     monitor-exit v3
 
-    .line 400
     :goto_1
     return-void
 
-    .line 395
     :cond_3
     iget-object v2, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDisplayListeners:Ljava/util/ArrayList;
 
@@ -409,7 +370,6 @@
 
     move-result v1
 
-    .line 396
     .restart local v1    # "numListeners":I
     const/4 v0, 0x0
 
@@ -417,7 +377,6 @@
     :goto_2
     if-ge v0, v1, :cond_4
 
-    .line 397
     iget-object v2, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDisplayListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -428,12 +387,10 @@
 
     invoke-virtual {v2, p1, p2}, Landroid/hardware/display/DisplayManagerGlobal$DisplayListenerDelegate;->sendDisplayEvent(II)V
 
-    .line 396
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_2
 
-    .line 399
     :cond_4
     monitor-exit v3
 
@@ -457,19 +414,16 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 359
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mCallback:Landroid/hardware/display/DisplayManagerGlobal$DisplayManagerCallback;
 
     if-nez v1, :cond_0
 
-    .line 360
     new-instance v1, Landroid/hardware/display/DisplayManagerGlobal$DisplayManagerCallback;
 
     invoke-direct {v1, p0, v3}, Landroid/hardware/display/DisplayManagerGlobal$DisplayManagerCallback;-><init>(Landroid/hardware/display/DisplayManagerGlobal;Landroid/hardware/display/DisplayManagerGlobal$1;)V
 
     iput-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mCallback:Landroid/hardware/display/DisplayManagerGlobal$DisplayManagerCallback;
 
-    .line 362
     :try_start_0
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
 
@@ -479,16 +433,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 368
     :cond_0
     :goto_0
     return-void
 
-    .line 363
     :catch_0
     move-exception v0
 
-    .line 364
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "DisplayManager"
 
@@ -496,7 +447,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 365
     iput-object v3, p0, Landroid/hardware/display/DisplayManagerGlobal;->mCallback:Landroid/hardware/display/DisplayManagerGlobal$DisplayManagerCallback;
 
     goto :goto_0
@@ -509,10 +459,8 @@
     .param p1, "deviceAddress"    # Ljava/lang/String;
 
     .prologue
-    .line 432
     if-nez p1, :cond_0
 
-    .line 433
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "deviceAddress must not be null"
@@ -521,7 +469,6 @@
 
     throw v1
 
-    .line 437
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
@@ -530,15 +477,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 441
     :goto_0
     return-void
 
-    .line 438
     :catch_0
     move-exception v0
 
-    .line 439
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "DisplayManager"
 
@@ -577,10 +521,8 @@
     .param p2, "deviceAddress"    # Ljava/lang/String;
 
     .prologue
-    .line 466
     if-nez p2, :cond_0
 
-    .line 467
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "deviceAddress must not be null"
@@ -589,7 +531,6 @@
 
     throw v1
 
-    .line 471
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
@@ -598,15 +539,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 476
     :goto_0
     return-void
 
-    .line 472
     :catch_0
     move-exception v0
 
-    .line 473
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "DisplayManager"
 
@@ -656,10 +594,8 @@
     .param p3, "isPendingRequest"    # Z
 
     .prologue
-    .line 481
     if-nez p2, :cond_0
 
-    .line 482
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "deviceAddress must not be null"
@@ -668,7 +604,6 @@
 
     throw v1
 
-    .line 486
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
@@ -677,15 +612,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 491
     :goto_0
     return-void
 
-    .line 487
     :catch_0
     move-exception v0
 
-    .line 488
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "DisplayManager"
 
@@ -733,10 +665,8 @@
     .param p1, "deviceAddress"    # Ljava/lang/String;
 
     .prologue
-    .line 736
     if-nez p1, :cond_0
 
-    .line 737
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "deviceAddress must not be null"
@@ -745,7 +675,6 @@
 
     throw v1
 
-    .line 741
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
@@ -754,15 +683,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 746
     :goto_0
     return-void
 
-    .line 742
     :catch_0
     move-exception v0
 
-    .line 743
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "DisplayManager"
 
@@ -809,23 +735,20 @@
     .param p10, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 562
     invoke-static/range {p3 .. p3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 563
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v5, "name must be non-null and non-empty"
+    const-string v5, "name must be non-null and non-empty"
 
     invoke-direct {v2, v5}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v2
 
-    .line 565
     :cond_0
     if-lez p4, :cond_1
 
@@ -833,17 +756,15 @@
 
     if-gtz p6, :cond_2
 
-    .line 566
     :cond_1
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v5, "width, height, and densityDpi must be greater than 0"
+    const-string v5, "width, height, and densityDpi must be greater than 0"
 
     invoke-direct {v2, v5}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v2
 
-    .line 570
     :cond_2
     new-instance v3, Landroid/hardware/display/DisplayManagerGlobal$VirtualDisplayCallback;
 
@@ -853,7 +774,6 @@
 
     invoke-direct {v3, v0, v1}, Landroid/hardware/display/DisplayManagerGlobal$VirtualDisplayCallback;-><init>(Landroid/hardware/display/VirtualDisplay$Callback;Landroid/os/Handler;)V
 
-    .line 571
     .local v3, "callbackWrapper":Landroid/hardware/display/DisplayManagerGlobal$VirtualDisplayCallback;
     if-eqz p2, :cond_3
 
@@ -861,7 +781,6 @@
 
     move-result-object v4
 
-    .line 574
     .local v4, "projectionToken":Landroid/media/projection/IMediaProjection;
     :goto_0
     :try_start_0
@@ -889,11 +808,9 @@
 
     move-result v13
 
-    .line 580
     .local v13, "displayId":I
     if-gez v13, :cond_4
 
-    .line 581
     const-string v2, "DisplayManager"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -918,27 +835,22 @@
 
     invoke-static {v2, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 582
     const/4 v2, 0x0
 
-    .line 594
     .end local v13    # "displayId":I
     :goto_1
     return-object v2
 
-    .line 571
     .end local v4    # "projectionToken":Landroid/media/projection/IMediaProjection;
     :cond_3
     const/4 v4, 0x0
 
     goto :goto_0
 
-    .line 576
     .restart local v4    # "projectionToken":Landroid/media/projection/IMediaProjection;
     :catch_0
     move-exception v14
 
-    .line 577
     .local v14, "ex":Landroid/os/RemoteException;
     const-string v2, "DisplayManager"
 
@@ -964,12 +876,10 @@
 
     invoke-static {v2, v5, v14}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 578
     const/4 v2, 0x0
 
     goto :goto_1
 
-    .line 584
     .end local v14    # "ex":Landroid/os/RemoteException;
     .restart local v13    # "displayId":I
     :cond_4
@@ -977,11 +887,9 @@
 
     move-result-object v12
 
-    .line 585
     .local v12, "display":Landroid/view/Display;
     if-nez v12, :cond_5
 
-    .line 586
     const-string v2, "DisplayManager"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1006,7 +914,6 @@
 
     invoke-static {v2, v5}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 589
     :try_start_1
     iget-object v2, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
 
@@ -1014,13 +921,11 @@
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 592
     :goto_2
     const/4 v2, 0x0
 
     goto :goto_1
 
-    .line 594
     :cond_5
     new-instance v2, Landroid/hardware/display/VirtualDisplay;
 
@@ -1030,7 +935,6 @@
 
     goto :goto_1
 
-    .line 590
     :catch_1
     move-exception v2
 
@@ -1041,7 +945,6 @@
     .locals 3
 
     .prologue
-    .line 761
     :try_start_0
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
 
@@ -1049,15 +952,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 766
     :goto_0
     return-void
 
-    .line 762
     :catch_0
     move-exception v0
 
-    .line 763
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "DisplayManager"
 
@@ -1072,7 +972,6 @@
     .locals 3
 
     .prologue
-    .line 962
     :try_start_0
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
 
@@ -1080,15 +979,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 967
     :goto_0
     return-void
 
-    .line 963
     :catch_0
     move-exception v0
 
-    .line 964
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "DisplayManager"
 
@@ -1103,7 +999,6 @@
     .locals 3
 
     .prologue
-    .line 511
     :try_start_0
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
 
@@ -1111,15 +1006,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 515
     :goto_0
     return-void
 
-    .line 512
     :catch_0
     move-exception v0
 
-    .line 513
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "DisplayManager"
 
@@ -1136,7 +1028,6 @@
     .param p2, "deviceType"    # I
 
     .prologue
-    .line 751
     :try_start_0
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
 
@@ -1144,15 +1035,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 756
     :goto_0
     return-void
 
-    .line 752
     :catch_0
     move-exception v0
 
-    .line 753
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "DisplayManager"
 
@@ -1171,7 +1059,6 @@
     .param p4, "options"    # Ljava/lang/String;
 
     .prologue
-    .line 918
     :try_start_0
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
 
@@ -1179,15 +1066,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 923
     :goto_0
     return-void
 
-    .line 919
     :catch_0
     move-exception v0
 
-    .line 920
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "DisplayManager"
 
@@ -1209,7 +1093,6 @@
     .param p7, "isPendingRequest"    # Z
 
     .prologue
-    .line 928
     :try_start_0
     iget-object v0, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
 
@@ -1231,15 +1114,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 933
     :goto_0
     return-void
 
-    .line 929
     :catch_0
     move-exception v8
 
-    .line 930
     .local v8, "ex":Landroid/os/RemoteException;
     const-string v0, "DisplayManager"
 
@@ -1255,10 +1135,8 @@
     .param p1, "deviceAddress"    # Ljava/lang/String;
 
     .prologue
-    .line 531
     if-nez p1, :cond_0
 
-    .line 532
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "deviceAddress must not be null"
@@ -1267,7 +1145,6 @@
 
     throw v1
 
-    .line 536
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
@@ -1276,15 +1153,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 540
     :goto_0
     return-void
 
-    .line 537
     :catch_0
     move-exception v0
 
-    .line 538
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "DisplayManager"
 
@@ -1299,7 +1173,6 @@
     .locals 3
 
     .prologue
-    .line 1016
     :try_start_0
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
 
@@ -1309,15 +1182,12 @@
 
     move-result-object v1
 
-    .line 1019
     :goto_0
     return-object v1
 
-    .line 1017
     :catch_0
     move-exception v0
 
-    .line 1018
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "DisplayManager"
 
@@ -1325,7 +1195,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1019
     const/4 v1, 0x0
 
     goto :goto_0
@@ -1335,7 +1204,6 @@
     .locals 3
 
     .prologue
-    .line 1028
     :try_start_0
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
 
@@ -1345,15 +1213,12 @@
 
     move-result v1
 
-    .line 1031
     :goto_0
     return v1
 
-    .line 1029
     :catch_0
     move-exception v0
 
-    .line 1030
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "DisplayManager"
 
@@ -1361,7 +1226,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1031
     const/4 v1, -0x1
 
     goto :goto_0
@@ -1373,19 +1237,15 @@
     .param p2, "daj"    # Landroid/view/DisplayAdjustments;
 
     .prologue
-    .line 251
     invoke-virtual {p0, p1}, Landroid/hardware/display/DisplayManagerGlobal;->getDisplayInfo(I)Landroid/view/DisplayInfo;
 
     move-result-object v0
 
-    .line 252
     .local v0, "displayInfo":Landroid/view/DisplayInfo;
     if-nez v0, :cond_0
 
-    .line 253
     const/4 v1, 0x0
 
-    .line 255
     :goto_0
     return-object v1
 
@@ -1403,7 +1263,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 220
     :try_start_0
     iget-object v3, p0, Landroid/hardware/display/DisplayManagerGlobal;->mLock:Ljava/lang/Object;
 
@@ -1411,7 +1270,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 227
     :try_start_1
     iget-object v2, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
 
@@ -1419,19 +1277,15 @@
 
     move-result-object v0
 
-    .line 231
     .local v0, "displayIds":[I
     invoke-direct {p0}, Landroid/hardware/display/DisplayManagerGlobal;->registerCallbackIfNeededLocked()V
 
-    .line 232
     monitor-exit v3
 
-    .line 236
     .end local v0    # "displayIds":[I
     :goto_0
     return-object v0
 
-    .line 233
     :catchall_0
     move-exception v2
 
@@ -1444,11 +1298,9 @@
     :try_end_2
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 234
     :catch_0
     move-exception v1
 
-    .line 235
     .local v1, "ex":Landroid/os/RemoteException;
     const-string v2, "DisplayManager"
 
@@ -1456,7 +1308,6 @@
 
     invoke-static {v2, v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 236
     const/4 v2, 0x1
 
     new-array v0, v2, [I
@@ -1473,15 +1324,12 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 142
     if-nez p1, :cond_2
 
-    .line 143
     invoke-static {}, Landroid/app/ActivityThread;->currentActivityThread()Landroid/app/ActivityThread;
 
     move-result-object v0
 
-    .line 144
     .local v0, "am":Landroid/app/ActivityThread;
     if-eqz v0, :cond_0
 
@@ -1489,23 +1337,19 @@
 
     move-result-object v2
 
-    .line 146
     .local v2, "token":Landroid/os/IBinder;
     :cond_0
     sget-boolean v3, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SELECTIVE1ORIENTATION_ENABLED:Z
 
     if-eqz v3, :cond_1
 
-    .line 147
     if-eqz v0, :cond_1
 
-    .line 149
     :try_start_0
     invoke-virtual {v0}, Landroid/app/ActivityThread;->getSuspectActivityToken()Landroid/os/IBinder;
 
     move-result-object v1
 
-    .line 150
     .local v1, "selectivetoken":Landroid/os/IBinder;
     invoke-virtual {v0, v1}, Landroid/app/ActivityThread;->isSelectiveOrientationState(Landroid/os/IBinder;)Z
 
@@ -1513,7 +1357,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 151
     const/4 v3, 0x1
 
     invoke-virtual {p0, p1, v1, v3}, Landroid/hardware/display/DisplayManagerGlobal;->getDisplayInfo(ILandroid/os/IBinder;Z)Landroid/view/DisplayInfo;
@@ -1523,20 +1366,17 @@
 
     move-result-object v3
 
-    .line 161
     .end local v0    # "am":Landroid/app/ActivityThread;
     .end local v1    # "selectivetoken":Landroid/os/IBinder;
     .end local v2    # "token":Landroid/os/IBinder;
     :goto_0
     return-object v3
 
-    .line 154
     .restart local v0    # "am":Landroid/app/ActivityThread;
     .restart local v2    # "token":Landroid/os/IBinder;
     :catch_0
     move-exception v3
 
-    .line 159
     :cond_1
     :goto_1
     invoke-virtual {p0, p1, v2}, Landroid/hardware/display/DisplayManagerGlobal;->getDisplayInfo(ILandroid/os/IBinder;)Landroid/view/DisplayInfo;
@@ -1545,7 +1385,6 @@
 
     goto :goto_0
 
-    .line 161
     .end local v0    # "am":Landroid/app/ActivityThread;
     .end local v2    # "token":Landroid/os/IBinder;
     :cond_2
@@ -1555,7 +1394,6 @@
 
     goto :goto_0
 
-    .line 153
     .restart local v0    # "am":Landroid/app/ActivityThread;
     .restart local v2    # "token":Landroid/os/IBinder;
     :catch_1
@@ -1570,7 +1408,6 @@
     .param p2, "appToken"    # Landroid/os/IBinder;
 
     .prologue
-    .line 166
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, p2, v0}, Landroid/hardware/display/DisplayManagerGlobal;->getDisplayInfo(ILandroid/os/IBinder;Z)Landroid/view/DisplayInfo;
@@ -1589,7 +1426,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 172
     :try_start_0
     iget-object v4, p0, Landroid/hardware/display/DisplayManagerGlobal;->mLock:Ljava/lang/Object;
 
@@ -1597,7 +1433,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 182
     :try_start_1
     sget-boolean v3, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SELECTIVE1ORIENTATION_ENABLED:Z
 
@@ -1605,7 +1440,6 @@
 
     if-eqz p3, :cond_0
 
-    .line 183
     iget-object v3, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
 
     const/4 v5, 0x1
@@ -1614,26 +1448,21 @@
 
     move-result-object v1
 
-    .line 193
     .local v1, "info":Landroid/view/DisplayInfo;
     :goto_0
     if-nez v1, :cond_2
 
-    .line 194
     monitor-exit v4
 
     move-object v1, v2
 
-    .line 209
     .end local v1    # "info":Landroid/view/DisplayInfo;
     :goto_1
     return-object v1
 
-    .line 187
     :cond_0
     if-eqz p2, :cond_1
 
-    .line 188
     iget-object v3, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
 
     const/4 v5, 0x0
@@ -1645,7 +1474,6 @@
     .restart local v1    # "info":Landroid/view/DisplayInfo;
     goto :goto_0
 
-    .line 191
     .end local v1    # "info":Landroid/view/DisplayInfo;
     :cond_1
     iget-object v3, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
@@ -1657,16 +1485,13 @@
     .restart local v1    # "info":Landroid/view/DisplayInfo;
     goto :goto_0
 
-    .line 200
     :cond_2
     invoke-direct {p0}, Landroid/hardware/display/DisplayManagerGlobal;->registerCallbackIfNeededLocked()V
 
-    .line 205
     monitor-exit v4
 
     goto :goto_1
 
-    .line 206
     .end local v1    # "info":Landroid/view/DisplayInfo;
     :catchall_0
     move-exception v3
@@ -1680,11 +1505,9 @@
     :try_end_2
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 207
     :catch_0
     move-exception v0
 
-    .line 208
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v3, "DisplayManager"
 
@@ -1694,7 +1517,6 @@
 
     move-object v1, v2
 
-    .line 209
     goto :goto_1
 .end method
 
@@ -1703,7 +1525,6 @@
     .param p1, "deviceId"    # I
 
     .prologue
-    .line 1113
     :try_start_0
     iget-object v2, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
 
@@ -1711,7 +1532,6 @@
 
     move-result v0
 
-    .line 1114
     .local v0, "displayId":I
     sget-object v2, Landroid/view/DisplayAdjustments;->DEFAULT_DISPLAY_ADJUSTMENTS:Landroid/view/DisplayAdjustments;
 
@@ -1721,16 +1541,13 @@
 
     move-result-object v2
 
-    .line 1117
     .end local v0    # "displayId":I
     :goto_0
     return-object v2
 
-    .line 1115
     :catch_0
     move-exception v1
 
-    .line 1116
     .local v1, "ex":Landroid/os/RemoteException;
     const-string v2, "DisplayManager"
 
@@ -1738,7 +1555,6 @@
 
     invoke-static {v2, v3, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1117
     const/4 v2, 0x0
 
     goto :goto_0
@@ -1748,7 +1564,6 @@
     .locals 3
 
     .prologue
-    .line 972
     :try_start_0
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
 
@@ -1758,15 +1573,12 @@
 
     move-result-object v1
 
-    .line 975
     :goto_0
     return-object v1
 
-    .line 973
     :catch_0
     move-exception v0
 
-    .line 974
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "DisplayManager"
 
@@ -1774,7 +1586,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 975
     const/4 v1, 0x0
 
     goto :goto_0
@@ -1785,7 +1596,6 @@
     .param p1, "cancel"    # Z
 
     .prologue
-    .line 950
     :try_start_0
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
 
@@ -1795,15 +1605,12 @@
 
     move-result-object v1
 
-    .line 953
     :goto_0
     return-object v1
 
-    .line 951
     :catch_0
     move-exception v0
 
-    .line 952
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "DisplayManager"
 
@@ -1811,7 +1618,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 953
     const/4 v1, 0x0
 
     goto :goto_0
@@ -1822,7 +1628,6 @@
     .param p1, "displayId"    # I
 
     .prologue
-    .line 265
     sget-object v0, Landroid/view/DisplayAdjustments;->DEFAULT_DISPLAY_ADJUSTMENTS:Landroid/view/DisplayAdjustments;
 
     invoke-virtual {p0, p1, v0}, Landroid/hardware/display/DisplayManagerGlobal;->getCompatibleDisplay(ILandroid/view/DisplayAdjustments;)Landroid/view/Display;
@@ -1836,7 +1641,6 @@
     .locals 3
 
     .prologue
-    .line 994
     :try_start_0
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
 
@@ -1846,15 +1650,12 @@
 
     move-result v1
 
-    .line 997
     :goto_0
     return v1
 
-    .line 995
     :catch_0
     move-exception v0
 
-    .line 996
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "DisplayManager"
 
@@ -1862,7 +1663,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 997
     const/4 v1, -0x1
 
     goto :goto_0
@@ -1872,7 +1672,6 @@
     .locals 3
 
     .prologue
-    .line 793
     :try_start_0
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
 
@@ -1882,15 +1681,12 @@
 
     move-result v1
 
-    .line 796
     :goto_0
     return v1
 
-    .line 794
     :catch_0
     move-exception v0
 
-    .line 795
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "DisplayManager"
 
@@ -1898,7 +1694,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 796
     const/4 v1, -0x1
 
     goto :goto_0
@@ -1908,7 +1703,6 @@
     .locals 3
 
     .prologue
-    .line 544
     :try_start_0
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
 
@@ -1918,15 +1712,12 @@
 
     move-result-object v1
 
-    .line 547
     :goto_0
     return-object v1
 
-    .line 545
     :catch_0
     move-exception v0
 
-    .line 546
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "DisplayManager"
 
@@ -1934,7 +1725,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 547
     new-instance v1, Landroid/hardware/display/WifiDisplayStatus;
 
     invoke-direct {v1}, Landroid/hardware/display/WifiDisplayStatus;-><init>()V
@@ -1947,7 +1737,6 @@
     .param p1, "displayId"    # I
 
     .prologue
-    .line 1040
     :try_start_0
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
 
@@ -1957,15 +1746,12 @@
 
     move-result v1
 
-    .line 1043
     :goto_0
     return v1
 
-    .line 1041
     :catch_0
     move-exception v0
 
-    .line 1042
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "DisplayManager"
 
@@ -1973,7 +1759,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1043
     const/4 v1, 0x0
 
     goto :goto_0
@@ -1984,7 +1769,6 @@
     .param p1, "address"    # Ljava/lang/String;
 
     .prologue
-    .line 874
     :try_start_0
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
 
@@ -1994,15 +1778,12 @@
 
     move-result v1
 
-    .line 877
     :goto_0
     return v1
 
-    .line 875
     :catch_0
     move-exception v0
 
-    .line 876
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "DisplayManager"
 
@@ -2010,7 +1791,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 877
     const/4 v1, 0x0
 
     goto :goto_0
@@ -2020,7 +1800,6 @@
     .locals 3
 
     .prologue
-    .line 886
     :try_start_0
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
 
@@ -2030,15 +1809,12 @@
 
     move-result v1
 
-    .line 889
     :goto_0
     return v1
 
-    .line 887
     :catch_0
     move-exception v0
 
-    .line 888
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "DisplayManager"
 
@@ -2046,7 +1822,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 889
     const/4 v1, 0x0
 
     goto :goto_0
@@ -2056,7 +1831,6 @@
     .locals 3
 
     .prologue
-    .line 818
     :try_start_0
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
 
@@ -2066,15 +1840,12 @@
 
     move-result v1
 
-    .line 821
     :goto_0
     return v1
 
-    .line 819
     :catch_0
     move-exception v0
 
-    .line 820
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "DisplayManager"
 
@@ -2082,7 +1853,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 821
     const/4 v1, 0x0
 
     goto :goto_0
@@ -2092,7 +1862,6 @@
     .locals 3
 
     .prologue
-    .line 850
     :try_start_0
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
 
@@ -2102,15 +1871,12 @@
 
     move-result v1
 
-    .line 853
     :goto_0
     return v1
 
-    .line 851
     :catch_0
     move-exception v0
 
-    .line 852
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "DisplayManager"
 
@@ -2118,7 +1884,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 853
     const/4 v1, 0x0
 
     goto :goto_0
@@ -2128,7 +1893,6 @@
     .locals 3
 
     .prologue
-    .line 862
     :try_start_0
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
 
@@ -2138,15 +1902,12 @@
 
     move-result v1
 
-    .line 865
     :goto_0
     return v1
 
-    .line 863
     :catch_0
     move-exception v0
 
-    .line 864
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "DisplayManager"
 
@@ -2154,7 +1915,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 865
     const/4 v1, 0x0
 
     goto :goto_0
@@ -2164,7 +1924,6 @@
     .locals 3
 
     .prologue
-    .line 805
     :try_start_0
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
 
@@ -2174,15 +1933,12 @@
 
     move-result v1
 
-    .line 808
     :goto_0
     return v1
 
-    .line 806
     :catch_0
     move-exception v0
 
-    .line 807
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "DisplayManager"
 
@@ -2190,7 +1946,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 808
     const/4 v1, 0x0
 
     goto :goto_0
@@ -2200,7 +1955,6 @@
     .locals 3
 
     .prologue
-    .line 781
     :try_start_0
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
 
@@ -2210,15 +1964,12 @@
 
     move-result v1
 
-    .line 784
     :goto_0
     return v1
 
-    .line 782
     :catch_0
     move-exception v0
 
-    .line 783
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "DisplayManager"
 
@@ -2226,7 +1977,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 784
     const/4 v1, 0x0
 
     goto :goto_0
@@ -2236,7 +1986,6 @@
     .locals 3
 
     .prologue
-    .line 830
     :try_start_0
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
 
@@ -2244,15 +1993,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 835
     :goto_0
     return-void
 
-    .line 831
     :catch_0
     move-exception v0
 
-    .line 832
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "DisplayManager"
 
@@ -2267,7 +2013,6 @@
     .locals 3
 
     .prologue
-    .line 840
     :try_start_0
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
 
@@ -2275,15 +2020,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 845
     :goto_0
     return-void
 
-    .line 841
     :catch_0
     move-exception v0
 
-    .line 842
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "DisplayManager"
 
@@ -2298,7 +2040,6 @@
     .locals 3
 
     .prologue
-    .line 495
     :try_start_0
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
 
@@ -2306,15 +2047,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 499
     :goto_0
     return-void
 
-    .line 496
     :catch_0
     move-exception v0
 
-    .line 497
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "DisplayManager"
 
@@ -2331,35 +2069,29 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 269
     if-nez p1, :cond_0
 
-    .line 270
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v2, "listener must not be null"
+    const-string v2, "listener must not be null"
 
     invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 273
     :cond_0
     iget-object v2, p0, Landroid/hardware/display/DisplayManagerGlobal;->mLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 274
     :try_start_0
     invoke-direct {p0, p1}, Landroid/hardware/display/DisplayManagerGlobal;->findDisplayListenerLocked(Landroid/hardware/display/DisplayManager$DisplayListener;)I
 
     move-result v0
 
-    .line 275
     .local v0, "index":I
     if-gez v0, :cond_1
 
-    .line 276
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDisplayListeners:Ljava/util/ArrayList;
 
     new-instance v3, Landroid/hardware/display/DisplayManagerGlobal$DisplayListenerDelegate;
@@ -2368,17 +2100,13 @@
 
     invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 277
     invoke-direct {p0}, Landroid/hardware/display/DisplayManagerGlobal;->registerCallbackIfNeededLocked()V
 
-    .line 279
     :cond_1
     monitor-exit v2
 
-    .line 280
     return-void
 
-    .line 279
     .end local v0    # "index":I
     :catchall_0
     move-exception v1
@@ -2396,54 +2124,45 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 285
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mExtendedDisplayListeners:Ljava/util/ArrayList;
 
     if-eqz v1, :cond_2
 
-    .line 286
     const-string v1, "DisplayManager"
 
-    const-string/jumbo v2, "registerDisplayListener extendeddisplay"
+    const-string v2, "registerDisplayListener extendeddisplay"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 287
     if-nez p1, :cond_0
 
-    .line 288
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v2, "listener must not be null"
+    const-string v2, "listener must not be null"
 
     invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 291
     :cond_0
     iget-object v2, p0, Landroid/hardware/display/DisplayManagerGlobal;->mLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 292
     :try_start_0
     invoke-direct {p0, p1}, Landroid/hardware/display/DisplayManagerGlobal;->findExtendedDisplayListenerLocked(Landroid/hardware/display/ExtendedDisplayListener;)I
 
     move-result v0
 
-    .line 293
     .local v0, "index":I
     if-gez v0, :cond_1
 
-    .line 294
     const-string v1, "DisplayManager"
 
-    const-string/jumbo v3, "registerDisplayListener extendeddisplay index < 0"
+    const-string v3, "registerDisplayListener extendeddisplay index < 0"
 
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 295
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mExtendedDisplayListeners:Ljava/util/ArrayList;
 
     new-instance v3, Landroid/hardware/display/DisplayManagerGlobal$ExtendedDisplayListenerDelegate;
@@ -2452,19 +2171,15 @@
 
     invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 296
     invoke-direct {p0}, Landroid/hardware/display/DisplayManagerGlobal;->registerCallbackIfNeededLocked()V
 
-    .line 298
     :cond_1
     monitor-exit v2
 
-    .line 300
     .end local v0    # "index":I
     :cond_2
     return-void
 
-    .line 298
     :catchall_0
     move-exception v1
 
@@ -2480,7 +2195,6 @@
     .param p1, "token"    # Landroid/hardware/display/IVirtualDisplayCallback;
 
     .prologue
-    .line 634
     :try_start_0
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
 
@@ -2488,15 +2202,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 638
     :goto_0
     return-void
 
-    .line 635
     :catch_0
     move-exception v0
 
-    .line 636
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "DisplayManager"
 
@@ -2511,7 +2222,6 @@
     .locals 3
 
     .prologue
-    .line 984
     :try_start_0
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
 
@@ -2519,15 +2229,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 989
     :goto_0
     return-void
 
-    .line 985
     :catch_0
     move-exception v0
 
-    .line 986
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "DisplayManager"
 
@@ -2543,7 +2250,6 @@
     .param p1, "deviceName"    # Ljava/lang/String;
 
     .prologue
-    .line 898
     :try_start_0
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
 
@@ -2551,15 +2257,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 903
     :goto_0
     return-void
 
-    .line 899
     :catch_0
     move-exception v0
 
-    .line 900
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "DisplayManager"
 
@@ -2576,10 +2279,8 @@
     .param p2, "alias"    # Ljava/lang/String;
 
     .prologue
-    .line 518
     if-nez p1, :cond_0
 
-    .line 519
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "deviceAddress must not be null"
@@ -2588,7 +2289,6 @@
 
     throw v1
 
-    .line 523
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
@@ -2597,15 +2297,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 528
     :goto_0
     return-void
 
-    .line 524
     :catch_0
     move-exception v0
 
-    .line 525
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "DisplayManager"
 
@@ -2654,7 +2351,6 @@
     .param p2, "colorTransformId"    # I
 
     .prologue
-    .line 553
     :try_start_0
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
 
@@ -2662,15 +2358,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 557
     :goto_0
     return-void
 
-    .line 554
     :catch_0
     move-exception v0
 
-    .line 555
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "DisplayManager"
 
@@ -2689,7 +2382,6 @@
     .param p4, "densityDpi"    # I
 
     .prologue
-    .line 626
     :try_start_0
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
 
@@ -2697,15 +2389,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 630
     :goto_0
     return-void
 
-    .line 627
     :catch_0
     move-exception v0
 
-    .line 628
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "DisplayManager"
 
@@ -2720,7 +2409,6 @@
     .locals 3
 
     .prologue
-    .line 771
     :try_start_0
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
 
@@ -2728,15 +2416,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 776
     :goto_0
     return-void
 
-    .line 772
     :catch_0
     move-exception v0
 
-    .line 773
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "DisplayManager"
 
@@ -2751,7 +2436,6 @@
     .locals 3
 
     .prologue
-    .line 503
     :try_start_0
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
 
@@ -2759,15 +2443,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 507
     :goto_0
     return-void
 
-    .line 504
     :catch_0
     move-exception v0
 
-    .line 505
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "DisplayManager"
 
@@ -2782,7 +2463,6 @@
     .locals 3
 
     .prologue
-    .line 447
     :try_start_0
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
 
@@ -2790,15 +2470,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 452
     :goto_0
     return-void
 
-    .line 448
     :catch_0
     move-exception v0
 
-    .line 449
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "DisplayManager"
 
@@ -2816,7 +2493,6 @@
     .param p3, "param2"    # Ljava/lang/String;
 
     .prologue
-    .line 938
     :try_start_0
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
 
@@ -2826,15 +2502,12 @@
 
     move-result v1
 
-    .line 941
     :goto_0
     return v1
 
-    .line 939
     :catch_0
     move-exception v0
 
-    .line 940
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "DisplayManager"
 
@@ -2842,7 +2515,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 941
     const/4 v1, -0x1
 
     goto :goto_0
@@ -2853,7 +2525,6 @@
     .param p1, "requestedChannel"    # I
 
     .prologue
-    .line 908
     :try_start_0
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
 
@@ -2861,15 +2532,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 913
     :goto_0
     return-void
 
-    .line 909
     :catch_0
     move-exception v0
 
-    .line 910
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "DisplayManager"
 
@@ -2885,7 +2553,6 @@
     .param p1, "status"    # I
 
     .prologue
-    .line 1006
     :try_start_0
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
 
@@ -2893,15 +2560,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1011
     :goto_0
     return-void
 
-    .line 1007
     :catch_0
     move-exception v0
 
-    .line 1008
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "DisplayManager"
 
@@ -2918,7 +2582,6 @@
     .param p2, "orientation"    # I
 
     .prologue
-    .line 617
     :try_start_0
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
 
@@ -2926,15 +2589,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 621
     :goto_0
     return-void
 
-    .line 618
     :catch_0
     move-exception v0
 
-    .line 619
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "DisplayManager"
 
@@ -2951,7 +2611,6 @@
     .param p2, "displayId"    # I
 
     .prologue
-    .line 608
     :try_start_0
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
 
@@ -2959,15 +2618,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 612
     :goto_0
     return-void
 
-    .line 609
     :catch_0
     move-exception v0
 
-    .line 610
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "DisplayManager"
 
@@ -2984,7 +2640,6 @@
     .param p2, "surface"    # Landroid/view/Surface;
 
     .prologue
-    .line 599
     :try_start_0
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
 
@@ -2992,15 +2647,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 603
     :goto_0
     return-void
 
-    .line 600
     :catch_0
     move-exception v0
 
-    .line 601
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "DisplayManager"
 
@@ -3015,12 +2667,10 @@
     .locals 4
 
     .prologue
-    .line 403
     iget-object v2, p0, Landroid/hardware/display/DisplayManagerGlobal;->mLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 404
     :try_start_0
     iget v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mWifiDisplayScanNestCount:I
 
@@ -3030,12 +2680,10 @@
 
     if-nez v1, :cond_0
 
-    .line 405
     invoke-direct {p0}, Landroid/hardware/display/DisplayManagerGlobal;->registerCallbackIfNeededLocked()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 407
     :try_start_1
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
 
@@ -3044,20 +2692,16 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 412
     :cond_0
     :goto_0
     :try_start_2
     monitor-exit v2
 
-    .line 413
     return-void
 
-    .line 408
     :catch_0
     move-exception v0
 
-    .line 409
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "DisplayManager"
 
@@ -3067,7 +2711,6 @@
 
     goto :goto_0
 
-    .line 412
     .end local v0    # "ex":Landroid/os/RemoteException;
     :catchall_0
     move-exception v1
@@ -3083,7 +2726,6 @@
     .locals 3
 
     .prologue
-    .line 457
     :try_start_0
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
 
@@ -3091,15 +2733,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 462
     :goto_0
     return-void
 
-    .line 458
     :catch_0
     move-exception v0
 
-    .line 459
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "DisplayManager"
 
@@ -3114,12 +2753,10 @@
     .locals 5
 
     .prologue
-    .line 416
     iget-object v2, p0, Landroid/hardware/display/DisplayManagerGlobal;->mLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 417
     :try_start_0
     iget v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mWifiDisplayScanNestCount:I
 
@@ -3131,7 +2768,6 @@
 
     if-nez v1, :cond_1
 
-    .line 419
     :try_start_1
     iget-object v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDm:Landroid/hardware/display/IDisplayManager;
 
@@ -3140,20 +2776,16 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 428
     :cond_0
     :goto_0
     :try_start_2
     monitor-exit v2
 
-    .line 429
     return-void
 
-    .line 420
     :catch_0
     move-exception v0
 
-    .line 421
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "DisplayManager"
 
@@ -3163,7 +2795,6 @@
 
     goto :goto_0
 
-    .line 428
     .end local v0    # "ex":Landroid/os/RemoteException;
     :catchall_0
     move-exception v1
@@ -3174,14 +2805,12 @@
 
     throw v1
 
-    .line 423
     :cond_1
     :try_start_3
     iget v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mWifiDisplayScanNestCount:I
 
     if-gez v1, :cond_0
 
-    .line 424
     const-string v1, "DisplayManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -3206,7 +2835,6 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 426
     const/4 v1, 0x0
 
     iput v1, p0, Landroid/hardware/display/DisplayManagerGlobal;->mWifiDisplayScanNestCount:I
@@ -3221,35 +2849,29 @@
     .param p1, "listener"    # Landroid/hardware/display/DisplayManager$DisplayListener;
 
     .prologue
-    .line 334
     if-nez p1, :cond_0
 
-    .line 335
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v3, "listener must not be null"
+    const-string v3, "listener must not be null"
 
     invoke-direct {v2, v3}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v2
 
-    .line 338
     :cond_0
     iget-object v3, p0, Landroid/hardware/display/DisplayManagerGlobal;->mLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 339
     :try_start_0
     invoke-direct {p0, p1}, Landroid/hardware/display/DisplayManagerGlobal;->findDisplayListenerLocked(Landroid/hardware/display/DisplayManager$DisplayListener;)I
 
     move-result v1
 
-    .line 340
     .local v1, "index":I
     if-ltz v1, :cond_1
 
-    .line 341
     iget-object v2, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDisplayListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -3258,24 +2880,19 @@
 
     check-cast v0, Landroid/hardware/display/DisplayManagerGlobal$DisplayListenerDelegate;
 
-    .line 342
     .local v0, "d":Landroid/hardware/display/DisplayManagerGlobal$DisplayListenerDelegate;
     invoke-virtual {v0}, Landroid/hardware/display/DisplayManagerGlobal$DisplayListenerDelegate;->clearEvents()V
 
-    .line 343
     iget-object v2, p0, Landroid/hardware/display/DisplayManagerGlobal;->mDisplayListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 345
     .end local v0    # "d":Landroid/hardware/display/DisplayManagerGlobal$DisplayListenerDelegate;
     :cond_1
     monitor-exit v3
 
-    .line 346
     return-void
 
-    .line 345
     .end local v1    # "index":I
     :catchall_0
     move-exception v2
@@ -3292,40 +2909,33 @@
     .param p1, "listener"    # Landroid/hardware/display/ExtendedDisplayListener;
 
     .prologue
-    .line 304
     iget-object v2, p0, Landroid/hardware/display/DisplayManagerGlobal;->mExtendedDisplayListeners:Ljava/util/ArrayList;
 
     if-eqz v2, :cond_2
 
-    .line 305
     if-nez p1, :cond_0
 
-    .line 306
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v3, "listener must not be null"
+    const-string v3, "listener must not be null"
 
     invoke-direct {v2, v3}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v2
 
-    .line 309
     :cond_0
     iget-object v3, p0, Landroid/hardware/display/DisplayManagerGlobal;->mLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 310
     :try_start_0
     invoke-direct {p0, p1}, Landroid/hardware/display/DisplayManagerGlobal;->findExtendedDisplayListenerLocked(Landroid/hardware/display/ExtendedDisplayListener;)I
 
     move-result v1
 
-    .line 311
     .local v1, "index":I
     if-ltz v1, :cond_1
 
-    .line 312
     iget-object v2, p0, Landroid/hardware/display/DisplayManagerGlobal;->mExtendedDisplayListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -3334,26 +2944,21 @@
 
     check-cast v0, Landroid/hardware/display/DisplayManagerGlobal$ExtendedDisplayListenerDelegate;
 
-    .line 313
     .local v0, "d":Landroid/hardware/display/DisplayManagerGlobal$ExtendedDisplayListenerDelegate;
     invoke-virtual {v0}, Landroid/hardware/display/DisplayManagerGlobal$ExtendedDisplayListenerDelegate;->clearEvents()V
 
-    .line 314
     iget-object v2, p0, Landroid/hardware/display/DisplayManagerGlobal;->mExtendedDisplayListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 316
     .end local v0    # "d":Landroid/hardware/display/DisplayManagerGlobal$ExtendedDisplayListenerDelegate;
     :cond_1
     monitor-exit v3
 
-    .line 318
     .end local v1    # "index":I
     :cond_2
     return-void
 
-    .line 316
     :catchall_0
     move-exception v2
 

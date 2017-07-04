@@ -12,7 +12,6 @@
     .locals 0
 
     .prologue
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 36
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0

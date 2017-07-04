@@ -42,10 +42,8 @@
     .locals 1
 
     .prologue
-    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 41
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/net/wifi/hs20/WifiHs20DMData;->credID:I

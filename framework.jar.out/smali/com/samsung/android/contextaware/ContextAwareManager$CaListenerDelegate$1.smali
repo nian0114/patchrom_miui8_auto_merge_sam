@@ -26,7 +26,6 @@
     .param p2, "x0"    # Landroid/os/Looper;
 
     .prologue
-    .line 1221
     iput-object p1, p0, Lcom/samsung/android/contextaware/ContextAwareManager$CaListenerDelegate$1;->this$1:Lcom/samsung/android/contextaware/ContextAwareManager$CaListenerDelegate;
 
     iput-object p3, p0, Lcom/samsung/android/contextaware/ContextAwareManager$CaListenerDelegate$1;->val$this$0:Lcom/samsung/android/contextaware/ContextAwareManager;
@@ -43,7 +42,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 1225
     iget-object v2, p0, Lcom/samsung/android/contextaware/ContextAwareManager$CaListenerDelegate$1;->this$1:Lcom/samsung/android/contextaware/ContextAwareManager$CaListenerDelegate;
 
     # getter for: Lcom/samsung/android/contextaware/ContextAwareManager$CaListenerDelegate;->mListener:Lcom/samsung/android/contextaware/manager/ContextAwareListener;
@@ -53,16 +51,13 @@
 
     if-eqz v2, :cond_0
 
-    .line 1226
     iget v1, p1, Landroid/os/Message;->what:I
 
-    .line 1227
     .local v1, "type":I
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/os/Bundle;
 
-    .line 1228
     .local v0, "context":Landroid/os/Bundle;
     iget-object v2, p0, Lcom/samsung/android/contextaware/ContextAwareManager$CaListenerDelegate$1;->this$1:Lcom/samsung/android/contextaware/ContextAwareManager$CaListenerDelegate;
 
@@ -73,7 +68,6 @@
 
     invoke-interface {v2, v1, v0}, Lcom/samsung/android/contextaware/manager/ContextAwareListener;->onContextChanged(ILandroid/os/Bundle;)V
 
-    .line 1230
     .end local v0    # "context":Landroid/os/Bundle;
     .end local v1    # "type":I
     :cond_0

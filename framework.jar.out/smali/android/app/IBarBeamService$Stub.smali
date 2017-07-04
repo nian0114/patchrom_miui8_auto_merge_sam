@@ -50,15 +50,12 @@
     .locals 1
 
     .prologue
-    .line 15
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 16
     const-string v0, "android.app.IBarBeamService"
 
     invoke-virtual {p0, p0, v0}, Landroid/app/IBarBeamService$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 17
     return-void
 .end method
 
@@ -67,17 +64,13 @@
     .param p0, "obj"    # Landroid/os/IBinder;
 
     .prologue
-    .line 24
     if-nez p0, :cond_0
 
-    .line 25
     const/4 v0, 0x0
 
-    .line 31
     :goto_0
     return-object v0
 
-    .line 27
     :cond_0
     const-string v1, "android.app.IBarBeamService"
 
@@ -85,7 +78,6 @@
 
     move-result-object v0
 
-    .line 28
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -93,12 +85,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 29
     check-cast v0, Landroid/app/IBarBeamService;
 
     goto :goto_0
 
-    .line 31
     :cond_1
     new-instance v0, Landroid/app/IBarBeamService$Stub$Proxy;
 
@@ -114,7 +104,6 @@
     .locals 0
 
     .prologue
-    .line 35
     return-object p0
 .end method
 
@@ -135,10 +124,8 @@
 
     const/4 v5, 0x1
 
-    .line 39
     sparse-switch p1, :sswitch_data_0
 
-    .line 126
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v5
@@ -146,7 +133,6 @@
     :goto_0
     return v5
 
-    .line 43
     :sswitch_0
     const-string v4, "android.app.IBarBeamService"
 
@@ -154,22 +140,18 @@
 
     goto :goto_0
 
-    .line 48
     :sswitch_1
     const-string v6, "android.app.IBarBeamService"
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 49
     invoke-virtual {p0}, Landroid/app/IBarBeamService$Stub;->isImplementationCompatible()Z
 
     move-result v3
 
-    .line 50
     .local v3, "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 51
     if-eqz v3, :cond_0
 
     move v4, v5
@@ -179,131 +161,106 @@
 
     goto :goto_0
 
-    .line 56
     .end local v3    # "_result":Z
     :sswitch_2
     const-string v4, "android.app.IBarBeamService"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 58
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 59
     .local v0, "_arg0":Landroid/os/IBinder;
     invoke-virtual {p0, v0}, Landroid/app/IBarBeamService$Stub;->addListener(Landroid/os/IBinder;)V
 
-    .line 60
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
-    .line 65
     .end local v0    # "_arg0":Landroid/os/IBinder;
     :sswitch_3
     const-string v4, "android.app.IBarBeamService"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 67
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 68
     .restart local v0    # "_arg0":Landroid/os/IBinder;
     invoke-virtual {p0, v0}, Landroid/app/IBarBeamService$Stub;->removeListener(Landroid/os/IBinder;)V
 
-    .line 69
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
-    .line 74
     .end local v0    # "_arg0":Landroid/os/IBinder;
     :sswitch_4
     const-string v4, "android.app.IBarBeamService"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 75
     invoke-virtual {p0}, Landroid/app/IBarBeamService$Stub;->startBeaming()V
 
-    .line 76
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
-    .line 81
     :sswitch_5
     const-string v4, "android.app.IBarBeamService"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 83
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 84
     .local v0, "_arg0":I
     invoke-virtual {p0, v0}, Landroid/app/IBarBeamService$Stub;->startBeaming_repeat(I)V
 
-    .line 85
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
-    .line 90
     .end local v0    # "_arg0":I
     :sswitch_6
     const-string v4, "android.app.IBarBeamService"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 91
     invoke-virtual {p0}, Landroid/app/IBarBeamService$Stub;->stopBeaming()V
 
-    .line 92
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
-    .line 97
     :sswitch_7
     const-string v4, "android.app.IBarBeamService"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 99
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object v0
 
-    .line 101
     .local v0, "_arg0":[B
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 103
     .local v1, "_arg1":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 104
     .local v2, "_arg2":I
     invoke-virtual {p0, v0, v1, v2}, Landroid/app/IBarBeamService$Stub;->setHopSequence([BII)V
 
-    .line 105
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
-    .line 110
     .end local v0    # "_arg0":[B
     .end local v1    # "_arg1":I
     .end local v2    # "_arg2":I
@@ -312,37 +269,30 @@
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 112
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object v0
 
-    .line 113
     .restart local v0    # "_arg0":[B
     invoke-virtual {p0, v0}, Landroid/app/IBarBeamService$Stub;->setBarcode([B)V
 
-    .line 114
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 119
     .end local v0    # "_arg0":[B
     :sswitch_9
     const-string v6, "android.app.IBarBeamService"
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 120
     invoke-virtual {p0}, Landroid/app/IBarBeamService$Stub;->getCurrentStatus()Z
 
     move-result v3
 
-    .line 121
     .restart local v3    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 122
     if-eqz v3, :cond_1
 
     move v4, v5
@@ -352,7 +302,6 @@
 
     goto/16 :goto_0
 
-    .line 39
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1

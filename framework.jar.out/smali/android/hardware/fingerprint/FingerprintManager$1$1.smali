@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 1013
     iput-object p1, p0, Landroid/hardware/fingerprint/FingerprintManager$1$1;->this$1:Landroid/hardware/fingerprint/FingerprintManager$1;
 
     iput-object p2, p0, Landroid/hardware/fingerprint/FingerprintManager$1$1;->val$wakeLock:Landroid/os/PowerManager$WakeLock;
@@ -44,7 +43,6 @@
     .locals 2
 
     .prologue
-    .line 1017
     :try_start_0
     iget-object v0, p0, Landroid/hardware/fingerprint/FingerprintManager$1$1;->this$1:Landroid/hardware/fingerprint/FingerprintManager$1;
 
@@ -54,15 +52,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1019
     iget-object v0, p0, Landroid/hardware/fingerprint/FingerprintManager$1$1;->val$wakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 1021
     return-void
 
-    .line 1019
     :catchall_0
     move-exception v0
 

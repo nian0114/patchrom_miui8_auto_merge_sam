@@ -12,10 +12,8 @@
     .locals 0
 
     .prologue
-    .line 104
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 106
     return-void
 .end method
 
@@ -38,10 +36,8 @@
     .locals 4
 
     .prologue
-    .line 142
     const/4 v1, 0x1
 
-    .line 143
     .local v1, "dateTimePolicyEnabled":Z
     invoke-static {}, Landroid/os/Process;->myUid()I
 
@@ -59,7 +55,6 @@
 
     if-gt v2, v3, :cond_0
 
-    .line 145
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager;->getInstance()Landroid/sec/enterprise/EnterpriseDeviceManager;
 
     move-result-object v2
@@ -68,13 +63,11 @@
 
     move-result-object v0
 
-    .line 146
     .local v0, "dateTimePolicy":Landroid/sec/enterprise/DateTimePolicy;
     invoke-virtual {v0}, Landroid/sec/enterprise/DateTimePolicy;->isDateTimeChangeEnabled()Z
 
     move-result v1
 
-    .line 148
     .end local v0    # "dateTimePolicy":Landroid/sec/enterprise/DateTimePolicy;
     :cond_0
     return v1
@@ -87,19 +80,16 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 160
     invoke-static {}, Landroid/os/SystemClock;->isEDMDateTimePolicyEnabled()Z
 
     move-result v4
 
     if-nez v4, :cond_1
 
-    .line 177
     :cond_0
     :goto_0
     return v3
 
-    .line 163
     :cond_1
     const-string v4, "alarm"
 
@@ -107,17 +97,14 @@
 
     move-result-object v0
 
-    .line 164
     .local v0, "b":Landroid/os/IBinder;
     invoke-static {v0}, Landroid/app/IAlarmManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/app/IAlarmManager;
 
     move-result-object v2
 
-    .line 165
     .local v2, "mgr":Landroid/app/IAlarmManager;
     if-eqz v2, :cond_0
 
-    .line 170
     :try_start_0
     invoke-interface {v2, p0, p1}, Landroid/app/IAlarmManager;->setTime(J)Z
     :try_end_0
@@ -128,11 +115,9 @@
 
     goto :goto_0
 
-    .line 171
     :catch_0
     move-exception v1
 
-    .line 172
     .local v1, "e":Landroid/os/RemoteException;
     const-string v4, "SystemClock"
 
@@ -142,12 +127,10 @@
 
     goto :goto_0
 
-    .line 173
     .end local v1    # "e":Landroid/os/RemoteException;
     :catch_1
     move-exception v1
 
-    .line 174
     .local v1, "e":Ljava/lang/SecurityException;
     const-string v4, "SystemClock"
 
@@ -163,20 +146,16 @@
     .param p0, "ms"    # J
 
     .prologue
-    .line 119
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v4
 
-    .line 120
     .local v4, "start":J
     move-wide v0, p0
 
-    .line 121
     .local v0, "duration":J
     const/4 v3, 0x0
 
-    .line 124
     .local v3, "interrupted":Z
     :cond_0
     :try_start_0
@@ -184,7 +163,6 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 129
     :goto_0
     add-long v6, v4, p0
 
@@ -194,32 +172,26 @@
 
     sub-long v0, v6, v8
 
-    .line 130
     const-wide/16 v6, 0x0
 
     cmp-long v6, v0, v6
 
     if-gtz v6, :cond_0
 
-    .line 132
     if-eqz v3, :cond_1
 
-    .line 136
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v6
 
     invoke-virtual {v6}, Ljava/lang/Thread;->interrupt()V
 
-    .line 138
     :cond_1
     return-void
 
-    .line 126
     :catch_0
     move-exception v2
 
-    .line 127
     .local v2, "e":Ljava/lang/InterruptedException;
     const/4 v3, 0x1
 

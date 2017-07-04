@@ -55,12 +55,10 @@
     .locals 1
 
     .prologue
-    .line 1015
     const-string v0, "#ifdef GL_ES\nprecision mediump float;\n#endif\nvarying vec2 outTexCoords;\nuniform sampler2D baseSampler;\nuniform float filterParams[16];\n\nvoid main(void) {\n    vec4 startColor = vec4(filterParams[1], filterParams[2], filterParams[3], filterParams[4]);\n    vec4 endColor = vec4(filterParams[5], filterParams[6], filterParams[7], filterParams[8]);\n    vec2 startPoint = vec2(filterParams[9], filterParams[10]);\n    vec2 endPoint = vec2(filterParams[11], filterParams[12]);\n    vec2 send = endPoint - startPoint;\n    vec2 scur = outTexCoords - startPoint;\n    float proj = dot(send, scur) / dot(send, send);\n    vec4 mask = mix(startColor, endColor, smoothstep(0.0, 1.0, proj));\n    vec4 texColor = texture2D(baseSampler, outTexCoords);\n    mask.rgb *= mask.a;\n    gl_FragColor = mask + texColor * (1.0 - mask.a);\n}\n\n"
 
     sput-object v0, Landroid/graphics/ImageFilter$BitmapColorMaskFilter;->mFragmentShaderCodeGradient:Ljava/lang/String;
 
-    .line 1043
     const-string v0, "#ifdef GL_ES\nprecision mediump float;\n#endif\nvarying vec2 outTexCoords;\nuniform sampler2D baseSampler;\nuniform sampler2D maskSampler;\nuniform float filterParams[16];\n\nvoid main(void) {\n   vec4 texColor = texture2D(baseSampler, outTexCoords);\n\tvec4 maskColor = texture2D(maskSampler, outTexCoords);\n\tvec4 domColor = vec4(filterParams[1], filterParams[2], filterParams[3], filterParams[4]) * texColor;\n\tfloat alpha = domColor.a * maskColor.a;\n\tdomColor.rgb = domColor.rgb * alpha;\n\tdomColor.a = alpha;\n\tgl_FragColor = domColor + texColor * (1.0 - domColor.a);\n}\n\n"
 
     sput-object v0, Landroid/graphics/ImageFilter$BitmapColorMaskFilter;->mFragmentShaderCodeMask:Ljava/lang/String;
@@ -74,20 +72,16 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 1086
     const-string v0, "attribute vec2 texCoords;\nattribute vec4 position;\nvarying vec2 outTexCoords;\nuniform mat4 projection;\nvoid main() {\n   outTexCoords = texCoords;\n   gl_Position = projection * position;\n}\n"
 
     sget-object v1, Landroid/graphics/ImageFilter$BitmapColorMaskFilter;->mFragmentShaderCodeGradient:Ljava/lang/String;
 
     invoke-direct {p0, v0, v1}, Landroid/graphics/ImageFilter$GenericImageFilter;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1083
     iput-boolean v2, p0, Landroid/graphics/ImageFilter$BitmapColorMaskFilter;->mGradientEnabled:Z
 
-    .line 1087
     invoke-virtual {p0}, Landroid/graphics/ImageFilter$BitmapColorMaskFilter;->useFilterParams()V
 
-    .line 1088
     # getter for: Landroid/graphics/ImageFilter;->sLogingEnabled:Z
     invoke-static {}, Landroid/graphics/ImageFilter;->access$000()Z
 
@@ -95,10 +89,9 @@
 
     if-eqz v0, :cond_0
 
-    .line 1089
     const-string v0, "HWUI_IMAGE_FILTER"
 
-    const-string/jumbo v1, "{0x%x}->BitmapColorMaskFilter()"
+    const-string v1, "{0x%x}->BitmapColorMaskFilter()"
 
     new-array v2, v2, [Ljava/lang/Object;
 
@@ -120,7 +113,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1091
     :cond_0
     return-void
 .end method
@@ -135,20 +127,16 @@
 
     const/4 v3, 0x1
 
-    .line 1210
     const/high16 v0, 0x3f800000    # 1.0f
 
     invoke-virtual {p0, v4, v0}, Landroid/graphics/ImageFilter$BitmapColorMaskFilter;->setParam(IF)V
 
-    .line 1211
     iget-boolean v0, p0, Landroid/graphics/ImageFilter$BitmapColorMaskFilter;->mGradientEnabled:Z
 
     if-nez v0, :cond_0
 
-    .line 1212
     iput-boolean v3, p0, Landroid/graphics/ImageFilter$BitmapColorMaskFilter;->mGradientEnabled:Z
 
-    .line 1213
     new-array v1, v3, [Ljava/lang/String;
 
     const-string v0, "attribute vec2 texCoords;\nattribute vec4 position;\nvarying vec2 outTexCoords;\nuniform mat4 projection;\nvoid main() {\n   outTexCoords = texCoords;\n   gl_Position = projection * position;\n}\n"
@@ -168,14 +156,11 @@
 
     invoke-virtual {p0, v3, v1, v2}, Landroid/graphics/ImageFilter$BitmapColorMaskFilter;->setup(I[Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 1215
     :cond_0
     invoke-virtual {p0}, Landroid/graphics/ImageFilter$BitmapColorMaskFilter;->notifyWorkerFilters()V
 
-    .line 1216
     return-void
 
-    .line 1213
     :cond_1
     sget-object v0, Landroid/graphics/ImageFilter$BitmapColorMaskFilter;->mFragmentShaderCodeMask:Ljava/lang/String;
 
@@ -190,7 +175,6 @@
 
     const/4 v4, 0x0
 
-    .line 1198
     # getter for: Landroid/graphics/ImageFilter;->sLogingEnabled:Z
     invoke-static {}, Landroid/graphics/ImageFilter;->access$000()Z
 
@@ -198,10 +182,9 @@
 
     if-eqz v0, :cond_0
 
-    .line 1199
     const-string v0, "HWUI_IMAGE_FILTER"
 
-    const-string/jumbo v1, "{0x%x}->BitmapColorMaskFilter.resetGradient()"
+    const-string v1, "{0x%x}->BitmapColorMaskFilter.resetGradient()"
 
     new-array v2, v5, [Ljava/lang/Object;
 
@@ -221,21 +204,17 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1201
     :cond_0
     const/4 v0, 0x0
 
     invoke-virtual {p0, v4, v0}, Landroid/graphics/ImageFilter$BitmapColorMaskFilter;->setParam(IF)V
 
-    .line 1202
     iget-boolean v0, p0, Landroid/graphics/ImageFilter$BitmapColorMaskFilter;->mGradientEnabled:Z
 
     if-ne v5, v0, :cond_1
 
-    .line 1203
     iput-boolean v4, p0, Landroid/graphics/ImageFilter$BitmapColorMaskFilter;->mGradientEnabled:Z
 
-    .line 1204
     new-array v1, v5, [Ljava/lang/String;
 
     const-string v0, "attribute vec2 texCoords;\nattribute vec4 position;\nvarying vec2 outTexCoords;\nuniform mat4 projection;\nvoid main() {\n   outTexCoords = texCoords;\n   gl_Position = projection * position;\n}\n"
@@ -255,14 +234,11 @@
 
     invoke-virtual {p0, v5, v1, v2}, Landroid/graphics/ImageFilter$BitmapColorMaskFilter;->setup(I[Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 1206
     :cond_1
     invoke-virtual {p0}, Landroid/graphics/ImageFilter$BitmapColorMaskFilter;->notifyWorkerFilters()V
 
-    .line 1207
     return-void
 
-    .line 1204
     :cond_2
     sget-object v0, Landroid/graphics/ImageFilter$BitmapColorMaskFilter;->mFragmentShaderCodeMask:Ljava/lang/String;
 
@@ -274,10 +250,8 @@
     .param p1, "bitmap"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 1101
     invoke-super {p0, p1}, Landroid/graphics/ImageFilter$GenericImageFilter;->setBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 1102
     return-void
 .end method
 
@@ -293,7 +267,6 @@
 
     const/4 v2, 0x0
 
-    .line 1130
     const/4 v0, 0x1
 
     invoke-static {p1, v3}, Ljava/lang/Math;->min(FF)F
@@ -306,7 +279,6 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/graphics/ImageFilter$BitmapColorMaskFilter;->setParam(IF)V
 
-    .line 1131
     const/4 v0, 0x2
 
     invoke-static {p2, v3}, Ljava/lang/Math;->min(FF)F
@@ -319,7 +291,6 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/graphics/ImageFilter$BitmapColorMaskFilter;->setParam(IF)V
 
-    .line 1132
     const/4 v0, 0x3
 
     invoke-static {p3, v3}, Ljava/lang/Math;->min(FF)F
@@ -332,7 +303,6 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/graphics/ImageFilter$BitmapColorMaskFilter;->setParam(IF)V
 
-    .line 1133
     const/4 v0, 0x4
 
     invoke-static {p4, v3}, Ljava/lang/Math;->min(FF)F
@@ -345,13 +315,10 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/graphics/ImageFilter$BitmapColorMaskFilter;->setParam(IF)V
 
-    .line 1134
     invoke-virtual {p0}, Landroid/graphics/ImageFilter$BitmapColorMaskFilter;->setFilterParamsChanged()V
 
-    .line 1135
     invoke-virtual {p0}, Landroid/graphics/ImageFilter$BitmapColorMaskFilter;->resetGradient()V
 
-    .line 1136
     return-void
 .end method
 
@@ -362,7 +329,6 @@
     .prologue
     const/high16 v5, 0x437f0000    # 255.0f
 
-    .line 1112
     invoke-static {p1}, Landroid/graphics/Color;->red(I)I
 
     move-result v4
@@ -371,7 +337,6 @@
 
     div-float v3, v4, v5
 
-    .line 1113
     .local v3, "r":F
     invoke-static {p1}, Landroid/graphics/Color;->green(I)I
 
@@ -381,7 +346,6 @@
 
     div-float v2, v4, v5
 
-    .line 1114
     .local v2, "g":F
     invoke-static {p1}, Landroid/graphics/Color;->blue(I)I
 
@@ -391,7 +355,6 @@
 
     div-float v1, v4, v5
 
-    .line 1115
     .local v1, "b":F
     invoke-static {p1}, Landroid/graphics/Color;->alpha(I)I
 
@@ -401,11 +364,9 @@
 
     div-float v0, v4, v5
 
-    .line 1116
     .local v0, "a":F
     invoke-virtual {p0, v3, v2, v1, v0}, Landroid/graphics/ImageFilter$BitmapColorMaskFilter;->setColor(FFFF)V
 
-    .line 1117
     return-void
 .end method
 
@@ -419,7 +380,6 @@
     .param p6, "endColor"    # I
 
     .prologue
-    .line 1154
     # getter for: Landroid/graphics/ImageFilter;->sLogingEnabled:Z
     invoke-static {}, Landroid/graphics/ImageFilter;->access$000()Z
 
@@ -427,10 +387,9 @@
 
     if-eqz v4, :cond_0
 
-    .line 1155
     const-string v4, "HWUI_IMAGE_FILTER"
 
-    const-string/jumbo v5, "{0x%x}->BitmapColorMaskFilter.setGradient(%f,%f,0x%x,  %f, %f, 0x%x)"
+    const-string v5, "{0x%x}->BitmapColorMaskFilter.setGradient(%f,%f,0x%x,  %f, %f, 0x%x)"
 
     const/4 v6, 0x7
 
@@ -502,7 +461,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1159
     :cond_0
     invoke-static {p3}, Landroid/graphics/Color;->red(I)I
 
@@ -514,7 +472,6 @@
 
     div-float v3, v4, v5
 
-    .line 1160
     .local v3, "r":F
     invoke-static {p3}, Landroid/graphics/Color;->green(I)I
 
@@ -526,7 +483,6 @@
 
     div-float v2, v4, v5
 
-    .line 1161
     .local v2, "g":F
     invoke-static {p3}, Landroid/graphics/Color;->blue(I)I
 
@@ -538,7 +494,6 @@
 
     div-float v1, v4, v5
 
-    .line 1162
     .local v1, "b":F
     invoke-static {p3}, Landroid/graphics/Color;->alpha(I)I
 
@@ -550,7 +505,6 @@
 
     div-float v0, v4, v5
 
-    .line 1164
     .local v0, "a":F
     const/4 v4, 0x1
 
@@ -568,7 +522,6 @@
 
     invoke-virtual {p0, v4, v5}, Landroid/graphics/ImageFilter$BitmapColorMaskFilter;->setParam(IF)V
 
-    .line 1165
     const/4 v4, 0x2
 
     const/4 v5, 0x0
@@ -585,7 +538,6 @@
 
     invoke-virtual {p0, v4, v5}, Landroid/graphics/ImageFilter$BitmapColorMaskFilter;->setParam(IF)V
 
-    .line 1166
     const/4 v4, 0x3
 
     const/4 v5, 0x0
@@ -602,7 +554,6 @@
 
     invoke-virtual {p0, v4, v5}, Landroid/graphics/ImageFilter$BitmapColorMaskFilter;->setParam(IF)V
 
-    .line 1167
     const/4 v4, 0x4
 
     const/4 v5, 0x0
@@ -619,7 +570,6 @@
 
     invoke-virtual {p0, v4, v5}, Landroid/graphics/ImageFilter$BitmapColorMaskFilter;->setParam(IF)V
 
-    .line 1169
     invoke-static {p6}, Landroid/graphics/Color;->red(I)I
 
     move-result v4
@@ -630,7 +580,6 @@
 
     div-float v3, v4, v5
 
-    .line 1170
     invoke-static {p6}, Landroid/graphics/Color;->green(I)I
 
     move-result v4
@@ -641,7 +590,6 @@
 
     div-float v2, v4, v5
 
-    .line 1171
     invoke-static {p6}, Landroid/graphics/Color;->blue(I)I
 
     move-result v4
@@ -652,7 +600,6 @@
 
     div-float v1, v4, v5
 
-    .line 1172
     invoke-static {p6}, Landroid/graphics/Color;->alpha(I)I
 
     move-result v4
@@ -663,7 +610,6 @@
 
     div-float v0, v4, v5
 
-    .line 1174
     const/4 v4, 0x5
 
     const/4 v5, 0x0
@@ -680,7 +626,6 @@
 
     invoke-virtual {p0, v4, v5}, Landroid/graphics/ImageFilter$BitmapColorMaskFilter;->setParam(IF)V
 
-    .line 1175
     const/4 v4, 0x6
 
     const/4 v5, 0x0
@@ -697,7 +642,6 @@
 
     invoke-virtual {p0, v4, v5}, Landroid/graphics/ImageFilter$BitmapColorMaskFilter;->setParam(IF)V
 
-    .line 1176
     const/4 v4, 0x7
 
     const/4 v5, 0x0
@@ -714,7 +658,6 @@
 
     invoke-virtual {p0, v4, v5}, Landroid/graphics/ImageFilter$BitmapColorMaskFilter;->setParam(IF)V
 
-    .line 1177
     const/16 v4, 0x8
 
     const/4 v5, 0x0
@@ -731,12 +674,10 @@
 
     invoke-virtual {p0, v4, v5}, Landroid/graphics/ImageFilter$BitmapColorMaskFilter;->setParam(IF)V
 
-    .line 1179
     const/16 v4, 0x9
 
     invoke-virtual {p0, v4, p1}, Landroid/graphics/ImageFilter$BitmapColorMaskFilter;->setParam(IF)V
 
-    .line 1180
     const/16 v4, 0xa
 
     const/high16 v5, 0x3f800000    # 1.0f
@@ -745,12 +686,10 @@
 
     invoke-virtual {p0, v4, v5}, Landroid/graphics/ImageFilter$BitmapColorMaskFilter;->setParam(IF)V
 
-    .line 1182
     const/16 v4, 0xb
 
     invoke-virtual {p0, v4, p4}, Landroid/graphics/ImageFilter$BitmapColorMaskFilter;->setParam(IF)V
 
-    .line 1183
     const/16 v4, 0xc
 
     const/high16 v5, 0x3f800000    # 1.0f
@@ -759,9 +698,7 @@
 
     invoke-virtual {p0, v4, v5}, Landroid/graphics/ImageFilter$BitmapColorMaskFilter;->setParam(IF)V
 
-    .line 1185
     invoke-virtual {p0}, Landroid/graphics/ImageFilter$BitmapColorMaskFilter;->enableGradient()V
 
-    .line 1186
     return-void
 .end method

@@ -29,7 +29,6 @@
     .locals 0
 
     .prologue
-    .line 319
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -40,24 +39,19 @@
     .param p0, "playbackStatus"    # I
 
     .prologue
-    .line 303
     const/4 v0, 0x0
 
-    .line 305
     .local v0, "isValid":Z
     packed-switch p0, :pswitch_data_0
 
-    .line 312
     :goto_0
     return v0
 
-    .line 310
     :pswitch_0
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 305
     nop
 
     :pswitch_data_0

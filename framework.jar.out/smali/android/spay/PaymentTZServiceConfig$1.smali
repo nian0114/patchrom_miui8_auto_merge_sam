@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 27
     iput-object p1, p0, Landroid/spay/PaymentTZServiceConfig$1;->this$0:Landroid/spay/PaymentTZServiceConfig;
 
     invoke-direct {p0}, Landroid/spay/IPaymentClient$Stub;-><init>()V

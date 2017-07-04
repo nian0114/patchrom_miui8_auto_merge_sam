@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 6909
     iput-object p1, p0, Landroid/widget/AbsListView$TwSmoothScrollByMove;->this$0:Landroid/widget/AbsListView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Landroid/widget/AbsListView$1;
 
     .prologue
-    .line 6909
     invoke-direct {p0, p1}, Landroid/widget/AbsListView$TwSmoothScrollByMove;-><init>(Landroid/widget/AbsListView;)V
 
     return-void
@@ -54,7 +52,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 6911
     iget-object v1, p0, Landroid/widget/AbsListView$TwSmoothScrollByMove;->this$0:Landroid/widget/AbsListView;
 
     # getter for: Landroid/widget/AbsListView;->mFlingRunnable:Landroid/widget/AbsListView$FlingRunnable;
@@ -73,7 +70,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 6912
     iget-object v1, p0, Landroid/widget/AbsListView$TwSmoothScrollByMove;->this$0:Landroid/widget/AbsListView;
 
     # getter for: Landroid/widget/AbsListView;->mTwTwScrollRemains:Ljava/util/LinkedList;
@@ -87,11 +83,9 @@
 
     if-eqz v1, :cond_0
 
-    .line 6920
     :goto_0
     return-void
 
-    .line 6915
     :cond_0
     iget-object v1, p0, Landroid/widget/AbsListView$TwSmoothScrollByMove;->this$0:Landroid/widget/AbsListView;
 
@@ -110,13 +104,11 @@
 
     move-result v0
 
-    .line 6916
     .local v0, "remain":I
     iget-object v1, p0, Landroid/widget/AbsListView$TwSmoothScrollByMove;->this$0:Landroid/widget/AbsListView;
 
     invoke-virtual {v1, v0, v2, v2}, Landroid/widget/AbsListView;->smoothScrollBy(IIZ)V
 
-    .line 6919
     .end local v0    # "remain":I
     :cond_1
     iget-object v1, p0, Landroid/widget/AbsListView$TwSmoothScrollByMove;->this$0:Landroid/widget/AbsListView;

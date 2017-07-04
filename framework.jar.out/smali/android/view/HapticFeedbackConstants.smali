@@ -102,7 +102,6 @@
     .locals 0
 
     .prologue
-    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -112,7 +111,6 @@
     .locals 1
 
     .prologue
-    .line 120
     const v0, 0xc375
 
     return v0
@@ -122,7 +120,6 @@
     .locals 1
 
     .prologue
-    .line 112
     const v0, 0xc359
 
     return v0
@@ -133,7 +130,6 @@
     .param p0, "index"    # I
 
     .prologue
-    .line 128
     const v0, 0xc359
 
     if-lt p0, v0, :cond_0
@@ -142,10 +138,8 @@
 
     if-gt p0, v0, :cond_0
 
-    .line 129
     const/4 v0, 0x1
 
-    .line 131
     :goto_0
     return v0
 

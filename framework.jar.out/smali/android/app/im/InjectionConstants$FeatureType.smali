@@ -60,18 +60,16 @@
 
     const/4 v4, 0x0
 
-    .line 16
     new-instance v0, Landroid/app/im/InjectionConstants$FeatureType;
 
     const-string v1, "OPTIONS_MENU"
 
-    const-string/jumbo v2, "options"
+    const-string v2, "options"
 
     invoke-direct {v0, v1, v4, v2}, Landroid/app/im/InjectionConstants$FeatureType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Landroid/app/im/InjectionConstants$FeatureType;->OPTIONS_MENU:Landroid/app/im/InjectionConstants$FeatureType;
 
-    .line 17
     new-instance v0, Landroid/app/im/InjectionConstants$FeatureType;
 
     const-string v1, "CONTEXT_MENU"
@@ -82,7 +80,6 @@
 
     sput-object v0, Landroid/app/im/InjectionConstants$FeatureType;->CONTEXT_MENU:Landroid/app/im/InjectionConstants$FeatureType;
 
-    .line 18
     new-instance v0, Landroid/app/im/InjectionConstants$FeatureType;
 
     const-string v1, "DYNAMIC_VIEW"
@@ -93,29 +90,26 @@
 
     sput-object v0, Landroid/app/im/InjectionConstants$FeatureType;->DYNAMIC_VIEW:Landroid/app/im/InjectionConstants$FeatureType;
 
-    .line 19
     new-instance v0, Landroid/app/im/InjectionConstants$FeatureType;
 
     const-string v1, "PREFERENCE_HEADER"
 
-    const-string/jumbo v2, "preference_header"
+    const-string v2, "preference_header"
 
     invoke-direct {v0, v1, v7, v2}, Landroid/app/im/InjectionConstants$FeatureType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Landroid/app/im/InjectionConstants$FeatureType;->PREFERENCE_HEADER:Landroid/app/im/InjectionConstants$FeatureType;
 
-    .line 20
     new-instance v0, Landroid/app/im/InjectionConstants$FeatureType;
 
     const-string v1, "PREFERENCE"
 
-    const-string/jumbo v2, "preference"
+    const-string v2, "preference"
 
     invoke-direct {v0, v1, v8, v2}, Landroid/app/im/InjectionConstants$FeatureType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Landroid/app/im/InjectionConstants$FeatureType;->PREFERENCE:Landroid/app/im/InjectionConstants$FeatureType;
 
-    .line 21
     new-instance v0, Landroid/app/im/InjectionConstants$FeatureType;
 
     const-string v1, "CONTENT_PROVIDER"
@@ -128,20 +122,18 @@
 
     sput-object v0, Landroid/app/im/InjectionConstants$FeatureType;->CONTENT_PROVIDER:Landroid/app/im/InjectionConstants$FeatureType;
 
-    .line 22
     new-instance v0, Landroid/app/im/InjectionConstants$FeatureType;
 
     const-string v1, "SCALE_VIEW"
 
     const/4 v2, 0x6
 
-    const-string/jumbo v3, "scale_view"
+    const-string v3, "scale_view"
 
     invoke-direct {v0, v1, v2, v3}, Landroid/app/im/InjectionConstants$FeatureType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Landroid/app/im/InjectionConstants$FeatureType;->SCALE_VIEW:Landroid/app/im/InjectionConstants$FeatureType;
 
-    .line 14
     const/4 v0, 0x7
 
     new-array v0, v0, [Landroid/app/im/InjectionConstants$FeatureType;
@@ -195,13 +187,10 @@
     .end annotation
 
     .prologue
-    .line 24
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 25
     iput-object p3, p0, Landroid/app/im/InjectionConstants$FeatureType;->text:Ljava/lang/String;
 
-    .line 26
     return-void
 .end method
 
@@ -210,7 +199,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 14
     const-class v0, Landroid/app/im/InjectionConstants$FeatureType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -226,7 +214,6 @@
     .locals 1
 
     .prologue
-    .line 14
     sget-object v0, Landroid/app/im/InjectionConstants$FeatureType;->$VALUES:[Landroid/app/im/InjectionConstants$FeatureType;
 
     invoke-virtual {v0}, [Landroid/app/im/InjectionConstants$FeatureType;->clone()Ljava/lang/Object;
@@ -244,7 +231,6 @@
     .locals 1
 
     .prologue
-    .line 30
     iget-object v0, p0, Landroid/app/im/InjectionConstants$FeatureType;->text:Ljava/lang/String;
 
     return-object v0

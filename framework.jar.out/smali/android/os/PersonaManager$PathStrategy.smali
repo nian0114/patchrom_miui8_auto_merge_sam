@@ -37,31 +37,25 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 3127
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3125
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     iput-object v1, p0, Landroid/os/PersonaManager$PathStrategy;->mRoots:Ljava/util/HashMap;
 
-    .line 3128
     iput-object p1, p0, Landroid/os/PersonaManager$PathStrategy;->mAuthority:Ljava/lang/String;
 
-    .line 3130
     invoke-static {p2}, Landroid/os/PersonaManager$PathStrategy;->getexternalStorage(I)Ljava/io/File;
 
     move-result-object v0
 
-    .line 3131
     .local v0, "target":Ljava/io/File;
-    const-string/jumbo v1, "sdcard"
+    const-string v1, "sdcard"
 
     invoke-virtual {p0, v1, v0}, Landroid/os/PersonaManager$PathStrategy;->addRoot(Ljava/lang/String;Ljava/io/File;)V
 
-    .line 3133
     return-void
 .end method
 
@@ -71,10 +65,8 @@
     .param p1, "segments"    # [Ljava/lang/String;
 
     .prologue
-    .line 3197
     move-object v1, p0
 
-    .line 3198
     .local v1, "cur":Ljava/io/File;
     move-object v0, p1
 
@@ -94,16 +86,13 @@
 
     aget-object v5, v0, v3
 
-    .line 3199
     .local v5, "segment":Ljava/lang/String;
     if-nez v2, :cond_0
 
-    .line 3200
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, v5}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 3198
     .end local v2    # "cur":Ljava/io/File;
     .restart local v1    # "cur":Ljava/io/File;
     :goto_1
@@ -115,7 +104,6 @@
     .restart local v2    # "cur":Ljava/io/File;
     goto :goto_0
 
-    .line 3202
     :cond_0
     new-instance v1, Ljava/io/File;
 
@@ -125,7 +113,6 @@
     .restart local v1    # "cur":Ljava/io/File;
     goto :goto_1
 
-    .line 3205
     .end local v1    # "cur":Ljava/io/File;
     .end local v5    # "segment":Ljava/lang/String;
     .restart local v2    # "cur":Ljava/io/File;
@@ -138,10 +125,8 @@
     .param p0, "userId"    # I
 
     .prologue
-    .line 3209
     const-string v0, "EMULATED_STORAGE_TARGET"
 
-    .line 3211
     .local v0, "ENV_EMULATED_STORAGE_TARGET":Ljava/lang/String;
     const-string v4, "EMULATED_STORAGE_TARGET"
 
@@ -149,7 +134,6 @@
 
     move-result-object v3
 
-    .line 3212
     .local v3, "rawEmulatedTarget":Ljava/lang/String;
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -157,12 +141,10 @@
 
     if-nez v4, :cond_0
 
-    .line 3213
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 3214
     .local v1, "emulatedTargetBase":Ljava/io/File;
     const/4 v4, 0x1
 
@@ -180,7 +162,6 @@
 
     move-result-object v2
 
-    .line 3218
     .end local v1    # "emulatedTargetBase":Ljava/io/File;
     :goto_0
     return-object v2
@@ -201,14 +182,12 @@
     .param p2, "root"    # Ljava/io/File;
 
     .prologue
-    .line 3140
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 3141
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "Name must not be empty"
@@ -217,7 +196,6 @@
 
     throw v1
 
-    .line 3146
     :cond_0
     :try_start_0
     invoke-virtual {p2}, Ljava/io/File;->getCanonicalFile()Ljava/io/File;
@@ -226,19 +204,15 @@
 
     move-result-object p2
 
-    .line 3152
     iget-object v1, p0, Landroid/os/PersonaManager$PathStrategy;->mRoots:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3153
     return-void
 
-    .line 3147
     :catch_0
     move-exception v0
 
-    .line 3148
     .local v0, "e":Ljava/io/IOException;
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
@@ -270,7 +244,6 @@
     .param p1, "fileuri"    # Landroid/net/Uri;
 
     .prologue
-    .line 3158
     new-instance v1, Ljava/io/File;
 
     invoke-virtual {p1}, Landroid/net/Uri;->getPath()Ljava/lang/String;
@@ -279,7 +252,6 @@
 
     invoke-direct {v1, v7}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 3161
     .local v1, "file":Ljava/io/File;
     :try_start_0
     invoke-virtual {v1}, Ljava/io/File;->getCanonicalPath()Ljava/lang/String;
@@ -288,11 +260,9 @@
 
     move-result-object v4
 
-    .line 3167
     .local v4, "path":Ljava/lang/String;
     const/4 v3, 0x0
 
-    .line 3168
     .local v3, "mostSpecific":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/io/File;>;"
     iget-object v7, p0, Landroid/os/PersonaManager$PathStrategy;->mRoots:Ljava/util/HashMap;
 
@@ -319,7 +289,6 @@
 
     check-cast v5, Ljava/util/Map$Entry;
 
-    .line 3169
     .local v5, "root":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/io/File;>;"
     invoke-interface {v5}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -331,7 +300,6 @@
 
     move-result-object v6
 
-    .line 3170
     .local v6, "rootPath":Ljava/lang/String;
     invoke-virtual {v4, v6}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -361,13 +329,11 @@
 
     if-le v8, v7, :cond_0
 
-    .line 3173
     :cond_1
     move-object v3, v5
 
     goto :goto_0
 
-    .line 3162
     .end local v2    # "i$":Ljava/util/Iterator;
     .end local v3    # "mostSpecific":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/io/File;>;"
     .end local v4    # "path":Ljava/lang/String;
@@ -376,13 +342,11 @@
     :catch_0
     move-exception v0
 
-    .line 3192
     .end local p1    # "fileuri":Landroid/net/Uri;
     :cond_2
     :goto_1
     return-object p1
 
-    .line 3177
     .restart local v2    # "i$":Ljava/util/Iterator;
     .restart local v3    # "mostSpecific":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/io/File;>;"
     .restart local v4    # "path":Ljava/lang/String;
@@ -390,7 +354,6 @@
     :cond_3
     if-eqz v3, :cond_2
 
-    .line 3183
     invoke-interface {v3}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v7
@@ -401,7 +364,6 @@
 
     move-result-object v6
 
-    .line 3184
     .restart local v6    # "rootPath":Ljava/lang/String;
     const-string v7, "/"
 
@@ -411,7 +373,6 @@
 
     if-eqz v7, :cond_4
 
-    .line 3185
     invoke-virtual {v6}, Ljava/lang/String;->length()I
 
     move-result v7
@@ -420,7 +381,6 @@
 
     move-result-object v4
 
-    .line 3191
     :goto_2
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -460,7 +420,6 @@
 
     move-result-object v4
 
-    .line 3192
     new-instance v7, Landroid/net/Uri$Builder;
 
     invoke-direct {v7}, Landroid/net/Uri$Builder;-><init>()V
@@ -487,7 +446,6 @@
 
     goto :goto_1
 
-    .line 3187
     :cond_4
     invoke-virtual {v6}, Ljava/lang/String;->length()I
 

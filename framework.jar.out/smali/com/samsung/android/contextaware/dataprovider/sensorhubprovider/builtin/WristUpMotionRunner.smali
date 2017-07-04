@@ -11,12 +11,10 @@
     .param p3, "observable"    # Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;
 
     .prologue
-    .line 45
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0, p3}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/LibTypeProvider;-><init>(ILandroid/content/Context;Landroid/os/Looper;Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;)V
 
-    .line 46
     return-void
 .end method
 
@@ -26,13 +24,10 @@
     .locals 0
 
     .prologue
-    .line 126
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->trace()V
 
-    .line 127
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/LibTypeProvider;->clear()V
 
-    .line 128
     return-void
 .end method
 
@@ -40,13 +35,10 @@
     .locals 0
 
     .prologue
-    .line 115
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->trace()V
 
-    .line 116
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/LibTypeProvider;->disable()V
 
-    .line 117
     return-void
 .end method
 
@@ -54,13 +46,10 @@
     .locals 0
 
     .prologue
-    .line 102
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->trace()V
 
-    .line 103
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/LibTypeProvider;->enable()V
 
-    .line 104
     return-void
 .end method
 
@@ -68,7 +57,6 @@
     .locals 1
 
     .prologue
-    .line 56
     sget-object v0, Lcom/samsung/android/contextaware/ContextList$ContextType;->SENSORHUB_RUNNER_WRIST_UP_MOTION:Lcom/samsung/android/contextaware/ContextList$ContextType;
 
     invoke-virtual {v0}, Lcom/samsung/android/contextaware/ContextList$ContextType;->getCode()Ljava/lang/String;
@@ -82,7 +70,6 @@
     .locals 1
 
     .prologue
-    .line 139
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/WristUpMotionRunner;->checkFaultDetectionResult()Z
 
     move-result v0
@@ -93,7 +80,6 @@
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->debug(Ljava/lang/String;)V
 
-    .line 140
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/LibTypeProvider;->getFaultDetectionResult()Landroid/os/Bundle;
 
     move-result-object v0
@@ -105,7 +91,6 @@
     .locals 1
 
     .prologue
-    .line 67
     const/16 v0, 0x13
 
     return v0
@@ -115,7 +100,6 @@
     .locals 0
 
     .prologue
-    .line 78
     return-object p0
 .end method
 
@@ -123,6 +107,5 @@
     .locals 0
 
     .prologue
-    .line 90
     return-object p0
 .end method

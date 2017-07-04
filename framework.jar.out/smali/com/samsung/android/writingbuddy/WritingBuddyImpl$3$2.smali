@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1520
     iput-object p1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$3$2;->this$1:Lcom/samsung/android/writingbuddy/WritingBuddyImpl$3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 1523
     iget-object v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$3$2;->this$1:Lcom/samsung/android/writingbuddy/WritingBuddyImpl$3;
 
     iget-object v0, v0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$3;->this$0:Lcom/samsung/android/writingbuddy/WritingBuddyImpl;

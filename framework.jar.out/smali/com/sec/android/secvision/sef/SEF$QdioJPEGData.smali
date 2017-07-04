@@ -29,32 +29,26 @@
     .locals 1
 
     .prologue
-    .line 2279
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2280
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/sec/android/secvision/sef/SEF$QdioJPEGData;->startOffset:Ljava/util/ArrayList;
 
-    .line 2281
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/sec/android/secvision/sef/SEF$QdioJPEGData;->endOffset:Ljava/util/ArrayList;
 
-    .line 2282
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/sec/android/secvision/sef/SEF$QdioJPEGData;->audio_count:I
 
-    .line 2283
     invoke-direct {p0}, Lcom/sec/android/secvision/sef/SEF$QdioJPEGData;->resetQdioJpegData()V
 
-    .line 2284
     return-void
 .end method
 
@@ -62,27 +56,22 @@
     .locals 1
 
     .prologue
-    .line 2219
     iget-object v0, p0, Lcom/sec/android/secvision/sef/SEF$QdioJPEGData;->startOffset:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 2220
     iget-object v0, p0, Lcom/sec/android/secvision/sef/SEF$QdioJPEGData;->endOffset:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 2221
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/sec/android/secvision/sef/SEF$QdioJPEGData;->audio_count:I
 
-    .line 2222
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/sec/android/secvision/sef/SEF$QdioJPEGData;->filename:Ljava/lang/String;
 
-    .line 2223
     return-void
 .end method
 
@@ -92,7 +81,6 @@
     .locals 1
 
     .prologue
-    .line 2238
     iget v0, p0, Lcom/sec/android/secvision/sef/SEF$QdioJPEGData;->audio_count:I
 
     return v0
@@ -102,7 +90,6 @@
     .locals 1
 
     .prologue
-    .line 2230
     iget-object v0, p0, Lcom/sec/android/secvision/sef/SEF$QdioJPEGData;->filename:Ljava/lang/String;
 
     return-object v0
@@ -115,15 +102,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 2262
     if-gez p1, :cond_1
 
-    .line 2267
     :cond_0
     :goto_0
     return v0
 
-    .line 2264
     :cond_1
     iget-object v1, p0, Lcom/sec/android/secvision/sef/SEF$QdioJPEGData;->endOffset:Ljava/util/ArrayList;
 
@@ -133,7 +117,6 @@
 
     if-gt p1, v1, :cond_0
 
-    .line 2267
     iget-object v0, p0, Lcom/sec/android/secvision/sef/SEF$QdioJPEGData;->endOffset:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -170,15 +153,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 2247
     if-gez p1, :cond_1
 
-    .line 2252
     :cond_0
     :goto_0
     return v0
 
-    .line 2249
     :cond_1
     iget-object v1, p0, Lcom/sec/android/secvision/sef/SEF$QdioJPEGData;->startOffset:Ljava/util/ArrayList;
 
@@ -188,7 +168,6 @@
 
     if-gt p1, v1, :cond_0
 
-    .line 2252
     iget-object v0, p0, Lcom/sec/android/secvision/sef/SEF$QdioJPEGData;->startOffset:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;

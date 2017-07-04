@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 697
     iput-object p1, p0, Landroid/service/notification/NotificationListenerService$INotificationListenerWrapper;->this$0:Landroid/service/notification/NotificationListenerService;
 
     invoke-direct {p0}, Landroid/service/notification/INotificationListener$Stub;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Landroid/service/notification/NotificationListenerService$1;
 
     .prologue
-    .line 697
     invoke-direct {p0, p1}, Landroid/service/notification/NotificationListenerService$INotificationListenerWrapper;-><init>(Landroid/service/notification/NotificationListenerService;)V
 
     return-void
@@ -52,7 +50,6 @@
     .param p3, "extra"    # Landroid/os/Bundle;
 
     .prologue
-    .line 802
     :try_start_0
     iget-object v1, p0, Landroid/service/notification/NotificationListenerService$INotificationListenerWrapper;->this$0:Landroid/service/notification/NotificationListenerService;
 
@@ -60,15 +57,12 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 806
     :goto_0
     return-void
 
-    .line 803
     :catch_0
     move-exception v0
 
-    .line 804
     .local v0, "t":Ljava/lang/Throwable;
     iget-object v1, p0, Landroid/service/notification/NotificationListenerService$INotificationListenerWrapper;->this$0:Landroid/service/notification/NotificationListenerService;
 
@@ -91,7 +85,6 @@
     .param p3, "extra"    # Landroid/os/Bundle;
 
     .prologue
-    .line 811
     :try_start_0
     iget-object v1, p0, Landroid/service/notification/NotificationListenerService$INotificationListenerWrapper;->this$0:Landroid/service/notification/NotificationListenerService;
 
@@ -99,15 +92,12 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 816
     :goto_0
     return-void
 
-    .line 812
     :catch_0
     move-exception v0
 
-    .line 813
     .local v0, "t":Ljava/lang/Throwable;
     iget-object v1, p0, Landroid/service/notification/NotificationListenerService$INotificationListenerWrapper;->this$0:Landroid/service/notification/NotificationListenerService;
 
@@ -133,7 +123,6 @@
     .end annotation
 
     .prologue
-    .line 792
     :try_start_0
     iget-object v1, p0, Landroid/service/notification/NotificationListenerService$INotificationListenerWrapper;->this$0:Landroid/service/notification/NotificationListenerService;
 
@@ -141,15 +130,12 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 796
     :goto_0
     return-void
 
-    .line 793
     :catch_0
     move-exception v0
 
-    .line 794
     .local v0, "t":Ljava/lang/Throwable;
     iget-object v1, p0, Landroid/service/notification/NotificationListenerService$INotificationListenerWrapper;->this$0:Landroid/service/notification/NotificationListenerService;
 
@@ -170,7 +156,6 @@
     .param p1, "update"    # Landroid/service/notification/NotificationRankingUpdate;
 
     .prologue
-    .line 758
     iget-object v1, p0, Landroid/service/notification/NotificationListenerService$INotificationListenerWrapper;->this$0:Landroid/service/notification/NotificationListenerService;
 
     # getter for: Landroid/service/notification/NotificationListenerService;->mWrapper:Landroid/service/notification/NotificationListenerService$INotificationListenerWrapper;
@@ -180,7 +165,6 @@
 
     monitor-enter v2
 
-    .line 759
     :try_start_0
     iget-object v1, p0, Landroid/service/notification/NotificationListenerService$INotificationListenerWrapper;->this$0:Landroid/service/notification/NotificationListenerService;
 
@@ -189,7 +173,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 761
     :try_start_1
     iget-object v1, p0, Landroid/service/notification/NotificationListenerService$INotificationListenerWrapper;->this$0:Landroid/service/notification/NotificationListenerService;
 
@@ -198,19 +181,15 @@
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 765
     :goto_0
     :try_start_2
     monitor-exit v2
 
-    .line 766
     return-void
 
-    .line 762
     :catch_0
     move-exception v0
 
-    .line 763
     .local v0, "t":Ljava/lang/Throwable;
     iget-object v1, p0, Landroid/service/notification/NotificationListenerService$INotificationListenerWrapper;->this$0:Landroid/service/notification/NotificationListenerService;
 
@@ -225,7 +204,6 @@
 
     goto :goto_0
 
-    .line 765
     .end local v0    # "t":Ljava/lang/Throwable;
     :catchall_0
     move-exception v1
@@ -247,7 +225,6 @@
     .end annotation
 
     .prologue
-    .line 783
     :try_start_0
     iget-object v1, p0, Landroid/service/notification/NotificationListenerService$INotificationListenerWrapper;->this$0:Landroid/service/notification/NotificationListenerService;
 
@@ -255,15 +232,12 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 787
     :goto_0
     return-void
 
-    .line 784
     :catch_0
     move-exception v0
 
-    .line 785
     .local v0, "t":Ljava/lang/Throwable;
     iget-object v1, p0, Landroid/service/notification/NotificationListenerService$INotificationListenerWrapper;->this$0:Landroid/service/notification/NotificationListenerService;
 
@@ -285,7 +259,6 @@
     .param p2, "update"    # Landroid/service/notification/NotificationRankingUpdate;
 
     .prologue
-    .line 703
     :try_start_0
     invoke-interface {p1}, Landroid/service/notification/IStatusBarNotificationHolder;->get()Landroid/service/notification/StatusBarNotification;
     :try_end_0
@@ -293,7 +266,6 @@
 
     move-result-object v1
 
-    .line 710
     .local v1, "sbn":Landroid/service/notification/StatusBarNotification;
     :try_start_1
     iget-object v3, p0, Landroid/service/notification/NotificationListenerService$INotificationListenerWrapper;->this$0:Landroid/service/notification/NotificationListenerService;
@@ -309,7 +281,6 @@
 
     invoke-static {v3, v4}, Landroid/app/Notification$Builder;->rebuild(Landroid/content/Context;Landroid/app/Notification;)Landroid/app/Notification;
 
-    .line 712
     iget-object v3, p0, Landroid/service/notification/NotificationListenerService$INotificationListenerWrapper;->this$0:Landroid/service/notification/NotificationListenerService;
 
     invoke-virtual {v1}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
@@ -321,7 +292,6 @@
     :try_end_1
     .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 721
     :goto_0
     iget-object v3, p0, Landroid/service/notification/NotificationListenerService$INotificationListenerWrapper;->this$0:Landroid/service/notification/NotificationListenerService;
 
@@ -332,7 +302,6 @@
 
     monitor-enter v4
 
-    .line 722
     :try_start_2
     iget-object v3, p0, Landroid/service/notification/NotificationListenerService$INotificationListenerWrapper;->this$0:Landroid/service/notification/NotificationListenerService;
 
@@ -341,10 +310,8 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 724
     if-eqz v1, :cond_0
 
-    .line 725
     :try_start_3
     iget-object v3, p0, Landroid/service/notification/NotificationListenerService$INotificationListenerWrapper;->this$0:Landroid/service/notification/NotificationListenerService;
 
@@ -360,23 +327,19 @@
     .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_2
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 733
     :goto_1
     :try_start_4
     monitor-exit v4
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 734
     .end local v1    # "sbn":Landroid/service/notification/StatusBarNotification;
     :goto_2
     return-void
 
-    .line 704
     :catch_0
     move-exception v0
 
-    .line 705
     .local v0, "e":Landroid/os/RemoteException;
     iget-object v3, p0, Landroid/service/notification/NotificationListenerService$INotificationListenerWrapper;->this$0:Landroid/service/notification/NotificationListenerService;
 
@@ -385,23 +348,20 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "onNotificationPosted: Error receiving StatusBarNotification"
+    const-string v4, "onNotificationPosted: Error receiving StatusBarNotification"
 
     invoke-static {v3, v4, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_2
 
-    .line 713
     .end local v0    # "e":Landroid/os/RemoteException;
     .restart local v1    # "sbn":Landroid/service/notification/StatusBarNotification;
     :catch_1
     move-exception v0
 
-    .line 715
     .local v0, "e":Ljava/lang/IllegalArgumentException;
     const/4 v1, 0x0
 
-    .line 716
     iget-object v3, p0, Landroid/service/notification/NotificationListenerService$INotificationListenerWrapper;->this$0:Landroid/service/notification/NotificationListenerService;
 
     # getter for: Landroid/service/notification/NotificationListenerService;->TAG:Ljava/lang/String;
@@ -413,7 +373,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "onNotificationPosted: can\'t rebuild notification from "
+    const-string v5, "onNotificationPosted: can\'t rebuild notification from "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -435,7 +395,6 @@
 
     goto :goto_0
 
-    .line 728
     .end local v0    # "e":Ljava/lang/IllegalArgumentException;
     :cond_0
     :try_start_5
@@ -455,11 +414,9 @@
 
     goto :goto_1
 
-    .line 730
     :catch_2
     move-exception v2
 
-    .line 731
     .local v2, "t":Ljava/lang/Throwable;
     :try_start_6
     iget-object v3, p0, Landroid/service/notification/NotificationListenerService$INotificationListenerWrapper;->this$0:Landroid/service/notification/NotificationListenerService;
@@ -475,7 +432,6 @@
 
     goto :goto_1
 
-    .line 733
     .end local v2    # "t":Ljava/lang/Throwable;
     :catchall_0
     move-exception v3
@@ -497,7 +453,6 @@
     .end annotation
 
     .prologue
-    .line 771
     iget-object v1, p0, Landroid/service/notification/NotificationListenerService$INotificationListenerWrapper;->this$0:Landroid/service/notification/NotificationListenerService;
 
     # getter for: Landroid/service/notification/NotificationListenerService;->mWrapper:Landroid/service/notification/NotificationListenerService$INotificationListenerWrapper;
@@ -507,7 +462,6 @@
 
     monitor-enter v2
 
-    .line 772
     :try_start_0
     iget-object v1, p0, Landroid/service/notification/NotificationListenerService$INotificationListenerWrapper;->this$0:Landroid/service/notification/NotificationListenerService;
 
@@ -516,7 +470,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 774
     :try_start_1
     iget-object v1, p0, Landroid/service/notification/NotificationListenerService$INotificationListenerWrapper;->this$0:Landroid/service/notification/NotificationListenerService;
 
@@ -532,19 +485,15 @@
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 778
     :goto_0
     :try_start_2
     monitor-exit v2
 
-    .line 779
     return-void
 
-    .line 775
     :catch_0
     move-exception v0
 
-    .line 776
     .local v0, "t":Ljava/lang/Throwable;
     iget-object v1, p0, Landroid/service/notification/NotificationListenerService$INotificationListenerWrapper;->this$0:Landroid/service/notification/NotificationListenerService;
 
@@ -559,7 +508,6 @@
 
     goto :goto_0
 
-    .line 778
     .end local v0    # "t":Ljava/lang/Throwable;
     :catchall_0
     move-exception v1
@@ -577,7 +525,6 @@
     .param p2, "update"    # Landroid/service/notification/NotificationRankingUpdate;
 
     .prologue
-    .line 740
     :try_start_0
     invoke-interface {p1}, Landroid/service/notification/IStatusBarNotificationHolder;->get()Landroid/service/notification/StatusBarNotification;
     :try_end_0
@@ -585,7 +532,6 @@
 
     move-result-object v1
 
-    .line 746
     .local v1, "sbn":Landroid/service/notification/StatusBarNotification;
     iget-object v3, p0, Landroid/service/notification/NotificationListenerService$INotificationListenerWrapper;->this$0:Landroid/service/notification/NotificationListenerService;
 
@@ -596,7 +542,6 @@
 
     monitor-enter v4
 
-    .line 747
     :try_start_1
     iget-object v3, p0, Landroid/service/notification/NotificationListenerService$INotificationListenerWrapper;->this$0:Landroid/service/notification/NotificationListenerService;
 
@@ -605,7 +550,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 749
     :try_start_2
     iget-object v3, p0, Landroid/service/notification/NotificationListenerService$INotificationListenerWrapper;->this$0:Landroid/service/notification/NotificationListenerService;
 
@@ -621,23 +565,19 @@
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 753
     :goto_0
     :try_start_3
     monitor-exit v4
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 754
     .end local v1    # "sbn":Landroid/service/notification/StatusBarNotification;
     :goto_1
     return-void
 
-    .line 741
     :catch_0
     move-exception v0
 
-    .line 742
     .local v0, "e":Landroid/os/RemoteException;
     iget-object v3, p0, Landroid/service/notification/NotificationListenerService$INotificationListenerWrapper;->this$0:Landroid/service/notification/NotificationListenerService;
 
@@ -646,19 +586,17 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "onNotificationRemoved: Error receiving StatusBarNotification"
+    const-string v4, "onNotificationRemoved: Error receiving StatusBarNotification"
 
     invoke-static {v3, v4, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_1
 
-    .line 750
     .end local v0    # "e":Landroid/os/RemoteException;
     .restart local v1    # "sbn":Landroid/service/notification/StatusBarNotification;
     :catch_1
     move-exception v2
 
-    .line 751
     .local v2, "t":Ljava/lang/Throwable;
     :try_start_4
     iget-object v3, p0, Landroid/service/notification/NotificationListenerService$INotificationListenerWrapper;->this$0:Landroid/service/notification/NotificationListenerService;
@@ -674,7 +612,6 @@
 
     goto :goto_0
 
-    .line 753
     .end local v2    # "t":Ljava/lang/Throwable;
     :catchall_0
     move-exception v3

@@ -12,7 +12,6 @@
     .locals 0
 
     .prologue
-    .line 16
     invoke-direct {p0}, Lcom/kddi/android/internal/pdg/PdgAccessChecker;-><init>()V
 
     return-void
@@ -26,7 +25,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 21
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -63,31 +61,25 @@
 
     invoke-static {v2}, Lcom/kddi/android/internal/pdg/PdgLog;->d(Ljava/lang/String;)V
 
-    .line 22
     const/4 v0, 0x1
 
-    .line 24
     .local v0, "result":Z
     if-eqz p0, :cond_0
 
     if-nez p1, :cond_1
 
-    .line 25
     :cond_0
-    const-string/jumbo v2, "parameter error: context or uri is null."
+    const-string v2, "parameter error: context or uri is null."
 
     invoke-static {v2}, Lcom/kddi/android/internal/pdg/PdgLog;->e(Ljava/lang/String;)V
 
-    .line 26
     const-string v2, "boolean checkPrivacy() end / return = true"
 
     invoke-static {v2}, Lcom/kddi/android/internal/pdg/PdgLog;->d(Ljava/lang/String;)V
 
-    .line 38
     :goto_0
     return v1
 
-    .line 30
     :cond_1
     invoke-virtual {p1}, Landroid/net/Uri;->getAuthority()Ljava/lang/String;
 
@@ -113,14 +105,12 @@
 
     if-nez v2, :cond_2
 
-    .line 32
     const-string v2, "boolean checkPrivacy() end / return = true / uri != contacts"
 
     invoke-static {v2}, Lcom/kddi/android/internal/pdg/PdgLog;->d(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 35
     :cond_2
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
@@ -132,7 +122,6 @@
 
     move-result v0
 
-    .line 37
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -155,6 +144,5 @@
 
     move v1, v0
 
-    .line 38
     goto :goto_0
 .end method

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 3882
     iput-object p1, p0, Landroid/widget/RemoteViews$SetOnLongClickDragable$1;->this$1:Landroid/widget/RemoteViews$SetOnLongClickDragable;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,12 +44,10 @@
 
     const/4 v3, 0x0
 
-    .line 3886
     new-instance v8, Landroid/view/View$DragShadowBuilder;
 
     invoke-direct {v8, p1}, Landroid/view/View$DragShadowBuilder;-><init>(Landroid/view/View;)V
 
-    .line 3887
     .local v8, "shadowBuilder":Landroid/view/View$DragShadowBuilder;
     const-string v0, "RemoteViews"
 
@@ -94,21 +91,18 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3888
     iget-object v0, p0, Landroid/widget/RemoteViews$SetOnLongClickDragable$1;->this$1:Landroid/widget/RemoteViews$SetOnLongClickDragable;
 
     iget-object v0, v0, Landroid/widget/RemoteViews$SetOnLongClickDragable;->clipData:Landroid/content/ClipData;
 
     invoke-virtual {p1, v0, v8, v4, v3}, Landroid/view/View;->startDrag(Landroid/content/ClipData;Landroid/view/View$DragShadowBuilder;Ljava/lang/Object;I)Z
 
-    .line 3889
     iget-object v0, p0, Landroid/widget/RemoteViews$SetOnLongClickDragable$1;->this$1:Landroid/widget/RemoteViews$SetOnLongClickDragable;
 
     iget-object v0, v0, Landroid/widget/RemoteViews$SetOnLongClickDragable;->dragStartIntent:Landroid/app/PendingIntent;
 
     if-eqz v0, :cond_0
 
-    .line 3892
     :try_start_0
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -134,7 +128,6 @@
     :try_end_0
     .catch Landroid/content/IntentSender$SendIntentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3899
     :cond_0
     :goto_0
     iget-object v0, p0, Landroid/widget/RemoteViews$SetOnLongClickDragable$1;->this$1:Landroid/widget/RemoteViews$SetOnLongClickDragable;
@@ -143,32 +136,26 @@
 
     if-eqz v0, :cond_1
 
-    .line 3900
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v7
 
     check-cast v7, Landroid/view/ViewGroup;
 
-    .line 3901
     .local v7, "parent":Landroid/view/ViewGroup;
     if-eqz v7, :cond_1
 
-    .line 3902
     invoke-virtual {v7, p1}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
-    .line 3905
     .end local v7    # "parent":Landroid/view/ViewGroup;
     :cond_1
     const/4 v0, 0x1
 
     return v0
 
-    .line 3895
     :catch_0
     move-exception v6
 
-    .line 3896
     .local v6, "e":Landroid/content/IntentSender$SendIntentException;
     const-string v0, "RemoteViews"
 

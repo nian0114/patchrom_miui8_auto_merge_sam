@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 225
     iput-object p1, p0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager$CallStateMachine$IncomingAnsweredState;->this$0:Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager$CallStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -37,7 +36,6 @@
     .locals 2
 
     .prologue
-    .line 229
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -62,7 +60,6 @@
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->info(Ljava/lang/String;)V
 
-    .line 230
     return-void
 .end method
 
@@ -71,7 +68,6 @@
     .param p1, "message"    # Landroid/os/Message;
 
     .prologue
-    .line 235
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -114,7 +110,6 @@
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->info(Ljava/lang/String;)V
 
-    .line 237
     sget-object v0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager$2;->$SwitchMap$com$samsung$android$contextaware$utilbundle$CaTelephonyManager$Msg:[I
 
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager$Msg;->values()[Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager$Msg;
@@ -133,14 +128,11 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 247
     const/4 v0, 0x0
 
-    .line 250
     :goto_0
     return v0
 
-    .line 239
     :pswitch_0
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager$CallStateMachine$IncomingAnsweredState;->this$0:Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager$CallStateMachine;
 
@@ -154,13 +146,11 @@
     # invokes: Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager$CallStateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v0, v1}, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager$CallStateMachine;->access$600(Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager$CallStateMachine;Lcom/android/internal/util/IState;)V
 
-    .line 250
     :goto_1
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 243
     :pswitch_1
     const-string v0, "Unexpected call state"
 
@@ -168,7 +158,6 @@
 
     goto :goto_1
 
-    .line 237
     :pswitch_data_0
     .packed-switch 0x2
         :pswitch_1

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 954
     iput-object p1, p0, Lcom/android/server/SecExternalDisplayService$4;->this$0:Lcom/android/server/SecExternalDisplayService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "whichButton"    # I
 
     .prologue
-    .line 957
     iget-object v0, p0, Lcom/android/server/SecExternalDisplayService$4;->this$0:Lcom/android/server/SecExternalDisplayService;
 
     # getter for: Lcom/android/server/SecExternalDisplayService;->mDialogCheckBox:Landroid/widget/CheckBox;
@@ -56,23 +54,19 @@
 
     if-eqz v0, :cond_0
 
-    .line 958
-    const-string/jumbo v0, "persist.sys.SecEDS.Dialog"
+    const-string v0, "persist.sys.SecEDS.Dialog"
 
-    const-string/jumbo v1, "true"
+    const-string v1, "true"
 
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 961
     :goto_0
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 962
     return-void
 
-    .line 960
     :cond_0
-    const-string/jumbo v0, "persist.sys.SecEDS.Dialog"
+    const-string v0, "persist.sys.SecEDS.Dialog"
 
     const-string v1, "false"
 

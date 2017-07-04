@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 400
     invoke-direct {p0}, Landroid/app/SystemServiceRegistry$StaticServiceFetcher;-><init>()V
 
     return-void
@@ -40,27 +39,22 @@
     .locals 3
 
     .prologue
-    .line 403
     const-string v2, "dropbox"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 404
     .local v0, "b":Landroid/os/IBinder;
     invoke-static {v0}, Lcom/android/internal/os/IDropBoxManagerService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/internal/os/IDropBoxManagerService;
 
     move-result-object v1
 
-    .line 405
     .local v1, "service":Lcom/android/internal/os/IDropBoxManagerService;
     if-nez v1, :cond_0
 
-    .line 410
     const/4 v2, 0x0
 
-    .line 412
     :goto_0
     return-object v2
 
@@ -76,7 +70,6 @@
     .locals 1
 
     .prologue
-    .line 400
     invoke-virtual {p0}, Landroid/app/SystemServiceRegistry$19;->createService()Landroid/os/DropBoxManager;
 
     move-result-object v0

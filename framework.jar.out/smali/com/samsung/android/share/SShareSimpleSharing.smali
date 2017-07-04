@@ -171,21 +171,16 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 69
     sput-boolean v1, Lcom/samsung/android/share/SShareSimpleSharing;->mEasySignUpCertificated:Z
 
-    .line 70
     sput-boolean v1, Lcom/samsung/android/share/SShareSimpleSharing;->mSSharingRecentContactExisted:Z
 
-    .line 71
     const/4 v0, 0x1
 
     sput-boolean v0, Lcom/samsung/android/share/SShareSimpleSharing;->mRemoteShareServiceEnabled:Z
 
-    .line 72
     sput-boolean v1, Lcom/samsung/android/share/SShareSimpleSharing;->mIsRemoteShareServiceDownloaded:Z
 
-    .line 113
     const/4 v0, 0x5
 
     sput v0, Lcom/samsung/android/share/SShareSimpleSharing;->RECENT_CONTACTS_LIST_MAX_COUNT:I
@@ -219,81 +214,64 @@
     .local p6, "extraIntentList":Ljava/util/List;, "Ljava/util/List<Landroid/content/Intent;>;"
     const/4 v2, 0x0
 
-    .line 202
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 60
     iput v2, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mRecentHistoryIndex:I
 
-    .line 61
     iput-boolean v2, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mIsRecentContactsReceiverRegistered:Z
 
-    .line 62
     iput v2, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mRecentContactsListCount:I
 
-    .line 63
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mRecentContactsListName:Ljava/util/ArrayList;
 
-    .line 64
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mRecentContactsListThumb:Ljava/util/List;
 
-    .line 66
     const/high16 v0, 0x42200000    # 40.0f
 
     iput v0, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mTunedMargin:F
 
-    .line 68
     iput-boolean v2, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mIsRemoteShareServiceDownloadedChecked:Z
 
-    .line 88
     const-string v0, "com.samsung.android.coreapps.rshare.responserecentgroupcontacts"
 
     iput-object v0, p0, Lcom/samsung/android/share/SShareSimpleSharing;->RESPONSE_RECENT_GROUP_CONTACTS:Ljava/lang/String;
 
-    .line 91
-    const-string/jumbo v0, "recentgroupnamelist"
+    const-string v0, "recentgroupnamelist"
 
     iput-object v0, p0, Lcom/samsung/android/share/SShareSimpleSharing;->EXTRA_KEY_RECENT_GROUP_NAME_LIST:Ljava/lang/String;
 
-    .line 92
-    const-string/jumbo v0, "recentgroupnames"
+    const-string v0, "recentgroupnames"
 
     iput-object v0, p0, Lcom/samsung/android/share/SShareSimpleSharing;->EXTRA_KEY_RECENT_GROUP_NAMES:Ljava/lang/String;
 
-    .line 93
-    const-string/jumbo v0, "recentgroupthumbnail"
+    const-string v0, "recentgroupthumbnail"
 
     iput-object v0, p0, Lcom/samsung/android/share/SShareSimpleSharing;->EXTRA_KEY_RECENT_GROUP_THUMBNAILS:Ljava/lang/String;
 
-    .line 94
-    const-string/jumbo v0, "recentgroupdataids"
+    const-string v0, "recentgroupdataids"
 
     iput-object v0, p0, Lcom/samsung/android/share/SShareSimpleSharing;->EXTRA_KEY_RECENT_GROUP_DATAIDS:Ljava/lang/String;
 
-    .line 95
-    const-string/jumbo v0, "recentgroupcontactids"
+    const-string v0, "recentgroupcontactids"
 
     iput-object v0, p0, Lcom/samsung/android/share/SShareSimpleSharing;->EXTRA_KEY_RECENT_GROUP_CONTACTID:Ljava/lang/String;
 
-    .line 96
-    const-string/jumbo v0, "recentgroupcount"
+    const-string v0, "recentgroupcount"
 
     iput-object v0, p0, Lcom/samsung/android/share/SShareSimpleSharing;->EXTRA_KEY_RECENT_GROUP_COUNT:Ljava/lang/String;
 
-    .line 97
-    const-string/jumbo v0, "recentphonenumbers"
+    const-string v0, "recentphonenumbers"
 
     iput-object v0, p0, Lcom/samsung/android/share/SShareSimpleSharing;->EXTRA_KEY_RECENT_GROUP_PHONENUM:Ljava/lang/String;
 
-    .line 98
     const/4 v0, 0x1
 
     new-array v0, v0, [C
@@ -304,41 +282,32 @@
 
     iput-object v0, p0, Lcom/samsung/android/share/SShareSimpleSharing;->ELLIPSIS_NORMAL:[C
 
-    .line 114
     const/4 v0, 0x2
 
     iput v0, p0, Lcom/samsung/android/share/SShareSimpleSharing;->REMOTE_SHARE_SERVICE_ID:I
 
-    .line 120
     iput-boolean v2, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mListupCompleted:Z
 
-    .line 123
     new-instance v0, Lcom/samsung/android/share/SShareSimpleSharing$1;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/share/SShareSimpleSharing$1;-><init>(Lcom/samsung/android/share/SShareSimpleSharing;)V
 
     iput-object v0, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mHandler:Landroid/os/Handler;
 
-    .line 148
     new-instance v0, Lcom/samsung/android/share/SShareSimpleSharing$2;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/share/SShareSimpleSharing$2;-><init>(Lcom/samsung/android/share/SShareSimpleSharing;)V
 
     iput-object v0, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mRecentContactsReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 203
     iput-object p1, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mActivity:Landroid/app/Activity;
 
-    .line 204
     iput-object p2, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mContext:Landroid/content/Context;
 
-    .line 205
     iput-object p3, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mFeature:Lcom/samsung/android/share/SShareCommon;
 
-    .line 206
     iput-object p4, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mOrigIntent:Landroid/content/Intent;
 
-    .line 207
     new-instance v0, Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListAdapter;
 
     const/4 v4, 0x0
@@ -355,40 +324,32 @@
 
     iput-object v0, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mRecentHistoryListAdapter:Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListAdapter;
 
-    .line 208
     sget v0, Lcom/samsung/android/share/SShareSimpleSharing;->RECENT_CONTACTS_LIST_MAX_COUNT:I
 
     new-array v0, v0, [Ljava/lang/String;
 
     iput-object v0, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mRecipientDataId:[Ljava/lang/String;
 
-    .line 209
     sget v0, Lcom/samsung/android/share/SShareSimpleSharing;->RECENT_CONTACTS_LIST_MAX_COUNT:I
 
     new-array v0, v0, [J
 
     iput-object v0, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mRecentContactsId:[J
 
-    .line 210
     sget v0, Lcom/samsung/android/share/SShareSimpleSharing;->RECENT_CONTACTS_LIST_MAX_COUNT:I
 
     new-array v0, v0, [I
 
     iput-object v0, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mRecentContactsItemContactsCountInGroup:[I
 
-    .line 211
     iput-object p6, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mExtraIntentList:Ljava/util/List;
 
-    .line 213
     invoke-direct {p0}, Lcom/samsung/android/share/SShareSimpleSharing;->checkEasySignUpCertificated()V
 
-    .line 214
     invoke-direct {p0}, Lcom/samsung/android/share/SShareSimpleSharing;->checkSSharingRecentContactExisted()V
 
-    .line 215
     invoke-direct {p0}, Lcom/samsung/android/share/SShareSimpleSharing;->checkRemoteShareServiceEnabled()V
 
-    .line 216
     return-void
 .end method
 
@@ -397,7 +358,6 @@
     .param p0, "x0"    # Lcom/samsung/android/share/SShareSimpleSharing;
 
     .prologue
-    .line 50
     invoke-direct {p0}, Lcom/samsung/android/share/SShareSimpleSharing;->initRecentHistoryList()V
 
     return-void
@@ -408,7 +368,6 @@
     .param p0, "x0"    # Lcom/samsung/android/share/SShareSimpleSharing;
 
     .prologue
-    .line 50
     invoke-direct {p0}, Lcom/samsung/android/share/SShareSimpleSharing;->getFontScale()F
 
     move-result v0
@@ -422,7 +381,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 50
     iput p1, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mRecentContactsListCount:I
 
     return p1
@@ -433,7 +391,6 @@
     .param p0, "x0"    # Lcom/samsung/android/share/SShareSimpleSharing;
 
     .prologue
-    .line 50
     iget v0, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mRecentContactsListCount:I
 
     add-int/lit8 v1, v0, 0x1
@@ -448,7 +405,6 @@
     .param p0, "x0"    # Lcom/samsung/android/share/SShareSimpleSharing;
 
     .prologue
-    .line 50
     iget v0, p0, Lcom/samsung/android/share/SShareSimpleSharing;->defaultTextSize:F
 
     return v0
@@ -460,7 +416,6 @@
     .param p1, "x1"    # F
 
     .prologue
-    .line 50
     iput p1, p0, Lcom/samsung/android/share/SShareSimpleSharing;->defaultTextSize:F
 
     return p1
@@ -471,7 +426,6 @@
     .param p0, "x0"    # Lcom/samsung/android/share/SShareSimpleSharing;
 
     .prologue
-    .line 50
     iget-object v0, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -482,7 +436,6 @@
     .param p0, "x0"    # Lcom/samsung/android/share/SShareSimpleSharing;
 
     .prologue
-    .line 50
     iget-object v0, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mRecentContactsListThumb:Ljava/util/List;
 
     return-object v0
@@ -493,7 +446,6 @@
     .param p0, "x0"    # Lcom/samsung/android/share/SShareSimpleSharing;
 
     .prologue
-    .line 50
     iget-object v0, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mRecentContactsListName:Ljava/util/ArrayList;
 
     return-object v0
@@ -503,7 +455,6 @@
     .locals 1
 
     .prologue
-    .line 50
     sget v0, Lcom/samsung/android/share/SShareSimpleSharing;->RECENT_CONTACTS_LIST_MAX_COUNT:I
 
     return v0
@@ -515,7 +466,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 50
     iput-boolean p1, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mGroupNameOldConcept:Z
 
     return p1
@@ -526,7 +476,6 @@
     .param p0, "x0"    # Lcom/samsung/android/share/SShareSimpleSharing;
 
     .prologue
-    .line 50
     iget-object v0, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mRecipientDataId:[Ljava/lang/String;
 
     return-object v0
@@ -537,7 +486,6 @@
     .param p0, "x0"    # Lcom/samsung/android/share/SShareSimpleSharing;
 
     .prologue
-    .line 50
     iget-object v0, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mRecentContactsId:[J
 
     return-object v0
@@ -548,7 +496,6 @@
     .param p0, "x0"    # Lcom/samsung/android/share/SShareSimpleSharing;
 
     .prologue
-    .line 50
     iget-object v0, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mRecentContactsItemContactsCountInGroup:[I
 
     return-object v0
@@ -558,7 +505,6 @@
     .locals 3
 
     .prologue
-    .line 412
     iget-object v0, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mContext:Landroid/content/Context;
 
     const/4 v1, 0x2
@@ -569,7 +515,6 @@
 
     sput-boolean v0, Lcom/samsung/android/share/SShareSimpleSharing;->mEasySignUpCertificated:Z
 
-    .line 413
     const-string v0, "SShareSimpleSharing"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -594,7 +539,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 414
     return-void
 .end method
 
@@ -604,12 +548,10 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 422
     sget-boolean v1, Lcom/samsung/android/share/SShareSimpleSharing;->mEasySignUpCertificated:Z
 
     if-eqz v1, :cond_1
 
-    .line 424
     iget-object v1, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mContext:Landroid/content/Context;
 
     const/4 v2, 0x2
@@ -618,7 +560,6 @@
 
     move-result v0
 
-    .line 425
     .local v0, "retVal":I
     const-string v1, "SShareSimpleSharing"
 
@@ -642,27 +583,22 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 426
     if-eq v0, v4, :cond_0
 
-    .line 427
     const/4 v1, 0x0
 
     sput-boolean v1, Lcom/samsung/android/share/SShareSimpleSharing;->mRemoteShareServiceEnabled:Z
 
-    .line 434
     .end local v0    # "retVal":I
     :goto_0
     return-void
 
-    .line 429
     .restart local v0    # "retVal":I
     :cond_0
     sput-boolean v4, Lcom/samsung/android/share/SShareSimpleSharing;->mRemoteShareServiceEnabled:Z
 
     goto :goto_0
 
-    .line 432
     .end local v0    # "retVal":I
     :cond_1
     sput-boolean v4, Lcom/samsung/android/share/SShareSimpleSharing;->mRemoteShareServiceEnabled:Z
@@ -674,7 +610,6 @@
     .locals 3
 
     .prologue
-    .line 417
     iget-object v0, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/samsung/android/coreapps/sdk/easysignup/SimpleSharingManager;->isRecentContactExisted(Landroid/content/Context;)Z
@@ -683,7 +618,6 @@
 
     sput-boolean v0, Lcom/samsung/android/share/SShareSimpleSharing;->mSSharingRecentContactExisted:Z
 
-    .line 418
     const-string v0, "SShareSimpleSharing"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -708,7 +642,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 419
     return-void
 .end method
 
@@ -717,7 +650,6 @@
     .param p1, "bClearAll"    # Z
 
     .prologue
-    .line 446
     if-eqz p1, :cond_0
 
     iget-object v0, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mRecentHistoryListAdapter:Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListAdapter;
@@ -733,7 +665,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 447
     iget-object v0, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mRecentHistoryListAdapter:Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListAdapter;
 
     # getter for: Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListAdapter;->mRecentHistoryList:Ljava/util/List;
@@ -743,12 +674,10 @@
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 448
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mListupCompleted:Z
 
-    .line 450
     :cond_0
     return-void
 .end method
@@ -757,7 +686,6 @@
     .locals 2
 
     .prologue
-    .line 701
     iget-object v1, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -770,7 +698,6 @@
 
     iget v0, v1, Landroid/content/res/Configuration;->fontScale:F
 
-    .line 702
     .local v0, "fontScale":F
     const v1, 0x3f99999a    # 1.2f
 
@@ -778,10 +705,8 @@
 
     if-lez v1, :cond_0
 
-    .line 703
     const v0, 0x3f99999a    # 1.2f
 
-    .line 705
     :cond_0
     return v0
 .end method
@@ -791,7 +716,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 453
     iget-object v0, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mRecentHistoryListAdapter:Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListAdapter;
 
     invoke-virtual {v0, p1}, Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListAdapter;->getItem(I)Ljava/lang/Object;
@@ -813,36 +737,29 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 649
     const/4 v1, -0x1
 
     if-eq p5, v1, :cond_2
 
-    .line 651
     if-ne p5, v2, :cond_0
 
-    .line 652
     const/4 v0, 0x4
 
-    .line 669
     .local v0, "iconType":I
     :goto_0
     return v0
 
-    .line 653
     .end local v0    # "iconType":I
     :cond_0
     const/4 v1, 0x2
 
     if-ne p5, v1, :cond_1
 
-    .line 654
     const/4 v0, 0x5
 
     .restart local v0    # "iconType":I
     goto :goto_0
 
-    .line 656
     .end local v0    # "iconType":I
     :cond_1
     const/4 v0, 0x4
@@ -850,29 +767,24 @@
     .restart local v0    # "iconType":I
     goto :goto_0
 
-    .line 660
     .end local v0    # "iconType":I
     :cond_2
     if-eqz p1, :cond_3
 
-    .line 661
     const/4 v0, 0x3
 
     .restart local v0    # "iconType":I
     goto :goto_0
 
-    .line 662
     .end local v0    # "iconType":I
     :cond_3
     if-le p2, v2, :cond_4
 
-    .line 663
     const/4 v0, 0x2
 
     .restart local v0    # "iconType":I
     goto :goto_0
 
-    .line 665
     .end local v0    # "iconType":I
     :cond_4
     const/4 v0, 0x1
@@ -885,7 +797,6 @@
     .locals 6
 
     .prologue
-    .line 437
     iget-object v1, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -898,7 +809,6 @@
 
     move-result-object v2
 
-    .line 438
     .local v2, "remoteShareDisplayLabel":Ljava/lang/CharSequence;
     iget-object v1, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mContext:Landroid/content/Context;
 
@@ -912,7 +822,6 @@
 
     move-result-object v5
 
-    .line 439
     .local v5, "recentHistoryDefaultIconDisplayLabel":Ljava/lang/CharSequence;
     new-instance v0, Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListInfo;
 
@@ -924,7 +833,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListInfo;-><init>(Lcom/samsung/android/share/SShareSimpleSharing;Ljava/lang/CharSequence;ILandroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;)V
 
-    .line 440
     .local v0, "remoteShareItem":Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListInfo;
     iget-object v1, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mRecentHistoryListAdapter:Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListAdapter;
 
@@ -937,19 +845,16 @@
 
     invoke-interface {v1, v3, v0}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
-    .line 441
     iget v1, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mRecentHistoryIndex:I
 
     add-int/lit8 v1, v1, 0x1
 
     iput v1, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mRecentHistoryIndex:I
 
-    .line 442
     iget-object v1, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mRecentHistoryListAdapter:Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListAdapter;
 
     invoke-virtual {v1}, Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListAdapter;->notifyDataSetChanged()V
 
-    .line 443
     return-void
 .end method
 
@@ -957,7 +862,6 @@
     .locals 48
 
     .prologue
-    .line 459
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lcom/samsung/android/share/SShareSimpleSharing;->mRecentHistoryListAdapter:Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListAdapter;
@@ -970,12 +874,10 @@
 
     if-nez v5, :cond_1
 
-    .line 644
     :cond_0
     :goto_0
     return-void
 
-    .line 463
     :cond_1
     move-object/from16 v0, p0
 
@@ -994,14 +896,12 @@
 
     if-eqz v5, :cond_2
 
-    .line 464
     const/4 v5, 0x1
 
     move-object/from16 v0, p0
 
     invoke-direct {v0, v5}, Lcom/samsung/android/share/SShareSimpleSharing;->clearRecentHistoryList(Z)V
 
-    .line 466
     :cond_2
     const/4 v5, 0x0
 
@@ -1009,7 +909,6 @@
 
     iput v5, v0, Lcom/samsung/android/share/SShareSimpleSharing;->mRecentHistoryIndex:I
 
-    .line 467
     move-object/from16 v0, p0
 
     iget v5, v0, Lcom/samsung/android/share/SShareSimpleSharing;->mRecentContactsListCount:I
@@ -1018,7 +917,6 @@
 
     if-lt v5, v6, :cond_18
 
-    .line 468
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lcom/samsung/android/share/SShareSimpleSharing;->mContext:Landroid/content/Context;
@@ -1037,7 +935,6 @@
 
     move/from16 v42, v0
 
-    .line 469
     .local v42, "textWidth":F
     move-object/from16 v0, p0
 
@@ -1057,7 +954,6 @@
 
     move/from16 v39, v0
 
-    .line 470
     .local v39, "textLandWidth":F
     move-object/from16 v0, p0
 
@@ -1077,7 +973,6 @@
 
     move/from16 v25, v0
 
-    .line 471
     .local v25, "maxLineNum":F
     move-object/from16 v0, p0
 
@@ -1099,7 +994,6 @@
 
     const/4 v14, 0x1
 
-    .line 472
     .local v14, "bLandscape":Z
     :goto_1
     move-object/from16 v0, p0
@@ -1116,7 +1010,6 @@
 
     move-result-object v35
 
-    .line 473
     .local v35, "remoteShareDisplayLabel":Ljava/lang/CharSequence;
     new-instance v36, Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListInfo;
 
@@ -1128,7 +1021,6 @@
 
     invoke-direct {v0, v1, v2}, Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListInfo;-><init>(Lcom/samsung/android/share/SShareSimpleSharing;Ljava/lang/CharSequence;)V
 
-    .line 474
     .local v36, "remoteShareItem":Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListInfo;
     move-object/from16 v0, p0
 
@@ -1147,7 +1039,6 @@
 
     invoke-interface {v5, v6, v0}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
-    .line 475
     move-object/from16 v0, p0
 
     iget v5, v0, Lcom/samsung/android/share/SShareSimpleSharing;->mRecentHistoryIndex:I
@@ -1158,12 +1049,10 @@
 
     iput v5, v0, Lcom/samsung/android/share/SShareSimpleSharing;->mRecentHistoryIndex:I
 
-    .line 478
     invoke-direct/range {p0 .. p0}, Lcom/samsung/android/share/SShareSimpleSharing;->getFontScale()F
 
     move-result v21
 
-    .line 479
     .local v21, "fontScale":F
     move-object/from16 v0, p0
 
@@ -1183,7 +1072,6 @@
 
     move/from16 v16, v0
 
-    .line 480
     .local v16, "defaultSize":F
     const/4 v5, 0x0
 
@@ -1205,7 +1093,6 @@
 
     move-result v41
 
-    .line 482
     .local v41, "textSize":F
     move-object/from16 v0, p0
 
@@ -1213,7 +1100,6 @@
 
     if-eqz v5, :cond_3
 
-    .line 489
     :cond_3
     const/16 v38, 0x0
 
@@ -1233,26 +1119,20 @@
 
     if-ge v0, v5, :cond_19
 
-    .line 490
     const/16 v33, 0x0
 
-    .line 491
     .local v33, "recentHistoryDisplayLabel":Ljava/lang/CharSequence;
     const/16 v34, 0x0
 
-    .line 492
     .local v34, "recentHistoryDisplayLabel2":Ljava/lang/CharSequence;
     const-string v23, ""
 
-    .line 493
     .local v23, "groupNameOrg":Ljava/lang/String;
     const-string v22, ""
 
-    .line 494
     .local v22, "groupName":Ljava/lang/String;
     const/16 v32, 0x0
 
-    .line 497
     .local v32, "photoIcon":Landroid/graphics/drawable/Drawable;
     move-object/from16 v0, p0
 
@@ -1264,7 +1144,6 @@
 
     if-le v5, v6, :cond_15
 
-    .line 498
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lcom/samsung/android/share/SShareSimpleSharing;->mRecentContactsListName:Ljava/util/ArrayList;
@@ -1277,34 +1156,27 @@
 
     check-cast v27, Ljava/lang/CharSequence;
 
-    .line 499
     .local v27, "nameStr":Ljava/lang/CharSequence;
     const-string v19, ""
 
-    .line 500
     .local v19, "emptyStr":Ljava/lang/CharSequence;
     const-string v18, ""
 
-    .line 502
     .local v18, "emptyGroupStr":Ljava/lang/String;
     const/16 v45, 0x0
 
-    .line 503
     .local v45, "totalW":F
     const/16 v29, 0x0
 
-    .line 505
     .local v29, "needEllipsis":Z
     new-instance v40, Landroid/text/TextPaint;
 
     invoke-direct/range {v40 .. v40}, Landroid/text/TextPaint;-><init>()V
 
-    .line 506
     .local v40, "textPaint":Landroid/text/TextPaint;
     invoke-virtual/range {v40 .. v41}, Landroid/text/TextPaint;->setTextSize(F)V
 
-    .line 507
-    const-string/jumbo v5, "sec-roboto-light"
+    const-string v5, "sec-roboto-light"
 
     const/4 v6, 0x0
 
@@ -1316,21 +1188,18 @@
 
     invoke-virtual {v0, v5}, Landroid/text/TextPaint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
 
-    .line 508
     const/4 v5, 0x1
 
     move-object/from16 v0, v40
 
     invoke-virtual {v0, v5}, Landroid/text/TextPaint;->setAntiAlias(Z)V
 
-    .line 509
     sget-object v5, Landroid/graphics/Paint$Align;->CENTER:Landroid/graphics/Paint$Align;
 
     move-object/from16 v0, v40
 
     invoke-virtual {v0, v5}, Landroid/text/TextPaint;->setTextAlign(Landroid/graphics/Paint$Align;)V
 
-    .line 510
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lcom/samsung/android/share/SShareSimpleSharing;->mContext:Landroid/content/Context;
@@ -1349,15 +1218,12 @@
 
     iput v5, v0, Landroid/text/TextPaint;->density:F
 
-    .line 513
     if-eqz v14, :cond_6
 
-    .line 514
     mul-float v5, v39, v25
 
     sub-float v13, v5, v45
 
-    .line 518
     .local v13, "availNameW":F
     :goto_3
     sget-object v5, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
@@ -1370,7 +1236,6 @@
 
     move-result-object v17
 
-    .line 520
     .local v17, "ellipsizedNameStr":Ljava/lang/CharSequence;
     invoke-interface/range {v17 .. v17}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
@@ -1412,10 +1277,8 @@
 
     if-eqz v5, :cond_4
 
-    .line 521
     const/16 v29, 0x1
 
-    .line 525
     :cond_4
     move-object/from16 v0, p0
 
@@ -1423,7 +1286,6 @@
 
     if-eqz v5, :cond_7
 
-    .line 527
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lcom/samsung/android/share/SShareSimpleSharing;->mContext:Landroid/content/Context;
@@ -1434,7 +1296,6 @@
 
     move-result-object v23
 
-    .line 528
     const/4 v5, 0x2
 
     new-array v5, v5, [Ljava/lang/Object;
@@ -1465,13 +1326,11 @@
 
     move-result-object v18
 
-    .line 536
     :goto_4
     invoke-virtual/range {v18 .. v18}, Ljava/lang/String;->length()I
 
     move-result v30
 
-    .line 537
     .local v30, "othersLength":I
     move/from16 v0, v30
 
@@ -1479,7 +1338,6 @@
 
     move-object/from16 v31, v0
 
-    .line 538
     .local v31, "othersW":[F
     move-object/from16 v0, v40
 
@@ -1491,7 +1349,6 @@
 
     move-result v11
 
-    .line 541
     .local v11, "arrayNum":I
     const/16 v24, 0x0
 
@@ -1501,17 +1358,14 @@
 
     if-ge v0, v11, :cond_9
 
-    .line 542
     aget v5, v31, v24
 
     add-float v45, v45, v5
 
-    .line 541
     add-int/lit8 v24, v24, 0x1
 
     goto :goto_5
 
-    .line 471
     .end local v11    # "arrayNum":I
     .end local v13    # "availNameW":F
     .end local v14    # "bLandscape":Z
@@ -1541,7 +1395,6 @@
 
     goto/16 :goto_1
 
-    .line 516
     .restart local v14    # "bLandscape":Z
     .restart local v16    # "defaultSize":F
     .restart local v18    # "emptyGroupStr":Ljava/lang/String;
@@ -1574,12 +1427,10 @@
     .restart local v13    # "availNameW":F
     goto/16 :goto_3
 
-    .line 531
     .restart local v17    # "ellipsizedNameStr":Ljava/lang/CharSequence;
     :cond_7
     if-eqz v29, :cond_8
 
-    .line 532
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -1610,13 +1461,11 @@
 
     move-result-object v23
 
-    .line 534
     :cond_8
     move-object/from16 v18, v23
 
     goto :goto_4
 
-    .line 545
     .restart local v11    # "arrayNum":I
     .restart local v24    # "i":I
     .restart local v30    # "othersLength":I
@@ -1624,12 +1473,10 @@
     :cond_9
     if-eqz v14, :cond_c
 
-    .line 546
     mul-float v5, v39, v25
 
     sub-float v13, v5, v45
 
-    .line 554
     :goto_6
     sget-object v5, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
 
@@ -1641,10 +1488,8 @@
 
     move-result-object v17
 
-    .line 556
     if-eqz v14, :cond_e
 
-    .line 557
     move-object/from16 v0, p0
 
     iget-boolean v5, v0, Lcom/samsung/android/share/SShareSimpleSharing;->mGroupNameOldConcept:Z
@@ -1685,7 +1530,6 @@
 
     if-eqz v5, :cond_a
 
-    .line 558
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -1724,7 +1568,6 @@
 
     move-result-object v17
 
-    .line 560
     :cond_a
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -1748,7 +1591,6 @@
 
     move-result-object v33
 
-    .line 612
     .end local v11    # "arrayNum":I
     .end local v13    # "availNameW":F
     .end local v17    # "ellipsizedNameStr":Ljava/lang/CharSequence;
@@ -1795,13 +1637,11 @@
 
     move-result v7
 
-    .line 614
     .local v7, "iconType":I
     const/4 v5, 0x3
 
     if-ne v7, v5, :cond_16
 
-    .line 615
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lcom/samsung/android/share/SShareSimpleSharing;->mRecentContactsListThumb:Ljava/util/List;
@@ -1820,7 +1660,6 @@
 
     move-result-object v8
 
-    .line 626
     .end local v32    # "photoIcon":Landroid/graphics/drawable/Drawable;
     .local v8, "photoIcon":Landroid/graphics/drawable/Drawable;
     :goto_8
@@ -1834,7 +1673,6 @@
 
     if-le v5, v6, :cond_17
 
-    .line 627
     new-instance v4, Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListInfo;
 
     move-object/from16 v5, p0
@@ -1845,7 +1683,6 @@
 
     invoke-direct/range {v4 .. v9}, Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListInfo;-><init>(Lcom/samsung/android/share/SShareSimpleSharing;Ljava/lang/CharSequence;ILandroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;)V
 
-    .line 631
     .local v4, "recentHistoryItem":Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListInfo;
     :goto_9
     move-object/from16 v0, p0
@@ -1863,7 +1700,6 @@
 
     invoke-interface {v5, v6, v4}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
-    .line 632
     move-object/from16 v0, p0
 
     iget v5, v0, Lcom/samsung/android/share/SShareSimpleSharing;->mRecentHistoryIndex:I
@@ -1874,12 +1710,10 @@
 
     iput v5, v0, Lcom/samsung/android/share/SShareSimpleSharing;->mRecentHistoryIndex:I
 
-    .line 489
     add-int/lit8 v38, v38, 0x1
 
     goto/16 :goto_2
 
-    .line 548
     .end local v4    # "recentHistoryItem":Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListInfo;
     .end local v7    # "iconType":I
     .end local v8    # "photoIcon":Landroid/graphics/drawable/Drawable;
@@ -1899,7 +1733,6 @@
     :cond_c
     if-eqz v29, :cond_d
 
-    .line 549
     mul-float v5, v42, v25
 
     sub-float v5, v5, v45
@@ -1912,7 +1745,6 @@
 
     goto/16 :goto_6
 
-    .line 551
     :cond_d
     mul-float v5, v42, v25
 
@@ -1920,7 +1752,6 @@
 
     goto/16 :goto_6
 
-    .line 565
     :cond_e
     invoke-interface/range {v27 .. v27}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
@@ -1930,7 +1761,6 @@
 
     move-result v26
 
-    .line 566
     .local v26, "nameLength":I
     move/from16 v0, v26
 
@@ -1938,7 +1768,6 @@
 
     move-object/from16 v28, v0
 
-    .line 567
     .local v28, "nameW":[F
     invoke-interface/range {v27 .. v27}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
@@ -1952,27 +1781,21 @@
 
     move-result v12
 
-    .line 568
     .local v12, "arrayNum1":I
     const/16 v46, 0x0
 
-    .line 569
     .local v46, "totalW1":F
     const/16 v47, 0x0
 
-    .line 570
     .local v47, "totalW2":F
     const/16 v20, 0x0
 
-    .line 571
     .local v20, "firstLineCount":I
     const-string v43, ""
 
-    .line 572
     .local v43, "tmpStr":Ljava/lang/String;
     const-string v44, ""
 
-    .line 574
     .local v44, "tmpStr2":Ljava/lang/String;
     const/16 v24, 0x0
 
@@ -1981,30 +1804,23 @@
 
     if-ge v0, v12, :cond_f
 
-    .line 575
     aget v5, v28, v24
 
     add-float v46, v46, v5
 
-    .line 576
     cmpl-float v5, v46, v42
 
     if-ltz v5, :cond_11
 
-    .line 577
     move/from16 v20, v24
 
-    .line 582
     :cond_f
     move-object/from16 v33, v43
 
-    .line 584
     if-lez v20, :cond_b
 
-    .line 586
     if-eqz v29, :cond_12
 
-    .line 587
     sub-float v5, v42, v45
 
     move-object/from16 v0, p0
@@ -2013,7 +1829,6 @@
 
     sub-float v37, v5, v6
 
-    .line 591
     .local v37, "secondLineWidth":F
     :goto_b
     move/from16 v24, v20
@@ -2023,21 +1838,17 @@
 
     if-ge v0, v12, :cond_10
 
-    .line 592
     aget v5, v28, v24
 
     add-float v47, v47, v5
 
-    .line 593
     cmpl-float v5, v47, v37
 
     if-ltz v5, :cond_13
 
-    .line 599
     :cond_10
     if-eqz v29, :cond_14
 
-    .line 600
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -2070,13 +1881,11 @@
 
     move-result-object v44
 
-    .line 605
     :goto_d
     move-object/from16 v34, v44
 
     goto/16 :goto_7
 
-    .line 580
     .end local v37    # "secondLineWidth":F
     :cond_11
     new-instance v5, Ljava/lang/StringBuilder;
@@ -2105,19 +1914,16 @@
 
     move-result-object v43
 
-    .line 574
     add-int/lit8 v24, v24, 0x1
 
     goto :goto_a
 
-    .line 589
     :cond_12
     sub-float v37, v42, v45
 
     .restart local v37    # "secondLineWidth":F
     goto :goto_b
 
-    .line 596
     :cond_13
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -2145,12 +1951,10 @@
 
     move-result-object v44
 
-    .line 591
     add-int/lit8 v24, v24, 0x1
 
     goto :goto_c
 
-    .line 602
     :cond_14
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -2174,7 +1978,6 @@
 
     goto :goto_d
 
-    .line 609
     .end local v11    # "arrayNum":I
     .end local v12    # "arrayNum1":I
     .end local v13    # "availNameW":F
@@ -2213,7 +2016,6 @@
     .restart local v33    # "recentHistoryDisplayLabel":Ljava/lang/CharSequence;
     goto/16 :goto_7
 
-    .line 617
     .restart local v7    # "iconType":I
     :cond_16
     const/4 v5, 0x2
@@ -2226,7 +2028,6 @@
 
     if-nez v5, :cond_1a
 
-    .line 618
     const/4 v5, 0x0
 
     move-object/from16 v0, v33
@@ -2235,7 +2036,6 @@
 
     move-result v15
 
-    .line 619
     .local v15, "c":C
     invoke-static {v15}, Ljava/lang/Character;->isAlphabetic(I)Z
 
@@ -2243,7 +2043,6 @@
 
     if-eqz v5, :cond_1a
 
-    .line 620
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lcom/samsung/android/share/SShareSimpleSharing;->mContext:Landroid/content/Context;
@@ -2262,7 +2061,6 @@
     .restart local v8    # "photoIcon":Landroid/graphics/drawable/Drawable;
     goto/16 :goto_8
 
-    .line 629
     .end local v15    # "c":C
     :cond_17
     new-instance v4, Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListInfo;
@@ -2278,7 +2076,6 @@
     .restart local v4    # "recentHistoryItem":Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListInfo;
     goto/16 :goto_9
 
-    .line 635
     .end local v4    # "recentHistoryItem":Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListInfo;
     .end local v7    # "iconType":I
     .end local v8    # "photoIcon":Landroid/graphics/drawable/Drawable;
@@ -2303,7 +2100,6 @@
 
     if-nez v5, :cond_19
 
-    .line 636
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lcom/samsung/android/share/SShareSimpleSharing;->mContext:Landroid/content/Context;
@@ -2318,7 +2114,6 @@
 
     move-result-object v33
 
-    .line 637
     .restart local v33    # "recentHistoryDisplayLabel":Ljava/lang/CharSequence;
     new-instance v4, Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListInfo;
 
@@ -2328,7 +2123,6 @@
 
     invoke-direct {v4, v0, v1}, Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListInfo;-><init>(Lcom/samsung/android/share/SShareSimpleSharing;Ljava/lang/CharSequence;)V
 
-    .line 638
     .restart local v4    # "recentHistoryItem":Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListInfo;
     move-object/from16 v0, p0
 
@@ -2345,7 +2139,6 @@
 
     invoke-interface {v5, v6, v4}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
-    .line 639
     move-object/from16 v0, p0
 
     iget v5, v0, Lcom/samsung/android/share/SShareSimpleSharing;->mRecentHistoryIndex:I
@@ -2356,7 +2149,6 @@
 
     iput v5, v0, Lcom/samsung/android/share/SShareSimpleSharing;->mRecentHistoryIndex:I
 
-    .line 642
     .end local v4    # "recentHistoryItem":Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListInfo;
     .end local v33    # "recentHistoryDisplayLabel":Ljava/lang/CharSequence;
     :cond_19
@@ -2366,7 +2158,6 @@
 
     invoke-virtual {v5}, Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListAdapter;->notifyDataSetChanged()V
 
-    .line 643
     const/4 v5, 0x1
 
     move-object/from16 v0, p0
@@ -2407,10 +2198,8 @@
     .prologue
     const/4 v11, 0x1
 
-    .line 673
     const/4 v3, 0x0
 
-    .line 674
     .local v3, "drawableIcon":Landroid/graphics/drawable/Drawable;
     iget-object v8, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mContext:Landroid/content/Context;
 
@@ -2424,7 +2213,6 @@
 
     move-result v4
 
-    .line 675
     .local v4, "iconSize":I
     iget-object v8, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mContext:Landroid/content/Context;
 
@@ -2440,7 +2228,6 @@
 
     int-to-float v7, v8
 
-    .line 677
     .local v7, "textSize":F
     sget-object v8, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
@@ -2448,19 +2235,16 @@
 
     move-result-object v5
 
-    .line 678
     .local v5, "textBitmap":Landroid/graphics/Bitmap;
     new-instance v1, Landroid/graphics/Canvas;
 
     invoke-direct {v1, v5}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 680
     .local v1, "canvas":Landroid/graphics/Canvas;
     new-instance v2, Landroid/graphics/Paint;
 
     invoke-direct {v2}, Landroid/graphics/Paint;-><init>()V
 
-    .line 681
     .local v2, "circlePaint":Landroid/graphics/Paint;
     iget-object v8, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mContext:Landroid/content/Context;
 
@@ -2476,10 +2260,8 @@
 
     invoke-virtual {v2, v8}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 682
     invoke-virtual {v2, v11}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 683
     div-int/lit8 v8, v4, 0x2
 
     int-to-float v8, v8
@@ -2494,19 +2276,15 @@
 
     invoke-virtual {v1, v8, v9, v10, v2}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 685
     new-instance v6, Landroid/graphics/Paint;
 
     invoke-direct {v6}, Landroid/graphics/Paint;-><init>()V
 
-    .line 686
     .local v6, "textPaint":Landroid/graphics/Paint;
     invoke-virtual {v6, v7}, Landroid/graphics/Paint;->setTextSize(F)V
 
-    .line 687
     invoke-virtual {v6, v11}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 688
     iget-object v8, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mContext:Landroid/content/Context;
 
     invoke-virtual {v8}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -2521,17 +2299,14 @@
 
     invoke-virtual {v6, v8}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 690
     sget-object v8, Landroid/graphics/Paint$Align;->CENTER:Landroid/graphics/Paint$Align;
 
     invoke-virtual {v6, v8}, Landroid/graphics/Paint;->setTextAlign(Landroid/graphics/Paint$Align;)V
 
-    .line 691
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    .line 692
     .local v0, "bounds":Landroid/graphics/Rect;
     const/4 v8, 0x0
 
@@ -2541,7 +2316,6 @@
 
     invoke-virtual {v6, p2, v8, v9, v0}, Landroid/graphics/Paint;->getTextBounds(Ljava/lang/String;IILandroid/graphics/Rect;)V
 
-    .line 694
     div-int/lit8 v8, v4, 0x2
 
     int-to-float v8, v8
@@ -2554,7 +2328,6 @@
 
     invoke-virtual {v1, p2, v8, v9, v6}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
-    .line 696
     new-instance v3, Landroid/graphics/drawable/BitmapDrawable;
 
     .end local v3    # "drawableIcon":Landroid/graphics/drawable/Drawable;
@@ -2566,7 +2339,6 @@
 
     invoke-direct {v3, v8, v5}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
 
-    .line 698
     .restart local v3    # "drawableIcon":Landroid/graphics/drawable/Drawable;
     return-object v3
 .end method
@@ -2580,36 +2352,28 @@
 
     const/4 v11, 0x0
 
-    .line 708
     if-nez p1, :cond_0
 
     move-object v2, v7
 
-    .line 736
     :goto_0
     return-object v2
 
-    .line 712
     :cond_0
     const/4 v3, 0x0
 
-    .line 713
     .local v3, "mask":Landroid/graphics/Bitmap;
     const/4 v0, 0x0
 
-    .line 714
     .local v0, "bm":Landroid/graphics/Bitmap;
     const/4 v6, 0x0
 
-    .line 715
     .local v6, "photo":Landroid/graphics/Bitmap;
     const/4 v4, 0x0
 
-    .line 716
     .local v4, "orgThumb":Landroid/graphics/Bitmap;
     const/4 v2, 0x0
 
-    .line 718
     .local v2, "drawableIcon":Landroid/graphics/drawable/Drawable;
     iget-object v8, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mContext:Landroid/content/Context;
 
@@ -2623,7 +2387,6 @@
 
     move-result-object v3
 
-    .line 721
     const/4 v8, 0x0
 
     array-length v9, p1
@@ -2632,7 +2395,6 @@
 
     move-result-object v4
 
-    .line 723
     invoke-virtual {v3}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v8
@@ -2647,7 +2409,6 @@
 
     move-result-object v6
 
-    .line 725
     invoke-virtual {v6}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v8
@@ -2662,21 +2423,17 @@
 
     move-result-object v0
 
-    .line 727
     new-instance v1, Landroid/graphics/Canvas;
 
     invoke-direct {v1, v0}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 728
     .local v1, "canvas":Landroid/graphics/Canvas;
     invoke-virtual {v1, v6, v11, v11, v7}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    .line 730
     new-instance v5, Landroid/graphics/Paint;
 
     invoke-direct {v5}, Landroid/graphics/Paint;-><init>()V
 
-    .line 731
     .local v5, "paint":Landroid/graphics/Paint;
     new-instance v8, Landroid/graphics/PorterDuffXfermode;
 
@@ -2686,13 +2443,10 @@
 
     invoke-virtual {v5, v8}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
-    .line 732
     invoke-virtual {v1, v3, v11, v11, v5}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    .line 733
     invoke-virtual {v5, v7}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
-    .line 735
     new-instance v2, Landroid/graphics/drawable/BitmapDrawable;
 
     .end local v2    # "drawableIcon":Landroid/graphics/drawable/Drawable;
@@ -2704,7 +2458,6 @@
 
     invoke-direct {v2, v7, v0}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
 
-    .line 736
     .restart local v2    # "drawableIcon":Landroid/graphics/drawable/Drawable;
     goto :goto_0
 .end method
@@ -2715,33 +2468,27 @@
     .locals 2
 
     .prologue
-    .line 297
     invoke-virtual {p0}, Lcom/samsung/android/share/SShareSimpleSharing;->shouldShowRecentHistoryView()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 298
     invoke-virtual {p0}, Lcom/samsung/android/share/SShareSimpleSharing;->sendRequestRecentContactsHistoryList()V
 
-    .line 299
     iget-object v0, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mRecentHistoryListAdapter:Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListAdapter;
 
     invoke-virtual {v0}, Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListAdapter;->notifyDataSetChanged()V
 
-    .line 300
     iget-object v0, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mHandler:Landroid/os/Handler;
 
     const/16 v1, 0x7d0
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 304
     :goto_0
     return-void
 
-    .line 302
     :cond_0
     invoke-direct {p0}, Lcom/samsung/android/share/SShareSimpleSharing;->initRecentHistoryDefault()V
 
@@ -2753,14 +2500,12 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 331
     iget-object v4, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mRecentHistoryListAdapter:Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListAdapter;
 
     invoke-virtual {v4}, Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListAdapter;->getIntent()Landroid/content/Intent;
 
     move-result-object v3
 
-    .line 332
     .local v3, "targetIntent":Landroid/content/Intent;
     new-instance v4, Landroid/content/Intent;
 
@@ -2770,37 +2515,31 @@
 
     iput-object v4, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mRecentHistoryIntent:Landroid/content/Intent;
 
-    .line 333
     iget-object v4, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mRecentHistoryIntent:Landroid/content/Intent;
 
     const/high16 v5, 0x4000000
 
     invoke-virtual {v4, v5}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 334
     iget-object v4, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mRecentHistoryIntent:Landroid/content/Intent;
 
     const-string v5, "android.intent.extra.INTENT"
 
     invoke-virtual {v4, v5, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 336
     iget-object v4, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mExtraIntentList:Ljava/util/List;
 
     if-eqz v4, :cond_1
 
-    .line 338
     iget-object v4, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mExtraIntentList:Ljava/util/List;
 
     invoke-interface {v4}, Ljava/util/List;->size()I
 
     move-result v2
 
-    .line 340
     .local v2, "nSize":I
     new-array v1, v2, [Landroid/content/Intent;
 
-    .line 341
     .local v1, "initialIntents":[Landroid/content/Intent;
     const/4 v0, 0x0
 
@@ -2808,7 +2547,6 @@
     :goto_0
     if-ge v0, v2, :cond_0
 
-    .line 342
     iget-object v4, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mExtraIntentList:Ljava/util/List;
 
     invoke-interface {v4, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -2819,12 +2557,10 @@
 
     aput-object v4, v1, v0
 
-    .line 341
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 344
     :cond_0
     iget-object v4, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mRecentHistoryIntent:Landroid/content/Intent;
 
@@ -2832,17 +2568,15 @@
 
     invoke-virtual {v4, v5, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 347
     .end local v0    # "i":I
     .end local v1    # "initialIntents":[Landroid/content/Intent;
     .end local v2    # "nSize":I
     :cond_1
     if-lez p1, :cond_2
 
-    .line 348
     iget-object v4, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mRecentHistoryIntent:Landroid/content/Intent;
 
-    const-string/jumbo v5, "recipientdataids"
+    const-string v5, "recipientdataids"
 
     iget-object v6, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mRecipientDataId:[Ljava/lang/String;
 
@@ -2852,7 +2586,6 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 350
     :cond_2
     iget-object v4, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mRecentHistoryIntent:Landroid/content/Intent;
 
@@ -2863,7 +2596,6 @@
     .locals 1
 
     .prologue
-    .line 222
     iget-object v0, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mRecentHistoryListAdapter:Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListAdapter;
 
     return-object v0
@@ -2873,12 +2605,10 @@
     .locals 4
 
     .prologue
-    .line 266
     iget-object v3, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mExtraIntentList:Ljava/util/List;
 
     if-eqz v3, :cond_1
 
-    .line 267
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -2891,14 +2621,11 @@
 
     if-ge v1, v3, :cond_1
 
-    .line 268
     const/4 v2, 0x0
 
-    .line 269
     .local v2, "uri":Landroid/net/Uri;
     const/4 v0, 0x0
 
-    .line 270
     .local v0, "extraBundle":Landroid/os/Bundle;
     iget-object v3, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mExtraIntentList:Ljava/util/List;
 
@@ -2912,10 +2639,8 @@
 
     move-result-object v0
 
-    .line 271
     if-eqz v0, :cond_0
 
-    .line 272
     const-string v3, "android.intent.extra.STREAM"
 
     invoke-virtual {v0, v3}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -2925,21 +2650,17 @@
     .end local v2    # "uri":Landroid/net/Uri;
     check-cast v2, Landroid/net/Uri;
 
-    .line 273
     .restart local v2    # "uri":Landroid/net/Uri;
     if-eqz v2, :cond_0
 
-    .line 274
     const/4 v3, 0x1
 
-    .line 279
     .end local v0    # "extraBundle":Landroid/os/Bundle;
     .end local v1    # "i":I
     .end local v2    # "uri":Landroid/net/Uri;
     :goto_1
     return v3
 
-    .line 267
     .restart local v0    # "extraBundle":Landroid/os/Bundle;
     .restart local v1    # "i":I
     .restart local v2    # "uri":Landroid/net/Uri;
@@ -2948,7 +2669,6 @@
 
     goto :goto_0
 
-    .line 279
     .end local v0    # "extraBundle":Landroid/os/Bundle;
     .end local v1    # "i":I
     .end local v2    # "uri":Landroid/net/Uri;
@@ -2962,7 +2682,6 @@
     .locals 1
 
     .prologue
-    .line 317
     sget-boolean v0, Lcom/samsung/android/share/SShareSimpleSharing;->mEasySignUpCertificated:Z
 
     return v0
@@ -2972,7 +2691,6 @@
     .locals 1
 
     .prologue
-    .line 324
     sget-boolean v0, Lcom/samsung/android/share/SShareSimpleSharing;->mRemoteShareServiceEnabled:Z
 
     return v0
@@ -2985,14 +2703,11 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 391
     packed-switch p1, :pswitch_data_0
 
-    .line 409
     :goto_0
     return-void
 
-    .line 393
     :pswitch_0
     new-instance v1, Landroid/content/Intent;
 
@@ -3000,30 +2715,25 @@
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 394
     .local v1, "intent":Landroid/content/Intent;
     const/high16 v2, 0x4000000
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 395
     const-string v2, "fromOOBE"
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 396
     const-string v2, "agreeMarketing"
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 397
     const-string v2, "AuthRequestFrom"
 
-    const-string/jumbo v3, "shareVia"
+    const-string v3, "shareVia"
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 399
     :try_start_0
     iget-object v2, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mActivity:Landroid/app/Activity;
 
@@ -3035,11 +2745,9 @@
 
     goto :goto_0
 
-    .line 400
     :catch_0
     move-exception v0
 
-    .line 401
     .local v0, "e":Landroid/content/ActivityNotFoundException;
     const-string v2, "SShareSimpleSharing"
 
@@ -3049,7 +2757,6 @@
 
     goto :goto_0
 
-    .line 391
     nop
 
     :pswitch_data_0
@@ -3063,18 +2770,15 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 357
     invoke-virtual {p0}, Lcom/samsung/android/share/SShareSimpleSharing;->getRecentHistoryListAdapter()Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListAdapter;
 
     move-result-object v4
 
     if-nez v4, :cond_0
 
-    .line 385
     :goto_0
     return-void
 
-    .line 363
     :cond_0
     iget-object v4, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mFeature:Lcom/samsung/android/share/SShareCommon;
 
@@ -3086,7 +2790,6 @@
 
     if-ne v4, v5, :cond_1
 
-    .line 365
     new-instance v3, Lcom/samsung/android/share/SShareLogging;
 
     iget-object v4, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mContext:Landroid/content/Context;
@@ -3095,7 +2798,6 @@
 
     invoke-direct {v3, v4, v5}, Lcom/samsung/android/share/SShareLogging;-><init>(Landroid/content/Context;Landroid/content/Intent;)V
 
-    .line 366
     .local v3, "sshareLogging":Lcom/samsung/android/share/SShareLogging;
     invoke-direct {p0, p1}, Lcom/samsung/android/share/SShareSimpleSharing;->getRecentHistoryInfo(I)Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListInfo;
 
@@ -3103,21 +2805,17 @@
 
     iget v2, v4, Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListInfo;->iconType:I
 
-    .line 368
     .local v2, "iconType":I
     packed-switch v2, :pswitch_data_0
 
-    .line 373
-    const-string/jumbo v0, "personal"
+    const-string v0, "personal"
 
-    .line 377
     .local v0, "detailInfo":Ljava/lang/String;
     :goto_1
     const-string v4, "EASY"
 
     invoke-virtual {v3, v4, v0}, Lcom/samsung/android/share/SShareLogging;->insertLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 381
     .end local v0    # "detailInfo":Ljava/lang/String;
     .end local v2    # "iconType":I
     .end local v3    # "sshareLogging":Lcom/samsung/android/share/SShareLogging;
@@ -3135,11 +2833,9 @@
 
     goto :goto_0
 
-    .line 382
     :catch_0
     move-exception v1
 
-    .line 383
     .local v1, "ex":Landroid/content/ActivityNotFoundException;
     const-string v4, "SShareSimpleSharing"
 
@@ -3149,18 +2845,15 @@
 
     goto :goto_0
 
-    .line 370
     .end local v1    # "ex":Landroid/content/ActivityNotFoundException;
     .restart local v2    # "iconType":I
     .restart local v3    # "sshareLogging":Lcom/samsung/android/share/SShareLogging;
     :pswitch_0
     const-string v0, "group"
 
-    .line 371
     .restart local v0    # "detailInfo":Ljava/lang/String;
     goto :goto_1
 
-    .line 368
     :pswitch_data_0
     .packed-switch 0x2
         :pswitch_0
@@ -3171,16 +2864,12 @@
     .locals 3
 
     .prologue
-    .line 239
     invoke-direct {p0}, Lcom/samsung/android/share/SShareSimpleSharing;->checkEasySignUpCertificated()V
 
-    .line 240
     invoke-direct {p0}, Lcom/samsung/android/share/SShareSimpleSharing;->checkSSharingRecentContactExisted()V
 
-    .line 241
     invoke-direct {p0}, Lcom/samsung/android/share/SShareSimpleSharing;->checkRemoteShareServiceEnabled()V
 
-    .line 243
     invoke-virtual {p0}, Lcom/samsung/android/share/SShareSimpleSharing;->shouldShowRecentHistoryView()Z
 
     move-result v1
@@ -3195,30 +2884,25 @@
 
     if-nez v1, :cond_0
 
-    .line 244
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 245
     .local v0, "filter":Landroid/content/IntentFilter;
     const-string v1, "com.samsung.android.coreapps.rshare.responserecentgroupcontacts"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 246
     iget-object v1, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mRecentContactsReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 247
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mIsRecentContactsReceiverRegistered:Z
 
-    .line 250
     .end local v0    # "filter":Landroid/content/IntentFilter;
     :cond_0
     return-void
@@ -3228,23 +2912,19 @@
     .locals 2
 
     .prologue
-    .line 229
     invoke-virtual {p0}, Lcom/samsung/android/share/SShareSimpleSharing;->registerRecentContactsReceiver()V
 
-    .line 231
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.samsung.android.coreapps.rshare.requestrecentgroupcontacts"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 232
     .local v0, "intent":Landroid/content/Intent;
     iget-object v1, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 233
     return-void
 .end method
 
@@ -3254,27 +2934,22 @@
     .param p2, "listener"    # Landroid/widget/AdapterView$OnItemClickListener;
 
     .prologue
-    .line 286
     iput-object p1, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mGridRecentHistory:Landroid/widget/HorizontalListView;
 
-    .line 287
     iget-object v0, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mGridRecentHistory:Landroid/widget/HorizontalListView;
 
     if-eqz v0, :cond_0
 
-    .line 288
     iget-object v0, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mGridRecentHistory:Landroid/widget/HorizontalListView;
 
     iget-object v1, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mRecentHistoryListAdapter:Lcom/samsung/android/share/SShareSimpleSharing$RecentHistoryListAdapter;
 
     invoke-virtual {v0, v1}, Landroid/widget/HorizontalListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 289
     iget-object v0, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mGridRecentHistory:Landroid/widget/HorizontalListView;
 
     invoke-virtual {v0, p2}, Landroid/widget/HorizontalListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 291
     :cond_0
     return-void
 .end method
@@ -3283,7 +2958,6 @@
     .locals 1
 
     .prologue
-    .line 310
     sget-boolean v0, Lcom/samsung/android/share/SShareSimpleSharing;->mEasySignUpCertificated:Z
 
     if-eqz v0, :cond_0
@@ -3307,24 +2981,20 @@
     .locals 2
 
     .prologue
-    .line 256
     iget-boolean v0, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mIsRecentContactsReceiverRegistered:Z
 
     if-eqz v0, :cond_0
 
-    .line 257
     iget-object v0, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mRecentContactsReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 258
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/samsung/android/share/SShareSimpleSharing;->mIsRecentContactsReceiverRegistered:Z
 
-    .line 260
     :cond_0
     return-void
 .end method

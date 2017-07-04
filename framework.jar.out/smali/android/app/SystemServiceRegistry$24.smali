@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 444
     invoke-direct {p0}, Landroid/app/SystemServiceRegistry$StaticServiceFetcher;-><init>()V
 
     return-void
@@ -40,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 447
     new-instance v0, Landroid/app/KeyguardManager;
 
     invoke-direct {v0}, Landroid/app/KeyguardManager;-><init>()V
@@ -52,7 +50,6 @@
     .locals 1
 
     .prologue
-    .line 444
     invoke-virtual {p0}, Landroid/app/SystemServiceRegistry$24;->createService()Landroid/app/KeyguardManager;
 
     move-result-object v0

@@ -32,26 +32,22 @@
     .locals 1
 
     .prologue
-    .line 3746
     iput-object p1, p0, Landroid/widget/Editor$CursorAnchorInfoNotifier;->this$0:Landroid/widget/Editor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3747
     new-instance v0, Landroid/view/inputmethod/CursorAnchorInfo$Builder;
 
     invoke-direct {v0}, Landroid/view/inputmethod/CursorAnchorInfo$Builder;-><init>()V
 
     iput-object v0, p0, Landroid/widget/Editor$CursorAnchorInfoNotifier;->mSelectionInfoBuilder:Landroid/view/inputmethod/CursorAnchorInfo$Builder;
 
-    .line 3748
     const/4 v0, 0x2
 
     new-array v0, v0, [I
 
     iput-object v0, p0, Landroid/widget/Editor$CursorAnchorInfoNotifier;->mTmpIntOffset:[I
 
-    .line 3749
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
@@ -67,7 +63,6 @@
     .param p2, "x1"    # Landroid/widget/Editor$1;
 
     .prologue
-    .line 3746
     invoke-direct {p0, p1}, Landroid/widget/Editor$CursorAnchorInfoNotifier;-><init>(Landroid/widget/Editor;)V
 
     return-void
@@ -83,7 +78,6 @@
     .param p4, "parentScrolled"    # Z
 
     .prologue
-    .line 3754
     move-object/from16 v0, p0
 
     iget-object v11, v0, Landroid/widget/Editor$CursorAnchorInfoNotifier;->this$0:Landroid/widget/Editor;
@@ -92,7 +86,6 @@
 
     move-object/from16 v24, v0
 
-    .line 3755
     .local v24, "ims":Landroid/widget/Editor$InputMethodState;
     if-eqz v24, :cond_0
 
@@ -102,22 +95,18 @@
 
     if-lez v11, :cond_1
 
-    .line 3904
     :cond_0
     :goto_0
     return-void
 
-    .line 3758
     :cond_1
     invoke-static {}, Landroid/view/inputmethod/InputMethodManager;->peekInstance()Landroid/view/inputmethod/InputMethodManager;
 
     move-result-object v23
 
-    .line 3759
     .local v23, "imm":Landroid/view/inputmethod/InputMethodManager;
     if-eqz v23, :cond_0
 
-    .line 3762
     move-object/from16 v0, p0
 
     iget-object v11, v0, Landroid/widget/Editor$CursorAnchorInfoNotifier;->this$0:Landroid/widget/Editor;
@@ -135,14 +124,12 @@
 
     if-eqz v11, :cond_0
 
-    .line 3766
     invoke-virtual/range {v23 .. v23}, Landroid/view/inputmethod/InputMethodManager;->isCursorAnchorInfoEnabled()Z
 
     move-result v11
 
     if-eqz v11, :cond_0
 
-    .line 3769
     move-object/from16 v0, p0
 
     iget-object v11, v0, Landroid/widget/Editor$CursorAnchorInfoNotifier;->this$0:Landroid/widget/Editor;
@@ -156,20 +143,16 @@
 
     move-result-object v30
 
-    .line 3770
     .local v30, "layout":Landroid/text/Layout;
     if-eqz v30, :cond_0
 
-    .line 3774
     move-object/from16 v0, p0
 
     iget-object v4, v0, Landroid/widget/Editor$CursorAnchorInfoNotifier;->mSelectionInfoBuilder:Landroid/view/inputmethod/CursorAnchorInfo$Builder;
 
-    .line 3775
     .local v4, "builder":Landroid/view/inputmethod/CursorAnchorInfo$Builder;
     invoke-virtual {v4}, Landroid/view/inputmethod/CursorAnchorInfo$Builder;->reset()V
 
-    .line 3777
     move-object/from16 v0, p0
 
     iget-object v11, v0, Landroid/widget/Editor$CursorAnchorInfoNotifier;->this$0:Landroid/widget/Editor;
@@ -183,7 +166,6 @@
 
     move-result v43
 
-    .line 3778
     .local v43, "selectionStart":I
     move-object/from16 v0, p0
 
@@ -202,7 +184,6 @@
 
     invoke-virtual {v4, v0, v11}, Landroid/view/inputmethod/CursorAnchorInfo$Builder;->setSelectionRange(II)Landroid/view/inputmethod/CursorAnchorInfo$Builder;
 
-    .line 3781
     move-object/from16 v0, p0
 
     iget-object v11, v0, Landroid/widget/Editor$CursorAnchorInfoNotifier;->mViewToScreenMatrix:Landroid/graphics/Matrix;
@@ -226,7 +207,6 @@
 
     invoke-virtual {v11, v0}, Landroid/graphics/Matrix;->set(Landroid/graphics/Matrix;)V
 
-    .line 3782
     move-object/from16 v0, p0
 
     iget-object v11, v0, Landroid/widget/Editor$CursorAnchorInfoNotifier;->this$0:Landroid/widget/Editor;
@@ -246,7 +226,6 @@
 
     invoke-virtual {v11, v0}, Landroid/widget/TextView;->getLocationOnScreen([I)V
 
-    .line 3783
     move-object/from16 v0, p0
 
     iget-object v11, v0, Landroid/widget/Editor$CursorAnchorInfoNotifier;->mViewToScreenMatrix:Landroid/graphics/Matrix;
@@ -289,14 +268,12 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/graphics/Matrix;->postTranslate(FF)Z
 
-    .line 3784
     move-object/from16 v0, p0
 
     iget-object v11, v0, Landroid/widget/Editor$CursorAnchorInfoNotifier;->mViewToScreenMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v4, v11}, Landroid/view/inputmethod/CursorAnchorInfo$Builder;->setMatrix(Landroid/graphics/Matrix;)Landroid/view/inputmethod/CursorAnchorInfo$Builder;
 
-    .line 3786
     move-object/from16 v0, p0
 
     iget-object v11, v0, Landroid/widget/Editor$CursorAnchorInfoNotifier;->this$0:Landroid/widget/Editor;
@@ -314,7 +291,6 @@
 
     move/from16 v48, v0
 
-    .line 3788
     .local v48, "viewportToContentHorizontalOffset":F
     move-object/from16 v0, p0
 
@@ -333,7 +309,6 @@
 
     move/from16 v49, v0
 
-    .line 3791
     .local v49, "viewportToContentVerticalOffset":F
     move-object/from16 v0, p0
 
@@ -348,7 +323,6 @@
 
     move-result-object v46
 
-    .line 3792
     .local v46, "text":Ljava/lang/CharSequence;
     move-object/from16 v0, v46
 
@@ -358,22 +332,18 @@
 
     move-object/from16 v44, v46
 
-    .line 3793
     check-cast v44, Landroid/text/Spannable;
 
-    .line 3794
     .local v44, "sp":Landroid/text/Spannable;
     invoke-static/range {v44 .. v44}, Lcom/android/internal/widget/EditableInputConnection;->getComposingSpanStart(Landroid/text/Spannable;)I
 
     move-result v21
 
-    .line 3795
     .local v21, "composingTextStart":I
     invoke-static/range {v44 .. v44}, Lcom/android/internal/widget/EditableInputConnection;->getComposingSpanEnd(Landroid/text/Spannable;)I
 
     move-result v20
 
-    .line 3796
     .local v20, "composingTextEnd":I
     move/from16 v0, v20
 
@@ -381,17 +351,13 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 3797
     move/from16 v45, v20
 
-    .line 3798
     .local v45, "temp":I
     move/from16 v20, v21
 
-    .line 3799
     move/from16 v21, v45
 
-    .line 3801
     .end local v45    # "temp":I
     :cond_2
     if-ltz v21, :cond_8
@@ -404,12 +370,10 @@
 
     const/16 v22, 0x1
 
-    .line 3803
     .local v22, "hasComposingText":Z
     :goto_1
     if-eqz v22, :cond_e
 
-    .line 3804
     move-object/from16 v0, v46
 
     move/from16 v1, v21
@@ -420,7 +384,6 @@
 
     move-result-object v19
 
-    .line 3806
     .local v19, "composingText":Ljava/lang/CharSequence;
     move/from16 v0, v21
 
@@ -428,7 +391,6 @@
 
     invoke-virtual {v4, v0, v1}, Landroid/view/inputmethod/CursorAnchorInfo$Builder;->setComposingText(ILjava/lang/CharSequence;)Landroid/view/inputmethod/CursorAnchorInfo$Builder;
 
-    .line 3808
     move-object/from16 v0, v30
 
     move/from16 v1, v21
@@ -437,7 +399,6 @@
 
     move-result v37
 
-    .line 3809
     .local v37, "minLine":I
     add-int/lit8 v11, v20, -0x1
 
@@ -447,7 +408,6 @@
 
     move-result v36
 
-    .line 3810
     .local v36, "maxLine":I
     move/from16 v32, v37
 
@@ -459,7 +419,6 @@
 
     if-gt v0, v1, :cond_e
 
-    .line 3811
     move-object/from16 v0, v30
 
     move/from16 v1, v32
@@ -468,7 +427,6 @@
 
     move-result v34
 
-    .line 3812
     .local v34, "lineStart":I
     move-object/from16 v0, v30
 
@@ -478,7 +436,6 @@
 
     move-result v33
 
-    .line 3813
     .local v33, "lineEnd":I
     move/from16 v0, v34
 
@@ -488,7 +445,6 @@
 
     move-result v39
 
-    .line 3814
     .local v39, "offsetStart":I
     move/from16 v0, v33
 
@@ -498,7 +454,6 @@
 
     move-result v38
 
-    .line 3815
     .local v38, "offsetEnd":I
     move-object/from16 v0, v30
 
@@ -516,7 +471,6 @@
 
     const/16 v35, 0x1
 
-    .line 3817
     .local v35, "ltrLine":Z
     :goto_3
     sub-int v11, v38, v39
@@ -525,7 +479,6 @@
 
     move-object/from16 v50, v0
 
-    .line 3818
     .local v50, "widths":[F
     invoke-virtual/range {v30 .. v30}, Landroid/text/Layout;->getPaint()Landroid/text/TextPaint;
 
@@ -541,7 +494,6 @@
 
     invoke-virtual {v11, v0, v1, v2, v3}, Landroid/text/TextPaint;->getTextWidths(Ljava/lang/CharSequence;II[F)I
 
-    .line 3819
     move-object/from16 v0, v30
 
     move/from16 v1, v32
@@ -554,7 +506,6 @@
 
     move/from16 v47, v0
 
-    .line 3820
     .local v47, "top":F
     move-object/from16 v0, v30
 
@@ -568,7 +519,6 @@
 
     move/from16 v17, v0
 
-    .line 3821
     .local v17, "bottom":F
     move/from16 v5, v39
 
@@ -578,12 +528,10 @@
 
     if-ge v5, v0, :cond_d
 
-    .line 3822
     sub-int v11, v5, v39
 
     aget v18, v50, v11
 
-    .line 3823
     .local v18, "charWidth":F
     move-object/from16 v0, v30
 
@@ -591,7 +539,6 @@
 
     move-result v27
 
-    .line 3824
     .local v27, "isRtl":Z
     move-object/from16 v0, v30
 
@@ -599,7 +546,6 @@
 
     move-result v40
 
-    .line 3825
     .local v40, "primary":F
     move-object/from16 v0, v30
 
@@ -607,38 +553,29 @@
 
     move-result v42
 
-    .line 3830
     .local v42, "secondary":F
     if-eqz v35, :cond_b
 
-    .line 3831
     if-eqz v27, :cond_a
 
-    .line 3832
     sub-float v31, v42, v18
 
-    .line 3833
     .local v31, "left":F
     move/from16 v41, v42
 
-    .line 3848
     .local v41, "right":F
     :goto_5
     add-float v6, v31, v48
 
-    .line 3849
     .local v6, "localLeft":F
     add-float v8, v41, v48
 
-    .line 3850
     .local v8, "localRight":F
     add-float v7, v47, v49
 
-    .line 3851
     .local v7, "localTop":F
     add-float v9, v17, v49
 
-    .line 3852
     .local v9, "localBottom":F
     move-object/from16 v0, p0
 
@@ -649,7 +586,6 @@
 
     move-result v28
 
-    .line 3853
     .local v28, "isTopLeftVisible":Z
     move-object/from16 v0, p0
 
@@ -660,47 +596,37 @@
 
     move-result v25
 
-    .line 3855
     .local v25, "isBottomRightVisible":Z
     const/4 v10, 0x0
 
-    .line 3856
     .local v10, "characterBoundsFlags":I
     if-nez v28, :cond_3
 
     if-eqz v25, :cond_4
 
-    .line 3857
     :cond_3
     or-int/lit8 v10, v10, 0x1
 
-    .line 3859
     :cond_4
     if-eqz v28, :cond_5
 
     if-nez v25, :cond_6
 
-    .line 3860
     :cond_5
     or-int/lit8 v10, v10, 0x2
 
-    .line 3862
     :cond_6
     if-eqz v27, :cond_7
 
-    .line 3863
     or-int/lit8 v10, v10, 0x4
 
-    .line 3866
     :cond_7
     invoke-virtual/range {v4 .. v10}, Landroid/view/inputmethod/CursorAnchorInfo$Builder;->addCharacterBounds(IFFFFI)Landroid/view/inputmethod/CursorAnchorInfo$Builder;
 
-    .line 3821
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_4
 
-    .line 3801
     .end local v5    # "offset":I
     .end local v6    # "localLeft":F
     .end local v7    # "localTop":F
@@ -733,7 +659,6 @@
 
     goto/16 :goto_1
 
-    .line 3815
     .restart local v19    # "composingText":Ljava/lang/CharSequence;
     .restart local v22    # "hasComposingText":Z
     .restart local v32    # "line":I
@@ -748,7 +673,6 @@
 
     goto/16 :goto_3
 
-    .line 3835
     .restart local v5    # "offset":I
     .restart local v17    # "bottom":F
     .restart local v18    # "charWidth":F
@@ -761,43 +685,36 @@
     :cond_a
     move/from16 v31, v40
 
-    .line 3836
     .restart local v31    # "left":F
     add-float v41, v40, v18
 
     .restart local v41    # "right":F
     goto :goto_5
 
-    .line 3839
     .end local v31    # "left":F
     .end local v41    # "right":F
     :cond_b
     if-nez v27, :cond_c
 
-    .line 3840
     move/from16 v31, v42
 
-    .line 3841
     .restart local v31    # "left":F
     add-float v41, v42, v18
 
     .restart local v41    # "right":F
     goto :goto_5
 
-    .line 3843
     .end local v31    # "left":F
     .end local v41    # "right":F
     :cond_c
     sub-float v31, v40, v18
 
-    .line 3844
     .restart local v31    # "left":F
     move/from16 v41, v40
 
     .restart local v41    # "right":F
     goto :goto_5
 
-    .line 3810
     .end local v18    # "charWidth":F
     .end local v27    # "isRtl":Z
     .end local v31    # "left":F
@@ -809,7 +726,6 @@
 
     goto/16 :goto_2
 
-    .line 3874
     .end local v5    # "offset":I
     .end local v17    # "bottom":F
     .end local v19    # "composingText":Ljava/lang/CharSequence;
@@ -830,10 +746,8 @@
     :cond_e
     if-ltz v43, :cond_14
 
-    .line 3875
     move/from16 v5, v43
 
-    .line 3876
     .restart local v5    # "offset":I
     move-object/from16 v0, v30
 
@@ -841,7 +755,6 @@
 
     move-result v32
 
-    .line 3877
     .restart local v32    # "line":I
     move-object/from16 v0, v30
 
@@ -851,7 +764,6 @@
 
     add-float v12, v11, v48
 
-    .line 3879
     .local v12, "insertionMarkerX":F
     move-object/from16 v0, v30
 
@@ -865,7 +777,6 @@
 
     add-float v13, v11, v49
 
-    .line 3881
     .local v13, "insertionMarkerTop":F
     move-object/from16 v0, v30
 
@@ -879,7 +790,6 @@
 
     add-float v14, v11, v49
 
-    .line 3883
     .local v14, "insertionMarkerBaseline":F
     move-object/from16 v0, v30
 
@@ -893,7 +803,6 @@
 
     add-float v15, v11, v49
 
-    .line 3885
     .local v15, "insertionMarkerBottom":F
     move-object/from16 v0, p0
 
@@ -904,7 +813,6 @@
 
     move-result v29
 
-    .line 3887
     .local v29, "isTopVisible":Z
     move-object/from16 v0, p0
 
@@ -915,31 +823,25 @@
 
     move-result v26
 
-    .line 3889
     .local v26, "isBottomVisible":Z
     const/16 v16, 0x0
 
-    .line 3890
     .local v16, "insertionMarkerFlags":I
     if-nez v29, :cond_f
 
     if-eqz v26, :cond_10
 
-    .line 3891
     :cond_f
     or-int/lit8 v16, v16, 0x1
 
-    .line 3893
     :cond_10
     if-eqz v29, :cond_11
 
     if-nez v26, :cond_12
 
-    .line 3894
     :cond_11
     or-int/lit8 v16, v16, 0x2
 
-    .line 3896
     :cond_12
     move-object/from16 v0, v30
 
@@ -949,16 +851,13 @@
 
     if-eqz v11, :cond_13
 
-    .line 3897
     or-int/lit8 v16, v16, 0x4
 
     :cond_13
     move-object v11, v4
 
-    .line 3899
     invoke-virtual/range {v11 .. v16}, Landroid/view/inputmethod/CursorAnchorInfo$Builder;->setInsertionMarkerLocation(FFFFI)Landroid/view/inputmethod/CursorAnchorInfo$Builder;
 
-    .line 3903
     .end local v5    # "offset":I
     .end local v12    # "insertionMarkerX":F
     .end local v13    # "insertionMarkerTop":F

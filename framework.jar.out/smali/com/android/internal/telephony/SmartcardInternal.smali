@@ -32,10 +32,8 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 26
     sput-object v0, Lcom/android/internal/telephony/SmartcardInternal;->scInstance:Lcom/android/internal/telephony/SmartcardInternal;
 
-    .line 27
     sput-object v0, Lcom/android/internal/telephony/SmartcardInternal;->pcscInstance:Lcom/android/internal/telephony/IccPcscProvider;
 
     return-void
@@ -45,17 +43,14 @@
     .locals 1
 
     .prologue
-    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 42
     new-instance v0, Lcom/android/internal/telephony/IccPcscProvider;
 
     invoke-direct {v0}, Lcom/android/internal/telephony/IccPcscProvider;-><init>()V
 
     sput-object v0, Lcom/android/internal/telephony/SmartcardInternal;->pcscInstance:Lcom/android/internal/telephony/IccPcscProvider;
 
-    .line 43
     return-void
 .end method
 
@@ -63,17 +58,14 @@
     .locals 3
 
     .prologue
-    .line 30
     sget-object v0, Lcom/android/internal/telephony/SmartcardInternal;->scInstance:Lcom/android/internal/telephony/SmartcardInternal;
 
     if-nez v0, :cond_1
 
-    .line 31
     const-class v1, Lcom/android/internal/telephony/SmartcardInternal;
 
     monitor-enter v1
 
-    .line 32
     :try_start_0
     const-string v0, "SmartcardInternal"
 
@@ -81,31 +73,26 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 33
     sget-object v0, Lcom/android/internal/telephony/SmartcardInternal;->scInstance:Lcom/android/internal/telephony/SmartcardInternal;
 
     if-nez v0, :cond_0
 
-    .line 34
     new-instance v0, Lcom/android/internal/telephony/SmartcardInternal;
 
     invoke-direct {v0}, Lcom/android/internal/telephony/SmartcardInternal;-><init>()V
 
     sput-object v0, Lcom/android/internal/telephony/SmartcardInternal;->scInstance:Lcom/android/internal/telephony/SmartcardInternal;
 
-    .line 36
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 38
     :cond_1
     sget-object v0, Lcom/android/internal/telephony/SmartcardInternal;->scInstance:Lcom/android/internal/telephony/SmartcardInternal;
 
     return-object v0
 
-    .line 36
     :catchall_0
     move-exception v0
 
@@ -123,7 +110,6 @@
     .locals 1
 
     .prologue
-    .line 50
     sget-object v0, Lcom/android/internal/telephony/SmartcardInternal;->pcscInstance:Lcom/android/internal/telephony/IccPcscProvider;
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/IccPcscProvider;->connect()I
@@ -138,7 +124,6 @@
     .param p1, "channel"    # I
 
     .prologue
-    .line 59
     sget-object v0, Lcom/android/internal/telephony/SmartcardInternal;->pcscInstance:Lcom/android/internal/telephony/IccPcscProvider;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/telephony/IccPcscProvider;->disconnect(I)I
@@ -152,12 +137,10 @@
     .locals 1
 
     .prologue
-    .line 46
     sget-object v0, Lcom/android/internal/telephony/SmartcardInternal;->pcscInstance:Lcom/android/internal/telephony/IccPcscProvider;
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/IccPcscProvider;->finalize()V
 
-    .line 47
     return-void
 .end method
 
@@ -166,7 +149,6 @@
     .param p1, "atr"    # [B
 
     .prologue
-    .line 63
     sget-object v0, Lcom/android/internal/telephony/SmartcardInternal;->pcscInstance:Lcom/android/internal/telephony/IccPcscProvider;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/telephony/IccPcscProvider;->getATR([B)I
@@ -183,7 +165,6 @@
     .param p3, "response"    # [B
 
     .prologue
-    .line 55
     sget-object v0, Lcom/android/internal/telephony/SmartcardInternal;->pcscInstance:Lcom/android/internal/telephony/IccPcscProvider;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/internal/telephony/IccPcscProvider;->transmit(I[B[B)I

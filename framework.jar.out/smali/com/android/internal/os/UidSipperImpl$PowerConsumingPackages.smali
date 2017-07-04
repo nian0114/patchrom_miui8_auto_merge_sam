@@ -30,19 +30,14 @@
     .param p3, "names"    # [Ljava/lang/String;
 
     .prologue
-    .line 277
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 279
     iput-object p1, p0, Lcom/android/internal/os/UidSipperImpl$PowerConsumingPackages;->time:Ljava/lang/String;
 
-    .line 281
     iput p2, p0, Lcom/android/internal/os/UidSipperImpl$PowerConsumingPackages;->count:I
 
-    .line 283
     iput-object p3, p0, Lcom/android/internal/os/UidSipperImpl$PowerConsumingPackages;->packages:[Ljava/lang/String;
 
-    .line 285
     return-void
 .end method
 
@@ -54,7 +49,6 @@
     .param p4, "x3"    # Lcom/android/internal/os/UidSipperImpl$1;
 
     .prologue
-    .line 247
     invoke-direct {p0, p1, p2, p3}, Lcom/android/internal/os/UidSipperImpl$PowerConsumingPackages;-><init>(Ljava/lang/String;I[Ljava/lang/String;)V
 
     return-void
@@ -68,26 +62,21 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 255
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 257
     iput-object p1, p0, Lcom/android/internal/os/UidSipperImpl$PowerConsumingPackages;->time:Ljava/lang/String;
 
-    .line 259
     const-string v1, ";"
 
     invoke-virtual {p2, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 261
     .local v0, "packageNames":[Ljava/lang/String;
     array-length v1, v0
 
     iput v1, p0, Lcom/android/internal/os/UidSipperImpl$PowerConsumingPackages;->count:I
 
-    .line 263
     iget v1, p0, Lcom/android/internal/os/UidSipperImpl$PowerConsumingPackages;->count:I
 
     if-eqz v1, :cond_0
@@ -100,19 +89,15 @@
 
     if-eqz v1, :cond_0
 
-    .line 265
     iput v2, p0, Lcom/android/internal/os/UidSipperImpl$PowerConsumingPackages;->count:I
 
-    .line 269
     :cond_0
     iget v1, p0, Lcom/android/internal/os/UidSipperImpl$PowerConsumingPackages;->count:I
 
     if-eqz v1, :cond_1
 
-    .line 271
     iput-object v0, p0, Lcom/android/internal/os/UidSipperImpl$PowerConsumingPackages;->packages:[Ljava/lang/String;
 
-    .line 275
     :cond_1
     return-void
 .end method
@@ -124,7 +109,6 @@
     .param p3, "x2"    # Lcom/android/internal/os/UidSipperImpl$1;
 
     .prologue
-    .line 247
     invoke-direct {p0, p1, p2}, Lcom/android/internal/os/UidSipperImpl$PowerConsumingPackages;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -136,7 +120,6 @@
     .locals 1
 
     .prologue
-    .line 295
     iget v0, p0, Lcom/android/internal/os/UidSipperImpl$PowerConsumingPackages;->count:I
 
     return v0
@@ -146,7 +129,6 @@
     .locals 1
 
     .prologue
-    .line 301
     iget-object v0, p0, Lcom/android/internal/os/UidSipperImpl$PowerConsumingPackages;->packages:[Ljava/lang/String;
 
     return-object v0
@@ -156,7 +138,6 @@
     .locals 1
 
     .prologue
-    .line 289
     iget-object v0, p0, Lcom/android/internal/os/UidSipperImpl$PowerConsumingPackages;->time:Ljava/lang/String;
 
     return-object v0

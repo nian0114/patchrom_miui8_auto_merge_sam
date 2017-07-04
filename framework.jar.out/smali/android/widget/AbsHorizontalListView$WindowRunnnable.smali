@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 3298
     iput-object p1, p0, Landroid/widget/AbsHorizontalListView$WindowRunnnable;->this$0:Landroid/widget/AbsHorizontalListView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "x1"    # Landroid/widget/AbsHorizontalListView$1;
 
     .prologue
-    .line 3298
     invoke-direct {p0, p1}, Landroid/widget/AbsHorizontalListView$WindowRunnnable;-><init>(Landroid/widget/AbsHorizontalListView;)V
 
     return-void
@@ -51,7 +49,6 @@
     .locals 1
 
     .prologue
-    .line 3302
     iget-object v0, p0, Landroid/widget/AbsHorizontalListView$WindowRunnnable;->this$0:Landroid/widget/AbsHorizontalListView;
 
     # invokes: Landroid/widget/AbsHorizontalListView;->getWindowAttachCount()I
@@ -61,7 +58,6 @@
 
     iput v0, p0, Landroid/widget/AbsHorizontalListView$WindowRunnnable;->mOriginalAttachCount:I
 
-    .line 3303
     return-void
 .end method
 
@@ -69,7 +65,6 @@
     .locals 2
 
     .prologue
-    .line 3306
     iget-object v0, p0, Landroid/widget/AbsHorizontalListView$WindowRunnnable;->this$0:Landroid/widget/AbsHorizontalListView;
 
     # invokes: Landroid/widget/AbsHorizontalListView;->getWindowAttachCount()I

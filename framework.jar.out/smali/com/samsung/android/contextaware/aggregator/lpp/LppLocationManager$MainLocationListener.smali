@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1707
     iput-object p1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$MainLocationListener;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$1;
 
     .prologue
-    .line 1707
     invoke-direct {p0, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$MainLocationListener;-><init>(Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager;)V
 
     return-void
@@ -53,7 +51,6 @@
     .param p1, "loc"    # Landroid/location/Location;
 
     .prologue
-    .line 1711
     const-string v2, "LppLocationManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -76,14 +73,11 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1712
     if-nez p1, :cond_0
 
-    .line 1765
     :goto_0
     return-void
 
-    .line 1716
     :cond_0
     const-string v2, "LppLocationManager"
 
@@ -111,7 +105,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1717
     iget-object v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$MainLocationListener;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager;
 
     # getter for: Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager;->mListLoc:Ljava/util/ArrayList;
@@ -125,7 +118,6 @@
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1719
     iget-object v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$MainLocationListener;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager;
 
     # getter for: Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager;->mStateMachine:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;
@@ -135,16 +127,14 @@
 
     if-nez v2, :cond_1
 
-    .line 1721
     const-string v2, "LppLocationManager"
 
-    const-string/jumbo v3, "unhandled update"
+    const-string v3, "unhandled update"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 1725
     :cond_1
     iget-object v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$MainLocationListener;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager;
 
@@ -155,7 +145,6 @@
 
     if-nez v2, :cond_4
 
-    .line 1727
     iget-object v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$MainLocationListener;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager;
 
     new-instance v3, Landroid/location/Location;
@@ -165,7 +154,6 @@
     # setter for: Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager;->mLastLoc:Landroid/location/Location;
     invoke-static {v2, v3}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager;->access$7902(Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager;Landroid/location/Location;)Landroid/location/Location;
 
-    .line 1733
     :goto_1
     invoke-virtual {p1}, Landroid/location/Location;->getProvider()Ljava/lang/String;
 
@@ -179,7 +167,6 @@
 
     if-nez v2, :cond_5
 
-    .line 1735
     iget-object v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$MainLocationListener;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager;
 
     new-instance v3, Landroid/location/Location;
@@ -189,7 +176,6 @@
     # setter for: Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager;->mLocNw:Landroid/location/Location;
     invoke-static {v2, v3}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager;->access$1502(Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager;Landroid/location/Location;)Landroid/location/Location;
 
-    .line 1736
     iget-object v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$MainLocationListener;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager;
 
     # invokes: Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager;->locValidCheckNw(Landroid/location/Location;)Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LocValidity;
@@ -201,7 +187,6 @@
 
     if-ne v2, v3, :cond_2
 
-    .line 1738
     iget-object v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$MainLocationListener;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager;
 
     # getter for: Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager;->mStateMachine:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;
@@ -217,12 +202,10 @@
 
     invoke-virtual {v2, v3}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;->sendMessage(I)V
 
-    .line 1757
     :cond_2
     :goto_2
     const/4 v0, 0x1
 
-    .line 1759
     .local v0, "LocSource":I
     iget-object v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$MainLocationListener;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager;
 
@@ -243,10 +226,8 @@
 
     if-eqz v2, :cond_3
 
-    .line 1760
     const/4 v0, 0x2
 
-    .line 1763
     :cond_3
     iget-object v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$MainLocationListener;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager;
 
@@ -347,7 +328,6 @@
 
     goto/16 :goto_0
 
-    .line 1730
     .end local v0    # "LocSource":I
     :cond_4
     iget-object v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$MainLocationListener;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager;
@@ -361,7 +341,6 @@
 
     goto/16 :goto_1
 
-    .line 1743
     :cond_5
     const-string v2, "LppLocationManager"
 
@@ -369,7 +348,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "onLocationChanged provider : "
+    const-string v4, "onLocationChanged provider : "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -403,7 +382,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1744
     iget-object v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$MainLocationListener;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager;
 
     # invokes: Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager;->locValidCheckGps(Landroid/location/Location;)Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LocValidity;
@@ -411,25 +389,21 @@
 
     move-result-object v1
 
-    .line 1747
     .local v1, "isValid":Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LocValidity;
     sget-object v2, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LocValidity;->INVALID_TIME:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LocValidity;
 
     if-eq v1, v2, :cond_6
 
-    .line 1748
     iget-object v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$MainLocationListener;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager;
 
     # invokes: Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager;->setMostAccLocGps(Landroid/location/Location;)V
     invoke-static {v2, p1}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager;->access$8200(Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager;Landroid/location/Location;)V
 
-    .line 1751
     :cond_6
     sget-object v2, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LocValidity;->VALID:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LocValidity;
 
     if-ne v1, v2, :cond_2
 
-    .line 1752
     iget-object v2, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$MainLocationListener;->this$0:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager;
 
     # getter for: Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager;->mStateMachine:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$LppLocManSM;
@@ -453,14 +427,13 @@
     .param p1, "provider"    # Ljava/lang/String;
 
     .prologue
-    .line 1768
     const-string v0, "LppLocationManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "onProviderDisabled:"
+    const-string v2, "onProviderDisabled:"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -476,7 +449,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1769
     return-void
 .end method
 
@@ -485,14 +457,13 @@
     .param p1, "provider"    # Ljava/lang/String;
 
     .prologue
-    .line 1772
     const-string v0, "LppLocationManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "onProviderEnabled:"
+    const-string v2, "onProviderEnabled:"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -508,7 +479,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1773
     return-void
 .end method
 
@@ -519,6 +489,5 @@
     .param p3, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 1777
     return-void
 .end method

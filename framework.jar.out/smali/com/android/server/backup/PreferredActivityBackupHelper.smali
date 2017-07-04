@@ -24,12 +24,11 @@
     .prologue
     const/4 v3, 0x3
 
-    .line 42
     new-array v0, v3, [Ljava/lang/String;
 
     const/4 v1, 0x0
 
-    const-string/jumbo v2, "preferred-activity"
+    const-string v2, "preferred-activity"
 
     aput-object v2, v0, v1
 
@@ -47,7 +46,6 @@
 
     invoke-direct {p0, v3, v0}, Landroid/app/backup/BlobBackupHelper;-><init>(I[Ljava/lang/String;)V
 
-    .line 46
     return-void
 .end method
 
@@ -61,12 +59,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 73
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v1
 
-    .line 78
     .local v1, "pm":Landroid/content/pm/IPackageManager;
     const/4 v3, -0x1
 
@@ -83,7 +79,6 @@
     :goto_0
     packed-switch v2, :pswitch_data_0
 
-    .line 89
     const-string v2, "PreferredBackup"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -106,13 +101,11 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 94
     :goto_1
     return-void
 
-    .line 78
     :sswitch_0
-    const-string/jumbo v4, "preferred-activity"
+    const-string v4, "preferred-activity"
 
     invoke-virtual {p1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -148,7 +141,6 @@
 
     goto :goto_0
 
-    .line 80
     :pswitch_0
     const/4 v2, 0x0
 
@@ -158,11 +150,9 @@
 
     goto :goto_1
 
-    .line 91
     :catch_0
     move-exception v0
 
-    .line 92
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "PreferredBackup"
 
@@ -188,7 +178,6 @@
 
     goto :goto_1
 
-    .line 83
     .end local v0    # "e":Ljava/lang/Exception;
     :pswitch_1
     const/4 v2, 0x0
@@ -198,7 +187,6 @@
 
     goto :goto_1
 
-    .line 86
     :pswitch_2
     const/4 v2, 0x0
 
@@ -208,7 +196,6 @@
 
     goto :goto_1
 
-    .line 78
     nop
 
     :sswitch_data_0
@@ -233,12 +220,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 50
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v1
 
-    .line 55
     .local v1, "pm":Landroid/content/pm/IPackageManager;
     const/4 v3, -0x1
 
@@ -255,7 +240,6 @@
     :goto_0
     packed-switch v2, :pswitch_data_0
 
-    .line 63
     const-string v2, "PreferredBackup"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -278,16 +262,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 68
     :goto_1
     const/4 v2, 0x0
 
     :goto_2
     return-object v2
 
-    .line 55
     :sswitch_0
-    const-string/jumbo v4, "preferred-activity"
+    const-string v4, "preferred-activity"
 
     invoke-virtual {p1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -323,7 +305,6 @@
 
     goto :goto_0
 
-    .line 57
     :pswitch_0
     const/4 v2, 0x0
 
@@ -333,7 +314,6 @@
 
     goto :goto_2
 
-    .line 59
     :pswitch_1
     const/4 v2, 0x0
 
@@ -343,7 +323,6 @@
 
     goto :goto_2
 
-    .line 61
     :pswitch_2
     const/4 v2, 0x0
 
@@ -355,11 +334,9 @@
 
     goto :goto_2
 
-    .line 65
     :catch_0
     move-exception v0
 
-    .line 66
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "PreferredBackup"
 
@@ -385,7 +362,6 @@
 
     goto :goto_1
 
-    .line 55
     nop
 
     :sswitch_data_0

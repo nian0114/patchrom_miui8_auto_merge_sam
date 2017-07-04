@@ -28,22 +28,16 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 60
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 50
     iput-object v0, p0, Lcom/samsung/android/sdk/look/smartclip/SlookSmartClipMetaTag;->mType:Ljava/lang/String;
 
-    .line 51
     iput-object v0, p0, Lcom/samsung/android/sdk/look/smartclip/SlookSmartClipMetaTag;->mValue:Ljava/lang/String;
 
-    .line 61
     iput-object p1, p0, Lcom/samsung/android/sdk/look/smartclip/SlookSmartClipMetaTag;->mType:Ljava/lang/String;
 
-    .line 62
     iput-object p2, p0, Lcom/samsung/android/sdk/look/smartclip/SlookSmartClipMetaTag;->mValue:Ljava/lang/String;
 
-    .line 63
     return-void
 .end method
 
@@ -53,7 +47,6 @@
     .locals 1
 
     .prologue
-    .line 71
     iget-object v0, p0, Lcom/samsung/android/sdk/look/smartclip/SlookSmartClipMetaTag;->mType:Ljava/lang/String;
 
     return-object v0
@@ -63,7 +56,6 @@
     .locals 1
 
     .prologue
-    .line 80
     iget-object v0, p0, Lcom/samsung/android/sdk/look/smartclip/SlookSmartClipMetaTag;->mValue:Ljava/lang/String;
 
     return-object v0
@@ -74,10 +66,8 @@
     .param p1, "tagType"    # Ljava/lang/String;
 
     .prologue
-    .line 89
     iput-object p1, p0, Lcom/samsung/android/sdk/look/smartclip/SlookSmartClipMetaTag;->mType:Ljava/lang/String;
 
-    .line 90
     return-void
 .end method
 
@@ -86,9 +76,7 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 98
     iput-object p1, p0, Lcom/samsung/android/sdk/look/smartclip/SlookSmartClipMetaTag;->mValue:Ljava/lang/String;
 
-    .line 99
     return-void
 .end method

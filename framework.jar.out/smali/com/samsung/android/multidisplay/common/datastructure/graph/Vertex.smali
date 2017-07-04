@@ -47,18 +47,15 @@
     .locals 1
 
     .prologue
-    .line 38
     .local p0, "this":Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 30
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;->incidenceList:Ljava/util/ArrayList;
 
-    .line 39
     return-void
 .end method
 
@@ -78,29 +75,22 @@
     .local p3, "_item":Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper<TE;>;"
     const/4 v1, 0x0
 
-    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 30
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;->incidenceList:Ljava/util/ArrayList;
 
-    .line 42
     iput-wide p1, p0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;->id:J
 
-    .line 43
     iput-object p3, p0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;->item:Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper;
 
-    .line 44
     iput-boolean v1, p0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;->marked:Z
 
-    .line 45
     iput-boolean v1, p0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;->dummy:Z
 
-    .line 46
     return-void
 .end method
 
@@ -117,7 +107,6 @@
     .end annotation
 
     .prologue
-    .line 49
     .local p0, "this":Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;"
     iget-object v0, p0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;->item:Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper;
 
@@ -135,12 +124,10 @@
     .end annotation
 
     .prologue
-    .line 53
     .local p0, "this":Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;"
     .local p1, "_item":Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper<TE;>;"
     iput-object p1, p0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;->item:Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper;
 
-    .line 54
     return-void
 .end method
 
@@ -148,7 +135,6 @@
     .locals 8
 
     .prologue
-    .line 58
     .local p0, "this":Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;"
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -156,7 +142,6 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 59
     .local v0, "sb":Ljava/lang/StringBuilder;
     const-class v1, Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;
 
@@ -166,17 +151,15 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 60
     const-string v1, " {"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 61
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "v"
+    const-string v2, "v"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -212,7 +195,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 62
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -235,7 +217,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 63
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -258,12 +239,10 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 64
     const-string v1, " } "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 65
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1

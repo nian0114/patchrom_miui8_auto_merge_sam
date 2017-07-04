@@ -34,32 +34,26 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 7725
     iput-object p1, p0, Landroid/view/ViewRootImpl$SmartClipRemoteRequestDispatcherProxy;->this$0:Landroid/view/ViewRootImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 7698
     const-string v0, "SmartClipRemoteRequestDispatcher_ViewRootImpl"
 
     iput-object v0, p0, Landroid/view/ViewRootImpl$SmartClipRemoteRequestDispatcherProxy;->TAG:Ljava/lang/String;
 
-    .line 7700
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/view/ViewRootImpl$SmartClipRemoteRequestDispatcherProxy;->DEBUG:Z
 
-    .line 7703
     new-instance v0, Landroid/view/ViewRootImpl$SmartClipRemoteRequestDispatcherProxy$1;
 
     invoke-direct {v0, p0}, Landroid/view/ViewRootImpl$SmartClipRemoteRequestDispatcherProxy$1;-><init>(Landroid/view/ViewRootImpl$SmartClipRemoteRequestDispatcherProxy;)V
 
     iput-object v0, p0, Landroid/view/ViewRootImpl$SmartClipRemoteRequestDispatcherProxy;->mGateway:Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher$ViewRootImplGateway;
 
-    .line 7726
     iput-object p2, p0, Landroid/view/ViewRootImpl$SmartClipRemoteRequestDispatcherProxy;->mContext:Landroid/content/Context;
 
-    .line 7727
     new-instance v0, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;
 
     iget-object v1, p0, Landroid/view/ViewRootImpl$SmartClipRemoteRequestDispatcherProxy;->mGateway:Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher$ViewRootImplGateway;
@@ -68,7 +62,6 @@
 
     iput-object v0, p0, Landroid/view/ViewRootImpl$SmartClipRemoteRequestDispatcherProxy;->mDispatcher:Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;
 
-    .line 7728
     iget-object v0, p0, Landroid/view/ViewRootImpl$SmartClipRemoteRequestDispatcherProxy;->mDispatcher:Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;
 
     invoke-virtual {v0}, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->isDebugMode()Z
@@ -77,7 +70,6 @@
 
     iput-boolean v0, p0, Landroid/view/ViewRootImpl$SmartClipRemoteRequestDispatcherProxy;->DEBUG:Z
 
-    .line 7729
     return-void
 .end method
 
@@ -87,7 +79,6 @@
     .param p1, "x1"    # Lcom/samsung/android/smartclip/SmartClipRemoteRequestInfo;
 
     .prologue
-    .line 7697
     invoke-direct {p0, p1}, Landroid/view/ViewRootImpl$SmartClipRemoteRequestDispatcherProxy;->dispatchSmartClipMetaDataExtraction(Lcom/samsung/android/smartclip/SmartClipRemoteRequestInfo;)V
 
     return-void
@@ -104,26 +95,21 @@
 
     const/high16 v10, 0x3f800000    # 1.0f
 
-    .line 7758
     iget-object v2, p1, Lcom/samsung/android/smartclip/SmartClipRemoteRequestInfo;->mRequestData:Landroid/os/Parcelable;
 
     check-cast v2, Lcom/samsung/android/smartclip/SmartClipDataExtractionEvent;
 
-    .line 7759
     .local v2, "requestInfo":Lcom/samsung/android/smartclip/SmartClipDataExtractionEvent;
     iget v1, p1, Lcom/samsung/android/smartclip/SmartClipRemoteRequestInfo;->mRequestId:I
 
     iput v1, v2, Lcom/samsung/android/smartclip/SmartClipDataExtractionEvent;->mRequestId:I
 
-    .line 7760
     iget v1, p1, Lcom/samsung/android/smartclip/SmartClipRemoteRequestInfo;->mTargetWindowLayer:I
 
     iput v1, v2, Lcom/samsung/android/smartclip/SmartClipDataExtractionEvent;->mTargetWindowLayer:I
 
-    .line 7763
     const/4 v3, 0x0
 
-    .line 7764
     .local v3, "winFrame":Landroid/graphics/Rect;
     iget-object v1, p0, Landroid/view/ViewRootImpl$SmartClipRemoteRequestDispatcherProxy;->this$0:Landroid/view/ViewRootImpl;
 
@@ -145,7 +131,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 7766
     :cond_0
     iget-object v1, p0, Landroid/view/ViewRootImpl$SmartClipRemoteRequestDispatcherProxy;->this$0:Landroid/view/ViewRootImpl;
 
@@ -157,10 +142,8 @@
 
     move-result-object v3
 
-    .line 7767
     if-nez v3, :cond_1
 
-    .line 7768
     new-instance v3, Landroid/graphics/Rect;
 
     .end local v3    # "winFrame":Landroid/graphics/Rect;
@@ -170,7 +153,6 @@
 
     invoke-direct {v3, v1}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
 
-    .line 7771
     .restart local v3    # "winFrame":Landroid/graphics/Rect;
     :cond_1
     iget-object v1, p0, Landroid/view/ViewRootImpl$SmartClipRemoteRequestDispatcherProxy;->this$0:Landroid/view/ViewRootImpl;
@@ -191,14 +173,12 @@
 
     invoke-virtual {v3, v1, v4}, Landroid/graphics/Rect;->offset(II)V
 
-    .line 7773
     iget-object v1, v2, Lcom/samsung/android/smartclip/SmartClipDataExtractionEvent;->mCropRect:Landroid/graphics/Rect;
 
     invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
 
     move-result v7
 
-    .line 7774
     .local v7, "cropRectWidth":I
     iget-object v1, v2, Lcom/samsung/android/smartclip/SmartClipDataExtractionEvent;->mCropRect:Landroid/graphics/Rect;
 
@@ -206,7 +186,6 @@
 
     move-result v6
 
-    .line 7775
     .local v6, "cropRectHeight":I
     iget-object v1, v2, Lcom/samsung/android/smartclip/SmartClipDataExtractionEvent;->mCropRect:Landroid/graphics/Rect;
 
@@ -236,7 +215,6 @@
 
     iput v4, v1, Landroid/graphics/Rect;->left:I
 
-    .line 7776
     iget-object v1, v2, Lcom/samsung/android/smartclip/SmartClipDataExtractionEvent;->mCropRect:Landroid/graphics/Rect;
 
     iget-object v4, v2, Lcom/samsung/android/smartclip/SmartClipDataExtractionEvent;->mCropRect:Landroid/graphics/Rect;
@@ -265,7 +243,6 @@
 
     iput v4, v1, Landroid/graphics/Rect;->top:I
 
-    .line 7777
     iget-object v1, v2, Lcom/samsung/android/smartclip/SmartClipDataExtractionEvent;->mCropRect:Landroid/graphics/Rect;
 
     iget-object v4, v2, Lcom/samsung/android/smartclip/SmartClipDataExtractionEvent;->mCropRect:Landroid/graphics/Rect;
@@ -292,7 +269,6 @@
 
     iput v4, v1, Landroid/graphics/Rect;->right:I
 
-    .line 7778
     iget-object v1, v2, Lcom/samsung/android/smartclip/SmartClipDataExtractionEvent;->mCropRect:Landroid/graphics/Rect;
 
     iget-object v4, v2, Lcom/samsung/android/smartclip/SmartClipDataExtractionEvent;->mCropRect:Landroid/graphics/Rect;
@@ -319,7 +295,6 @@
 
     iput v4, v1, Landroid/graphics/Rect;->bottom:I
 
-    .line 7782
     .end local v6    # "cropRectHeight":I
     .end local v7    # "cropRectWidth":I
     :cond_2
@@ -329,10 +304,8 @@
 
     if-eqz v1, :cond_7
 
-    .line 7783
     const/4 v0, 0x0
 
-    .line 7785
     .local v0, "cropper":Lcom/samsung/android/smartclip/SmartClipDataCropperImpl;
     iget-object v1, p0, Landroid/view/ViewRootImpl$SmartClipRemoteRequestDispatcherProxy;->this$0:Landroid/view/ViewRootImpl;
 
@@ -354,17 +327,14 @@
 
     if-eqz v1, :cond_6
 
-    .line 7787
     :cond_3
     const/4 v5, 0x0
 
-    .line 7788
     .local v5, "borderWidth":I
     iget-object v1, p0, Landroid/view/ViewRootImpl$SmartClipRemoteRequestDispatcherProxy;->mContext:Landroid/content/Context;
 
     if-eqz v1, :cond_4
 
-    .line 7789
     iget-object v1, p0, Landroid/view/ViewRootImpl$SmartClipRemoteRequestDispatcherProxy;->this$0:Landroid/view/ViewRootImpl;
 
     iget-object v1, v1, Landroid/view/ViewRootImpl;->mWindowAttributes:Landroid/view/WindowManager$LayoutParams;
@@ -375,7 +345,6 @@
 
     if-nez v1, :cond_4
 
-    .line 7790
     iget-object v1, p0, Landroid/view/ViewRootImpl$SmartClipRemoteRequestDispatcherProxy;->mContext:Landroid/content/Context;
 
     invoke-static {v1}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->isSupportSimplificationUI(Landroid/content/Context;)Z
@@ -384,7 +353,6 @@
 
     if-eqz v1, :cond_5
 
-    .line 7791
     iget-object v1, p0, Landroid/view/ViewRootImpl$SmartClipRemoteRequestDispatcherProxy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -397,7 +365,6 @@
 
     move-result v5
 
-    .line 7800
     :cond_4
     :goto_0
     new-instance v0, Lcom/samsung/android/smartclip/SmartClipDataCropperImpl;
@@ -429,7 +396,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/samsung/android/smartclip/SmartClipDataCropperImpl;-><init>(Landroid/content/Context;Lcom/samsung/android/smartclip/SmartClipDataExtractionEvent;Landroid/graphics/Rect;Landroid/graphics/RectF;I)V
 
-    .line 7805
     .end local v5    # "borderWidth":I
     .restart local v0    # "cropper":Lcom/samsung/android/smartclip/SmartClipDataCropperImpl;
     :goto_1
@@ -439,11 +405,9 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/smartclip/SmartClipDataCropperImpl;->doExtractSmartClipData(Landroid/view/View;)Z
 
-    .line 7811
     :goto_2
     return-void
 
-    .line 7793
     .restart local v5    # "borderWidth":I
     :cond_5
     iget-object v1, p0, Landroid/view/ViewRootImpl$SmartClipRemoteRequestDispatcherProxy;->mContext:Landroid/content/Context;
@@ -476,7 +440,6 @@
 
     goto :goto_0
 
-    .line 7803
     .end local v5    # "borderWidth":I
     :cond_6
     new-instance v0, Lcom/samsung/android/smartclip/SmartClipDataCropperImpl;
@@ -495,7 +458,6 @@
     .restart local v0    # "cropper":Lcom/samsung/android/smartclip/SmartClipDataCropperImpl;
     goto :goto_1
 
-    .line 7808
     .end local v0    # "cropper":Lcom/samsung/android/smartclip/SmartClipDataCropperImpl;
     :cond_7
     new-instance v0, Lcom/samsung/android/smartclip/SmartClipDataCropperImpl;
@@ -504,7 +466,6 @@
 
     invoke-direct {v0, v1, v2}, Lcom/samsung/android/smartclip/SmartClipDataCropperImpl;-><init>(Landroid/content/Context;Lcom/samsung/android/smartclip/SmartClipDataExtractionEvent;)V
 
-    .line 7809
     .restart local v0    # "cropper":Lcom/samsung/android/smartclip/SmartClipDataCropperImpl;
     const/4 v1, 0x0
 
@@ -520,14 +481,12 @@
     .param p1, "request"    # Lcom/samsung/android/smartclip/SmartClipRemoteRequestInfo;
 
     .prologue
-    .line 7732
     iget-boolean v0, p0, Landroid/view/ViewRootImpl$SmartClipRemoteRequestDispatcherProxy;->DEBUG:Z
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 7733
     const-string v0, "SmartClipRemoteRequestDispatcher_ViewRootImpl"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -588,22 +547,18 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7740
     :cond_0
     iget v0, p1, Lcom/samsung/android/smartclip/SmartClipRemoteRequestInfo;->mRequestType:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 7752
     iget-object v0, p0, Landroid/view/ViewRootImpl$SmartClipRemoteRequestDispatcherProxy;->mDispatcher:Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;
 
     invoke-virtual {v0, p1}, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->dispatchSmartClipRemoteRequest(Lcom/samsung/android/smartclip/SmartClipRemoteRequestInfo;)V
 
-    .line 7755
     :goto_0
     return-void
 
-    .line 7742
     :pswitch_0
     iget-object v0, p0, Landroid/view/ViewRootImpl$SmartClipRemoteRequestDispatcherProxy;->mDispatcher:Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;
 
@@ -615,7 +570,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/samsung/android/smartclip/SmartClipRemoteRequestDispatcher;->checkPermission(Ljava/lang/String;II)V
 
-    .line 7743
     iget-object v0, p0, Landroid/view/ViewRootImpl$SmartClipRemoteRequestDispatcherProxy;->this$0:Landroid/view/ViewRootImpl;
 
     iget-object v0, v0, Landroid/view/ViewRootImpl;->mHandler:Landroid/view/ViewRootImpl$ViewRootHandler;
@@ -628,7 +582,6 @@
 
     goto :goto_0
 
-    .line 7740
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

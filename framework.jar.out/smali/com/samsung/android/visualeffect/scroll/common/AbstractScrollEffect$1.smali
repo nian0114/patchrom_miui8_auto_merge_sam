@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 100
     iput-object p1, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect$1;->this$0:Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -42,7 +41,6 @@
 
     const/4 v6, 0x0
 
-    .line 103
     iget-object v2, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect$1;->this$0:Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;
 
     # getter for: Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->yAniEnabled:Z
@@ -52,7 +50,6 @@
 
     if-eqz v2, :cond_5
 
-    .line 104
     iget-object v2, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect$1;->this$0:Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;
 
     iget v2, v2, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->currentY:F
@@ -65,7 +62,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 105
     iget-object v2, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect$1;->this$0:Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;
 
     iget v2, v2, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->targetY:F
@@ -80,13 +76,11 @@
 
     move-result v1
 
-    .line 106
     .local v1, "yDiff":F
     cmpg-float v2, v1, v7
 
     if-gez v2, :cond_4
 
-    .line 107
     iget-object v2, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect$1;->this$0:Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;
 
     iget-object v3, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect$1;->this$0:Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;
@@ -95,12 +89,10 @@
 
     iput v3, v2, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->currentY:F
 
-    .line 108
     iget-object v2, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect$1;->this$0:Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;
 
     iput-boolean v6, v2, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->isYMoving:Z
 
-    .line 119
     .end local v1    # "yDiff":F
     :cond_0
     :goto_0
@@ -110,7 +102,6 @@
 
     if-eqz v2, :cond_7
 
-    .line 120
     iget-object v2, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect$1;->this$0:Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;
 
     iget v2, v2, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->animationTotalFrame:I
@@ -123,7 +114,6 @@
 
     if-le v2, v3, :cond_6
 
-    .line 121
     iget-object v2, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect$1;->this$0:Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;
 
     iget v3, v2, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->animationCurrentFrame:I
@@ -132,7 +122,6 @@
 
     iput v3, v2, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->animationCurrentFrame:I
 
-    .line 132
     :goto_1
     iget-object v2, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect$1;->this$0:Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;
 
@@ -160,7 +149,6 @@
 
     iput v3, v2, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->currentListTextAlpha:I
 
-    .line 133
     iget-object v2, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect$1;->this$0:Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;
 
     iget-object v3, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect$1;->this$0:Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;
@@ -177,7 +165,6 @@
 
     iput v3, v2, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->currentTextShapeAlpha:I
 
-    .line 136
     iget-object v2, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect$1;->this$0:Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;
 
     iget-boolean v2, v2, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->isOpen:Z
@@ -202,7 +189,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 137
     iget-object v2, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect$1;->this$0:Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;
 
     iget v2, v2, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->targetWidthOffset:F
@@ -217,13 +203,11 @@
 
     move-result v0
 
-    .line 138
     .local v0, "offsetDiff":F
     cmpg-float v2, v0, v7
 
     if-gez v2, :cond_9
 
-    .line 139
     iget-object v2, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect$1;->this$0:Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;
 
     iget-object v3, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect$1;->this$0:Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;
@@ -232,12 +216,10 @@
 
     iput v3, v2, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->currentWidthOffset:F
 
-    .line 140
     iget-object v2, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect$1;->this$0:Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;
 
     iput-boolean v6, v2, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->isWidthMoving:Z
 
-    .line 146
     .end local v0    # "offsetDiff":F
     :cond_1
     :goto_2
@@ -263,13 +245,11 @@
 
     invoke-virtual {v2}, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->stopAnimation()V
 
-    .line 148
     :cond_2
     iget-object v2, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect$1;->this$0:Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;
 
     invoke-virtual {v2}, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->invalidate()V
 
-    .line 149
     iget-object v2, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect$1;->this$0:Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;
 
     iget-boolean v2, v2, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->isLoop:Z
@@ -284,11 +264,9 @@
 
     invoke-virtual {v2, v6, v4, v5}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 150
     :cond_3
     return-void
 
-    .line 110
     .restart local v1    # "yDiff":F
     :cond_4
     iget-object v2, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect$1;->this$0:Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;
@@ -313,7 +291,6 @@
 
     goto/16 :goto_0
 
-    .line 114
     .end local v1    # "yDiff":F
     :cond_5
     iget-object v2, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect$1;->this$0:Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;
@@ -324,14 +301,12 @@
 
     iput v3, v2, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->currentY:F
 
-    .line 115
     iget-object v2, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect$1;->this$0:Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;
 
     iput-boolean v6, v2, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->isYMoving:Z
 
     goto/16 :goto_0
 
-    .line 123
     :cond_6
     iget-object v2, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect$1;->this$0:Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;
 
@@ -339,7 +314,6 @@
 
     goto/16 :goto_1
 
-    .line 126
     :cond_7
     iget-object v2, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect$1;->this$0:Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;
 
@@ -349,7 +323,6 @@
 
     if-le v2, v3, :cond_8
 
-    .line 127
     iget-object v2, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect$1;->this$0:Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;
 
     iget v3, v2, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->animationCurrentFrame:I
@@ -360,7 +333,6 @@
 
     goto/16 :goto_1
 
-    .line 129
     :cond_8
     iget-object v2, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect$1;->this$0:Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;
 
@@ -368,7 +340,6 @@
 
     goto/16 :goto_1
 
-    .line 142
     .restart local v0    # "offsetDiff":F
     :cond_9
     iget-object v2, p0, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect$1;->this$0:Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;

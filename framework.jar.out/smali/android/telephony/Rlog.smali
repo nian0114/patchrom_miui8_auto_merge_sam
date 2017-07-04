@@ -8,10 +8,8 @@
     .locals 0
 
     .prologue
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 29
     return-void
 .end method
 
@@ -21,7 +19,6 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 41
     const/4 v0, 0x1
 
     const/4 v1, 0x3
@@ -40,7 +37,6 @@
     .param p2, "tr"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 45
     const/4 v0, 0x1
 
     const/4 v1, 0x3
@@ -85,14 +81,11 @@
     .param p2, "depth"    # I
 
     .prologue
-    .line 90
     const/4 v1, 0x0
 
-    .line 91
     .local v1, "i":I
     const/4 v0, 0x4
 
-    .line 92
     .local v0, "START_INDEX":I
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
@@ -102,7 +95,6 @@
 
     move-result-object v3
 
-    .line 93
     .local v3, "stackTraceElements":[Ljava/lang/StackTraceElement;
     array-length v4, v3
 
@@ -110,20 +102,15 @@
 
     if-le v4, v5, :cond_0
 
-    .line 94
     const/4 v1, 0x4
 
-    .line 97
     :cond_0
     if-gez p2, :cond_1
 
-    .line 98
     const/4 v1, 0x0
 
-    .line 99
     array-length p2, v3
 
-    .line 102
     :cond_1
     :goto_0
     array-length v4, v3
@@ -134,10 +121,8 @@
 
     if-ge v1, v4, :cond_2
 
-    .line 103
     aget-object v2, v3, v1
 
-    .line 104
     .local v2, "stackTraceElement":Ljava/lang/StackTraceElement;
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -201,12 +186,10 @@
 
     invoke-static {p0, v4}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 102
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 108
     .end local v2    # "stackTraceElement":Ljava/lang/StackTraceElement;
     :cond_2
     return-void
@@ -218,7 +201,6 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 72
     const/4 v0, 0x1
 
     const/4 v1, 0x6
@@ -237,7 +219,6 @@
     .param p2, "tr"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 76
     const/4 v0, 0x1
 
     const/4 v1, 0x6
@@ -281,7 +262,6 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 50
     const/4 v0, 0x1
 
     const/4 v1, 0x4
@@ -300,7 +280,6 @@
     .param p2, "tr"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 54
     const/4 v0, 0x1
 
     const/4 v1, 0x4
@@ -344,7 +323,6 @@
     .param p1, "level"    # I
 
     .prologue
-    .line 85
     invoke-static {p0, p1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v0
@@ -359,7 +337,6 @@
     .param p2, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 81
     const/4 v0, 0x1
 
     invoke-static {v0, p0, p1, p2}, Landroid/util/Log;->println_native(IILjava/lang/String;Ljava/lang/String;)I
@@ -375,7 +352,6 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 32
     const/4 v0, 0x1
 
     const/4 v1, 0x2
@@ -394,7 +370,6 @@
     .param p2, "tr"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 36
     const/4 v0, 0x1
 
     const/4 v1, 0x2
@@ -438,7 +413,6 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 59
     const/4 v0, 0x1
 
     const/4 v1, 0x5
@@ -457,7 +431,6 @@
     .param p2, "tr"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 63
     const/4 v0, 0x1
 
     const/4 v1, 0x5
@@ -501,7 +474,6 @@
     .param p1, "tr"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 68
     const/4 v0, 0x1
 
     const/4 v1, 0x5

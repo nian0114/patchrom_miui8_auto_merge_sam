@@ -25,7 +25,6 @@
     .locals 1
 
     .prologue
-    .line 378
     new-instance v0, Landroid/hardware/scontext/SContextSLocationCore$1;
 
     invoke-direct {v0}, Landroid/hardware/scontext/SContextSLocationCore$1;-><init>()V
@@ -39,17 +38,14 @@
     .locals 1
 
     .prologue
-    .line 147
     invoke-direct {p0}, Landroid/hardware/scontext/SContextEventContext;-><init>()V
 
-    .line 148
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/hardware/scontext/SContextSLocationCore;->mContext:Landroid/os/Bundle;
 
-    .line 149
     return-void
 .end method
 
@@ -58,13 +54,10 @@
     .param p1, "src"    # Landroid/os/Parcel;
 
     .prologue
-    .line 154
     invoke-direct {p0}, Landroid/hardware/scontext/SContextEventContext;-><init>()V
 
-    .line 155
     invoke-direct {p0, p1}, Landroid/hardware/scontext/SContextSLocationCore;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 156
     return-void
 .end method
 
@@ -73,14 +66,12 @@
     .param p1, "src"    # Landroid/os/Parcel;
 
     .prologue
-    .line 370
     invoke-virtual {p1}, Landroid/os/Parcel;->readBundle()Landroid/os/Bundle;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/hardware/scontext/SContextSLocationCore;->mContext:Landroid/os/Bundle;
 
-    .line 371
     return-void
 .end method
 
@@ -90,7 +81,6 @@
     .locals 1
 
     .prologue
-    .line 139
     invoke-super {p0}, Landroid/hardware/scontext/SContextEventContext;->describeContents()I
 
     move-result v0
@@ -102,7 +92,6 @@
     .locals 2
 
     .prologue
-    .line 235
     iget-object v0, p0, Landroid/hardware/scontext/SContextSLocationCore;->mContext:Landroid/os/Bundle;
 
     const-string v1, "Accuracy"
@@ -118,7 +107,6 @@
     .locals 2
 
     .prologue
-    .line 175
     iget-object v0, p0, Landroid/hardware/scontext/SContextSLocationCore;->mContext:Landroid/os/Bundle;
 
     const-string v1, "Action"
@@ -134,7 +122,6 @@
     .locals 2
 
     .prologue
-    .line 336
     iget-object v0, p0, Landroid/hardware/scontext/SContextSLocationCore;->mContext:Landroid/os/Bundle;
 
     const-string v1, "DataArray"
@@ -150,7 +137,6 @@
     .locals 2
 
     .prologue
-    .line 295
     iget-object v0, p0, Landroid/hardware/scontext/SContextSLocationCore;->mContext:Landroid/os/Bundle;
 
     const-string v1, "DataCount"
@@ -166,7 +152,6 @@
     .locals 2
 
     .prologue
-    .line 285
     iget-object v0, p0, Landroid/hardware/scontext/SContextSLocationCore;->mContext:Landroid/os/Bundle;
 
     const-string v1, "Distance"
@@ -182,7 +167,6 @@
     .locals 2
 
     .prologue
-    .line 275
     iget-object v0, p0, Landroid/hardware/scontext/SContextSLocationCore;->mContext:Landroid/os/Bundle;
 
     const-string v1, "ErrorCode"
@@ -198,7 +182,6 @@
     .locals 2
 
     .prologue
-    .line 185
     iget-object v0, p0, Landroid/hardware/scontext/SContextSLocationCore;->mContext:Landroid/os/Bundle;
 
     const-string v1, "GeoFenceId"
@@ -214,7 +197,6 @@
     .locals 2
 
     .prologue
-    .line 265
     iget-object v0, p0, Landroid/hardware/scontext/SContextSLocationCore;->mContext:Landroid/os/Bundle;
 
     const-string v1, "FunctionType"
@@ -230,7 +212,6 @@
     .locals 2
 
     .prologue
-    .line 215
     iget-object v0, p0, Landroid/hardware/scontext/SContextSLocationCore;->mContext:Landroid/os/Bundle;
 
     const-string v1, "Latitude"
@@ -246,7 +227,6 @@
     .locals 2
 
     .prologue
-    .line 225
     iget-object v0, p0, Landroid/hardware/scontext/SContextSLocationCore;->mContext:Landroid/os/Bundle;
 
     const-string v1, "Longitude"
@@ -262,7 +242,6 @@
     .locals 2
 
     .prologue
-    .line 165
     iget-object v0, p0, Landroid/hardware/scontext/SContextSLocationCore;->mContext:Landroid/os/Bundle;
 
     const-string v1, "Mode"
@@ -278,7 +257,6 @@
     .locals 2
 
     .prologue
-    .line 195
     iget-object v0, p0, Landroid/hardware/scontext/SContextSLocationCore;->mContext:Landroid/os/Bundle;
 
     const-string v1, "GeoFenceStatus"
@@ -294,7 +272,6 @@
     .locals 2
 
     .prologue
-    .line 316
     iget-object v0, p0, Landroid/hardware/scontext/SContextSLocationCore;->mContext:Landroid/os/Bundle;
 
     const-string v1, "EventStatusArray"
@@ -310,7 +287,6 @@
     .locals 2
 
     .prologue
-    .line 255
     iget-object v0, p0, Landroid/hardware/scontext/SContextSLocationCore;->mContext:Landroid/os/Bundle;
 
     const-string v1, "SuccessGpsCount"
@@ -326,7 +302,6 @@
     .locals 2
 
     .prologue
-    .line 205
     iget-object v0, p0, Landroid/hardware/scontext/SContextSLocationCore;->mContext:Landroid/os/Bundle;
 
     const-string v1, "Timestamp"
@@ -342,7 +317,6 @@
     .locals 2
 
     .prologue
-    .line 326
     iget-object v0, p0, Landroid/hardware/scontext/SContextSLocationCore;->mContext:Landroid/os/Bundle;
 
     const-string v1, "TimeStampArray"
@@ -358,7 +332,6 @@
     .locals 2
 
     .prologue
-    .line 245
     iget-object v0, p0, Landroid/hardware/scontext/SContextSLocationCore;->mContext:Landroid/os/Bundle;
 
     const-string v1, "TotalGpsCount"
@@ -374,7 +347,6 @@
     .locals 2
 
     .prologue
-    .line 305
     iget-object v0, p0, Landroid/hardware/scontext/SContextSLocationCore;->mContext:Landroid/os/Bundle;
 
     const-string v1, "EventTypeArray"
@@ -391,10 +363,8 @@
     .param p1, "context"    # Landroid/os/Bundle;
 
     .prologue
-    .line 346
     iput-object p1, p0, Landroid/hardware/scontext/SContextSLocationCore;->mContext:Landroid/os/Bundle;
 
-    .line 347
     return-void
 .end method
 
@@ -404,11 +374,9 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 360
     iget-object v0, p0, Landroid/hardware/scontext/SContextSLocationCore;->mContext:Landroid/os/Bundle;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
 
-    .line 361
     return-void
 .end method

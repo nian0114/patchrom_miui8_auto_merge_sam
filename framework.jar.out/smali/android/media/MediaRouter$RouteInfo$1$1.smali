@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 2020
     iput-object p1, p0, Landroid/media/MediaRouter$RouteInfo$1$1;->this$1:Landroid/media/MediaRouter$RouteInfo$1;
 
     iput p2, p0, Landroid/media/MediaRouter$RouteInfo$1$1;->val$direction:I
@@ -48,7 +47,6 @@
     .locals 3
 
     .prologue
-    .line 2023
     iget-object v0, p0, Landroid/media/MediaRouter$RouteInfo$1$1;->this$1:Landroid/media/MediaRouter$RouteInfo$1;
 
     iget-object v0, v0, Landroid/media/MediaRouter$RouteInfo$1;->this$0:Landroid/media/MediaRouter$RouteInfo;
@@ -57,12 +55,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 2024
     iget v0, p0, Landroid/media/MediaRouter$RouteInfo$1$1;->val$direction:I
 
     if-eqz v0, :cond_1
 
-    .line 2025
     iget-object v0, p0, Landroid/media/MediaRouter$RouteInfo$1$1;->this$1:Landroid/media/MediaRouter$RouteInfo$1;
 
     iget-object v0, v0, Landroid/media/MediaRouter$RouteInfo$1;->this$0:Landroid/media/MediaRouter$RouteInfo;
@@ -83,12 +79,10 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/media/MediaRouter$VolumeCallback;->onVolumeUpdateRequest(Landroid/media/MediaRouter$RouteInfo;I)V
 
-    .line 2030
     :cond_0
     :goto_0
     return-void
 
-    .line 2027
     :cond_1
     iget-object v0, p0, Landroid/media/MediaRouter$RouteInfo$1$1;->this$1:Landroid/media/MediaRouter$RouteInfo$1;
 

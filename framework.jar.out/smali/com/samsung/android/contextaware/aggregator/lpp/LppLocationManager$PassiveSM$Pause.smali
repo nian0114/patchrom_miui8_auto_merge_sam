@@ -27,17 +27,14 @@
     .locals 1
 
     .prologue
-    .line 1443
     iput-object p1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM$Pause;->this$1:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
 
-    .line 1445
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM$Pause;->batchStart:Z
 
-    .line 1446
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM$Pause;->firstTime:Z
@@ -53,7 +50,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 1451
     const-string v0, "LppLocationManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -80,7 +76,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1452
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM$Pause;->this$1:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM;
 
     # getter for: Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM;->mLocationMgr:Landroid/location/LocationManager;
@@ -90,7 +85,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1453
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM$Pause;->this$1:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM;
 
     # getter for: Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM;->mLocationMgr:Landroid/location/LocationManager;
@@ -107,7 +101,6 @@
 
     invoke-virtual {v0, v1}, Landroid/location/LocationManager;->removeUpdates(Landroid/location/LocationListener;)V
 
-    .line 1456
     :cond_0
     iget-boolean v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM$Pause;->firstTime:Z
 
@@ -115,7 +108,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 1457
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM$Pause;->this$1:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM;
 
     sget-object v1, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$Msg;->PASSIVE_INACTIVE_TIMEOUT:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$Msg;
@@ -128,17 +120,13 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM;->sendMessageDelayed(IJ)V
 
-    .line 1459
     iput-boolean v4, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM$Pause;->firstTime:Z
 
-    .line 1466
     :goto_0
     iput-boolean v4, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM$Pause;->batchStart:Z
 
-    .line 1467
     return-void
 
-    .line 1462
     :cond_1
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM$Pause;->this$1:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM;
 
@@ -162,7 +150,6 @@
     .prologue
     const/4 v7, 0x1
 
-    .line 1472
     const-string v0, "LppLocationManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -205,7 +192,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1473
     sget-object v0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$1;->$SwitchMap$com$samsung$android$contextaware$aggregator$lpp$LppLocationManager$Msg:[I
 
     sget-object v1, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager;->vals:[Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$Msg;
@@ -222,21 +208,17 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 1494
     :pswitch_0
     const/4 v0, 0x0
 
-    .line 1497
     :goto_0
     return v0
 
-    .line 1477
     :pswitch_1
     iget-boolean v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM$Pause;->batchStart:Z
 
     if-nez v0, :cond_0
 
-    .line 1479
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM$Pause;->this$1:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM;
 
     iget-object v1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM$Pause;->this$1:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM;
@@ -252,10 +234,8 @@
     :goto_1
     move v0, v7
 
-    .line 1497
     goto :goto_0
 
-    .line 1482
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM$Pause;->this$1:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM;
 
@@ -264,7 +244,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "passive"
+    const-string v1, "passive"
 
     const-wide/16 v2, 0x1388
 
@@ -288,7 +268,6 @@
 
     invoke-virtual/range {v0 .. v6}, Landroid/location/LocationManager;->requestLocationUpdates(Ljava/lang/String;JFLandroid/location/LocationListener;Landroid/os/Looper;)V
 
-    .line 1484
     iget-object v0, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM$Pause;->this$1:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM;
 
     iget-object v1, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM$Pause;->this$1:Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM;
@@ -303,13 +282,11 @@
 
     goto :goto_1
 
-    .line 1490
     :pswitch_2
     iput-boolean v7, p0, Lcom/samsung/android/contextaware/aggregator/lpp/LppLocationManager$PassiveSM$Pause;->batchStart:Z
 
     goto :goto_1
 
-    .line 1473
     nop
 
     :pswitch_data_0

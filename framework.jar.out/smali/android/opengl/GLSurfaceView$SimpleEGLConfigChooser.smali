@@ -30,10 +30,8 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 1086
     iput-object p1, p0, Landroid/opengl/GLSurfaceView$SimpleEGLConfigChooser;->this$0:Landroid/opengl/GLSurfaceView;
 
-    .line 1087
     if-eqz p6, :cond_1
 
     const/16 v6, 0x10
@@ -53,7 +51,6 @@
 
     invoke-direct/range {v0 .. v7}, Landroid/opengl/GLSurfaceView$ComponentSizeChooser;-><init>(Landroid/opengl/GLSurfaceView;IIIIII)V
 
-    .line 1088
     # getter for: Landroid/opengl/GLSurfaceView;->DEBUG_DCS:Z
     invoke-static {}, Landroid/opengl/GLSurfaceView;->access$300()Z
 
@@ -61,7 +58,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1089
     const-string v0, "SRIB_DCS_GLSurfaceView"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -106,14 +102,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1090
     :cond_0
     return-void
 
     :cond_1
     move v6, v7
 
-    .line 1087
     goto :goto_0
 .end method
 
@@ -126,10 +120,8 @@
 
     const/4 v5, 0x0
 
-    .line 1081
     iput-object p1, p0, Landroid/opengl/GLSurfaceView$SimpleEGLConfigChooser;->this$0:Landroid/opengl/GLSurfaceView;
 
-    .line 1082
     if-eqz p2, :cond_0
 
     const/16 v6, 0x10
@@ -147,12 +139,10 @@
 
     invoke-direct/range {v0 .. v7}, Landroid/opengl/GLSurfaceView$ComponentSizeChooser;-><init>(Landroid/opengl/GLSurfaceView;IIIIII)V
 
-    .line 1083
     return-void
 
     :cond_0
     move v6, v5
 
-    .line 1082
     goto :goto_0
 .end method

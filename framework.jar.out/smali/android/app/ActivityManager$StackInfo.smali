@@ -51,7 +51,6 @@
     .locals 1
 
     .prologue
-    .line 2145
     new-instance v0, Landroid/app/ActivityManager$StackInfo$1;
 
     invoke-direct {v0}, Landroid/app/ActivityManager$StackInfo$1;-><init>()V
@@ -65,17 +64,14 @@
     .locals 1
 
     .prologue
-    .line 2156
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2102
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroid/app/ActivityManager$StackInfo;->bounds:Landroid/graphics/Rect;
 
-    .line 2157
     return-void
 .end method
 
@@ -84,20 +80,16 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 2159
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2102
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroid/app/ActivityManager$StackInfo;->bounds:Landroid/graphics/Rect;
 
-    .line 2160
     invoke-virtual {p0, p1}, Landroid/app/ActivityManager$StackInfo;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 2161
     return-void
 .end method
 
@@ -107,7 +99,6 @@
     .param p2, "x1"    # Landroid/app/ActivityManager$1;
 
     .prologue
-    .line 2096
     invoke-direct {p0, p1}, Landroid/app/ActivityManager$StackInfo;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -119,7 +110,6 @@
     .locals 1
 
     .prologue
-    .line 2109
     const/4 v0, 0x0
 
     return v0
@@ -132,21 +122,18 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 2131
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Landroid/app/ActivityManager$StackInfo;->stackId:I
 
-    .line 2134
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Landroid/app/ActivityManager$StackInfo;->stackType:I
 
-    .line 2135
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
@@ -156,7 +143,6 @@
     :goto_0
     iput-boolean v0, p0, Landroid/app/ActivityManager$StackInfo;->isIsolated:Z
 
-    .line 2138
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -179,31 +165,26 @@
 
     iput-object v0, p0, Landroid/app/ActivityManager$StackInfo;->bounds:Landroid/graphics/Rect;
 
-    .line 2140
     invoke-virtual {p1}, Landroid/os/Parcel;->createIntArray()[I
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/app/ActivityManager$StackInfo;->taskIds:[I
 
-    .line 2141
     invoke-virtual {p1}, Landroid/os/Parcel;->createStringArray()[Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/app/ActivityManager$StackInfo;->taskNames:[Ljava/lang/String;
 
-    .line 2142
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/app/ActivityManager$StackInfo;->displayId:I
 
-    .line 2143
     return-void
 
-    .line 2135
     :cond_0
     const/4 v0, 0x0
 
@@ -214,7 +195,6 @@
     .locals 1
 
     .prologue
-    .line 2184
     const-string v0, ""
 
     invoke-virtual {p0, v0}, Landroid/app/ActivityManager$StackInfo;->toString(Ljava/lang/String;)Ljava/lang/String;
@@ -229,14 +209,12 @@
     .param p1, "prefix"    # Ljava/lang/String;
 
     .prologue
-    .line 2164
     new-instance v1, Ljava/lang/StringBuilder;
 
     const/16 v2, 0x100
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 2165
     .local v1, "sb":Ljava/lang/StringBuilder;
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -248,7 +226,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 2168
     const-string v2, " stackType="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -257,7 +234,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 2171
     const-string v2, " bounds="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -270,7 +246,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2172
     const-string v2, " displayId="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -279,12 +254,10 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 2173
     const-string v2, "\n"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2174
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -303,7 +276,6 @@
 
     move-result-object p1
 
-    .line 2175
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -314,10 +286,9 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 2176
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string/jumbo v2, "taskId="
+    const-string v2, "taskId="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -327,7 +298,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 2177
     const-string v2, ": "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -342,12 +312,10 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2175
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 2179
     :cond_0
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -362,17 +330,14 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 2114
     iget v0, p0, Landroid/app/ActivityManager$StackInfo;->stackId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 2117
     iget v0, p0, Landroid/app/ActivityManager$StackInfo;->stackType:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 2118
     iget-boolean v0, p0, Landroid/app/ActivityManager$StackInfo;->isIsolated:Z
 
     if-eqz v0, :cond_0
@@ -382,53 +347,44 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 2121
     iget-object v0, p0, Landroid/app/ActivityManager$StackInfo;->bounds:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->left:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 2122
     iget-object v0, p0, Landroid/app/ActivityManager$StackInfo;->bounds:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->top:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 2123
     iget-object v0, p0, Landroid/app/ActivityManager$StackInfo;->bounds:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->right:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 2124
     iget-object v0, p0, Landroid/app/ActivityManager$StackInfo;->bounds:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->bottom:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 2125
     iget-object v0, p0, Landroid/app/ActivityManager$StackInfo;->taskIds:[I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeIntArray([I)V
 
-    .line 2126
     iget-object v0, p0, Landroid/app/ActivityManager$StackInfo;->taskNames:[Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeStringArray([Ljava/lang/String;)V
 
-    .line 2127
     iget v0, p0, Landroid/app/ActivityManager$StackInfo;->displayId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 2128
     return-void
 
-    .line 2118
     :cond_0
     const/4 v0, 0x0
 

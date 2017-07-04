@@ -20,22 +20,18 @@
     .locals 1
 
     .prologue
-    .line 49
     const/4 v0, 0x2
 
     invoke-direct {p0, v0}, Landroid/sec/clipboard/data/ClipboardData;-><init>(I)V
 
-    .line 45
     const-string v0, ""
 
     iput-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataText;->mValue:Ljava/lang/String;
 
-    .line 46
     const-string v0, ""
 
     iput-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataText;->mText:Ljava/lang/CharSequence;
 
-    .line 50
     return-void
 .end method
 
@@ -45,7 +41,6 @@
     .locals 1
 
     .prologue
-    .line 140
     invoke-virtual {p0}, Landroid/sec/clipboard/data/list/ClipboardDataText;->getText()Ljava/lang/CharSequence;
 
     move-result-object v0
@@ -59,12 +54,10 @@
     .param p2, "altData"    # Landroid/sec/clipboard/data/ClipboardData;
 
     .prologue
-    .line 83
     invoke-super {p0, p1, p2}, Landroid/sec/clipboard/data/ClipboardData;->SetAlternateFormat(ILandroid/sec/clipboard/data/ClipboardData;)Z
 
     move-result v0
 
-    .line 84
     .local v0, "Result":Z
     if-eqz v0, :cond_0
 
@@ -78,21 +71,17 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 85
     :cond_0
     const/4 v1, 0x0
 
-    .line 99
     .end local p2    # "altData":Landroid/sec/clipboard/data/ClipboardData;
     :goto_0
     return v1
 
-    .line 88
     .restart local p2    # "altData":Landroid/sec/clipboard/data/ClipboardData;
     :cond_1
     packed-switch p1, :pswitch_data_0
 
-    .line 96
     :pswitch_0
     const/4 v0, 0x0
 
@@ -100,10 +89,8 @@
     :goto_1
     move v1, v0
 
-    .line 99
     goto :goto_0
 
-    .line 90
     .restart local p2    # "altData":Landroid/sec/clipboard/data/ClipboardData;
     :pswitch_1
     check-cast p2, Landroid/sec/clipboard/data/list/ClipboardDataText;
@@ -115,10 +102,8 @@
 
     move-result v0
 
-    .line 91
     goto :goto_1
 
-    .line 93
     .restart local p2    # "altData":Landroid/sec/clipboard/data/ClipboardData;
     :pswitch_2
     check-cast p2, Landroid/sec/clipboard/data/list/ClipboardDataHtml;
@@ -130,10 +115,8 @@
 
     move-result v0
 
-    .line 94
     goto :goto_1
 
-    .line 88
     nop
 
     :pswitch_data_0
@@ -149,7 +132,6 @@
     .param p1, "text"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 115
     invoke-virtual {p0, p1}, Landroid/sec/clipboard/data/list/ClipboardDataText;->setText(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -161,12 +143,10 @@
     .locals 1
 
     .prologue
-    .line 108
     const-string v0, ""
 
     iput-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataText;->mText:Ljava/lang/CharSequence;
 
-    .line 109
     return-void
 .end method
 
@@ -175,23 +155,19 @@
     .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
-    .line 167
     sget-boolean v2, Landroid/sec/clipboard/data/ClipboardConstants;->DEBUG:Z
 
     if-eqz v2, :cond_0
 
-    .line 168
     const-string v2, "ClipboardDataText"
 
-    const-string/jumbo v3, "text equals"
+    const-string v3, "text equals"
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 170
     :cond_0
     const/4 v0, 0x0
 
-    .line 171
     .local v0, "Result":Z
     invoke-super {p0, p1}, Landroid/sec/clipboard/data/ClipboardData;->equals(Ljava/lang/Object;)Z
 
@@ -199,13 +175,11 @@
 
     if-nez v2, :cond_2
 
-    .line 179
     .end local v0    # "Result":Z
     :cond_1
     :goto_0
     return v0
 
-    .line 175
     .restart local v0    # "Result":Z
     :cond_2
     instance-of v2, p1, Landroid/sec/clipboard/data/list/ClipboardDataText;
@@ -214,10 +188,8 @@
 
     move-object v1, p1
 
-    .line 178
     check-cast v1, Landroid/sec/clipboard/data/list/ClipboardDataText;
 
-    .line 179
     .local v1, "trgData":Landroid/sec/clipboard/data/list/ClipboardDataText;
     iget-object v2, p0, Landroid/sec/clipboard/data/list/ClipboardDataText;->mText:Ljava/lang/CharSequence;
 
@@ -256,7 +228,6 @@
     .locals 1
 
     .prologue
-    .line 148
     iget-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataText;->mText:Ljava/lang/CharSequence;
 
     return-object v0
@@ -266,15 +237,12 @@
     .locals 1
 
     .prologue
-    .line 153
     iget-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataText;->mText:Ljava/lang/CharSequence;
 
     if-nez v0, :cond_0
 
-    .line 154
     const/4 v0, 0x0
 
-    .line 156
     :goto_0
     return v0
 
@@ -289,7 +257,6 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 232
     return-void
 .end method
 
@@ -298,7 +265,6 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 214
     const-class v0, Ljava/lang/CharSequence;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -313,7 +279,6 @@
 
     iput-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataText;->mText:Ljava/lang/CharSequence;
 
-    .line 215
     const-class v0, Landroid/content/ClipData;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -328,7 +293,6 @@
 
     iput-object v0, p0, Landroid/sec/clipboard/data/ClipboardData;->mClipdata:Landroid/content/ClipData;
 
-    .line 216
     const-class v0, Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -347,7 +311,6 @@
 
     iput-boolean v0, p0, Landroid/sec/clipboard/data/ClipboardData;->mIsProtected:Z
 
-    .line 217
     return-void
 .end method
 
@@ -360,7 +323,6 @@
 
     const/4 v0, 0x0
 
-    .line 124
     if-eqz p1, :cond_0
 
     invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
@@ -373,12 +335,10 @@
 
     if-nez v1, :cond_1
 
-    .line 133
     :cond_0
     :goto_0
     return v0
 
-    .line 128
     :cond_1
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
@@ -386,16 +346,13 @@
 
     if-le v1, v2, :cond_2
 
-    .line 129
     invoke-interface {p1, v0, v2}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
 
     move-result-object p1
 
-    .line 132
     :cond_2
     iput-object p1, p0, Landroid/sec/clipboard/data/list/ClipboardDataText;->mText:Ljava/lang/CharSequence;
 
-    .line 133
     const/4 v0, 0x1
 
     goto :goto_0
@@ -405,12 +362,10 @@
     .locals 1
 
     .prologue
-    .line 56
     iget-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataText;->mValue:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    .line 57
     iget-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataText;->mValue:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/Html;->fromHtml(Ljava/lang/String;)Landroid/text/Spanned;
@@ -419,7 +374,6 @@
 
     iput-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataText;->mText:Ljava/lang/CharSequence;
 
-    .line 59
     :cond_0
     return-void
 .end method
@@ -428,19 +382,16 @@
     .locals 1
 
     .prologue
-    .line 65
     iget-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataText;->mText:Ljava/lang/CharSequence;
 
     if-eqz v0, :cond_0
 
-    .line 66
     iget-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataText;->mText:Ljava/lang/CharSequence;
 
     instance-of v0, v0, Landroid/text/Spanned;
 
     if-eqz v0, :cond_1
 
-    .line 67
     iget-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataText;->mText:Ljava/lang/CharSequence;
 
     check-cast v0, Landroid/text/Spanned;
@@ -451,12 +402,10 @@
 
     iput-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataText;->mValue:Ljava/lang/String;
 
-    .line 72
     :cond_0
     :goto_0
     return-void
 
-    .line 69
     :cond_1
     iget-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataText;->mText:Ljava/lang/CharSequence;
 
@@ -475,12 +424,11 @@
     .prologue
     const/16 v3, 0x14
 
-    .line 225
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "this Text class. Value is "
+    const-string v1, "this Text class. Value is "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -529,39 +477,33 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 190
     sget-boolean v2, Landroid/sec/clipboard/data/ClipboardConstants;->DEBUG:Z
 
     if-eqz v2, :cond_0
 
-    .line 191
     const-string v2, "ClipboardDataText"
 
-    const-string/jumbo v3, "text write to parcel"
+    const-string v3, "text write to parcel"
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 193
     :cond_0
     invoke-super {p0, p1, p2}, Landroid/sec/clipboard/data/ClipboardData;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 195
     iget-object v2, p0, Landroid/sec/clipboard/data/ClipboardData;->mClipdata:Landroid/content/ClipData;
 
     if-nez v2, :cond_1
 
-    .line 196
     const/4 v2, 0x1
 
     new-array v1, v2, [Ljava/lang/String;
 
     const/4 v2, 0x0
 
-    const-string/jumbo v3, "text/plain"
+    const-string v3, "text/plain"
 
     aput-object v3, v1, v2
 
-    .line 197
     .local v1, "mimeType":[Ljava/lang/String;
     new-instance v0, Landroid/content/ClipData$Item;
 
@@ -569,7 +511,6 @@
 
     invoke-direct {v0, v2}, Landroid/content/ClipData$Item;-><init>(Ljava/lang/CharSequence;)V
 
-    .line 198
     .local v0, "item":Landroid/content/ClipData$Item;
     new-instance v2, Landroid/content/ClipData;
 
@@ -579,7 +520,6 @@
 
     iput-object v2, p0, Landroid/sec/clipboard/data/list/ClipboardDataText;->mClipdata:Landroid/content/ClipData;
 
-    .line 201
     .end local v0    # "item":Landroid/content/ClipData$Item;
     .end local v1    # "mimeType":[Ljava/lang/String;
     :cond_1
@@ -587,12 +527,10 @@
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeValue(Ljava/lang/Object;)V
 
-    .line 202
     iget-object v2, p0, Landroid/sec/clipboard/data/list/ClipboardDataText;->mClipdata:Landroid/content/ClipData;
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeValue(Ljava/lang/Object;)V
 
-    .line 203
     iget-boolean v2, p0, Landroid/sec/clipboard/data/list/ClipboardDataText;->mIsProtected:Z
 
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -601,6 +539,5 @@
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeValue(Ljava/lang/Object;)V
 
-    .line 204
     return-void
 .end method

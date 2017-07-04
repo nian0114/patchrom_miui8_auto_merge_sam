@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 712
     iput-object p1, p0, Landroid/os/CustomFrequencyManager$CPUHotplugDisableRequest$1;->this$1:Landroid/os/CustomFrequencyManager$CPUHotplugDisableRequest;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,11 +39,9 @@
     .locals 1
 
     .prologue
-    .line 714
     iget-object v0, p0, Landroid/os/CustomFrequencyManager$CPUHotplugDisableRequest$1;->this$1:Landroid/os/CustomFrequencyManager$CPUHotplugDisableRequest;
 
     invoke-virtual {v0}, Landroid/os/CustomFrequencyManager$CPUHotplugDisableRequest;->cancelFrequencyRequest()V
 
-    .line 715
     return-void
 .end method

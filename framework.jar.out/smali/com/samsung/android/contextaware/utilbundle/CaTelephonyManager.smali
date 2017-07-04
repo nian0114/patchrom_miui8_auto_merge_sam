@@ -45,22 +45,18 @@
     .locals 1
 
     .prologue
-    .line 61
     const/4 v0, 0x1
 
     sput v0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->CALL_STATE_IDLE_1:I
 
-    .line 62
     const/4 v0, 0x2
 
     sput v0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->CALL_STATE_INCOMING_RINGING:I
 
-    .line 63
     const/4 v0, 0x3
 
     sput v0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->CALL_STATE_INCOMING_ANSWERED:I
 
-    .line 64
     const/4 v0, 0x4
 
     sput v0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->CALL_STATE_INCOMING_MISSED:I
@@ -72,10 +68,8 @@
     .locals 1
 
     .prologue
-    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 338
     new-instance v0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager$1;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager$1;-><init>(Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;)V
@@ -91,7 +85,6 @@
     .param p1, "x1"    # Landroid/telephony/CellLocation;
 
     .prologue
-    .line 36
     iput-object p1, p0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->mCellLocation:Landroid/telephony/CellLocation;
 
     return-object p1
@@ -102,7 +95,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;
 
     .prologue
-    .line 36
     invoke-direct {p0}, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->sendCellInfoToSensorHub()V
 
     return-void
@@ -114,7 +106,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 36
     invoke-direct {p0, p1}, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->sendCallStatusToSensorHub(I)V
 
     return-void
@@ -125,7 +116,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;
 
     .prologue
-    .line 36
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     return-object v0
@@ -137,7 +127,6 @@
     .param p1, "x1"    # Landroid/telephony/CellLocation;
 
     .prologue
-    .line 36
     invoke-direct {p0, p1}, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->isCellLocationChanged(Landroid/telephony/CellLocation;)Z
 
     move-result v0
@@ -149,42 +138,35 @@
     .locals 2
 
     .prologue
-    .line 84
     sget-object v0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->instance:Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;
 
     if-nez v0, :cond_1
 
-    .line 85
     const-class v1, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;
 
     monitor-enter v1
 
-    .line 86
     :try_start_0
     sget-object v0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->instance:Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;
 
     if-nez v0, :cond_0
 
-    .line 87
     new-instance v0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;
 
     invoke-direct {v0}, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;-><init>()V
 
     sput-object v0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->instance:Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;
 
-    .line 89
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 91
     :cond_1
     sget-object v0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->instance:Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;
 
     return-object v0
 
-    .line 89
     :catchall_0
     move-exception v0
 
@@ -201,28 +183,23 @@
     .param p1, "cl"    # Landroid/telephony/CellLocation;
 
     .prologue
-    .line 262
     const/4 v10, 0x0
 
-    .line 264
     .local v10, "ret":Z
     iget-object v11, p0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->mCellLocation:Landroid/telephony/CellLocation;
 
     if-eqz v11, :cond_5
 
-    .line 265
     iget-object v11, p0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->mCellLocation:Landroid/telephony/CellLocation;
 
     instance-of v11, v11, Landroid/telephony/gsm/GsmCellLocation;
 
     if-eqz v11, :cond_2
 
-    .line 266
     instance-of v11, p1, Landroid/telephony/gsm/GsmCellLocation;
 
     if-eqz v11, :cond_1
 
-    .line 270
     iget-object v11, p0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->mCellLocation:Landroid/telephony/CellLocation;
 
     check-cast v11, Landroid/telephony/gsm/GsmCellLocation;
@@ -231,7 +208,6 @@
 
     move-result v6
 
-    .line 271
     .local v6, "prevCid":I
     iget-object v11, p0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->mCellLocation:Landroid/telephony/CellLocation;
 
@@ -244,14 +220,12 @@
     .local v7, "prevLac":I
     move-object v11, p1
 
-    .line 273
     check-cast v11, Landroid/telephony/gsm/GsmCellLocation;
 
     invoke-virtual {v11}, Landroid/telephony/gsm/GsmCellLocation;->getCid()I
 
     move-result v1
 
-    .line 274
     .local v1, "curCid":I
     check-cast p1, Landroid/telephony/gsm/GsmCellLocation;
 
@@ -260,21 +234,17 @@
 
     move-result v2
 
-    .line 276
     .local v2, "curLac":I
     if-eq v6, v1, :cond_0
 
     if-eq v7, v2, :cond_0
 
-    .line 277
     if-eqz v1, :cond_0
 
     if-eqz v2, :cond_0
 
-    .line 278
     const/4 v10, 0x1
 
-    .line 334
     .end local v1    # "curCid":I
     .end local v2    # "curLac":I
     .end local v6    # "prevCid":I
@@ -283,14 +253,12 @@
     :goto_0
     return v10
 
-    .line 283
     .restart local p1    # "cl":Landroid/telephony/CellLocation;
     :cond_1
     const/4 v10, 0x1
 
     goto :goto_0
 
-    .line 287
     :cond_2
     iget-object v11, p0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->mCellLocation:Landroid/telephony/CellLocation;
 
@@ -298,12 +266,10 @@
 
     if-eqz v11, :cond_0
 
-    .line 288
     instance-of v11, p1, Landroid/telephony/cdma/CdmaCellLocation;
 
     if-eqz v11, :cond_4
 
-    .line 292
     iget-object v11, p0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->mCellLocation:Landroid/telephony/CellLocation;
 
     check-cast v11, Landroid/telephony/cdma/CdmaCellLocation;
@@ -312,7 +278,6 @@
 
     move-result v5
 
-    .line 293
     .local v5, "prevBid":I
     iget-object v11, p0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->mCellLocation:Landroid/telephony/CellLocation;
 
@@ -322,7 +287,6 @@
 
     move-result v8
 
-    .line 294
     .local v8, "prevNid":I
     iget-object v11, p0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->mCellLocation:Landroid/telephony/CellLocation;
 
@@ -335,7 +299,6 @@
     .local v9, "prevSid":I
     move-object v11, p1
 
-    .line 296
     check-cast v11, Landroid/telephony/cdma/CdmaCellLocation;
 
     invoke-virtual {v11}, Landroid/telephony/cdma/CdmaCellLocation;->getBaseStationId()I
@@ -345,14 +308,12 @@
     .local v0, "curBid":I
     move-object v11, p1
 
-    .line 297
     check-cast v11, Landroid/telephony/cdma/CdmaCellLocation;
 
     invoke-virtual {v11}, Landroid/telephony/cdma/CdmaCellLocation;->getNetworkId()I
 
     move-result v3
 
-    .line 298
     .local v3, "curNid":I
     check-cast p1, Landroid/telephony/cdma/CdmaCellLocation;
 
@@ -361,7 +322,6 @@
 
     move-result v4
 
-    .line 300
     .local v4, "curSid":I
     if-ne v5, v0, :cond_3
 
@@ -369,7 +329,6 @@
 
     if-eq v9, v4, :cond_0
 
-    .line 301
     :cond_3
     if-eqz v0, :cond_0
 
@@ -377,12 +336,10 @@
 
     if-eqz v4, :cond_0
 
-    .line 302
     const/4 v10, 0x1
 
     goto :goto_0
 
-    .line 308
     .end local v0    # "curBid":I
     .end local v3    # "curNid":I
     .end local v4    # "curSid":I
@@ -395,7 +352,6 @@
 
     goto :goto_0
 
-    .line 313
     :cond_5
     instance-of v11, p1, Landroid/telephony/gsm/GsmCellLocation;
 
@@ -403,14 +359,12 @@
 
     move-object v11, p1
 
-    .line 315
     check-cast v11, Landroid/telephony/gsm/GsmCellLocation;
 
     invoke-virtual {v11}, Landroid/telephony/gsm/GsmCellLocation;->getCid()I
 
     move-result v1
 
-    .line 316
     .restart local v1    # "curCid":I
     check-cast p1, Landroid/telephony/gsm/GsmCellLocation;
 
@@ -419,18 +373,15 @@
 
     move-result v2
 
-    .line 318
     .restart local v2    # "curLac":I
     if-eqz v1, :cond_0
 
     if-eqz v2, :cond_0
 
-    .line 319
     const/4 v10, 0x1
 
     goto :goto_0
 
-    .line 322
     .end local v1    # "curCid":I
     .end local v2    # "curLac":I
     .restart local p1    # "cl":Landroid/telephony/CellLocation;
@@ -441,7 +392,6 @@
 
     move-object v11, p1
 
-    .line 324
     check-cast v11, Landroid/telephony/cdma/CdmaCellLocation;
 
     invoke-virtual {v11}, Landroid/telephony/cdma/CdmaCellLocation;->getBaseStationId()I
@@ -451,14 +401,12 @@
     .restart local v0    # "curBid":I
     move-object v11, p1
 
-    .line 325
     check-cast v11, Landroid/telephony/cdma/CdmaCellLocation;
 
     invoke-virtual {v11}, Landroid/telephony/cdma/CdmaCellLocation;->getNetworkId()I
 
     move-result v3
 
-    .line 326
     .restart local v3    # "curNid":I
     check-cast p1, Landroid/telephony/cdma/CdmaCellLocation;
 
@@ -467,7 +415,6 @@
 
     move-result v4
 
-    .line 328
     .restart local v4    # "curSid":I
     if-eqz v0, :cond_0
 
@@ -475,7 +422,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 329
     const/4 v10, 0x1
 
     goto :goto_0
@@ -490,21 +436,17 @@
 
     const/4 v2, 0x0
 
-    .line 411
     new-array v0, v3, [B
 
-    .line 413
     .local v0, "dataPacket":[B
     int-to-byte v1, p1
 
     aput-byte v1, v0, v2
 
-    .line 414
     const/4 v1, 0x1
 
     aput-byte v2, v0, v1
 
-    .line 416
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/SensorHubCommManager;->getInstance()Lcom/samsung/android/contextaware/utilbundle/SensorHubCommManager;
 
     move-result-object v1
@@ -515,10 +457,8 @@
 
     invoke-virtual {v1, v0, v2}, Lcom/samsung/android/contextaware/utilbundle/SensorHubCommManager;->sendCmdToSensorHub([B[B)I
 
-    .line 420
     return-void
 
-    .line 416
     nop
 
     :array_0
@@ -532,20 +472,16 @@
     .locals 15
 
     .prologue
-    .line 422
     const/16 v12, 0xe
 
     new-array v2, v12, [B
 
-    .line 423
     .local v2, "dataPacket":[B
     const/4 v8, 0x4
 
-    .line 424
     .local v8, "size":I
     const/4 v10, 0x0
 
-    .line 427
     .local v10, "toSendData":Z
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/CaCurrentUtcTimeManager;->getInstance()Lcom/samsung/android/contextaware/utilbundle/CaCurrentUtcTimeManager;
 
@@ -555,7 +491,6 @@
 
     move-result-object v11
 
-    .line 429
     .local v11, "utcTime":[I
     const/4 v12, 0x0
 
@@ -567,7 +502,6 @@
 
     aput-byte v13, v2, v12
 
-    .line 430
     const/4 v12, 0x1
 
     const/4 v13, 0x1
@@ -578,7 +512,6 @@
 
     aput-byte v13, v2, v12
 
-    .line 431
     const/4 v12, 0x2
 
     const/4 v13, 0x2
@@ -589,21 +522,18 @@
 
     aput-byte v13, v2, v12
 
-    .line 433
     iget-object v12, p0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->mCellLocation:Landroid/telephony/CellLocation;
 
     instance-of v12, v12, Landroid/telephony/gsm/GsmCellLocation;
 
     if-eqz v12, :cond_2
 
-    .line 434
     const/4 v12, 0x3
 
     const/4 v13, 0x0
 
     aput-byte v13, v2, v12
 
-    .line 436
     iget-object v12, p0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->mCellLocation:Landroid/telephony/CellLocation;
 
     check-cast v12, Landroid/telephony/gsm/GsmCellLocation;
@@ -612,7 +542,6 @@
 
     move-result v1
 
-    .line 437
     .local v1, "cid":I
     iget-object v12, p0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->mCellLocation:Landroid/telephony/CellLocation;
 
@@ -622,15 +551,12 @@
 
     move-result v3
 
-    .line 438
     .local v3, "lac":I
     const/4 v4, 0x0
 
-    .line 439
     .local v4, "mcc":I
     const/4 v5, 0x0
 
-    .line 441
     .local v5, "mnc":I
     const/4 v12, 0x4
 
@@ -644,7 +570,6 @@
 
     invoke-static {v12, v13, v2, v8, v14}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 442
     const/4 v12, 0x2
 
     invoke-static {v3, v12}, Lcom/samsung/android/contextaware/utilbundle/CaConvertUtil;->intToByteArr(II)[B
@@ -659,7 +584,6 @@
 
     invoke-static {v12, v13, v2, v8, v14}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 443
     const/4 v12, 0x0
 
     const/4 v13, 0x2
@@ -676,7 +600,6 @@
 
     invoke-static {v12, v13, v2, v8, v14}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 444
     const/4 v12, 0x0
 
     const/4 v13, 0x2
@@ -693,10 +616,8 @@
 
     invoke-static {v12, v13, v2, v8, v14}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 446
     const/4 v10, 0x1
 
-    .line 464
     .end local v1    # "cid":I
     .end local v3    # "lac":I
     .end local v4    # "mcc":I
@@ -707,7 +628,6 @@
 
     if-ne v10, v12, :cond_1
 
-    .line 465
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/SensorHubCommManager;->getInstance()Lcom/samsung/android/contextaware/utilbundle/SensorHubCommManager;
 
     move-result-object v12
@@ -720,11 +640,9 @@
 
     invoke-virtual {v12, v2, v13}, Lcom/samsung/android/contextaware/utilbundle/SensorHubCommManager;->sendCmdToSensorHub([B[B)I
 
-    .line 469
     :cond_1
     return-void
 
-    .line 448
     :cond_2
     iget-object v12, p0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->mCellLocation:Landroid/telephony/CellLocation;
 
@@ -732,14 +650,12 @@
 
     if-eqz v12, :cond_0
 
-    .line 449
     const/4 v12, 0x3
 
     const/4 v13, 0x1
 
     aput-byte v13, v2, v12
 
-    .line 451
     iget-object v12, p0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->mCellLocation:Landroid/telephony/CellLocation;
 
     check-cast v12, Landroid/telephony/cdma/CdmaCellLocation;
@@ -748,7 +664,6 @@
 
     move-result v0
 
-    .line 452
     .local v0, "baseStationId":I
     iget-object v12, p0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->mCellLocation:Landroid/telephony/CellLocation;
 
@@ -758,7 +673,6 @@
 
     move-result v6
 
-    .line 453
     .local v6, "networkId":I
     iget-object v12, p0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->mCellLocation:Landroid/telephony/CellLocation;
 
@@ -768,11 +682,9 @@
 
     move-result v9
 
-    .line 454
     .local v9, "systemId":I
     const/4 v7, 0x0
 
-    .line 456
     .local v7, "padding":I
     const/4 v12, 0x2
 
@@ -786,7 +698,6 @@
 
     invoke-static {v12, v13, v2, v8, v14}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 457
     const/4 v12, 0x2
 
     invoke-static {v6, v12}, Lcom/samsung/android/contextaware/utilbundle/CaConvertUtil;->intToByteArr(II)[B
@@ -801,7 +712,6 @@
 
     invoke-static {v12, v13, v2, v8, v14}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 458
     const/4 v12, 0x2
 
     invoke-static {v9, v12}, Lcom/samsung/android/contextaware/utilbundle/CaConvertUtil;->intToByteArr(II)[B
@@ -816,7 +726,6 @@
 
     invoke-static {v12, v13, v2, v8, v14}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 459
     const/4 v12, 0x0
 
     const/4 v13, 0x4
@@ -833,12 +742,10 @@
 
     invoke-static {v12, v13, v2, v8, v14}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 461
     const/4 v10, 0x1
 
     goto :goto_0
 
-    .line 465
     nop
 
     :array_0
@@ -855,21 +762,17 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 103
     if-nez p1, :cond_0
 
-    .line 104
     const-string v0, "Context is null"
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 124
     :goto_0
     return-void
 
-    .line 108
     :cond_0
-    const-string/jumbo v0, "phone"
+    const-string v0, "phone"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -879,19 +782,16 @@
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
-    .line 111
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     if-nez v0, :cond_1
 
-    .line 112
-    const-string/jumbo v0, "mTelephonyManager is null"
+    const-string v0, "mTelephonyManager is null"
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 116
     :cond_1
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
@@ -908,12 +808,10 @@
     .locals 3
 
     .prologue
-    .line 134
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     if-eqz v0, :cond_0
 
-    .line 135
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     iget-object v1, p0, Lcom/samsung/android/contextaware/utilbundle/CaTelephonyManager;->mPhoneStateListener:Landroid/telephony/PhoneStateListener;
@@ -922,7 +820,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/telephony/TelephonyManager;->listen(Landroid/telephony/PhoneStateListener;I)V
 
-    .line 142
     :cond_0
     return-void
 .end method

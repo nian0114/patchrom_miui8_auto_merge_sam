@@ -54,22 +54,18 @@
     .param p2, "id"    # I
 
     .prologue
-    .line 834
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 65
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/sec/clipboard/data/file/FileManager;->mConnectFileSystem:Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;
 
-    .line 66
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/sec/clipboard/data/file/FileManager;->mDeleteFileList:Ljava/util/ArrayList;
 
-    .line 836
     return-void
 .end method
 
@@ -80,32 +76,26 @@
     .param p3, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 74
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 65
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/sec/clipboard/data/file/FileManager;->mConnectFileSystem:Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;
 
-    .line 66
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/sec/clipboard/data/file/FileManager;->mDeleteFileList:Ljava/util/ArrayList;
 
-    .line 75
     iput-object p3, p0, Landroid/sec/clipboard/data/file/FileManager;->mContext:Landroid/content/Context;
 
-    .line 77
     new-instance v0, Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;
 
     invoke-direct {v0, p0, p1}, Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;-><init>(Landroid/sec/clipboard/data/file/FileManager;Ljava/io/File;)V
 
     iput-object v0, p0, Landroid/sec/clipboard/data/file/FileManager;->mConnectFileSystem:Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;
 
-    .line 78
     iget-object v0, p0, Landroid/sec/clipboard/data/file/FileManager;->mConnectFileSystem:Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;
 
     invoke-virtual {v0}, Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;->load()Ljava/util/ArrayList;
@@ -114,13 +104,10 @@
 
     iput-object v0, p0, Landroid/sec/clipboard/data/file/FileManager;->mDataList:Ljava/util/ArrayList;
 
-    .line 79
     iput p2, p0, Landroid/sec/clipboard/data/file/FileManager;->mHandleID:I
 
-    .line 80
     invoke-virtual {p0}, Landroid/sec/clipboard/data/file/FileManager;->updateList()V
 
-    .line 81
     return-void
 .end method
 
@@ -132,22 +119,18 @@
     .param p4, "id"    # I
 
     .prologue
-    .line 819
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 65
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/sec/clipboard/data/file/FileManager;->mConnectFileSystem:Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;
 
-    .line 66
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/sec/clipboard/data/file/FileManager;->mDeleteFileList:Ljava/util/ArrayList;
 
-    .line 821
     return-void
 .end method
 
@@ -160,22 +143,18 @@
     .param p5, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 824
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 65
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/sec/clipboard/data/file/FileManager;->mConnectFileSystem:Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;
 
-    .line 66
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/sec/clipboard/data/file/FileManager;->mDeleteFileList:Ljava/util/ArrayList;
 
-    .line 826
     return-void
 .end method
 
@@ -184,7 +163,6 @@
     .param p0, "x0"    # Landroid/sec/clipboard/data/file/FileManager;
 
     .prologue
-    .line 61
     invoke-direct {p0}, Landroid/sec/clipboard/data/file/FileManager;->updateCategory()V
 
     return-void
@@ -195,7 +173,6 @@
     .param p0, "x0"    # Landroid/sec/clipboard/data/file/FileManager;
 
     .prologue
-    .line 61
     iget-object v0, p0, Landroid/sec/clipboard/data/file/FileManager;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -206,7 +183,6 @@
     .param p0, "x0"    # Landroid/sec/clipboard/data/file/FileManager;
 
     .prologue
-    .line 61
     iget-object v0, p0, Landroid/sec/clipboard/data/file/FileManager;->mDeleteFileList:Ljava/util/ArrayList;
 
     return-object v0
@@ -218,7 +194,6 @@
     .param p1, "x1"    # Ljava/io/File;
 
     .prologue
-    .line 61
     invoke-direct {p0, p1}, Landroid/sec/clipboard/data/file/FileManager;->deleteDirectoryContent(Ljava/io/File;)Z
 
     move-result v0
@@ -230,14 +205,12 @@
     .locals 4
 
     .prologue
-    .line 792
     const-string v0, "Clipboard.FileManager"
 
     const-string v1, "clearDeleteList"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 793
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
@@ -250,7 +223,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 814
     return-void
 .end method
 
@@ -259,19 +231,16 @@
     .param p1, "dir"    # Ljava/io/File;
 
     .prologue
-    .line 159
     invoke-virtual {p1}, Ljava/io/File;->isDirectory()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 160
     invoke-virtual {p1}, Ljava/io/File;->list()[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 161
     .local v0, "children":[Ljava/lang/String;
     const/4 v1, 0x0
 
@@ -281,7 +250,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 162
     new-instance v2, Ljava/io/File;
 
     aget-object v3, v0, v1
@@ -290,18 +258,15 @@
 
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
-    .line 161
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 164
     :cond_0
     invoke-virtual {p1}, Ljava/io/File;->delete()Z
 
     move-result v2
 
-    .line 166
     .end local v0    # "children":[Ljava/lang/String;
     .end local v1    # "i":I
     :goto_1
@@ -317,7 +282,6 @@
     .locals 3
 
     .prologue
-    .line 123
     iget v0, p0, Landroid/sec/clipboard/data/file/FileManager;->mHandleID:I
 
     const/16 v1, 0x44c
@@ -330,7 +294,6 @@
 
     if-gt v0, v1, :cond_2
 
-    .line 124
     sget-boolean v0, Landroid/sec/clipboard/data/ClipboardConstants;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -361,7 +324,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 125
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -395,12 +357,10 @@
 
     invoke-static {v0, v1}, Landroid/os/SELinux;->restorecon_with_category(Ljava/lang/String;I)Z
 
-    .line 133
     :cond_1
     :goto_0
     return-void
 
-    .line 126
     :cond_2
     iget v0, p0, Landroid/sec/clipboard/data/file/FileManager;->mHandleID:I
 
@@ -408,7 +368,6 @@
 
     if-ne v0, v1, :cond_4
 
-    .line 127
     sget-boolean v0, Landroid/sec/clipboard/data/ClipboardConstants;->DEBUG:Z
 
     if-eqz v0, :cond_3
@@ -437,7 +396,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 128
     :cond_3
     new-instance v0, Ljava/io/File;
 
@@ -471,7 +429,6 @@
 
     goto :goto_0
 
-    .line 129
     :cond_4
     iget v0, p0, Landroid/sec/clipboard/data/file/FileManager;->mHandleID:I
 
@@ -485,7 +442,6 @@
 
     if-gt v0, v1, :cond_1
 
-    .line 130
     sget-boolean v0, Landroid/sec/clipboard/data/ClipboardConstants;->DEBUG:Z
 
     if-eqz v0, :cond_5
@@ -514,7 +470,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 131
     :cond_5
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -554,7 +509,6 @@
     .param p1, "format"    # I
 
     .prologue
-    .line 831
     return-void
 .end method
 
@@ -564,12 +518,10 @@
     .param p2, "element"    # Landroid/sec/clipboard/data/ClipboardData;
 
     .prologue
-    .line 145
     sget-boolean v1, Landroid/sec/clipboard/data/ClipboardConstants;->DEBUG:Z
 
     if-eqz v1, :cond_0
 
-    .line 146
     const-string v1, "Clipboard.FileManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -594,7 +546,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 148
     :cond_0
     iget-object v1, p0, Landroid/sec/clipboard/data/file/FileManager;->mConnectFileSystem:Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;
 
@@ -602,7 +553,6 @@
 
     move-result-object v0
 
-    .line 150
     .local v0, "wrap":Landroid/sec/clipboard/data/file/WrapFileClipData;
     iget-object v1, p0, Landroid/sec/clipboard/data/file/FileManager;->mConnectFileSystem:Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;
 
@@ -612,20 +562,16 @@
 
     if-eqz v1, :cond_1
 
-    .line 151
     iget-object v1, p0, Landroid/sec/clipboard/data/file/FileManager;->mDataList:Ljava/util/ArrayList;
 
     invoke-virtual {v1, p1, v0}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 152
     iget-object v1, p0, Landroid/sec/clipboard/data/file/FileManager;->mConnectFileSystem:Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;
 
     invoke-virtual {v1}, Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;->update()V
 
-    .line 153
     const/4 v1, 0x1
 
-    .line 155
     :goto_0
     return v1
 
@@ -640,14 +586,12 @@
     .param p1, "element"    # Landroid/sec/clipboard/data/ClipboardData;
 
     .prologue
-    .line 136
     iget-object v1, p0, Landroid/sec/clipboard/data/file/FileManager;->mConnectFileSystem:Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;
 
     invoke-virtual {v1, p1}, Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;->createData(Landroid/sec/clipboard/data/ClipboardData;)Landroid/sec/clipboard/data/file/WrapFileClipData;
 
     move-result-object v0
 
-    .line 137
     .local v0, "wrap":Landroid/sec/clipboard/data/file/WrapFileClipData;
     iget-object v1, p0, Landroid/sec/clipboard/data/file/FileManager;->mDataList:Ljava/util/ArrayList;
 
@@ -657,15 +601,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 138
     iget-object v1, p0, Landroid/sec/clipboard/data/file/FileManager;->mConnectFileSystem:Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;
 
     invoke-virtual {v1}, Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;->update()V
 
-    .line 139
     const/4 v1, 0x1
 
-    .line 141
     :goto_0
     return v1
 
@@ -679,17 +620,14 @@
     .locals 1
 
     .prologue
-    .line 287
     iget-object v0, p0, Landroid/sec/clipboard/data/file/FileManager;->mConnectFileSystem:Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;
 
     invoke-virtual {v0}, Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;->allDelete()V
 
-    .line 288
     iget-object v0, p0, Landroid/sec/clipboard/data/file/FileManager;->mDataList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 289
     return-void
 .end method
 
@@ -698,7 +636,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 306
     if-ltz p1, :cond_0
 
     invoke-virtual {p0}, Landroid/sec/clipboard/data/file/FileManager;->size()I
@@ -707,7 +644,6 @@
 
     if-ge p1, v0, :cond_0
 
-    .line 307
     iget-object v0, p0, Landroid/sec/clipboard/data/file/FileManager;->mDataList:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -720,7 +656,6 @@
 
     move-result-object v0
 
-    .line 309
     :goto_0
     return-object v0
 
@@ -734,7 +669,6 @@
     .locals 1
 
     .prologue
-    .line 84
     iget v0, p0, Landroid/sec/clipboard/data/file/FileManager;->mHandleID:I
 
     return v0
@@ -754,12 +688,10 @@
     .end annotation
 
     .prologue
-    .line 217
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 218
     .local v2, "realDataList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/sec/clipboard/data/ClipboardData;>;"
     iget-object v3, p0, Landroid/sec/clipboard/data/file/FileManager;->mDataList:Ljava/util/ArrayList;
 
@@ -782,7 +714,6 @@
 
     check-cast v0, Landroid/sec/clipboard/data/file/WrapFileClipData;
 
-    .line 219
     .local v0, "data":Landroid/sec/clipboard/data/file/WrapFileClipData;
     invoke-virtual {v0, p1}, Landroid/sec/clipboard/data/file/WrapFileClipData;->isDeletedUser(I)Z
 
@@ -790,7 +721,6 @@
 
     if-nez v3, :cond_0
 
-    .line 220
     invoke-virtual {v0}, Landroid/sec/clipboard/data/file/WrapFileClipData;->getClipData()Landroid/sec/clipboard/data/ClipboardData;
 
     move-result-object v3
@@ -799,7 +729,6 @@
 
     goto :goto_0
 
-    .line 223
     .end local v0    # "data":Landroid/sec/clipboard/data/file/WrapFileClipData;
     :cond_1
     return-object v2
@@ -819,12 +748,10 @@
     .end annotation
 
     .prologue
-    .line 227
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 228
     .local v2, "realDataList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/sec/clipboard/data/file/WrapFileClipData;>;"
     iget-object v3, p0, Landroid/sec/clipboard/data/file/FileManager;->mDataList:Ljava/util/ArrayList;
 
@@ -847,7 +774,6 @@
 
     check-cast v0, Landroid/sec/clipboard/data/file/WrapFileClipData;
 
-    .line 229
     .local v0, "data":Landroid/sec/clipboard/data/file/WrapFileClipData;
     invoke-virtual {v0, p1}, Landroid/sec/clipboard/data/file/WrapFileClipData;->isDeletedUser(I)Z
 
@@ -855,12 +781,10 @@
 
     if-nez v3, :cond_0
 
-    .line 230
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 233
     .end local v0    # "data":Landroid/sec/clipboard/data/file/WrapFileClipData;
     :cond_1
     return-object v2
@@ -871,7 +795,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 313
     if-ltz p1, :cond_0
 
     invoke-virtual {p0}, Landroid/sec/clipboard/data/file/FileManager;->size()I
@@ -880,7 +803,6 @@
 
     if-ge p1, v0, :cond_0
 
-    .line 314
     iget-object v0, p0, Landroid/sec/clipboard/data/file/FileManager;->mDataList:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -889,7 +811,6 @@
 
     check-cast v0, Landroid/sec/clipboard/data/file/WrapFileClipData;
 
-    .line 316
     :goto_0
     return-object v0
 
@@ -904,7 +825,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 213
     iget-object v0, p0, Landroid/sec/clipboard/data/file/FileManager;->mDataList:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -915,7 +835,6 @@
 
     invoke-virtual {v0}, Landroid/sec/clipboard/data/file/WrapFileClipData;->reAddForKnox()V
 
-    .line 214
     return-void
 .end method
 
@@ -923,25 +842,21 @@
     .locals 2
 
     .prologue
-    .line 89
     sget-boolean v0, Landroid/sec/clipboard/data/ClipboardConstants;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 90
     const-string v0, "Clipboard.FileManager"
 
-    const-string/jumbo v1, "refresh() - reload the mDataList "
+    const-string v1, "refresh() - reload the mDataList "
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 93
     :cond_0
     iget-object v0, p0, Landroid/sec/clipboard/data/file/FileManager;->mConnectFileSystem:Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;
 
     if-eqz v0, :cond_1
 
-    .line 94
     iget-object v0, p0, Landroid/sec/clipboard/data/file/FileManager;->mConnectFileSystem:Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;
 
     invoke-virtual {v0}, Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;->load()Ljava/util/ArrayList;
@@ -950,7 +865,6 @@
 
     iput-object v0, p0, Landroid/sec/clipboard/data/file/FileManager;->mDataList:Ljava/util/ArrayList;
 
-    .line 96
     :cond_1
     return-void
 .end method
@@ -960,10 +874,8 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 258
     const/4 v1, 0x0
 
-    .line 259
     .local v1, "wrap":Landroid/sec/clipboard/data/file/WrapFileClipData;
     iget-object v2, p0, Landroid/sec/clipboard/data/file/FileManager;->mDataList:Ljava/util/ArrayList;
 
@@ -974,27 +886,22 @@
     .end local v1    # "wrap":Landroid/sec/clipboard/data/file/WrapFileClipData;
     check-cast v1, Landroid/sec/clipboard/data/file/WrapFileClipData;
 
-    .line 261
     .restart local v1    # "wrap":Landroid/sec/clipboard/data/file/WrapFileClipData;
     if-eqz v1, :cond_0
 
-    .line 262
     invoke-virtual {v1}, Landroid/sec/clipboard/data/file/WrapFileClipData;->getDir()Ljava/io/File;
 
     move-result-object v0
 
-    .line 263
     .local v0, "dir":Ljava/io/File;
     if-eqz v0, :cond_0
 
-    .line 264
     invoke-direct {p0, v0}, Landroid/sec/clipboard/data/file/FileManager;->deleteDirectoryContent(Ljava/io/File;)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 265
     const-string v2, "Clipboard.FileManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1017,20 +924,16 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 269
     .end local v0    # "dir":Ljava/io/File;
     :cond_0
     iget-object v2, p0, Landroid/sec/clipboard/data/file/FileManager;->mConnectFileSystem:Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;
 
     invoke-virtual {v2}, Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;->update()V
 
-    .line 271
     if-nez v1, :cond_1
 
-    .line 272
     const/4 v2, 0x0
 
-    .line 274
     :goto_0
     return-object v2
 
@@ -1049,28 +952,22 @@
     .param p3, "index"    # I
 
     .prologue
-    .line 237
     if-eqz p1, :cond_1
 
-    .line 238
     invoke-virtual {p0, p3}, Landroid/sec/clipboard/data/file/FileManager;->remove(I)Landroid/sec/clipboard/data/ClipboardData;
 
     move-result-object v3
 
-    .line 253
     :cond_0
     :goto_0
     return-object v3
 
-    .line 240
     :cond_1
     const/4 v3, 0x0
 
-    .line 241
     .local v3, "retData":Landroid/sec/clipboard/data/ClipboardData;
     const/4 v1, 0x0
 
-    .line 242
     .local v1, "realIndex":I
     iget-object v5, p0, Landroid/sec/clipboard/data/file/FileManager;->mDataList:Ljava/util/ArrayList;
 
@@ -1093,7 +990,6 @@
 
     check-cast v4, Landroid/sec/clipboard/data/file/WrapFileClipData;
 
-    .line 243
     .local v4, "wrap":Landroid/sec/clipboard/data/file/WrapFileClipData;
     invoke-virtual {v4, p2}, Landroid/sec/clipboard/data/file/WrapFileClipData;->isDeletedUser(I)Z
 
@@ -1101,14 +997,12 @@
 
     if-nez v5, :cond_2
 
-    .line 244
     add-int/lit8 v2, v1, 0x1
 
     .end local v1    # "realIndex":I
     .local v2, "realIndex":I
     if-ne p3, v1, :cond_3
 
-    .line 245
     const-string v5, "Clipboard.FileManager"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -1131,22 +1025,18 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 246
     invoke-virtual {v4, p2}, Landroid/sec/clipboard/data/file/WrapFileClipData;->addDeletedUserList(I)V
 
-    .line 247
     invoke-virtual {v4}, Landroid/sec/clipboard/data/file/WrapFileClipData;->getClipData()Landroid/sec/clipboard/data/ClipboardData;
 
     move-result-object v3
 
-    .line 248
     iget-object v5, p0, Landroid/sec/clipboard/data/file/FileManager;->mConnectFileSystem:Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;
 
     invoke-virtual {v5}, Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;->update()V
 
     move v1, v2
 
-    .line 249
     .end local v2    # "realIndex":I
     .restart local v1    # "realIndex":I
     goto :goto_0
@@ -1166,7 +1056,6 @@
     .param p1, "clip"    # Landroid/sec/clipboard/data/ClipboardData;
 
     .prologue
-    .line 279
     iget-object v0, p0, Landroid/sec/clipboard/data/file/FileManager;->mDataList:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
@@ -1175,15 +1064,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 280
     iget-object v0, p0, Landroid/sec/clipboard/data/file/FileManager;->mConnectFileSystem:Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;
 
     invoke-virtual {v0}, Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;->update()V
 
-    .line 281
     const/4 v0, 0x1
 
-    .line 283
     :goto_0
     return v0
 
@@ -1199,21 +1085,16 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 170
     const/4 v0, 0x0
 
-    .line 171
     .local v0, "bRes":Z
     if-eqz p1, :cond_2
 
-    .line 172
     const/4 v1, 0x0
 
-    .line 173
     .local v1, "clipboardData":Landroid/sec/clipboard/data/ClipboardData;
     const/4 v7, 0x0
 
-    .line 174
     .local v7, "wrap":Landroid/sec/clipboard/data/file/WrapFileClipData;
     iget-object v8, p0, Landroid/sec/clipboard/data/file/FileManager;->mDataList:Ljava/util/ArrayList;
 
@@ -1223,7 +1104,6 @@
 
     add-int/lit8 v3, v8, -0x1
 
-    .line 176
     .local v3, "dataListSize":I
     move v5, v3
 
@@ -1231,7 +1111,6 @@
     :goto_0
     if-ltz v5, :cond_4
 
-    .line 177
     iget-object v8, p0, Landroid/sec/clipboard/data/file/FileManager;->mDataList:Ljava/util/ArrayList;
 
     invoke-virtual {v8, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1241,13 +1120,11 @@
     .end local v7    # "wrap":Landroid/sec/clipboard/data/file/WrapFileClipData;
     check-cast v7, Landroid/sec/clipboard/data/file/WrapFileClipData;
 
-    .line 178
     .restart local v7    # "wrap":Landroid/sec/clipboard/data/file/WrapFileClipData;
     invoke-virtual {v7}, Landroid/sec/clipboard/data/file/WrapFileClipData;->getClipData()Landroid/sec/clipboard/data/ClipboardData;
 
     move-result-object v1
 
-    .line 179
     if-eqz v1, :cond_1
 
     invoke-virtual {v1}, Landroid/sec/clipboard/data/ClipboardData;->GetProtectState()Z
@@ -1256,7 +1133,6 @@
 
     if-nez v8, :cond_1
 
-    .line 180
     iget-object v8, p0, Landroid/sec/clipboard/data/file/FileManager;->mDataList:Ljava/util/ArrayList;
 
     invoke-virtual {v8, v7}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
@@ -1265,16 +1141,13 @@
 
     if-eqz v8, :cond_1
 
-    .line 181
     invoke-virtual {v7}, Landroid/sec/clipboard/data/file/WrapFileClipData;->getDir()Ljava/io/File;
 
     move-result-object v4
 
-    .line 182
     .local v4, "dir":Ljava/io/File;
     if-nez v4, :cond_0
 
-    .line 183
     invoke-virtual {v7}, Landroid/sec/clipboard/data/file/WrapFileClipData;->getFile()Ljava/io/File;
 
     move-result-object v8
@@ -1283,28 +1156,23 @@
 
     move-result-object v4
 
-    .line 185
     :cond_0
     if-eqz v4, :cond_1
 
-    .line 186
     invoke-static {}, Landroid/sec/clipboard/util/FileHelper;->getInstance()Landroid/sec/clipboard/util/FileHelper;
 
     move-result-object v8
 
     invoke-virtual {v8, v4}, Landroid/sec/clipboard/util/FileHelper;->delete(Ljava/io/File;)V
 
-    .line 187
     const/4 v0, 0x1
 
-    .line 176
     .end local v4    # "dir":Ljava/io/File;
     :cond_1
     add-int/lit8 v5, v5, -0x1
 
     goto :goto_0
 
-    .line 193
     .end local v1    # "clipboardData":Landroid/sec/clipboard/data/ClipboardData;
     .end local v3    # "dataListSize":I
     .end local v5    # "i":I
@@ -1331,7 +1199,6 @@
 
     check-cast v2, Landroid/sec/clipboard/data/file/WrapFileClipData;
 
-    .line 194
     .local v2, "data":Landroid/sec/clipboard/data/file/WrapFileClipData;
     invoke-virtual {v2}, Landroid/sec/clipboard/data/file/WrapFileClipData;->getClipData()Landroid/sec/clipboard/data/ClipboardData;
 
@@ -1343,26 +1210,21 @@
 
     if-nez v8, :cond_3
 
-    .line 195
     invoke-virtual {v2, p2}, Landroid/sec/clipboard/data/file/WrapFileClipData;->addDeletedUserList(I)V
 
-    .line 196
     const/4 v0, 0x1
 
     goto :goto_1
 
-    .line 200
     .end local v2    # "data":Landroid/sec/clipboard/data/file/WrapFileClipData;
     .end local v6    # "i$":Ljava/util/Iterator;
     :cond_4
     if-eqz v0, :cond_5
 
-    .line 201
     iget-object v8, p0, Landroid/sec/clipboard/data/file/FileManager;->mConnectFileSystem:Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;
 
     invoke-virtual {v8}, Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;->update()V
 
-    .line 203
     :cond_5
     return v0
 .end method
@@ -1371,22 +1233,18 @@
     .locals 1
 
     .prologue
-    .line 99
     iget-object v0, p0, Landroid/sec/clipboard/data/file/FileManager;->mConnectFileSystem:Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;
 
     if-eqz v0, :cond_0
 
-    .line 100
     iget-object v0, p0, Landroid/sec/clipboard/data/file/FileManager;->mConnectFileSystem:Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;
 
     invoke-virtual {v0}, Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;->removeDB()V
 
-    .line 101
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/sec/clipboard/data/file/FileManager;->mConnectFileSystem:Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;
 
-    .line 103
     :cond_0
     return-void
 .end method
@@ -1396,7 +1254,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 207
     iget-object v2, p0, Landroid/sec/clipboard/data/file/FileManager;->mDataList:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1417,13 +1274,11 @@
 
     check-cast v0, Landroid/sec/clipboard/data/file/WrapFileClipData;
 
-    .line 208
     .local v0, "data":Landroid/sec/clipboard/data/file/WrapFileClipData;
     invoke-virtual {v0, p1}, Landroid/sec/clipboard/data/file/WrapFileClipData;->resetOwnerClips(I)V
 
     goto :goto_0
 
-    .line 210
     .end local v0    # "data":Landroid/sec/clipboard/data/file/WrapFileClipData;
     :cond_0
     return-void
@@ -1435,7 +1290,6 @@
     .param p2, "element"    # Landroid/sec/clipboard/data/ClipboardData;
 
     .prologue
-    .line 107
     iget-object v1, p0, Landroid/sec/clipboard/data/file/FileManager;->mDataList:Ljava/util/ArrayList;
 
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1444,18 +1298,15 @@
 
     check-cast v0, Landroid/sec/clipboard/data/file/WrapFileClipData;
 
-    .line 108
     .local v0, "wrap":Landroid/sec/clipboard/data/file/WrapFileClipData;
     invoke-virtual {v0, p2}, Landroid/sec/clipboard/data/file/WrapFileClipData;->setClipData(Landroid/sec/clipboard/data/ClipboardData;)V
 
-    .line 109
     invoke-virtual {p2}, Landroid/sec/clipboard/data/ClipboardData;->GetProtectState()Z
 
     move-result v1
 
     invoke-virtual {v0, v1}, Landroid/sec/clipboard/data/file/WrapFileClipData;->setProtectState(Z)V
 
-    .line 110
     iget-object v1, p0, Landroid/sec/clipboard/data/file/FileManager;->mDataList:Ljava/util/ArrayList;
 
     invoke-virtual {v1, p1, v0}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
@@ -1465,25 +1316,20 @@
     .end local v0    # "wrap":Landroid/sec/clipboard/data/file/WrapFileClipData;
     check-cast v0, Landroid/sec/clipboard/data/file/WrapFileClipData;
 
-    .line 111
     .restart local v0    # "wrap":Landroid/sec/clipboard/data/file/WrapFileClipData;
     if-eqz v0, :cond_0
 
-    .line 112
     iget-object v1, p0, Landroid/sec/clipboard/data/file/FileManager;->mConnectFileSystem:Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;
 
     invoke-virtual {v1}, Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;->update()V
 
-    .line 115
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 116
     invoke-virtual {v0}, Landroid/sec/clipboard/data/file/WrapFileClipData;->getClipData()Landroid/sec/clipboard/data/ClipboardData;
 
     move-result-object v1
 
-    .line 118
     :goto_0
     return-object v1
 
@@ -1498,10 +1344,8 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 296
     const/4 v1, 0x0
 
-    .line 297
     .local v1, "sharedSize":I
     iget-object v3, p0, Landroid/sec/clipboard/data/file/FileManager;->mDataList:Ljava/util/ArrayList;
 
@@ -1524,7 +1368,6 @@
 
     check-cast v2, Landroid/sec/clipboard/data/file/WrapFileClipData;
 
-    .line 298
     .local v2, "wrapData":Landroid/sec/clipboard/data/file/WrapFileClipData;
     invoke-virtual {v2, p1}, Landroid/sec/clipboard/data/file/WrapFileClipData;->isDeletedUser(I)Z
 
@@ -1532,12 +1375,10 @@
 
     if-nez v3, :cond_0
 
-    .line 299
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 302
     .end local v2    # "wrapData":Landroid/sec/clipboard/data/file/WrapFileClipData;
     :cond_1
     return v1
@@ -1547,7 +1388,6 @@
     .locals 1
 
     .prologue
-    .line 292
     iget-object v0, p0, Landroid/sec/clipboard/data/file/FileManager;->mDataList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -1561,10 +1401,8 @@
     .locals 16
 
     .prologue
-    .line 724
     const/4 v9, 0x0
 
-    .line 725
     .local v9, "updated":Z
     move-object/from16 v0, p0
 
@@ -1572,22 +1410,17 @@
 
     invoke-virtual {v12}, Ljava/util/ArrayList;->clear()V
 
-    .line 726
     const/4 v4, 0x0
 
-    .line 727
     .local v4, "dir":Ljava/io/File;
     const-wide/16 v10, 0x0
 
-    .line 729
     .local v10, "timestamp":J
     const/4 v2, 0x0
 
-    .line 730
     .local v2, "clipboard":Landroid/sec/clipboard/data/ClipboardData;
     const/4 v3, 0x0
 
-    .line 731
     .local v3, "data":Landroid/sec/clipboard/data/file/WrapFileClipData;
     :try_start_0
     move-object/from16 v0, p0
@@ -1598,7 +1431,6 @@
 
     move-result v8
 
-    .line 732
     .local v8, "listSize":I
     const/4 v7, 0x0
 
@@ -1606,7 +1438,6 @@
     :goto_0
     if-ge v7, v8, :cond_6
 
-    .line 733
     move-object/from16 v0, p0
 
     iget-object v12, v0, Landroid/sec/clipboard/data/file/FileManager;->mDataList:Ljava/util/ArrayList;
@@ -1621,28 +1452,22 @@
 
     move-object v3, v0
 
-    .line 734
     if-eqz v3, :cond_2
 
-    .line 735
     invoke-virtual {v3}, Landroid/sec/clipboard/data/file/WrapFileClipData;->getClipData()Landroid/sec/clipboard/data/ClipboardData;
 
     move-result-object v2
 
-    .line 736
     if-eqz v2, :cond_5
 
-    .line 737
     invoke-virtual {v3}, Landroid/sec/clipboard/data/file/WrapFileClipData;->getDir()Ljava/io/File;
 
     move-result-object v4
 
-    .line 738
     instance-of v12, v2, Landroid/sec/clipboard/data/list/ClipboardDataHTMLFragment;
 
     if-eqz v12, :cond_1
 
-    .line 739
     new-instance v6, Landroid/sec/clipboard/data/list/ClipboardDataHtml;
 
     move-object v0, v2
@@ -1653,7 +1478,6 @@
 
     invoke-direct {v6, v12}, Landroid/sec/clipboard/data/list/ClipboardDataHtml;-><init>(Landroid/sec/clipboard/data/list/ClipboardDataHTMLFragment;)V
 
-    .line 740
     .local v6, "html":Landroid/sec/clipboard/data/list/ClipboardDataHtml;
     const-wide/16 v12, 0x0
 
@@ -1661,26 +1485,21 @@
 
     if-nez v12, :cond_0
 
-    .line 741
     invoke-virtual {v2}, Landroid/sec/clipboard/data/ClipboardData;->getTimestamp()J
 
     move-result-wide v10
 
-    .line 743
     :cond_0
     invoke-virtual {v6, v10, v11}, Landroid/sec/clipboard/data/list/ClipboardDataHtml;->setTimestamp(J)V
 
-    .line 744
     invoke-virtual {v3, v6}, Landroid/sec/clipboard/data/file/WrapFileClipData;->setClipData(Landroid/sec/clipboard/data/ClipboardData;)V
 
-    .line 745
     move-object/from16 v0, p0
 
     iget-object v12, v0, Landroid/sec/clipboard/data/file/FileManager;->mDeleteFileList:Ljava/util/ArrayList;
 
     invoke-virtual {v12, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 746
     move-object/from16 v0, p0
 
     iget-object v12, v0, Landroid/sec/clipboard/data/file/FileManager;->mConnectFileSystem:Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;
@@ -1689,18 +1508,14 @@
 
     invoke-virtual {v12, v3, v13}, Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;->save(Landroid/sec/clipboard/data/file/WrapFileClipData;Z)Z
 
-    .line 747
     const-wide/32 v12, 0x186a0
 
     sub-long/2addr v10, v12
 
-    .line 748
     move-object v2, v6
 
-    .line 749
     const/4 v9, 0x1
 
-    .line 752
     .end local v6    # "html":Landroid/sec/clipboard/data/list/ClipboardDataHtml;
     :cond_1
     invoke-virtual {v2}, Landroid/sec/clipboard/data/ClipboardData;->isValidData()Z
@@ -1709,34 +1524,29 @@
 
     if-nez v12, :cond_3
 
-    .line 753
     move-object/from16 v0, p0
 
     iget-object v12, v0, Landroid/sec/clipboard/data/file/FileManager;->mDeleteFileList:Ljava/util/ArrayList;
 
     invoke-virtual {v12, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 754
     move-object/from16 v0, p0
 
     iget-object v12, v0, Landroid/sec/clipboard/data/file/FileManager;->mDataList:Ljava/util/ArrayList;
 
     invoke-virtual {v12, v7}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 755
     add-int/lit8 v7, v7, -0x1
 
-    .line 756
     add-int/lit8 v8, v8, -0x1
 
-    .line 757
     const-string v12, "Clipboard.FileManager"
 
     new-instance v13, Ljava/lang/StringBuilder;
 
     invoke-direct {v13}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v14, "updateList invalid data : "
+    const-string v14, "updateList invalid data : "
 
     invoke-virtual {v13, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1770,17 +1580,14 @@
 
     invoke-static {v12, v13}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 758
     const/4 v9, 0x1
 
-    .line 732
     :cond_2
     :goto_1
     add-int/lit8 v7, v7, 0x1
 
     goto/16 :goto_0
 
-    .line 759
     :cond_3
     invoke-virtual {v2}, Landroid/sec/clipboard/data/ClipboardData;->getStateToSave()Z
 
@@ -1788,42 +1595,36 @@
 
     if-eqz v12, :cond_2
 
-    .line 760
     const-wide/16 v12, 0x0
 
     cmp-long v12, v10, v12
 
     if-nez v12, :cond_4
 
-    .line 761
     invoke-virtual {v2}, Landroid/sec/clipboard/data/ClipboardData;->getTimestamp()J
 
     move-result-wide v10
 
-    .line 763
     :cond_4
     invoke-virtual {v2, v10, v11}, Landroid/sec/clipboard/data/ClipboardData;->setTimestamp(J)V
 
-    .line 764
     const-wide/32 v12, 0x186a0
 
     sub-long/2addr v10, v12
 
-    .line 765
     move-object/from16 v0, p0
 
     iget-object v12, v0, Landroid/sec/clipboard/data/file/FileManager;->mDeleteFileList:Ljava/util/ArrayList;
 
     invoke-virtual {v12, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 766
     const-string v12, "Clipboard.FileManager"
 
     new-instance v13, Ljava/lang/StringBuilder;
 
     invoke-direct {v13}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v14, "updateList timestamp : "
+    const-string v14, "updateList timestamp : "
 
     invoke-virtual {v13, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1843,7 +1644,6 @@
 
     invoke-static {v12, v13}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 767
     move-object/from16 v0, p0
 
     iget-object v12, v0, Landroid/sec/clipboard/data/file/FileManager;->mConnectFileSystem:Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;
@@ -1852,12 +1652,10 @@
 
     invoke-virtual {v12, v3, v13}, Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;->save(Landroid/sec/clipboard/data/file/WrapFileClipData;Z)Z
 
-    .line 768
     const/4 v9, 0x1
 
     goto :goto_1
 
-    .line 771
     :cond_5
     move-object/from16 v0, p0
 
@@ -1865,62 +1663,50 @@
 
     invoke-virtual {v12, v7}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 772
     add-int/lit8 v7, v7, -0x1
 
-    .line 773
     add-int/lit8 v8, v8, -0x1
 
-    .line 774
     const-string v12, "Clipboard.FileManager"
 
-    const-string/jumbo v13, "updateList null"
+    const-string v13, "updateList null"
 
     invoke-static {v12, v13}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 775
     const/4 v9, 0x1
 
     goto :goto_1
 
-    .line 779
     .end local v7    # "i":I
     .end local v8    # "listSize":I
     :catch_0
     move-exception v5
 
-    .line 780
     .local v5, "e":Ljava/lang/Exception;
     invoke-virtual {v5}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 781
     const/4 v9, 0x1
 
-    .line 783
     .end local v5    # "e":Ljava/lang/Exception;
     :cond_6
     if-eqz v9, :cond_7
 
-    .line 784
     const-string v12, "Clipboard.FileManager"
 
-    const-string/jumbo v13, "updateList update!"
+    const-string v13, "updateList update!"
 
     invoke-static {v12, v13}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 785
     move-object/from16 v0, p0
 
     iget-object v12, v0, Landroid/sec/clipboard/data/file/FileManager;->mConnectFileSystem:Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;
 
     invoke-virtual {v12}, Landroid/sec/clipboard/data/file/FileManager$ConnectFileSystem;->updateForced()V
 
-    .line 787
     invoke-direct/range {p0 .. p0}, Landroid/sec/clipboard/data/file/FileManager;->clearDeleteList()V
 
-    .line 789
     :cond_7
     return-void
 .end method

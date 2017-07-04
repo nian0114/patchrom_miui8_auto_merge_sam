@@ -23,10 +23,8 @@
     .locals 1
 
     .prologue
-    .line 3290
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3293
     new-instance v0, Lcom/android/internal/widget/LockPatternUtils$verifyCardCallback$1;
 
     invoke-direct {v0, p0}, Lcom/android/internal/widget/LockPatternUtils$verifyCardCallback$1;-><init>(Lcom/android/internal/widget/LockPatternUtils$verifyCardCallback;)V
@@ -41,7 +39,6 @@
     .param p1, "x0"    # Lcom/android/internal/widget/LockPatternUtils$1;
 
     .prologue
-    .line 3290
     invoke-direct {p0}, Lcom/android/internal/widget/LockPatternUtils$verifyCardCallback;-><init>()V
 
     return-void

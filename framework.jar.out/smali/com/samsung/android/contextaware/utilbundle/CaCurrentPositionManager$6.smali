@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 812
     iput-object p1, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager$6;->this$0:Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 818
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager$6;->this$0:Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;
 
     # getter for: Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->LocRequestSource:I
@@ -52,19 +50,16 @@
 
     if-lez v0, :cond_0
 
-    .line 819
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager$6;->this$0:Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;
 
     # invokes: Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->unregisterGpsListener()V
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->access$700(Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;)V
 
-    .line 821
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager$6;->this$0:Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;
 
     # invokes: Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->unregisterWpsListener()V
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->access$800(Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;)V
 
-    .line 823
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager$6;->this$0:Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;
 
@@ -77,12 +72,10 @@
 
     if-lez v0, :cond_1
 
-    .line 824
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager$6;->this$0:Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;
 
     invoke-virtual {v0}, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->removeCurrentLoc()V
 
-    .line 825
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager$6;->this$0:Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;
 
     # getter for: Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mBrReceiver:Landroid/content/BroadcastReceiver;
@@ -92,7 +85,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 826
     sget-object v0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager$6;->this$0:Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;
@@ -104,7 +96,6 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 831
     :cond_1
     iget-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager$6;->this$0:Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;
 
@@ -113,6 +104,5 @@
     # setter for: Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->LocRequestSource:I
     invoke-static {v0, v1}, Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;->access$602(Lcom/samsung/android/contextaware/utilbundle/CaCurrentPositionManager;I)I
 
-    .line 832
     return-void
 .end method

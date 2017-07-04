@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 1149
     invoke-direct {p0}, Landroid/app/SystemServiceRegistry$CachedServiceFetcher;-><init>()V
 
     return-void
@@ -41,20 +40,17 @@
     .param p1, "ctx"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 1152
-    const-string/jumbo v2, "mDNIe"
+    const-string v2, "mDNIe"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 1153
     .local v0, "b":Landroid/os/IBinder;
     invoke-static {v0}, Lcom/samsung/android/mdnie/IMdnieManager$Stub;->asInterface(Landroid/os/IBinder;)Lcom/samsung/android/mdnie/IMdnieManager;
 
     move-result-object v1
 
-    .line 1154
     .local v1, "service":Lcom/samsung/android/mdnie/IMdnieManager;
     new-instance v2, Lcom/samsung/android/mdnie/MdnieManager;
 
@@ -68,7 +64,6 @@
     .param p1, "x0"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 1149
     invoke-virtual {p0, p1}, Landroid/app/SystemServiceRegistry$94;->createService(Landroid/app/ContextImpl;)Lcom/samsung/android/mdnie/MdnieManager;
 
     move-result-object v0

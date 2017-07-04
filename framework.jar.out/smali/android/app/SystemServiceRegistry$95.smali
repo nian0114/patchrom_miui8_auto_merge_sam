@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 1160
     invoke-direct {p0}, Landroid/app/SystemServiceRegistry$CachedServiceFetcher;-><init>()V
 
     return-void
@@ -41,20 +40,17 @@
     .param p1, "ctx"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 1163
     const-string v2, "AAS"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 1164
     .local v0, "b":Landroid/os/IBinder;
     invoke-static {v0}, Lcom/samsung/android/allaroundsensing/IAASManager$Stub;->asInterface(Landroid/os/IBinder;)Lcom/samsung/android/allaroundsensing/IAASManager;
 
     move-result-object v1
 
-    .line 1165
     .local v1, "service":Lcom/samsung/android/allaroundsensing/IAASManager;
     new-instance v2, Lcom/samsung/android/allaroundsensing/AASManager;
 
@@ -68,7 +64,6 @@
     .param p1, "x0"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 1160
     invoke-virtual {p0, p1}, Landroid/app/SystemServiceRegistry$95;->createService(Landroid/app/ContextImpl;)Lcom/samsung/android/allaroundsensing/AASManager;
 
     move-result-object v0

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 3524
     iput-object p1, p0, Landroid/app/Activity$FeatureContextMenuListener;->this$0:Landroid/app/Activity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Landroid/app/Activity$1;
 
     .prologue
-    .line 3524
     invoke-direct {p0, p1}, Landroid/app/Activity$FeatureContextMenuListener;-><init>(Landroid/app/Activity;)V
 
     return-void
@@ -55,19 +53,16 @@
     .param p3, "menuInfo"    # Landroid/view/ContextMenu$ContextMenuInfo;
 
     .prologue
-    .line 3534
     const-string v0, "Activity"
 
-    const-string/jumbo v1, "onCreateContextMenu dispatchCreateContextMenu"
+    const-string v1, "onCreateContextMenu dispatchCreateContextMenu"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3535
     iget-object v0, p0, Landroid/app/Activity$FeatureContextMenuListener;->this$0:Landroid/app/Activity;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/app/Activity;->onCreateContextMenu(Landroid/view/ContextMenu;Landroid/view/View;Landroid/view/ContextMenu$ContextMenuInfo;)V
 
-    .line 3536
     iget-object v0, p0, Landroid/app/Activity$FeatureContextMenuListener;->this$0:Landroid/app/Activity;
 
     # getter for: Landroid/app/Activity;->mInjectionManager:Landroid/app/im/InjectionManager;
@@ -77,7 +72,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 3537
     iget-object v0, p0, Landroid/app/Activity$FeatureContextMenuListener;->this$0:Landroid/app/Activity;
 
     # getter for: Landroid/app/Activity;->mInjectionManager:Landroid/app/im/InjectionManager;
@@ -97,7 +91,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/app/im/InjectionManager;->dispatchCreateContextMenu(Ljava/lang/Object;Landroid/view/ContextMenu;Landroid/view/View;Landroid/view/ContextMenu$ContextMenuInfo;Z)V
 
-    .line 3539
     :cond_0
     return-void
 .end method

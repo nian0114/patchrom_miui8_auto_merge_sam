@@ -28,7 +28,6 @@
     .locals 1
 
     .prologue
-    .line 3800
     iput-object p1, p0, Landroid/widget/AbsListView$PerformClick;->this$0:Landroid/widget/AbsListView;
 
     const/4 v0, 0x0
@@ -44,7 +43,6 @@
     .param p2, "x1"    # Landroid/widget/AbsListView$1;
 
     .prologue
-    .line 3800
     invoke-direct {p0, p1}, Landroid/widget/AbsListView$PerformClick;-><init>(Landroid/widget/AbsListView;)V
 
     return-void
@@ -60,7 +58,6 @@
 
     const/4 v10, -0x1
 
-    .line 3807
     iget-object v6, p0, Landroid/widget/AbsListView$PerformClick;->this$0:Landroid/widget/AbsListView;
 
     # getter for: Landroid/widget/AbsListView;->mForcedClick:Z
@@ -76,30 +73,24 @@
 
     if-eqz v6, :cond_1
 
-    .line 3850
     :cond_0
     :goto_0
     return-void
 
-    .line 3809
     :cond_1
     iget-object v6, p0, Landroid/widget/AbsListView$PerformClick;->this$0:Landroid/widget/AbsListView;
 
     iget-object v0, v6, Landroid/widget/AbsListView;->mAdapter:Landroid/widget/ListAdapter;
 
-    .line 3810
     .local v0, "adapter":Landroid/widget/ListAdapter;
     iget v4, p0, Landroid/widget/AbsListView$PerformClick;->mClickMotionPosition:I
 
-    .line 3811
     .local v4, "motionPosition":I
     const/4 v3, 0x0
 
-    .line 3812
     .local v3, "handledNotifykeyPress":Z
     const/4 v2, 0x0
 
-    .line 3813
     .local v2, "handledNotifyMultiSelect":Z
     if-eqz v0, :cond_0
 
@@ -123,7 +114,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 3816
     iget-object v6, p0, Landroid/widget/AbsListView$PerformClick;->this$0:Landroid/widget/AbsListView;
 
     iget-object v7, p0, Landroid/widget/AbsListView$PerformClick;->this$0:Landroid/widget/AbsListView;
@@ -136,11 +126,9 @@
 
     move-result-object v5
 
-    .line 3819
     .local v5, "view":Landroid/view/View;
     if-eqz v5, :cond_0
 
-    .line 3821
     :try_start_0
     iget-object v6, p0, Landroid/widget/AbsListView$PerformClick;->this$0:Landroid/widget/AbsListView;
 
@@ -150,7 +138,6 @@
 
     invoke-virtual {v6, v5, v4, v8, v9}, Landroid/widget/AbsListView;->performItemClick(Landroid/view/View;IJ)Z
 
-    .line 3823
     iget-object v6, p0, Landroid/widget/AbsListView$PerformClick;->this$0:Landroid/widget/AbsListView;
 
     # getter for: Landroid/widget/AbsListView;->mIsShiftkeyPressed:Z
@@ -169,7 +156,6 @@
 
     if-eqz v6, :cond_3
 
-    .line 3824
     :cond_2
     iget-object v6, p0, Landroid/widget/AbsListView$PerformClick;->this$0:Landroid/widget/AbsListView;
 
@@ -181,7 +167,6 @@
 
     move-result v3
 
-    .line 3829
     :cond_3
     iget-object v6, p0, Landroid/widget/AbsListView$PerformClick;->this$0:Landroid/widget/AbsListView;
 
@@ -208,7 +193,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 3831
     iget-object v6, p0, Landroid/widget/AbsListView$PerformClick;->this$0:Landroid/widget/AbsListView;
 
     # getter for: Landroid/widget/AbsListView;->mIsCtrlkeyPressed:Z
@@ -218,7 +202,6 @@
 
     if-ne v6, v11, :cond_5
 
-    .line 3832
     iget-object v6, p0, Landroid/widget/AbsListView$PerformClick;->this$0:Landroid/widget/AbsListView;
 
     const/4 v7, -0x1
@@ -230,17 +213,14 @@
 
     goto :goto_0
 
-    .line 3845
     :catch_0
     move-exception v1
 
-    .line 3846
     .local v1, "e":Ljava/lang/IndexOutOfBoundsException;
     invoke-virtual {v1}, Ljava/lang/IndexOutOfBoundsException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 3833
     .end local v1    # "e":Ljava/lang/IndexOutOfBoundsException;
     :cond_5
     :try_start_1
@@ -253,12 +233,10 @@
 
     if-ne v6, v11, :cond_0
 
-    .line 3834
     iget-object v6, p0, Landroid/widget/AbsListView$PerformClick;->this$0:Landroid/widget/AbsListView;
 
     invoke-virtual {v6}, Landroid/widget/AbsListView;->resetPressItemListArray()V
 
-    .line 3835
     iget-object v6, p0, Landroid/widget/AbsListView$PerformClick;->this$0:Landroid/widget/AbsListView;
 
     # getter for: Landroid/widget/AbsListView;->mFirstPressedPoint:I
@@ -268,7 +246,6 @@
 
     if-ne v6, v10, :cond_6
 
-    .line 3836
     iget-object v6, p0, Landroid/widget/AbsListView$PerformClick;->this$0:Landroid/widget/AbsListView;
 
     const/4 v7, -0x1
@@ -276,7 +253,6 @@
     # invokes: Landroid/widget/AbsListView;->addToPressItemListArray(II)V
     invoke-static {v6, v4, v7}, Landroid/widget/AbsListView;->access$1000(Landroid/widget/AbsListView;II)V
 
-    .line 3837
     iget-object v6, p0, Landroid/widget/AbsListView$PerformClick;->this$0:Landroid/widget/AbsListView;
 
     # setter for: Landroid/widget/AbsListView;->mFirstPressedPoint:I
@@ -284,7 +260,6 @@
 
     goto/16 :goto_0
 
-    .line 3839
     :cond_6
     iget-object v6, p0, Landroid/widget/AbsListView$PerformClick;->this$0:Landroid/widget/AbsListView;
 

@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 1034
     invoke-direct {p0}, Landroid/app/SystemServiceRegistry$CachedServiceFetcher;-><init>()V
 
     return-void
@@ -41,14 +40,12 @@
     .param p1, "ctx"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 1037
     const-string v1, "CocktailBarService"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 1038
     .local v0, "b":Landroid/os/IBinder;
     new-instance v1, Lcom/samsung/android/cocktailbar/CocktailBarManager;
 
@@ -66,7 +63,6 @@
     .param p1, "x0"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 1034
     invoke-virtual {p0, p1}, Landroid/app/SystemServiceRegistry$85;->createService(Landroid/app/ContextImpl;)Lcom/samsung/android/cocktailbar/CocktailBarManager;
 
     move-result-object v0

@@ -26,10 +26,8 @@
     .locals 3
 
     .prologue
-    .line 258
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 259
     const/4 v0, 0x4
 
     new-array v0, v0, [Ljava/lang/String;
@@ -42,7 +40,7 @@
 
     const/4 v1, 0x1
 
-    const-string/jumbo v2, "png"
+    const-string v2, "png"
 
     aput-object v2, v0, v1
 
@@ -68,7 +66,6 @@
     .param p1, "x0"    # Landroid/sec/clipboard/data/list/ClipboardDataUri$1;
 
     .prologue
-    .line 258
     invoke-direct {p0}, Landroid/sec/clipboard/data/list/ClipboardDataUri$ImageFileFilter;-><init>()V
 
     return-void
@@ -83,15 +80,12 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 266
     if-nez p1, :cond_1
 
-    .line 274
     :cond_0
     :goto_0
     return v4
 
-    .line 269
     :cond_1
     iget-object v0, p0, Landroid/sec/clipboard/data/list/ClipboardDataUri$ImageFileFilter;->extensions:[Ljava/lang/String;
 
@@ -107,7 +101,6 @@
 
     aget-object v1, v0, v2
 
-    .line 270
     .local v1, "extension":Ljava/lang/String;
     invoke-virtual {p1}, Ljava/io/File;->getName()Ljava/lang/String;
 
@@ -123,12 +116,10 @@
 
     if-eqz v5, :cond_2
 
-    .line 271
     const/4 v4, 0x1
 
     goto :goto_0
 
-    .line 269
     :cond_2
     add-int/lit8 v2, v2, 0x1
 

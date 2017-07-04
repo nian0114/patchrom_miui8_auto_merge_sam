@@ -42,47 +42,36 @@
     .param p3, "limit"    # Ljava/lang/String;
 
     .prologue
-    .line 1302
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1300
     const-string v0, "0"
 
     iput-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataInfo;->ZERO:Ljava/lang/String;
 
-    .line 1303
     iput-object p1, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataInfo;->mMac:Ljava/lang/String;
 
-    .line 1304
     iput-object p2, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataInfo;->mIp:Ljava/lang/String;
 
-    .line 1305
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataInfo;->ZERO:Ljava/lang/String;
 
     iput-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataInfo;->mUsage:Ljava/lang/String;
 
-    .line 1306
     iput-object p3, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataInfo;->mLimit:Ljava/lang/String;
 
-    .line 1307
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataInfo;->ZERO:Ljava/lang/String;
 
     iput-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataInfo;->mTemp_usage:Ljava/lang/String;
 
-    .line 1308
     iput-object p3, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataInfo;->mRemain:Ljava/lang/String;
 
-    .line 1309
     const-string v0, "false"
 
     iput-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataInfo;->mAccept:Ljava/lang/String;
 
-    .line 1310
     const-string v0, "false"
 
     iput-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataInfo;->mReject:Ljava/lang/String;
 
-    .line 1311
     return-void
 .end method
 
@@ -98,39 +87,28 @@
     .param p8, "reject"    # Ljava/lang/String;
 
     .prologue
-    .line 1313
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1300
     const-string v0, "0"
 
     iput-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataInfo;->ZERO:Ljava/lang/String;
 
-    .line 1314
     iput-object p1, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataInfo;->mMac:Ljava/lang/String;
 
-    .line 1315
     iput-object p2, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataInfo;->mIp:Ljava/lang/String;
 
-    .line 1316
     iput-object p3, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataInfo;->mUsage:Ljava/lang/String;
 
-    .line 1317
     iput-object p4, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataInfo;->mLimit:Ljava/lang/String;
 
-    .line 1318
     iput-object p5, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataInfo;->mTemp_usage:Ljava/lang/String;
 
-    .line 1319
     iput-object p6, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataInfo;->mRemain:Ljava/lang/String;
 
-    .line 1320
     iput-object p7, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataInfo;->mAccept:Ljava/lang/String;
 
-    .line 1321
     iput-object p8, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataInfo;->mReject:Ljava/lang/String;
 
-    .line 1322
     return-void
 .end method
 
@@ -140,8 +118,7 @@
     .locals 2
 
     .prologue
-    .line 1343
-    const-string/jumbo v0, "true"
+    const-string v0, "true"
 
     iget-object v1, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataInfo;->mAccept:Ljava/lang/String;
 
@@ -151,10 +128,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 1344
     const/4 v0, 0x1
 
-    .line 1346
     :goto_0
     return v0
 
@@ -168,7 +143,6 @@
     .locals 1
 
     .prologue
-    .line 1328
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataInfo;->mIp:Ljava/lang/String;
 
     return-object v0
@@ -178,7 +152,6 @@
     .locals 1
 
     .prologue
-    .line 1334
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataInfo;->mLimit:Ljava/lang/String;
 
     return-object v0
@@ -188,7 +161,6 @@
     .locals 1
 
     .prologue
-    .line 1325
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataInfo;->mMac:Ljava/lang/String;
 
     return-object v0
@@ -198,8 +170,7 @@
     .locals 2
 
     .prologue
-    .line 1349
-    const-string/jumbo v0, "true"
+    const-string v0, "true"
 
     iget-object v1, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataInfo;->mReject:Ljava/lang/String;
 
@@ -209,10 +180,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 1350
     const/4 v0, 0x1
 
-    .line 1352
     :goto_0
     return v0
 
@@ -226,7 +195,6 @@
     .locals 1
 
     .prologue
-    .line 1340
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataInfo;->mRemain:Ljava/lang/String;
 
     return-object v0
@@ -236,7 +204,6 @@
     .locals 1
 
     .prologue
-    .line 1337
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataInfo;->mTemp_usage:Ljava/lang/String;
 
     return-object v0
@@ -246,7 +213,6 @@
     .locals 1
 
     .prologue
-    .line 1331
     iget-object v0, p0, Landroid/net/wifi/WifiApDatabaseHelper$WifiApDataInfo;->mUsage:Ljava/lang/String;
 
     return-object v0

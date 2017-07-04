@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1563
     iput-object p1, p0, Landroid/widget/DatePicker$DatePickerSpinnerDelegate$7;->this$0:Landroid/widget/DatePicker$DatePickerSpinnerDelegate;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,12 +42,10 @@
     .param p3, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 1565
     const/4 v1, 0x6
 
     if-ne p2, v1, :cond_2
 
-    .line 1566
     iget-object v1, p0, Landroid/widget/DatePicker$DatePickerSpinnerDelegate$7;->this$0:Landroid/widget/DatePicker$DatePickerSpinnerDelegate;
 
     iget-object v1, v1, Landroid/widget/DatePicker$DatePickerSpinnerDelegate;->mContext:Landroid/content/Context;
@@ -57,7 +54,6 @@
 
     move-result-object v0
 
-    .line 1567
     .local v0, "manager":Landroid/view/accessibility/AccessibilityManager;
     iget-object v1, p0, Landroid/widget/DatePicker$DatePickerSpinnerDelegate$7;->this$0:Landroid/widget/DatePicker$DatePickerSpinnerDelegate;
 
@@ -76,13 +72,11 @@
 
     if-eqz v1, :cond_0
 
-    .line 1568
     iget-object v1, p0, Landroid/widget/DatePicker$DatePickerSpinnerDelegate$7;->this$0:Landroid/widget/DatePicker$DatePickerSpinnerDelegate;
 
     # invokes: Landroid/widget/DatePicker$DatePickerSpinnerDelegate;->updateCalendarView()V
     invoke-static {v1}, Landroid/widget/DatePicker$DatePickerSpinnerDelegate;->access$700(Landroid/widget/DatePicker$DatePickerSpinnerDelegate;)V
 
-    .line 1569
     invoke-virtual {v0}, Landroid/view/accessibility/AccessibilityManager;->isTouchExplorationEnabled()Z
 
     move-result v1
@@ -95,13 +89,11 @@
 
     if-eqz v1, :cond_0
 
-    .line 1570
     iget-object v1, p0, Landroid/widget/DatePicker$DatePickerSpinnerDelegate$7;->this$0:Landroid/widget/DatePicker$DatePickerSpinnerDelegate;
 
     # invokes: Landroid/widget/DatePicker$DatePickerSpinnerDelegate;->updateInputState()V
     invoke-static {v1}, Landroid/widget/DatePicker$DatePickerSpinnerDelegate;->access$900(Landroid/widget/DatePicker$DatePickerSpinnerDelegate;)V
 
-    .line 1572
     :cond_0
     invoke-virtual {v0}, Landroid/view/accessibility/AccessibilityManager;->isTouchExplorationEnabled()Z
 
@@ -115,14 +107,12 @@
 
     if-nez v1, :cond_2
 
-    .line 1573
     :cond_1
     iget-object v1, p0, Landroid/widget/DatePicker$DatePickerSpinnerDelegate$7;->this$0:Landroid/widget/DatePicker$DatePickerSpinnerDelegate;
 
     # invokes: Landroid/widget/DatePicker$DatePickerSpinnerDelegate;->updateInputState()V
     invoke-static {v1}, Landroid/widget/DatePicker$DatePickerSpinnerDelegate;->access$900(Landroid/widget/DatePicker$DatePickerSpinnerDelegate;)V
 
-    .line 1575
     .end local v0    # "manager":Landroid/view/accessibility/AccessibilityManager;
     :cond_2
     const/4 v1, 0x0

@@ -50,7 +50,6 @@
     .locals 1
 
     .prologue
-    .line 315
     new-instance v0, Lcom/samsung/android/cocktailbar/CocktailInfo$1;
 
     invoke-direct {v0}, Lcom/samsung/android/cocktailbar/CocktailInfo$1;-><init>()V
@@ -68,36 +67,26 @@
 
     const/4 v1, 0x0
 
-    .line 128
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mUserId:I
 
-    .line 38
     iput v2, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mOrientation:I
 
-    .line 40
     iput v2, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mDisplayPolicy:I
 
-    .line 42
     iput v2, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mCategory:I
 
-    .line 44
     iput-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mContentView:Landroid/widget/RemoteViews;
 
-    .line 46
     iput-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mHelpView:Landroid/widget/RemoteViews;
 
-    .line 48
     iput-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mContentInfo:Landroid/os/Bundle;
 
-    .line 50
     iput-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mClassInfo:Landroid/content/ComponentName;
 
-    .line 130
     return-void
 .end method
 
@@ -107,7 +96,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 35
     iput p1, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mOrientation:I
 
     return p1
@@ -119,7 +107,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 35
     iput p1, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mDisplayPolicy:I
 
     return p1
@@ -131,7 +118,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 35
     iput p1, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mCategory:I
 
     return p1
@@ -143,7 +129,6 @@
     .param p1, "x1"    # Landroid/widget/RemoteViews;
 
     .prologue
-    .line 35
     iput-object p1, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mContentView:Landroid/widget/RemoteViews;
 
     return-object p1
@@ -155,7 +140,6 @@
     .param p1, "x1"    # Landroid/widget/RemoteViews;
 
     .prologue
-    .line 35
     iput-object p1, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mHelpView:Landroid/widget/RemoteViews;
 
     return-object p1
@@ -167,7 +151,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 35
     iput p1, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mUserId:I
 
     return p1
@@ -179,7 +162,6 @@
     .param p1, "x1"    # Landroid/os/Bundle;
 
     .prologue
-    .line 35
     iput-object p1, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mContentInfo:Landroid/os/Bundle;
 
     return-object p1
@@ -191,7 +173,6 @@
     .param p1, "x1"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 35
     iput-object p1, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mClassInfo:Landroid/content/ComponentName;
 
     return-object p1
@@ -203,7 +184,6 @@
     .locals 1
 
     .prologue
-    .line 309
     const/4 v0, 0x0
 
     return v0
@@ -213,7 +193,6 @@
     .locals 3
 
     .prologue
-    .line 249
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -270,13 +249,11 @@
 
     move-result-object v0
 
-    .line 251
     .local v0, "dumpResult":Ljava/lang/String;
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mContentView:Landroid/widget/RemoteViews;
 
     if-eqz v1, :cond_0
 
-    .line 252
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -295,13 +272,11 @@
 
     move-result-object v0
 
-    .line 254
     :cond_0
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mContentInfo:Landroid/os/Bundle;
 
     if-eqz v1, :cond_1
 
-    .line 255
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -320,13 +295,11 @@
 
     move-result-object v0
 
-    .line 257
     :cond_1
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mClassInfo:Landroid/content/ComponentName;
 
     if-eqz v1, :cond_2
 
-    .line 258
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -355,13 +328,11 @@
 
     move-result-object v0
 
-    .line 260
     :cond_2
     iget-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mHelpView:Landroid/widget/RemoteViews;
 
     if-eqz v1, :cond_3
 
-    .line 261
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -380,7 +351,6 @@
 
     move-result-object v0
 
-    .line 263
     :cond_3
     return-object v0
 .end method
@@ -389,7 +359,6 @@
     .locals 1
 
     .prologue
-    .line 154
     iget v0, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mCategory:I
 
     return v0
@@ -399,7 +368,6 @@
     .locals 1
 
     .prologue
-    .line 200
     iget-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mClassInfo:Landroid/content/ComponentName;
 
     return-object v0
@@ -409,7 +377,6 @@
     .locals 1
 
     .prologue
-    .line 191
     iget-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mContentInfo:Landroid/os/Bundle;
 
     return-object v0
@@ -419,7 +386,6 @@
     .locals 1
 
     .prologue
-    .line 173
     iget-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mContentView:Landroid/widget/RemoteViews;
 
     return-object v0
@@ -429,7 +395,6 @@
     .locals 1
 
     .prologue
-    .line 145
     iget v0, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mDisplayPolicy:I
 
     return v0
@@ -439,7 +404,6 @@
     .locals 1
 
     .prologue
-    .line 182
     iget-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mHelpView:Landroid/widget/RemoteViews;
 
     return-object v0
@@ -449,7 +413,6 @@
     .locals 1
 
     .prologue
-    .line 136
     iget v0, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mOrientation:I
 
     return v0
@@ -462,71 +425,57 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 226
     iget v0, p1, Lcom/samsung/android/cocktailbar/CocktailInfo;->mOrientation:I
 
     iput v0, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mOrientation:I
 
-    .line 227
     iget v0, p1, Lcom/samsung/android/cocktailbar/CocktailInfo;->mCategory:I
 
     iput v0, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mCategory:I
 
-    .line 228
     iget v0, p1, Lcom/samsung/android/cocktailbar/CocktailInfo;->mDisplayPolicy:I
 
     iput v0, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mDisplayPolicy:I
 
-    .line 229
     iget-object v0, p1, Lcom/samsung/android/cocktailbar/CocktailInfo;->mContentInfo:Landroid/os/Bundle;
 
     if-eqz v0, :cond_0
 
-    .line 230
     iget-object v0, p1, Lcom/samsung/android/cocktailbar/CocktailInfo;->mContentInfo:Landroid/os/Bundle;
 
     iput-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mContentInfo:Landroid/os/Bundle;
 
-    .line 231
     iput-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mContentView:Landroid/widget/RemoteViews;
 
-    .line 233
     :cond_0
     iget-object v0, p1, Lcom/samsung/android/cocktailbar/CocktailInfo;->mContentView:Landroid/widget/RemoteViews;
 
     if-eqz v0, :cond_1
 
-    .line 234
     iget-object v0, p1, Lcom/samsung/android/cocktailbar/CocktailInfo;->mContentView:Landroid/widget/RemoteViews;
 
     iput-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mContentView:Landroid/widget/RemoteViews;
 
-    .line 235
     iput-object v1, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mContentInfo:Landroid/os/Bundle;
 
-    .line 237
     :cond_1
     iget-object v0, p1, Lcom/samsung/android/cocktailbar/CocktailInfo;->mHelpView:Landroid/widget/RemoteViews;
 
     if-eqz v0, :cond_2
 
-    .line 238
     iget-object v0, p1, Lcom/samsung/android/cocktailbar/CocktailInfo;->mHelpView:Landroid/widget/RemoteViews;
 
     iput-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mHelpView:Landroid/widget/RemoteViews;
 
-    .line 240
     :cond_2
     iget-object v0, p1, Lcom/samsung/android/cocktailbar/CocktailInfo;->mClassInfo:Landroid/content/ComponentName;
 
     if-eqz v0, :cond_3
 
-    .line 241
     iget-object v0, p1, Lcom/samsung/android/cocktailbar/CocktailInfo;->mClassInfo:Landroid/content/ComponentName;
 
     iput-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mClassInfo:Landroid/content/ComponentName;
 
-    .line 243
     :cond_3
     return-void
 .end method
@@ -536,7 +485,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 294
     const-class v0, Landroid/widget/RemoteViews;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -551,7 +499,6 @@
 
     iput-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mContentView:Landroid/widget/RemoteViews;
 
-    .line 295
     const-class v0, Landroid/widget/RemoteViews;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -566,42 +513,36 @@
 
     iput-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mHelpView:Landroid/widget/RemoteViews;
 
-    .line 296
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mUserId:I
 
-    .line 297
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mOrientation:I
 
-    .line 298
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mDisplayPolicy:I
 
-    .line 299
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mCategory:I
 
-    .line 300
     invoke-virtual {p1}, Landroid/os/Parcel;->readBundle()Landroid/os/Bundle;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mContentInfo:Landroid/os/Bundle;
 
-    .line 301
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -615,10 +556,8 @@
     :goto_0
     iput-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mClassInfo:Landroid/content/ComponentName;
 
-    .line 302
     return-void
 
-    .line 301
     :cond_0
     const/4 v0, 0x0
 
@@ -630,10 +569,8 @@
     .param p1, "category"    # I
 
     .prologue
-    .line 164
     iput p1, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mCategory:I
 
-    .line 165
     return-void
 .end method
 
@@ -643,23 +580,19 @@
     .param p2, "isPartialUpdate"    # Z
 
     .prologue
-    .line 207
     if-eqz p2, :cond_0
 
     iget-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mContentView:Landroid/widget/RemoteViews;
 
     if-eqz v0, :cond_0
 
-    .line 208
     iget-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mContentView:Landroid/widget/RemoteViews;
 
     invoke-virtual {v0, p1}, Landroid/widget/RemoteViews;->mergeRemoteViews(Landroid/widget/RemoteViews;)V
 
-    .line 212
     :goto_0
     return-void
 
-    .line 210
     :cond_0
     iput-object p1, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mContentView:Landroid/widget/RemoteViews;
 
@@ -672,23 +605,19 @@
     .param p2, "isPartialUpdate"    # Z
 
     .prologue
-    .line 218
     if-eqz p2, :cond_0
 
     iget-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mHelpView:Landroid/widget/RemoteViews;
 
     if-eqz v0, :cond_0
 
-    .line 219
     iget-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mHelpView:Landroid/widget/RemoteViews;
 
     invoke-virtual {v0, p1}, Landroid/widget/RemoteViews;->mergeRemoteViews(Landroid/widget/RemoteViews;)V
 
-    .line 223
     :goto_0
     return-void
 
-    .line 221
     :cond_0
     iput-object p1, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mHelpView:Landroid/widget/RemoteViews;
 
@@ -701,61 +630,49 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 273
     iget-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mContentView:Landroid/widget/RemoteViews;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 274
     iget-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mHelpView:Landroid/widget/RemoteViews;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 275
     iget v0, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mUserId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 276
     iget v0, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mOrientation:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 277
     iget v0, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mDisplayPolicy:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 278
     iget v0, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mCategory:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 279
     iget-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mContentInfo:Landroid/os/Bundle;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
 
-    .line 280
     iget-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mClassInfo:Landroid/content/ComponentName;
 
     if-eqz v0, :cond_0
 
-    .line 281
     const/4 v0, 0x1
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 282
     iget-object v0, p0, Lcom/samsung/android/cocktailbar/CocktailInfo;->mClassInfo:Landroid/content/ComponentName;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/ComponentName;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 286
     :goto_0
     return-void
 
-    .line 284
     :cond_0
     const/4 v0, 0x0
 

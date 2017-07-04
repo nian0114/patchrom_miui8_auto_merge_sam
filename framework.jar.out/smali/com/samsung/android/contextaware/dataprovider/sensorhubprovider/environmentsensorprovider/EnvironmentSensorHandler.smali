@@ -18,10 +18,8 @@
     .locals 1
 
     .prologue
-    .line 29
     invoke-direct {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserBean;-><init>()V
 
-    .line 35
     const/16 v0, 0x3c
 
     iput v0, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/environmentsensorprovider/EnvironmentSensorHandler;->mInterval:I
@@ -33,42 +31,35 @@
     .locals 2
 
     .prologue
-    .line 46
     sget-object v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/environmentsensorprovider/EnvironmentSensorHandler;->instance:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/environmentsensorprovider/EnvironmentSensorHandler;
 
     if-nez v0, :cond_1
 
-    .line 47
     const-class v1, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/environmentsensorprovider/EnvironmentSensorHandler;
 
     monitor-enter v1
 
-    .line 48
     :try_start_0
     sget-object v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/environmentsensorprovider/EnvironmentSensorHandler;->instance:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/environmentsensorprovider/EnvironmentSensorHandler;
 
     if-nez v0, :cond_0
 
-    .line 49
     new-instance v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/environmentsensorprovider/EnvironmentSensorHandler;
 
     invoke-direct {v0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/environmentsensorprovider/EnvironmentSensorHandler;-><init>()V
 
     sput-object v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/environmentsensorprovider/EnvironmentSensorHandler;->instance:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/environmentsensorprovider/EnvironmentSensorHandler;
 
-    .line 51
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 53
     :cond_1
     sget-object v0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/environmentsensorprovider/EnvironmentSensorHandler;->instance:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/environmentsensorprovider/EnvironmentSensorHandler;
 
     return-object v0
 
-    .line 51
     :catchall_0
     move-exception v0
 
@@ -85,10 +76,8 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 132
     const/4 v4, 0x0
 
-    .line 134
     .local v4, "parserKey":Ljava/lang/String;
     invoke-static {}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProtocol$SUB_DATA_TYPE;->values()[Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProtocol$SUB_DATA_TYPE;
 
@@ -106,19 +95,16 @@
 
     aget-object v2, v0, v1
 
-    .line 135
     .local v2, "j":Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProtocol$SUB_DATA_TYPE;
     iget-byte v5, v2, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProtocol$SUB_DATA_TYPE;->value:B
 
     if-eq p1, v5, :cond_1
 
-    .line 134
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 138
     :cond_1
     invoke-virtual {v2}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProtocol$SUB_DATA_TYPE;->toString()Ljava/lang/String;
 
@@ -130,12 +116,10 @@
 
     if-eqz v5, :cond_0
 
-    .line 142
     invoke-virtual {v2}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProtocol$SUB_DATA_TYPE;->toString()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 146
     .end local v2    # "j":Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserProtocol$SUB_DATA_TYPE;
     :cond_2
     return-object v4
@@ -147,7 +131,6 @@
     .locals 1
 
     .prologue
-    .line 165
     iget v0, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/environmentsensorprovider/EnvironmentSensorHandler;->mInterval:I
 
     return v0
@@ -161,10 +144,8 @@
     .prologue
     const/4 v9, -0x1
 
-    .line 66
     move v6, p2
 
-    .line 68
     .local v6, "tmpNext":I
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserBean;->checkParserMap()Z
 
@@ -174,11 +155,9 @@
 
     move v7, v9
 
-    .line 121
     :goto_0
     return v7
 
-    .line 72
     :cond_0
     array-length v8, p1
 
@@ -190,10 +169,8 @@
 
     move v7, v9
 
-    .line 73
     goto :goto_0
 
-    .line 76
     :cond_1
     add-int/lit8 v7, v6, 0x1
 
@@ -201,7 +178,6 @@
     .local v7, "tmpNext":I
     aget-byte v2, p1, v6
 
-    .line 77
     .local v2, "loggingStatus":I
     const/4 v8, 0x2
 
@@ -211,7 +187,6 @@
 
     if-eq v2, v8, :cond_2
 
-    .line 79
     sget-object v8, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_ENVIRONMENT_LOGGING_STATE:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     invoke-virtual {v8}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->getMessage()Ljava/lang/String;
@@ -226,10 +201,8 @@
     .restart local v6    # "tmpNext":I
     move v7, v9
 
-    .line 81
     goto :goto_0
 
-    .line 84
     .end local v6    # "tmpNext":I
     .restart local v7    # "tmpNext":I
     :cond_2
@@ -247,10 +220,8 @@
     .restart local v6    # "tmpNext":I
     move v7, v9
 
-    .line 85
     goto :goto_0
 
-    .line 88
     .end local v6    # "tmpNext":I
     .restart local v7    # "tmpNext":I
     :cond_3
@@ -260,11 +231,9 @@
     .restart local v6    # "tmpNext":I
     aget-byte v3, p1, v7
 
-    .line 89
     .local v3, "packageCount":I
     if-gtz v3, :cond_4
 
-    .line 90
     sget-object v8, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_ENVIRONMENT_PACKAGE_SIZE:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     invoke-virtual {v8}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->getMessage()Ljava/lang/String;
@@ -275,10 +244,8 @@
 
     move v7, v9
 
-    .line 92
     goto :goto_0
 
-    .line 95
     :cond_4
     const/4 v0, 0x0
 
@@ -290,7 +257,6 @@
     :goto_1
     if-ge v0, v3, :cond_8
 
-    .line 96
     array-length v8, p1
 
     sub-int/2addr v8, v7
@@ -305,10 +271,8 @@
     .restart local v6    # "tmpNext":I
     move v7, v9
 
-    .line 97
     goto :goto_0
 
-    .line 100
     .end local v6    # "tmpNext":I
     .restart local v7    # "tmpNext":I
     :cond_5
@@ -318,17 +282,14 @@
     .restart local v6    # "tmpNext":I
     aget-byte v5, p1, v7
 
-    .line 102
     .local v5, "sensorType":I
     invoke-direct {p0, v5}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/environmentsensorprovider/EnvironmentSensorHandler;->getParserKey(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 103
     .local v1, "key":Ljava/lang/String;
     if-nez v1, :cond_7
 
-    .line 95
     :cond_6
     :goto_2
     add-int/lit8 v0, v0, 0x1
@@ -339,7 +300,6 @@
     .restart local v7    # "tmpNext":I
     goto :goto_1
 
-    .line 107
     .end local v7    # "tmpNext":I
     .restart local v6    # "tmpNext":I
     :cond_7
@@ -349,23 +309,19 @@
 
     if-eqz v8, :cond_6
 
-    .line 111
     invoke-super {p0, v1}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubParserBean;->getParser(Ljava/lang/String;)Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubParser;
 
     move-result-object v4
 
-    .line 112
     .local v4, "parser":Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubParser;
     if-eqz v4, :cond_6
 
     move-object v8, v4
 
-    .line 116
     check-cast v8, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/environmentsensorprovider/EnvironmentSensorProvider;
 
     invoke-virtual {v8, v2}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/environmentsensorprovider/EnvironmentSensorProvider;->setLoggingStatus(I)V
 
-    .line 118
     invoke-interface {v4, p1, v6}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubParser;->parse([BI)I
 
     move-result v6
@@ -380,7 +336,6 @@
     :cond_8
     move v6, v7
 
-    .line 121
     .end local v7    # "tmpNext":I
     .restart local v6    # "tmpNext":I
     goto :goto_0
@@ -391,9 +346,7 @@
     .param p1, "interval"    # I
 
     .prologue
-    .line 156
     iput p1, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/environmentsensorprovider/EnvironmentSensorHandler;->mInterval:I
 
-    .line 157
     return-void
 .end method

@@ -78,7 +78,6 @@
     .locals 1
 
     .prologue
-    .line 293
     new-instance v0, Landroid/content/pm/PermissionInfo$1;
 
     invoke-direct {v0}, Landroid/content/pm/PermissionInfo$1;-><init>()V
@@ -92,10 +91,8 @@
     .locals 0
 
     .prologue
-    .line 238
     invoke-direct {p0}, Landroid/content/pm/PackageItemInfo;-><init>()V
 
-    .line 239
     return-void
 .end method
 
@@ -104,35 +101,28 @@
     .param p1, "orig"    # Landroid/content/pm/PermissionInfo;
 
     .prologue
-    .line 242
     invoke-direct {p0, p1}, Landroid/content/pm/PackageItemInfo;-><init>(Landroid/content/pm/PackageItemInfo;)V
 
-    .line 243
     iget v0, p1, Landroid/content/pm/PermissionInfo;->protectionLevel:I
 
     iput v0, p0, Landroid/content/pm/PermissionInfo;->protectionLevel:I
 
-    .line 244
     iget v0, p1, Landroid/content/pm/PermissionInfo;->flags:I
 
     iput v0, p0, Landroid/content/pm/PermissionInfo;->flags:I
 
-    .line 245
     iget-object v0, p1, Landroid/content/pm/PermissionInfo;->group:Ljava/lang/String;
 
     iput-object v0, p0, Landroid/content/pm/PermissionInfo;->group:Ljava/lang/String;
 
-    .line 246
     iget v0, p1, Landroid/content/pm/PermissionInfo;->descriptionRes:I
 
     iput v0, p0, Landroid/content/pm/PermissionInfo;->descriptionRes:I
 
-    .line 247
     iget-object v0, p1, Landroid/content/pm/PermissionInfo;->nonLocalizedDescription:Ljava/lang/CharSequence;
 
     iput-object v0, p0, Landroid/content/pm/PermissionInfo;->nonLocalizedDescription:Ljava/lang/CharSequence;
 
-    .line 248
     return-void
 .end method
 
@@ -141,38 +131,32 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 304
     invoke-direct {p0, p1}, Landroid/content/pm/PackageItemInfo;-><init>(Landroid/os/Parcel;)V
 
-    .line 305
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/content/pm/PermissionInfo;->protectionLevel:I
 
-    .line 306
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/content/pm/PermissionInfo;->flags:I
 
-    .line 307
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/content/pm/PermissionInfo;->group:Ljava/lang/String;
 
-    .line 308
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/content/pm/PermissionInfo;->descriptionRes:I
 
-    .line 309
     sget-object v0, Landroid/text/TextUtils;->CHAR_SEQUENCE_CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -183,7 +167,6 @@
 
     iput-object v0, p0, Landroid/content/pm/PermissionInfo;->nonLocalizedDescription:Ljava/lang/CharSequence;
 
-    .line 310
     return-void
 .end method
 
@@ -193,7 +176,6 @@
     .param p2, "x1"    # Landroid/content/pm/PermissionInfo$1;
 
     .prologue
-    .line 28
     invoke-direct {p0, p1}, Landroid/content/pm/PermissionInfo;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -204,15 +186,12 @@
     .param p0, "level"    # I
 
     .prologue
-    .line 191
     const/4 v0, 0x3
 
     if-ne p0, v0, :cond_0
 
-    .line 192
     const/16 p0, 0x12
 
-    .line 194
     :cond_0
     return p0
 .end method
@@ -222,22 +201,18 @@
     .param p0, "level"    # I
 
     .prologue
-    .line 199
     const-string v0, "????"
 
-    .line 200
     .local v0, "protLevel":Ljava/lang/String;
     and-int/lit8 v1, p0, 0xf
 
     packed-switch v1, :pswitch_data_0
 
-    .line 214
     :goto_0
     and-int/lit8 v1, p0, 0x10
 
     if-eqz v1, :cond_0
 
-    .line 215
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -246,7 +221,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "|privileged"
+    const-string v2, "|privileged"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -256,13 +231,11 @@
 
     move-result-object v0
 
-    .line 217
     :cond_0
     and-int/lit8 v1, p0, 0x20
 
     if-eqz v1, :cond_1
 
-    .line 218
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -271,7 +244,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "|development"
+    const-string v2, "|development"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -281,13 +254,11 @@
 
     move-result-object v0
 
-    .line 220
     :cond_1
     and-int/lit8 v1, p0, 0x40
 
     if-eqz v1, :cond_2
 
-    .line 221
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -296,7 +267,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "|appop"
+    const-string v2, "|appop"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -306,13 +277,11 @@
 
     move-result-object v0
 
-    .line 223
     :cond_2
     and-int/lit16 v1, p0, 0x80
 
     if-eqz v1, :cond_3
 
-    .line 224
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -321,7 +290,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "|pre23"
+    const-string v2, "|pre23"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -331,13 +300,11 @@
 
     move-result-object v0
 
-    .line 226
     :cond_3
     and-int/lit16 v1, p0, 0x100
 
     if-eqz v1, :cond_4
 
-    .line 227
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -346,7 +313,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "|installer"
+    const-string v2, "|installer"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -356,13 +323,11 @@
 
     move-result-object v0
 
-    .line 229
     :cond_4
     and-int/lit16 v1, p0, 0x200
 
     if-eqz v1, :cond_5
 
-    .line 230
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -371,7 +336,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "|verifier"
+    const-string v2, "|verifier"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -381,13 +346,11 @@
 
     move-result-object v0
 
-    .line 232
     :cond_5
     and-int/lit16 v1, p0, 0x400
 
     if-eqz v1, :cond_6
 
-    .line 233
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -396,7 +359,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "|preinstalled"
+    const-string v2, "|preinstalled"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -406,38 +369,29 @@
 
     move-result-object v0
 
-    .line 235
     :cond_6
     return-object v0
 
-    .line 202
     :pswitch_0
     const-string v0, "dangerous"
 
-    .line 203
     goto/16 :goto_0
 
-    .line 205
     :pswitch_1
-    const-string/jumbo v0, "normal"
+    const-string v0, "normal"
 
-    .line 206
     goto/16 :goto_0
 
-    .line 208
     :pswitch_2
-    const-string/jumbo v0, "signature"
+    const-string v0, "signature"
 
-    .line 209
     goto/16 :goto_0
 
-    .line 211
     :pswitch_3
-    const-string/jumbo v0, "signatureOrSystem"
+    const-string v0, "signatureOrSystem"
 
     goto/16 :goto_0
 
-    .line 200
     nop
 
     :pswitch_data_0
@@ -455,7 +409,6 @@
     .locals 1
 
     .prologue
-    .line 281
     const/4 v0, 0x0
 
     return v0
@@ -468,26 +421,21 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 262
     iget-object v2, p0, Landroid/content/pm/PermissionInfo;->nonLocalizedDescription:Ljava/lang/CharSequence;
 
     if-eqz v2, :cond_1
 
-    .line 263
     iget-object v0, p0, Landroid/content/pm/PermissionInfo;->nonLocalizedDescription:Ljava/lang/CharSequence;
 
-    .line 271
     :cond_0
     :goto_0
     return-object v0
 
-    .line 265
     :cond_1
     iget v2, p0, Landroid/content/pm/PermissionInfo;->descriptionRes:I
 
     if-eqz v2, :cond_2
 
-    .line 266
     iget-object v2, p0, Landroid/content/pm/PermissionInfo;->packageName:Ljava/lang/String;
 
     iget v3, p0, Landroid/content/pm/PermissionInfo;->descriptionRes:I
@@ -496,7 +444,6 @@
 
     move-result-object v0
 
-    .line 267
     .local v0, "label":Ljava/lang/CharSequence;
     if-nez v0, :cond_0
 
@@ -504,7 +451,6 @@
     :cond_2
     move-object v0, v1
 
-    .line 271
     goto :goto_0
 .end method
 
@@ -512,7 +458,6 @@
     .locals 2
 
     .prologue
-    .line 275
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -547,7 +492,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -566,34 +511,27 @@
     .param p2, "parcelableFlags"    # I
 
     .prologue
-    .line 285
     invoke-super {p0, p1, p2}, Landroid/content/pm/PackageItemInfo;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 286
     iget v0, p0, Landroid/content/pm/PermissionInfo;->protectionLevel:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 287
     iget v0, p0, Landroid/content/pm/PermissionInfo;->flags:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 288
     iget-object v0, p0, Landroid/content/pm/PermissionInfo;->group:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 289
     iget v0, p0, Landroid/content/pm/PermissionInfo;->descriptionRes:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 290
     iget-object v0, p0, Landroid/content/pm/PermissionInfo;->nonLocalizedDescription:Ljava/lang/CharSequence;
 
     invoke-static {v0, p1, p2}, Landroid/text/TextUtils;->writeToParcel(Ljava/lang/CharSequence;Landroid/os/Parcel;I)V
 
-    .line 291
     return-void
 .end method

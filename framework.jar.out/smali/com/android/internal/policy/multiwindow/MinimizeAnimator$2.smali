@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 140
     iput-object p1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$2;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,16 +37,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 142
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 147
     :goto_0
     return-void
 
-    .line 144
     :pswitch_0
     iget-object v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$2;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 
@@ -60,7 +56,6 @@
 
     goto :goto_0
 
-    .line 142
     :pswitch_data_0
     .packed-switch 0x64
         :pswitch_0

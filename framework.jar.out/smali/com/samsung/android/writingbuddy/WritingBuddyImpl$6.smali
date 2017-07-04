@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 2537
     iput-object p1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$6;->this$0:Lcom/samsung/android/writingbuddy/WritingBuddyImpl;
 
     invoke-direct {p0, p2}, Landroid/os/ResultReceiver;-><init>(Landroid/os/Handler;)V
@@ -40,7 +39,6 @@
     .param p2, "resultData"    # Landroid/os/Bundle;
 
     .prologue
-    .line 2539
     iget-object v0, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$6;->this$0:Lcom/samsung/android/writingbuddy/WritingBuddyImpl;
 
     # invokes: Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->getHandler()Landroid/os/Handler;
@@ -54,6 +52,5 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 2540
     return-void
 .end method

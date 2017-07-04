@@ -44,7 +44,6 @@
 
     const/4 v3, 0x0
 
-    .line 37
     new-instance v0, Landroid/app/im/InjectionConstants$TargetType;
 
     const-string v1, "ACTIVITY"
@@ -65,7 +64,6 @@
 
     sput-object v0, Landroid/app/im/InjectionConstants$TargetType;->FRAGMENT:Landroid/app/im/InjectionConstants$TargetType;
 
-    .line 36
     const/4 v0, 0x2
 
     new-array v0, v0, [Landroid/app/im/InjectionConstants$TargetType;
@@ -95,13 +93,10 @@
     .end annotation
 
     .prologue
-    .line 38
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 39
     iput-object p3, p0, Landroid/app/im/InjectionConstants$TargetType;->text:Ljava/lang/String;
 
-    .line 40
     return-void
 .end method
 
@@ -110,7 +105,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 36
     const-class v0, Landroid/app/im/InjectionConstants$TargetType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -126,7 +120,6 @@
     .locals 1
 
     .prologue
-    .line 36
     sget-object v0, Landroid/app/im/InjectionConstants$TargetType;->$VALUES:[Landroid/app/im/InjectionConstants$TargetType;
 
     invoke-virtual {v0}, [Landroid/app/im/InjectionConstants$TargetType;->clone()Ljava/lang/Object;
@@ -144,7 +137,6 @@
     .locals 1
 
     .prologue
-    .line 44
     iget-object v0, p0, Landroid/app/im/InjectionConstants$TargetType;->text:Ljava/lang/String;
 
     return-object v0

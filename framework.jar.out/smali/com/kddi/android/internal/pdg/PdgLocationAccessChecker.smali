@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 14
     invoke-direct {p0}, Lcom/kddi/android/internal/pdg/PdgAccessChecker;-><init>()V
 
     return-void
@@ -22,7 +21,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 17
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -55,34 +53,27 @@
 
     invoke-static {v2}, Lcom/kddi/android/internal/pdg/PdgLog;->d(Ljava/lang/String;)V
 
-    .line 18
     const/4 v0, 0x1
 
-    .line 20
     .local v0, "result":Z
     if-nez p0, :cond_0
 
-    .line 21
-    const-string/jumbo v2, "parameter error: context is null."
+    const-string v2, "parameter error: context is null."
 
     invoke-static {v2}, Lcom/kddi/android/internal/pdg/PdgLog;->e(Ljava/lang/String;)V
 
-    .line 22
     const-string v2, "boolean checkPrivacy() end / return = true"
 
     invoke-static {v2}, Lcom/kddi/android/internal/pdg/PdgLog;->d(Ljava/lang/String;)V
 
-    .line 29
     :goto_0
     return v1
 
-    .line 26
     :cond_0
     invoke-static {p0, p1, v1}, Lcom/kddi/android/internal/pdg/PdgLocationAccessChecker;->checkPrivacy(Landroid/content/Context;Ljava/lang/String;I)Z
 
     move-result v0
 
-    .line 28
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -105,6 +96,5 @@
 
     move v1, v0
 
-    .line 29
     goto :goto_0
 .end method

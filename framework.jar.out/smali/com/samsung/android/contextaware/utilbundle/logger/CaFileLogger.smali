@@ -42,7 +42,6 @@
     .locals 2
 
     .prologue
-    .line 39
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -78,17 +77,14 @@
     .locals 1
 
     .prologue
-    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 42
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/contextaware/utilbundle/logger/CaFileLogger;->mFile:Ljava/util/Map;
 
-    .line 45
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -102,42 +98,35 @@
     .locals 2
 
     .prologue
-    .line 56
     sget-object v0, Lcom/samsung/android/contextaware/utilbundle/logger/CaFileLogger;->instance:Lcom/samsung/android/contextaware/utilbundle/logger/CaFileLogger;
 
     if-nez v0, :cond_1
 
-    .line 57
     const-class v1, Lcom/samsung/android/contextaware/utilbundle/logger/CaFileLogger;
 
     monitor-enter v1
 
-    .line 58
     :try_start_0
     sget-object v0, Lcom/samsung/android/contextaware/utilbundle/logger/CaFileLogger;->instance:Lcom/samsung/android/contextaware/utilbundle/logger/CaFileLogger;
 
     if-nez v0, :cond_0
 
-    .line 59
     new-instance v0, Lcom/samsung/android/contextaware/utilbundle/logger/CaFileLogger;
 
     invoke-direct {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaFileLogger;-><init>()V
 
     sput-object v0, Lcom/samsung/android/contextaware/utilbundle/logger/CaFileLogger;->instance:Lcom/samsung/android/contextaware/utilbundle/logger/CaFileLogger;
 
-    .line 61
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 63
     :cond_1
     sget-object v0, Lcom/samsung/android/contextaware/utilbundle/logger/CaFileLogger;->instance:Lcom/samsung/android/contextaware/utilbundle/logger/CaFileLogger;
 
     return-object v0
 
-    .line 61
     :catchall_0
     move-exception v0
 
@@ -160,12 +149,10 @@
     .end annotation
 
     .prologue
-    .line 255
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v2
 
-    .line 256
     .local v2, "curTime":Ljava/util/Calendar;
     const/16 v17, 0x1
 
@@ -179,7 +166,6 @@
 
     int-to-long v14, v0
 
-    .line 257
     .local v14, "curTimeYear":J
     const/16 v17, 0x2
 
@@ -195,7 +181,6 @@
 
     int-to-long v10, v0
 
-    .line 258
     .local v10, "curTimeMonth":J
     const/16 v17, 0x5
 
@@ -209,7 +194,6 @@
 
     int-to-long v4, v0
 
-    .line 259
     .local v4, "curTimeDay":J
     const/16 v17, 0xb
 
@@ -223,7 +207,6 @@
 
     int-to-long v6, v0
 
-    .line 260
     .local v6, "curTimeHour":J
     const/16 v17, 0xc
 
@@ -237,7 +220,6 @@
 
     int-to-long v8, v0
 
-    .line 261
     .local v8, "curTimeMinute":J
     const/16 v17, 0xd
 
@@ -251,7 +233,6 @@
 
     int-to-long v12, v0
 
-    .line 263
     .local v12, "curTimeSecond":J
     new-instance v17, Ljava/lang/StringBuilder;
 
@@ -341,7 +322,6 @@
 
     move-result-object v3
 
-    .line 267
     .local v3, "fileName":Ljava/lang/String;
     new-instance v17, Ljava/lang/StringBuilder;
 
@@ -367,7 +347,6 @@
 
     invoke-static/range {v17 .. v17}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->info(Ljava/lang/String;)V
 
-    .line 268
     new-instance v17, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v17 .. v17}, Ljava/lang/StringBuilder;-><init>()V
@@ -390,7 +369,6 @@
 
     invoke-static/range {v17 .. v17}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->info(Ljava/lang/String;)V
 
-    .line 270
     new-instance v16, Ljava/io/File;
 
     move-object/from16 v0, v16
@@ -399,7 +377,6 @@
 
     invoke-direct {v0, v1, v3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 272
     .local v16, "logFile":Ljava/io/File;
     invoke-virtual/range {v16 .. v16}, Ljava/io/File;->createNewFile()Z
 
@@ -407,15 +384,12 @@
 
     if-nez v17, :cond_0
 
-    .line 273
     const-string v17, "createNewFile() error"
 
     invoke-static/range {v17 .. v17}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 274
     const/16 v16, 0x0
 
-    .line 279
     .end local v16    # "logFile":Ljava/io/File;
     :cond_0
     return-object v16
@@ -427,7 +401,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 213
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -466,17 +439,14 @@
 
     move-result-object v2
 
-    .line 216
     .local v2, "path":Ljava/lang/String;
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 220
     .local v1, "logDir":Ljava/io/File;
     if-nez v1, :cond_1
 
-    .line 221
     :try_start_0
     const-string v4, "External storage directory is null"
 
@@ -484,13 +454,11 @@
 
     move-object v1, v3
 
-    .line 239
     .end local v1    # "logDir":Ljava/io/File;
     :cond_0
     :goto_0
     return-object v1
 
-    .line 224
     .restart local v1    # "logDir":Ljava/io/File;
     :cond_1
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
@@ -505,7 +473,6 @@
 
     if-nez v4, :cond_2
 
-    .line 225
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -532,10 +499,8 @@
 
     move-object v1, v3
 
-    .line 227
     goto :goto_0
 
-    .line 229
     :cond_2
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
@@ -549,7 +514,6 @@
 
     if-nez v4, :cond_0
 
-    .line 230
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -578,14 +542,11 @@
 
     move-object v1, v3
 
-    .line 232
     goto :goto_0
 
-    .line 235
     :catch_0
     move-exception v0
 
-    .line 236
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
 
@@ -604,7 +565,6 @@
     .param p2, "text"    # Ljava/lang/String;
 
     .prologue
-    .line 148
     iget-object v1, p0, Lcom/samsung/android/contextaware/utilbundle/logger/CaFileLogger;->mFile:Ljava/util/Map;
 
     invoke-interface {v1, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -621,17 +581,14 @@
 
     if-nez v1, :cond_1
 
-    .line 150
     :cond_0
     const-string v1, "This file dose not exist."
 
     invoke-static {v1}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 160
     :goto_0
     return-void
 
-    .line 155
     :cond_1
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/contextaware/utilbundle/logger/CaFileLogger;->mDataOutputStream:Ljava/util/Map;
@@ -670,11 +627,9 @@
 
     goto :goto_0
 
-    .line 157
     :catch_0
     move-exception v0
 
-    .line 158
     .local v0, "ioe":Ljava/io/IOException;
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->exception(Ljava/lang/Throwable;)V
 
@@ -692,7 +647,6 @@
     .prologue
     const/4 v2, 0x3
 
-    .line 179
     iget-object v1, p0, Lcom/samsung/android/contextaware/utilbundle/logger/CaFileLogger;->mFile:Ljava/util/Map;
 
     invoke-interface {v1, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -709,18 +663,15 @@
 
     if-nez v1, :cond_2
 
-    .line 181
     :cond_0
     const-string v1, "This file dose not exist."
 
     invoke-static {v1}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 203
     :cond_1
     :goto_0
     return-void
 
-    .line 185
     :cond_2
     if-eqz p4, :cond_1
 
@@ -734,7 +685,6 @@
 
     if-le v1, v2, :cond_1
 
-    .line 191
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/contextaware/utilbundle/logger/CaFileLogger;->mDataOutputStream:Ljava/util/Map;
 
@@ -748,7 +698,6 @@
 
     invoke-virtual {v1, v2}, Ljava/io/DataOutputStream;->writeInt(I)V
 
-    .line 192
     iget-object v1, p0, Lcom/samsung/android/contextaware/utilbundle/logger/CaFileLogger;->mDataOutputStream:Ljava/util/Map;
 
     invoke-interface {v1, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -759,7 +708,6 @@
 
     invoke-virtual {v1, p2, p3}, Ljava/io/DataOutputStream;->writeLong(J)V
 
-    .line 193
     iget-object v1, p0, Lcom/samsung/android/contextaware/utilbundle/logger/CaFileLogger;->mDataOutputStream:Ljava/util/Map;
 
     invoke-interface {v1, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -774,7 +722,6 @@
 
     invoke-virtual {v1, v2}, Ljava/io/DataOutputStream;->writeFloat(F)V
 
-    .line 194
     iget-object v1, p0, Lcom/samsung/android/contextaware/utilbundle/logger/CaFileLogger;->mDataOutputStream:Ljava/util/Map;
 
     invoke-interface {v1, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -789,7 +736,6 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/io/DataOutputStream;->writeDouble(D)V
 
-    .line 195
     iget-object v1, p0, Lcom/samsung/android/contextaware/utilbundle/logger/CaFileLogger;->mDataOutputStream:Ljava/util/Map;
 
     invoke-interface {v1, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -804,7 +750,6 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/io/DataOutputStream;->writeDouble(D)V
 
-    .line 196
     iget-object v1, p0, Lcom/samsung/android/contextaware/utilbundle/logger/CaFileLogger;->mDataOutputStream:Ljava/util/Map;
 
     invoke-interface {v1, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -819,7 +764,6 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/io/DataOutputStream;->writeDouble(D)V
 
-    .line 197
     iget-object v1, p0, Lcom/samsung/android/contextaware/utilbundle/logger/CaFileLogger;->mDataOutputStream:Ljava/util/Map;
 
     invoke-interface {v1, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -834,7 +778,6 @@
 
     invoke-virtual {v1, v2}, Ljava/io/DataOutputStream;->writeFloat(F)V
 
-    .line 198
     iget-object v1, p0, Lcom/samsung/android/contextaware/utilbundle/logger/CaFileLogger;->mDataOutputStream:Ljava/util/Map;
 
     invoke-interface {v1, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -849,7 +792,6 @@
 
     invoke-virtual {v1, v2}, Ljava/io/DataOutputStream;->writeFloat(F)V
 
-    .line 199
     iget-object v1, p0, Lcom/samsung/android/contextaware/utilbundle/logger/CaFileLogger;->mDataOutputStream:Ljava/util/Map;
 
     invoke-interface {v1, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -864,11 +806,9 @@
 
     goto/16 :goto_0
 
-    .line 200
     :catch_0
     move-exception v0
 
-    .line 201
     .local v0, "ioe":Ljava/io/IOException;
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->exception(Ljava/lang/Throwable;)V
 
@@ -882,7 +822,6 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 74
     iget-object v7, p0, Lcom/samsung/android/contextaware/utilbundle/logger/CaFileLogger;->mFile:Ljava/util/Map;
 
     invoke-interface {v7, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -899,36 +838,29 @@
 
     if-eqz v7, :cond_1
 
-    .line 76
     :cond_0
     const-string v7, "This file is created already."
 
     invoke-static {v7}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 110
     :goto_0
     return v6
 
-    .line 80
     :cond_1
     const/4 v5, 0x0
 
-    .line 81
     .local v5, "logFile":Ljava/io/File;
     const/4 v0, 0x0
 
-    .line 84
     .local v0, "dataOutputStream":Ljava/io/DataOutputStream;
     :try_start_0
     invoke-direct {p0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaFileLogger;->getLogStorageDir()Ljava/io/File;
 
     move-result-object v4
 
-    .line 85
     .local v4, "logDir":Ljava/io/File;
     if-nez v4, :cond_2
 
-    .line 86
     const-string v7, "Log directory is null"
 
     invoke-static {v7}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
@@ -939,19 +871,16 @@
 
     goto :goto_0
 
-    .line 96
     .end local v0    # "dataOutputStream":Ljava/io/DataOutputStream;
     .end local v4    # "logDir":Ljava/io/File;
     :catch_0
     move-exception v2
 
-    .line 97
     .local v2, "fnfe":Ljava/io/FileNotFoundException;
     invoke-static {v2}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->exception(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
-    .line 89
     .end local v2    # "fnfe":Ljava/io/FileNotFoundException;
     .restart local v0    # "dataOutputStream":Ljava/io/DataOutputStream;
     .restart local v4    # "logDir":Ljava/io/File;
@@ -961,10 +890,8 @@
 
     move-result-object v5
 
-    .line 90
     if-nez v5, :cond_3
 
-    .line 91
     const-string v7, "Log file is null"
 
     invoke-static {v7}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
@@ -975,19 +902,16 @@
 
     goto :goto_0
 
-    .line 99
     .end local v0    # "dataOutputStream":Ljava/io/DataOutputStream;
     .end local v4    # "logDir":Ljava/io/File;
     :catch_1
     move-exception v3
 
-    .line 100
     .local v3, "ioe":Ljava/io/IOException;
     invoke-static {v3}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->exception(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
-    .line 94
     .end local v3    # "ioe":Ljava/io/IOException;
     .restart local v0    # "dataOutputStream":Ljava/io/DataOutputStream;
     .restart local v4    # "logDir":Ljava/io/File;
@@ -1006,29 +930,24 @@
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 107
     .restart local v0    # "dataOutputStream":Ljava/io/DataOutputStream;
     iget-object v6, p0, Lcom/samsung/android/contextaware/utilbundle/logger/CaFileLogger;->mFile:Ljava/util/Map;
 
     invoke-interface {v6, p1, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 108
     iget-object v6, p0, Lcom/samsung/android/contextaware/utilbundle/logger/CaFileLogger;->mDataOutputStream:Ljava/util/Map;
 
     invoke-interface {v6, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 110
     const/4 v6, 0x1
 
     goto :goto_0
 
-    .line 102
     .end local v0    # "dataOutputStream":Ljava/io/DataOutputStream;
     .end local v4    # "logDir":Ljava/io/File;
     :catch_2
     move-exception v1
 
-    .line 103
     .local v1, "e":Ljava/lang/Exception;
     invoke-static {v1}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->exception(Ljava/lang/Throwable;)V
 
@@ -1042,7 +961,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 121
     iget-object v1, p0, Lcom/samsung/android/contextaware/utilbundle/logger/CaFileLogger;->mFile:Ljava/util/Map;
 
     invoke-interface {v1, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -1062,11 +980,9 @@
     :cond_0
     move v1, v2
 
-    .line 136
     :goto_0
     return v1
 
-    .line 127
     :cond_1
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/contextaware/utilbundle/logger/CaFileLogger;->mDataOutputStream:Ljava/util/Map;
@@ -1081,31 +997,25 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 133
     iget-object v1, p0, Lcom/samsung/android/contextaware/utilbundle/logger/CaFileLogger;->mFile:Ljava/util/Map;
 
     invoke-interface {v1, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 134
     iget-object v1, p0, Lcom/samsung/android/contextaware/utilbundle/logger/CaFileLogger;->mDataOutputStream:Ljava/util/Map;
 
     invoke-interface {v1, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 136
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 128
     :catch_0
     move-exception v0
 
-    .line 129
     .local v0, "ioe":Ljava/io/IOException;
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->exception(Ljava/lang/Throwable;)V
 
     move v1, v2
 
-    .line 130
     goto :goto_0
 .end method

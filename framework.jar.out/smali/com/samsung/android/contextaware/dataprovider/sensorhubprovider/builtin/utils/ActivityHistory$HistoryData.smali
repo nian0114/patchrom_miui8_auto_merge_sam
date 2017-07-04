@@ -33,19 +33,14 @@
 
     const/4 v0, 0x0
 
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
     iput-wide v2, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/utils/ActivityHistory$HistoryData;->timeStamp:J
 
-    .line 37
     iput v0, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/utils/ActivityHistory$HistoryData;->activityType:I
 
-    .line 38
     iput v0, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/utils/ActivityHistory$HistoryData;->accuracy:I
 
-    .line 39
     iput-wide v2, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/utils/ActivityHistory$HistoryData;->duration:J
 
     return-void
@@ -56,7 +51,6 @@
     .param p1, "x0"    # Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/utils/ActivityHistory$1;
 
     .prologue
-    .line 35
     invoke-direct {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/utils/ActivityHistory$HistoryData;-><init>()V
 
     return-void
@@ -67,7 +61,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/utils/ActivityHistory$HistoryData;
 
     .prologue
-    .line 35
     iget-wide v0, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/utils/ActivityHistory$HistoryData;->timeStamp:J
 
     return-wide v0
@@ -79,7 +72,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 35
     iput-wide p1, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/utils/ActivityHistory$HistoryData;->timeStamp:J
 
     return-wide p1
@@ -90,7 +82,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/utils/ActivityHistory$HistoryData;
 
     .prologue
-    .line 35
     iget v0, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/utils/ActivityHistory$HistoryData;->activityType:I
 
     return v0
@@ -102,7 +93,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 35
     iput p1, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/utils/ActivityHistory$HistoryData;->activityType:I
 
     return p1
@@ -113,7 +103,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/utils/ActivityHistory$HistoryData;
 
     .prologue
-    .line 35
     iget v0, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/utils/ActivityHistory$HistoryData;->accuracy:I
 
     return v0
@@ -125,7 +114,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 35
     iput p1, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/utils/ActivityHistory$HistoryData;->accuracy:I
 
     return p1
@@ -136,7 +124,6 @@
     .param p0, "x0"    # Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/utils/ActivityHistory$HistoryData;
 
     .prologue
-    .line 35
     iget-wide v0, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/utils/ActivityHistory$HistoryData;->duration:J
 
     return-wide v0
@@ -148,7 +135,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 35
     iput-wide p1, p0, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/utils/ActivityHistory$HistoryData;->duration:J
 
     return-wide p1

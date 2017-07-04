@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 58
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,18 +46,15 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 60
     new-instance v0, Lcom/samsung/android/smartclip/SmartClipRemoteRequestResult;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, v2, v2, v1}, Lcom/samsung/android/smartclip/SmartClipRemoteRequestResult;-><init>(IILandroid/os/Parcelable;)V
 
-    .line 61
     .local v0, "data":Lcom/samsung/android/smartclip/SmartClipRemoteRequestResult;
     invoke-virtual {v0, p1}, Lcom/samsung/android/smartclip/SmartClipRemoteRequestResult;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 62
     return-object v0
 .end method
 
@@ -67,7 +63,6 @@
     .param p1, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 58
     invoke-virtual {p0, p1}, Lcom/samsung/android/smartclip/SmartClipRemoteRequestResult$1;->createFromParcel(Landroid/os/Parcel;)Lcom/samsung/android/smartclip/SmartClipRemoteRequestResult;
 
     move-result-object v0
@@ -80,7 +75,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 66
     new-array v0, p1, [Lcom/samsung/android/smartclip/SmartClipRemoteRequestResult;
 
     return-object v0
@@ -91,7 +85,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 58
     invoke-virtual {p0, p1}, Lcom/samsung/android/smartclip/SmartClipRemoteRequestResult$1;->newArray(I)[Lcom/samsung/android/smartclip/SmartClipRemoteRequestResult;
 
     move-result-object v0

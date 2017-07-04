@@ -9,10 +9,8 @@
     .param p1, "manager"    # Lcom/samsung/android/contextaware/manager/ContextManager;
 
     .prologue
-    .line 39
     invoke-direct {p0, p1}, Lcom/samsung/android/contextaware/manager/fault/RestoreTransaction;-><init>(Lcom/samsung/android/contextaware/manager/ContextManager;)V
 
-    .line 40
     return-void
 .end method
 
@@ -22,7 +20,6 @@
     .locals 1
 
     .prologue
-    .line 87
     const-string v0, "REGISTER_CMD_RESTORE"
 
     return-object v0
@@ -35,20 +32,16 @@
     .param p3, "observer"    # Lcom/samsung/android/contextaware/manager/IContextObserver;
 
     .prologue
-    .line 53
     if-nez p1, :cond_1
 
-    .line 54
     const-string v0, "listener is null"
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 77
     :cond_0
     :goto_0
     return-void
 
-    .line 58
     :cond_1
     invoke-virtual {p1}, Lcom/samsung/android/contextaware/manager/ContextAwareService$Listener;->getToken()Landroid/os/IBinder;
 
@@ -56,18 +49,15 @@
 
     if-nez v0, :cond_2
 
-    .line 59
-    const-string/jumbo v0, "token is null"
+    const-string v0, "token is null"
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 63
     :cond_2
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->trace()V
 
-    .line 65
     invoke-virtual {p1}, Lcom/samsung/android/contextaware/manager/ContextAwareService$Listener;->getServices()Ljava/util/concurrent/ConcurrentHashMap;
 
     move-result-object v0
@@ -82,7 +72,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 66
     invoke-virtual {p1}, Lcom/samsung/android/contextaware/manager/ContextAwareService$Listener;->getServices()Ljava/util/concurrent/ConcurrentHashMap;
 
     move-result-object v0
@@ -93,7 +82,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 69
     :cond_3
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/manager/fault/RegisterCmdOperationRestore;->getContextManager()Lcom/samsung/android/contextaware/manager/ContextManager;
 
@@ -117,7 +105,6 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/samsung/android/contextaware/manager/ContextManager;->stop(Lcom/samsung/android/contextaware/manager/ContextAwareService$Listener;Ljava/lang/String;Lcom/samsung/android/contextaware/manager/IContextObserver;Lcom/samsung/android/contextaware/manager/fault/ICmdProcessResultObserver;I)V
 
-    .line 73
     invoke-virtual {p1}, Lcom/samsung/android/contextaware/manager/ContextAwareService$Listener;->getServices()Ljava/util/concurrent/ConcurrentHashMap;
 
     move-result-object v0
@@ -128,7 +115,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 74
     invoke-virtual {p1}, Lcom/samsung/android/contextaware/manager/ContextAwareService$Listener;->getToken()Landroid/os/IBinder;
 
     move-result-object v0
@@ -137,7 +123,6 @@
 
     invoke-interface {v0, p1, v1}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 75
     invoke-static {}, Lcom/samsung/android/contextaware/manager/ListenerListManager;->getInstance()Lcom/samsung/android/contextaware/manager/ListenerListManager;
 
     move-result-object v0

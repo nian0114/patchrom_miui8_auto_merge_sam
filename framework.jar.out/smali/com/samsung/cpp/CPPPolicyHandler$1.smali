@@ -25,7 +25,6 @@
     .param p3, "x1"    # I
 
     .prologue
-    .line 275
     iput-object p1, p0, Lcom/samsung/cpp/CPPPolicyHandler$1;->this$0:Lcom/samsung/cpp/CPPPolicyHandler;
 
     invoke-direct {p0, p2, p3}, Landroid/os/FileObserver;-><init>(Ljava/lang/String;I)V
@@ -41,7 +40,6 @@
     .param p2, "path"    # Ljava/lang/String;
 
     .prologue
-    .line 278
     monitor-enter p0
 
     :try_start_0
@@ -68,7 +66,6 @@
 
     move-result-object v0
 
-    .line 279
     .local v0, "fullPath":Ljava/lang/String;
     iget-object v3, p0, Lcom/samsung/cpp/CPPPolicyHandler$1;->this$0:Lcom/samsung/cpp/CPPPolicyHandler;
 
@@ -81,7 +78,6 @@
 
     move-result v1
 
-    .line 280
     .local v1, "isCurrentPolicy":Z
     iget-object v3, p0, Lcom/samsung/cpp/CPPPolicyHandler$1;->this$0:Lcom/samsung/cpp/CPPPolicyHandler;
 
@@ -96,22 +92,18 @@
 
     move-result v2
 
-    .line 282
     .local v2, "isCurrentPolicyList":Z
     sparse-switch p1, :sswitch_data_0
 
-    .line 296
     :cond_0
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 284
     :sswitch_0
     if-eqz v1, :cond_0
 
-    .line 285
     :try_start_1
     const-string v3, "CPPPolicyHandler"
 
@@ -149,7 +141,6 @@
 
     goto :goto_0
 
-    .line 278
     .end local v0    # "fullPath":Ljava/lang/String;
     .end local v1    # "isCurrentPolicy":Z
     .end local v2    # "isCurrentPolicyList":Z
@@ -160,14 +151,12 @@
 
     throw v3
 
-    .line 289
     .restart local v0    # "fullPath":Ljava/lang/String;
     .restart local v1    # "isCurrentPolicy":Z
     .restart local v2    # "isCurrentPolicyList":Z
     :sswitch_1
     if-eqz v1, :cond_0
 
-    .line 290
     :try_start_2
     const-string v3, "CPPPolicyHandler"
 
@@ -207,13 +196,11 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 291
     iget-object v3, p0, Lcom/samsung/cpp/CPPPolicyHandler$1;->this$0:Lcom/samsung/cpp/CPPPolicyHandler;
 
     # invokes: Lcom/samsung/cpp/CPPPolicyHandler;->setPolicy()V
     invoke-static {v3}, Lcom/samsung/cpp/CPPPolicyHandler;->access$300(Lcom/samsung/cpp/CPPPolicyHandler;)V
 
-    .line 292
     iget-object v3, p0, Lcom/samsung/cpp/CPPPolicyHandler$1;->this$0:Lcom/samsung/cpp/CPPPolicyHandler;
 
     invoke-virtual {v3}, Lcom/samsung/cpp/CPPPolicyHandler;->notifyPolicyUpdate()V
@@ -222,7 +209,6 @@
 
     goto :goto_0
 
-    .line 282
     :sswitch_data_0
     .sparse-switch
         0x8 -> :sswitch_1

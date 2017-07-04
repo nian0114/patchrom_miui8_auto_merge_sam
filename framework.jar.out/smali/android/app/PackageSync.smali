@@ -32,7 +32,6 @@
     .locals 1
 
     .prologue
-    .line 25
     new-instance v0, Landroid/app/PackageSync$1;
 
     invoke-direct {v0}, Landroid/app/PackageSync$1;-><init>()V
@@ -47,24 +46,20 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 19
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/app/PackageSync;->pkg:Ljava/lang/String;
 
-    .line 20
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/app/PackageSync;->label:Ljava/lang/String;
 
-    .line 21
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
@@ -77,7 +72,6 @@
 
     iput-boolean v0, p0, Landroid/app/PackageSync;->sanitize:Z
 
-    .line 22
     return-void
 .end method
 
@@ -88,19 +82,14 @@
     .param p3, "sanitize"    # Z
 
     .prologue
-    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 13
     iput-object p1, p0, Landroid/app/PackageSync;->pkg:Ljava/lang/String;
 
-    .line 14
     iput-object p2, p0, Landroid/app/PackageSync;->label:Ljava/lang/String;
 
-    .line 15
     iput-boolean p3, p0, Landroid/app/PackageSync;->sanitize:Z
 
-    .line 16
     return-void
 .end method
 
@@ -110,7 +99,6 @@
     .locals 1
 
     .prologue
-    .line 39
     const/4 v0, 0x0
 
     return v0
@@ -122,17 +110,14 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 44
     iget-object v0, p0, Landroid/app/PackageSync;->pkg:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 45
     iget-object v0, p0, Landroid/app/PackageSync;->label:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 46
     iget-boolean v0, p0, Landroid/app/PackageSync;->sanitize:Z
 
     if-eqz v0, :cond_0
@@ -142,10 +127,8 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 48
     return-void
 
-    .line 46
     :cond_0
     const-string v0, ""
 

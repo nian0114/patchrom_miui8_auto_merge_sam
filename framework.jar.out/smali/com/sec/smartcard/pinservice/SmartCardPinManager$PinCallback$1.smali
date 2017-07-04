@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 399
     iput-object p1, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager$PinCallback$1;->this$0:Lcom/sec/smartcard/pinservice/SmartCardPinManager$PinCallback;
 
     invoke-direct {p0}, Lcom/sec/smartcard/pinservice/ISmartCardGetPinCallback$Stub;-><init>()V
@@ -42,12 +41,10 @@
     .end annotation
 
     .prologue
-    .line 408
     iget-object v0, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager$PinCallback$1;->this$0:Lcom/sec/smartcard/pinservice/SmartCardPinManager$PinCallback;
 
     invoke-virtual {v0}, Lcom/sec/smartcard/pinservice/SmartCardPinManager$PinCallback;->onUserCancelled()V
 
-    .line 409
     return-void
 .end method
 
@@ -61,12 +58,10 @@
     .end annotation
 
     .prologue
-    .line 403
     iget-object v0, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager$PinCallback$1;->this$0:Lcom/sec/smartcard/pinservice/SmartCardPinManager$PinCallback;
 
     invoke-virtual {v0, p1}, Lcom/sec/smartcard/pinservice/SmartCardPinManager$PinCallback;->onUserEnteredPin([C)V
 
-    .line 404
     return-void
 .end method
 
@@ -80,11 +75,9 @@
     .end annotation
 
     .prologue
-    .line 413
     iget-object v0, p0, Lcom/sec/smartcard/pinservice/SmartCardPinManager$PinCallback$1;->this$0:Lcom/sec/smartcard/pinservice/SmartCardPinManager$PinCallback;
 
     invoke-virtual {v0, p1}, Lcom/sec/smartcard/pinservice/SmartCardPinManager$PinCallback;->onUserPinError(I)V
 
-    .line 414
     return-void
 .end method

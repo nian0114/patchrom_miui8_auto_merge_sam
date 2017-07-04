@@ -14,7 +14,6 @@
     .locals 0
 
     .prologue
-    .line 17
     invoke-direct {p0}, Lcom/absolute/android/logutil/LogUtil;-><init>()V
 
     return-void
@@ -26,15 +25,12 @@
     .locals 1
 
     .prologue
-    .line 28
     packed-switch p1, :pswitch_data_0
 
-    .line 47
     :goto_0
     :pswitch_0
     return-void
 
-    .line 30
     :pswitch_1
     sget-object v0, Lcom/absolute/android/logutil/LogUtilNoPS;->a:Ljava/lang/String;
 
@@ -42,7 +38,6 @@
 
     goto :goto_0
 
-    .line 39
     :pswitch_2
     sget-object v0, Lcom/absolute/android/logutil/LogUtilNoPS;->a:Ljava/lang/String;
 
@@ -50,7 +45,6 @@
 
     goto :goto_0
 
-    .line 43
     :pswitch_3
     sget-object v0, Lcom/absolute/android/logutil/LogUtilNoPS;->a:Ljava/lang/String;
 
@@ -58,7 +52,6 @@
 
     goto :goto_0
 
-    .line 46
     :pswitch_4
     sget-object v0, Lcom/absolute/android/logutil/LogUtilNoPS;->a:Ljava/lang/String;
 
@@ -66,7 +59,6 @@
 
     goto :goto_0
 
-    .line 28
     :pswitch_data_0
     .packed-switch 0x2
         :pswitch_1
@@ -81,6 +73,5 @@
     .locals 0
 
     .prologue
-    .line 24
     return-void
 .end method

@@ -11,12 +11,10 @@
     .param p3, "observable"    # Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;
 
     .prologue
-    .line 44
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0, p3}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/LibTypeProvider;-><init>(ILandroid/content/Context;Landroid/os/Looper;Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;)V
 
-    .line 45
     return-void
 .end method
 
@@ -26,13 +24,10 @@
     .locals 0
 
     .prologue
-    .line 164
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->trace()V
 
-    .line 165
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/LibTypeProvider;->clear()V
 
-    .line 166
     return-void
 .end method
 
@@ -40,13 +35,10 @@
     .locals 0
 
     .prologue
-    .line 154
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->trace()V
 
-    .line 155
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/LibTypeProvider;->disable()V
 
-    .line 156
     return-void
 .end method
 
@@ -54,13 +46,10 @@
     .locals 0
 
     .prologue
-    .line 142
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->trace()V
 
-    .line 143
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/LibTypeProvider;->enable()V
 
-    .line 144
     return-void
 .end method
 
@@ -68,7 +57,6 @@
     .locals 1
 
     .prologue
-    .line 54
     sget-object v0, Lcom/samsung/android/contextaware/ContextList$ContextType;->SENSORHUB_RUNNER_HALL_SENSOR:Lcom/samsung/android/contextaware/ContextList$ContextType;
 
     invoke-virtual {v0}, Lcom/samsung/android/contextaware/ContextList$ContextType;->getCode()Ljava/lang/String;
@@ -82,7 +70,6 @@
     .locals 3
 
     .prologue
-    .line 75
     const/4 v0, 0x3
 
     new-array v0, v0, [Ljava/lang/String;
@@ -112,7 +99,6 @@
     .locals 1
 
     .prologue
-    .line 176
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/HallSensorRunner;->checkFaultDetectionResult()Z
 
     move-result v0
@@ -123,7 +109,6 @@
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->debug(Ljava/lang/String;)V
 
-    .line 177
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/LibTypeProvider;->getFaultDetectionResult()Landroid/os/Bundle;
 
     move-result-object v0
@@ -135,7 +120,6 @@
     .locals 1
 
     .prologue
-    .line 64
     const/16 v0, 0x32
 
     return v0
@@ -145,7 +129,6 @@
     .locals 0
 
     .prologue
-    .line 120
     return-object p0
 .end method
 
@@ -153,7 +136,6 @@
     .locals 0
 
     .prologue
-    .line 131
     return-object p0
 .end method
 
@@ -163,10 +145,8 @@
     .param p2, "next"    # I
 
     .prologue
-    .line 87
     move v3, p2
 
-    .line 89
     .local v3, "tmpNext":I
     array-length v6, p1
 
@@ -176,7 +156,6 @@
 
     if-gez v6, :cond_0
 
-    .line 90
     sget-object v6, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->ERROR_PACKET_LOST:Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;
 
     invoke-virtual {v6}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/SensorHubErrors;->getMessage()Ljava/lang/String;
@@ -185,32 +164,25 @@
 
     invoke-static {v6}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->error(Ljava/lang/String;)V
 
-    .line 91
     const/4 v6, -0x1
 
-    .line 110
     :goto_0
     return v6
 
-    .line 94
     :cond_0
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/HallSensorRunner;->getContextValueNames()[Ljava/lang/String;
 
     move-result-object v2
 
-    .line 96
     .local v2, "names":[Ljava/lang/String;
     const/4 v0, 0x0
 
-    .line 97
     .local v0, "angle":S
     const/4 v5, 0x0
 
-    .line 98
     .local v5, "type":S
     const/4 v1, 0x0
 
-    .line 100
     .local v1, "intensity":S
     add-int/lit8 v4, v3, 0x1
 
@@ -234,7 +206,6 @@
 
     int-to-short v0, v6
 
-    .line 101
     add-int/lit8 v4, v3, 0x1
 
     .end local v3    # "tmpNext":I
@@ -257,7 +228,6 @@
 
     int-to-short v5, v6
 
-    .line 102
     add-int/lit8 v4, v3, 0x1
 
     .end local v3    # "tmpNext":I
@@ -280,7 +250,6 @@
 
     int-to-short v1, v6
 
-    .line 104
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/LibTypeProvider;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v6
@@ -291,7 +260,6 @@
 
     invoke-virtual {v6, v7, v0}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContext(Ljava/lang/String;S)V
 
-    .line 105
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/LibTypeProvider;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v6
@@ -302,7 +270,6 @@
 
     invoke-virtual {v6, v7, v5}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContext(Ljava/lang/String;S)V
 
-    .line 106
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/LibTypeProvider;->getContextBean()Lcom/samsung/android/contextaware/manager/ContextBean;
 
     move-result-object v6
@@ -313,11 +280,9 @@
 
     invoke-virtual {v6, v7, v1}, Lcom/samsung/android/contextaware/manager/ContextBean;->putContext(Ljava/lang/String;S)V
 
-    .line 108
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/LibTypeProvider;->notifyObserver()V
 
     move v6, v3
 
-    .line 110
     goto :goto_0
 .end method

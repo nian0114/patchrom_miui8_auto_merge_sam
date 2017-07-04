@@ -36,7 +36,6 @@
     .locals 1
 
     .prologue
-    .line 14
     new-instance v0, Landroid/os/storage/sensitive/SensitiveDataParcel$1;
 
     invoke-direct {v0}, Landroid/os/storage/sensitive/SensitiveDataParcel$1;-><init>()V
@@ -51,13 +50,10 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 44
     invoke-virtual {p0, p1}, Landroid/os/storage/sensitive/SensitiveDataParcel;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 45
     return-void
 .end method
 
@@ -67,7 +63,6 @@
     .param p2, "x1"    # Landroid/os/storage/sensitive/SensitiveDataParcel$1;
 
     .prologue
-    .line 12
     invoke-direct {p0, p1}, Landroid/os/storage/sensitive/SensitiveDataParcel;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -79,21 +74,16 @@
     .param p2, "data"    # [B
 
     .prologue
-    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 37
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/os/storage/sensitive/SensitiveDataParcel;->op:I
 
-    .line 38
     iput-object p1, p0, Landroid/os/storage/sensitive/SensitiveDataParcel;->client:Ljava/lang/String;
 
-    .line 39
     iput-object p2, p0, Landroid/os/storage/sensitive/SensitiveDataParcel;->data:[B
 
-    .line 40
     return-void
 .end method
 
@@ -103,7 +93,6 @@
     .locals 1
 
     .prologue
-    .line 50
     const/4 v0, 0x0
 
     return v0
@@ -113,7 +102,6 @@
     .locals 1
 
     .prologue
-    .line 97
     iget-object v0, p0, Landroid/os/storage/sensitive/SensitiveDataParcel;->client:Ljava/lang/String;
 
     return-object v0
@@ -123,7 +111,6 @@
     .locals 1
 
     .prologue
-    .line 82
     iget-object v0, p0, Landroid/os/storage/sensitive/SensitiveDataParcel;->data:[B
 
     return-object v0
@@ -133,7 +120,6 @@
     .locals 1
 
     .prologue
-    .line 92
     iget-object v0, p0, Landroid/os/storage/sensitive/SensitiveDataParcel;->data:[B
 
     array-length v0, v0
@@ -145,7 +131,6 @@
     .locals 1
 
     .prologue
-    .line 77
     iget v0, p0, Landroid/os/storage/sensitive/SensitiveDataParcel;->op:I
 
     return v0
@@ -156,21 +141,18 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 64
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/os/storage/sensitive/SensitiveDataParcel;->op:I
 
-    .line 65
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/os/storage/sensitive/SensitiveDataParcel;->client:Ljava/lang/String;
 
-    .line 66
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -179,12 +161,10 @@
 
     iput-object v0, p0, Landroid/os/storage/sensitive/SensitiveDataParcel;->data:[B
 
-    .line 67
     iget-object v0, p0, Landroid/os/storage/sensitive/SensitiveDataParcel;->data:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readByteArray([B)V
 
-    .line 68
     return-void
 .end method
 
@@ -193,10 +173,8 @@
     .param p1, "client"    # Ljava/lang/String;
 
     .prologue
-    .line 102
     iput-object p1, p0, Landroid/os/storage/sensitive/SensitiveDataParcel;->client:Ljava/lang/String;
 
-    .line 103
     return-void
 .end method
 
@@ -205,10 +183,8 @@
     .param p1, "data"    # [B
 
     .prologue
-    .line 87
     iput-object p1, p0, Landroid/os/storage/sensitive/SensitiveDataParcel;->data:[B
 
-    .line 88
     return-void
 .end method
 
@@ -217,10 +193,8 @@
     .param p1, "op"    # I
 
     .prologue
-    .line 72
     iput p1, p0, Landroid/os/storage/sensitive/SensitiveDataParcel;->op:I
 
-    .line 73
     return-void
 .end method
 
@@ -230,28 +204,23 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 56
     iget v0, p0, Landroid/os/storage/sensitive/SensitiveDataParcel;->op:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 57
     iget-object v0, p0, Landroid/os/storage/sensitive/SensitiveDataParcel;->client:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 58
     iget-object v0, p0, Landroid/os/storage/sensitive/SensitiveDataParcel;->data:[B
 
     array-length v0, v0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 59
     iget-object v0, p0, Landroid/os/storage/sensitive/SensitiveDataParcel;->data:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByteArray([B)V
 
-    .line 60
     return-void
 .end method

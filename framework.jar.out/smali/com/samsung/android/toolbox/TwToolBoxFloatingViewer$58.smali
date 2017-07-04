@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 2261
     iput-object p1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$58;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 6
 
     .prologue
-    .line 2264
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$58;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
@@ -53,7 +51,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 2265
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$58;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     iget-object v2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$58;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -76,7 +73,6 @@
     # setter for: Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->mEditAfterScreenCapture:I
     invoke-static {v1, v2}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->access$6202(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;I)I
 
-    .line 2267
     :cond_0
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$58;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
@@ -93,14 +89,12 @@
 
     invoke-static {v1, v2, v3, v4}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 2268
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$58;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     const/16 v2, 0x8
 
     invoke-virtual {v1, v2}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->setVisibility(I)V
 
-    .line 2269
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$58;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     iget-object v2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$58;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -114,13 +108,11 @@
 
     invoke-virtual {v1, v2, v4, v5}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 2271
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$58;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     # invokes: Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->screenCapture()V
     invoke-static {v1}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->access$7500(Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;)V
 
-    .line 2273
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$58;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     iget-object v2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$58;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -132,7 +124,6 @@
 
     invoke-virtual {v1, v2}, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 2274
     iget-object v1, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$58;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
 
     iget-object v2, p0, Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer$58;->this$0:Lcom/samsung/android/toolbox/TwToolBoxFloatingViewer;
@@ -148,15 +139,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2278
     :goto_0
     return-void
 
-    .line 2275
     :catch_0
     move-exception v0
 
-    .line 2276
     .local v0, "ex":Ljava/lang/Exception;
     const-string v1, "toolbox"
 
@@ -187,6 +175,5 @@
     .locals 0
 
     .prologue
-    .line 2282
     return-void
 .end method
