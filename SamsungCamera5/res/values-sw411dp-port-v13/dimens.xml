@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="capturing_button_reverse_x">172.0dip</dimen>
+    <dimen name="capturing_button_reverse_y">33.0dip</dimen>
+    <dimen name="capturing_button_x">173.0dip</dimen>
+    <dimen name="capturing_button_y">632.0dip</dimen>
+    <dimen name="recording_button_reverse_x">101.0dip</dimen>
+    <dimen name="recording_button_reverse_y">42.0dip</dimen>
+    <dimen name="recording_button_x">262.0dip</dimen>
+    <dimen name="recording_button_y">641.0dip</dimen>
+    <dimen name="switch_button_reverse_x">261.0dip</dimen>
+    <dimen name="switch_button_reverse_y">42.0dip</dimen>
+    <dimen name="switch_button_x">102.0dip</dimen>
+    <dimen name="switch_button_y">641.0dip</dimen>
+</resources>

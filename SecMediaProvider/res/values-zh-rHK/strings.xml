@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="uid_label">媒體</string>
+    <string name="app_label">媒體儲存裝置</string>
+    <string name="artist_label">演出者</string>
+    <string name="ringtone_default">預設鈴聲</string>
+    <string name="notification_sound_default">預設通知聲音</string>
+    <string name="alarm_sound_default">預設鬧鐘音效</string>
+    <string name="root_images">圖像</string>
+    <string name="root_videos">影片</string>
+    <string name="root_audio">音訊</string>
+    <string name="drm_licensed_message">無法將受 DRM 保護的內容設為鈴聲或通知提醒。</string>
+    <string name="alert_sound">提示聲音</string>
+    <string name="alert_sound_default">預設提示聲音</string>
+    <string name="done">完成</string>
+    <string name="add_ringtone">從裝置儲存空間加入</string>
+    <string name="unable_to_play_during_call">通話期間無法播放。</string>
+    <string name="ok">確定</string>
+    <string name="noti_mbody_to_use_ps">無法使用%s</string>
+    <string name="noti_sbody_to_use_ps">若要使用%s，請輕觸 [設定]，前往 [應用程式資訊] > [權限]，然後允許以下權限：</string>
+    <string name="noti_button_settings">設定</string>
+    <string name="upgrade_msg">正在升級媒體資料庫。</string>
+</resources>

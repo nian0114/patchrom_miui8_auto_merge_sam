@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="uid_label">Medie</string>
+    <string name="app_label">Medielagring</string>
+    <string name="artist_label">Kunstner</string>
+    <string name="ringtone_default">Standardringetone</string>
+    <string name="notification_sound_default">Standardmeddelelseslyd</string>
+    <string name="alarm_sound_default">Standardlyd for alarmer</string>
+    <string name="root_images">Billeder</string>
+    <string name="root_videos">Video</string>
+    <string name="root_audio">Lyd</string>
+    <string name="drm_licensed_message">DRM-beskyttet indhold kunne ikke indstilles som ringetone eller varsel om besked.</string>
+    <string name="alert_sound">Varselslyd</string>
+    <string name="alert_sound_default">Standard varselslyd</string>
+    <string name="done">Udført</string>
+    <string name="add_ringtone">Tilføj fra enhedslager</string>
+    <string name="unable_to_play_during_call">Kunne ikke afspille under samtale.</string>
+    <string name="ok">OK</string>
+    <string name="noti_mbody_to_use_ps">Kan ikke bruge %s</string>
+    <string name="noti_sbody_to_use_ps">Tryk på INDSTILLINGER, gå til Appoplysninger > Tilladelser, og aktiver følgende tilladelser for at bruge %s:</string>
+    <string name="noti_button_settings">Indstillinger</string>
+    <string name="upgrade_msg">Opgraderer mediedatabasen.</string>
+</resources>

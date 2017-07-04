@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="uid_label">Multimédia</string>
+    <string name="app_label">Armazenamento de multimédia</string>
+    <string name="artist_label">Artista</string>
+    <string name="ringtone_default">Tom de toque padrão</string>
+    <string name="notification_sound_default">Som padrão p/ notificações</string>
+    <string name="alarm_sound_default">Som de alarme predefinido</string>
+    <string name="root_images">Imagens</string>
+    <string name="root_videos">Vídeos</string>
+    <string name="root_audio">Áudio</string>
+    <string name="drm_licensed_message">Impossível definir conteúdo protegido por DRM como tom de toque ou alerta de notificação.</string>
+    <string name="alert_sound">Som de alerta</string>
+    <string name="alert_sound_default">Som de alerta padrão</string>
+    <string name="done">Concluir</string>
+    <string name="add_ringtone">Adicionar do armazen. disp.</string>
+    <string name="unable_to_play_during_call">Impossível tocar durante a chamada.</string>
+    <string name="ok">OK</string>
+    <string name="noti_mbody_to_use_ps">Impossível utilizar %s</string>
+    <string name="noti_sbody_to_use_ps">Para utilizar %s, toque em DEFINIÇÕES, aceda a Informações da aplicação > Permissões, e depois autorize as seguintes permissões:</string>
+    <string name="noti_button_settings">Definições</string>
+    <string name="upgrade_msg">A atualizar a base de dados de Multimédia.</string>
+</resources>

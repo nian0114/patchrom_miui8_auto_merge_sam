@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <SwitchPreference android:title="@string/Title_Voice_Capture" android:key="pref_global_setup_voice_control_key" android:defaultValue="false" />
+</PreferenceScreen>

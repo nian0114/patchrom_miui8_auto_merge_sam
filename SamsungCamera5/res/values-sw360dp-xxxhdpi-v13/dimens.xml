@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="cover_dialog_pos_y">25.0dip</dimen>
+</resources>

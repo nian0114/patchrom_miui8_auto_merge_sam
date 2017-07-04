@@ -1,0 +1,47 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: SamsungCamera5.apk
+compressionType: false
+doNotCompress:
+- arsc
+- qmg
+- webp
+- res/drawable-sw360dp-xxxhdpi-v13/camera_option_list_popup_bg.9.qmg
+- res/drawable-sw360dp-xxxhdpi-v13/camera_rear_cam_selfie_outline.9.qmg
+- res/drawable-sw360dp-xxxhdpi-v13/camera_rear_cam_selfie_outline_press_l_b.9.qmg
+- res/drawable-sw360dp-xxxhdpi-v13/camera_rear_cam_selfie_outline_press_l_t.9.qmg
+- res/drawable-sw360dp-xxxhdpi-v13/camera_rear_cam_selfie_outline_press_r_b.9.qmg
+- res/drawable-sw360dp-xxxhdpi-v13/camera_rear_cam_selfie_outline_press_r_t.9.qmg
+- res/drawable-sw360dp-xxxhdpi-v13/camera_thumbnail_shadow.9.qmg
+- res/drawable-sw360dp-xxxhdpi-v13/qr_code_found_bg.9.qmg
+- res/drawable-sw360dp-xxxhdpi-v13/tw_toast_frame_mtrl.9.qmg
+- res/drawable-sw411dp-xxxhdpi-v13/camera_option_list_popup_bg.9.qmg
+- res/drawable-sw411dp-xxxhdpi-v13/camera_rear_cam_selfie_outline.9.qmg
+- res/drawable-sw411dp-xxxhdpi-v13/camera_rear_cam_selfie_outline_press_l_b.9.qmg
+- res/drawable-sw411dp-xxxhdpi-v13/camera_rear_cam_selfie_outline_press_l_t.9.qmg
+- res/drawable-sw411dp-xxxhdpi-v13/camera_rear_cam_selfie_outline_press_r_b.9.qmg
+- res/drawable-sw411dp-xxxhdpi-v13/camera_rear_cam_selfie_outline_press_r_t.9.qmg
+- res/drawable-sw411dp-xxxhdpi-v13/camera_thumbnail_shadow.9.qmg
+- res/drawable-sw411dp-xxxhdpi-v13/qr_code_found_bg.9.qmg
+- res/drawable-sw411dp-xxxhdpi-v13/tw_toast_frame_mtrl.9.qmg
+- res/drawable-xxhdpi-v4/camera_food_handler.9.qmg
+- res/drawable-xxhdpi-v4/camera_food_handler_pressed_l_b.9.qmg
+- res/drawable-xxhdpi-v4/camera_food_handler_pressed_l_t.9.qmg
+- res/drawable-xxhdpi-v4/camera_food_handler_pressed_r_b.9.qmg
+- res/drawable-xxhdpi-v4/camera_food_handler_pressed_r_t.9.qmg
+isFrameworkApk: false
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: null
+sdkInfo:
+  minSdkVersion: '23'
+  targetSdkVersion: '23'
+sharedLibrary: false
+unknownFiles: {}
+usesFramework:
+  ids:
+  - 1
+  tag: null
+version: 2.2.1-93a51c-SNAPSHOT
+versionInfo:
+  versionCode: '507701000'
+  versionName: 5.0.77

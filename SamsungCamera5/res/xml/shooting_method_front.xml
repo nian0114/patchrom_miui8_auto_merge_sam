@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <SwitchPreference android:title="@string/Title_Voice_Capture" android:key="pref_global_setup_voice_control_front_key" android:defaultValue="true" />
+    <SwitchPreference android:title="@string/Title_Tap_To_Take_Pictures" android:key="pref_camera_tap_to_take_pictures_key" android:summary="@string/tap_to_take_pictures_summary" android:defaultValue="true" />
+    <SwitchPreference android:title="@string/Title_GestureControl" android:key="pref_global_camera_detection_mode_key" android:defaultValue="true" />
+    <SwitchPreference android:title="@string/Title_HRM_shutter" android:key="pref_camera_hrm_shutter_key" android:summary="@string/hrm_shutter_summary" android:defaultValue="true" />
+</PreferenceScreen>

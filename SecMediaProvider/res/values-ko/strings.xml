@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="uid_label">미디어</string>
+    <string name="app_label">미디어 저장공간</string>
+    <string name="artist_label">아티스트</string>
+    <string name="ringtone_default">기본 벨소리</string>
+    <string name="notification_sound_default">기본 알림 소리</string>
+    <string name="alarm_sound_default">기본 알람 소리</string>
+    <string name="root_images">이미지</string>
+    <string name="root_videos">동영상</string>
+    <string name="root_audio">오디오</string>
+    <string name="drm_licensed_message">DRM 컨텐츠를 벨소리 또는 알림 메시지로 설정할 수 없습니다.</string>
+    <string name="alert_sound">알림음</string>
+    <string name="alert_sound_default">기본 알림음</string>
+    <string name="done">완료</string>
+    <string name="add_ringtone">디바이스 저장공간에서 추가</string>
+    <string name="unable_to_play_during_call">통화 중에는 재생할 수 없습니다.</string>
+    <string name="ok">확인</string>
+    <string name="noti_mbody_to_use_ps">%s 기능을 사용할 수 없음</string>
+    <string name="noti_sbody_to_use_ps">%s 기능을 사용하려면 [상세설정]을 누른 후 [애플리케이션 정보 > 권한]에서 다음 권한을 허용하세요.</string>
+    <string name="noti_button_settings">설정</string>
+    <string name="upgrade_msg">미디어 데이터베이스 업그레이드 중</string>
+</resources>

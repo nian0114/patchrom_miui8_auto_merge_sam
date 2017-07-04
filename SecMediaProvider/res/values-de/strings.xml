@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="uid_label">Medien</string>
+    <string name="app_label">Medienspeicher</string>
+    <string name="artist_label">Interpret</string>
+    <string name="ringtone_default">Standardklingelton</string>
+    <string name="notification_sound_default">Standardton für Benachr.</string>
+    <string name="alarm_sound_default">Standard-Weckerton</string>
+    <string name="root_images">Eigene Bilder</string>
+    <string name="root_videos">Videos</string>
+    <string name="root_audio">Audio</string>
+    <string name="drm_licensed_message">DRM-geschützter Inhalt kann nicht als Klingelton oder Benachrichtigungston festgelegt werden.</string>
+    <string name="alert_sound">Signalton</string>
+    <string name="alert_sound_default">Standardsignalton</string>
+    <string name="done">Fertig</string>
+    <string name="add_ringtone">Aus Gerätespeicher hzfg.</string>
+    <string name="unable_to_play_during_call">Wiedergabe während Anruf nicht möglich</string>
+    <string name="ok">OK</string>
+    <string name="noti_mbody_to_use_ps">Verwend. von %s nicht mögl.</string>
+    <string name="noti_sbody_to_use_ps">Zur Verwendung von %s auf „EINSTELLUNGEN“ tippen, zu „App-Info > Berechtigungen“ wechseln und die folgenden Berechtigungen eingeben:</string>
+    <string name="noti_button_settings">Einstellungen</string>
+    <string name="upgrade_msg">Medien-Datenbank wird aktualisiert.</string>
+</resources>

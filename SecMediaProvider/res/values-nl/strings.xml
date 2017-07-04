@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="uid_label">Media</string>
+    <string name="app_label">Media-opslag</string>
+    <string name="artist_label">Artiest</string>
+    <string name="ringtone_default">Standaardbeltoon</string>
+    <string name="notification_sound_default">Standaardgeluid melding</string>
+    <string name="alarm_sound_default">Standaardalarmgeluid</string>
+    <string name="root_images">Afbeeldingen</string>
+    <string name="root_videos">"Video's"</string>
+    <string name="root_audio">Audio</string>
+    <string name="drm_licensed_message">Kan door DRM beveiligde inhoud niet instellen als beltoon of meldingsignaal.</string>
+    <string name="alert_sound">Signaal</string>
+    <string name="alert_sound_default">Standaardsignaal</string>
+    <string name="done">Gereed</string>
+    <string name="add_ringtone">Toev. uit apparaatopslag</string>
+    <string name="unable_to_play_during_call">Niet mogelijk tijdens gesprek.</string>
+    <string name="ok">OK</string>
+    <string name="noti_mbody_to_use_ps">Kan %s niet gebruiken</string>
+    <string name="noti_sbody_to_use_ps">Als u %s wilt gebruiken, tik u op INSTELLINGEN, gaat u naar App-info > Machtigingen en staat u de volgende machtigingen toe:</string>
+    <string name="noti_button_settings">Instellingen</string>
+    <string name="upgrade_msg">Mediadatabase bijwerken.</string>
+</resources>

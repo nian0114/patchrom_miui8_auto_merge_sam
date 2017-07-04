@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="proslidemenu_indicator_size">45</integer>
+    <integer name="proslidemenu_value_text_size">49</integer>
+    <integer name="datatext_font_size">72</integer>
+    <integer name="easy_mode_menu_info_text_font_size">84</integer>
+    <integer name="easy_mode_menu_item_title_font_size">84</integer>
+    <integer name="mode_infopopup_description_font_size">60</integer>
+    <integer name="remaincounterindicator_text_size">52</integer>
+</resources>

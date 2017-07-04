@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<assistant-list>
+    <button name="@string/switch_camera_title" action="android.intent.action.switchcamera" resource="@drawable/assistant_menu_icon_camera_switch_camera" />
+    <button name="@string/gallery" action="android.intent.action.switchgallery" resource="@drawable/assistant_menu_icon_camera_gallery" />
+    <button name="@string/delete" action="android.intent.action.delete" resource="@drawable/assistant_menu_ic_gallery_delete" />
+</assistant-list>

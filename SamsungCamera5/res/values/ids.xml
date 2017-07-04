@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="image">false</item>
+    <item type="id" name="message">false</item>
+    <item type="id" name="imageToAttach">false</item>
+    <item type="id" name="playAttachVideo">false</item>
+    <item type="id" name="description">false</item>
+    <item type="id" name="description_array">false</item>
+    <item type="id" name="description_restrict_snapshot">false</item>
+    <item type="id" name="description_restrict_vdis">false</item>
+    <item type="id" name="camera_setting_root">false</item>
+    <item type="id" name="listContainer">false</item>
+    <item type="id" name="custom_actionbar">false</item>
+    <item type="id" name="retry">false</item>
+    <item type="id" name="okay">false</item>
+    <item type="id" name="checkbox">false</item>
+    <item type="id" name="sensorcaptrue_help_image">false</item>
+    <item type="id" name="sensorcaptrue_textview">false</item>
+    <item type="id" name="sensorcaptrue_close_button">false</item>
+    <item type="id" name="scrollView">false</item>
+    <item type="id" name="more">false</item>
+    <item type="id" name="text">false</item>
+    <item type="id" name="base_layout">false</item>
+    <item type="id" name="camera_layout">false</item>
+    <item type="id" name="camera_preview">false</item>
+    <item type="id" name="GLSurfaceLayout">false</item>
+    <item type="id" name="listView">false</item>
+    <item type="id" name="imageView">false</item>
+    <item type="id" name="textView">false</item>
+    <item type="id" name="resolution_item_layout">false</item>
+    <item type="id" name="size">false</item>
+    <item type="id" name="backgroun1">false</item>
+    <item type="id" name="backgroundcolor">false</item>
+</resources>

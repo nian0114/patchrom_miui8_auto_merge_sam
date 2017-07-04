@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textAppearance="?android:textAppearanceListItem" android:ellipsize="marquee" android:gravity="center_vertical" android:id="@android:id/text1" android:background="?android:selectableItemBackground" android:paddingTop="@dimen/list_item_padding_top" android:paddingBottom="@dimen/list_item_padding_top" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?android:listPreferredItemHeightSmall" android:drawablePadding="21.0dip" android:drawableStart="@drawable/tw_list_icon_create_mtrl" android:paddingStart="21.0dip" android:paddingEnd="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -1,0 +1,63 @@
+Manifest-Version: 1.0
+Created-By: 1.7.0_55 (Oracle Corporation)
+
+Name: res/layout/tw_select_dialog_singlechoice_material.xml
+SHA1-Digest: ZZcTuhuQ4yrX10iR08/eBaeWyDI=
+
+Name: res/layout/tw_simple_list_item_single_choice.xml
+SHA1-Digest: P3mc5O6FRBUOYZbqw1UtNE23Kz4=
+
+Name: resources.arsc
+SHA1-Digest: cZ/0GouAV1zQcapHUX6k4ZvgUEI=
+
+Name: res/drawable-hdpi-v4/ic_search_category_music_artist.qmg
+SHA1-Digest: vohLb82sjjv0d6R+l/NHLT9YPhA=
+
+Name: res/drawable/tw_list_icon_create.spr
+SHA1-Digest: 2EZX0MWQRrL3BdVuxlR1cRFYw3U=
+
+Name: res/mipmap-hdpi-v4/ic_launcher_gallery.png
+SHA1-Digest: ERoXCfjryCtXNOhzWgK58RqnsiE=
+
+Name: res/drawable-hdpi-v4/ic_search_category_music_album.qmg
+SHA1-Digest: 8iHP2Vt0d7OkqiGHHq2VLlAA2Kc=
+
+Name: res/drawable-hdpi-v4/ic_search_category_music_song.qmg
+SHA1-Digest: F55+zm6AzfJ2sODJU9ogL/14VQU=
+
+Name: res/drawable/tw_list_icon_create_mtrl.xml
+SHA1-Digest: pmLOAPDfQ9e7jIUcW5n1T1iI0Zw=
+
+Name: res/drawable/contacts_home_as_up_indicator.xml
+SHA1-Digest: sy+MxQ8jC7znEjKFCwBi1Rtb3IQ=
+
+Name: res/mipmap-xhdpi-v4/ic_launcher_gallery.png
+SHA1-Digest: EE06tu514ZjLAceHMzqTn9dyNpA=
+
+Name: res/drawable/splanner_home_as_up_indicator.xml
+SHA1-Digest: gjXgfDByrcbE+s8zWFky94Ll9V8=
+
+Name: res/mipmap-mdpi-v4/ic_launcher_gallery.png
+SHA1-Digest: W15ZLMSRFD9rmfYvfsS7/YG8b3U=
+
+Name: AndroidManifest.xml
+SHA1-Digest: v9rKlGCyz9ekhjQGvIDwLBSXXgM=
+
+Name: res/layout/tw_select_dialog_singlechoice_footer_material.xml
+SHA1-Digest: rgg/hLGkhiojAPBhtuBOyul9368=
+
+Name: res/drawable/msg_home_as_up_indicator.xml
+SHA1-Digest: VNX87RFIFnTCL8TkKzlxAf7HuZ0=
+
+Name: res/layout/ringtonepicker_main.xml
+SHA1-Digest: gPsUfMwg3kapfo/m4BP0OhNvIAQ=
+
+Name: res/drawable/call_home_as_up_indicator.xml
+SHA1-Digest: zhqAUKV9WGGGbYdKQN+s7hcF54Q=
+
+Name: res/drawable/tw_list_icon_circle_mtrl.spr
+SHA1-Digest: qaPZ1qUtRANT9b/tY2e9GrGk7aQ=
+
+Name: res/layout/tw_simple_list_item_single_choice_footer.xml
+SHA1-Digest: kb2W6cqDaCsfY9O9hTC4kg9hrCc=
+
