@@ -14,7 +14,7 @@ local-previous-target-dir :=
 # All apps from original ZIP, but has smali files chanded
 local-modified-apps := SamsungCamera5 SecSettingsProvider2 SecMediaProvider
 
-local-modified-jars := 
+local-modified-jars := sec_sdp_hidden_sdk
 
 # All apks from MIUI
 local-miui-removed-apps :=  MediaProvider SettingsProvider MiuiCamera

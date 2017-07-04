@@ -289,7 +289,8 @@
     .line 79
     sget-boolean v1, Lcom/sec/sdp/internal/SDPLog;->isInitialized:Z
 
-    if-eqz v1, :cond_0
+    #if-eqz v1, :cond_0
+    goto :goto_0
 
     .line 80
     new-instance v1, Lcom/sec/sdp/internal/SDPLog$CallerInfo;
@@ -306,6 +307,7 @@
 
     .line 86
     :cond_0
+    :goto_0
     return-void
 .end method
 
