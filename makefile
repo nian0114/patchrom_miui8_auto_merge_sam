@@ -23,7 +23,7 @@ local-miui-modified-apps := InCallUI Mms TeleService
 
 local-miui-modified-apps-smali := MiuiKeyguard MiuiSystemUI Telecom XiaomiServiceFramework
 
-PORT_PRODUCT := nian_g9350
+PORT_PRODUCT := nian_g935f
 
 # Config density for co-developers to use the aaps with HDPI or XHDPI resource,
 # Default configrations are HDPI for ics branch and XHDPI for jellybean branch
