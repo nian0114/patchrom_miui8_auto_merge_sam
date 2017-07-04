@@ -1,0 +1,23 @@
+From c4be2c4320c9604366e5daf27299f1001522066a Mon Sep 17 00:00:00 2001
+From: wonitor <wonitor@qq.com>
+Date: Sat, 22 Oct 2016 03:57:00 +0800
+Subject: [PATCH] 12
+
+---
+ InCallUI/smali/com/android/incallui/ProximitySensor.smali | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+--- a/InCallUI/smali/com/android/incallui/ProximitySensor.smali
++++ b/InCallUI/smali/com/android/incallui/ProximitySensor.smali
+@@ -284,7 +284,7 @@
+ 
+     if-eqz v3, :cond_a
+ 
+-    if-nez v2, :cond_a
++    #if-nez v2, :cond_a
+ 
+     invoke-direct {p0}, Lcom/android/incallui/ProximitySensor;->isSmartCoverClosed()Z
+ 
+-- 
+2.7.4
+

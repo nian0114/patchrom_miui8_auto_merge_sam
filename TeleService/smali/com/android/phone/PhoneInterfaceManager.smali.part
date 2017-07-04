@@ -1,0 +1,94 @@
+
+.method public setTransmitPower(I)Z
+    .locals 3
+    .param p1, "powerLevel"    # I
+
+    .prologue
+    .line 3913
+    invoke-direct {p0}, Lcom/android/phone/PhoneInterfaceManager;->enforceModifyPermission()V
+
+    .line 3915
+    const/4 v0, 0x0
+
+    .local v0, "i":I
+    :goto_0
+    invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/telephony/TelephonyManager;->getPhoneCount()I
+
+    move-result v2
+
+    if-ge v0, v2, :cond_0
+
+    .line 3916
+    invoke-static {v0}, Lcom/samsung/android/telephony/MultiSimManager;->getSubIdUsingProperty(I)I
+
+    move-result v2
+
+    invoke-direct {p0, v2}, Lcom/android/phone/PhoneInterfaceManager;->getPhone(I)Lcom/android/internal/telephony/Phone;
+
+    move-result-object v1
+
+    .line 3917
+    .local v1, "phone":Lcom/android/internal/telephony/Phone;
+    const/4 v2, 0x0
+
+    invoke-interface {v1, p1, v2}, Lcom/android/internal/telephony/Phone;->setTransmitPower(ILandroid/os/Message;)V
+
+    .line 3915
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    .line 3920
+    .end local v1    # "phone":Lcom/android/internal/telephony/Phone;
+    :cond_0
+    const/4 v2, 0x1
+
+    return v2
+.end method
+
+.method public isApnTypeAvailableUsingSubId(Ljava/lang/String;I)Z
+    .locals 1
+    .param p1, "apnType"    # Ljava/lang/String;
+    .param p2, "subId"    # I
+
+    .prologue
+    .line 5471
+    invoke-direct {p0, p2}, Lcom/android/phone/PhoneInterfaceManager;->getPhone(I)Lcom/android/internal/telephony/Phone;
+
+    move-result-object v0
+
+    invoke-interface {v0, p1}, Lcom/android/internal/telephony/Phone;->isApnTypeAvailable(Ljava/lang/String;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getServiceStateUsingSubId(I)I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public getDataStateSimSlot(I)I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public isVideoCall()Z
+    .locals 1
+
+    .prologue
+    const/4 v0, 0x0
+
+    return v0
+.end method

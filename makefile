@@ -19,9 +19,9 @@ local-modified-jars :=
 # All apks from MIUI
 local-miui-removed-apps :=  MediaProvider SettingsProvider MiuiCamera
 
-local-miui-modified-apps := 
+local-miui-modified-apps := InCallUI Mms TeleService
 
-local-miui-modified-apps-smali := 
+local-miui-modified-apps-smali := MiuiKeyguard MiuiSystemUI Telecom XiaomiServiceFramework
 
 PORT_PRODUCT := nian_g9350
 

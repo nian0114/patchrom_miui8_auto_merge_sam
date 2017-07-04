@@ -1,0 +1,29 @@
+From 101690b5b786ae4fb34261f10107aeac4016b127 Mon Sep 17 00:00:00 2001
+From: nian0114 <268078545@qq.com>
+Date: Sun, 2 Apr 2017 18:17:25 +0800
+Subject: [PATCH] fix phone fc
+
+---
+ TeleService/smali/com/android/phone/PhoneGlobals.smali | 9 +--------
+ 1 file changed, 1 insertion(+), 8 deletions(-)
+
+--- a/TeleService/smali/com/android/phone/PhoneGlobals.smali
++++ b/TeleService/smali/com/android/phone/PhoneGlobals.smali
+@@ -1507,13 +1507,7 @@
+ 
+     if-nez v11, :cond_2
+ 
+-    invoke-static {p0}, Lcom/android/internal/telephony/TelephonyPluginDelegate;->init(Landroid/content/Context;)V
+-
+-    invoke-static {}, Lcom/android/internal/telephony/TelephonyPluginDelegate;->getInstance()Lcom/android/internal/telephony/TelephonyPluginDelegate;
+-
+-    move-result-object v11
+-
+-    invoke-virtual {v11, p0}, Lcom/android/internal/telephony/TelephonyPluginDelegate;->makeDefaultPhones(Landroid/content/Context;)V
++    invoke-static {p0}, Lcom/android/internal/telephony/PhoneFactory;->makeDefaultPhones(Landroid/content/Context;)V
+ 
+     new-instance v6, Landroid/content/Intent;
+ 
+-- 
+2.10.1
+

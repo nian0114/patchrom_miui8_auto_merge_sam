@@ -1,0 +1,28 @@
+From d22a209aebbb4c7ea7d0fd6cd9323ec8a8fe2f1d Mon Sep 17 00:00:00 2001
+From: caets <348581329@qq.com>
+Date: Sat, 12 Nov 2016 11:52:43 +0800
+Subject: [PATCH] fix_cdmaPhoneNoise
+
+---
+ TeleService/smali/com/android/phone/CallNotifier.smali | 8 --------
+ 1 file changed, 8 deletions(-)
+
+--- a/TeleService/smali/com/android/phone/CallNotifier.smali
++++ b/TeleService/smali/com/android/phone/CallNotifier.smali
+@@ -1507,13 +1507,6 @@
+ 
+     move-result v2
+ 
+-    .local v2, "toneID":I
+-    new-instance v6, Lcom/android/phone/CallNotifier$SignalInfoTonePlayer;
+-
+-    invoke-direct {v6, p0, v2}, Lcom/android/phone/CallNotifier$SignalInfoTonePlayer;-><init>(Lcom/android/phone/CallNotifier;I)V
+-
+-    invoke-virtual {v6}, Lcom/android/phone/CallNotifier$SignalInfoTonePlayer;->start()V
+-
+     goto :goto_0
+ .end method
+ 
+-- 
+2.7.4
+
