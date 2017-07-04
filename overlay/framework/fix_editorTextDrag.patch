@@ -1,0 +1,23 @@
+From 49781b8a6ddc7b3a445bc16e3886059513035c3a Mon Sep 17 00:00:00 2001
+From: caets <348581329@qq.com>
+Date: Mon, 28 Nov 2016 20:00:08 +0800
+Subject: [PATCH] fix_editorTextDrag
+
+---
+ framework/smali/android/widget/Editor.smali | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+--- a/framework/smali/android/widget/Editor.smali
++++ b/framework/smali/android/widget/Editor.smali
+@@ -2501,7 +2501,7 @@
+ 
+     move-result-object v2
+ 
+-    const v3, 0x10900f4
++    const v3, 0x1090108
+ 
+     const/4 v4, 0x0
+ 
+-- 
+2.7.4
+

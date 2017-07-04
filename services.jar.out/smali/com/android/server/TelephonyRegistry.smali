@@ -390,19 +390,20 @@
 
     iput-object v15, v0, Lcom/android/server/TelephonyRegistry;->logSSC:[Lcom/android/server/TelephonyRegistry$LogSSC;
 
-    .line 1965
     const/4 v15, 0x0
 
     move-object/from16 v0, p0
 
     iput v15, v0, Lcom/android/server/TelephonyRegistry;->next:I
 
-    .line 338
+    move-object/from16 v0, p0
+
+    iput-object v15, v0, Lcom/android/server/TelephonyRegistry;->mMiuiTelephony:Lmiui/telephony/IMiuiTelephony;
+
     invoke-static {}, Landroid/telephony/CellLocation;->getEmpty()Landroid/telephony/CellLocation;
 
     move-result-object v12
 
-    .line 340
     .local v12, "location":Landroid/telephony/CellLocation;
     move-object/from16 v0, p1
 
@@ -5142,8 +5143,18 @@
 
     .line 2012
     :cond_3
-    if-eq p1, p2, :cond_0
+    if-eq p1, p2, :cond_miui_0
 
+    invoke-static {p1}, Landroid/telephony/SubscriptionManager;->getPhoneId(I)I
+
+    move-result v2
+
+    if-ne v2, p3, :cond_miui_1
+
+    :cond_miui_0
+    move v1, v0
+
+    :cond_miui_1
     move v0, v1
 
     goto :goto_0

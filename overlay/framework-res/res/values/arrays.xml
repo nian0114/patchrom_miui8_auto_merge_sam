@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="config_statusBarIcons">
+       <item>headset</item>
+       <item>mikey</item>
+       <item>call_record</item>
+       <item>privacy_mode</item>
+       <item>ble_unlock_mode</item>
+       <item>quiet</item>
+       <item>missed_call</item>
+       <item>bluetooth_handsfree_battery</item>
+       <item>managed_profile</item>
+       <item>knox_container</item>
+       <item>smart_network</item>
+       <item>felica_lock</item>
+       <item>ime</item>
+       <item>popup</item>
+       <item>volte</item>
+       <item>glove</item>
+       <item>gesture</item>
+       <item>smart_scroll</item>
+       <item>face</item>
+       <item>sync_failing</item>
+       <item>sync_active</item>
+       <item>cast</item>
+       <item>location</item>
+       <item>gps</item>
+       <item>lbs</item>
+       <item>wearable_gear</item>
+       <item>bluetooth</item>
+       <item>nfc_on</item>
+       <item>nfc</item>
+       <item>tty</item>
+       <item>speakerphone</item>
+       <item>zen</item>
+       <item>mute</item>
+       <item>volume</item>
+       <item>com.samsung.rcs</item>
+       <item>vowifi</item>
+       <item>wifi_p2p</item>
+       <item>wifi</item>
+       <item>wifi_p2p</item>
+       <item>wifi_ap</item>
+       <item>wifi_oxygen</item>
+       <item>cdma_eri</item>
+       <item>phone_signal_second_sub</item>
+       <item>data_connection</item>
+       <item>phone_evdo_signal</item>
+       <item>phone_signal</item>
+       <item>battery</item>
+       <item>alarm_clock</item>
+       <item>toddler</item>
+       <item>ims_volte</item>
+       <item>wb_amr</item>
+       <item>keyguard_wakeup</item>
+       <item>safezone</item>
+       <item>secure</item>
+       <item>clock</item>
+       <item>wimax</item>
+       <item>smart_bonding</item>
+       <item>private_mode</item>
+        <item>dual_profile</item>
+    </string-array>
+    <string-array name="config_pen_window_applist">
+        <item>com.diotek.diodict4.EDictionary</item>
+        <item>com.diotek.diodict3.hc.samsung.p5</item>
+        <item>com.sec.android.app.popupcalculator</item>
+        <item>com.google.android.youtube</item>
+        <item>com.sec.chaton</item>
+        <item>com.google.android.talk</item>
+        <item>com.kakao.talk</item>
+        <item>com.facebook.katana</item>
+        <item>com.sec.android.app.sbrowser</item>
+        <item>com.sec.android.gallery3d</item>
+    </string-array>
+    <string-array name="config_locationProviderPackageNames_baidu">
+        <item>com.baidu.map.location</item>
+        <item>com.sec.location.nsflp2</item>
+        <item>com.android.location.fused</item>
+    </string-array>
+    <string-array name="config_locationProviderPackageNames_autonavi">
+        <item>com.amap.android.location</item>
+        <item>com.sec.location.nsflp2</item>
+        <item>com.android.location.fused</item>
+    </string-array>
+</resources>

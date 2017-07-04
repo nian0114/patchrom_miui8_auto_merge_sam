@@ -216,14 +216,14 @@
     .param p0, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 363
+    invoke-static {}, Lmiui/patchrom/ClassHook;->initServerHook()V
+
     new-instance v0, Lcom/android/server/SystemServer;
 
     invoke-direct {v0}, Lcom/android/server/SystemServer;-><init>()V
 
     invoke-direct {v0}, Lcom/android/server/SystemServer;->run()V
 
-    .line 364
     return-void
 .end method
 
@@ -2686,19 +2686,19 @@
 
     invoke-virtual {v0, v5, v6}, Lcom/android/server/Watchdog;->init(Landroid/content/Context;Lcom/android/server/am/ActivityManagerService;)V
 
-    .line 1021
     const-string v6, "SystemServer"
 
     const-string v7, "Input Manager"
 
     invoke-static {v6, v7}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1022
-    new-instance v126, Lcom/android/server/input/InputManagerService;
+    new-instance v126, Lcom/android/server/input/MiuiInputManagerService;
+
+    const/4 v6, 0x0
 
     move-object/from16 v0, v126
 
-    invoke-direct {v0, v5}, Lcom/android/server/input/InputManagerService;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v5, v6}, Lcom/android/server/input/MiuiInputManagerService;-><init>(Landroid/content/Context;Landroid/os/Handler;)V
     :try_end_28
     .catch Ljava/lang/RuntimeException; {:try_start_28 .. :try_end_28} :catch_92
 

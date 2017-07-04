@@ -1445,6 +1445,14 @@
 
     iput-object v5, p0, Lcom/android/internal/telephony/uicc/SIMRecords;->mAdnCache:Lcom/android/internal/telephony/uicc/AdnRecordCache;
 
+    new-instance v5, Lcom/android/internal/telephony/uicc/MiuiAdnRecordCache;
+
+    iget-object v6, p0, Lcom/android/internal/telephony/uicc/SIMRecords;->mFh:Lcom/android/internal/telephony/uicc/IccFileHandler;
+
+    invoke-direct {v5, v6}, Lcom/android/internal/telephony/uicc/MiuiAdnRecordCache;-><init>(Lcom/android/internal/telephony/uicc/IccFileHandler;)V
+
+    iput-object v5, p0, Lcom/android/internal/telephony/uicc/SIMRecords;->mMiuiAdnCache:Lcom/android/internal/telephony/uicc/MiuiAdnRecordCache;
+
     .line 506
     new-instance v5, Lcom/android/internal/telephony/uicc/VoiceMailConstants;
 
@@ -7356,21 +7364,20 @@
 
     const/4 v5, 0x1
 
-    .line 3685
     sparse-switch p1, :sswitch_data_0
 
-    .line 3759
     invoke-virtual {p0}, Lcom/android/internal/telephony/uicc/SIMRecords;->onSimPhonebookRefresh()V
 
-    .line 3760
+    iget-object v0, p0, Lcom/android/internal/telephony/uicc/SIMRecords;->mMiuiAdnCache:Lcom/android/internal/telephony/uicc/MiuiAdnRecordCache;
+
+    invoke-virtual {v0}, Lcom/android/internal/telephony/uicc/MiuiAdnRecordCache;->reset()V
+
     invoke-virtual {p0}, Lcom/android/internal/telephony/uicc/SIMRecords;->fetchSimRecords()V
 
-    .line 3765
     :cond_0
     :goto_0
     return-void
 
-    .line 3687
     :sswitch_0
     iget v1, p0, Lcom/android/internal/telephony/uicc/SIMRecords;->mRecordsToLoad:I
 
@@ -17885,7 +17892,7 @@
 
     move-object/from16 v0, v17
 
-    invoke-static {v0, v4, v6}, Lcom/android/internal/telephony/uicc/IccUtils;->bcdToString([BII)Ljava/lang/String;
+    invoke-static {v0, v4, v6}, Lmiui/telephony/IccUtils;->parseIccIdToString([BII)Ljava/lang/String;
 
     move-result-object v4
 
@@ -18396,7 +18403,7 @@
 
     move-object/from16 v0, v17
 
-    invoke-static {v0, v4, v6}, Lcom/android/internal/telephony/uicc/IccUtils;->bcdToString([BII)Ljava/lang/String;
+    invoke-static {v0, v4, v6}, Lmiui/telephony/IccUtils;->parseIccIdToString([BII)Ljava/lang/String;
 
     move-result-object v4
 
@@ -25463,7 +25470,7 @@
 
     move-object/from16 v0, v17
 
-    invoke-static {v0, v6, v7}, Lcom/android/internal/telephony/uicc/IccUtils;->bcdToString([BII)Ljava/lang/String;
+    invoke-static {v0, v6, v7}, Lmiui/telephony/IccUtils;->parseIccIdToString([BII)Ljava/lang/String;
 
     move-result-object v6
 
@@ -25598,7 +25605,7 @@
 
     move-object/from16 v0, v17
 
-    invoke-static {v0, v8, v9}, Lcom/android/internal/telephony/uicc/IccUtils;->bcdToString([BII)Ljava/lang/String;
+    invoke-static {v0, v8, v9}, Lmiui/telephony/IccUtils;->parseIccIdToString([BII)Ljava/lang/String;
 
     move-result-object v8
 
@@ -25817,7 +25824,7 @@
 
     move-object/from16 v0, v17
 
-    invoke-static {v0, v8, v9}, Lcom/android/internal/telephony/uicc/IccUtils;->bcdToString([BII)Ljava/lang/String;
+    invoke-static {v0, v8, v9}, Lmiui/telephony/IccUtils;->parseIccIdToString([BII)Ljava/lang/String;
 
     move-result-object v8
 
@@ -26036,7 +26043,7 @@
 
     move-object/from16 v0, v17
 
-    invoke-static {v0, v8, v9}, Lcom/android/internal/telephony/uicc/IccUtils;->bcdToString([BII)Ljava/lang/String;
+    invoke-static {v0, v8, v9}, Lmiui/telephony/IccUtils;->parseIccIdToString([BII)Ljava/lang/String;
 
     move-result-object v8
 
@@ -29721,12 +29728,14 @@
 
     if-nez v1, :cond_0
 
-    .line 749
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/SIMRecords;->mAdnCache:Lcom/android/internal/telephony/uicc/AdnRecordCache;
 
     invoke-virtual {v1}, Lcom/android/internal/telephony/uicc/AdnRecordCache;->reset()V
 
-    .line 751
+    iget-object v1, p0, Lcom/android/internal/telephony/uicc/SIMRecords;->mMiuiAdnCache:Lcom/android/internal/telephony/uicc/MiuiAdnRecordCache;
+
+    invoke-virtual {v1}, Lcom/android/internal/telephony/uicc/MiuiAdnRecordCache;->reset()V
+
     :cond_0
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/SIMRecords;->phone:Lcom/android/internal/telephony/PhoneBase;
 

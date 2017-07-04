@@ -1,0 +1,34 @@
+
+.method public final resetCdmaConnectionTime()V
+    .locals 3
+
+    .prologue
+    iget-object v2, p0, Landroid/telecom/Connection;->mListeners:Ljava/util/Set;
+
+    invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    .local v0, "i$":Ljava/util/Iterator;
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/telecom/Connection$Listener;
+
+    .local v1, "l":Landroid/telecom/Connection$Listener;
+    invoke-virtual {v1, p0}, Landroid/telecom/Connection$Listener;->onCdmaConnectionTimeReset(Landroid/telecom/Connection;)V
+
+    goto :goto_0
+
+    .end local v1    # "l":Landroid/telecom/Connection$Listener;
+    :cond_0
+    return-void
+.end method

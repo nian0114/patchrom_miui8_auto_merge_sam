@@ -568,32 +568,16 @@
 .end method
 
 .method public onCreate()V
-    .locals 2
+    .locals 1
 
     .prologue
-    const/4 v0, 0x0
-
-    .local v0, "context":Landroid/content/Context;
-    :try_start_0
-    invoke-virtual {p0}, Landroid/app/Application;->getApplicationContext()Landroid/content/Context;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-static {}, Lcom/miui/whetstone/app/WhetstoneAppManager;->getInstance()Lcom/miui/whetstone/app/WhetstoneAppManager;
 
     move-result-object v0
 
-    :goto_0
-    invoke-virtual {p0}, Landroid/app/Application;->getPackageName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/graphics/Typeface;->SetAppTypeFace(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-virtual {v0, p0}, Lcom/miui/whetstone/app/WhetstoneAppManager;->attach(Landroid/content/Context;)V
 
     return-void
-
-    :catch_0
-    move-exception v1
-
-    goto :goto_0
 .end method
 
 .method public onLowMemory()V

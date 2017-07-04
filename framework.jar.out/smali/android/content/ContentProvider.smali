@@ -265,6 +265,28 @@
     move-result v0
 
     .local v0, "permOp":I
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Landroid/content/ContentProviderInjector;->isMmsProviderClass(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_miui_1
+
+    const/16 v1, 0x15
+
+    if-ne v0, v1, :cond_miui_1
+
+    const/16 v0, 0x2715
+
+    :cond_miui_1
     const/4 v1, -0x1
 
     if-eq v0, v1, :cond_1
@@ -964,6 +986,21 @@
     move-result v1
 
     if-eq v0, v1, :cond_0
+    
+
+    invoke-static {p2}, Lmiui/securityspace/XSpaceUserHandle;->isUidBelongtoXSpace(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_miui_0
+
+    invoke-virtual {p3}, Landroid/content/Context;->getUserId()I
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    :cond_miui_0
 
     invoke-static {p2}, Landroid/os/UserHandle;->getUserId(I)I
 
@@ -1077,8 +1114,21 @@
 
     move-result v8
 
+    if-nez v8, :cond_miui_1
+
+    invoke-virtual {v4}, Landroid/content/Context;->getUserId()I
+
+    move-result v8
+
+    move-object/from16 v0, p2
+
+    invoke-static {v0, v8}, Lmiui/securityspace/CrossUserUtils;->checkCrossPermission(Ljava/lang/String;I)Z
+
+    move-result v8
+
     if-eqz v8, :cond_7
 
+    :cond_miui_1
     invoke-virtual/range {p0 .. p0}, Landroid/content/ContentProvider;->getReadPermission()Ljava/lang/String;
 
     move-result-object v13

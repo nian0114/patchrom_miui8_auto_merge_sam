@@ -191,12 +191,7 @@
 
     .local v0, "_arg0":Z
     :goto_1
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
-
-    move-result v2
-
-    .local v2, "_arg1":I
-    invoke-virtual {p0, v0, v2}, Lcom/android/internal/policy/IKeyguardService$Stub;->setOccluded(ZI)V
+    invoke-virtual {p0, v0}, Lcom/android/internal/policy/IKeyguardService$Stub;->setOccluded(Z)V
 
     goto :goto_0
 
@@ -825,6 +820,35 @@
 
     goto :goto_f
 
+    :sswitch_ff
+    const-string v8, "com.android.internal.policy.IKeyguardService"
+
+    invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v8
+
+    if-eqz v8, :cond_miui_1a
+
+    move v0, v6
+
+    :goto_miui_f
+    invoke-virtual {p0, v0}, Lcom/android/internal/policy/IKeyguardService$Stub;->getScreenOrientation(Z)I
+
+    move-result v5
+
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeInt(I)V
+
+    goto/16 :goto_0
+
+    :cond_miui_1a
+    move v0, v7
+
+    goto :goto_miui_f
+
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1
@@ -854,6 +878,7 @@
         0x19 -> :sswitch_19
         0x1a -> :sswitch_1a
         0x1b -> :sswitch_1b
+        0xff -> :sswitch_ff
         0x5f4e5446 -> :sswitch_0
     .end sparse-switch
 .end method

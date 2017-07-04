@@ -1,0 +1,43 @@
+
+.method resetCdmaConnectionTime(Ljava/lang/String;)V
+    .locals 3
+    .param p1, "callId"    # Ljava/lang/String;
+
+    .prologue
+    iget-object v2, p0, Landroid/telecom/ConnectionServiceAdapter;->mAdapters:Ljava/util/Set;
+
+    invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    .local v1, "i$":Ljava/util/Iterator;
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/internal/telecom/IConnectionServiceAdapter;
+
+    .local v0, "adapter":Lcom/android/internal/telecom/IConnectionServiceAdapter;
+    :try_start_0
+    invoke-interface {v0, p1}, Lcom/android/internal/telecom/IConnectionServiceAdapter;->resetCdmaConnectionTime(Ljava/lang/String;)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v2
+
+    goto :goto_0
+
+    .end local v0    # "adapter":Lcom/android/internal/telecom/IConnectionServiceAdapter;
+    :cond_0
+    return-void
+.end method

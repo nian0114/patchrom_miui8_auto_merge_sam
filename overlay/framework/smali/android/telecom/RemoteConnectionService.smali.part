@@ -1,0 +1,8 @@
+
+.method public resetCdmaConnectionTime(Ljava/lang/String;)V
+    .locals 0
+    .param p1, "callId"    # Ljava/lang/String;
+
+    .prologue
+    return-void
+.end method

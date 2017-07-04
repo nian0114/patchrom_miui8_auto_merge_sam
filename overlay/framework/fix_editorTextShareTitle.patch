@@ -1,0 +1,23 @@
+From bf9d8f2845acfada842078591848ba701170df07 Mon Sep 17 00:00:00 2001
+From: caets <348581329@qq.com>
+Date: Mon, 28 Nov 2016 20:09:21 +0800
+Subject: [PATCH] fix_editorTextShareTitle
+
+---
+ framework/smali/android/widget/Editor$ActionPopupWindow.smali | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+--- a/framework/smali/android/widget/Editor$ActionPopupWindow.smali
++++ b/framework/smali/android/widget/Editor$ActionPopupWindow.smali
+@@ -1373,7 +1373,7 @@
+     move-result-object v7
+ 
+     .local v7, "context":Landroid/content/Context;
+-    const v27, 0x1040448
++    const v27, 0x1040460
+ 
+     move/from16 v0, v27
+ 
+-- 
+2.7.4
+

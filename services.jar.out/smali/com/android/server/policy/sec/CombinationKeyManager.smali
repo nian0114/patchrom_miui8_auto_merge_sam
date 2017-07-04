@@ -2815,9 +2815,9 @@
     if-nez v0, :cond_1
 
     :cond_0
-    iget-boolean v0, p0, Lcom/android/server/policy/sec/CombinationKeyManager;->mHomeKeyTriggered:Z
+    #iget-boolean v0, p0, Lcom/android/server/policy/sec/CombinationKeyManager;->mHomeKeyTriggered:Z
 
-    if-nez v0, :cond_1
+    #if-nez v0, :cond_1
 
     iget-boolean v0, p0, Lcom/android/server/policy/sec/CombinationKeyManager;->mFlashKeyTriggered:Z
 

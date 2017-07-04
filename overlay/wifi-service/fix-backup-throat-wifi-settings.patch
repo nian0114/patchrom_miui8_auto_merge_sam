@@ -1,0 +1,22 @@
+From 9de6efba5bc3800161283d44b59885bc166551eb Mon Sep 17 00:00:00 2001
+From: wonitor <wonitor@qq.com>
+Date: Sun, 30 Oct 2016 14:24:13 +0800
+Subject: [PATCH] 12
+
+---
+ .../wifi/WifiServiceImpl$ClientHandler.smali       |  1 +
+ 1 files changed, 1 insertions(+)
+
+--- a/wifi-service/smali/com/android/server/wifi/WifiServiceImpl$ClientHandler.smali
++++ b/wifi-service/smali/com/android/server/wifi/WifiServiceImpl$ClientHandler.smali
+@@ -93,6 +93,7 @@
+ 
+     :cond_0
+     :goto_0
++    invoke-static {p1}, Lcom/android/server/wifi/WifiServiceInjector;->handleClientMessage(Landroid/os/Message;)V
+     return-void
+ 
+     :sswitch_0
+-- 
+2.7.4
+

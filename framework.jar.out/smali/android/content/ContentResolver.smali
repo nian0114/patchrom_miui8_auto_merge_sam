@@ -3980,6 +3980,8 @@
     move-result-object v16
 
     :cond_10
+    const/16 v17, 0x0
+
     new-instance v5, Landroid/content/ContentResolver$ParcelFileDescriptorInner;
 
     invoke-virtual {v12}, Landroid/content/res/AssetFileDescriptor;->getParcelFileDescriptor()Landroid/os/ParcelFileDescriptor;
@@ -4654,6 +4656,8 @@
     move-result-object v8
 
     :cond_c
+    const/4 v2, 0x0
+
     new-instance v11, Landroid/content/ContentResolver$ParcelFileDescriptorInner;
 
     invoke-virtual/range {v17 .. v17}, Landroid/content/res/AssetFileDescriptor;->getParcelFileDescriptor()Landroid/os/ParcelFileDescriptor;
@@ -4875,6 +4879,37 @@
 
     invoke-virtual {v0, v4}, Landroid/content/ContentResolver;->unstableProviderDied(Landroid/content/IContentProvider;)V
 
+    move-object/from16 v0, p0
+
+    iget-object v5, v0, Landroid/content/ContentResolver;->mPackageName:Ljava/lang/String;
+
+    move-object/from16 v0, p1
+
+    invoke-static {v5, v0}, Landroid/content/ContentResolverInjector;->isForceAcquireUnstableProvider(Ljava/lang/String;Landroid/net/Uri;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_miui_6
+
+    move-object/from16 v5, p0
+
+    move-object/from16 v6, p1
+
+    move-object/from16 v7, p2
+
+    move-object/from16 v8, p3
+
+    move-object/from16 v9, p4
+
+    move-object/from16 v10, p5
+
+    invoke-static/range {v5 .. v11}, Landroid/content/ContentResolverInjector;->unstableQuery(Landroid/content/ContentResolver;Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Landroid/os/ICancellationSignal;)Landroid/database/Cursor;
+
+    move-result-object v25
+
+    goto :goto_1
+
+    :cond_miui_6
     invoke-virtual/range {p0 .. p1}, Landroid/content/ContentResolver;->acquireProvider(Landroid/net/Uri;)Landroid/content/IContentProvider;
     :try_end_2
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_2

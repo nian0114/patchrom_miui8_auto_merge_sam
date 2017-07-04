@@ -714,6 +714,10 @@
     :cond_4
     move-object/from16 v0, p1
 
+    invoke-static {v7, v0}, Landroid/app/MiuiThemeHelper;->handleExtraConfigurationChanges(ILandroid/content/res/Configuration;)V
+
+    move-object/from16 v0, p1
+
     iget-object v0, v0, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
 
     move-object/from16 v30, v0
@@ -3270,14 +3274,14 @@
     goto/16 :goto_10
 
     :cond_22
-    new-instance v32, Landroid/content/res/Resources;
+    new-instance v32, Landroid/content/res/MiuiResources;
 
     .end local v32    # "r":Landroid/content/res/Resources;
     move-object/from16 v0, v32
 
     move-object/from16 v1, p7
 
-    invoke-direct {v0, v10, v14, v12, v1}, Landroid/content/res/Resources;-><init>(Landroid/content/res/AssetManager;Landroid/util/DisplayMetrics;Landroid/content/res/Configuration;Landroid/content/res/CompatibilityInfo;)V
+    invoke-direct {v0, v10, v14, v12, v1}, Landroid/content/res/MiuiResources;-><init>(Landroid/content/res/AssetManager;Landroid/util/DisplayMetrics;Landroid/content/res/Configuration;Landroid/content/res/CompatibilityInfo;)V
 
     .restart local v32    # "r":Landroid/content/res/Resources;
     goto/16 :goto_11

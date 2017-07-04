@@ -263,6 +263,14 @@
 
     iput-object v1, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mAdnCache:Lcom/android/internal/telephony/uicc/AdnRecordCache;
 
+    new-instance v1, Lcom/android/internal/telephony/uicc/MiuiAdnRecordCache;
+
+    iget-object v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mFh:Lcom/android/internal/telephony/uicc/IccFileHandler;
+
+    invoke-direct {v1, v2}, Lcom/android/internal/telephony/uicc/MiuiAdnRecordCache;-><init>(Lcom/android/internal/telephony/uicc/IccFileHandler;)V
+
+    iput-object v1, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mMiuiAdnCache:Lcom/android/internal/telephony/uicc/MiuiAdnRecordCache;
+
     .line 228
     iput-boolean v5, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mRecordsRequested:Z
 
@@ -2341,42 +2349,39 @@
 
     if-eqz v0, :cond_0
 
-    .line 1981
     :cond_2
     iget v0, p1, Lcom/android/internal/telephony/uicc/IccRefreshResponse;->refreshResult:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 2005
     const-string v0, "handleRuimRefresh with unknown operation"
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/uicc/RuimRecords;->log(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 1983
     :pswitch_0
     const-string v0, "handleRuimRefresh with SIM_REFRESH_FILE_UPDATED"
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/uicc/RuimRecords;->log(Ljava/lang/String;)V
 
-    .line 1984
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mAdnCache:Lcom/android/internal/telephony/uicc/AdnRecordCache;
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/uicc/AdnRecordCache;->reset()V
 
-    .line 1985
+    iget-object v0, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mMiuiAdnCache:Lcom/android/internal/telephony/uicc/MiuiAdnRecordCache;
+
+    invoke-virtual {v0}, Lcom/android/internal/telephony/uicc/MiuiAdnRecordCache;->reset()V
+
     invoke-direct {p0}, Lcom/android/internal/telephony/uicc/RuimRecords;->fetchRuimRecords()V
 
     goto :goto_0
 
-    .line 1988
     :pswitch_1
     const-string v0, "handleRuimRefresh with SIM_REFRESH_INIT"
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/uicc/RuimRecords;->log(Ljava/lang/String;)V
 
-    .line 1990
     const-string v0, "CTC"
 
     const-string v1, "ro.csc.sales_code"
@@ -5427,7 +5432,7 @@
 
     move/from16 v1, v30
 
-    invoke-static {v6, v0, v1}, Lcom/android/internal/telephony/uicc/IccUtils;->bcdToString([BII)Ljava/lang/String;
+    invoke-static {v6, v0, v1}, Lmiui/telephony/IccUtils;->parseIccIdToString([BII)Ljava/lang/String;
 
     move-result-object v29
 
@@ -6897,7 +6902,7 @@
 
     move/from16 v1, v30
 
-    invoke-static {v6, v0, v1}, Lcom/android/internal/telephony/uicc/IccUtils;->bcdToString([BII)Ljava/lang/String;
+    invoke-static {v6, v0, v1}, Lmiui/telephony/IccUtils;->parseIccIdToString([BII)Ljava/lang/String;
 
     move-result-object v29
 
@@ -7211,7 +7216,7 @@
 
     move/from16 v1, v32
 
-    invoke-static {v6, v0, v1}, Lcom/android/internal/telephony/uicc/IccUtils;->bcdToString([BII)Ljava/lang/String;
+    invoke-static {v6, v0, v1}, Lmiui/telephony/IccUtils;->parseIccIdToString([BII)Ljava/lang/String;
 
     move-result-object v31
 
@@ -7354,7 +7359,7 @@
 
     move/from16 v1, v33
 
-    invoke-static {v6, v0, v1}, Lcom/android/internal/telephony/uicc/IccUtils;->bcdToString([BII)Ljava/lang/String;
+    invoke-static {v6, v0, v1}, Lmiui/telephony/IccUtils;->parseIccIdToString([BII)Ljava/lang/String;
 
     move-result-object v32
 
@@ -7585,7 +7590,7 @@
 
     move/from16 v1, v33
 
-    invoke-static {v6, v0, v1}, Lcom/android/internal/telephony/uicc/IccUtils;->bcdToString([BII)Ljava/lang/String;
+    invoke-static {v6, v0, v1}, Lmiui/telephony/IccUtils;->parseIccIdToString([BII)Ljava/lang/String;
 
     move-result-object v32
 
@@ -7816,7 +7821,7 @@
 
     move/from16 v1, v33
 
-    invoke-static {v6, v0, v1}, Lcom/android/internal/telephony/uicc/IccUtils;->bcdToString([BII)Ljava/lang/String;
+    invoke-static {v6, v0, v1}, Lmiui/telephony/IccUtils;->parseIccIdToString([BII)Ljava/lang/String;
 
     move-result-object v32
 
@@ -9386,15 +9391,16 @@
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/uicc/RuimRecords;->log(Ljava/lang/String;)V
 
-    .line 316
     iput-object v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mIccId:Ljava/lang/String;
 
-    .line 318
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mAdnCache:Lcom/android/internal/telephony/uicc/AdnRecordCache;
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/uicc/AdnRecordCache;->reset()V
 
-    .line 319
+    iget-object v0, p0, Lcom/android/internal/telephony/uicc/RuimRecords;->mMiuiAdnCache:Lcom/android/internal/telephony/uicc/MiuiAdnRecordCache;
+
+    invoke-virtual {v0}, Lcom/android/internal/telephony/uicc/MiuiAdnRecordCache;->reset()V
+
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0

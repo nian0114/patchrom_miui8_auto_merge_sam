@@ -1402,6 +1402,18 @@
 
     .end local v0    # "appPolicy":Landroid/sec/enterprise/ApplicationPolicy;
     :cond_0
+    invoke-static {v1}, Lmiui/securityspace/XSpaceUserHandle;->isXSpaceUser(Landroid/content/pm/UserInfo;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_nian_0
+
+    sget v2, Landroid/miui/R$drawable;->ic_corp_icon_xspace:I
+
+    goto :goto_0
+
+    :cond_nian_0
+
     :goto_0
     return v2
 
@@ -11387,6 +11399,10 @@
     invoke-virtual/range {v0 .. v7}, Landroid/app/ActivityThread;->getTopLevelResources(Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;ILandroid/content/res/Configuration;Landroid/app/LoadedApk;)Landroid/content/res/Resources;
 
     move-result-object v9
+
+    iget-object v0, p1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+
+    invoke-static {v9, v0}, Landroid/miui/ResourcesManager;->initMiuiResource(Landroid/content/res/Resources;Ljava/lang/String;)V
 
     .local v9, "r":Landroid/content/res/Resources;
     if-eqz v9, :cond_5

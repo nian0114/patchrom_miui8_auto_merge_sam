@@ -16829,23 +16829,11 @@
 
 .method protected regCodeIsRoaming(I)Z
     .locals 1
-    .param p1, "code"    # I
 
     .prologue
-    .line 2507
-    const/4 v0, 0x5
-
-    if-ne v0, p1, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
     const/4 v0, 0x0
 
-    goto :goto_0
+    return v0
 .end method
 
 .method protected regCodeToServiceState(I)I

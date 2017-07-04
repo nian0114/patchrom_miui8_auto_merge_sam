@@ -9182,23 +9182,25 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
 
-    .line 22802
     .end local p3    # "intent":Landroid/content/Intent;
     .local v18, "intent":Landroid/content/Intent;
+    move-object/from16 v0, v18
+
+    move-object/from16 v1, p2
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setSender(Ljava/lang/String;)V
+
     const/16 v55, 0x1
 
-    .line 22827
     .local v55, "bExcludeForceStoppedPackages":Z
     if-eqz v55, :cond_0
 
-    .line 22829
     const/16 v6, 0x10
 
     move-object/from16 v0, v18
 
     invoke-virtual {v0, v6}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 22833
     :cond_0
     move-object/from16 v0, p0
 
@@ -130723,6 +130725,12 @@
     move-object/from16 v3, p0
 
     invoke-direct/range {v3 .. v19}, Lcom/android/server/am/ActivityManagerService;->broadcastIntentLocked(Lcom/android/server/am/ProcessRecord;Ljava/lang/String;Landroid/content/Intent;Ljava/lang/String;Landroid/content/IIntentReceiver;ILjava/lang/String;Landroid/os/Bundle;[Ljava/lang/String;ILandroid/os/Bundle;ZZIII)I
+
+    move/from16 v0, v22
+
+    move-object/from16 v1, v30
+
+    invoke-static {v0, v1}, Lcom/android/server/am/ActivityManagerServiceInjector;->handleExtraConfigurationChangesForSystem(ILandroid/content/res/Configuration;)V
 
     .line 24377
     and-int/lit8 v3, v22, 0x4

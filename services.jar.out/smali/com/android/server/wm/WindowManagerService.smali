@@ -1398,10 +1398,9 @@
 
     iput-object v0, v1, Lcom/android/server/wm/WindowManagerService;->mCurrentProfileIds:[I
 
-    .line 605
-    new-instance v19, Lcom/android/server/policy/PhoneWindowManager;
+    new-instance v19, Lcom/android/server/policy/MiuiPhoneWindowManager;
 
-    invoke-direct/range {v19 .. v19}, Lcom/android/server/policy/PhoneWindowManager;-><init>()V
+    invoke-direct/range {v19 .. v19}, Lcom/android/server/policy/MiuiPhoneWindowManager;-><init>()V
 
     move-object/from16 v0, v19
 
