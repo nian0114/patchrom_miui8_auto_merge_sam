@@ -1,0 +1,11 @@
+/boot	emmc	/dev/block/bootdevice/by-name/BOOT
+/recovery	emmc	/dev/block/bootdevice/by-name/RECOVERY
+/system	ext4	/dev/block/bootdevice/by-name/SYSTEM
+/data	ext4	/dev/block/bootdevice/by-name/USERDATA
+/cache	ext4	/dev/block/bootdevice/by-name/CACHE
+/modem	emmc	/dev/block/bootdevice/by-name/RADIO
+/modem_debug	emmc	/dev/block/bootdevice/by-name/CP_DEBUG
+/efs	ext4	/dev/block/bootdevice/by-name/EFS
+/external_sd	vfat	/dev/block/mmcblk0p1
+/usb-otg	vfat	/dev/block/sde1
+/misc	emmc	/dev/block/bootdevice/by-name/FOTA
