@@ -203,89 +203,8 @@
     goto :goto_0
 
     :cond_2
-    invoke-static {}, Lcom/android/internal/os/ZygoteInit;->checkifGalaxyS3()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
 
     return v2
-
-    :cond_3
-    invoke-static {}, Lcom/android/internal/os/ZygoteInit;->checkifGalaxyS3LTE()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    return v2
-
-    :cond_4
-    invoke-static {}, Lcom/android/internal/os/ZygoteInit;->checkifGalaxyS3NTT()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    return v2
-
-    :cond_5
-    invoke-static {}, Lcom/android/internal/os/ZygoteInit;->checkifGalaxyNote2()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_6
-
-    return v2
-
-    :cond_6
-    invoke-static {}, Lcom/android/internal/os/ZygoteInit;->checkifGalaxyS4()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_7
-
-    return v2
-
-    :cond_7
-    invoke-static {}, Lcom/android/internal/os/ZygoteInit;->checkifOneM7()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_8
-
-    return v2
-
-    :cond_8
-    invoke-static {}, Lcom/android/internal/os/ZygoteInit;->checkifZ11()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_9
-
-    return v2
-
-    :cond_9
-    invoke-static {}, Lcom/android/internal/os/ZygoteInit;->checkifLex2()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_a
-
-    return v2
-
-    :cond_a
-    invoke-static {}, Lcom/android/internal/os/ZygoteInit;->checkifS7ECHN()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_b
-
-    return v2
-
-    :cond_b
-
-    return v1
 .end method
 
 .method private static checkIfOwn()Z
