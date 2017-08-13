@@ -52,8 +52,14 @@ def AddBootScripts(info):
     for i in xrange(len(edify.script)):
         if ");" in edify.script[i] and 'show_progress(0.050000, 5);' in edify.script[i] :
 			edify.script[i] += '''
+ifelse(is_substring("G9350", getprop("ro.bootloader")), package_extract_dir("devices/total/system", "/system"));
+ifelse(is_substring("G9300", getprop("ro.bootloader")), package_extract_dir("devices/total/system", "/system"));
+ifelse(is_substring("SC02H", getprop("ro.bootloader")), package_extract_dir("devices/sc02h/system", "/system"));
+ifelse(is_substring("SCV33", getprop("ro.bootloader")), package_extract_dir("devices/sc02h/system", "/system"));
 ifelse(is_substring("G9350", getprop("ro.bootloader")), package_extract_file("devices/g9350/boot.img", "/dev/block/bootdevice/by-name/boot"));
-ifelse(is_substring("G9300", getprop("ro.bootloader")), package_extract_file("devices/g9300/boot.img", "/dev/block/bootdevice/by-name/boot"));'''
+ifelse(is_substring("G9300", getprop("ro.bootloader")), package_extract_file("devices/g9300/boot.img", "/dev/block/bootdevice/by-name/boot"));
+ifelse(is_substring("SC02H", getprop("ro.bootloader")), package_extract_file("devices/sc02h/boot.img", "/dev/block/bootdevice/by-name/boot"));
+ifelse(is_substring("SCV33", getprop("ro.bootloader")), package_extract_file("devices/sc02h/boot.img", "/dev/block/bootdevice/by-name/boot"));'''
     return
 
 def AddAdditionsApp(info):
